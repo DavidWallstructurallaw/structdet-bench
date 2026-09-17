@@ -1,16 +1,26 @@
-StructDet-Bench Phase 1 Step 3 verification summaries
+=== 3242be42-6c2b-4f84-9fde-e14c460cb7aa ===
+Retained execution summary. Complete original journal is in the companion delivery archive under verification/full_step3_test_results.json. Outcomes: {'passed': 38}; exit code: 1.
 
-This is a summary, not the complete stdout transcript. Full originals and their SHA-256 identities are retained in the companion ZIP verification directory and listed in test_results.json.
+=== 4adf1d19-4cc4-43bd-bbfb-bb4855434e3a ===
+Retained execution summary. Complete original journal is in the companion delivery archive under verification/full_step3_test_results.json. Outcomes: {'passed': 38}; exit code: 0.
 
-2026-09-17T08:33:07.094571+00:00 | 3242be42-6c2b-4f84-9fde-e14c460cb7aa | scope=phase1 | outcomes={'passed': 38} | exit=1
-2026-09-17T08:33:08.067470+00:00 | 4adf1d19-4cc4-43bd-bbfb-bb4855434e3a | scope=scaffold | outcomes={'passed': 38} | exit=0
-2026-09-17T20:53:29.881057+00:00 | ac5d9ae7-1a02-4d28-9932-c4000195e4b6 | scope=scaffold | outcomes={'passed': 195} | exit=0
-2026-09-17T20:53:30.884064+00:00 | e849b9b8-94c1-4664-a16a-b7405f32daa8 | scope=phase1 | outcomes={'passed': 195} | exit=1
-2026-09-17T21:04:31.012090+00:00 | 68ad12af-81f6-4ecb-b3d0-b00c178121fc | scope=scaffold | outcomes={'passed': 195} | exit=0
-2026-09-17T21:04:32.074606+00:00 | edbb8cb0-a5df-487c-9234-53ec8e2d0bb3 | scope=phase1 | outcomes={'passed': 195} | exit=1
+=== ac5d9ae7-1a02-4d28-9932-c4000195e4b6 ===
+Retained execution summary. Complete original journal is in the companion delivery archive under verification/full_step3_test_results.json. Outcomes: {'passed': 195}; exit code: 0.
 
-Current regression run: 195 passed; 0 failures, 0 errors, 0 skipped.
-Step 3-specific methods: 83.
-Scaffold/baseline gate: passed, exit 0.
-Full Phase 1 gate: incomplete, exit 1, as later M implementation remains pending.
-No model experiment, generated-program execution, independent annotation, hosted CI, or package publication was performed.
+=== e849b9b8-94c1-4664-a16a-b7405f32daa8 ===
+Retained execution summary. Complete original journal is in the companion delivery archive under verification/full_step3_test_results.json. Outcomes: {'passed': 195}; exit code: 1.
+
+=== 68ad12af-81f6-4ecb-b3d0-b00c178121fc ===
+Retained execution summary. Complete original journal is in the companion delivery archive under verification/full_step3_test_results.json. Outcomes: {'passed': 195}; exit code: 0.
+
+=== edbb8cb0-a5df-487c-9234-53ec8e2d0bb3 ===
+Retained execution summary. Complete original journal is in the companion delivery archive under verification/full_step3_test_results.json. Outcomes: {'passed': 195}; exit code: 1.
+
+=== 88d9fe9b-bb75-4c81-8ef2-7e54eeae2a43 ===
+Retained runner execution summary: {'passed': 294}, requested scope scaffold, exit 0. Full records in verification/retained_runner_test_results.json. Legacy step marker preserved separately.
+
+=== bba34482-df51-4e74-8624-20ebea5ad787 ===
+Retained runner execution summary: {'passed': 294}, requested scope phase1, exit 1. Full records in verification/retained_runner_test_results.json. Legacy step marker preserved separately.
+
+=== b194ecbf-af9b-4b13-94c0-25643668603d ===
+Step 4: 294 actual tests passed; 99 Step 4 bindings passed; 12 frozen baseline documents match. No independent E validation or Phase 1 completion. Full execution record: verification/step4_full_test_results.json.

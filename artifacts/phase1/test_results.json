@@ -1,7 +1,8 @@
 {
   "schema_version": "0.1",
   "storage_representation": "execution_summaries_with_complete_companion_logs",
-  "companion_archive": "StructDet-Bench_Phase1_Step3.zip",
+  "companion_archive": "StructDet-Bench_Phase1_Step4.zip",
+  "prior_companion_archive": "StructDet-Bench_Phase1_Step3.zip",
   "runs": [
     {
       "run_id": "3242be42-6c2b-4f84-9fde-e14c460cb7aa",
@@ -125,55 +126,138 @@
         "missing_or_nonpassing_M_trace_report_bindings"
       ],
       "console_output": "Retained execution summary. Complete original journal is in the companion delivery archive under verification/full_step3_test_results.json. Outcomes: {'passed': 195}; exit code: 1.\n"
+    },
+    {
+      "run_id": "88d9fe9b-bb75-4c81-8ef2-7e54eeae2a43",
+      "recorded_at_utc": "2026-09-17T21:34:14.898797+00:00",
+      "record_kind": "summary",
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "tools/run_phase1_checks.py",
+        "--scope",
+        "scaffold"
+      ],
+      "exit_code": 0,
+      "reported_legacy_step": 3,
+      "actual_delivery_step": 4,
+      "outcome_counts": {
+        "passed": 294
+      },
+      "requested_scope": "scaffold",
+      "phase1_m_complete": false,
+      "reasons": [],
+      "console_output": "Retained runner execution summary: {'passed': 294}, requested scope scaffold, exit 0. Full records in verification/retained_runner_test_results.json. Legacy step marker preserved separately.\n"
+    },
+    {
+      "run_id": "bba34482-df51-4e74-8624-20ebea5ad787",
+      "recorded_at_utc": "2026-09-17T21:34:17.730828+00:00",
+      "record_kind": "summary",
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "tools/run_phase1_checks.py",
+        "--scope",
+        "phase1"
+      ],
+      "exit_code": 1,
+      "reported_legacy_step": 3,
+      "actual_delivery_step": 4,
+      "outcome_counts": {
+        "passed": 294
+      },
+      "requested_scope": "phase1",
+      "phase1_m_complete": false,
+      "reasons": [
+        "missing_or_nonpassing_required_M_bindings",
+        "missing_or_nonpassing_M_trace_report_bindings"
+      ],
+      "console_output": "Retained runner execution summary: {'passed': 294}, requested scope phase1, exit 1. Full records in verification/retained_runner_test_results.json. Legacy step marker preserved separately.\n"
+    },
+    {
+      "run_id": "b194ecbf-af9b-4b13-94c0-25643668603d",
+      "recorded_at_utc": "2026-09-17T21:34:37.225897+00:00",
+      "record_kind": "summary",
+      "execution_phase": 1,
+      "implementation_step": 4,
+      "command": [
+        "python",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-t",
+        ".",
+        "-v"
+      ],
+      "execution_route": "unittest.defaultTestLoader.discover and unchanged execute_suite helper in the checked-in QA runner",
+      "owner_instruction": "可以，Phase 1 Step 4  开始",
+      "environment": {
+        "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+        "platform": "Linux-6.18.44-x86_64-with-glibc2.41"
+      },
+      "exit_code": 0,
+      "outcome_counts": {
+        "passed": 294
+      },
+      "step4_test_count": 99,
+      "step4_gate_passed": true,
+      "phase1_m_complete": false,
+      "unresolved_m_family_count": 37,
+      "baseline_matches": 12,
+      "full_log_sha256": "d08f485f3cba01babb6612996c12e8f27cec105283a3c8cad44b027379710f4d",
+      "tested_source_fingerprints": {
+        "PHASE_1_PLAN.md": "4a4137d1fa444c212af71740e439624c341ed485584ee3878e358f1e9424f704",
+        "PHASE_0_PLAN.md": "5df37f3fef1d012d462a116d7839909c9379dfe6d59a1b3356cae004bcfac6a4",
+        "UNRESOLVED_DECISIONS.md": "5539ebbf859d0d423845fceb8b9ceda065f05e202d86d2ae662912aa2632a412",
+        "NOTICE": "2c081bbc0c7d18ec8d7865bd679a2a55aebd7b578ad9cfe1aec23b3a703d6743",
+        "METRICS_SPEC.md": "23b45934e87767ca87e56b97aa4e1d1abdd49e27187d0b9c5a336ca516a96edb",
+        "INPUT_FORMAT.md": "f87ee1b106461a558b14fb4d8497809559fc7898ee7e4f6d1c068e63e3998db5",
+        "DEFINITIONS_AND_UNITS.md": "a3da3e356a21f59468178050944baf58787edd65204fbf40b3b1742cd38104ab",
+        ".gitignore": "3badd83c3b6886688efadf28f7b73e48f23f5cd85041100ea2f078808c5fe8db",
+        "EVALUATION_INTEGRITY.md": "50c5529c16164ee53e4d99502ed1ec24202f36152b36281870bf285185672dc3",
+        "LICENSING_NOTES.md": "343487308d9f27f9b1869edadf1810a9f143a27d0a01277f00e2802d7a847bae",
+        "README.md": "d70a0d707f394fadb2ab417d882ea0e8a706badfdaf08d7b4164284e69d04320",
+        "THEORY_SOURCES.md": "33554654857da067870221d5d882fb5ef06cf005b8624079dda986085068d83e",
+        "pyproject.toml": "18957799ac77c5e31608cc60fc24f7af79c908a5956419e0f0b8a80b85226c98",
+        "THEORY_TO_CODE_TRACEABILITY.md": "1b94c402804c1167bfc5c04b45a86364ac5061bc41273b87a36f184991bbeec2",
+        "EVALUATION_CLOSURE_ADDENDUM.md": "31d2387ff2867e67e07adf60bca723b6783d0c3155b905d5477d2f844e1d9ce8",
+        "STRUCTURAL_CLASS_CONTRACT.md": "00ba09dd879f5fe02a3302a6f1ad36bda1c6b7e2723562f5f62ec85fed125328",
+        "HERO_BENCHMARK_SPEC.md": "d1a0849d888a35ae3c9bd552bb920ee46417b7eeb4f8b687f8b5825e6fb851b2",
+        "VALIDATION_AND_FALSIFICATION.md": "6aaa5b01290d3c6b9746f20d47c2092c038587d72d7e090ee3ad73438794ef00",
+        "THIRD_PARTY_NOTICES.md": "4863c5c796e81a07b944ba7725e0ebca0769a94a0f4add6fed38f4a71a48a1a7",
+        "PHASE_0_APPROVAL.md": "0d09da04ffd07568b1657ebc92c9b46fc09a489b9dde843fb1b424d048213db7",
+        "PROJECT_SCOPE.md": "2eec02825c8df4281cc538d00dcb809907dc2eb8a2b1b73b597cbab17d975a11",
+        "BASELINE_UPDATE_EC_001.md": "c4a876c86b97bec68ab2691704fe37e40bbee16a94bfdf3a08c783e450c982a2",
+        "LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+        "structdet_bench/records.py": "c34bacbd1f0c7db490b596ff6334e8fe44c3d9425cbcaeb8473a0e99e0620046",
+        "structdet_bench/__init__.py": "43298db9b6b48995796b333d906755f72426a57bd1b60bdb25a7e26ee4489b4e",
+        "structdet_bench/cli.py": "0a8263b7219cf0213db02d55594e3faafe6daf86916629fd5006a30a0d0ef1c2",
+        "structdet_bench/contracts.py": "a9d88b10d13afa0ddc967804d90b9ac48679eaf45e9aed5d5ead16880e93440a",
+        "structdet_bench/populations.py": "33d53b4698bfe69f9a2ae7acd5532e349d3db7773a45b7533e7378c3ee9044f1",
+        "structdet_bench/__main__.py": "5602a3ab022945fc3b93d4c83752937071e700eab540ff491b55444251ba3bf8",
+        "structdet_bench/evidence.py": "146f6b1baca06f7ee6ed08ea5a45fcac4cbe0759067777b794a35a64bb0d765f",
+        "structdet_bench/local_io.py": "1838060ed85375ba77d13c091504d9e350777b26b13f300c8bcdf402d026ed3f",
+        "structdet_bench/inventory.py": "c9f03643944d3096aa276bd6bebc52df49cb9b907af254a317a843fb7c72d554",
+        "examples/sorting_reference_eight.json": "f8fd72ee7c186fa16cc6f6706ace159d090e259ba73a979d743b0863c8a2950a",
+        "LICENSES/Apache-2.0.txt": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+        "LICENSES/CC-BY-4.0.txt": "d2c7c5d4b9d5ef1b3a2fa90426df628fb5075c5b077954387df56d94562a6031",
+        "tools/run_phase1_checks.py": "922e356af78837ddc2cfe09523c0f2001c78bfc4875c723c8db446a695a021cc",
+        "tests/test_scaffold.py": "3cc0d0620a23b50bb11bbd040cf333dc751b20c0e098b5a15269240848261381",
+        "tests/__init__.py": "3b6b6e7d83977fa4c361010646119a42e94baca2cf4247acae03a2bea83206ea",
+        "tests/test_populations.py": "ee22c6a38651f352946ebafcc01b553e51210dcb8c6e3e360125d61caefda628",
+        "tests/test_inventory.py": "76b6a6b35a8c805ac4de7194b96db8818e618dd7123565b0e27b5278c3c13581",
+        "tests/phase1_matrix.json": "c8d24f4d4c04089d4a15f566f8de9f2a22956fee7b13764111fe5c54b5f00830",
+        "tests/test_local_io.py": "181f57cde6004445ee42aa34030ed136ebd15a504053ff1c7d9d9c7476e029af",
+        "tests/test_security.py": "45524f9b6c458d5d203bcabcf7632c32c5899d098b5024340c60600d343e8269",
+        "tests/test_records.py": "62c62c770eedfd02784864b5e927758c3ff5ab6db2d51cb9a015b6288af77095",
+        "tests/test_evidence.py": "1ca53e369b0b5946a6303b9f58ee9a01c22f470ebfc5e3b53ce39268b2a14f8e",
+        "tests/test_integrity_records.py": "5f2baa03d675289f36ad6432f37a385f4e47ce160da578b898e802c707e20903",
+        "tests/helpers.py": "5af2be8d1450f072511d431847e85d8f9d943ac2131d94b2c91ccf6ac1e2e0d0",
+        "tests/fixtures/record_cases.json": "866df0880d3ab11281f71aefe2ba13200f84acec9b93063b9bdb27f5a93a26a1",
+        "tests/fixtures/integrity_cases.json": "d2939da77b6ae32adc33c50b0f19ab86d580b11ac90e80d6f0dc0e52ecc7f3e6"
+      },
+      "console_output": "Step 4: 294 actual tests passed; 99 Step 4 bindings passed; 12 frozen baseline documents match. No independent E validation or Phase 1 completion. Full execution record: verification/step4_full_test_results.json.\n"
     }
-  ],
-  "complete_journal_references": [
-    {
-      "path_in_companion_zip": "verification/full_step3_test_results.json",
-      "size_bytes": 685325,
-      "sha256": "ce9445421c809119139cdab4b947ed11d6f37ab1d8a362443b8f5341d6b190cb"
-    },
-    {
-      "path_in_companion_zip": "verification/full_step3_test_output.txt",
-      "size_bytes": 119048,
-      "sha256": "98396a45f277ba8cebb36d74e635650affc8f7da396cc694cc468cd68ef37921"
-    },
-    {
-      "path_in_companion_zip": "verification/retained_step2_full_test_results.json",
-      "size_bytes": 696688,
-      "sha256": "67201e733f50d250c9306d345740e7dd1ca397c616b5fc8d7187a6fab95d0aba"
-    },
-    {
-      "path_in_companion_zip": "verification/retained_step2_full_test_output.txt",
-      "size_bytes": 99861,
-      "sha256": "c1bc894f862c7a2c455b5e09fcccd99dfda6d2a832596cfe03b356c863a0738d"
-    },
-    {
-      "path_in_companion_zip": "verification/full_test_output.txt",
-      "size_bytes": 25621,
-      "sha256": "dc8a68ce2c9f4d68f069af76f3125a340192ea18c24f9e36f8a76d649225fbc2"
-    },
-    {
-      "path_in_companion_zip": "verification/scaffold_gate.txt",
-      "size_bytes": 27196,
-      "sha256": "d4bce82c9004bfebb711998a0db565faaf4e856d98c2636b631c084170a5adec"
-    },
-    {
-      "path_in_companion_zip": "verification/phase1_gate.txt",
-      "size_bytes": 27279,
-      "sha256": "72a5a8c7d570db2e02dfe913baf723934092d05b1bb7702078abbaba9274ad29"
-    }
-  ],
-  "current_checks": {
-    "unit_tests": 195,
-    "step3_test_methods": 83,
-    "failures": 0,
-    "errors": 0,
-    "skips": 0,
-    "python": "3.13.5",
-    "platform": "Linux",
-    "frozen_documents_verified": 12,
-    "hosted_ci_run": false,
-    "substantive_validation_performed": false
-  }
+  ]
 }

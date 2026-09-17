@@ -303,3 +303,39 @@ def rewrite_evidence_bundle(root: Path, observations: list[dict[str, Any]], supp
     path=write_input_bundle(root,observations,manifest)
     (root/"evidence.jsonl").write_text("".join(json.dumps(r,ensure_ascii=False)+"\n" for r in supports),encoding="utf-8")
     return path
+
+
+# Step 4 arrangements are stipulated records, never new model observations.
+def population_bundle(root: Path, labels: list[str | None], *, validity: list[str] | None = None,
+                      group_sizes: tuple[int, ...] = ()) -> tuple[Path, list[dict[str, Any]], list[dict[str, Any]], dict[str, Any]]:
+    path, obs, support, manifest = evidence_bundle(root, samples=len(labels))
+    validity = validity if validity is not None else ["valid"] * len(labels)
+    if len(validity) != len(labels) or (group_sizes and sum(group_sizes) != len(labels)):
+        raise ValueError("Bad stipulated population arrangement")
+    by_id = {r["record_id"]:r for r in obs}
+    evidence = {r["record_id"]:r for r in support}
+    ids = [f"s{i}" for i in range(1,len(labels)+1)]
+    for i, (label,v) in enumerate(zip(labels,validity),1):
+        by_id[f"s{i}"]["sample_order"] = tagged(i)
+        by_id[f"a{i}"]["structural_class_id"] = label
+        by_id[f"a{i}"]["assignment_status"] = "assigned" if label is not None else "unresolved"
+        evidence[f"e-a{i}"]["payload"]["assertion"] = tagged(label)
+        by_id[f"v{i}"]["validity_status"] = v
+        evidence[f"e-v{i}"]["payload"]["assertion"] = tagged(v)
+    selected = manifest["analysis_config"]["selection"][0]
+    selected["selected_sample_ids"] = tagged(list(ids))
+    selected["sample_order"] = tagged(list(ids))
+    selected["selection_basis"] = tagged("Predetermined fixture identities; no quality or class selection.")
+    positions = []; start = 0
+    for g, size in enumerate(group_sizes,1):
+        gid, aid = f"G{g}", f"call{g}"
+        obs.append({**record_ref("attempt",aid),"attempt_id":aid,"analysis_cell_id":"cell1",
+            "attempt_status":"succeeded","retry_of":tagged(None),"raw_response_ref":tagged(state="unknown"),
+            "generation_group_id":tagged(gid),"planned_candidate_count":tagged(size),"registered_call_order":tagged(g)})
+        for p in range(1,size+1):
+            sid = ids[start+p-1]
+            by_id[sid].update(attempt_id=tagged(aid),generation_group_id=tagged(gid),within_group_index=tagged(p))
+            positions.append({"generation_group_id":gid,"registered_call_order":g,"within_group_index":p,"attempt_id":tagged(aid)})
+        start += size
+    if group_sizes: selected["registered_positions"] = tagged(positions)
+    return rewrite_evidence_bundle(root,obs,support,manifest),obs,support,manifest
