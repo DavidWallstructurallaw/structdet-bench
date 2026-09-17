@@ -301,7 +301,7 @@ because they have a record ID.
 Every support payload requires `payload_version: "0.1"`, `data_role`, `mock`,
 `state`, `scope_refs`, tagged `origin`, tagged `knowledge_type`,
 `transformation_refs`, and `evidence_refs`. Unknown top-level payload fields fail;
-extra passive material can be retained in `extensions`. All 19 Step 2 supporting
+extra passive material can be retained in `extensions`. All 18 Step 2 supporting
 record types have typed payload schemas. The shared record reference has exactly
 `record_type`, `record_id`, and `record_version`. Required unknown metadata uses
 explicit tagged states; no default supplies an absent fact.
