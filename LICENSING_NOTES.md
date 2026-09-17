@@ -12,7 +12,7 @@ StructDet-Bench uses a mixed-license repository structure so that software can b
 | Theory publications | Retain the license stated in each publication |
 | Third-party material | Retains its original license |
 
-The root `LICENSE` contains the Apache License 2.0 and governs the software asset class. It does not relicense specification documents, theory publications, or third-party material.
+The software asset class is assigned Apache License 2.0. The corresponding root `LICENSE` and full license texts remain to be transferred in the initial repository synchronization; see `BASELINE_UPDATE_EC_001.md`. This assignment does not relicense specification documents, theory publications, or third-party material.
 
 ## Specifications and documentation
 
@@ -30,6 +30,7 @@ The following project-authored specification files are released under CC BY 4.0 
 - `UNRESOLVED_DECISIONS.md`
 - `PHASE_0_APPROVAL.md`
 - `PHASE_1_PLAN.md`
+- `EVALUATION_CLOSURE_ADDENDUM.md` and `BASELINE_UPDATE_EC_001.md`
 - general explanatory documentation derived from those specifications
 
 CC BY 4.0 reuse should provide attribution, identify the source, link or name the license where practical, and indicate modifications.
@@ -51,10 +52,11 @@ Code-like tests are Apache-2.0. Repository-created data fixtures, benchmark exam
 
 ## Theory publications
 
-The two theory sources used by the current baseline are citation/reference works rather than software assets:
+The original two sources and the EC-001 addition are citation/reference works rather than software assets:
 
 - *The Structural Determinacy of LLM Generation: Active Structure, Convergence Frontiers, and the Misreading of Randomness*
 - *Structural Inbreeding in Synthetic Data: How Linguistic Abundance Conceals the Collapse of Generative Support*
+- *Evaluation Closure Benchmark Inbreeding and the Design of Open AI Evaluation*
 
 The source PDFs state Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0). They are not included in this repository. Their absence prevents the public software repository from accidentally presenting the publications as Apache-2.0 assets or modified derivatives.
 

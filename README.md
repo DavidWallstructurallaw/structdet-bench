@@ -17,6 +17,23 @@ calculation, `validate`/`analyze` command, hero report, comparison, model call,
 or generated-program execution is implemented at this step. The development
 version does not claim that the M milestone or the full v0.1 product is complete.
 
+## EC-001 source update and repository synchronization
+
+The supplied *Evaluation Closure* paper has been added as a third theory source.
+Read `EVALUATION_CLOSURE_ADDENDUM.md` for the five-condition integrity record,
+typed validity, anomaly preservation, the two reopening modes, and the reporting
+crosswalk. `BASELINE_UPDATE_EC_001.md` pins the unchanged original contracts and
+records the documentation-only authorization. No Step 2 capability is added.
+
+The initial GitHub transfer is incomplete. At the parent commit recorded in that
+update, the repository contains the CLI scaffold and publication notes, but the
+12 frozen plan/specification files, test harness, matrix, and QA captures remain
+in the earlier local delivery package. Root license texts also remain to be
+transferred. This source update does not complete that migration. Commands in
+"Verify Step 1" below require the complete local Step 1 package until the missing
+files are synchronized and checked. A GitHub clone currently supports the
+help/version path; it is not yet the complete reproducible development baseline.
+
 ## Run locally
 
 Use Python 3.11 or later from this project directory. Runtime and tests use only
@@ -98,9 +115,10 @@ accepts no candidate program or input-supplied executable.
 
 ## Governing baseline and authorization
 
-The eleven Phase 0 files and `PHASE_1_PLAN.md` accompany this working tree as
-byte-for-byte frozen copies. Their expected versions and hashes are recorded in
-the applicability matrix and checked against the actual files. Historical
+The eleven Phase 0 files and `PHASE_1_PLAN.md` accompany the complete local
+Step 1 delivery as byte-for-byte frozen copies. They have not yet all been
+transferred to GitHub. Their expected versions and hashes are recorded in the
+local applicability matrix and in the EC-001 update record. Historical
 pending/proposed headers remain intact; later owner decisions are recorded
 without rewriting those documents.
 
