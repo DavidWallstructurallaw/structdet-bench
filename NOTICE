@@ -1,0 +1,13 @@
+StructDet-Bench
+Copyright 2026 Xiangyu Guo
+
+Official repository:
+https://github.com/DavidWallstructurallaw/structdet-bench
+
+Software code, test code, tooling, and code-adjacent configuration are distributed under the Apache License 2.0 unless otherwise stated.
+
+Project-authored specifications and benchmark documentation are distributed under Creative Commons Attribution 4.0 International (CC BY 4.0) unless otherwise stated.
+
+The theory publications on which this reference implementation is based retain their own stated licenses and are not relicensed by this repository. See THEORY_SOURCES.md and LICENSING_NOTES.md.
+
+Third-party materials retain their original licenses. See THIRD_PARTY_NOTICES.md.
