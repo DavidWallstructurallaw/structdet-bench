@@ -1,0 +1,89 @@
+{
+  "record_type": "reference_registry",
+  "record_id": "sorting_reference_eight",
+  "record_version": "0.1",
+  "reference_registry_id": "sorting_reference_eight",
+  "reference_registry_version": "0.1",
+  "frame": {
+    "task_id": "bounded_integer_sort",
+    "task_version": "0.1",
+    "analytic_resolution_id": "sorting_mechanism_family",
+    "analytic_resolution_version": "0.1",
+    "structural_schema_id": "sorting_mechanism_partition",
+    "structural_schema_version": "0.1",
+    "reference_registry_id": "sorting_reference_eight",
+    "reference_registry_version": "0.1",
+    "validity_rubric_ref": "bounded_integer_sort_validity_v1"
+  },
+  "classes": [
+    {
+      "structural_class_id": "SORT-ADJ",
+      "name": "adjacent sweep",
+      "membership_rule": "Repeated traversals compare adjacent positions and move local inversions across an active interval until the interval is ordered or a no-change condition is reached. The sweep/active-interval organization determines progress.",
+      "permitted_variation": "Left/right direction, alternating directions, shrinking boundaries, and an early no-change exit.",
+      "distinguishing_evidence": "Inspect sweep-level progress and adjacent inversion handling. Adjacent swaps inside placement of one incoming value into a growing sorted prefix are evaluated under `SORT-INS`, rather than labeled by the swap instruction alone."
+    },
+    {
+      "structural_class_id": "SORT-INS",
+      "name": "sorted-prefix insertion",
+      "membership_rule": "A contiguous ordered prefix grows by selecting the next not-yet-inserted value and locating/inserting it within that prefix, preserving prefix order before the next value is admitted.",
+      "permitted_variation": "Shifts versus adjacent moves; linear versus binary search for the insertion location; equivalent list representations.",
+      "distinguishing_evidence": "Establish the outer prefix-growth invariant and placement dependency. Gap-scheduled passes over interleaved subsequences are outside this descriptor. An insertion helper inside another full-size strategy does not create a second observation."
+    },
+    {
+      "structural_class_id": "SORT-SEL",
+      "name": "rescanning extremum selection",
+      "membership_rule": "Each output/frontier step obtains the next minimum or maximum by examining the current unsorted region afresh, then removes or places that value and advances the ordered region.",
+      "permitted_variation": "Minimum/maximum direction; swapping into a boundary or removing into a fresh output list.",
+      "distinguishing_evidence": "Trace or inspect a fresh extremum selection from the remaining region. A maintained heap/tournament used to obtain the next extremum belongs to `SORT-HEAP` when its descriptor holds."
+    },
+    {
+      "structural_class_id": "SORT-MERGE",
+      "name": "ordered-run merge",
+      "membership_rule": "Subsets/runs are ordered and then combined by choosing among run frontiers while preserving each run's internal order. Progressive ordered merging performs the general recombination.",
+      "permitted_variation": "Top-down or bottom-up organization, explicit stack, natural-run discovery, and equivalent merge storage.",
+      "distinguishing_evidence": "Establish ordered runs, their formation, and frontier-based merge decisions. Natural-run discovery may reverse a monotone descending run; using another general sorter on runs larger than two is a hybrid under this schema."
+    },
+    {
+      "structural_class_id": "SORT-PIVOT",
+      "name": "pivot partition",
+      "membership_rule": "A key-selected pivot partitions a nontrivial region by comparisons to that pivot; recursively or iteratively sorting the resulting regions and placing/combining them establishes order.",
+      "permitted_variation": "Pivot selection; two-way/three-way partition; in-place/copying; recursion/explicit stack.",
+      "distinguishing_evidence": "Establish pivot-dependent partition predicates, subproblem boundaries, and recombination. Position-based splitting followed by ordered merging is `SORT-MERGE`. Bit/digit-defined decomposition without a key-selected pivot is considered under `SORT-RADIX`."
+    },
+    {
+      "structural_class_id": "SORT-HEAP",
+      "name": "maintained heap extraction",
+      "membership_rule": "A heap-order relation is established and maintained while successive root extrema are extracted or placed to build the sorted result.",
+      "permitted_variation": "Min/max heap, bottom-up/incremental heap construction, local array/tree representation, and output direction.",
+      "distinguishing_evidence": "Establish heap-order maintenance and its role in each extraction. A fresh full-region extremum scan with no maintained heap is `SORT-SEL`. External heap libraries are prohibited by the task."
+    },
+    {
+      "structural_class_id": "SORT-COUNT",
+      "name": "full-key frequency ordering",
+      "membership_rule": "Full key values address frequency/position information; scanning the full-key order, with multiplicity expansion or cumulative positions, determines the result.",
+      "permitted_variation": "Fixed 4096-key or observed-range table, ascending key-range scan, frequency expansion or cumulative placement.",
+      "distinguishing_evidence": "Establish whole-key addressing and numeric-order traversal. Sorting a dictionary's distinct keys with another general sorting mechanism is a hybrid. A single distribution over the complete key is counting at this resolution, even when described as one-pass radix."
+    },
+    {
+      "structural_class_id": "SORT-RADIX",
+      "name": "multi-stage digit refinement",
+      "membership_rule": "Proper parts of the key drive multiple reachable refinement stages or digit-recursive subdivisions; significance/order-preservation relations combine them into full-key order. Full ordering is not decided by one complete-key table.",
+      "permitted_variation": "Least-significant-first passes with required order preservation; most-significant-first subdivision; explicit bit/digit widths; equivalent bucket/count storage.",
+      "distinguishing_evidence": "Verify at least one permitted nontrivial input exercises multiple proper-digit stages and the significance/ordering dependencies. Whole-key counting in one stage is `SORT-COUNT`. A counting operation used only inside proper-digit refinement is a component of this family, not a separate full-key mechanism."
+    }
+  ],
+  "validation_status": {
+    "state": "known",
+    "evidence_refs": [],
+    "value": "not_performed"
+  },
+  "provenance": {
+    "source": "HERO_BENCHMARK_SPEC.md",
+    "source_sha256": "d1a0849d888a35ae3c9bd552bb920ee46417b7eeb4f8b687f8b5825e6fb851b2",
+    "ai_assisted_transcription": true
+  },
+  "source_fragments": {
+    "scope": "## 3. Task, horizon, resolution, and validity frame\n\n### 3.1 Task identity and admissible domain\n\n**[Engineering proposal]** Use these semantic identifiers, subject to owner approval. They are human-readable contracts, not executable schemas.\n\n| Field | Proposed value / meaning |\n|---|---|\n| `task_id` / `task_version` | `bounded_integer_sort` / `0.1` |\n| `analytic_resolution_id` / version | `sorting_mechanism_family` / `0.1` |\n| `structural_schema_id` / version | `sorting_mechanism_partition` / `0.1` |\n| `reference_registry_id` / version | `sorting_reference_eight` / `0.1` |\n| `validity_rubric_ref` | `bounded_integer_sort_validity_v1`, specified in Section 5 |\n| Language/interface | Self-contained Python 3 source defining `sort_values(values)`; interpreter and environment pinned in any imported execution evidence. |\n| Input | A plain list of plain integers, length 0 through 256 inclusive; each value 0 through 4095 inclusive. Booleans and arbitrary objects are outside the input domain. |\n| Output | A new plain list containing exactly the input integers with the same multiplicities, in nondecreasing order. The caller's input list must remain unchanged. |\n| Duplicate handling | Preserve multiplicities. Stability of tagged records is outside this task because the interface contains only integers. |\n| Auxiliary space | Permitted. The function may allocate lists, counts, buckets, and other ordinary local structures. |\n| Performance requirement | No algorithmic complexity target or speed ranking. A future safety envelope limits validation resources separately. |\n| Generality | One program must handle the whole declared input domain, not one displayed example or one known test vector. |\n| Realization | One candidate's original program text, including its local helpers and comments, extracted by Section 8. |\n\nThe input range accommodates a full-key frequency table of 4096 counters and a genuinely multi-stage digit method. Discriminating inputs include values above 255. No hidden negative-key, unbounded-key, record-stability, or constant-space condition invalidates an advertised class.\n\n### 3.2 Operation and artifact constraints\n\n**[Engineering proposal]** Programs may use ordinary loops, recursion, comparisons, integer arithmetic/bit operations, local containers, and ordinary built-ins such as `len`, `range`, `enumerate`, `list`, `min`, and `max`. Helper functions must be included in the same candidate. Basic copying, local storage, and container access do not themselves determine a structural class.\n\nThe generation task prohibits imports, `sorted`, any `.sort` delegation, external/opaque ordering routines, dynamic source execution, reflection used to bypass restrictions, randomness, filesystem/network/process access, and persistent cross-call state. It permits no shared implementation between the five candidates. A candidate must remain self-contained when separated from the other four.\n\nThese are task constraints and inspection targets, not a claim that string matching can enforce them. Renaming a prohibited operation does not make it permitted. Built-in ordering delegation may violate validity while also leaving its mechanism unresolved. An ordinary self-implemented heap, count table, or radix pass is eligible.\n\n### 3.3 Consequence horizon and mechanism resolution\n\n**[Source-derived: SD §§3.2, 3.6; SI §3.1]** Structural distinctions depend on the declared consequences and resolution. Matching final sorted values alone cannot distinguish algorithm mechanisms at the selected resolution.\n\n**[Engineering proposal]** The consequence horizon is one complete sorting invocation, assessed across the stated input domain. The mechanism signature concerns how ordering information is acquired, maintained, and used to place values. The observation scope includes nontrivial reachable branches and imported mechanism-relevant traces or equivalent formal/inspection evidence.\n\n| Signature dimension | Declared consequence-bearing question |\n|---|---|\n| Ordering decision | What operation determines which values precede others: adjacent comparison, prefix placement, rescanning selection, pivot relation, run merge, maintained heap order, whole-key address, or digit refinement? |\n| Maintained organization | Which invariant makes subsequent ordering steps possible? |\n| Decomposition and recombination | Are subproblems formed by position, pivot outcome, digit, or another declared rule, and how are they combined? |\n| Branch applicability | Does the same family organize all reachable nontrivial cases, allowing only the variations declared below? |\n| Information transport | How does the mechanism preserve and move the values or their multiplicities while building the ordered output? |\n\nIdentifiers, comments, helper layout, recursion versus an equivalent explicit work stack, local copying, and representation details are ignored when they preserve the class's declared organization. Exact comparison counts, wall-clock time, all control-flow details, and fine subfamilies are outside this resolution. They must not be used to split a class after results are inspected.\n\nThe resource timeout is a validation safeguard; it does not define `T`. A resource overrun limits the tested assessment and does not prove mathematical nontermination."
+  }
+}

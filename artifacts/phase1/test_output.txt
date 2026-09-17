@@ -1,0 +1,16 @@
+StructDet-Bench Phase 1 Step 3 verification summaries
+
+This is a summary, not the complete stdout transcript. Full originals and their SHA-256 identities are retained in the companion ZIP verification directory and listed in test_results.json.
+
+2026-09-17T08:33:07.094571+00:00 | 3242be42-6c2b-4f84-9fde-e14c460cb7aa | scope=phase1 | outcomes={'passed': 38} | exit=1
+2026-09-17T08:33:08.067470+00:00 | 4adf1d19-4cc4-43bd-bbfb-bb4855434e3a | scope=scaffold | outcomes={'passed': 38} | exit=0
+2026-09-17T20:53:29.881057+00:00 | ac5d9ae7-1a02-4d28-9932-c4000195e4b6 | scope=scaffold | outcomes={'passed': 195} | exit=0
+2026-09-17T20:53:30.884064+00:00 | e849b9b8-94c1-4664-a16a-b7405f32daa8 | scope=phase1 | outcomes={'passed': 195} | exit=1
+2026-09-17T21:04:31.012090+00:00 | 68ad12af-81f6-4ecb-b3d0-b00c178121fc | scope=scaffold | outcomes={'passed': 195} | exit=0
+2026-09-17T21:04:32.074606+00:00 | edbb8cb0-a5df-487c-9234-53ec8e2d0bb3 | scope=phase1 | outcomes={'passed': 195} | exit=1
+
+Current regression run: 195 passed; 0 failures, 0 errors, 0 skipped.
+Step 3-specific methods: 83.
+Scaffold/baseline gate: passed, exit 0.
+Full Phase 1 gate: incomplete, exit 1, as later M implementation remains pending.
+No model experiment, generated-program execution, independent annotation, hosted CI, or package publication was performed.

@@ -1,0 +1,179 @@
+{
+  "schema_version": "0.1",
+  "storage_representation": "execution_summaries_with_complete_companion_logs",
+  "companion_archive": "StructDet-Bench_Phase1_Step3.zip",
+  "runs": [
+    {
+      "run_id": "3242be42-6c2b-4f84-9fde-e14c460cb7aa",
+      "recorded_at_utc": "2026-09-17T08:33:07.094571+00:00",
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "tools/run_phase1_checks.py",
+        "--scope",
+        "phase1"
+      ],
+      "exit_code": 1,
+      "record_kind": "summary",
+      "requested_scope": "phase1",
+      "outcome_counts": {
+        "passed": 38
+      },
+      "phase1_m_complete": false,
+      "reasons": [
+        "missing_or_nonpassing_required_M_bindings",
+        "missing_or_nonpassing_M_trace_report_bindings"
+      ],
+      "console_output": "Retained execution summary. Complete original journal is in the companion delivery archive under verification/full_step3_test_results.json. Outcomes: {'passed': 38}; exit code: 1.\n"
+    },
+    {
+      "run_id": "4adf1d19-4cc4-43bd-bbfb-bb4855434e3a",
+      "recorded_at_utc": "2026-09-17T08:33:08.067470+00:00",
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "tools/run_phase1_checks.py",
+        "--scope",
+        "scaffold"
+      ],
+      "exit_code": 0,
+      "record_kind": "summary",
+      "requested_scope": "scaffold",
+      "outcome_counts": {
+        "passed": 38
+      },
+      "phase1_m_complete": false,
+      "reasons": [],
+      "console_output": "Retained execution summary. Complete original journal is in the companion delivery archive under verification/full_step3_test_results.json. Outcomes: {'passed': 38}; exit code: 0.\n"
+    },
+    {
+      "run_id": "ac5d9ae7-1a02-4d28-9932-c4000195e4b6",
+      "recorded_at_utc": "2026-09-17T20:53:29.881057+00:00",
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "tools/run_phase1_checks.py",
+        "--scope",
+        "scaffold"
+      ],
+      "exit_code": 0,
+      "record_kind": "summary",
+      "requested_scope": "scaffold",
+      "outcome_counts": {
+        "passed": 195
+      },
+      "phase1_m_complete": false,
+      "reasons": [],
+      "console_output": "Retained execution summary. Complete original journal is in the companion delivery archive under verification/full_step3_test_results.json. Outcomes: {'passed': 195}; exit code: 0.\n"
+    },
+    {
+      "run_id": "e849b9b8-94c1-4664-a16a-b7405f32daa8",
+      "recorded_at_utc": "2026-09-17T20:53:30.884064+00:00",
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "tools/run_phase1_checks.py",
+        "--scope",
+        "phase1"
+      ],
+      "exit_code": 1,
+      "record_kind": "summary",
+      "requested_scope": "phase1",
+      "outcome_counts": {
+        "passed": 195
+      },
+      "phase1_m_complete": false,
+      "reasons": [
+        "missing_or_nonpassing_required_M_bindings",
+        "missing_or_nonpassing_M_trace_report_bindings"
+      ],
+      "console_output": "Retained execution summary. Complete original journal is in the companion delivery archive under verification/full_step3_test_results.json. Outcomes: {'passed': 195}; exit code: 1.\n"
+    },
+    {
+      "run_id": "68ad12af-81f6-4ecb-b3d0-b00c178121fc",
+      "recorded_at_utc": "2026-09-17T21:04:31.012090+00:00",
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "tools/run_phase1_checks.py",
+        "--scope",
+        "scaffold"
+      ],
+      "exit_code": 0,
+      "record_kind": "summary",
+      "requested_scope": "scaffold",
+      "outcome_counts": {
+        "passed": 195
+      },
+      "phase1_m_complete": false,
+      "reasons": [],
+      "console_output": "Retained execution summary. Complete original journal is in the companion delivery archive under verification/full_step3_test_results.json. Outcomes: {'passed': 195}; exit code: 0.\n"
+    },
+    {
+      "run_id": "edbb8cb0-a5df-487c-9234-53ec8e2d0bb3",
+      "recorded_at_utc": "2026-09-17T21:04:32.074606+00:00",
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "tools/run_phase1_checks.py",
+        "--scope",
+        "phase1"
+      ],
+      "exit_code": 1,
+      "record_kind": "summary",
+      "requested_scope": "phase1",
+      "outcome_counts": {
+        "passed": 195
+      },
+      "phase1_m_complete": false,
+      "reasons": [
+        "missing_or_nonpassing_required_M_bindings",
+        "missing_or_nonpassing_M_trace_report_bindings"
+      ],
+      "console_output": "Retained execution summary. Complete original journal is in the companion delivery archive under verification/full_step3_test_results.json. Outcomes: {'passed': 195}; exit code: 1.\n"
+    }
+  ],
+  "complete_journal_references": [
+    {
+      "path_in_companion_zip": "verification/full_step3_test_results.json",
+      "size_bytes": 685325,
+      "sha256": "ce9445421c809119139cdab4b947ed11d6f37ab1d8a362443b8f5341d6b190cb"
+    },
+    {
+      "path_in_companion_zip": "verification/full_step3_test_output.txt",
+      "size_bytes": 119048,
+      "sha256": "98396a45f277ba8cebb36d74e635650affc8f7da396cc694cc468cd68ef37921"
+    },
+    {
+      "path_in_companion_zip": "verification/retained_step2_full_test_results.json",
+      "size_bytes": 696688,
+      "sha256": "67201e733f50d250c9306d345740e7dd1ca397c616b5fc8d7187a6fab95d0aba"
+    },
+    {
+      "path_in_companion_zip": "verification/retained_step2_full_test_output.txt",
+      "size_bytes": 99861,
+      "sha256": "c1bc894f862c7a2c455b5e09fcccd99dfda6d2a832596cfe03b356c863a0738d"
+    },
+    {
+      "path_in_companion_zip": "verification/full_test_output.txt",
+      "size_bytes": 25621,
+      "sha256": "dc8a68ce2c9f4d68f069af76f3125a340192ea18c24f9e36f8a76d649225fbc2"
+    },
+    {
+      "path_in_companion_zip": "verification/scaffold_gate.txt",
+      "size_bytes": 27196,
+      "sha256": "d4bce82c9004bfebb711998a0db565faaf4e856d98c2636b631c084170a5adec"
+    },
+    {
+      "path_in_companion_zip": "verification/phase1_gate.txt",
+      "size_bytes": 27279,
+      "sha256": "72a5a8c7d570db2e02dfe913baf723934092d05b1bb7702078abbaba9274ad29"
+    }
+  ],
+  "current_checks": {
+    "unit_tests": 195,
+    "step3_test_methods": 83,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0,
+    "python": "3.13.5",
+    "platform": "Linux",
+    "frozen_documents_verified": 12,
+    "hosted_ci_run": false,
+    "substantive_validation_performed": false
+  }
+}
