@@ -24,3 +24,9 @@ Retained runner execution summary: {'passed': 294}, requested scope phase1, exit
 
 === b194ecbf-af9b-4b13-94c0-25643668603d ===
 Step 4: 294 actual tests passed; 99 Step 4 bindings passed; 12 frozen baseline documents match. No independent E validation or Phase 1 completion. Full execution record: verification/step4_full_test_results.json.
+
+=== 61450c2e-8ef0-4802-8f23-1df556fbc3e5 ===
+Phase 1 Step 5 scaffold gate. 370 tests passed; 76 new Step 5 methods; 12 frozen files matched. Exit code 0. Full Phase 1 incomplete. Full individual results in companion verification logs.
+
+=== e0f364a8-768a-4328-b159-e7eee58b09fa ===
+Phase 1 Step 5 phase1 gate. 370 tests passed; 76 new Step 5 methods; 12 frozen files matched. Exit code 1. Full Phase 1 incomplete. Full individual results in companion verification logs.

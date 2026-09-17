@@ -1,0 +1,299 @@
+{
+  "schema_version": "0.1",
+  "data_role": "fixture",
+  "oracle_method": "Stipulated counts; 80-digit Decimal alternate log-count identity and exact Fraction concentration. No production module imported. Expression strings are documentation and never evaluated.",
+  "source_pins": {
+    "METRICS_SPEC.md": "23b45934e87767ca87e56b97aa4e1d1abdd49e27187d0b9c5a336ca516a96edb",
+    "VALIDATION_AND_FALSIFICATION.md": "6aaa5b01290d3c6b9746f20d47c2092c038587d72d7e090ee3ad73438794ef00",
+    "PHASE_1_PLAN.md": "4a4137d1fa444c212af71740e439624c341ed485584ee3878e358f1e9424f704"
+  },
+  "hero_scope": "Count projections only. The actual HF-00 bundle, variant manifests and report path remain Step 6.",
+  "cases": [
+    {
+      "fixture_id": "MF-01",
+      "counts": {
+        "A": 4
+      },
+      "population_size": 4,
+      "entropy_expression": "0",
+      "expected": {
+        "observed_support_size": 1,
+        "structural_entropy_nats": "0E-79",
+        "structural_concentration_index": [
+          1,
+          1
+        ],
+        "effective_support_shannon": "1",
+        "effective_support_simpson": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "fixture_id": "MF-02",
+      "counts": {
+        "A": 2,
+        "B": 2
+      },
+      "population_size": 4,
+      "entropy_expression": "ln(2)",
+      "expected": {
+        "observed_support_size": 2,
+        "structural_entropy_nats": "0.6931471805599453094172321214581765680755001343602552541206800094933936219696947",
+        "structural_concentration_index": [
+          1,
+          2
+        ],
+        "effective_support_shannon": "2.0000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "effective_support_simpson": [
+          2,
+          1
+        ]
+      }
+    },
+    {
+      "fixture_id": "MF-03",
+      "counts": {
+        "A": 3,
+        "B": 1
+      },
+      "population_size": 4,
+      "entropy_expression": "ln(4)-(3/4)*ln(3)",
+      "expected": {
+        "observed_support_size": 2,
+        "structural_entropy_nats": "0.56233514461880835028803031522445885766538235035344841944033926875866652402543265",
+        "structural_concentration_index": [
+          5,
+          8
+        ],
+        "effective_support_shannon": "1.7547653506033232810922918690626654068800914536077629023092302114611557269297361",
+        "effective_support_simpson": [
+          8,
+          5
+        ]
+      }
+    },
+    {
+      "fixture_id": "MF-04",
+      "counts": {
+        "A": 1,
+        "B": 1,
+        "C": 1
+      },
+      "population_size": 3,
+      "entropy_expression": "ln(3)",
+      "expected": {
+        "observed_support_size": 3,
+        "structural_entropy_nats": "1.0986122886681096913952452369225257046474905578227494517346943336374942932186090",
+        "structural_concentration_index": [
+          1,
+          3
+        ],
+        "effective_support_shannon": "3.0000000000000000000000000000000000000000000000000000000000000000000000000000001",
+        "effective_support_simpson": [
+          3,
+          1
+        ]
+      }
+    },
+    {
+      "fixture_id": "MF-05",
+      "counts": {
+        "A": 3,
+        "B": 1,
+        "C": 0
+      },
+      "population_size": 4,
+      "entropy_expression": "ln(4)-(3/4)*ln(3)",
+      "expected": {
+        "observed_support_size": 2,
+        "structural_entropy_nats": "0.56233514461880835028803031522445885766538235035344841944033926875866652402543265",
+        "structural_concentration_index": [
+          5,
+          8
+        ],
+        "effective_support_shannon": "1.7547653506033232810922918690626654068800914536077629023092302114611557269297361",
+        "effective_support_simpson": [
+          8,
+          5
+        ]
+      }
+    },
+    {
+      "fixture_id": "MF-06",
+      "counts": {},
+      "population_size": 0,
+      "entropy_expression": null,
+      "expected": {
+        "observed_support_size": 0,
+        "structural_entropy_nats": null,
+        "structural_concentration_index": null,
+        "effective_support_shannon": null,
+        "effective_support_simpson": null
+      }
+    },
+    {
+      "fixture_id": "EXACT-FIFTH",
+      "counts": {
+        "A": 1,
+        "B": 4
+      },
+      "population_size": 5,
+      "entropy_expression": "ln(5)-(4/5)*ln(4)",
+      "expected": {
+        "observed_support_size": 2,
+        "structural_entropy_nats": "0.5004024235381878795331879388931051306048011392921093153195598762847491925561463",
+        "structural_concentration_index": [
+          17,
+          25
+        ],
+        "effective_support_shannon": "1.6493848884661178242175024640370501662918362664917733518822597449756699761169012",
+        "effective_support_simpson": [
+          25,
+          17
+        ]
+      }
+    },
+    {
+      "fixture_id": "HF-00-COUNTS",
+      "counts": {
+        "A": 8,
+        "B": 6,
+        "C": 3,
+        "D": 2,
+        "E": 1
+      },
+      "population_size": 20,
+      "entropy_expression": "ln(20)-(8*ln(8)+6*ln(6)+3*ln(3)+2*ln(2))/20",
+      "expected": {
+        "observed_support_size": 5,
+        "structural_entropy_nats": "1.3923212547574291372397918251943216996644306569923825702803074451346640045471616",
+        "structural_concentration_index": [
+          57,
+          200
+        ],
+        "effective_support_shannon": "4.0241803676091886885073668587802002821133503361969166289969465158734499245676634",
+        "effective_support_simpson": [
+          200,
+          57
+        ]
+      }
+    },
+    {
+      "fixture_id": "HF-19-COUNTS",
+      "counts": {
+        "A": 8,
+        "B": 6,
+        "C": 3,
+        "D": 2
+      },
+      "population_size": 19,
+      "entropy_expression": "ln(19)-(8*ln(8)+6*ln(6)+3*ln(3)+2*ln(2))/19",
+      "expected": {
+        "observed_support_size": 4,
+        "structural_entropy_nats": "1.2566379067490069271717308519423597730140414023552912818288018518552903577485283",
+        "structural_concentration_index": [
+          113,
+          361
+        ],
+        "effective_support_shannon": "3.5135885943669087125785883355943752275015096967727383257620514499877260883359773",
+        "effective_support_simpson": [
+          361,
+          113
+        ]
+      }
+    },
+    {
+      "fixture_id": "HF-06-COUNTS",
+      "counts": {
+        "A": 8,
+        "B": 6,
+        "C": 3,
+        "D": 3
+      },
+      "population_size": 20,
+      "entropy_expression": "ln(20)-(8*ln(8)+6*ln(6)+6*ln(3))/20",
+      "expected": {
+        "observed_support_size": 4,
+        "structural_entropy_nats": "1.2968441295132072144722282518017605007748570867549956779321712960383792227613398",
+        "structural_concentration_index": [
+          59,
+          200
+        ],
+        "effective_support_shannon": "3.6577350955662683193298382494789892420769266285429950475461381532369545866939108",
+        "effective_support_simpson": [
+          200,
+          59
+        ]
+      }
+    },
+    {
+      "fixture_id": "EI-PENDING",
+      "counts": {
+        "A": 2,
+        "B": 1
+      },
+      "population_size": 3,
+      "entropy_expression": "ln(3)-(2/3)*ln(2)",
+      "expected": {
+        "observed_support_size": 2,
+        "structural_entropy_nats": "0.63651416829481281845042382261707465926382380158257928232090766064189854523881253",
+        "structural_concentration_index": [
+          5,
+          9
+        ],
+        "effective_support_shannon": "1.8898815748423097471508159109173425258553771970522619701229626682329495147709393",
+        "effective_support_simpson": [
+          9,
+          5
+        ]
+      }
+    }
+  ],
+  "threshold_cases": [
+    {
+      "counts": {
+        "A": 3,
+        "B": 1
+      },
+      "threshold": "0.25",
+      "expected": 2
+    },
+    {
+      "counts": {
+        "A": 3,
+        "B": 1
+      },
+      "threshold": "0.250001",
+      "expected": 1
+    },
+    {
+      "counts": {
+        "A": 3,
+        "B": 1
+      },
+      "threshold": "0.80",
+      "expected": 0
+    },
+    {
+      "counts": {
+        "A": 1,
+        "B": 4
+      },
+      "threshold": "0.2",
+      "expected": 2
+    },
+    {
+      "counts": {
+        "A": 8,
+        "B": 6,
+        "C": 3,
+        "D": 2,
+        "E": 1
+      },
+      "threshold": "0.10",
+      "expected": 4
+    }
+  ]
+}

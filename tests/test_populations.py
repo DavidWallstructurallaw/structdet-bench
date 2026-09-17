@@ -346,8 +346,10 @@ class Step4MatrixTests(unittest.TestCase):
                     actual.extend(f'tests.{module}.{cls.name}.{f.name}' for f in cls.body if isinstance(f,ast.FunctionDef) and f.name.startswith('test_'))
         self.assertEqual(set(m['step4_acceptance']['test_bindings']),set(actual))
         self.assertEqual(len(m['step4_acceptance']['test_bindings']),len(actual))
-        self.assertEqual(m['delivery_progress']['step'],4)
-        self.assertFalse(m['delivery_progress']['phase1_complete'])
+        snapshots = m.get('delivery_history', []) + [m['delivery_progress']]
+        step4 = [x for x in snapshots if x['step'] == 4]
+        self.assertEqual(len(step4), 1)
+        self.assertFalse(step4[0]['phase1_complete'])
         self.assertIn('snapshot',m['current_step_scope'])
     def test_prior_requirement_and_source_identities_remain_intact(self):
         from tests.helpers import load_matrix, baseline_checks

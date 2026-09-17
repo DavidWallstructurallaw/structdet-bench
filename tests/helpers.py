@@ -69,6 +69,55 @@ def load_matrix() -> dict[str, Any]:
     for group in ("trace_requirements", "report_groups"):
         for entry in matrix[group]:
             entry.setdefault("test_bindings", [])
+    # Preserve the raw Step 2/3 catalogue snapshot for historical checks. The
+    # current runner receives explicit M-only implementation overlays, validated
+    # against the declared test catalogue; no old bindings are discarded.
+    updates = matrix.get("implementation_updates", {})
+    if not isinstance(updates, dict) or set(updates) - {"vf_tests", "trace_requirements", "report_groups"}:
+        raise ValueError("Invalid implementation update groups")
+    for group, changes in updates.items():
+        entries = {entry["id"]: entry for entry in matrix[group]}
+        seen = set()
+        if not isinstance(changes, list):
+            raise ValueError("Invalid implementation updates")
+        for change in changes:
+            if (not isinstance(change, dict) or not isinstance(change.get("id"), str)
+                    or change["id"] in seen or change["id"] not in entries
+                    or set(change) != {"id", "implementation_status", "binding_classes", "reason", "fixture_refs"}):
+                raise ValueError("Invalid implementation update identity")
+            seen.add(change["id"])
+            if change["implementation_status"] not in {"partial", "implemented"}:
+                raise ValueError("Unsupported implementation disposition")
+            classes = change["binding_classes"]
+            if not isinstance(classes, list) or not classes or not all(isinstance(x, str) for x in classes):
+                raise ValueError("Invalid binding class references")
+            catalogue = matrix["step5_acceptance"]["test_bindings"]
+            additions = []
+            for name in classes:
+                found = [method for method in catalogue if method.startswith(name + ".")]
+                if not found:
+                    raise ValueError("Missing binding class reference")
+                additions.extend(found)
+            bindings = sorted(set(additions))
+            if not bindings or not all(isinstance(x, str) and x.startswith("tests.") for x in bindings):
+                raise ValueError("Invalid updated bindings")
+            entry = entries[change["id"]]
+            if group == "vf_tests":
+                if not entry["m_required"] or "M" not in entry["scope_records"]:
+                    raise ValueError("Update cannot fulfill non-M evidence")
+                target = entry["scope_records"]["M"]
+            else:
+                if not entry["m_applicable"]:
+                    raise ValueError("Update cannot implement deferred scope")
+                target = entry
+            target["test_bindings"] = sorted(set(target.get("test_bindings", []) + bindings))
+            for field in ("implementation_status", "reason", "fixture_refs"):
+                target[field] = change[field]
+    if updates:
+        matrix["metadata_snapshot_step"] = matrix["current_step"]
+        matrix["metadata_snapshot_authorization"] = matrix["authorization"]
+        matrix["current_step"] = matrix["delivery_progress"]["step"]
+        matrix["authorization"] = matrix["delivery_progress"]["authorization"]
     return matrix
 
 
