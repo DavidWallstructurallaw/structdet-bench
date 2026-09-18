@@ -225,6 +225,8 @@ class HarnessTests(unittest.TestCase):
                 if row["m_applicable"]:
                     row["implementation_status"] = "implemented"
                     row["test_bindings"] = [test_id]
+        for row in matrix.get("step7_acceptance", {}).get("evidence_checks", {}).values():
+            row["test_bindings"] = [test_id]
         return matrix, [test_id], [{"test_id": test_id, "outcome": "passed"}]
 
     def test_empty_discovery_fails_both_gates(self) -> None:

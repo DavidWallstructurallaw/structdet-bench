@@ -501,7 +501,11 @@ class Matrix(unittest.TestCase):
         m=load_matrix();byid={x['id']:x for x in m['vf_tests']}
         for ident in ('VT-07','VT-08','VT-09'):
             self.assertEqual(byid[ident]['scope_records']['M']['implementation_status'],'implemented');self.assertTrue(byid[ident]['scope_records']['M']['test_bindings'])
-        self.assertEqual(byid['VT-13']['scope_records']['M']['implementation_status'],'partial');self.assertFalse(m['step5_acceptance']['end_to_end_report_implemented'])
+        raw=json.loads((ROOT/'tests/phase1_matrix.json').read_text())
+        snapshot=raw['implementation_update_history'][0]['updates']
+        self.assertEqual(next(x for x in snapshot['vf_tests'] if x['id']=='VT-13')['implementation_status'],'partial')
+        self.assertEqual(byid['VT-13']['scope_records']['M']['implementation_status'],'implemented')
+        self.assertFalse(m['step5_acceptance']['end_to_end_report_implemented'])
 
     def test_history_and_actual_runner_step(self):
         from tests.helpers import load_matrix

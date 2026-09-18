@@ -372,3 +372,185 @@ class PipelineBoundaryTests(unittest.TestCase):
             before={p.name:p.read_bytes() for p in path.parent.iterdir()}
             result,code=validate_bundle(path)
             self.assertEqual(code,0);self.assertEqual(before,{p.name:p.read_bytes() for p in path.parent.iterdir()})
+
+
+# Paths are an explicit serialization crosswalk, not a new scientific schema.
+# An asterisk checks every existing row; absence states are exercised separately.
+RF_PATHS = {
+ 'RF-01':['run_id','input_schema_version','study_id','sections.0.content.analysis_config_ref'],
+ 'RF-02':['sections.0.content.frames.*.task_id','sections.0.content.frames.*.task_context','sections.0.content.frames.*.consequence_horizon'],
+ 'RF-03':['sections.0.content.frames.*.analytic_resolution_id','sections.0.content.frames.*.structural_schema_version'],
+ 'RF-04':['sections.0.content.frames.*.reference_registry_id','sections.4.content.reference_coverage','sections.7.content.intake_and_tail'],
+ 'RF-05':['sections.0.content.protocols.*.model_identifier','sections.0.content.protocols.*.checkpoint_identifier'],
+ 'RF-06':['sections.0.content.protocols.*.generation_protocol_version','sections.0.content.protocols.*.condition_id','sections.0.content.protocols.*.decoding_settings','sections.0.content.protocols.*.seed'],
+ 'RF-07':['sections.0.content.protocols.*.collection_window','sections.0.content.protocols.*.budget_record_ref','sections.0.content.protocols.*.sampling_plan_ref'],
+ 'RF-08':['sections.1.content.attempts.*.attempt_id','sections.1.content.attempts.*.attempt_status','sections.1.content.attempts.*.retry_of','sections.1.content.attempts.*.raw_response_ref'],
+ 'RF-09':['sections.1.content.output_associations.*.sample_id','sections.1.content.output_associations.*.raw_response_ref','sections.1.content.output_associations.*.output_content_hash','sections.1.content.output_associations.*.span_status'],
+ 'RF-10':['sections.1.content.groups','sections.1.content.output_associations.*.group_type','sections.1.content.output_associations.*.shared_context_ref','sections.1.content.inventory.*.sample_order'],
+ 'RF-11':['sections.1.content.output_associations.*.completion_status','sections.1.content.output_associations.*.termination_reason','sections.1.content.output_associations.*.selection_status','sections.1.content.inventory.*.excluded_sample_ids'],
+ 'RF-12':['sections.2.content.admissions.*.assignment_id','sections.2.content.admissions.*.assignment_version','sections.2.content.admissions.*.structural_class_id','sections.2.content.admissions.*.classification_uncertainty_ref'],
+ 'RF-13':['sections.2.content.admissions.*.validity_status','sections.2.content.admissions.*.validity_rubric_ref','sections.7.content.integrity_record_references.domain_validation_ref'],
+ 'RF-14':['sections.2.content.admissions.*.evidence_refs','sections.7.content.support_records.*.scope_refs','sections.7.content.support_records.*.details'],
+ 'RF-15':['sections.3.content.metrics.*.metric_name','sections.3.content.metrics.*.unit','sections.3.content.metrics.*.result_status','sections.3.content.metrics.*.unavailable_reason','sections.3.content.metrics.*.evidence_status'],
+ 'RF-16':['sections.3.content.distributions.*.population_size','sections.3.content.distributions.*.class_counts','sections.3.content.distributions.*.accepted_sample_ids'],
+ 'RF-17':['sections.2.content.accounting.*.classification_coverage','sections.2.content.accounting.*.classified_valid_coverage','sections.2.content.accounting.*.valid_fraction_selected','sections.2.content.accounting.*.decisive_validity_coverage','sections.2.content.accounting.*.classified_valid_fraction'],
+ 'RF-18':['sections.3.content.metrics','sections.3.content.numerical_policy'],
+ 'RF-19':['sections.3.content.distributions.*.min_empirical_frequency','sections.3.content.distributions.*.exact_frequencies'],
+ 'RF-20':['sections.4.content.prefixes.*.k','sections.4.content.prefixes.*.counted_samples','sections.4.content.prefixes.*.selected_sample_ids','sections.4.content.prefixes.*.partial_group_ids'],
+ 'RF-21':['sections.6.content.diagnostics'],'RF-22':['sections.6.content.diagnostics'],
+ 'RF-23':['sections.5.content.comparisons'],'RF-24':['sections.5.content.comparisons'],
+ 'RF-25':['sections.5.content.comparisons'],'RF-26':['sections.5.content.comparisons'],
+ 'RF-27':['sections.5.content.comparisons'],'RF-28':['sections.5.content.comparisons'],
+ 'RF-29':['sections.7.content.five_conditions','sections.7.content.declared_claim_records','sections.7.content.integrity_record_references.integrity_assessment_ref'],
+ 'RF-30':['sections.7.content.support_checks.*.details','sections.7.content.integrity_record_references.annotation_summary_ref','sections.7.content.integrity_record_references.audit_sampling_plan_ref'],
+ 'RF-31':['sections.7.content.intake_and_tail'],'RF-32':['sections.7.content.integrity_record_references.blinding_record_ref','sections.7.content.integrity_record_references.judge_calibration_ref','sections.7.content.integrity_record_references.sensitivity_evidence_ref'],
+ 'RF-33':['sections.7.content.corrections','sections.7.content.correction_impacts','sections.7.content.dependencies'],
+ 'RF-34':['sections.0.content.input_refs','sections.0.content.scope.permitted_claim_scope','sections.7.content.release_restrictions'],
+ 'RF-35':['sections.7.content.deferred.*.prerequisites'],'RF-36':['sections','sections.7.content.redaction'],
+}
+
+
+def assert_report_path(test, value, path):
+    if not path:return
+    part,*rest=path.split('.')
+    if part=='*':
+        test.assertIsInstance(value,list)
+        for item in value:assert_report_path(test,item,'.'.join(rest))
+    else:
+        if isinstance(value,list):
+            test.assertLess(int(part),len(value));child=value[int(part)]
+        else:
+            test.assertIn(part,value);child=value[part]
+        assert_report_path(test,child,'.'.join(rest))
+
+
+class Step7ReportIntegration(unittest.TestCase):
+    def setUp(self):
+        t=TemporaryDirectory();self.addCleanup(t.cleanup);self.root=Path(t.name)
+        self.p,_=materialize_hero(self.root/'input')
+    def test_all_36_report_groups_have_explicit_paths(self):
+        from tests.helpers import load_matrix
+        r=analyze_bundle(self.p);obj=plain(r.report);m=load_matrix()
+        self.assertEqual(set(RF_PATHS),{x['id'] for x in m['report_groups']})
+        self.assertEqual(sum(x['m_applicable'] for x in m['report_groups']),28)
+        for group,paths in RF_PATHS.items():
+            for path in paths:
+                with self.subTest(group=group,path=path):assert_report_path(self,obj,path)
+        self.assertEqual(m['step7_acceptance']['report_paths'],RF_PATHS)
+    def test_every_m_metric_retains_denominator_status_and_source_scope(self):
+        r=analyze_bundle(self.p)
+        for row in section(r,4)['metrics']:
+            self.assertEqual(row['population_size'],20);self.assertIn(row['analysis_population'],('classified_all','classified_valid'))
+            self.assertEqual(row['permitted_claim_scope'],'fixture_only');self.assertEqual(row['uncertainty_status'],'not_estimated')
+        self.assertEqual(len(section(r,2)['attempts']),4)
+    def test_typed_lineage_exposure_and_annotation_survive_redaction(self):
+        obs=[json.loads(x) for x in (self.p.parent/'records.jsonl').read_text().splitlines()]
+        sup=[json.loads(x) for x in (self.p.parent/'evidence.jsonl').read_text().splitlines()];m=json.loads(self.p.read_text())
+        for f in m['record_files']:f['expected_sha256']=tagged(state='unknown')
+        sup += [support_record('lineage','l1',subject_ref=record_ref('role','reviewer'),parent_ref=tagged(state='unknown'),relation='translated_from',knowledge_state='unknown'),
+                support_record('exposure','x1',subject_ref=record_ref('role','reviewer'),role_ref=record_ref('role','reviewer'),stage='post_inspection',exposed=tagged(True),material_refs=[])]
+        result=analyze_bundle(rewrite_evidence_bundle(self.p.parent,obs,sup,m))
+        rows={x['record_id']:x for x in section(result,8)['support_records']}
+        self.assertEqual(rows['l1']['details']['relation'],'translated_from')
+        self.assertEqual(rows['l1']['details']['parent_ref']['state'],'unknown')
+        self.assertTrue(rows['x1']['details']['exposed']['value']);self.assertEqual(rows['x1']['details']['stage'],'post_inspection')
+        self.assertNotIn('test-person-1',result.report_json.decode())
+    def test_empty_then_received_and_acted_intake_never_adds_samples(self):
+        for stage in ('empty','received','acted','rejected'):
+            with self.subTest(stage=stage):
+                root=self.root/stage;p,o,s,m=population_bundle(root,['SORT-ADJ'])
+                s.append(support_record('intake','incident',component='external_incident',stage=stage,proposed_change=tagged('PRIVATE_ORIGINAL_ANOMALY')))
+                r=analyze_bundle(rewrite_evidence_bundle(root,o,s,m));self.assertEqual(section(r,8)['intake_and_tail'][0]['stage'],stage)
+                self.assertEqual(section(r,2)['inventory'][0]['realization_count']['value'],1)
+                self.assertNotIn(b'PRIVATE_ORIGINAL_ANOMALY',r.report_json)
+    def test_domain_coverage_details_are_visible_and_fixture_stays_fixture(self):
+        from tests.helpers import complete_functional_fixture
+        p,o,s,m=complete_functional_fixture(self.root/'functional')
+        r=analyze_bundle(p)
+        checks=[x for x in section(r,8)['support_checks'] if 'complete_suite_coverage' in x['details']]
+        self.assertTrue(checks);self.assertTrue(checks[0]['details']['complete_suite_coverage'])
+        self.assertEqual(checks[0]['details']['tested_count'],8995);self.assertFalse(checks[0]['substantive_validation_performed'])
+        self.assertEqual(section(r,1)['scope']['data_role'],'fixture')
+    def test_all_deferred_prerequisites_visible_without_estimator(self):
+        r=analyze_bundle(self.p);deferred={x['metric_name']:x for x in section(r,8)['deferred']}
+        for name in ('exact_realization_entropy','convergence_provenance','structural_transmission','structural_half_life_null','external_recovery_rate'):
+            self.assertIsNone(deferred[name]['value']);self.assertTrue(deferred[name]['prerequisites'])
+        self.assertIn('empty denominator is undefined',deferred['external_recovery_rate']['prerequisites'])
+        self.assertIn('n > 1',deferred['structural_half_life_null']['prerequisites'])
+    def test_correction_dependencies_identify_both_views_without_resampling(self):
+        p,_=materialize_hero(self.root/'corrected','HF-06');r=analyze_bundle(p)
+        ds=section(r,8)['dependencies'];self.assertEqual(len(ds),40)
+        self.assertTrue(all(d['dependent_m_metrics'] and d['dependent_m_prefixes']==[5,10,20] for d in ds))
+        self.assertTrue(all(d['v_dependents']=='not_implemented' for d in ds))
+        self.assertEqual(section(r,2)['inventory'][0]['selected_realization_count']['value'],20)
+    def test_shared_schema_challenge_affects_all_its_cells_not_other_frames(self):
+        p,o,s,m=population_bundle(self.root/'cells',['SORT-ADJ','SORT-INS','SORT-MERGE'])
+        cell=m['cells'][0]
+        for num in (2,3):
+            clone=copy.deepcopy(cell);clone.update(record_id=f'cell{num}',analysis_cell_id=f'cell{num}');m['cells'].append(clone)
+        m['cells'][2]['frame_id']='frame2';fr=copy.deepcopy(m['frames'][0]);fr.update(record_id='frame2',frame_id='frame2');m['frames'].append(fr)
+        original=copy.deepcopy(m['analysis_config']['selection'][0]);m['analysis_config']['selection']=[]
+        for i in (1,2,3):
+            sid=f's{i}';next(x for x in o if x['record_id']==sid)['analysis_cell_id']=f'cell{i}'
+            sel=copy.deepcopy(original);sel.update(analysis_cell_id=f'cell{i}',selected_sample_ids=tagged([sid]),sample_order=tagged([sid]));m['analysis_config']['selection'].append(sel)
+        next(x for x in o if x['record_id']=='a3')['frame_id']='frame2'
+        for x in s:
+            if x['record_id'] in ('e-a3','e-v3'):x['payload']['scope_refs']=[record_ref('frame','frame2')]
+        s.append(support_record('correction','c-schema',effect='schema',action='challenge',stage='applied',target_refs=[record_ref('frame','frame1')],reason=tagged('Mock shared defect'),evidence_refs=[record_ref('evidence','e-a1')],reviewer_refs=[record_ref('role','reviewer')]))
+        r=analyze_bundle(rewrite_evidence_bundle(p.parent,o,s,m))
+        states={x['analysis_cell_id']:x['result_status'] for x in section(r,4)['metrics'] if x['metric_name']=='observed_support_size' and x['analysis_population']=='classified_all'}
+        self.assertEqual(states,{'cell1':'unavailable','cell2':'unavailable','cell3':'available'})
+    def test_relocated_input_replays_all_canonical_content(self):
+        import shutil
+        a=analyze_bundle(self.p,recorded_at=STAMP);other=self.root/'moved'
+        shutil.copytree(self.p.parent,other);b=analyze_bundle(other/'bundle.json',recorded_at=STAMP)
+        self.assertEqual(a.report_json,b.report_json);self.assertEqual(a.report_markdown,b.report_markdown)
+        self.assertEqual(a.manifest_json,b.manifest_json)
+    def test_metadata_time_never_changes_content_or_creates_observation(self):
+        a=analyze_bundle(self.p,recorded_at=STAMP);b=analyze_bundle(self.p,recorded_at='2026-09-18T02:00:00+00:00')
+        self.assertEqual(a.report_json,b.report_json);self.assertEqual(a.report_markdown,b.report_markdown)
+        ma,mb=plain(a.manifest),plain(b.manifest);ma.pop('recorded_at_utc');mb.pop('recorded_at_utc');self.assertEqual(ma,mb)
+    def test_registered_sources_and_original_fixture_hashes_still_match(self):
+        from tests.helpers import load_matrix,baseline_checks
+        m=load_matrix();self.assertTrue(all(x['status']=='passed' for x in baseline_checks(m)))
+        for d in m['ec001_supplement']['documents']:
+            self.assertEqual(hashlib.sha256((ROOT/d['path']).read_bytes()).hexdigest(),d['sha256'])
+        self.assertEqual(len(m['ec001_supplement']['requirements']),8)
+
+
+class Step7GateTests(unittest.TestCase):
+    """Gate unit tests use synthetic pass records, never empirical assertions."""
+    def test_missing_ec_binding_cannot_pass_full_gate(self):
+        from tests.test_scaffold import HarnessTests, assess_gate
+        matrix,ids,records=HarnessTests.synthetic_gate_inputs()
+        del matrix['step7_acceptance']['evidence_checks']['EC-C02']
+        result=assess_gate(matrix,ids,records,scope='phase1')
+        self.assertFalse(result['requested_gate_passed'])
+        self.assertIn('EC-C02',result['unresolved_ec_m_ids'])
+    def test_nonpassing_ec_binding_cannot_be_overridden(self):
+        from tests.test_scaffold import HarnessTests, assess_gate
+        matrix,ids,records=HarnessTests.synthetic_gate_inputs()
+        matrix['step7_acceptance']['evidence_checks']['EC-C03']['test_bindings']=['tests.not_executed.test_missing']
+        self.assertFalse(assess_gate(matrix,ids,records,scope='phase1')['requested_gate_passed'])
+    def test_complete_mock_gate_is_M_only_and_not_final_approval(self):
+        from tests.test_scaffold import HarnessTests, assess_gate
+        matrix,ids,records=HarnessTests.synthetic_gate_inputs()
+        result=assess_gate(matrix,ids,records,scope='phase1')
+        self.assertTrue(result['phase1_m_complete'])
+        self.assertEqual(len(result['ec_m_results']),8)
+        self.assertFalse(result['empirical_validation_performed'])
+        self.assertEqual(result['phase1_final_owner_approval'],'not_established_by_software_tests')
+    def test_test_records_have_expected_actual_scope_and_no_E_claim(self):
+        from tests.test_scaffold import HarnessTests, _runner
+        matrix,ids,records=HarnessTests.synthetic_gate_inputs()
+        rows=_runner.annotate_results(matrix,records)
+        self.assertEqual(rows[0]['expected_outcome'],'passed')
+        self.assertEqual(rows[0]['actual_outcome'],'passed')
+        self.assertTrue(rows[0]['requirement_bindings'])
+        self.assertTrue(all(x.endswith('/M') for x in rows[0]['requirement_bindings']))
+        self.assertFalse(rows[0]['substantive_validation_performed'])
+    def test_ec_scope_cannot_be_promoted_to_empirical_evidence(self):
+        from tests.helpers import load_matrix
+        from tests.test_scaffold import validate_matrix
+        m=load_matrix();m['step7_acceptance']['evidence_checks']['EC-C01']['evidence_status']='validated'
+        self.assertTrue(validate_matrix(m))

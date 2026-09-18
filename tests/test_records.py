@@ -309,7 +309,10 @@ class Step2MatrixTests(unittest.TestCase):
                     for method in cls.body:
                         if isinstance(method,ast.FunctionDef) and method.name.startswith('test_'):
                             actual.add(f'tests.{module}.{cls.name}.{method.name}')
-        self.assertEqual(set(matrix['step2_acceptance']['test_bindings']),actual)
+        historical = set(matrix['step2_acceptance']['test_bindings'])
+        additions = {name for name in matrix.get('step7_acceptance', {}).get('test_bindings', [])
+                     if name.split('.')[1] in {'test_records','test_local_io','test_security'}}
+        self.assertEqual(historical | additions, actual)
         self.assertGreaterEqual(matrix['current_step'],2)
         self.assertEqual(matrix['step2_acceptance']['scope'],'input_layer_only')
 

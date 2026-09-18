@@ -180,6 +180,17 @@ def validate_matrix(matrix: dict[str, Any]) -> list[str]:
         errors.append("Scaffold acceptance requirements missing or renamed")
     if len(matrix.get("baseline", [])) != 12:
         errors.append("Expected eleven Phase 0 files and one execution plan")
+    if matrix.get("current_step", 0) >= 7:
+        supplement = matrix.get("step7_acceptance", {}).get("evidence_checks", {})
+        if not isinstance(supplement, dict) or set(supplement) != {f"EC-C{i:02d}" for i in range(1,9)}:
+            errors.append("EC-001 M record checks missing or renamed")
+        else:
+            for ident, entry in supplement.items():
+                bindings = entry.get("test_bindings")
+                if (entry.get("scope") != "M_only" or entry.get("evidence_status") != "not_supplied"
+                        or not isinstance(bindings, list) or not bindings
+                        or any(not isinstance(v,str) or not v.startswith("tests.") or ".test_" not in v for v in bindings)):
+                    errors.append(ident + ": invalid M-only supplemental bindings")
     return errors
 
 
@@ -258,12 +269,26 @@ def assess_gate(
                     or any(by_id.get(name) != "passed" for name in bindings)
                 ):
                     missing_trace.append(entry["id"])
+    ec_results = []
+    missing_ec = []
+    if matrix.get("current_step", 0) >= 7:
+        supplemental = matrix.get("step7_acceptance", {}).get("evidence_checks", {})
+        for i in range(1,9):
+            ident = f"EC-C{i:02d}"
+            entry = supplemental.get(ident, {})
+            bindings = entry.get("test_bindings", [])
+            okay = (entry.get("scope") == "M_only" and entry.get("evidence_status") == "not_supplied"
+                    and bool(bindings) and all(by_id.get(name) == "passed" for name in bindings))
+            if not okay: missing_ec.append(ident)
+            ec_results.append({"id":ident,"scope":"M_only","execution_status":"passed" if okay else "not_passed",
+                               "test_bindings":bindings,"substantive_E_evidence_supplied":False})
     if scope == "phase1":
+        if missing_ec: reasons.append("missing_or_nonpassing_EC_M_bindings")
         if unresolved_m:
             reasons.append("missing_or_nonpassing_required_M_bindings")
         if missing_trace:
             reasons.append("missing_or_nonpassing_M_trace_report_bindings")
-    final_eligible = not reasons and not unresolved_m and not missing_trace
+    final_eligible = not reasons and not unresolved_m and not missing_trace and not missing_ec
     return {
         "requested_scope": scope,
         "requested_gate_passed": not reasons,
@@ -278,8 +303,30 @@ def assess_gate(
         "unresolved_m_family_ids": unresolved_m,
         "unresolved_m_trace_report_ids": missing_trace,
         "family_results": family_results,
+        "ec_m_results": ec_results,
+        "unresolved_ec_m_ids": missing_ec,
+        "phase1_final_owner_approval": "not_established_by_software_tests",
         "empirical_validation_performed": False,
     }
+
+
+def annotate_results(matrix: dict[str, Any], records: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """Bind actual outcomes to current scoped contracts; do not manufacture E work."""
+    links = {}
+    for row in matrix["vf_tests"]:
+        for scope, spec in row["scope_records"].items():
+            for name in spec["test_bindings"]:
+                links.setdefault(name, set()).add(row["id"] + "/" + scope)
+    for group in ("trace_requirements", "report_groups"):
+        for row in matrix[group]:
+            for name in row["test_bindings"]:
+                links.setdefault(name, set()).add(row["id"] + "/M")
+    for ident, row in matrix.get("step7_acceptance", {}).get("evidence_checks", {}).items():
+        for name in row["test_bindings"]: links.setdefault(name, set()).add(ident + "/M")
+    return [{**row, "expected_outcome":"passed", "actual_outcome":row["outcome"],
+             "requirement_bindings":sorted(links.get(row["test_id"], ())),
+             "evidence_scope":"software_fixture_only", "substantive_validation_performed":False}
+            for row in records]
 
 
 def append_journal(directory: Path, run: dict[str, Any]) -> None:
@@ -333,7 +380,7 @@ def environment_record() -> dict[str, Any]:
         "optional_tools_present": tools,
         "packaging_check": {
             "status": "not_run",
-            "reason": "Step 1 uses direct module execution. No build/install or distribution test performed; no dependency installation authorized.",
+            "reason": "This Phase 1 delivery uses direct module execution. No build/install or distribution test performed; no dependency installation authorized.",
         },
         "compatibility_claim": "Only this recorded interpreter and environment were tested.",
     }
@@ -361,6 +408,7 @@ def main(argv: list[str] | None = None) -> int:
             start_dir=str(ROOT / "tests"), pattern="test_*.py", top_level_dir=str(ROOT)
         )
         discovered, records, text = execute_suite(suite)
+        records = annotate_results(matrix, records)
         gate = assess_gate(matrix, discovered, records, scope=args.scope, identity_errors=errors)
         code = 0 if gate["requested_gate_passed"] else 1
         text += (
@@ -384,6 +432,10 @@ def main(argv: list[str] | None = None) -> int:
             "baseline_verification": identities,
             "matrix_validation_errors": errors,
             "file_fingerprints": file_fingerprints(),
+            "fixture_versions": {p.relative_to(ROOT).as_posix(): sha256_file(p)
+                for base in (ROOT / "tests/fixtures", ROOT / "examples")
+                for p in sorted(base.rglob("*")) if p.is_file() and not p.is_symlink()},
+            "scientific_source_pins": matrix["theory_sources"] + [matrix["ec001_supplement"]["source"]],
             "discovered_test_ids": discovered,
             "test_results": records,
             "acceptance": gate,

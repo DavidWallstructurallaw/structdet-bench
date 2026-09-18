@@ -91,7 +91,7 @@ def load_matrix() -> dict[str, Any]:
             classes = change["binding_classes"]
             if not isinstance(classes, list) or not classes or not all(isinstance(x, str) for x in classes):
                 raise ValueError("Invalid binding class references")
-            catalogue = matrix["step5_acceptance"]["test_bindings"] + matrix.get("step6_acceptance", {}).get("test_bindings", [])
+            catalogue = [method for step in range(2, 8) for method in matrix.get(f"step{step}_acceptance", {}).get("test_bindings", [])]
             additions = []
             for name in classes:
                 found = [method for method in catalogue if method.startswith(name + ".")]
@@ -459,3 +459,49 @@ def materialize_hero(directory: Path, fixture_id: str = "HF-00") -> tuple[Path, 
     (directory/"bundle.json").write_bytes(encode(manifest))
     (directory/"expected.json").write_bytes(encode(spec["expected"]))
     return directory/"bundle.json", copy.deepcopy(spec["expected"])
+
+
+# Step 7 independent construction oracle, never candidate execution.
+def functional_manifest_fixture() -> dict[str, Any]:
+    """Use base-five enumeration instead of the runtime Cartesian iterator."""
+    tests = []
+    alphabet = [0, 1, 255, 256, 4095]
+    for length in range(5):
+        for ordinal in range(5**length):
+            digits = [alphabet[(ordinal//(5**power)) % 5] for power in range(length-1, -1, -1)]
+            tests.append({'test_id': f'V-SMALL-{len(tests)+1:04d}', 'segment':'V-SMALL','input':digits})
+    index = 0
+    for n in [8,64,256]:
+        patterns = [list(range(n)), list(reversed(range(n))), [0,4095]*(n//2), [256]*n,
+                    [(19+73*i) % 4096 for i in range(n)], [255,256,4095,0,257,1,4094,16]*(n//8)]
+        for xs in patterns:
+            index+=1;tests.append({'test_id':f'V-SHAPE-{index:02d}','segment':'V-SHAPE','input':xs})
+    for x in range(4096):
+        tests.append({'test_id':f'V-KEY-{2*x+1:04d}','segment':'V-KEY','input':[x]})
+        tests.append({'test_id':f'V-KEY-{2*x+2:04d}','segment':'V-KEY','input':[4095-x,x]})
+    witnesses=[[7,1,6,2,5,3,4,0],[3,1,3,0,2,0,2,1],[256,1,4095,255,16,0,257,4094],[0,1,2,3,7,6,5,4]]
+    for i,xs in enumerate(witnesses,1):tests.append({'test_id':f'V-STAGE-{i:02d}','segment':'V-STAGE','input':xs})
+    return {'version':'0.1','tests':tests,'sha256':fixture_manifest_hash(tests)}
+
+
+def fixture_manifest_hash(tests: Any) -> str:
+    return hashlib.sha256((json.dumps(tests, ensure_ascii=True, sort_keys=True, separators=(',',':'))+'\n').encode()).hexdigest()
+
+
+def complete_functional_fixture(root: Path):
+    """Artificial imported-shaped evidence under an explicit fixture bundle."""
+    from structdet_bench.contracts import CLASS_IDS
+    path, obs, support, manifest = evidence_bundle(root, policy='adjudicated_import')
+    byid = {r['record_id']:r for r in obs+support}
+    byid['s1']['output_content_hash'] = tagged('ab'*32)
+    suite = functional_manifest_fixture()
+    byid['suite-v1']['payload']['extensions']={'functional_manifest':suite}
+    result = byid['result-v1']['payload']
+    result['input_manifest']=tagged(suite['sha256']);result['subject_hash']=tagged('ab'*32)
+    result['environment']=tagged({'profile_id':'fixture-profile','containment_status':'passed',
+                                  'oracle_reviewer_refs':[record_ref('role','reviewer')],
+                                  'accommodated_class_ids':list(CLASS_IDS)})
+    result['observations']=tagged({'runtime_status':'completed','tested_ids':[t['test_id'] for t in suite['tests']],
+        'property_checks':dict.fromkeys(['fresh_plain_list','plain_integers','length_preserved','nondecreasing',
+                                         'multiplicity_preserved','input_unchanged'],True)})
+    return rewrite_evidence_bundle(root,obs,support,manifest),obs,support,manifest

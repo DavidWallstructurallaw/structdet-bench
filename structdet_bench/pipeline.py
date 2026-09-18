@@ -18,7 +18,7 @@ from .contracts import (ADDENDUM_PIN, CLASS_IDS, HERO_IDENTITIES, INTEGRITY_COND
 from .evidence import EvidenceIndex, review_evidence
 from .inventory import build_inventory
 from .local_io import LoadedBundle, ReadLimits, load_bundle, publish_report_set
-from .metrics import cell_metrics
+from .metrics import CORE_NAMES as CORE_METRIC_NAMES, cell_metrics
 from .populations import build_populations
 from .reporting import (REPORT_VERSION, SECTION_TITLES, canonical_bytes, diagnostic_records,
                         digest, plain, protected, render_json, render_markdown)
@@ -29,11 +29,76 @@ from .reporting import (REPORT_VERSION, SECTION_TITLES, canonical_bytes, diagnos
 EVIDENTIAL_DIAGNOSTICS = frozenset({"missing_reference", "invalid_reference_target"})
 V_FIELDS = ("surface_lexical_trigram_distance", "within_class_realization_diversity_proxy",
             "structural_pair_non_equivalence", "p1_proxy_gain_contrast",
-            "p5_valid_distinct_k_delta", "prompt_resampling_sensitivity")
+            "p5_valid_distinct_k_delta", "prompt_resampling_sensitivity",
+            "per_block_contrasts", "equal_block_means", "study_gate_records")
 D_FIELDS = ("observed_intervention_union_size", "gini_simpson_diversity",
             "expressible_support", "latent_support", "convergence_frontier",
             "structural_half_life_null", "structural_half_life_empirical",
-            "external_recovery_rate", "probabilistic_structural_assignment")
+            "external_recovery_rate", "probabilistic_structural_assignment", "exact_realization_entropy",
+            "load_bearing_intervention_effect", "convergence_provenance", "structural_transmission")
+
+
+DEFERRED_REQUIREMENTS = {
+    "expressible_support": "Admissible interventions, compatible probability thresholds and repeated fixed-model evidence.",
+    "latent_support": "Validated diagnostics that do not inject the missing solution; UD-007 is deferred.",
+    "observed_intervention_union_size": "Compatible independently declared intervention records, distinct from full expressible support.",
+    "probabilistic_structural_assignment": "Approved soft-membership estimator with classification uncertainty kept separate.",
+    "exact_realization_entropy": "A justified realization-space estimator; lexical variation is not exact entropy.",
+    "convergence_frontier": "Validated resolutions, concentration and stability thresholds, repeated evidence.",
+    "convergence_provenance": "Matched constraint interventions; concentration alone cannot identify its cause.",
+    "load_bearing_intervention_effect": "Declared matched counterfactuals, consequence criteria and a distance estimator.",
+    "structural_transmission": "Linked upstream specifications and output classes under a validated transmission design.",
+    "gini_simpson_diversity": "Deferred Layer B contract, not an additional Phase 1 diversity score.",
+    "structural_half_life_null": "SI categorical closed-resampling assumptions and n > 1; corpus token count is not n.",
+    "structural_half_life_empirical": "Compatible recursive training transitions and an appropriate decay regime; calls are not rounds.",
+    "external_recovery_rate": "Validated pre/post expressibility, a missing reference set and independently grounded intervention; empty denominator is undefined, never zero or one.",
+}
+
+
+def _metadata_details(kind: str, payload: Mapping[str, Any]) -> dict[str, Any]:
+    """Preserve typed relationships, separating them from private prose/identities."""
+    plain_fields = {
+        "evidence": ("target_ref", "purpose", "artifact_refs", "reviewer_refs", "conflict_status"),
+        "role": ("entity_type", "exposure_refs"),
+        "lineage": ("subject_ref", "knowledge_state"),
+        "independence_assessment": ("left_ref", "right_ref", "outcome", "reviewer_refs"),
+        "annotation": ("target_ref", "annotator_ref", "initial", "set_id"),
+        "adjudication": ("target_ref", "decision_state", "reviewer_refs", "basis_refs", "disagreement_refs"),
+        "domain_suite": ("suite_id", "stage", "reference_artifact_refs"),
+        "domain_result": ("target_ref", "suite_ref", "outcome"),
+        "audit": ("stage", "planned_refs", "reviewed_refs", "annotation_refs", "targeted_refs"),
+        "exposure": ("subject_ref", "role_ref", "material_refs"),
+        "preregistration": ("registration_id", "material_refs"),
+        "sampling_plan": ("planned_refs",), "source": ("source_id",),
+    }
+    tagged_fields = {
+        "evidence": ("assertion", "method", "subject_hash"), "role": ("entity_id", "role", "qualification", "method"),
+        "lineage": ("parent_ref", "relation"), "independence_assessment": ("dimension", "criterion"),
+        "annotation": ("aspect", "rubric_ref", "label_exposure", "outcome"),
+        "adjudication": ("outcome",), "domain_suite": ("property", "planned_case_count", "environment", "oracle_origin"),
+        "domain_result": ("property", "subject_hash", "input_manifest", "environment", "observations"),
+        "audit": ("sampling_plan_ref",), "exposure": ("stage", "exposed"), "tail": ("class_id", "designation", "basis"),
+        "preregistration": ("registered_at",), "sampling_plan": ("selection_rule", "registered_at"),
+        "budget": ("planned", "actual"), "source": ("sha256", "locator"),
+    }
+    out = {k:plain(payload[k]) for k in plain_fields.get(kind, ())}
+    public_vocabulary = set(CLASS_IDS) | {"derived_from", "copied_from", "translated_from", "paraphrased_from", "shared_source", "model_generated", "reviewed_after", "corrected_from", "mechanism", "validity", "sorting_behavior", "before_initial", "after_initial", "pilot", "calibration", "confirmatory", "post_inspection", "valid", "invalid", "unresolved", "undetermined", "control_flow", "execution", "execution_trace", "formal_validity", "domain_adjudication"}
+    for field in tagged_fields.get(kind, ()):
+        value = payload[field]
+        if isinstance(value, str) and value in public_vocabulary: out[field] = value
+        elif isinstance(value, Mapping) and value.get("state") == "known" and isinstance(value.get("value"),str) and value["value"] in public_vocabulary:
+            out[field] = {"state":"known", "value":value["value"]}
+        else: out[field] = _reference(value)
+    return out
+
+
+def _check_details(details: Mapping[str, Any]) -> dict[str, Any]:
+    # These names come from the fixed evidence checker. Annotation outcomes and
+    # free-form property names need the same privacy protection as their source.
+    out = plain(details)
+    if "initial_outcomes" in out: out["initial_outcomes"] = [protected(x) for x in out["initial_outcomes"]]
+    if "property" in out and out["property"] not in {"mechanism", "sorting_behavior"}: out["property"] = protected(out["property"])
+    return out
 
 
 @dataclass(frozen=True)
@@ -121,7 +186,8 @@ def _unimplemented(name: str, scope: str) -> dict[str, Any]:
     return {"metric_name": name, "value": None,
             "result_status": "unavailable" if scope == "V" else "deferred",
             "reason": "not_implemented_in_phase1" if scope == "V" else "deferred_capability",
-            "capability_scope": scope, "uncertainty_status": "not_estimated"}
+            "capability_scope": scope, "uncertainty_status": "not_estimated",
+            "prerequisites": DEFERRED_REQUIREMENTS.get(name, "A separately authorized comparison design and implementation are required.")}
 
 
 def analyze_bundle(path: str | Path, *, limits: ReadLimits | None = None,
@@ -149,7 +215,7 @@ def analyze_bundle(path: str | Path, *, limits: ReadLimits | None = None,
     config_bad = extra or (manifest and any(d.scope == "analysis_config" for d in manifest.diagnostics))
     frame_rows = []; protocol_rows = []; inventory_rows = []; associations = []
     accounting = []; assignment_rows = []; class_rows = []; metric_rows = []; prefix_rows = []
-    group_rows = []; position_rows = []; empty_or_missing = []
+    group_rows = []; position_rows = []; attempt_rows = []; empty_or_missing = []
     for cell in collection.cells:
         inv = cell.inventory; identity = inv.identity; cid = inv.cell_id
         frame = index.get(("frame", identity.get("frame_id", "")))
@@ -165,7 +231,9 @@ def analyze_bundle(path: str | Path, *, limits: ReadLimits | None = None,
                                           "condition_id", "prompt_block_id", "prompt_id")},
             **{k: protected(identity.get(k)) for k in ("model_identifier", "model_family", "checkpoint_identifier", "collection_window")},
             **{k: protected(proto.data.get(k)) if proto else {"state": "unavailable"}
-               for k in ("conditioning_context_ref", "decoding_settings", "seed")}})
+               for k in ("conditioning_context_ref", "decoding_settings", "seed")},
+            "sampling_plan_ref": _reference(proto.data.get("sampling_plan_ref")) if proto else protected(None),
+            "budget_record_ref": _reference(identity.get("budget_record_ref"))})
         inventory_rows.append({"analysis_cell_id": cid, "realization_count": plain(inv.realization_count),
             "selected_realization_count": plain(inv.selected_count), "requested_sample_ids": inv.requested_sample_ids,
             "selected_sample_ids": inv.selected_sample_ids, "excluded_sample_ids": inv.excluded_sample_ids,
@@ -180,6 +248,12 @@ def analyze_bundle(path: str | Path, *, limits: ReadLimits | None = None,
             "extra_sample_ids": inv.extra_sample_ids, "completion_counts": inv.completion_counts,
             "sample_order": inv.order, "order_source": inv.order_source, "order_reasons": inv.order_reasons,
             "extraction_rule_counts": inv.extraction_rule_counts})
+        for aid in inv.recorded_attempt_ids:
+            attempt=index.get(("attempt",aid))
+            if attempt:
+                d=attempt.data
+                attempt_rows.append({"analysis_cell_id":cid,"attempt_id":aid,"attempt_status":d["attempt_status"],
+                    **{k:_reference(d.get(k)) for k in ("retry_of","raw_response_ref","generation_group_id","planned_candidate_count","registered_call_order","termination_reason","budget_record_ref")}})
         for g in inv.groups:
             group_rows.append({"analysis_cell_id": cid, **plain(g), "independent_draw_count": None})
         for p in inv.positions:
@@ -190,12 +264,20 @@ def analyze_bundle(path: str | Path, *, limits: ReadLimits | None = None,
                 "raw_response_ref": _reference(a.raw_response_ref), "output_ref": _reference(a.output_ref),
                 "output_content_hash": _reference(a.output_content_hash),
                 "extraction_rule_version": protected(a.extraction_rule_version),
+                **{k: protected(index.get(("realization",a.sample_id)).data.get(k)) for k in ("group_type", "shared_context_ref", "termination_reason", "selection_status", "selection_reason")},
+                "completion_status": index.get(("realization",a.sample_id)).data["completion_status"],
                 "span_status": a.span_status, "reasons": a.reasons})
         for d in cell.admissions:
             r = index.get((d.axis, d.record_id)) if d.record_id else None
             assignment_rows.append({"analysis_cell_id": cid, **plain(d),
                 "evidence_refs": plain(r.data.get("evidence_refs", ())) if r else [],
-                "review_status": r.data.get("assignment_review_status" if d.axis == "assignment" else "validity_review_status") if r else None})
+                "assignment_id": r.record_id if r and d.axis=="assignment" else None,
+                "assignment_version": r.data["assignment_version"] if r and d.axis=="assignment" else None,
+                "structural_class_id": d.outcome if d.axis=="assignment" and d.status=="accepted" else None,
+                "assignment_status": r.data["assignment_status"] if r and d.axis=="assignment" else None,
+                "validity_status": r.data["validity_status"] if r and d.axis=="validity" else None,
+                "review_status": r.data.get("assignment_review_status" if d.axis == "assignment" else "validity_review_status") if r else None,
+                **{k: _reference(r.data.get(k)) if r else protected(None) for k in ("assignment_method", "classification_uncertainty_ref", "disagreement_ref", "role_records_ref", "validity_rubric_ref", "task_success_observations_ref", "correction_ref", "supersedes_assignment_id")}})
         accounting.append({"analysis_cell_id": cid,
             "classified_all_count": cell.populations["classified_all"].count,
             "classified_valid_count": cell.populations["classified_valid"].count,
@@ -221,7 +303,8 @@ def analyze_bundle(path: str | Path, *, limits: ReadLimits | None = None,
             for metric in distribution.results.values():
                 metric_rows.append({"analysis_cell_id": cid, "analysis_population": view,
                     "population_size": distribution.population_size, **plain(metric),
-                    "evidence_status": "supplied_record_checks_only", "permitted_claim_scope": scope})
+                    "evidence_status": "supplied_record_checks_only", "permitted_claim_scope": scope,
+                    "unavailable_reason": list(metric.reasons) if metric.result_status in {"unavailable","undefined"} else None})
         for p in result.prefixes:
             pref = p.source_prefix
             prefix_rows.append({"analysis_cell_id": cid, "analysis_population": pref.view, "k": pref.k,
@@ -242,7 +325,8 @@ def analyze_bundle(path: str | Path, *, limits: ReadLimits | None = None,
             "state": p["state"], "data_role": p["data_role"], "mock": p["mock"],
             "origin": protected(p["origin"]), "knowledge_type": protected(p["knowledge_type"]),
             "transformation_refs": p["transformation_refs"], "evidence_refs": p["evidence_refs"],
-            "scope_refs": p["scope_refs"], "payload_sha256": digest(p), "access": p.get("access", "not_declared")})
+            "scope_refs": p["scope_refs"], "payload_sha256": digest(p), "access": p.get("access", "not_declared"),
+            "details": _metadata_details(key[0], p)})
         if key[0] in {"intake", "tail"}:
             intake_rows.append({"record_type": key[0], "record_id": key[1], "state": p["state"],
                 "component": p.get("component", "tail_registry"), "stage": p.get("stage"),
@@ -270,7 +354,7 @@ def analyze_bundle(path: str | Path, *, limits: ReadLimits | None = None,
                         for name in INTEGRITY_CONDITIONS]
     checks = [{"record_id": c.record_id, "status": c.status, "reasons": c.reasons,
                "mock": c.mock, "substantive_validation_performed": False,
-               "details_sha256": digest(c.details)} for c in review.support_checks]
+               "details_sha256": digest(c.details), "details": _check_details(c.details)} for c in review.support_checks]
     omitted = ["deployment representativeness", "all-input program correctness", "long-horizon behavior",
                "causal attribution to recursive training", "complete expressible or latent repertoire"]
     sections = [
@@ -284,7 +368,7 @@ def analyze_bundle(path: str | Path, *, limits: ReadLimits | None = None,
                         "input_acquisition_complete": bundle.acquisition_complete},
          "source_pins": dict(SOURCE_PINS), "ec_001_sha256": ADDENDUM_PIN,
          "input_refs": input_refs, "analysis_config_ref": {"sha256": configuration_sha, "analysis_config_id": config.get("analysis_config_id")}},
-        {"inventory": inventory_rows, "groups": group_rows, "positions": position_rows,
+        {"inventory": inventory_rows, "attempts": attempt_rows, "groups": group_rows, "positions": position_rows,
          "output_associations": associations,
          "unallocated_inventory": {"input_row_count": collection.inventory.input_row_count,
              "malformed_row_count": collection.inventory.malformed_row_count,
@@ -307,7 +391,18 @@ def analyze_bundle(path: str | Path, *, limits: ReadLimits | None = None,
          "source_text_status": "No source-text metric is implemented; HF fixtures contain no program bodies."},
         {"five_conditions": integrity_states, "declared_claim_records": claim_rows,
          "support_records": support_rows, "support_checks": checks, "intake_and_tail": intake_rows,
+         "integrity_record_references": {name: ({"state":"known","value":[{"record_type":k[0],"record_id":k[1],"record_version":"0.1"} for k in sorted(index.support) if k[0] in kinds]}
+             if any(k[0] in kinds for k in index.support) else {"state":"unavailable","reason":"record_not_supplied"}) for name,kinds in {
+                "integrity_assessment_ref":("integrity_assessment",),"audit_sampling_plan_ref":("sampling_plan","audit"),
+                "domain_validation_ref":("domain_result","domain_suite"),"annotation_summary_ref":("annotation",),
+                "adjudication_ref":("adjudication",),"blinding_record_ref":("exposure",),
+                "judge_calibration_ref":(),"sensitivity_evidence_ref":()}.items()},
          "corrections": correction_rows, "correction_impacts": plain(review.corrections),
+         "dependencies": [{"analysis_cell_id": row["analysis_cell_id"], "axis": row["axis"], "sample_id": row["sample_id"],
+             "assessment_id": row["record_id"], "revision": row["revision"], "evidence_refs": row["evidence_refs"],
+             "status": row["status"], "dependent_m_views": ["classified_all", "classified_valid"] if row["axis"]=="assignment" else ["classified_valid"],
+             "dependent_m_metrics": list(CORE_METRIC_NAMES), "dependent_m_prefixes": list(config.get("requested_k", ())),
+             "v_dependents": "not_implemented"} for row in assignment_rows],
          "preserved_revision_ids": review.preserved_revision_ids,
          "ec_reporting_disclosures": {"capability_and_scope": "section_1", "structural_cut_and_known_omissions": "section_1",
              "source_and_transformation_lineage": "support_records_and_pinned_input", "exposure_and_bias_controls": "declared_records_only",
@@ -317,7 +412,7 @@ def analyze_bundle(path: str | Path, *, limits: ReadLimits | None = None,
              "current_until": {"state": "unknown", "reason": "No toolkit-established expiry; supplied declarations remain scoped."}},
          "deferred": [_unimplemented(n, "D") for n in D_FIELDS],
          "release_restrictions": ["No empirical validation or deployment certification.", "No package publication or hosted CI performed by this command.",
-                                  "Phase 1 integrated acceptance and final audit remain pending."],
+                                  "Software acceptance is recorded separately from this analysis; final Phase 1 audit is not a result of this command."],
          "redaction": {"raw_bodies": "omitted", "private_identity_mappings": "omitted", "private_paths": "hashed",
                        "unrestricted_evidence_prose": "hashed", "source_bytes_modified": False,
                        "limitation": "Hashes and supplied record IDs permit local audit; a public report alone cannot reproduce withheld evidence."}},

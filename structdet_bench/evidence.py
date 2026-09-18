@@ -6,6 +6,9 @@ SPDX-License-Identifier: Apache-2.0
 """
 from __future__ import annotations
 from collections import defaultdict
+import hashlib
+import json
+from itertools import combinations, product
 from dataclasses import dataclass, field
 from typing import Any, Mapping
 from .contracts import (
@@ -204,6 +207,41 @@ def unique(items: list[str]) -> tuple[str, ...]:
     return tuple(sorted(set(items)))
 
 
+
+FUNCTIONAL_PROPERTIES = ("fresh_plain_list", "plain_integers", "length_preserved", "nondecreasing", "multiplicity_preserved", "input_unchanged")
+RUNTIME_STATES = {"completed", "timeout", "memory_limit", "exception", "prohibited_capability", "output_protocol_failure", "harness_error", "containment_failure", "oracle_error"}
+WITNESS_INPUTS = ((7,1,6,2,5,3,4,0), (3,1,3,0,2,0,2,1), (256,1,4095,255,16,0,257,4094), (0,1,2,3,7,6,5,4))
+
+
+def _json_hash(value: Any) -> str:
+    """Canonical identity of manifest rows; not independent validation."""
+    def thaw(v):
+        if isinstance(v, Mapping): return {k:thaw(x) for k,x in v.items()}
+        if isinstance(v,(list,tuple)): return [thaw(x) for x in v]
+        return v
+    return hashlib.sha256((json.dumps(thaw(value), ensure_ascii=True, sort_keys=True, separators=(",",":"), allow_nan=False)+"\n").encode()).hexdigest()
+
+
+def _functional_inputs():
+    """Expected construction for validating supplied manifest rows only (HERO 5.3)."""
+    index = 0
+    for size in range(5):
+        for xs in product((0,1,255,256,4095), repeat=size):
+            index += 1; yield f"V-SMALL-{index:04d}", "V-SMALL", xs
+    index = 0
+    boundaries = (255,256,4095,0,257,1,4094,16)
+    for size in (8,64,256):
+        patterns = (tuple(range(size)), tuple(range(size-1,-1,-1)),
+                    tuple(4095*(i%2) for i in range(size)), (256,)*size,
+                    tuple((73*i+19)%4096 for i in range(size)), tuple(boundaries[i%8] for i in range(size)))
+        for xs in patterns:
+            index += 1; yield f"V-SHAPE-{index:02d}", "V-SHAPE", xs
+    for x in range(4096):
+        yield f"V-KEY-{2*x+1:04d}", "V-KEY", (x,)
+        yield f"V-KEY-{2*x+2:04d}", "V-KEY", (4095-x,x)
+    for i,xs in enumerate(WITNESS_INPUTS,1): yield f"V-STAGE-{i:02d}", "V-STAGE", xs
+
+
 class EvidenceIndex:
     """Preserve all input entries while exposing only unambiguous references."""
     def __init__(self, bundle: LoadedBundle) -> None:
@@ -340,8 +378,12 @@ class EvidenceIndex:
             for result_key in results:
                 result = self.payload(result_key)
                 gate = self.domain_check(result_key)
-                if result is None or gate.status != "record_consistent":
+                if result is None:
                     problems.append("execution_record_unresolved"); continue
+                if gate.status != "record_consistent":
+                    problems.append("execution_record_unresolved")
+                if gate.mock:
+                    problems.append("fixture_in_import_execution")
                 if ref_key(result["target_ref"]) != subject:
                     problems.append("execution_subject_mismatch")
                 if result["property"] != ("mechanism" if purpose == "mechanism" else "sorting_behavior"):
@@ -365,6 +407,10 @@ class EvidenceIndex:
                 problems.append("essential_evidence_unresolved"); continue
             active.add(current); stack.append((current, True))
             if q["state"] != "active": problems.append("upstream_evidence_not_active")
+            if q["access"] != "readable" or q["conflict_status"] == "unresolved":
+                problems.append("upstream_evidence_unreadable_or_conflicted")
+            if policy == "adjudicated_import" and (q["mock"] or q["data_role"] == "fixture"):
+                problems.append("fixture_in_import_evidence")
             problems.extend(self.affected(current, {"membership", "validity", "schema"}))
             for value in q["evidence_refs"]:
                 child = ref_key(value)
@@ -538,6 +584,45 @@ class EvidenceIndex:
                          "initial_outcomes": initial_outcomes,
                          "agreement_estimated": False, "validation_scope": "record_consistency_only"}), mocks)
 
+    def functional_manifest_check(self, key: Key) -> GateCheck:
+        """Inspect the supplied HERO manifest, without executing its candidates."""
+        p = self.payload(key)
+        if p is None or key[0] != "domain_suite":
+            return GateCheck(key[1], "unresolved", ("domain_suite_unresolved",))
+        data = p.get("extensions", {}).get("functional_manifest")
+        errors, counts = [], defaultdict(int)
+        tests = data.get("tests") if isinstance(data, Mapping) else None
+        exact = isinstance(tests, (tuple, list)) and len(tests) == 8995
+        if not isinstance(data, Mapping) or data.get("version") != "0.1":
+            errors.append("functional_manifest_not_supplied_or_versioned")
+        if not exact:
+            errors.append("functional_manifest_count_mismatch")
+        expected = _functional_inputs()
+        if isinstance(tests, (tuple, list)) and len(tests) <= 8995:
+            for row, (identity, segment, values) in zip(tests, expected):
+                if not isinstance(row, Mapping):
+                    errors.append("functional_manifest_entry_malformed"); continue
+                if row.get("test_id") != identity or row.get("segment") != segment:
+                    errors.append("functional_manifest_identity_or_order_mismatch")
+                xs = row.get("input")
+                if (not isinstance(xs, (tuple, list)) or any(type(x) is not int for x in xs)
+                        or tuple(xs) != tuple(values)):
+                    errors.append("functional_manifest_construction_mismatch")
+                counts[segment] += 1
+        else:
+            errors.append("functional_manifest_not_bounded_list")
+        try:
+            actual_hash = _json_hash(tests) if isinstance(tests, (list, tuple)) and len(tests) <= 8995 else None
+        except (TypeError, ValueError, OverflowError):
+            actual_hash = None
+            errors.append("functional_manifest_not_canonical_json")
+        if not isinstance(data, Mapping) or data.get("sha256") != actual_hash or actual_hash is None:
+            errors.append("functional_manifest_hash_mismatch")
+        return GateCheck(key[1], "record_consistent" if not errors else "unresolved", unique(errors),
+            freeze({"manifest_sha256": actual_hash, "received_count": len(tests) if isinstance(tests, (tuple,list)) else None,
+                    "required_count": 8995, "segment_counts": dict(counts), "complete_ordered_manifest": not errors,
+                    "execution_performed_by_toolkit": False}), p["mock"] or p["data_role"] == "fixture")
+
     def domain_check(self, key: Key) -> GateCheck:
         p = self.payload(key); errors = []
         if p is None or key[0] != "domain_result":
@@ -557,9 +642,57 @@ class EvidenceIndex:
             actual = known(target.data["output_content_hash"]); asserted = known(p["subject_hash"])
             if actual is not None and asserted is not None and actual != asserted:
                 errors.append("domain_subject_hash_mismatch")
+        details = {"outcome": p["outcome"], "property": p["property"], "execution_performed_by_toolkit": False}
+        if p["property"] == "sorting_behavior":
+            gate = self.functional_manifest_check(skey)
+            env, observations = known(p["environment"]), known(p["observations"])
+            if not isinstance(env, Mapping): env = {}
+            if not isinstance(observations, Mapping): observations = {}
+            tests = observations.get("tested_ids")
+            ids = tuple(identity for identity, _, _ in _functional_inputs())
+            test_list_ok = (isinstance(tests, (list,tuple)) and all(is_id(x) for x in tests)
+                           and len(tests) == len(set(tests)) and set(tests) <= set(ids))
+            complete = test_list_ok and set(tests) == set(ids)
+            if not test_list_ok: errors.append("functional_result_test_ids_unresolved")
+            if known(p["input_manifest"]) != gate.details.get("manifest_sha256") or gate.status != "record_consistent":
+                errors.append("functional_result_manifest_unresolved")
+            actual_hash = known(target.data["output_content_hash"]) if target and target.record_type == "realization" else None
+            if not isinstance(actual_hash, str) or len(actual_hash) != 64 or known(p["subject_hash"]) != actual_hash:
+                errors.append("functional_result_artifact_identity_unresolved")
+            runtime = observations.get("runtime_status")
+            if not in_enum(runtime, {"completed", "exception", "prohibited_capability", "output_protocol_failure"}):
+                errors.append("runtime_not_decisive")
+            if env.get("containment_status") != "passed": errors.append("containment_not_established")
+            if not self.role_present(env.get("oracle_reviewer_refs", [])): errors.append("oracle_review_not_supplied")
+            family_set = env.get("accommodated_class_ids")
+            envelope_ok = (isinstance(family_set, (list, tuple)) and all(is_id(x) for x in family_set)
+                           and set(family_set) == set(CLASS_IDS))
+            if not envelope_ok: errors.append("reference_envelope_coverage_unresolved")
+            property_checks = observations.get("property_checks", {})
+            if p["outcome"] == "passed":
+                if not complete: errors.append("functional_suite_coverage_incomplete")
+                if runtime != "completed": errors.append("passing_runtime_not_completed")
+                if (not isinstance(property_checks, Mapping) or set(property_checks) != set(FUNCTIONAL_PROPERTIES)
+                        or not all(v is True for v in property_checks.values())):
+                    errors.append("functional_properties_not_established")
+            elif p["outcome"] == "failed":
+                ce = observations.get("counterexample")
+                if (not isinstance(ce, Mapping) or ce.get("test_id") not in (tests if test_list_ok else ())
+                        or not in_enum(ce.get("property"), FUNCTIONAL_PROPERTIES + ("syntax", "prohibited_capability", "exception", "output_protocol"))
+                        or ce.get("observed_violation") is not True
+                        or ce.get("subject_hash") != actual_hash
+                        or not ce.get("evidence_refs") or not self.links_exist(ce.get("evidence_refs"))):
+                    errors.append("decisive_counterexample_not_supplied")
+            details.update({"complete_suite_coverage": bool(complete), "tested_count": len(tests) if test_list_ok else None,
+                            "required_count": 8995, "manifest_record_status": gate.status,
+                            "runtime_status": runtime if isinstance(runtime,str) and runtime in RUNTIME_STATES else "unknown",
+                            "containment_record_status": env.get("containment_status") if in_enum(env.get("containment_status"), {"passed","failed","unknown"}) else "unknown",
+                            "oracle_record_present": self.role_present(env.get("oracle_reviewer_refs", [])),
+                            "reference_envelope_complete": envelope_ok, "finite_suite_is_all_input_proof": False})
+        errors.extend(self.affected(key, {"validity", "membership"}))
+        errors.extend(self.affected(skey, {"validity", "membership"}))
         return GateCheck(key[1], "record_consistent" if not errors else "unresolved", unique(errors),
-                         freeze({"outcome": p["outcome"], "property": p["property"],
-                         "execution_performed_by_toolkit": False}), p["mock"] or p["data_role"] == "fixture"
+                         freeze(details), p["mock"] or p["data_role"] == "fixture"
                          or bool(suite and (suite["mock"] or suite["data_role"] == "fixture")))
 
     def audit_check(self, key: Key) -> GateCheck:
@@ -578,6 +711,13 @@ class EvidenceIndex:
             errors.append("audit_sampling_plan_unresolved")
         elif self.payload(ref_key(plan_ref)) is None:
             errors.append("audit_sampling_plan_unresolved")
+        else:
+            plan = self.payload(ref_key(plan_ref))
+            if {ref_key(v) for v in plan["planned_refs"]} != planned:
+                errors.append("audit_plan_membership_mismatch")
+            if plan["state"] != "active": errors.append("audit_plan_inactive")
+            if "hero_audit_positions" in plan.get("extensions", {}):
+                errors.extend(self.hero_audit_check(ref_key(plan_ref)).reasons)
         if not p["annotation_refs"] or not self.links_exist(p["annotation_refs"], {"annotation"}):
             errors.append("audit_annotations_unresolved")
         covered = set()
@@ -592,7 +732,110 @@ class EvidenceIndex:
         return GateCheck(key[1], "record_consistent" if not errors else "unresolved", unique(errors),
                          freeze({"missing_planned": missing, "extra_reviews": extra,
                          "known_empty_plan": not planned, "model_samples_added": 0}),
-                         p["mock"] or p["data_role"] == "fixture")
+                         p["mock"] or p["data_role"] == "fixture"
+                         or any(self.payload(ref_key(x)) and (self.payload(ref_key(x))["mock"]
+                                or self.payload(ref_key(x))["data_role"] == "fixture") for x in p["annotation_refs"]))
+
+    def reference_check(self, key: Key) -> GateCheck:
+        """Check supplied descriptor/witness/core coverage. No schema judgment."""
+        p = self.payload(key)
+        data = p.get("extensions", {}).get("reference_review") if p else None
+        if not isinstance(data, Mapping): return GateCheck(key[1], "unresolved", ("reference_review_missing",))
+        errors = []
+        pairs = data.get("descriptor_pairs", ())
+        found, overlaps = set(), []
+        if not isinstance(pairs, (tuple,list)) or len(pairs)>28:
+            errors.append("descriptor_pairs_malformed"); pairs=()
+        for item in pairs:
+            cs = item.get("classes") if isinstance(item,Mapping) else None
+            if (not isinstance(cs,(tuple,list)) or len(cs)!=2 or any(not in_enum(c,CLASS_IDS) for c in cs) or cs[0]==cs[1]):
+                errors.append("descriptor_pair_invalid"); continue
+            pair=tuple(sorted(cs))
+            if pair in found: errors.append("descriptor_pair_duplicate")
+            found.add(pair)
+            if item.get("outcome") != "distinct" or not item.get("evidence_refs") or not self.links_exist(item.get("evidence_refs")):
+                overlaps.append(pair)
+        if found != set(combinations(sorted(CLASS_IDS),2)): errors.append("descriptor_pair_coverage_incomplete")
+        if overlaps: errors.append("unresolved_descriptor_overlap")
+        witnesses=data.get("witnesses")
+        if (not isinstance(witnesses,Mapping) or set(witnesses)!={f"W-{i:02d}" for i in range(1,5)}
+                or any(not isinstance(witnesses.get(f"W-{i:02d}"),(list,tuple)) or tuple(witnesses[f"W-{i:02d}"])!=v
+                       or any(type(x) is not int for x in witnesses[f"W-{i:02d}"]) for i,v in enumerate(WITNESS_INPUTS,1))):
+            errors.append("witness_construction_mismatch")
+        roles=data.get("core_roles",()); expected={f"CORE-{c[5:]}-{v}" for c in CLASS_IDS for v in ("A","B","D")}|{f"CORE-X{i:02d}" for i in range(1,9)}
+        seen=set(); artifact_ids=set(); mock=bool(p and (p["mock"] or p["data_role"]=="fixture"))
+        if not isinstance(roles,(tuple,list)) or len(roles)>32:
+            errors.append("core_roles_malformed");roles=()
+        for item in roles:
+            if not isinstance(item,Mapping) or not is_id(item.get("role_id")):
+                errors.append("core_role_invalid");continue
+            role=item["role_id"]
+            if role in seen: errors.append("core_role_duplicate")
+            seen.add(role)
+            if not self.links_exist([item.get("artifact_ref")], {"artifact","realization"}): errors.append("core_artifact_unresolved")
+            else:
+                artifact_key=ref_key(item["artifact_ref"])
+                if artifact_key in artifact_ids: errors.append("duplicate_core_artifact")
+                artifact_ids.add(artifact_key)
+            for axis in ("assignment_annotations", "validity_annotations"):
+                annotations=item.get(axis,());gate=self.core_annotations(annotations)
+                mock |= gate.mock
+                if gate.status!="record_consistent": errors.append("core_independent_annotations_incomplete")
+                for ar in annotations if isinstance(annotations,(list,tuple)) else ():
+                    if self.links_exist([ar], {"annotation"}):
+                        ap=self.payload(ref_key(ar))
+                        if ap and ap["target_ref"]!=item.get("artifact_ref"): errors.append("core_annotation_target_mismatch")
+                        if ap and ap["aspect"] != ("mechanism" if axis=="assignment_annotations" else "validity"):
+                            errors.append("core_annotation_property_mismatch")
+            if role in expected and role.endswith(("-A","-B")):
+                ws=item.get("witness_ids",())
+                if not isinstance(ws,(list,tuple)) or any(not in_enum(x,{"W-01","W-02","W-03","W-04"}) for x in ws) or len(set(ws))<2:
+                    errors.append("core_mechanism_witnesses_incomplete")
+        if seen!=expected:errors.append("core_role_coverage_incomplete")
+        return GateCheck(key[1],"record_consistent" if not errors else "unresolved",unique(errors),
+                         freeze({"required_core_roles":32,"received_core_roles":len(seen),"descriptor_pairs":len(found),
+                                 "unresolved_pairs":overlaps,"artifact_execution_performed":False}),mock)
+
+    def hero_audit_check(self, key: Key) -> GateCheck:
+        p=self.payload(key);rows=p.get("extensions",{}).get("hero_audit_positions") if p else None
+        errors=[];found=set();missing=[];refs=[]
+        block_ids=p.get("extensions",{}).get("hero_block_ids",()) if p else ()
+        if not isinstance(block_ids,(list,tuple)) or len(block_ids)!=6 or any(not is_id(b) for b in block_ids) or len(set(block_ids))!=6:
+            errors.append("hero_block_order_unresolved");block_ids=()
+        if not isinstance(rows,(tuple,list)) or len(rows)>72:
+            rows=();errors.append("hero_audit_positions_missing_or_malformed")
+        for row in rows:
+            if not isinstance(row,Mapping):errors.append("hero_audit_position_malformed");continue
+            b,c,g=(row.get(n) for n in ("block_index","condition_index","group_index"))
+            if not (type(b) is int and 1<=b<=6 and type(c) is int and 1<=c<=3 and type(g) is int and 1<=g<=4):
+                errors.append("hero_audit_position_malformed");continue
+            ident=(b,c,g)
+            if ident in found:errors.append("duplicate_audit_position")
+            found.add(ident)
+            if type(row.get("within_group_index")) is not int or row["within_group_index"]!=1+((b+c+g-3)%5):errors.append("hero_audit_selection_mismatch")
+            try:value=known(row.get("sample_ref"))
+            except InputError:value=None
+            if value is None or not self.links_exist([value],{"realization"}):missing.append(ident)
+            else:
+                refs.append(ref_key(value))
+                sample=self.resolve(value)
+                cell=self.get(("cell",sample.data["analysis_cell_id"]))
+                aid=known(sample.data["attempt_id"])
+                attempt=self.get(("attempt",aid)) if aid is not None else None
+                if known(sample.data["within_group_index"])!=row["within_group_index"]:
+                    errors.append("audit_sample_position_mismatch")
+                if (attempt is None or known(attempt.data["registered_call_order"])!=g
+                        or known(attempt.data["generation_group_id"])!=known(sample.data["generation_group_id"])):
+                    errors.append("audit_sample_group_mismatch")
+                if cell is None or not block_ids or cell.data["prompt_block_id"]!=block_ids[b-1] or cell.data["condition_id"]!=("A","B","C")[c-1]:
+                    errors.append("audit_sample_cell_mismatch")
+        if len(found)!=72:errors.append("hero_audit_position_coverage_incomplete")
+        if len(set(refs))!=len(refs):errors.append("audit_sample_reused_for_multiple_positions")
+        if missing:errors.append("planned_audit_opportunity_missing")
+        if p and {ref_key(v) for v in p["planned_refs"]}!=set(refs):errors.append("audit_plan_membership_mismatch")
+        return GateCheck(key[1],"record_consistent" if not errors else "unresolved",unique(errors),
+                         freeze({"required_positions":72,"received_positions":len(found),"missing_opportunities":missing,
+                                 "model_samples_added":0,"random_error_estimated":False}),bool(p and (p["mock"] or p["data_role"]=="fixture")))
 
     def claim_check(self, key: Key) -> GateCheck:
         p = self.payload(key)
@@ -639,13 +882,14 @@ class EvidenceIndex:
             if not r: continue
             values = []
             if key[0] in {"assignment", "validity"}:
-                values = list(r.data["evidence_refs"])
+                values = list(r.data["evidence_refs"]) + [{"record_type":"realization", "record_id":r.data["sample_id"], "record_version":"0.1"}]
                 sample = self.get(("realization", r.data["sample_id"]))
                 frame = self.frame_for(sample) if sample else None
                 if frame: reverse[("frame",frame.record_id)].add(key)
             elif key in self.support:
                 p = self.support[key].payload
-                values = list(p["evidence_refs"]) + list(p.get("basis_refs", ()))
+                values = list(p["evidence_refs"]) + list(p.get("basis_refs", ())) + list(p.get("artifact_refs", ()))
+                if key[0] == "domain_result": values.append(p["suite_ref"])
             for v in values: reverse[ref_key(v)].add(key)
         results = []
         for (_, cid), s in sorted(self.correctors.items()):
@@ -679,6 +923,11 @@ def review_evidence(bundle: LoadedBundle) -> EvidenceReview:
     for key in sorted(index.support):
         if key[0] == "domain_result": checks.append(index.domain_check(key))
         elif key[0] == "audit": checks.append(index.audit_check(key))
+        elif key[0] == "domain_suite":
+            if index.payload(key)["property"] == "sorting_behavior": checks.append(index.functional_manifest_check(key))
+            if "reference_review" in index.payload(key).get("extensions", {}): checks.append(index.reference_check(key))
+        elif key[0] == "sampling_plan" and "hero_audit_positions" in index.payload(key).get("extensions", {}):
+            checks.append(index.hero_audit_check(key))
     return EvidenceReview(admissions, tuple(checks), claims, index.impact_records(),
         tuple(sorted(k for k in index.entries if k[0] in {"assignment","validity"})),
         bundle.acquisition_complete, bool(bundle.manifest and bundle.manifest.data["data_role"] == "fixture"))

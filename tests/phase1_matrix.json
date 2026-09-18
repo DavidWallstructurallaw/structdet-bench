@@ -1710,30 +1710,12 @@
   "catalogue_encoding": "pinned_source_rows_v1",
   "current_step_scope": "Legacy Step 3 catalogue snapshot retained for preserved tests. See delivery_progress for the current delivery.",
   "delivery_progress": {
-    "step": 6,
-    "implementation_scope": "offline_cli_reports_hero_fixtures_and_safe_publication",
+    "step": 7,
+    "implementation_scope": "complete_M_integration_safety_reproducibility",
     "phase1_complete": false,
     "authorization": {
-      "owner_instruction": "可以，继续phase 1 step 6",
-      "interpretation": "Authorize Phase 1 Step 6 within its existing file ledger; no Step 7 or scientific-baseline change.",
-      "maintenance_amendment": {
-        "amendment_id": "STEP6-TEST-MAINTENANCE-001",
-        "owner_instruction": "批准",
-        "approval_context": "Approval of the three changes in PROPOSED_TEST_MAINTENANCE.patch proposed with the Step 6 candidate delivery.",
-        "authorized_path": "tests/test_metrics.py",
-        "authorized_changes": [
-          "Populations.test_no_hero_program_or_report_created",
-          "Matrix.test_explicit_test_bindings",
-          "Matrix.test_history_and_actual_runner_step"
-        ],
-        "patch_sha256": "fb3e0d0df0d32cb13b782ef2bab710a7e947ed6bc6fa0a2bfc0b53538497cc80",
-        "before_sha256": "2e380e1f6a3b2a4266dbec69e91f1d753e5ab78a096c9c253bf3bb01b1618baf",
-        "after_sha256": "fc08970aba91153340211af6f9ef1c0ffdeb6467a9469e0c314a6c9b8ecd81f8",
-        "test_identities_preserved": true,
-        "scientific_contracts_changed": false,
-        "later_steps_authorized": false,
-        "status": "applied_as_approved"
-      }
+      "owner_instruction": "很好，Phase 1 Step 7  继续",
+      "interpretation": "Accept Step 6 and execute Step 7, including the finding-limited repairs in PHASE_1_PLAN section 4. Publish the verified result to the existing repository. Stop before Step 8; no external experiments or hosted CI."
     }
   },
   "step4_acceptance": {
@@ -1863,6 +1845,33 @@
         "owner_instruction": "很好，继续Phase 1 Step 5",
         "interpretation": "Accept Step 4; implement and publish Phase 1 Step 5. Stop before Step 6. No model calls, candidate execution, comparisons, independent empirical validation or package publication."
       }
+    },
+    {
+      "step": 6,
+      "implementation_scope": "offline_cli_reports_hero_fixtures_and_safe_publication",
+      "phase1_complete": false,
+      "authorization": {
+        "owner_instruction": "可以，继续phase 1 step 6",
+        "interpretation": "Authorize Phase 1 Step 6 within its existing file ledger; no Step 7 or scientific-baseline change.",
+        "maintenance_amendment": {
+          "amendment_id": "STEP6-TEST-MAINTENANCE-001",
+          "owner_instruction": "批准",
+          "approval_context": "Approval of the three changes in PROPOSED_TEST_MAINTENANCE.patch proposed with the Step 6 candidate delivery.",
+          "authorized_path": "tests/test_metrics.py",
+          "authorized_changes": [
+            "Populations.test_no_hero_program_or_report_created",
+            "Matrix.test_explicit_test_bindings",
+            "Matrix.test_history_and_actual_runner_step"
+          ],
+          "patch_sha256": "fb3e0d0df0d32cb13b782ef2bab710a7e947ed6bc6fa0a2bfc0b53538497cc80",
+          "before_sha256": "2e380e1f6a3b2a4266dbec69e91f1d753e5ab78a096c9c253bf3bb01b1618baf",
+          "after_sha256": "fc08970aba91153340211af6f9ef1c0ffdeb6467a9469e0c314a6c9b8ecd81f8",
+          "test_identities_preserved": true,
+          "scientific_contracts_changed": false,
+          "later_steps_authorized": false,
+          "status": "applied_as_approved"
+        }
+      }
     }
   ],
   "step5_acceptance": {
@@ -1958,31 +1967,89 @@
   "implementation_updates": {
     "vf_tests": [
       {
-        "id": "VT-05",
-        "implementation_status": "partial",
+        "id": "VT-01",
+        "implementation_status": "implemented",
         "binding_classes": [
+          "tests.test_records.KnowledgeTests",
+          "tests.test_pipeline.AdversePipelineTests",
+          "tests.test_reporting.ReportTests"
+        ],
+        "reason": "Step 7 completes only the M contract. Actual pass/fail is recorded by the runner; substantive E and V/D capabilities remain absent.",
+        "fixture_refs": [
+          "HERO HF-00/HF-01..06",
+          "MET/VF pinned fixtures",
+          "explicit Step 7 record fixtures"
+        ]
+      },
+      {
+        "id": "VT-02",
+        "implementation_status": "implemented",
+        "binding_classes": [
+          "tests.test_inventory.InventoryTests",
+          "tests.test_records.IdentityTests"
+        ],
+        "reason": "Step 7 completes only the M contract. Actual pass/fail is recorded by the runner; substantive E and V/D capabilities remain absent.",
+        "fixture_refs": [
+          "HERO HF-00/HF-01..06",
+          "MET/VF pinned fixtures",
+          "explicit Step 7 record fixtures"
+        ]
+      },
+      {
+        "id": "VT-03",
+        "implementation_status": "implemented",
+        "binding_classes": [
+          "tests.test_inventory.InventoryTests",
+          "tests.test_inventory.AdditionalInventoryTests"
+        ],
+        "reason": "Step 7 completes only the M contract. Actual pass/fail is recorded by the runner; substantive E and V/D capabilities remain absent.",
+        "fixture_refs": [
+          "HERO HF-00/HF-01..06",
+          "MET/VF pinned fixtures",
+          "explicit Step 7 record fixtures"
+        ]
+      },
+      {
+        "id": "VT-04",
+        "implementation_status": "implemented",
+        "binding_classes": [
+          "tests.test_evidence.AdmissionTests",
+          "tests.test_pipeline.AdversePipelineTests"
+        ],
+        "reason": "Step 7 completes only the M contract. Actual pass/fail is recorded by the runner; substantive E and V/D capabilities remain absent.",
+        "fixture_refs": [
+          "HERO HF-00/HF-01..06",
+          "MET/VF pinned fixtures",
+          "explicit Step 7 record fixtures"
+        ]
+      },
+      {
+        "id": "VT-05",
+        "implementation_status": "implemented",
+        "binding_classes": [
+          "tests.test_populations.PopulationTests",
           "tests.test_metrics.Populations"
         ],
-        "reason": "Step 5 arithmetic/component checks only. Final report or complete integrated conformance remains for later steps.",
+        "reason": "Step 7 completes only the M contract. Actual pass/fail is recorded by the runner; substantive E and V/D capabilities remain absent.",
         "fixture_refs": [
-          "MET sections 5-7 and 12",
-          "VF sections 5.1-5.2",
-          "tests/fixtures/arithmetic_oracles.json"
+          "HERO HF-00/HF-01..06",
+          "MET/VF pinned fixtures",
+          "explicit Step 7 record fixtures"
         ]
       },
       {
         "id": "VT-06",
-        "implementation_status": "partial",
+        "implementation_status": "implemented",
         "binding_classes": [
           "tests.test_metrics.Populations",
-          "tests.test_metrics.Arithmetic",
-          "tests.test_metrics.Numerical"
+          "tests.test_metrics.Numerical",
+          "tests.test_reporting.ReportTests"
         ],
-        "reason": "Step 5 arithmetic/component checks only. Final report or complete integrated conformance remains for later steps.",
+        "reason": "Step 7 completes only the M contract. Actual pass/fail is recorded by the runner; substantive E and V/D capabilities remain absent.",
         "fixture_refs": [
-          "MET sections 5-7 and 12",
-          "VF sections 5.1-5.2",
-          "tests/fixtures/arithmetic_oracles.json"
+          "HERO HF-00/HF-01..06",
+          "MET/VF pinned fixtures",
+          "explicit Step 7 record fixtures"
         ]
       },
       {
@@ -1991,11 +2058,11 @@
         "binding_classes": [
           "tests.test_metrics.Arithmetic"
         ],
-        "reason": "Step 5 arithmetic/component checks only. This M arithmetic obligation is implemented.",
+        "reason": "Step 7 completes only the M contract. Actual pass/fail is recorded by the runner; substantive E and V/D capabilities remain absent.",
         "fixture_refs": [
-          "MET sections 5-7 and 12",
-          "VF sections 5.1-5.2",
-          "tests/fixtures/arithmetic_oracles.json"
+          "HERO HF-00/HF-01..06",
+          "MET/VF pinned fixtures",
+          "explicit Step 7 record fixtures"
         ]
       },
       {
@@ -2004,11 +2071,11 @@
         "binding_classes": [
           "tests.test_metrics.Thresholds"
         ],
-        "reason": "Step 5 arithmetic/component checks only. This M arithmetic obligation is implemented.",
+        "reason": "Step 7 completes only the M contract. Actual pass/fail is recorded by the runner; substantive E and V/D capabilities remain absent.",
         "fixture_refs": [
-          "MET sections 5-7 and 12",
-          "VF sections 5.1-5.2",
-          "tests/fixtures/arithmetic_oracles.json"
+          "HERO HF-00/HF-01..06",
+          "MET/VF pinned fixtures",
+          "explicit Step 7 record fixtures"
         ]
       },
       {
@@ -2018,11 +2085,11 @@
           "tests.test_metrics.Numerical",
           "tests.test_metrics.Arithmetic"
         ],
-        "reason": "Step 5 arithmetic/component checks only. This M arithmetic obligation is implemented.",
+        "reason": "Step 7 completes only the M contract. Actual pass/fail is recorded by the runner; substantive E and V/D capabilities remain absent.",
         "fixture_refs": [
-          "MET sections 5-7 and 12",
-          "VF sections 5.1-5.2",
-          "tests/fixtures/arithmetic_oracles.json"
+          "HERO HF-00/HF-01..06",
+          "MET/VF pinned fixtures",
+          "explicit Step 7 record fixtures"
         ]
       },
       {
@@ -2030,330 +2097,1353 @@
         "implementation_status": "implemented",
         "binding_classes": [
           "tests.test_metrics.Numerical",
-          "tests.test_metrics.Prefixes"
+          "tests.test_metrics.Prefixes",
+          "tests.test_populations.PopulationTests"
         ],
-        "reason": "Step 5 arithmetic/component checks only. This M arithmetic obligation is implemented.",
+        "reason": "Step 7 completes only the M contract. Actual pass/fail is recorded by the runner; substantive E and V/D capabilities remain absent.",
         "fixture_refs": [
-          "MET sections 5-7 and 12",
-          "VF sections 5.1-5.2",
-          "tests/fixtures/arithmetic_oracles.json"
+          "HERO HF-00/HF-01..06",
+          "MET/VF pinned fixtures",
+          "explicit Step 7 record fixtures"
         ]
       },
       {
         "id": "VT-11",
         "implementation_status": "implemented",
         "binding_classes": [
+          "tests.test_populations.PrefixTests",
           "tests.test_metrics.Prefixes"
         ],
-        "reason": "Step 5 arithmetic/component checks only. This M arithmetic obligation is implemented.",
+        "reason": "Step 7 completes only the M contract. Actual pass/fail is recorded by the runner; substantive E and V/D capabilities remain absent.",
         "fixture_refs": [
-          "MET sections 5-7 and 12",
-          "VF sections 5.1-5.2",
-          "tests/fixtures/arithmetic_oracles.json"
+          "HERO HF-00/HF-01..06",
+          "MET/VF pinned fixtures",
+          "explicit Step 7 record fixtures"
+        ]
+      },
+      {
+        "id": "VT-12",
+        "implementation_status": "implemented",
+        "binding_classes": [
+          "tests.test_populations.HeroEndpointTests",
+          "tests.test_metrics.Prefixes"
+        ],
+        "reason": "Step 7 completes only the M contract. Actual pass/fail is recorded by the runner; substantive E and V/D capabilities remain absent.",
+        "fixture_refs": [
+          "HERO HF-00/HF-01..06",
+          "MET/VF pinned fixtures",
+          "explicit Step 7 record fixtures"
         ]
       },
       {
         "id": "VT-13",
-        "implementation_status": "partial",
+        "implementation_status": "implemented",
         "binding_classes": [
-          "tests.test_metrics.Populations",
-          "tests.test_metrics.Prefixes",
           "tests.test_pipeline.HeroPipelineTests"
         ],
-        "reason": "Step 5 arithmetic/component checks only. Final report or complete integrated conformance remains for later steps.",
+        "reason": "Step 7 completes only the M contract. Actual pass/fail is recorded by the runner; substantive E and V/D capabilities remain absent.",
         "fixture_refs": [
-          "MET sections 5-7 and 12",
-          "VF sections 5.1-5.2",
-          "tests/fixtures/arithmetic_oracles.json"
+          "HERO HF-00/HF-01..06",
+          "MET/VF pinned fixtures",
+          "explicit Step 7 record fixtures"
+        ]
+      },
+      {
+        "id": "VT-14",
+        "implementation_status": "implemented",
+        "binding_classes": [
+          "tests.test_pipeline.Step7ReportIntegration",
+          "tests.test_populations.PopulationTests"
+        ],
+        "reason": "Step 7 completes only the M contract. Actual pass/fail is recorded by the runner; substantive E and V/D capabilities remain absent.",
+        "fixture_refs": [
+          "HERO HF-00/HF-01..06",
+          "MET/VF pinned fixtures",
+          "explicit Step 7 record fixtures"
+        ]
+      },
+      {
+        "id": "VT-15",
+        "implementation_status": "implemented",
+        "binding_classes": [
+          "tests.test_evidence.AdmissionTests"
+        ],
+        "reason": "Step 7 completes only the M contract. Actual pass/fail is recorded by the runner; substantive E and V/D capabilities remain absent.",
+        "fixture_refs": [
+          "HERO HF-00/HF-01..06",
+          "MET/VF pinned fixtures",
+          "explicit Step 7 record fixtures"
+        ]
+      },
+      {
+        "id": "VT-16",
+        "implementation_status": "implemented",
+        "binding_classes": [
+          "tests.test_integrity_records.Step7ReferenceAuditRecords",
+          "tests.test_evidence.AdmissionTests",
+          "tests.test_integrity_records.Step7CompleteReferenceFixtures"
+        ],
+        "reason": "Step 7 completes only the M contract. Actual pass/fail is recorded by the runner; substantive E and V/D capabilities remain absent.",
+        "fixture_refs": [
+          "HERO HF-00/HF-01..06",
+          "MET/VF pinned fixtures",
+          "explicit Step 7 record fixtures"
         ]
       },
       {
         "id": "VT-17",
-        "implementation_status": "partial",
+        "implementation_status": "implemented",
         "binding_classes": [
-          "tests.test_pipeline.HeroPipelineTests",
-          "tests.test_pipeline.AdversePipelineTests"
+          "tests.test_pipeline.Step7ReportIntegration",
+          "tests.test_pipeline.AdversePipelineTests",
+          "tests.test_evidence.CorrectionTests"
         ],
-        "reason": "Step 6 executable path; integrated M coverage remains for Step 7. No E evidence supplied.",
+        "reason": "Step 7 completes only the M contract. Actual pass/fail is recorded by the runner; substantive E and V/D capabilities remain absent.",
         "fixture_refs": [
-          "HF-00",
-          "HF-01",
-          "HF-02",
-          "HF-03",
-          "HF-04",
-          "HF-05",
-          "HF-06"
+          "HERO HF-00/HF-01..06",
+          "MET/VF pinned fixtures",
+          "explicit Step 7 record fixtures"
         ]
       },
       {
         "id": "VT-18",
-        "implementation_status": "partial",
+        "implementation_status": "implemented",
         "binding_classes": [
-          "tests.test_pipeline.AdversePipelineTests"
+          "tests.test_pipeline.AdversePipelineTests",
+          "tests.test_evidence.CorrectionTests"
         ],
-        "reason": "Step 6 executable path; integrated M coverage remains for Step 7. No E evidence supplied.",
+        "reason": "Step 7 completes only the M contract. Actual pass/fail is recorded by the runner; substantive E and V/D capabilities remain absent.",
         "fixture_refs": [
-          "HF-00",
-          "HF-01",
-          "HF-02",
-          "HF-03",
-          "HF-04",
-          "HF-05",
-          "HF-06"
+          "HERO HF-00/HF-01..06",
+          "MET/VF pinned fixtures",
+          "explicit Step 7 record fixtures"
         ]
       },
       {
         "id": "VT-19",
-        "implementation_status": "partial",
+        "implementation_status": "implemented",
         "binding_classes": [
-          "tests.test_pipeline.OutputTransactionTests",
-          "tests.test_pipeline.PipelineBoundaryTests"
+          "tests.test_pipeline.PipelineBoundaryTests",
+          "tests.test_security.Step7SafetyTests",
+          "tests.test_local_io.SnapshotTests"
         ],
-        "reason": "Step 6 executable path; integrated M coverage remains for Step 7. No E evidence supplied.",
+        "reason": "Step 7 completes only the M contract. Actual pass/fail is recorded by the runner; substantive E and V/D capabilities remain absent.",
         "fixture_refs": [
-          "HF-00",
-          "HF-01",
-          "HF-02",
-          "HF-03",
-          "HF-04",
-          "HF-05",
-          "HF-06"
+          "HERO HF-00/HF-01..06",
+          "MET/VF pinned fixtures",
+          "explicit Step 7 record fixtures"
         ]
       },
       {
         "id": "VT-20",
-        "implementation_status": "partial",
+        "implementation_status": "implemented",
         "binding_classes": [
           "tests.test_reporting.ReportTests",
-          "tests.test_pipeline.HeroPipelineTests"
+          "tests.test_pipeline.Step7ReportIntegration"
         ],
-        "reason": "Step 6 executable path; integrated M coverage remains for Step 7. No E evidence supplied.",
+        "reason": "Step 7 completes only the M contract. Actual pass/fail is recorded by the runner; substantive E and V/D capabilities remain absent.",
         "fixture_refs": [
-          "HF-00",
-          "HF-01",
-          "HF-02",
-          "HF-03",
-          "HF-04",
-          "HF-05",
-          "HF-06"
+          "HERO HF-00/HF-01..06",
+          "MET/VF pinned fixtures",
+          "explicit Step 7 record fixtures"
+        ]
+      },
+      {
+        "id": "VT-21",
+        "implementation_status": "implemented",
+        "binding_classes": [
+          "tests.test_integrity_records.IntegrityTests",
+          "tests.test_pipeline.Step7ReportIntegration"
+        ],
+        "reason": "Step 7 completes only the M contract. Actual pass/fail is recorded by the runner; substantive E and V/D capabilities remain absent.",
+        "fixture_refs": [
+          "HERO HF-00/HF-01..06",
+          "MET/VF pinned fixtures",
+          "explicit Step 7 record fixtures"
+        ]
+      },
+      {
+        "id": "VT-22",
+        "implementation_status": "implemented",
+        "binding_classes": [
+          "tests.test_integrity_records.IntegrityTests"
+        ],
+        "reason": "Step 7 completes only the M contract. Actual pass/fail is recorded by the runner; substantive E and V/D capabilities remain absent.",
+        "fixture_refs": [
+          "HERO HF-00/HF-01..06",
+          "MET/VF pinned fixtures",
+          "explicit Step 7 record fixtures"
+        ]
+      },
+      {
+        "id": "VT-23",
+        "implementation_status": "implemented",
+        "binding_classes": [
+          "tests.test_integrity_records.IntegrityTests",
+          "tests.test_pipeline.Step7ReportIntegration",
+          "tests.test_integrity_records.Step7ReferenceAuditRecords",
+          "tests.test_integrity_records.Step7CompleteReferenceFixtures"
+        ],
+        "reason": "Step 7 completes only the M contract. Actual pass/fail is recorded by the runner; substantive E and V/D capabilities remain absent.",
+        "fixture_refs": [
+          "HERO HF-00/HF-01..06",
+          "MET/VF pinned fixtures",
+          "explicit Step 7 record fixtures"
+        ]
+      },
+      {
+        "id": "VT-24",
+        "implementation_status": "implemented",
+        "binding_classes": [
+          "tests.test_integrity_records.IntegrityTests",
+          "tests.test_pipeline.Step7ReportIntegration"
+        ],
+        "reason": "Step 7 completes only the M contract. Actual pass/fail is recorded by the runner; substantive E and V/D capabilities remain absent.",
+        "fixture_refs": [
+          "HERO HF-00/HF-01..06",
+          "MET/VF pinned fixtures",
+          "explicit Step 7 record fixtures"
+        ]
+      },
+      {
+        "id": "VT-25",
+        "implementation_status": "implemented",
+        "binding_classes": [
+          "tests.test_integrity_records.Step7ReferenceAuditRecords",
+          "tests.test_records.RegistryTests",
+          "tests.test_integrity_records.Step7CompleteReferenceFixtures"
+        ],
+        "reason": "Step 7 completes only the M contract. Actual pass/fail is recorded by the runner; substantive E and V/D capabilities remain absent.",
+        "fixture_refs": [
+          "HERO HF-00/HF-01..06",
+          "MET/VF pinned fixtures",
+          "explicit Step 7 record fixtures"
+        ]
+      },
+      {
+        "id": "VT-26",
+        "implementation_status": "implemented",
+        "binding_classes": [
+          "tests.test_integrity_records.Step7FunctionalRecords"
+        ],
+        "reason": "Step 7 completes only the M contract. Actual pass/fail is recorded by the runner; substantive E and V/D capabilities remain absent.",
+        "fixture_refs": [
+          "HERO HF-00/HF-01..06",
+          "MET/VF pinned fixtures",
+          "explicit Step 7 record fixtures"
+        ]
+      },
+      {
+        "id": "VT-27",
+        "implementation_status": "implemented",
+        "binding_classes": [
+          "tests.test_integrity_records.Step7FunctionalRecords"
+        ],
+        "reason": "Step 7 completes only the M contract. Actual pass/fail is recorded by the runner; substantive E and V/D capabilities remain absent.",
+        "fixture_refs": [
+          "HERO HF-00/HF-01..06",
+          "MET/VF pinned fixtures",
+          "explicit Step 7 record fixtures"
+        ]
+      },
+      {
+        "id": "VT-28",
+        "implementation_status": "implemented",
+        "binding_classes": [
+          "tests.test_integrity_records.Step7FunctionalRecords",
+          "tests.test_security.Step7SafetyTests"
+        ],
+        "reason": "Step 7 completes only the M contract. Actual pass/fail is recorded by the runner; substantive E and V/D capabilities remain absent.",
+        "fixture_refs": [
+          "HERO HF-00/HF-01..06",
+          "MET/VF pinned fixtures",
+          "explicit Step 7 record fixtures"
+        ]
+      },
+      {
+        "id": "VT-29",
+        "implementation_status": "implemented",
+        "binding_classes": [
+          "tests.test_integrity_records.Step7ReferenceAuditRecords",
+          "tests.test_integrity_records.IntegrityTests",
+          "tests.test_integrity_records.Step7CompleteReferenceFixtures"
+        ],
+        "reason": "Step 7 completes only the M contract. Actual pass/fail is recorded by the runner; substantive E and V/D capabilities remain absent.",
+        "fixture_refs": [
+          "HERO HF-00/HF-01..06",
+          "MET/VF pinned fixtures",
+          "explicit Step 7 record fixtures"
         ]
       },
       {
         "id": "VT-30",
-        "implementation_status": "partial",
+        "implementation_status": "implemented",
         "binding_classes": [
-          "tests.test_reporting.ReportTests"
+          "tests.test_reporting.ReportTests",
+          "tests.test_pipeline.HeroPipelineTests"
         ],
-        "reason": "Step 6 executable path; integrated M coverage remains for Step 7. No E evidence supplied.",
+        "reason": "Step 7 completes only the M contract. Actual pass/fail is recorded by the runner; substantive E and V/D capabilities remain absent.",
         "fixture_refs": [
-          "HF-00",
-          "HF-01",
-          "HF-02",
-          "HF-03",
-          "HF-04",
-          "HF-05",
-          "HF-06"
+          "HERO HF-00/HF-01..06",
+          "MET/VF pinned fixtures",
+          "explicit Step 7 record fixtures"
         ]
       },
       {
         "id": "VT-36",
-        "implementation_status": "partial",
+        "implementation_status": "implemented",
         "binding_classes": [
-          "tests.test_pipeline.HeroPipelineTests"
+          "tests.test_inventory.ArtifactAssociationTests",
+          "tests.test_reporting.SourceAssociationDisclosureTests"
         ],
-        "reason": "Step 6 executable path; integrated M coverage remains for Step 7. No E evidence supplied.",
+        "reason": "Step 7 completes only the M contract. Actual pass/fail is recorded by the runner; substantive E and V/D capabilities remain absent.",
         "fixture_refs": [
-          "HF-00",
-          "HF-01",
-          "HF-02",
-          "HF-03",
-          "HF-04",
-          "HF-05",
-          "HF-06"
+          "HERO HF-00/HF-01..06",
+          "MET/VF pinned fixtures",
+          "explicit Step 7 record fixtures"
         ]
       },
       {
         "id": "VT-46",
-        "implementation_status": "partial",
+        "implementation_status": "implemented",
         "binding_classes": [
-          "tests.test_reporting.ReportTests",
-          "tests.test_pipeline.OutputTransactionTests"
+          "tests.test_pipeline.HeroPipelineTests",
+          "tests.test_pipeline.Step7ReportIntegration",
+          "tests.test_reporting.ReportTests"
         ],
-        "reason": "Step 6 executable path; integrated M coverage remains for Step 7. No E evidence supplied.",
+        "reason": "Step 7 completes only the M contract. Actual pass/fail is recorded by the runner; substantive E and V/D capabilities remain absent.",
         "fixture_refs": [
-          "HF-00",
-          "HF-01",
-          "HF-02",
-          "HF-03",
-          "HF-04",
-          "HF-05",
-          "HF-06"
+          "HERO HF-00/HF-01..06",
+          "MET/VF pinned fixtures",
+          "explicit Step 7 record fixtures"
+        ]
+      },
+      {
+        "id": "VT-47",
+        "implementation_status": "implemented",
+        "binding_classes": [
+          "tests.test_integrity_records.IntegrityTests",
+          "tests.test_integrity_records.Step7FunctionalRecords"
+        ],
+        "reason": "Step 7 completes only the M contract. Actual pass/fail is recorded by the runner; substantive E and V/D capabilities remain absent.",
+        "fixture_refs": [
+          "HERO HF-00/HF-01..06",
+          "MET/VF pinned fixtures",
+          "explicit Step 7 record fixtures"
         ]
       },
       {
         "id": "VT-51",
-        "implementation_status": "partial",
+        "implementation_status": "implemented",
         "binding_classes": [
-          "tests.test_reporting.ReportTests"
+          "tests.test_reporting.ReportTests",
+          "tests.test_pipeline.Step7ReportIntegration"
         ],
-        "reason": "Step 6 executable path; integrated M coverage remains for Step 7. No E evidence supplied.",
+        "reason": "Step 7 completes only the M contract. Actual pass/fail is recorded by the runner; substantive E and V/D capabilities remain absent.",
         "fixture_refs": [
-          "HF-00",
-          "HF-01",
-          "HF-02",
-          "HF-03",
-          "HF-04",
-          "HF-05",
-          "HF-06"
+          "HERO HF-00/HF-01..06",
+          "MET/VF pinned fixtures",
+          "explicit Step 7 record fixtures"
         ]
       },
       {
         "id": "VT-52",
-        "implementation_status": "partial",
+        "implementation_status": "implemented",
         "binding_classes": [
+          "tests.test_pipeline.Step7ReportIntegration",
           "tests.test_reporting.ReportTests"
         ],
-        "reason": "Step 6 executable path; integrated M coverage remains for Step 7. No E evidence supplied.",
+        "reason": "Step 7 completes only the M contract. Actual pass/fail is recorded by the runner; substantive E and V/D capabilities remain absent.",
         "fixture_refs": [
-          "HF-00",
-          "HF-01",
-          "HF-02",
-          "HF-03",
-          "HF-04",
-          "HF-05",
-          "HF-06"
+          "HERO HF-00/HF-01..06",
+          "MET/VF pinned fixtures",
+          "explicit Step 7 record fixtures"
         ]
       },
       {
         "id": "VT-53",
-        "implementation_status": "partial",
+        "implementation_status": "implemented",
         "binding_classes": [
-          "tests.test_reporting.ReportTests"
+          "tests.test_pipeline.Step7ReportIntegration"
         ],
-        "reason": "Step 6 executable path; integrated M coverage remains for Step 7. No E evidence supplied.",
+        "reason": "Step 7 completes only the M contract. Actual pass/fail is recorded by the runner; substantive E and V/D capabilities remain absent.",
         "fixture_refs": [
-          "HF-00",
-          "HF-01",
-          "HF-02",
-          "HF-03",
-          "HF-04",
-          "HF-05",
-          "HF-06"
+          "HERO HF-00/HF-01..06",
+          "MET/VF pinned fixtures",
+          "explicit Step 7 record fixtures"
         ]
       },
       {
         "id": "VT-54",
-        "implementation_status": "partial",
+        "implementation_status": "implemented",
         "binding_classes": [
-          "tests.test_reporting.ReportTests"
+          "tests.test_pipeline.Step7ReportIntegration"
         ],
-        "reason": "Step 6 executable path; integrated M coverage remains for Step 7. No E evidence supplied.",
+        "reason": "Step 7 completes only the M contract. Actual pass/fail is recorded by the runner; substantive E and V/D capabilities remain absent.",
         "fixture_refs": [
-          "HF-00",
-          "HF-01",
-          "HF-02",
-          "HF-03",
-          "HF-04",
-          "HF-05",
-          "HF-06"
+          "HERO HF-00/HF-01..06",
+          "MET/VF pinned fixtures",
+          "explicit Step 7 record fixtures"
         ]
       }
     ],
     "trace_requirements": [
       {
+        "id": "TR-01",
+        "implementation_status": "implemented",
+        "binding_classes": [
+          "tests.test_integrity_records.IntegrityTests",
+          "tests.test_pipeline.AdversePipelineTests",
+          "tests.test_pipeline.HeroPipelineTests",
+          "tests.test_pipeline.Step7ReportIntegration",
+          "tests.test_records.KnowledgeTests",
+          "tests.test_reporting.ReportTests"
+        ],
+        "reason": "M-only source-to-test and report serialization coverage; source meanings and non-M scopes remain unchanged.",
+        "fixture_refs": [
+          "tests.test_pipeline.RF_PATHS",
+          "TR-01"
+        ]
+      },
+      {
+        "id": "TR-02",
+        "implementation_status": "implemented",
+        "binding_classes": [
+          "tests.test_evidence.AdmissionTests",
+          "tests.test_integrity_records.Step7ReferenceAuditRecords",
+          "tests.test_pipeline.Step7ReportIntegration",
+          "tests.test_populations.PopulationTests",
+          "tests.test_records.RegistryTests",
+          "tests.test_integrity_records.Step7CompleteReferenceFixtures"
+        ],
+        "reason": "M-only source-to-test and report serialization coverage; source meanings and non-M scopes remain unchanged.",
+        "fixture_refs": [
+          "tests.test_pipeline.RF_PATHS",
+          "TR-02"
+        ]
+      },
+      {
         "id": "TR-03",
-        "implementation_status": "partial",
+        "implementation_status": "implemented",
         "binding_classes": [
           "tests.test_metrics.Arithmetic",
+          "tests.test_metrics.Numerical",
           "tests.test_metrics.Thresholds"
         ],
-        "reason": "Step 5 arithmetic/component checks only. Final report or complete integrated conformance remains for later steps.",
+        "reason": "M-only source-to-test and report serialization coverage; source meanings and non-M scopes remain unchanged.",
         "fixture_refs": [
-          "MET sections 5-7 and 12",
-          "VF sections 5.1-5.2",
-          "tests/fixtures/arithmetic_oracles.json"
+          "tests.test_pipeline.RF_PATHS",
+          "TR-03"
+        ]
+      },
+      {
+        "id": "TR-04",
+        "implementation_status": "implemented",
+        "binding_classes": [
+          "tests.test_inventory.AdditionalInventoryTests",
+          "tests.test_inventory.ArtifactAssociationTests",
+          "tests.test_inventory.InventoryTests",
+          "tests.test_records.IdentityTests",
+          "tests.test_reporting.SourceAssociationDisclosureTests"
+        ],
+        "reason": "M-only source-to-test and report serialization coverage; source meanings and non-M scopes remain unchanged.",
+        "fixture_refs": [
+          "tests.test_pipeline.RF_PATHS",
+          "TR-04"
+        ]
+      },
+      {
+        "id": "TR-05",
+        "implementation_status": "implemented",
+        "binding_classes": [
+          "tests.test_metrics.Numerical",
+          "tests.test_metrics.Populations",
+          "tests.test_pipeline.AdversePipelineTests",
+          "tests.test_pipeline.Step7ReportIntegration",
+          "tests.test_records.KnowledgeTests",
+          "tests.test_reporting.ReportTests"
+        ],
+        "reason": "M-only source-to-test and report serialization coverage; source meanings and non-M scopes remain unchanged.",
+        "fixture_refs": [
+          "tests.test_pipeline.RF_PATHS",
+          "TR-05"
+        ]
+      },
+      {
+        "id": "TR-06",
+        "implementation_status": "implemented",
+        "binding_classes": [
+          "tests.test_evidence.AdmissionTests",
+          "tests.test_integrity_records.IntegrityTests",
+          "tests.test_integrity_records.Step7FunctionalRecords",
+          "tests.test_pipeline.AdversePipelineTests"
+        ],
+        "reason": "M-only source-to-test and report serialization coverage; source meanings and non-M scopes remain unchanged.",
+        "fixture_refs": [
+          "tests.test_pipeline.RF_PATHS",
+          "TR-06"
+        ]
+      },
+      {
+        "id": "TR-07",
+        "implementation_status": "implemented",
+        "binding_classes": [
+          "tests.test_evidence.AdmissionTests",
+          "tests.test_metrics.Numerical",
+          "tests.test_metrics.Populations",
+          "tests.test_pipeline.HeroPipelineTests",
+          "tests.test_populations.PopulationTests",
+          "tests.test_reporting.ReportTests"
+        ],
+        "reason": "M-only source-to-test and report serialization coverage; source meanings and non-M scopes remain unchanged.",
+        "fixture_refs": [
+          "tests.test_pipeline.RF_PATHS",
+          "TR-07"
+        ]
+      },
+      {
+        "id": "TR-08",
+        "implementation_status": "implemented",
+        "binding_classes": [
+          "tests.test_evidence.AdmissionTests",
+          "tests.test_integrity_records.Step7ReferenceAuditRecords",
+          "tests.test_records.RegistryTests",
+          "tests.test_integrity_records.Step7CompleteReferenceFixtures"
+        ],
+        "reason": "M-only source-to-test and report serialization coverage; source meanings and non-M scopes remain unchanged.",
+        "fixture_refs": [
+          "tests.test_pipeline.RF_PATHS",
+          "TR-08"
+        ]
+      },
+      {
+        "id": "TR-09",
+        "implementation_status": "implemented",
+        "binding_classes": [
+          "tests.test_metrics.Numerical",
+          "tests.test_metrics.Populations",
+          "tests.test_populations.PopulationTests",
+          "tests.test_reporting.ReportTests"
+        ],
+        "reason": "M-only source-to-test and report serialization coverage; source meanings and non-M scopes remain unchanged.",
+        "fixture_refs": [
+          "tests.test_pipeline.RF_PATHS",
+          "TR-09"
         ]
       },
       {
         "id": "TR-10",
-        "implementation_status": "partial",
+        "implementation_status": "implemented",
         "binding_classes": [
           "tests.test_metrics.Arithmetic",
-          "tests.test_metrics.Populations"
+          "tests.test_metrics.Numerical",
+          "tests.test_metrics.Populations",
+          "tests.test_pipeline.HeroPipelineTests",
+          "tests.test_reporting.ReportTests"
         ],
-        "reason": "Step 5 arithmetic/component checks only. Final report or complete integrated conformance remains for later steps.",
+        "reason": "M-only source-to-test and report serialization coverage; source meanings and non-M scopes remain unchanged.",
         "fixture_refs": [
-          "MET sections 5-7 and 12",
-          "VF sections 5.1-5.2",
-          "tests/fixtures/arithmetic_oracles.json"
+          "tests.test_pipeline.RF_PATHS",
+          "TR-10"
         ]
       },
       {
         "id": "TR-11",
-        "implementation_status": "partial",
+        "implementation_status": "implemented",
         "binding_classes": [
-          "tests.test_metrics.Thresholds"
+          "tests.test_metrics.Thresholds",
+          "tests.test_pipeline.HeroPipelineTests"
         ],
-        "reason": "Step 5 arithmetic/component checks only. Final report or complete integrated conformance remains for later steps.",
+        "reason": "M-only source-to-test and report serialization coverage; source meanings and non-M scopes remain unchanged.",
         "fixture_refs": [
-          "MET sections 5-7 and 12",
-          "VF sections 5.1-5.2",
-          "tests/fixtures/arithmetic_oracles.json"
+          "tests.test_pipeline.RF_PATHS",
+          "TR-11"
         ]
       },
       {
         "id": "TR-12",
-        "implementation_status": "partial",
+        "implementation_status": "implemented",
         "binding_classes": [
           "tests.test_metrics.Arithmetic",
-          "tests.test_metrics.Numerical"
+          "tests.test_metrics.Numerical",
+          "tests.test_metrics.Populations",
+          "tests.test_metrics.Prefixes",
+          "tests.test_populations.PopulationTests",
+          "tests.test_reporting.ReportTests"
         ],
-        "reason": "Step 5 arithmetic/component checks only. Final report or complete integrated conformance remains for later steps.",
+        "reason": "M-only source-to-test and report serialization coverage; source meanings and non-M scopes remain unchanged.",
         "fixture_refs": [
-          "MET sections 5-7 and 12",
-          "VF sections 5.1-5.2",
-          "tests/fixtures/arithmetic_oracles.json"
+          "tests.test_pipeline.RF_PATHS",
+          "TR-12"
         ]
       },
       {
         "id": "TR-13",
-        "implementation_status": "partial",
+        "implementation_status": "implemented",
         "binding_classes": [
           "tests.test_metrics.Arithmetic",
           "tests.test_metrics.Numerical"
         ],
-        "reason": "Step 5 arithmetic/component checks only. Final report or complete integrated conformance remains for later steps.",
+        "reason": "M-only source-to-test and report serialization coverage; source meanings and non-M scopes remain unchanged.",
         "fixture_refs": [
-          "MET sections 5-7 and 12",
-          "VF sections 5.1-5.2",
-          "tests/fixtures/arithmetic_oracles.json"
+          "tests.test_pipeline.RF_PATHS",
+          "TR-13"
         ]
       },
       {
         "id": "TR-14",
-        "implementation_status": "partial",
+        "implementation_status": "implemented",
         "binding_classes": [
           "tests.test_metrics.Arithmetic",
-          "tests.test_metrics.Numerical"
+          "tests.test_metrics.Numerical",
+          "tests.test_pipeline.HeroPipelineTests"
         ],
-        "reason": "Step 5 arithmetic/component checks only. Final report or complete integrated conformance remains for later steps.",
+        "reason": "M-only source-to-test and report serialization coverage; source meanings and non-M scopes remain unchanged.",
         "fixture_refs": [
-          "MET sections 5-7 and 12",
-          "VF sections 5.1-5.2",
-          "tests/fixtures/arithmetic_oracles.json"
+          "tests.test_pipeline.RF_PATHS",
+          "TR-14"
         ]
       },
       {
         "id": "TR-15",
-        "implementation_status": "partial",
+        "implementation_status": "implemented",
         "binding_classes": [
-          "tests.test_metrics.Prefixes"
+          "tests.test_metrics.Numerical",
+          "tests.test_metrics.Prefixes",
+          "tests.test_pipeline.HeroPipelineTests",
+          "tests.test_populations.HeroEndpointTests",
+          "tests.test_populations.PopulationTests",
+          "tests.test_populations.PrefixTests"
         ],
-        "reason": "Step 5 arithmetic/component checks only. Final report or complete integrated conformance remains for later steps.",
+        "reason": "M-only source-to-test and report serialization coverage; source meanings and non-M scopes remain unchanged.",
         "fixture_refs": [
-          "MET sections 5-7 and 12",
-          "VF sections 5.1-5.2",
-          "tests/fixtures/arithmetic_oracles.json"
+          "tests.test_pipeline.RF_PATHS",
+          "TR-15"
+        ]
+      },
+      {
+        "id": "TR-19",
+        "implementation_status": "implemented",
+        "binding_classes": [
+          "tests.test_pipeline.Step7ReportIntegration",
+          "tests.test_populations.PopulationTests"
+        ],
+        "reason": "M-only source-to-test and report serialization coverage; source meanings and non-M scopes remain unchanged.",
+        "fixture_refs": [
+          "tests.test_pipeline.RF_PATHS",
+          "TR-19"
+        ]
+      },
+      {
+        "id": "TR-22",
+        "implementation_status": "implemented",
+        "binding_classes": [
+          "tests.test_metrics.Prefixes",
+          "tests.test_populations.HeroEndpointTests"
+        ],
+        "reason": "M-only source-to-test and report serialization coverage; source meanings and non-M scopes remain unchanged.",
+        "fixture_refs": [
+          "tests.test_pipeline.RF_PATHS",
+          "TR-22"
+        ]
+      },
+      {
+        "id": "TR-25",
+        "implementation_status": "implemented",
+        "binding_classes": [
+          "tests.test_integrity_records.IntegrityTests",
+          "tests.test_integrity_records.Step7FunctionalRecords",
+          "tests.test_integrity_records.Step7ReferenceAuditRecords",
+          "tests.test_pipeline.Step7ReportIntegration",
+          "tests.test_populations.PopulationTests",
+          "tests.test_records.RegistryTests",
+          "tests.test_integrity_records.Step7CompleteReferenceFixtures"
+        ],
+        "reason": "M-only source-to-test and report serialization coverage; source meanings and non-M scopes remain unchanged.",
+        "fixture_refs": [
+          "tests.test_pipeline.RF_PATHS",
+          "TR-25"
+        ]
+      },
+      {
+        "id": "TR-26",
+        "implementation_status": "implemented",
+        "binding_classes": [
+          "tests.test_integrity_records.Step7FunctionalRecords",
+          "tests.test_security.Step7SafetyTests"
+        ],
+        "reason": "M-only source-to-test and report serialization coverage; source meanings and non-M scopes remain unchanged.",
+        "fixture_refs": [
+          "tests.test_pipeline.RF_PATHS",
+          "TR-26"
+        ]
+      },
+      {
+        "id": "TR-27",
+        "implementation_status": "implemented",
+        "binding_classes": [
+          "tests.test_integrity_records.IntegrityTests",
+          "tests.test_integrity_records.Step7FunctionalRecords",
+          "tests.test_integrity_records.Step7ReferenceAuditRecords",
+          "tests.test_integrity_records.Step7CompleteReferenceFixtures"
+        ],
+        "reason": "M-only source-to-test and report serialization coverage; source meanings and non-M scopes remain unchanged.",
+        "fixture_refs": [
+          "tests.test_pipeline.RF_PATHS",
+          "TR-27"
+        ]
+      },
+      {
+        "id": "TR-28",
+        "implementation_status": "implemented",
+        "binding_classes": [
+          "tests.test_integrity_records.IntegrityTests",
+          "tests.test_pipeline.Step7ReportIntegration"
+        ],
+        "reason": "M-only source-to-test and report serialization coverage; source meanings and non-M scopes remain unchanged.",
+        "fixture_refs": [
+          "tests.test_pipeline.RF_PATHS",
+          "TR-28"
+        ]
+      },
+      {
+        "id": "TR-29",
+        "implementation_status": "implemented",
+        "binding_classes": [
+          "tests.test_integrity_records.IntegrityTests",
+          "tests.test_integrity_records.Step7FunctionalRecords",
+          "tests.test_integrity_records.Step7ReferenceAuditRecords",
+          "tests.test_pipeline.Step7ReportIntegration",
+          "tests.test_integrity_records.Step7CompleteReferenceFixtures"
+        ],
+        "reason": "M-only source-to-test and report serialization coverage; source meanings and non-M scopes remain unchanged.",
+        "fixture_refs": [
+          "tests.test_pipeline.RF_PATHS",
+          "TR-29"
+        ]
+      },
+      {
+        "id": "TR-30",
+        "implementation_status": "implemented",
+        "binding_classes": [
+          "tests.test_evidence.AdmissionTests",
+          "tests.test_integrity_records.IntegrityTests",
+          "tests.test_integrity_records.Step7ReferenceAuditRecords",
+          "tests.test_pipeline.Step7ReportIntegration",
+          "tests.test_integrity_records.Step7CompleteReferenceFixtures"
+        ],
+        "reason": "M-only source-to-test and report serialization coverage; source meanings and non-M scopes remain unchanged.",
+        "fixture_refs": [
+          "tests.test_pipeline.RF_PATHS",
+          "TR-30"
+        ]
+      },
+      {
+        "id": "TR-31",
+        "implementation_status": "implemented",
+        "binding_classes": [
+          "tests.test_evidence.CorrectionTests",
+          "tests.test_pipeline.AdversePipelineTests",
+          "tests.test_pipeline.HeroPipelineTests",
+          "tests.test_pipeline.Step7ReportIntegration",
+          "tests.test_reporting.ReportTests"
+        ],
+        "reason": "M-only source-to-test and report serialization coverage; source meanings and non-M scopes remain unchanged.",
+        "fixture_refs": [
+          "tests.test_pipeline.RF_PATHS",
+          "TR-31"
+        ]
+      },
+      {
+        "id": "TR-32",
+        "implementation_status": "implemented",
+        "binding_classes": [
+          "tests.test_evidence.AdmissionTests",
+          "tests.test_integrity_records.IntegrityTests",
+          "tests.test_integrity_records.Step7FunctionalRecords",
+          "tests.test_pipeline.AdversePipelineTests",
+          "tests.test_pipeline.Step7ReportIntegration",
+          "tests.test_reporting.ReportTests"
+        ],
+        "reason": "M-only source-to-test and report serialization coverage; source meanings and non-M scopes remain unchanged.",
+        "fixture_refs": [
+          "tests.test_pipeline.RF_PATHS",
+          "TR-32"
+        ]
+      },
+      {
+        "id": "TR-33",
+        "implementation_status": "implemented",
+        "binding_classes": [
+          "tests.test_integrity_records.Step7FunctionalRecords",
+          "tests.test_inventory.ArtifactAssociationTests",
+          "tests.test_local_io.SnapshotTests",
+          "tests.test_pipeline.PipelineBoundaryTests",
+          "tests.test_reporting.SourceAssociationDisclosureTests",
+          "tests.test_security.Step7SafetyTests"
+        ],
+        "reason": "M-only source-to-test and report serialization coverage; source meanings and non-M scopes remain unchanged.",
+        "fixture_refs": [
+          "tests.test_pipeline.RF_PATHS",
+          "TR-33"
+        ]
+      },
+      {
+        "id": "TR-34",
+        "implementation_status": "implemented",
+        "binding_classes": [
+          "tests.test_metrics.Arithmetic",
+          "tests.test_metrics.Numerical",
+          "tests.test_pipeline.HeroPipelineTests",
+          "tests.test_pipeline.Step7ReportIntegration",
+          "tests.test_reporting.ReportTests"
+        ],
+        "reason": "M-only source-to-test and report serialization coverage; source meanings and non-M scopes remain unchanged.",
+        "fixture_refs": [
+          "tests.test_pipeline.RF_PATHS",
+          "TR-34"
+        ]
+      },
+      {
+        "id": "TR-35",
+        "implementation_status": "implemented",
+        "binding_classes": [
+          "tests.test_local_io.SnapshotTests",
+          "tests.test_pipeline.HeroPipelineTests",
+          "tests.test_pipeline.PipelineBoundaryTests",
+          "tests.test_reporting.ReportTests",
+          "tests.test_security.Step7SafetyTests"
+        ],
+        "reason": "M-only source-to-test and report serialization coverage; source meanings and non-M scopes remain unchanged.",
+        "fixture_refs": [
+          "tests.test_pipeline.RF_PATHS",
+          "TR-35"
+        ]
+      },
+      {
+        "id": "TR-36",
+        "implementation_status": "implemented",
+        "binding_classes": [
+          "tests.test_pipeline.Step7ReportIntegration",
+          "tests.test_reporting.ReportTests"
+        ],
+        "reason": "M-only source-to-test and report serialization coverage; source meanings and non-M scopes remain unchanged.",
+        "fixture_refs": [
+          "tests.test_pipeline.RF_PATHS",
+          "TR-36"
+        ]
+      },
+      {
+        "id": "TR-37",
+        "implementation_status": "implemented",
+        "binding_classes": [
+          "tests.test_pipeline.Step7ReportIntegration",
+          "tests.test_reporting.ReportTests"
+        ],
+        "reason": "M-only source-to-test and report serialization coverage; source meanings and non-M scopes remain unchanged.",
+        "fixture_refs": [
+          "tests.test_pipeline.RF_PATHS",
+          "TR-37"
+        ]
+      },
+      {
+        "id": "TR-38",
+        "implementation_status": "implemented",
+        "binding_classes": [
+          "tests.test_pipeline.Step7ReportIntegration"
+        ],
+        "reason": "M-only source-to-test and report serialization coverage; source meanings and non-M scopes remain unchanged.",
+        "fixture_refs": [
+          "tests.test_pipeline.RF_PATHS",
+          "TR-38"
+        ]
+      },
+      {
+        "id": "TR-39",
+        "implementation_status": "implemented",
+        "binding_classes": [
+          "tests.test_pipeline.Step7ReportIntegration"
+        ],
+        "reason": "M-only source-to-test and report serialization coverage; source meanings and non-M scopes remain unchanged.",
+        "fixture_refs": [
+          "tests.test_pipeline.RF_PATHS",
+          "TR-39"
+        ]
+      },
+      {
+        "id": "TR-40",
+        "implementation_status": "implemented",
+        "binding_classes": [
+          "tests.test_evidence.AdmissionTests",
+          "tests.test_integrity_records.Step7ReferenceAuditRecords",
+          "tests.test_pipeline.Step7ReportIntegration",
+          "tests.test_reporting.ReportTests",
+          "tests.test_integrity_records.Step7CompleteReferenceFixtures"
+        ],
+        "reason": "M-only source-to-test and report serialization coverage; source meanings and non-M scopes remain unchanged.",
+        "fixture_refs": [
+          "tests.test_pipeline.RF_PATHS",
+          "TR-40"
+        ]
+      }
+    ],
+    "report_groups": [
+      {
+        "id": "RF-01",
+        "implementation_status": "implemented",
+        "binding_classes": [
+          "tests.test_pipeline.AdversePipelineTests",
+          "tests.test_pipeline.HeroPipelineTests",
+          "tests.test_pipeline.Step7ReportIntegration",
+          "tests.test_records.KnowledgeTests",
+          "tests.test_reporting.ReportTests"
+        ],
+        "reason": "M-only source-to-test and report serialization coverage; source meanings and non-M scopes remain unchanged.",
+        "fixture_refs": [
+          "tests.test_pipeline.RF_PATHS",
+          "RF-01"
+        ]
+      },
+      {
+        "id": "RF-02",
+        "implementation_status": "implemented",
+        "binding_classes": [
+          "tests.test_integrity_records.Step7ReferenceAuditRecords",
+          "tests.test_pipeline.Step7ReportIntegration",
+          "tests.test_populations.PopulationTests",
+          "tests.test_records.RegistryTests",
+          "tests.test_integrity_records.Step7CompleteReferenceFixtures"
+        ],
+        "reason": "M-only source-to-test and report serialization coverage; source meanings and non-M scopes remain unchanged.",
+        "fixture_refs": [
+          "tests.test_pipeline.RF_PATHS",
+          "RF-02"
+        ]
+      },
+      {
+        "id": "RF-03",
+        "implementation_status": "implemented",
+        "binding_classes": [
+          "tests.test_evidence.AdmissionTests",
+          "tests.test_integrity_records.Step7ReferenceAuditRecords",
+          "tests.test_pipeline.Step7ReportIntegration",
+          "tests.test_populations.PopulationTests",
+          "tests.test_records.RegistryTests",
+          "tests.test_integrity_records.Step7CompleteReferenceFixtures"
+        ],
+        "reason": "M-only source-to-test and report serialization coverage; source meanings and non-M scopes remain unchanged.",
+        "fixture_refs": [
+          "tests.test_pipeline.RF_PATHS",
+          "RF-03"
+        ]
+      },
+      {
+        "id": "RF-04",
+        "implementation_status": "implemented",
+        "binding_classes": [
+          "tests.test_integrity_records.IntegrityTests",
+          "tests.test_integrity_records.Step7ReferenceAuditRecords",
+          "tests.test_pipeline.Step7ReportIntegration",
+          "tests.test_integrity_records.Step7CompleteReferenceFixtures"
+        ],
+        "reason": "M-only source-to-test and report serialization coverage; source meanings and non-M scopes remain unchanged.",
+        "fixture_refs": [
+          "tests.test_pipeline.RF_PATHS",
+          "RF-04"
+        ]
+      },
+      {
+        "id": "RF-05",
+        "implementation_status": "implemented",
+        "binding_classes": [
+          "tests.test_integrity_records.IntegrityTests",
+          "tests.test_pipeline.AdversePipelineTests",
+          "tests.test_pipeline.Step7ReportIntegration",
+          "tests.test_records.KnowledgeTests",
+          "tests.test_reporting.ReportTests"
+        ],
+        "reason": "M-only source-to-test and report serialization coverage; source meanings and non-M scopes remain unchanged.",
+        "fixture_refs": [
+          "tests.test_pipeline.RF_PATHS",
+          "RF-05"
+        ]
+      },
+      {
+        "id": "RF-06",
+        "implementation_status": "implemented",
+        "binding_classes": [
+          "tests.test_integrity_records.IntegrityTests",
+          "tests.test_inventory.AdditionalInventoryTests",
+          "tests.test_inventory.InventoryTests",
+          "tests.test_pipeline.Step7ReportIntegration"
+        ],
+        "reason": "M-only source-to-test and report serialization coverage; source meanings and non-M scopes remain unchanged.",
+        "fixture_refs": [
+          "tests.test_pipeline.RF_PATHS",
+          "RF-06"
+        ]
+      },
+      {
+        "id": "RF-07",
+        "implementation_status": "implemented",
+        "binding_classes": [
+          "tests.test_inventory.AdditionalInventoryTests",
+          "tests.test_inventory.InventoryTests",
+          "tests.test_pipeline.Step7ReportIntegration"
+        ],
+        "reason": "M-only source-to-test and report serialization coverage; source meanings and non-M scopes remain unchanged.",
+        "fixture_refs": [
+          "tests.test_pipeline.RF_PATHS",
+          "RF-07"
+        ]
+      },
+      {
+        "id": "RF-08",
+        "implementation_status": "implemented",
+        "binding_classes": [
+          "tests.test_inventory.AdditionalInventoryTests",
+          "tests.test_inventory.InventoryTests",
+          "tests.test_pipeline.Step7ReportIntegration",
+          "tests.test_records.IdentityTests"
+        ],
+        "reason": "M-only source-to-test and report serialization coverage; source meanings and non-M scopes remain unchanged.",
+        "fixture_refs": [
+          "tests.test_pipeline.RF_PATHS",
+          "RF-08"
+        ]
+      },
+      {
+        "id": "RF-09",
+        "implementation_status": "implemented",
+        "binding_classes": [
+          "tests.test_inventory.ArtifactAssociationTests",
+          "tests.test_inventory.InventoryTests",
+          "tests.test_local_io.SnapshotTests",
+          "tests.test_pipeline.PipelineBoundaryTests",
+          "tests.test_pipeline.Step7ReportIntegration",
+          "tests.test_records.IdentityTests",
+          "tests.test_reporting.SourceAssociationDisclosureTests",
+          "tests.test_security.Step7SafetyTests"
+        ],
+        "reason": "M-only source-to-test and report serialization coverage; source meanings and non-M scopes remain unchanged.",
+        "fixture_refs": [
+          "tests.test_pipeline.RF_PATHS",
+          "RF-09"
+        ]
+      },
+      {
+        "id": "RF-10",
+        "implementation_status": "implemented",
+        "binding_classes": [
+          "tests.test_inventory.AdditionalInventoryTests",
+          "tests.test_inventory.InventoryTests",
+          "tests.test_metrics.Prefixes",
+          "tests.test_pipeline.Step7ReportIntegration",
+          "tests.test_populations.HeroEndpointTests",
+          "tests.test_populations.PrefixTests"
+        ],
+        "reason": "M-only source-to-test and report serialization coverage; source meanings and non-M scopes remain unchanged.",
+        "fixture_refs": [
+          "tests.test_pipeline.RF_PATHS",
+          "RF-10"
+        ]
+      },
+      {
+        "id": "RF-11",
+        "implementation_status": "implemented",
+        "binding_classes": [
+          "tests.test_inventory.AdditionalInventoryTests",
+          "tests.test_inventory.ArtifactAssociationTests",
+          "tests.test_inventory.InventoryTests",
+          "tests.test_metrics.Numerical",
+          "tests.test_metrics.Populations",
+          "tests.test_metrics.Prefixes",
+          "tests.test_pipeline.Step7ReportIntegration",
+          "tests.test_populations.HeroEndpointTests",
+          "tests.test_reporting.ReportTests",
+          "tests.test_reporting.SourceAssociationDisclosureTests"
+        ],
+        "reason": "M-only source-to-test and report serialization coverage; source meanings and non-M scopes remain unchanged.",
+        "fixture_refs": [
+          "tests.test_pipeline.RF_PATHS",
+          "RF-11"
+        ]
+      },
+      {
+        "id": "RF-12",
+        "implementation_status": "implemented",
+        "binding_classes": [
+          "tests.test_evidence.AdmissionTests",
+          "tests.test_evidence.CorrectionTests",
+          "tests.test_integrity_records.Step7ReferenceAuditRecords",
+          "tests.test_pipeline.AdversePipelineTests",
+          "tests.test_pipeline.Step7ReportIntegration",
+          "tests.test_integrity_records.Step7CompleteReferenceFixtures"
+        ],
+        "reason": "M-only source-to-test and report serialization coverage; source meanings and non-M scopes remain unchanged.",
+        "fixture_refs": [
+          "tests.test_pipeline.RF_PATHS",
+          "RF-12"
+        ]
+      },
+      {
+        "id": "RF-13",
+        "implementation_status": "implemented",
+        "binding_classes": [
+          "tests.test_integrity_records.Step7FunctionalRecords",
+          "tests.test_metrics.Numerical",
+          "tests.test_metrics.Populations",
+          "tests.test_pipeline.Step7ReportIntegration",
+          "tests.test_populations.PopulationTests",
+          "tests.test_reporting.ReportTests",
+          "tests.test_security.Step7SafetyTests"
+        ],
+        "reason": "M-only source-to-test and report serialization coverage; source meanings and non-M scopes remain unchanged.",
+        "fixture_refs": [
+          "tests.test_pipeline.RF_PATHS",
+          "RF-13"
+        ]
+      },
+      {
+        "id": "RF-14",
+        "implementation_status": "implemented",
+        "binding_classes": [
+          "tests.test_evidence.AdmissionTests",
+          "tests.test_integrity_records.IntegrityTests",
+          "tests.test_pipeline.AdversePipelineTests",
+          "tests.test_pipeline.Step7ReportIntegration"
+        ],
+        "reason": "M-only source-to-test and report serialization coverage; source meanings and non-M scopes remain unchanged.",
+        "fixture_refs": [
+          "tests.test_pipeline.RF_PATHS",
+          "RF-14"
+        ]
+      },
+      {
+        "id": "RF-15",
+        "implementation_status": "implemented",
+        "binding_classes": [
+          "tests.test_metrics.Numerical",
+          "tests.test_metrics.Populations",
+          "tests.test_pipeline.AdversePipelineTests",
+          "tests.test_pipeline.Step7ReportIntegration",
+          "tests.test_records.KnowledgeTests",
+          "tests.test_reporting.ReportTests"
+        ],
+        "reason": "M-only source-to-test and report serialization coverage; source meanings and non-M scopes remain unchanged.",
+        "fixture_refs": [
+          "tests.test_pipeline.RF_PATHS",
+          "RF-15"
+        ]
+      },
+      {
+        "id": "RF-16",
+        "implementation_status": "implemented",
+        "binding_classes": [
+          "tests.test_evidence.CorrectionTests",
+          "tests.test_inventory.InventoryTests",
+          "tests.test_metrics.Populations",
+          "tests.test_pipeline.AdversePipelineTests",
+          "tests.test_pipeline.Step7ReportIntegration",
+          "tests.test_populations.PopulationTests",
+          "tests.test_records.IdentityTests"
+        ],
+        "reason": "M-only source-to-test and report serialization coverage; source meanings and non-M scopes remain unchanged.",
+        "fixture_refs": [
+          "tests.test_pipeline.RF_PATHS",
+          "RF-16"
+        ]
+      },
+      {
+        "id": "RF-17",
+        "implementation_status": "implemented",
+        "binding_classes": [
+          "tests.test_metrics.Numerical",
+          "tests.test_metrics.Populations",
+          "tests.test_pipeline.Step7ReportIntegration",
+          "tests.test_populations.PopulationTests",
+          "tests.test_reporting.ReportTests"
+        ],
+        "reason": "M-only source-to-test and report serialization coverage; source meanings and non-M scopes remain unchanged.",
+        "fixture_refs": [
+          "tests.test_pipeline.RF_PATHS",
+          "RF-17"
+        ]
+      },
+      {
+        "id": "RF-18",
+        "implementation_status": "implemented",
+        "binding_classes": [
+          "tests.test_metrics.Arithmetic",
+          "tests.test_metrics.Numerical",
+          "tests.test_metrics.Populations",
+          "tests.test_metrics.Prefixes",
+          "tests.test_pipeline.HeroPipelineTests",
+          "tests.test_pipeline.Step7ReportIntegration",
+          "tests.test_populations.PopulationTests",
+          "tests.test_reporting.ReportTests"
+        ],
+        "reason": "M-only source-to-test and report serialization coverage; source meanings and non-M scopes remain unchanged.",
+        "fixture_refs": [
+          "tests.test_pipeline.RF_PATHS",
+          "RF-18"
+        ]
+      },
+      {
+        "id": "RF-19",
+        "implementation_status": "implemented",
+        "binding_classes": [
+          "tests.test_metrics.Thresholds",
+          "tests.test_pipeline.HeroPipelineTests",
+          "tests.test_pipeline.Step7ReportIntegration"
+        ],
+        "reason": "M-only source-to-test and report serialization coverage; source meanings and non-M scopes remain unchanged.",
+        "fixture_refs": [
+          "tests.test_pipeline.RF_PATHS",
+          "RF-19"
+        ]
+      },
+      {
+        "id": "RF-20",
+        "implementation_status": "implemented",
+        "binding_classes": [
+          "tests.test_metrics.Numerical",
+          "tests.test_metrics.Prefixes",
+          "tests.test_pipeline.HeroPipelineTests",
+          "tests.test_pipeline.Step7ReportIntegration",
+          "tests.test_populations.HeroEndpointTests",
+          "tests.test_populations.PopulationTests",
+          "tests.test_populations.PrefixTests"
+        ],
+        "reason": "M-only source-to-test and report serialization coverage; source meanings and non-M scopes remain unchanged.",
+        "fixture_refs": [
+          "tests.test_pipeline.RF_PATHS",
+          "RF-20"
+        ]
+      },
+      {
+        "id": "RF-29",
+        "implementation_status": "implemented",
+        "binding_classes": [
+          "tests.test_integrity_records.IntegrityTests",
+          "tests.test_integrity_records.Step7FunctionalRecords",
+          "tests.test_integrity_records.Step7ReferenceAuditRecords",
+          "tests.test_pipeline.Step7ReportIntegration",
+          "tests.test_integrity_records.Step7CompleteReferenceFixtures"
+        ],
+        "reason": "M-only source-to-test and report serialization coverage; source meanings and non-M scopes remain unchanged.",
+        "fixture_refs": [
+          "tests.test_pipeline.RF_PATHS",
+          "RF-29"
+        ]
+      },
+      {
+        "id": "RF-30",
+        "implementation_status": "implemented",
+        "binding_classes": [
+          "tests.test_integrity_records.IntegrityTests",
+          "tests.test_integrity_records.Step7FunctionalRecords",
+          "tests.test_integrity_records.Step7ReferenceAuditRecords",
+          "tests.test_pipeline.Step7ReportIntegration",
+          "tests.test_records.RegistryTests",
+          "tests.test_integrity_records.Step7CompleteReferenceFixtures"
+        ],
+        "reason": "M-only source-to-test and report serialization coverage; source meanings and non-M scopes remain unchanged.",
+        "fixture_refs": [
+          "tests.test_pipeline.RF_PATHS",
+          "RF-30"
+        ]
+      },
+      {
+        "id": "RF-31",
+        "implementation_status": "implemented",
+        "binding_classes": [
+          "tests.test_evidence.AdmissionTests",
+          "tests.test_integrity_records.IntegrityTests",
+          "tests.test_integrity_records.Step7ReferenceAuditRecords",
+          "tests.test_pipeline.Step7ReportIntegration",
+          "tests.test_integrity_records.Step7CompleteReferenceFixtures"
+        ],
+        "reason": "M-only source-to-test and report serialization coverage; source meanings and non-M scopes remain unchanged.",
+        "fixture_refs": [
+          "tests.test_pipeline.RF_PATHS",
+          "RF-31"
+        ]
+      },
+      {
+        "id": "RF-32",
+        "implementation_status": "implemented",
+        "binding_classes": [
+          "tests.test_integrity_records.IntegrityTests",
+          "tests.test_integrity_records.Step7FunctionalRecords",
+          "tests.test_pipeline.Step7ReportIntegration"
+        ],
+        "reason": "M-only source-to-test and report serialization coverage; source meanings and non-M scopes remain unchanged.",
+        "fixture_refs": [
+          "tests.test_pipeline.RF_PATHS",
+          "RF-32"
+        ]
+      },
+      {
+        "id": "RF-33",
+        "implementation_status": "implemented",
+        "binding_classes": [
+          "tests.test_evidence.CorrectionTests",
+          "tests.test_integrity_records.IntegrityTests",
+          "tests.test_pipeline.AdversePipelineTests",
+          "tests.test_pipeline.Step7ReportIntegration"
+        ],
+        "reason": "M-only source-to-test and report serialization coverage; source meanings and non-M scopes remain unchanged.",
+        "fixture_refs": [
+          "tests.test_pipeline.RF_PATHS",
+          "RF-33"
+        ]
+      },
+      {
+        "id": "RF-34",
+        "implementation_status": "implemented",
+        "binding_classes": [
+          "tests.test_integrity_records.IntegrityTests",
+          "tests.test_integrity_records.Step7FunctionalRecords",
+          "tests.test_pipeline.HeroPipelineTests",
+          "tests.test_pipeline.Step7ReportIntegration",
+          "tests.test_reporting.ReportTests"
+        ],
+        "reason": "M-only source-to-test and report serialization coverage; source meanings and non-M scopes remain unchanged.",
+        "fixture_refs": [
+          "tests.test_pipeline.RF_PATHS",
+          "RF-34"
+        ]
+      },
+      {
+        "id": "RF-35",
+        "implementation_status": "implemented",
+        "binding_classes": [
+          "tests.test_pipeline.HeroPipelineTests",
+          "tests.test_pipeline.Step7ReportIntegration",
+          "tests.test_reporting.ReportTests"
+        ],
+        "reason": "M-only source-to-test and report serialization coverage; source meanings and non-M scopes remain unchanged.",
+        "fixture_refs": [
+          "tests.test_pipeline.RF_PATHS",
+          "RF-35"
+        ]
+      },
+      {
+        "id": "RF-36",
+        "implementation_status": "implemented",
+        "binding_classes": [
+          "tests.test_local_io.SnapshotTests",
+          "tests.test_pipeline.HeroPipelineTests",
+          "tests.test_pipeline.PipelineBoundaryTests",
+          "tests.test_pipeline.Step7ReportIntegration",
+          "tests.test_reporting.ReportTests",
+          "tests.test_security.Step7SafetyTests"
+        ],
+        "reason": "M-only source-to-test and report serialization coverage; source meanings and non-M scopes remain unchanged.",
+        "fixture_refs": [
+          "tests.test_pipeline.RF_PATHS",
+          "RF-36"
         ]
       }
     ]
@@ -2480,6 +3570,1129 @@
       "scientific_contracts_changed": false,
       "later_steps_authorized": false,
       "status": "applied_as_approved"
+    }
+  },
+  "implementation_update_history": [
+    {
+      "step": 6,
+      "updates": {
+        "vf_tests": [
+          {
+            "id": "VT-05",
+            "implementation_status": "partial",
+            "binding_classes": [
+              "tests.test_metrics.Populations"
+            ],
+            "reason": "Step 5 arithmetic/component checks only. Final report or complete integrated conformance remains for later steps.",
+            "fixture_refs": [
+              "MET sections 5-7 and 12",
+              "VF sections 5.1-5.2",
+              "tests/fixtures/arithmetic_oracles.json"
+            ]
+          },
+          {
+            "id": "VT-06",
+            "implementation_status": "partial",
+            "binding_classes": [
+              "tests.test_metrics.Populations",
+              "tests.test_metrics.Arithmetic",
+              "tests.test_metrics.Numerical"
+            ],
+            "reason": "Step 5 arithmetic/component checks only. Final report or complete integrated conformance remains for later steps.",
+            "fixture_refs": [
+              "MET sections 5-7 and 12",
+              "VF sections 5.1-5.2",
+              "tests/fixtures/arithmetic_oracles.json"
+            ]
+          },
+          {
+            "id": "VT-07",
+            "implementation_status": "implemented",
+            "binding_classes": [
+              "tests.test_metrics.Arithmetic"
+            ],
+            "reason": "Step 5 arithmetic/component checks only. This M arithmetic obligation is implemented.",
+            "fixture_refs": [
+              "MET sections 5-7 and 12",
+              "VF sections 5.1-5.2",
+              "tests/fixtures/arithmetic_oracles.json"
+            ]
+          },
+          {
+            "id": "VT-08",
+            "implementation_status": "implemented",
+            "binding_classes": [
+              "tests.test_metrics.Thresholds"
+            ],
+            "reason": "Step 5 arithmetic/component checks only. This M arithmetic obligation is implemented.",
+            "fixture_refs": [
+              "MET sections 5-7 and 12",
+              "VF sections 5.1-5.2",
+              "tests/fixtures/arithmetic_oracles.json"
+            ]
+          },
+          {
+            "id": "VT-09",
+            "implementation_status": "implemented",
+            "binding_classes": [
+              "tests.test_metrics.Numerical",
+              "tests.test_metrics.Arithmetic"
+            ],
+            "reason": "Step 5 arithmetic/component checks only. This M arithmetic obligation is implemented.",
+            "fixture_refs": [
+              "MET sections 5-7 and 12",
+              "VF sections 5.1-5.2",
+              "tests/fixtures/arithmetic_oracles.json"
+            ]
+          },
+          {
+            "id": "VT-10",
+            "implementation_status": "implemented",
+            "binding_classes": [
+              "tests.test_metrics.Numerical",
+              "tests.test_metrics.Prefixes"
+            ],
+            "reason": "Step 5 arithmetic/component checks only. This M arithmetic obligation is implemented.",
+            "fixture_refs": [
+              "MET sections 5-7 and 12",
+              "VF sections 5.1-5.2",
+              "tests/fixtures/arithmetic_oracles.json"
+            ]
+          },
+          {
+            "id": "VT-11",
+            "implementation_status": "implemented",
+            "binding_classes": [
+              "tests.test_metrics.Prefixes"
+            ],
+            "reason": "Step 5 arithmetic/component checks only. This M arithmetic obligation is implemented.",
+            "fixture_refs": [
+              "MET sections 5-7 and 12",
+              "VF sections 5.1-5.2",
+              "tests/fixtures/arithmetic_oracles.json"
+            ]
+          },
+          {
+            "id": "VT-13",
+            "implementation_status": "partial",
+            "binding_classes": [
+              "tests.test_metrics.Populations",
+              "tests.test_metrics.Prefixes",
+              "tests.test_pipeline.HeroPipelineTests"
+            ],
+            "reason": "Step 5 arithmetic/component checks only. Final report or complete integrated conformance remains for later steps.",
+            "fixture_refs": [
+              "MET sections 5-7 and 12",
+              "VF sections 5.1-5.2",
+              "tests/fixtures/arithmetic_oracles.json"
+            ]
+          },
+          {
+            "id": "VT-17",
+            "implementation_status": "partial",
+            "binding_classes": [
+              "tests.test_pipeline.HeroPipelineTests",
+              "tests.test_pipeline.AdversePipelineTests"
+            ],
+            "reason": "Step 6 executable path; integrated M coverage remains for Step 7. No E evidence supplied.",
+            "fixture_refs": [
+              "HF-00",
+              "HF-01",
+              "HF-02",
+              "HF-03",
+              "HF-04",
+              "HF-05",
+              "HF-06"
+            ]
+          },
+          {
+            "id": "VT-18",
+            "implementation_status": "partial",
+            "binding_classes": [
+              "tests.test_pipeline.AdversePipelineTests"
+            ],
+            "reason": "Step 6 executable path; integrated M coverage remains for Step 7. No E evidence supplied.",
+            "fixture_refs": [
+              "HF-00",
+              "HF-01",
+              "HF-02",
+              "HF-03",
+              "HF-04",
+              "HF-05",
+              "HF-06"
+            ]
+          },
+          {
+            "id": "VT-19",
+            "implementation_status": "partial",
+            "binding_classes": [
+              "tests.test_pipeline.OutputTransactionTests",
+              "tests.test_pipeline.PipelineBoundaryTests"
+            ],
+            "reason": "Step 6 executable path; integrated M coverage remains for Step 7. No E evidence supplied.",
+            "fixture_refs": [
+              "HF-00",
+              "HF-01",
+              "HF-02",
+              "HF-03",
+              "HF-04",
+              "HF-05",
+              "HF-06"
+            ]
+          },
+          {
+            "id": "VT-20",
+            "implementation_status": "partial",
+            "binding_classes": [
+              "tests.test_reporting.ReportTests",
+              "tests.test_pipeline.HeroPipelineTests"
+            ],
+            "reason": "Step 6 executable path; integrated M coverage remains for Step 7. No E evidence supplied.",
+            "fixture_refs": [
+              "HF-00",
+              "HF-01",
+              "HF-02",
+              "HF-03",
+              "HF-04",
+              "HF-05",
+              "HF-06"
+            ]
+          },
+          {
+            "id": "VT-30",
+            "implementation_status": "partial",
+            "binding_classes": [
+              "tests.test_reporting.ReportTests"
+            ],
+            "reason": "Step 6 executable path; integrated M coverage remains for Step 7. No E evidence supplied.",
+            "fixture_refs": [
+              "HF-00",
+              "HF-01",
+              "HF-02",
+              "HF-03",
+              "HF-04",
+              "HF-05",
+              "HF-06"
+            ]
+          },
+          {
+            "id": "VT-36",
+            "implementation_status": "partial",
+            "binding_classes": [
+              "tests.test_pipeline.HeroPipelineTests"
+            ],
+            "reason": "Step 6 executable path; integrated M coverage remains for Step 7. No E evidence supplied.",
+            "fixture_refs": [
+              "HF-00",
+              "HF-01",
+              "HF-02",
+              "HF-03",
+              "HF-04",
+              "HF-05",
+              "HF-06"
+            ]
+          },
+          {
+            "id": "VT-46",
+            "implementation_status": "partial",
+            "binding_classes": [
+              "tests.test_reporting.ReportTests",
+              "tests.test_pipeline.OutputTransactionTests"
+            ],
+            "reason": "Step 6 executable path; integrated M coverage remains for Step 7. No E evidence supplied.",
+            "fixture_refs": [
+              "HF-00",
+              "HF-01",
+              "HF-02",
+              "HF-03",
+              "HF-04",
+              "HF-05",
+              "HF-06"
+            ]
+          },
+          {
+            "id": "VT-51",
+            "implementation_status": "partial",
+            "binding_classes": [
+              "tests.test_reporting.ReportTests"
+            ],
+            "reason": "Step 6 executable path; integrated M coverage remains for Step 7. No E evidence supplied.",
+            "fixture_refs": [
+              "HF-00",
+              "HF-01",
+              "HF-02",
+              "HF-03",
+              "HF-04",
+              "HF-05",
+              "HF-06"
+            ]
+          },
+          {
+            "id": "VT-52",
+            "implementation_status": "partial",
+            "binding_classes": [
+              "tests.test_reporting.ReportTests"
+            ],
+            "reason": "Step 6 executable path; integrated M coverage remains for Step 7. No E evidence supplied.",
+            "fixture_refs": [
+              "HF-00",
+              "HF-01",
+              "HF-02",
+              "HF-03",
+              "HF-04",
+              "HF-05",
+              "HF-06"
+            ]
+          },
+          {
+            "id": "VT-53",
+            "implementation_status": "partial",
+            "binding_classes": [
+              "tests.test_reporting.ReportTests"
+            ],
+            "reason": "Step 6 executable path; integrated M coverage remains for Step 7. No E evidence supplied.",
+            "fixture_refs": [
+              "HF-00",
+              "HF-01",
+              "HF-02",
+              "HF-03",
+              "HF-04",
+              "HF-05",
+              "HF-06"
+            ]
+          },
+          {
+            "id": "VT-54",
+            "implementation_status": "partial",
+            "binding_classes": [
+              "tests.test_reporting.ReportTests"
+            ],
+            "reason": "Step 6 executable path; integrated M coverage remains for Step 7. No E evidence supplied.",
+            "fixture_refs": [
+              "HF-00",
+              "HF-01",
+              "HF-02",
+              "HF-03",
+              "HF-04",
+              "HF-05",
+              "HF-06"
+            ]
+          }
+        ],
+        "trace_requirements": [
+          {
+            "id": "TR-03",
+            "implementation_status": "partial",
+            "binding_classes": [
+              "tests.test_metrics.Arithmetic",
+              "tests.test_metrics.Thresholds"
+            ],
+            "reason": "Step 5 arithmetic/component checks only. Final report or complete integrated conformance remains for later steps.",
+            "fixture_refs": [
+              "MET sections 5-7 and 12",
+              "VF sections 5.1-5.2",
+              "tests/fixtures/arithmetic_oracles.json"
+            ]
+          },
+          {
+            "id": "TR-10",
+            "implementation_status": "partial",
+            "binding_classes": [
+              "tests.test_metrics.Arithmetic",
+              "tests.test_metrics.Populations"
+            ],
+            "reason": "Step 5 arithmetic/component checks only. Final report or complete integrated conformance remains for later steps.",
+            "fixture_refs": [
+              "MET sections 5-7 and 12",
+              "VF sections 5.1-5.2",
+              "tests/fixtures/arithmetic_oracles.json"
+            ]
+          },
+          {
+            "id": "TR-11",
+            "implementation_status": "partial",
+            "binding_classes": [
+              "tests.test_metrics.Thresholds"
+            ],
+            "reason": "Step 5 arithmetic/component checks only. Final report or complete integrated conformance remains for later steps.",
+            "fixture_refs": [
+              "MET sections 5-7 and 12",
+              "VF sections 5.1-5.2",
+              "tests/fixtures/arithmetic_oracles.json"
+            ]
+          },
+          {
+            "id": "TR-12",
+            "implementation_status": "partial",
+            "binding_classes": [
+              "tests.test_metrics.Arithmetic",
+              "tests.test_metrics.Numerical"
+            ],
+            "reason": "Step 5 arithmetic/component checks only. Final report or complete integrated conformance remains for later steps.",
+            "fixture_refs": [
+              "MET sections 5-7 and 12",
+              "VF sections 5.1-5.2",
+              "tests/fixtures/arithmetic_oracles.json"
+            ]
+          },
+          {
+            "id": "TR-13",
+            "implementation_status": "partial",
+            "binding_classes": [
+              "tests.test_metrics.Arithmetic",
+              "tests.test_metrics.Numerical"
+            ],
+            "reason": "Step 5 arithmetic/component checks only. Final report or complete integrated conformance remains for later steps.",
+            "fixture_refs": [
+              "MET sections 5-7 and 12",
+              "VF sections 5.1-5.2",
+              "tests/fixtures/arithmetic_oracles.json"
+            ]
+          },
+          {
+            "id": "TR-14",
+            "implementation_status": "partial",
+            "binding_classes": [
+              "tests.test_metrics.Arithmetic",
+              "tests.test_metrics.Numerical"
+            ],
+            "reason": "Step 5 arithmetic/component checks only. Final report or complete integrated conformance remains for later steps.",
+            "fixture_refs": [
+              "MET sections 5-7 and 12",
+              "VF sections 5.1-5.2",
+              "tests/fixtures/arithmetic_oracles.json"
+            ]
+          },
+          {
+            "id": "TR-15",
+            "implementation_status": "partial",
+            "binding_classes": [
+              "tests.test_metrics.Prefixes"
+            ],
+            "reason": "Step 5 arithmetic/component checks only. Final report or complete integrated conformance remains for later steps.",
+            "fixture_refs": [
+              "MET sections 5-7 and 12",
+              "VF sections 5.1-5.2",
+              "tests/fixtures/arithmetic_oracles.json"
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "step7_acceptance": {
+    "scope": "M_record_and_software_conformance_only",
+    "test_bindings": [
+      "tests.test_security.Step7SafetyTests.test_entire_import_analysis_is_inert_under_hostile_evidence",
+      "tests.test_security.Step7SafetyTests.test_no_runtime_imports_of_test_harness",
+      "tests.test_security.Step7SafetyTests.test_cli_errors_do_not_echo_credentials_or_paths",
+      "tests.test_security.Step7SafetyTests.test_published_report_directory_cannot_be_overwritten",
+      "tests.test_security.Step7SafetyTests.test_failure_after_atomic_publication_keeps_published_bytes",
+      "tests.test_pipeline.Step7ReportIntegration.test_all_36_report_groups_have_explicit_paths",
+      "tests.test_pipeline.Step7ReportIntegration.test_every_m_metric_retains_denominator_status_and_source_scope",
+      "tests.test_pipeline.Step7ReportIntegration.test_typed_lineage_exposure_and_annotation_survive_redaction",
+      "tests.test_pipeline.Step7ReportIntegration.test_empty_then_received_and_acted_intake_never_adds_samples",
+      "tests.test_pipeline.Step7ReportIntegration.test_domain_coverage_details_are_visible_and_fixture_stays_fixture",
+      "tests.test_pipeline.Step7ReportIntegration.test_all_deferred_prerequisites_visible_without_estimator",
+      "tests.test_pipeline.Step7ReportIntegration.test_correction_dependencies_identify_both_views_without_resampling",
+      "tests.test_pipeline.Step7ReportIntegration.test_shared_schema_challenge_affects_all_its_cells_not_other_frames",
+      "tests.test_pipeline.Step7ReportIntegration.test_relocated_input_replays_all_canonical_content",
+      "tests.test_pipeline.Step7ReportIntegration.test_metadata_time_never_changes_content_or_creates_observation",
+      "tests.test_pipeline.Step7ReportIntegration.test_registered_sources_and_original_fixture_hashes_still_match",
+      "tests.test_pipeline.Step7GateTests.test_missing_ec_binding_cannot_pass_full_gate",
+      "tests.test_pipeline.Step7GateTests.test_nonpassing_ec_binding_cannot_be_overridden",
+      "tests.test_pipeline.Step7GateTests.test_complete_mock_gate_is_M_only_and_not_final_approval",
+      "tests.test_pipeline.Step7GateTests.test_test_records_have_expected_actual_scope_and_no_E_claim",
+      "tests.test_pipeline.Step7GateTests.test_ec_scope_cannot_be_promoted_to_empirical_evidence",
+      "tests.test_integrity_records.Step7FunctionalRecords.test_complete_8995_order_construction_and_hash",
+      "tests.test_integrity_records.Step7FunctionalRecords.test_complete_mock_import_is_record_consistent_only",
+      "tests.test_integrity_records.Step7FunctionalRecords.test_equal_inputs_keep_distinct_ids_and_purposes",
+      "tests.test_integrity_records.Step7FunctionalRecords.test_missing_test_cannot_pass_by_declared_count",
+      "tests.test_integrity_records.Step7FunctionalRecords.test_reordering_is_detected_even_with_new_hash",
+      "tests.test_integrity_records.Step7FunctionalRecords.test_each_segment_construction_is_checked",
+      "tests.test_integrity_records.Step7FunctionalRecords.test_forged_manifest_hash_is_rejected",
+      "tests.test_integrity_records.Step7FunctionalRecords.test_plain_pass_string_cannot_establish_validity",
+      "tests.test_integrity_records.Step7FunctionalRecords.test_partial_pass_does_not_claim_full_validity",
+      "tests.test_integrity_records.Step7FunctionalRecords.test_each_property_is_required_without_boolean_coercion",
+      "tests.test_integrity_records.Step7FunctionalRecords.test_decisive_counterexample_can_precede_full_coverage",
+      "tests.test_integrity_records.Step7FunctionalRecords.test_timeout_memory_harness_or_oracle_failure_is_not_invalidity",
+      "tests.test_integrity_records.Step7FunctionalRecords.test_exception_needs_explicit_task_counterexample",
+      "tests.test_integrity_records.Step7FunctionalRecords.test_containment_or_missing_reference_family_blocks_claim",
+      "tests.test_integrity_records.Step7FunctionalRecords.test_repair_cannot_relabel_original_subject",
+      "tests.test_integrity_records.Step7FunctionalRecords.test_mock_child_cannot_validate_nonmock_parent",
+      "tests.test_integrity_records.Step7FunctionalRecords.test_absent_oracle_is_not_independent_validation",
+      "tests.test_integrity_records.Step7FunctionalRecords.test_unreadable_upstream_evidence_cannot_be_laundered",
+      "tests.test_integrity_records.Step7FunctionalRecords.test_nested_malformed_runtime_metadata_is_controlled",
+      "tests.test_integrity_records.Step7ReferenceAuditRecords.test_28_pairs_and_four_witnesses_checked_without_fabricating_core",
+      "tests.test_integrity_records.Step7ReferenceAuditRecords.test_overlap_is_preserved_not_forced_into_partition",
+      "tests.test_integrity_records.Step7ReferenceAuditRecords.test_pair_duplication_cannot_fill_missing_review",
+      "tests.test_integrity_records.Step7ReferenceAuditRecords.test_witness_shape_not_just_four_names",
+      "tests.test_integrity_records.Step7ReferenceAuditRecords.test_32_names_without_artifacts_or_annotations_do_not_pass",
+      "tests.test_integrity_records.Step7ReferenceAuditRecords.test_72_planned_positions_are_not_72_reviews",
+      "tests.test_integrity_records.Step7ReferenceAuditRecords.test_changed_systematic_position_fails",
+      "tests.test_integrity_records.Step7ReferenceAuditRecords.test_repeated_position_does_not_replace_lost_opportunity",
+      "tests.test_integrity_records.Step7ReferenceAuditRecords.test_generic_audit_must_match_actual_frozen_plan",
+      "tests.test_integrity_records.Step7ReferenceAuditRecords.test_opposite_membership_claims_do_not_transitively_cluster",
+      "tests.test_integrity_records.Step7ReferenceAuditRecords.test_registry_candidate_can_remain_valid_without_new_class",
+      "tests.test_integrity_records.Step7CompleteReferenceFixtures.test_complete_core_coverage_is_record_consistent_but_still_mock",
+      "tests.test_integrity_records.Step7CompleteReferenceFixtures.test_complete_systematic_audit_plan_resolves_exact_72_positions"
+    ],
+    "report_paths": {
+      "RF-01": [
+        "run_id",
+        "input_schema_version",
+        "study_id",
+        "sections.0.content.analysis_config_ref"
+      ],
+      "RF-02": [
+        "sections.0.content.frames.*.task_id",
+        "sections.0.content.frames.*.task_context",
+        "sections.0.content.frames.*.consequence_horizon"
+      ],
+      "RF-03": [
+        "sections.0.content.frames.*.analytic_resolution_id",
+        "sections.0.content.frames.*.structural_schema_version"
+      ],
+      "RF-04": [
+        "sections.0.content.frames.*.reference_registry_id",
+        "sections.4.content.reference_coverage",
+        "sections.7.content.intake_and_tail"
+      ],
+      "RF-05": [
+        "sections.0.content.protocols.*.model_identifier",
+        "sections.0.content.protocols.*.checkpoint_identifier"
+      ],
+      "RF-06": [
+        "sections.0.content.protocols.*.generation_protocol_version",
+        "sections.0.content.protocols.*.condition_id",
+        "sections.0.content.protocols.*.decoding_settings",
+        "sections.0.content.protocols.*.seed"
+      ],
+      "RF-07": [
+        "sections.0.content.protocols.*.collection_window",
+        "sections.0.content.protocols.*.budget_record_ref",
+        "sections.0.content.protocols.*.sampling_plan_ref"
+      ],
+      "RF-08": [
+        "sections.1.content.attempts.*.attempt_id",
+        "sections.1.content.attempts.*.attempt_status",
+        "sections.1.content.attempts.*.retry_of",
+        "sections.1.content.attempts.*.raw_response_ref"
+      ],
+      "RF-09": [
+        "sections.1.content.output_associations.*.sample_id",
+        "sections.1.content.output_associations.*.raw_response_ref",
+        "sections.1.content.output_associations.*.output_content_hash",
+        "sections.1.content.output_associations.*.span_status"
+      ],
+      "RF-10": [
+        "sections.1.content.groups",
+        "sections.1.content.output_associations.*.group_type",
+        "sections.1.content.output_associations.*.shared_context_ref",
+        "sections.1.content.inventory.*.sample_order"
+      ],
+      "RF-11": [
+        "sections.1.content.output_associations.*.completion_status",
+        "sections.1.content.output_associations.*.termination_reason",
+        "sections.1.content.output_associations.*.selection_status",
+        "sections.1.content.inventory.*.excluded_sample_ids"
+      ],
+      "RF-12": [
+        "sections.2.content.admissions.*.assignment_id",
+        "sections.2.content.admissions.*.assignment_version",
+        "sections.2.content.admissions.*.structural_class_id",
+        "sections.2.content.admissions.*.classification_uncertainty_ref"
+      ],
+      "RF-13": [
+        "sections.2.content.admissions.*.validity_status",
+        "sections.2.content.admissions.*.validity_rubric_ref",
+        "sections.7.content.integrity_record_references.domain_validation_ref"
+      ],
+      "RF-14": [
+        "sections.2.content.admissions.*.evidence_refs",
+        "sections.7.content.support_records.*.scope_refs",
+        "sections.7.content.support_records.*.details"
+      ],
+      "RF-15": [
+        "sections.3.content.metrics.*.metric_name",
+        "sections.3.content.metrics.*.unit",
+        "sections.3.content.metrics.*.result_status",
+        "sections.3.content.metrics.*.unavailable_reason",
+        "sections.3.content.metrics.*.evidence_status"
+      ],
+      "RF-16": [
+        "sections.3.content.distributions.*.population_size",
+        "sections.3.content.distributions.*.class_counts",
+        "sections.3.content.distributions.*.accepted_sample_ids"
+      ],
+      "RF-17": [
+        "sections.2.content.accounting.*.classification_coverage",
+        "sections.2.content.accounting.*.classified_valid_coverage",
+        "sections.2.content.accounting.*.valid_fraction_selected",
+        "sections.2.content.accounting.*.decisive_validity_coverage",
+        "sections.2.content.accounting.*.classified_valid_fraction"
+      ],
+      "RF-18": [
+        "sections.3.content.metrics",
+        "sections.3.content.numerical_policy"
+      ],
+      "RF-19": [
+        "sections.3.content.distributions.*.min_empirical_frequency",
+        "sections.3.content.distributions.*.exact_frequencies"
+      ],
+      "RF-20": [
+        "sections.4.content.prefixes.*.k",
+        "sections.4.content.prefixes.*.counted_samples",
+        "sections.4.content.prefixes.*.selected_sample_ids",
+        "sections.4.content.prefixes.*.partial_group_ids"
+      ],
+      "RF-21": [
+        "sections.6.content.diagnostics"
+      ],
+      "RF-22": [
+        "sections.6.content.diagnostics"
+      ],
+      "RF-23": [
+        "sections.5.content.comparisons"
+      ],
+      "RF-24": [
+        "sections.5.content.comparisons"
+      ],
+      "RF-25": [
+        "sections.5.content.comparisons"
+      ],
+      "RF-26": [
+        "sections.5.content.comparisons"
+      ],
+      "RF-27": [
+        "sections.5.content.comparisons"
+      ],
+      "RF-28": [
+        "sections.5.content.comparisons"
+      ],
+      "RF-29": [
+        "sections.7.content.five_conditions",
+        "sections.7.content.declared_claim_records",
+        "sections.7.content.integrity_record_references.integrity_assessment_ref"
+      ],
+      "RF-30": [
+        "sections.7.content.support_checks.*.details",
+        "sections.7.content.integrity_record_references.annotation_summary_ref",
+        "sections.7.content.integrity_record_references.audit_sampling_plan_ref"
+      ],
+      "RF-31": [
+        "sections.7.content.intake_and_tail"
+      ],
+      "RF-32": [
+        "sections.7.content.integrity_record_references.blinding_record_ref",
+        "sections.7.content.integrity_record_references.judge_calibration_ref",
+        "sections.7.content.integrity_record_references.sensitivity_evidence_ref"
+      ],
+      "RF-33": [
+        "sections.7.content.corrections",
+        "sections.7.content.correction_impacts",
+        "sections.7.content.dependencies"
+      ],
+      "RF-34": [
+        "sections.0.content.input_refs",
+        "sections.0.content.scope.permitted_claim_scope",
+        "sections.7.content.release_restrictions"
+      ],
+      "RF-35": [
+        "sections.7.content.deferred.*.prerequisites"
+      ],
+      "RF-36": [
+        "sections",
+        "sections.7.content.redaction"
+      ]
+    },
+    "required_m_families": 37,
+    "required_m_traces": 33,
+    "required_m_report_groups": 28,
+    "scientific_evidence_supplied": false,
+    "frozen_phase0_changed": false,
+    "final_phase1_audit": "Step_8_not_started",
+    "findings": [
+      {
+        "id": "S7-F01",
+        "contracts": [
+          "VT-26/M",
+          "VT-27/M",
+          "VT-28/M",
+          "HERO 5.3, 12.3"
+        ],
+        "files": [
+          "structdet_bench/evidence.py",
+          "tests/test_integrity_records.py"
+        ],
+        "before": "A passed imported result with no registered-suite coverage was accepted.",
+        "after": "Check ordered constructions, source identity, executed coverage, property declarations, counterexample, oracle and containment records; no candidate execution."
+      },
+      {
+        "id": "S7-F02",
+        "contracts": [
+          "VT-04/M",
+          "VT-21/M",
+          "VT-47/M"
+        ],
+        "files": [
+          "structdet_bench/evidence.py",
+          "tests/test_integrity_records.py"
+        ],
+        "before": "A mock/unreadable child could support a nonmock parent assertion.",
+        "after": "Retain mock, access and conflict restrictions through decisive evidence paths."
+      },
+      {
+        "id": "S7-F03",
+        "contracts": [
+          "RF-08",
+          "RF-12",
+          "RF-14",
+          "RF-30",
+          "RF-32",
+          "RF-33",
+          "VT-20/M"
+        ],
+        "files": [
+          "structdet_bench/pipeline.py",
+          "tests/test_pipeline.py"
+        ],
+        "before": "Several typed relations and coverage details were represented only by payload hashes.",
+        "after": "Publish typed references, states, scoped coverage, aliases and dependency links while retaining private prose hashes."
+      },
+      {
+        "id": "S7-F04",
+        "contracts": [
+          "VT-25/M",
+          "VT-29/M"
+        ],
+        "files": [
+          "structdet_bench/evidence.py",
+          "tests/test_integrity_records.py"
+        ],
+        "before": "Descriptor/core/systematic-audit records lacked the full prescribed consistency checks.",
+        "after": "Check 28 pairs, four witnesses, 32 core roles and selected audit positions; missing or design-only evidence stays unperformed."
+      },
+      {
+        "id": "S7-F05",
+        "contracts": [
+          "VT-51/M",
+          "VT-52/M",
+          "VT-53/M",
+          "VT-54/M",
+          "RF-35"
+        ],
+        "files": [
+          "structdet_bench/pipeline.py"
+        ],
+        "before": "Some deferred quantities and their prerequisites lacked individual disclosure.",
+        "after": "Expose absent quantities with null values and source-bounded prerequisites; no estimator added."
+      },
+      {
+        "id": "S7-F06",
+        "contracts": [
+          "PHASE_1_PLAN 4, 6 Step 7, 8"
+        ],
+        "files": [
+          "tests/helpers.py",
+          "tests/phase1_matrix.json",
+          "tools/run_phase1_checks.py",
+          "tests/test_metrics.py",
+          "tests/test_integrity_records.py",
+          "README.md",
+          "INPUT_FORMAT.md",
+          "tests/test_records.py",
+          "tests/test_scaffold.py"
+        ],
+        "before": "Historical acceptance assertions, unfinished binding rows and old capability prose did not represent integration completion.",
+        "after": "Preserve historical snapshots; bind the exact current M obligations and report paths; make historical tests progression-aware; keep Step 8 approval and all E/V/D absences explicit."
+      }
+    ],
+    "evidence_checks": {
+      "EC-C01": {
+        "scope": "M_only",
+        "test_bindings": [
+          "tests.test_pipeline.Step7ReportIntegration.test_all_36_report_groups_have_explicit_paths",
+          "tests.test_pipeline.Step7ReportIntegration.test_all_deferred_prerequisites_visible_without_estimator",
+          "tests.test_pipeline.Step7ReportIntegration.test_correction_dependencies_identify_both_views_without_resampling",
+          "tests.test_pipeline.Step7ReportIntegration.test_domain_coverage_details_are_visible_and_fixture_stays_fixture",
+          "tests.test_pipeline.Step7ReportIntegration.test_empty_then_received_and_acted_intake_never_adds_samples",
+          "tests.test_pipeline.Step7ReportIntegration.test_every_m_metric_retains_denominator_status_and_source_scope",
+          "tests.test_pipeline.Step7ReportIntegration.test_metadata_time_never_changes_content_or_creates_observation",
+          "tests.test_pipeline.Step7ReportIntegration.test_registered_sources_and_original_fixture_hashes_still_match",
+          "tests.test_pipeline.Step7ReportIntegration.test_relocated_input_replays_all_canonical_content",
+          "tests.test_pipeline.Step7ReportIntegration.test_shared_schema_challenge_affects_all_its_cells_not_other_frames",
+          "tests.test_pipeline.Step7ReportIntegration.test_typed_lineage_exposure_and_annotation_survive_redaction",
+          "tests.test_reporting.ReportTests.test_all_ten_ec_disclosures_and_unknown_expiry_visible",
+          "tests.test_reporting.ReportTests.test_all_v_and_d_results_are_null_with_explicit_status",
+          "tests.test_reporting.ReportTests.test_canonical_dictionary_order_invariance",
+          "tests.test_reporting.ReportTests.test_control_characters_links_html_and_pipes_are_inert",
+          "tests.test_reporting.ReportTests.test_every_scalar_value_unit_status_and_reason_survives_markdown",
+          "tests.test_reporting.ReportTests.test_evidence_limitations_precede_numeric_results",
+          "tests.test_reporting.ReportTests.test_five_conjunctive_conditions_visible",
+          "tests.test_reporting.ReportTests.test_held_evidence_prose_and_task_metadata_not_copied",
+          "tests.test_reporting.ReportTests.test_json_and_markdown_consume_identical_tree",
+          "tests.test_reporting.ReportTests.test_json_keeps_unrounded_float",
+          "tests.test_reporting.ReportTests.test_missing_required_section_fails_serialization",
+          "tests.test_reporting.ReportTests.test_no_empirical_support_or_score_fabricated",
+          "tests.test_reporting.ReportTests.test_nonfinite_results_cannot_be_serialized",
+          "tests.test_reporting.ReportTests.test_pinned_input_hashes_do_not_claim_program_hashes",
+          "tests.test_reporting.ReportTests.test_private_root_absent_from_all_outputs",
+          "tests.test_reporting.ReportTests.test_reanalysis_and_v_dependents_remain_separate",
+          "tests.test_reporting.ReportTests.test_required_section_order",
+          "tests.test_reporting.ReportTests.test_scoped_ids_retained_without_private_person_mappings",
+          "tests.test_reporting.ReportTests.test_source_lineage_pins_and_transform_references_retained",
+          "tests.test_reporting.ReportTests.test_unknown_unavailable_and_inapplicable_retain_distinction",
+          "tests.test_reporting.ReportTests.test_zero_count_registry_classes_are_visible",
+          "tests.test_reporting.ReportTests.test_zero_false_and_known_null_are_not_unknown"
+        ],
+        "evidence_status": "not_supplied",
+        "binding_classes": [
+          "tests.test_reporting.ReportTests",
+          "tests.test_pipeline.Step7ReportIntegration"
+        ]
+      },
+      "EC-C02": {
+        "scope": "M_only",
+        "test_bindings": [
+          "tests.test_integrity_records.IntegrityTests.test_absent_target_does_not_validate_by_two_votes",
+          "tests.test_integrity_records.IntegrityTests.test_all_nineteen_support_types_have_explicit_payload_validation",
+          "tests.test_integrity_records.IntegrityTests.test_audit_extra_review_does_not_replace_missing_planned_position",
+          "tests.test_integrity_records.IntegrityTests.test_audit_needs_annotations_for_each_reviewed_target",
+          "tests.test_integrity_records.IntegrityTests.test_checked_in_integrity_cases_are_actual_mock_payloads",
+          "tests.test_integrity_records.IntegrityTests.test_complete_mock_form_never_certifies_operational_openness",
+          "tests.test_integrity_records.IntegrityTests.test_complete_review_keeps_sources_and_classifications_passive",
+          "tests.test_integrity_records.IntegrityTests.test_design_32_core_and_28_pairs_remains_a_plan",
+          "tests.test_integrity_records.IntegrityTests.test_design_8995_tests_does_not_count_as_performed_validation",
+          "tests.test_integrity_records.IntegrityTests.test_disagreement_preserves_both_initial_outcomes",
+          "tests.test_integrity_records.IntegrityTests.test_domain_property_mismatch_is_not_execution_evidence",
+          "tests.test_integrity_records.IntegrityTests.test_empty_intake_is_distinct_from_received_evidence",
+          "tests.test_integrity_records.IntegrityTests.test_four_conditions_cannot_claim_five_condition_openness",
+          "tests.test_integrity_records.IntegrityTests.test_initial_judgment_materials_must_match",
+          "tests.test_integrity_records.IntegrityTests.test_initial_label_exposure_is_not_independent_first_pass",
+          "tests.test_integrity_records.IntegrityTests.test_known_prior_exposure_overrides_false_annotation_flag",
+          "tests.test_integrity_records.IntegrityTests.test_later_discussion_does_not_rewrite_first_pass",
+          "tests.test_integrity_records.IntegrityTests.test_lineage_cycles_do_not_trigger_universal_dag_rejection",
+          "tests.test_integrity_records.IntegrityTests.test_malformed_public_annotation_reference_is_controlled",
+          "tests.test_integrity_records.IntegrityTests.test_matching_mock_audit_stays_record_only",
+          "tests.test_integrity_records.IntegrityTests.test_missing_claim_evidence_is_unresolved_not_satisfied",
+          "tests.test_integrity_records.IntegrityTests.test_missing_mock_marker_is_not_defaulted",
+          "tests.test_integrity_records.IntegrityTests.test_mistyped_annotation_actor_is_controlled",
+          "tests.test_integrity_records.IntegrityTests.test_mistyped_domain_suite_reference_is_controlled",
+          "tests.test_integrity_records.IntegrityTests.test_nonapplicable_cannot_evade_mandatory_condition",
+          "tests.test_integrity_records.IntegrityTests.test_one_unresolved_condition_cannot_be_averaged_away",
+          "tests.test_integrity_records.IntegrityTests.test_source_unknowns_cannot_become_inferred_ancestry",
+          "tests.test_integrity_records.IntegrityTests.test_step3_matrix_binds_all_actual_step3_checks",
+          "tests.test_integrity_records.IntegrityTests.test_structural_schema_challenge_keeps_separate_validity",
+          "tests.test_integrity_records.IntegrityTests.test_support_value_type_mutations_do_not_crash",
+          "tests.test_integrity_records.IntegrityTests.test_two_mock_humans_are_only_record_consistent",
+          "tests.test_integrity_records.IntegrityTests.test_two_sessions_by_one_person_fail_two_person_requirement",
+          "tests.test_integrity_records.IntegrityTests.test_unknown_expiry_does_not_invent_validity_period",
+          "tests.test_integrity_records.IntegrityTests.test_unknown_exposure_does_not_become_false",
+          "tests.test_integrity_records.IntegrityTests.test_unknown_parent_remains_unknown",
+          "tests.test_integrity_records.IntegrityTests.test_unknown_payload_fields_are_not_executable_extensions",
+          "tests.test_integrity_records.IntegrityTests.test_unreviewed_intake_preserves_original_anomaly",
+          "tests.test_integrity_records.IntegrityTests.test_withdrawn_suite_cannot_support_execution_record"
+        ],
+        "evidence_status": "not_supplied",
+        "binding_classes": [
+          "tests.test_integrity_records.IntegrityTests"
+        ]
+      },
+      "EC-C03": {
+        "scope": "M_only",
+        "test_bindings": [
+          "tests.test_integrity_records.Step7FunctionalRecords.test_absent_oracle_is_not_independent_validation",
+          "tests.test_integrity_records.Step7FunctionalRecords.test_complete_8995_order_construction_and_hash",
+          "tests.test_integrity_records.Step7FunctionalRecords.test_complete_mock_import_is_record_consistent_only",
+          "tests.test_integrity_records.Step7FunctionalRecords.test_containment_or_missing_reference_family_blocks_claim",
+          "tests.test_integrity_records.Step7FunctionalRecords.test_decisive_counterexample_can_precede_full_coverage",
+          "tests.test_integrity_records.Step7FunctionalRecords.test_each_property_is_required_without_boolean_coercion",
+          "tests.test_integrity_records.Step7FunctionalRecords.test_each_segment_construction_is_checked",
+          "tests.test_integrity_records.Step7FunctionalRecords.test_equal_inputs_keep_distinct_ids_and_purposes",
+          "tests.test_integrity_records.Step7FunctionalRecords.test_exception_needs_explicit_task_counterexample",
+          "tests.test_integrity_records.Step7FunctionalRecords.test_forged_manifest_hash_is_rejected",
+          "tests.test_integrity_records.Step7FunctionalRecords.test_missing_test_cannot_pass_by_declared_count",
+          "tests.test_integrity_records.Step7FunctionalRecords.test_mock_child_cannot_validate_nonmock_parent",
+          "tests.test_integrity_records.Step7FunctionalRecords.test_nested_malformed_runtime_metadata_is_controlled",
+          "tests.test_integrity_records.Step7FunctionalRecords.test_partial_pass_does_not_claim_full_validity",
+          "tests.test_integrity_records.Step7FunctionalRecords.test_plain_pass_string_cannot_establish_validity",
+          "tests.test_integrity_records.Step7FunctionalRecords.test_reordering_is_detected_even_with_new_hash",
+          "tests.test_integrity_records.Step7FunctionalRecords.test_repair_cannot_relabel_original_subject",
+          "tests.test_integrity_records.Step7FunctionalRecords.test_timeout_memory_harness_or_oracle_failure_is_not_invalidity",
+          "tests.test_integrity_records.Step7FunctionalRecords.test_unreadable_upstream_evidence_cannot_be_laundered"
+        ],
+        "evidence_status": "not_supplied",
+        "binding_classes": [
+          "tests.test_integrity_records.Step7FunctionalRecords"
+        ]
+      },
+      "EC-C04": {
+        "scope": "M_only",
+        "test_bindings": [
+          "tests.test_evidence.CorrectionTests.test_cross_sample_predecessor_does_not_merge_samples",
+          "tests.test_evidence.CorrectionTests.test_cyclic_revision_link_is_detected",
+          "tests.test_evidence.CorrectionTests.test_impact_records_link_without_recalculating_metrics",
+          "tests.test_evidence.CorrectionTests.test_independence_only_withdrawal_keeps_label",
+          "tests.test_evidence.CorrectionTests.test_passive_review_never_invokes_network_or_executes",
+          "tests.test_evidence.CorrectionTests.test_pending_challenge_is_explicit",
+          "tests.test_evidence.CorrectionTests.test_raw_bundle_is_unchanged_by_review",
+          "tests.test_evidence.CorrectionTests.test_rejected_challenge_cannot_withdraw",
+          "tests.test_evidence.CorrectionTests.test_revision_with_new_evidence_requires_new_pin",
+          "tests.test_evidence.CorrectionTests.test_shared_schema_challenge_affects_all_dependent_labels",
+          "tests.test_evidence.CorrectionTests.test_withdrawal_preserves_other_assignment_and_validity",
+          "tests.test_pipeline.AdversePipelineTests.test_duplicate_record_is_error_not_a_second_observation",
+          "tests.test_pipeline.AdversePipelineTests.test_empty_selected_inventory_has_zero_support_and_undefined_entropy",
+          "tests.test_pipeline.AdversePipelineTests.test_four_sample_evidence_correction_exact_sequence",
+          "tests.test_pipeline.AdversePipelineTests.test_hash_mismatch_is_not_repaired_by_pipeline",
+          "tests.test_pipeline.AdversePipelineTests.test_independence_only_correction_does_not_erase_supported_counts",
+          "tests.test_pipeline.AdversePipelineTests.test_invalid_threshold_is_contract_failure_not_zero",
+          "tests.test_pipeline.AdversePipelineTests.test_malformed_analysis_object_retains_safe_error_report",
+          "tests.test_pipeline.AdversePipelineTests.test_malformed_manifest_is_error_not_empty_success",
+          "tests.test_pipeline.AdversePipelineTests.test_missing_shared_frame_withholds_distribution_keeps_inventory",
+          "tests.test_pipeline.AdversePipelineTests.test_mock_imported_adjudication_uses_same_pipeline",
+          "tests.test_pipeline.AdversePipelineTests.test_nonempty_unclassified_inventory_is_not_empty_study",
+          "tests.test_pipeline.AdversePipelineTests.test_omitted_threshold_keeps_not_requested",
+          "tests.test_pipeline.AdversePipelineTests.test_unknown_model_identity_does_not_destroy_arithmetic",
+          "tests.test_pipeline.AdversePipelineTests.test_unknown_prefix_mode_not_guessed_into_success",
+          "tests.test_pipeline.Step7ReportIntegration.test_all_36_report_groups_have_explicit_paths",
+          "tests.test_pipeline.Step7ReportIntegration.test_all_deferred_prerequisites_visible_without_estimator",
+          "tests.test_pipeline.Step7ReportIntegration.test_correction_dependencies_identify_both_views_without_resampling",
+          "tests.test_pipeline.Step7ReportIntegration.test_domain_coverage_details_are_visible_and_fixture_stays_fixture",
+          "tests.test_pipeline.Step7ReportIntegration.test_empty_then_received_and_acted_intake_never_adds_samples",
+          "tests.test_pipeline.Step7ReportIntegration.test_every_m_metric_retains_denominator_status_and_source_scope",
+          "tests.test_pipeline.Step7ReportIntegration.test_metadata_time_never_changes_content_or_creates_observation",
+          "tests.test_pipeline.Step7ReportIntegration.test_registered_sources_and_original_fixture_hashes_still_match",
+          "tests.test_pipeline.Step7ReportIntegration.test_relocated_input_replays_all_canonical_content",
+          "tests.test_pipeline.Step7ReportIntegration.test_shared_schema_challenge_affects_all_its_cells_not_other_frames",
+          "tests.test_pipeline.Step7ReportIntegration.test_typed_lineage_exposure_and_annotation_survive_redaction"
+        ],
+        "evidence_status": "not_supplied",
+        "binding_classes": [
+          "tests.test_pipeline.Step7ReportIntegration",
+          "tests.test_pipeline.AdversePipelineTests",
+          "tests.test_evidence.CorrectionTests"
+        ]
+      },
+      "EC-C05": {
+        "scope": "M_only",
+        "test_bindings": [
+          "tests.test_integrity_records.IntegrityTests.test_absent_target_does_not_validate_by_two_votes",
+          "tests.test_integrity_records.IntegrityTests.test_all_nineteen_support_types_have_explicit_payload_validation",
+          "tests.test_integrity_records.IntegrityTests.test_audit_extra_review_does_not_replace_missing_planned_position",
+          "tests.test_integrity_records.IntegrityTests.test_audit_needs_annotations_for_each_reviewed_target",
+          "tests.test_integrity_records.IntegrityTests.test_checked_in_integrity_cases_are_actual_mock_payloads",
+          "tests.test_integrity_records.IntegrityTests.test_complete_mock_form_never_certifies_operational_openness",
+          "tests.test_integrity_records.IntegrityTests.test_complete_review_keeps_sources_and_classifications_passive",
+          "tests.test_integrity_records.IntegrityTests.test_design_32_core_and_28_pairs_remains_a_plan",
+          "tests.test_integrity_records.IntegrityTests.test_design_8995_tests_does_not_count_as_performed_validation",
+          "tests.test_integrity_records.IntegrityTests.test_disagreement_preserves_both_initial_outcomes",
+          "tests.test_integrity_records.IntegrityTests.test_domain_property_mismatch_is_not_execution_evidence",
+          "tests.test_integrity_records.IntegrityTests.test_empty_intake_is_distinct_from_received_evidence",
+          "tests.test_integrity_records.IntegrityTests.test_four_conditions_cannot_claim_five_condition_openness",
+          "tests.test_integrity_records.IntegrityTests.test_initial_judgment_materials_must_match",
+          "tests.test_integrity_records.IntegrityTests.test_initial_label_exposure_is_not_independent_first_pass",
+          "tests.test_integrity_records.IntegrityTests.test_known_prior_exposure_overrides_false_annotation_flag",
+          "tests.test_integrity_records.IntegrityTests.test_later_discussion_does_not_rewrite_first_pass",
+          "tests.test_integrity_records.IntegrityTests.test_lineage_cycles_do_not_trigger_universal_dag_rejection",
+          "tests.test_integrity_records.IntegrityTests.test_malformed_public_annotation_reference_is_controlled",
+          "tests.test_integrity_records.IntegrityTests.test_matching_mock_audit_stays_record_only",
+          "tests.test_integrity_records.IntegrityTests.test_missing_claim_evidence_is_unresolved_not_satisfied",
+          "tests.test_integrity_records.IntegrityTests.test_missing_mock_marker_is_not_defaulted",
+          "tests.test_integrity_records.IntegrityTests.test_mistyped_annotation_actor_is_controlled",
+          "tests.test_integrity_records.IntegrityTests.test_mistyped_domain_suite_reference_is_controlled",
+          "tests.test_integrity_records.IntegrityTests.test_nonapplicable_cannot_evade_mandatory_condition",
+          "tests.test_integrity_records.IntegrityTests.test_one_unresolved_condition_cannot_be_averaged_away",
+          "tests.test_integrity_records.IntegrityTests.test_source_unknowns_cannot_become_inferred_ancestry",
+          "tests.test_integrity_records.IntegrityTests.test_step3_matrix_binds_all_actual_step3_checks",
+          "tests.test_integrity_records.IntegrityTests.test_structural_schema_challenge_keeps_separate_validity",
+          "tests.test_integrity_records.IntegrityTests.test_support_value_type_mutations_do_not_crash",
+          "tests.test_integrity_records.IntegrityTests.test_two_mock_humans_are_only_record_consistent",
+          "tests.test_integrity_records.IntegrityTests.test_two_sessions_by_one_person_fail_two_person_requirement",
+          "tests.test_integrity_records.IntegrityTests.test_unknown_expiry_does_not_invent_validity_period",
+          "tests.test_integrity_records.IntegrityTests.test_unknown_exposure_does_not_become_false",
+          "tests.test_integrity_records.IntegrityTests.test_unknown_parent_remains_unknown",
+          "tests.test_integrity_records.IntegrityTests.test_unknown_payload_fields_are_not_executable_extensions",
+          "tests.test_integrity_records.IntegrityTests.test_unreviewed_intake_preserves_original_anomaly",
+          "tests.test_integrity_records.IntegrityTests.test_withdrawn_suite_cannot_support_execution_record",
+          "tests.test_integrity_records.Step7CompleteReferenceFixtures.test_complete_core_coverage_is_record_consistent_but_still_mock",
+          "tests.test_integrity_records.Step7CompleteReferenceFixtures.test_complete_systematic_audit_plan_resolves_exact_72_positions",
+          "tests.test_integrity_records.Step7ReferenceAuditRecords.test_28_pairs_and_four_witnesses_checked_without_fabricating_core",
+          "tests.test_integrity_records.Step7ReferenceAuditRecords.test_32_names_without_artifacts_or_annotations_do_not_pass",
+          "tests.test_integrity_records.Step7ReferenceAuditRecords.test_72_planned_positions_are_not_72_reviews",
+          "tests.test_integrity_records.Step7ReferenceAuditRecords.test_changed_systematic_position_fails",
+          "tests.test_integrity_records.Step7ReferenceAuditRecords.test_generic_audit_must_match_actual_frozen_plan",
+          "tests.test_integrity_records.Step7ReferenceAuditRecords.test_opposite_membership_claims_do_not_transitively_cluster",
+          "tests.test_integrity_records.Step7ReferenceAuditRecords.test_overlap_is_preserved_not_forced_into_partition",
+          "tests.test_integrity_records.Step7ReferenceAuditRecords.test_pair_duplication_cannot_fill_missing_review",
+          "tests.test_integrity_records.Step7ReferenceAuditRecords.test_registry_candidate_can_remain_valid_without_new_class",
+          "tests.test_integrity_records.Step7ReferenceAuditRecords.test_repeated_position_does_not_replace_lost_opportunity",
+          "tests.test_integrity_records.Step7ReferenceAuditRecords.test_witness_shape_not_just_four_names",
+          "tests.test_pipeline.Step7ReportIntegration.test_all_36_report_groups_have_explicit_paths",
+          "tests.test_pipeline.Step7ReportIntegration.test_all_deferred_prerequisites_visible_without_estimator",
+          "tests.test_pipeline.Step7ReportIntegration.test_correction_dependencies_identify_both_views_without_resampling",
+          "tests.test_pipeline.Step7ReportIntegration.test_domain_coverage_details_are_visible_and_fixture_stays_fixture",
+          "tests.test_pipeline.Step7ReportIntegration.test_empty_then_received_and_acted_intake_never_adds_samples",
+          "tests.test_pipeline.Step7ReportIntegration.test_every_m_metric_retains_denominator_status_and_source_scope",
+          "tests.test_pipeline.Step7ReportIntegration.test_metadata_time_never_changes_content_or_creates_observation",
+          "tests.test_pipeline.Step7ReportIntegration.test_registered_sources_and_original_fixture_hashes_still_match",
+          "tests.test_pipeline.Step7ReportIntegration.test_relocated_input_replays_all_canonical_content",
+          "tests.test_pipeline.Step7ReportIntegration.test_shared_schema_challenge_affects_all_its_cells_not_other_frames",
+          "tests.test_pipeline.Step7ReportIntegration.test_typed_lineage_exposure_and_annotation_survive_redaction"
+        ],
+        "evidence_status": "not_supplied",
+        "binding_classes": [
+          "tests.test_integrity_records.IntegrityTests",
+          "tests.test_pipeline.Step7ReportIntegration",
+          "tests.test_integrity_records.Step7ReferenceAuditRecords",
+          "tests.test_integrity_records.Step7CompleteReferenceFixtures"
+        ]
+      },
+      "EC-C06": {
+        "scope": "M_only",
+        "test_bindings": [
+          "tests.test_pipeline.HeroPipelineTests.test_explicit_run_identity_changes_metadata_not_metrics",
+          "tests.test_pipeline.HeroPipelineTests.test_hf00_materialization_matches_pinned_original",
+          "tests.test_pipeline.HeroPipelineTests.test_hf00_original_twenty_record_workflow",
+          "tests.test_pipeline.HeroPipelineTests.test_hf01_invalid_but_classifiable",
+          "tests.test_pipeline.HeroPipelineTests.test_hf02_unresolved_class_keeps_validity",
+          "tests.test_pipeline.HeroPipelineTests.test_hf03_provisional_label_has_distinct_reason",
+          "tests.test_pipeline.HeroPipelineTests.test_hf04_missing_evidence_is_local_limit",
+          "tests.test_pipeline.HeroPipelineTests.test_hf05_missing_position_is_not_backfilled",
+          "tests.test_pipeline.HeroPipelineTests.test_hf06_new_assignment_preserves_old_identity",
+          "tests.test_pipeline.HeroPipelineTests.test_input_changes_get_new_fingerprint_without_overwriting_old_report",
+          "tests.test_pipeline.HeroPipelineTests.test_invalid_run_identity_and_naive_time_rejected",
+          "tests.test_pipeline.HeroPipelineTests.test_materializer_refuses_unregistered_variant",
+          "tests.test_pipeline.HeroPipelineTests.test_pinned_base_remains_byte_identical_after_all_variants",
+          "tests.test_pipeline.HeroPipelineTests.test_program_text_and_generation_cost_are_never_invented",
+          "tests.test_pipeline.HeroPipelineTests.test_replay_canonical_reports_and_manifest_time",
+          "tests.test_pipeline.HeroPipelineTests.test_report_hashes_identify_actual_written_bytes",
+          "tests.test_pipeline.HeroPipelineTests.test_validate_has_no_metric_calculation",
+          "tests.test_pipeline.Step7ReportIntegration.test_all_36_report_groups_have_explicit_paths",
+          "tests.test_pipeline.Step7ReportIntegration.test_all_deferred_prerequisites_visible_without_estimator",
+          "tests.test_pipeline.Step7ReportIntegration.test_correction_dependencies_identify_both_views_without_resampling",
+          "tests.test_pipeline.Step7ReportIntegration.test_domain_coverage_details_are_visible_and_fixture_stays_fixture",
+          "tests.test_pipeline.Step7ReportIntegration.test_empty_then_received_and_acted_intake_never_adds_samples",
+          "tests.test_pipeline.Step7ReportIntegration.test_every_m_metric_retains_denominator_status_and_source_scope",
+          "tests.test_pipeline.Step7ReportIntegration.test_metadata_time_never_changes_content_or_creates_observation",
+          "tests.test_pipeline.Step7ReportIntegration.test_registered_sources_and_original_fixture_hashes_still_match",
+          "tests.test_pipeline.Step7ReportIntegration.test_relocated_input_replays_all_canonical_content",
+          "tests.test_pipeline.Step7ReportIntegration.test_shared_schema_challenge_affects_all_its_cells_not_other_frames",
+          "tests.test_pipeline.Step7ReportIntegration.test_typed_lineage_exposure_and_annotation_survive_redaction",
+          "tests.test_reporting.ReportTests.test_all_ten_ec_disclosures_and_unknown_expiry_visible",
+          "tests.test_reporting.ReportTests.test_all_v_and_d_results_are_null_with_explicit_status",
+          "tests.test_reporting.ReportTests.test_canonical_dictionary_order_invariance",
+          "tests.test_reporting.ReportTests.test_control_characters_links_html_and_pipes_are_inert",
+          "tests.test_reporting.ReportTests.test_every_scalar_value_unit_status_and_reason_survives_markdown",
+          "tests.test_reporting.ReportTests.test_evidence_limitations_precede_numeric_results",
+          "tests.test_reporting.ReportTests.test_five_conjunctive_conditions_visible",
+          "tests.test_reporting.ReportTests.test_held_evidence_prose_and_task_metadata_not_copied",
+          "tests.test_reporting.ReportTests.test_json_and_markdown_consume_identical_tree",
+          "tests.test_reporting.ReportTests.test_json_keeps_unrounded_float",
+          "tests.test_reporting.ReportTests.test_missing_required_section_fails_serialization",
+          "tests.test_reporting.ReportTests.test_no_empirical_support_or_score_fabricated",
+          "tests.test_reporting.ReportTests.test_nonfinite_results_cannot_be_serialized",
+          "tests.test_reporting.ReportTests.test_pinned_input_hashes_do_not_claim_program_hashes",
+          "tests.test_reporting.ReportTests.test_private_root_absent_from_all_outputs",
+          "tests.test_reporting.ReportTests.test_reanalysis_and_v_dependents_remain_separate",
+          "tests.test_reporting.ReportTests.test_required_section_order",
+          "tests.test_reporting.ReportTests.test_scoped_ids_retained_without_private_person_mappings",
+          "tests.test_reporting.ReportTests.test_source_lineage_pins_and_transform_references_retained",
+          "tests.test_reporting.ReportTests.test_unknown_unavailable_and_inapplicable_retain_distinction",
+          "tests.test_reporting.ReportTests.test_zero_count_registry_classes_are_visible",
+          "tests.test_reporting.ReportTests.test_zero_false_and_known_null_are_not_unknown"
+        ],
+        "evidence_status": "not_supplied",
+        "binding_classes": [
+          "tests.test_pipeline.HeroPipelineTests",
+          "tests.test_pipeline.Step7ReportIntegration",
+          "tests.test_reporting.ReportTests"
+        ]
+      },
+      "EC-C07": {
+        "scope": "M_only",
+        "test_bindings": [
+          "tests.test_evidence.CorrectionTests.test_cross_sample_predecessor_does_not_merge_samples",
+          "tests.test_evidence.CorrectionTests.test_cyclic_revision_link_is_detected",
+          "tests.test_evidence.CorrectionTests.test_impact_records_link_without_recalculating_metrics",
+          "tests.test_evidence.CorrectionTests.test_independence_only_withdrawal_keeps_label",
+          "tests.test_evidence.CorrectionTests.test_passive_review_never_invokes_network_or_executes",
+          "tests.test_evidence.CorrectionTests.test_pending_challenge_is_explicit",
+          "tests.test_evidence.CorrectionTests.test_raw_bundle_is_unchanged_by_review",
+          "tests.test_evidence.CorrectionTests.test_rejected_challenge_cannot_withdraw",
+          "tests.test_evidence.CorrectionTests.test_revision_with_new_evidence_requires_new_pin",
+          "tests.test_evidence.CorrectionTests.test_shared_schema_challenge_affects_all_dependent_labels",
+          "tests.test_evidence.CorrectionTests.test_withdrawal_preserves_other_assignment_and_validity",
+          "tests.test_pipeline.AdversePipelineTests.test_duplicate_record_is_error_not_a_second_observation",
+          "tests.test_pipeline.AdversePipelineTests.test_empty_selected_inventory_has_zero_support_and_undefined_entropy",
+          "tests.test_pipeline.AdversePipelineTests.test_four_sample_evidence_correction_exact_sequence",
+          "tests.test_pipeline.AdversePipelineTests.test_hash_mismatch_is_not_repaired_by_pipeline",
+          "tests.test_pipeline.AdversePipelineTests.test_independence_only_correction_does_not_erase_supported_counts",
+          "tests.test_pipeline.AdversePipelineTests.test_invalid_threshold_is_contract_failure_not_zero",
+          "tests.test_pipeline.AdversePipelineTests.test_malformed_analysis_object_retains_safe_error_report",
+          "tests.test_pipeline.AdversePipelineTests.test_malformed_manifest_is_error_not_empty_success",
+          "tests.test_pipeline.AdversePipelineTests.test_missing_shared_frame_withholds_distribution_keeps_inventory",
+          "tests.test_pipeline.AdversePipelineTests.test_mock_imported_adjudication_uses_same_pipeline",
+          "tests.test_pipeline.AdversePipelineTests.test_nonempty_unclassified_inventory_is_not_empty_study",
+          "tests.test_pipeline.AdversePipelineTests.test_omitted_threshold_keeps_not_requested",
+          "tests.test_pipeline.AdversePipelineTests.test_unknown_model_identity_does_not_destroy_arithmetic",
+          "tests.test_pipeline.AdversePipelineTests.test_unknown_prefix_mode_not_guessed_into_success"
+        ],
+        "evidence_status": "not_supplied",
+        "binding_classes": [
+          "tests.test_pipeline.AdversePipelineTests",
+          "tests.test_evidence.CorrectionTests"
+        ]
+      },
+      "EC-C08": {
+        "scope": "M_only",
+        "test_bindings": [
+          "tests.test_pipeline.HeroPipelineTests.test_explicit_run_identity_changes_metadata_not_metrics",
+          "tests.test_pipeline.HeroPipelineTests.test_hf00_materialization_matches_pinned_original",
+          "tests.test_pipeline.HeroPipelineTests.test_hf00_original_twenty_record_workflow",
+          "tests.test_pipeline.HeroPipelineTests.test_hf01_invalid_but_classifiable",
+          "tests.test_pipeline.HeroPipelineTests.test_hf02_unresolved_class_keeps_validity",
+          "tests.test_pipeline.HeroPipelineTests.test_hf03_provisional_label_has_distinct_reason",
+          "tests.test_pipeline.HeroPipelineTests.test_hf04_missing_evidence_is_local_limit",
+          "tests.test_pipeline.HeroPipelineTests.test_hf05_missing_position_is_not_backfilled",
+          "tests.test_pipeline.HeroPipelineTests.test_hf06_new_assignment_preserves_old_identity",
+          "tests.test_pipeline.HeroPipelineTests.test_input_changes_get_new_fingerprint_without_overwriting_old_report",
+          "tests.test_pipeline.HeroPipelineTests.test_invalid_run_identity_and_naive_time_rejected",
+          "tests.test_pipeline.HeroPipelineTests.test_materializer_refuses_unregistered_variant",
+          "tests.test_pipeline.HeroPipelineTests.test_pinned_base_remains_byte_identical_after_all_variants",
+          "tests.test_pipeline.HeroPipelineTests.test_program_text_and_generation_cost_are_never_invented",
+          "tests.test_pipeline.HeroPipelineTests.test_replay_canonical_reports_and_manifest_time",
+          "tests.test_pipeline.HeroPipelineTests.test_report_hashes_identify_actual_written_bytes",
+          "tests.test_pipeline.HeroPipelineTests.test_validate_has_no_metric_calculation",
+          "tests.test_reporting.ReportTests.test_all_ten_ec_disclosures_and_unknown_expiry_visible",
+          "tests.test_reporting.ReportTests.test_all_v_and_d_results_are_null_with_explicit_status",
+          "tests.test_reporting.ReportTests.test_canonical_dictionary_order_invariance",
+          "tests.test_reporting.ReportTests.test_control_characters_links_html_and_pipes_are_inert",
+          "tests.test_reporting.ReportTests.test_every_scalar_value_unit_status_and_reason_survives_markdown",
+          "tests.test_reporting.ReportTests.test_evidence_limitations_precede_numeric_results",
+          "tests.test_reporting.ReportTests.test_five_conjunctive_conditions_visible",
+          "tests.test_reporting.ReportTests.test_held_evidence_prose_and_task_metadata_not_copied",
+          "tests.test_reporting.ReportTests.test_json_and_markdown_consume_identical_tree",
+          "tests.test_reporting.ReportTests.test_json_keeps_unrounded_float",
+          "tests.test_reporting.ReportTests.test_missing_required_section_fails_serialization",
+          "tests.test_reporting.ReportTests.test_no_empirical_support_or_score_fabricated",
+          "tests.test_reporting.ReportTests.test_nonfinite_results_cannot_be_serialized",
+          "tests.test_reporting.ReportTests.test_pinned_input_hashes_do_not_claim_program_hashes",
+          "tests.test_reporting.ReportTests.test_private_root_absent_from_all_outputs",
+          "tests.test_reporting.ReportTests.test_reanalysis_and_v_dependents_remain_separate",
+          "tests.test_reporting.ReportTests.test_required_section_order",
+          "tests.test_reporting.ReportTests.test_scoped_ids_retained_without_private_person_mappings",
+          "tests.test_reporting.ReportTests.test_source_lineage_pins_and_transform_references_retained",
+          "tests.test_reporting.ReportTests.test_unknown_unavailable_and_inapplicable_retain_distinction",
+          "tests.test_reporting.ReportTests.test_zero_count_registry_classes_are_visible",
+          "tests.test_reporting.ReportTests.test_zero_false_and_known_null_are_not_unknown"
+        ],
+        "evidence_status": "not_supplied",
+        "binding_classes": [
+          "tests.test_reporting.ReportTests",
+          "tests.test_pipeline.HeroPipelineTests"
+        ]
+      }
     }
   }
 }
