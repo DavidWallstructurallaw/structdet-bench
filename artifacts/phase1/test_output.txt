@@ -1,29 +1,28 @@
-StructDet-Bench Phase 1 Step 6: retained QA summaries
+StructDet-Bench Phase 1 Step 6: final local verification summary
 
-450 tests passed; 0 failures, 0 errors, 0 skips.
-80 Step 6-specific tests are included in that total.
-12 frozen baseline documents match.
-Scaffold gate: exit 0. Full Phase 1 gate: exit 1, with 32 incomplete M families.
-HF-00 validate/analyze: exit 0. No model calls, candidate execution or independent validation.
-Approved amendment STEP6-TEST-MAINTENANCE-001 changed exactly three historical assertions.
-All test identities and numerical checks remain; Step 7/8 have not started.
+All 450 current tests passed: 0 failures, 0 errors, 0 skips.
+Step 6-specific tests: 80. Frozen baseline identities: 12 matched.
+Scaffold gate: exit 0. Full Phase 1 gate: exit 1 because 32 M families
+and the remaining trace/report integration bindings are not fully closed.
+HF-00 validate: exit 0. HF-00 analyze: exit 0. Existing output: rejected,
+exit 2, without replacement. Canonical JSON and Markdown replay identically.
 
-This file is a summary. Complete current output: verification/full_test_output.txt
-Full available runner journal: verification/full_test_results.json
-Exact fingerprints are recorded in test_results.json; earlier evidence remains in the companion archive.
+The published Step 6 source and the three approved test changes were rechecked
+against commit 8de9b0f6ff5e6310ec7085d0f4ce66ca3088ebbf. This follow-up updates
+only QA summaries. No production code, frozen contract or test changed.
+Previous remote summaries remain in that parent commit. Historical candidate
+failures remain recorded; the maintenance did not disable any tests.
 
-3242be42-6c2b-4f84-9fde-e14c460cb7aa | phase1 | {"passed": 38} | exit 1
-4adf1d19-4cc4-43bd-bbfb-bb4855434e3a | scaffold | {"passed": 38} | exit 0
-ac5d9ae7-1a02-4d28-9932-c4000195e4b6 | scaffold | {"passed": 195} | exit 0
-e849b9b8-94c1-4664-a16a-b7405f32daa8 | phase1 | {"passed": 195} | exit 1
-68ad12af-81f6-4ecb-b3d0-b00c178121fc | scaffold | {"passed": 195} | exit 0
-edbb8cb0-a5df-487c-9234-53ec8e2d0bb3 | phase1 | {"passed": 195} | exit 1
-88d9fe9b-bb75-4c81-8ef2-7e54eeae2a43 | scaffold | {"passed": 294} | exit 0
-bba34482-df51-4e74-8624-20ebea5ad787 | phase1 | {"passed": 294} | exit 1
-b194ecbf-af9b-4b13-94c0-25643668603d | None | {"passed": 294} | exit 0
-61450c2e-8ef0-4802-8f23-1df556fbc3e5 | None | {"passed": 370} | exit 0
-e0f364a8-768a-4328-b159-e7eee58b09fa | None | {"passed": 370} | exit 1
-86c17a0e-7490-4d1b-9c52-50ac4a1901e3 | scaffold | {"failed": 3, "passed": 447} | exit 1
-6ea879c0-e873-4ee2-b8f3-b763be0fe02c | phase1 | {"failed": 3, "passed": 447} | exit 1
-ed3208d3-6f61-44c2-b966-232ebba88ac5 | scaffold | {"passed": 450} | exit 0
-c427d4fb-ed50-4e9d-b018-78efbe758e02 | phase1 | {"passed": 450} | exit 1
+These are summaries. Complete retained records, full current test output and
+generated HF-00 reports are included in StructDet-Bench_Phase1_Step6.zip.
+full_test_results.json: SHA-256 c20262ca330226aa0f1c1ccc9e29d03812fdfe7c5a361edd24e8e64eefc80806
+full_test_output.txt: SHA-256 a03e854ae7d9c5d8ac07ce61f9a20fb8b907faeaa1a9523abc8f165dedc319b3
+accepted_scaffold_console.txt: SHA-256 6020480d41a223a33e322c933766db6efe82013a7956e4d9af837c72c1684977
+accepted_phase1_console.txt: SHA-256 973650809784d9817c3207352ad3e174c9fcc9083f5895f2d6fa45fff591f082
+
+Current run IDs:
+ac8272d1-3607-4fa4-b118-f8ecd34435cf: scaffold, exit 0, 450 passed
+3a4b0b8e-1b02-454d-a35f-89c04db01d71: phase1, exit 1, 450 passed
+
+No model calls, candidate-program execution, independent empirical validation,
+GitHub Actions or package publication. Steps 7 and 8 remain pending.
