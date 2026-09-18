@@ -1,26 +1,2485 @@
 {
-"schema_version":"0.1",
-"project":"StructDet-Bench",
-"phase":1,
-"current_step":3,
-"implementation_status":"input_evidence_inventory_and_population_layers_only",
-"authorization":{"owner_instruction":"很好，继续phase 1 step 3","interpretation":"Step 2 local handoff accepted; Step 3 implementation and outstanding authorized GitHub synchronization. Stop before Step 4. No empirical collection, expense, automatic judging or input execution."},
-"baseline":[{"path":"PHASE_0_PLAN.md","version":"0.1","sha256":"5df37f3fef1d012d462a116d7839909c9379dfe6d59a1b3356cae004bcfac6a4","role":"frozen_phase0"},{"path":"PROJECT_SCOPE.md","version":"0.1","sha256":"2eec02825c8df4281cc538d00dcb809907dc2eb8a2b1b73b597cbab17d975a11","role":"frozen_phase0"},{"path":"DEFINITIONS_AND_UNITS.md","version":"0.1","sha256":"a3da3e356a21f59468178050944baf58787edd65204fbf40b3b1742cd38104ab","role":"frozen_phase0"},{"path":"STRUCTURAL_CLASS_CONTRACT.md","version":"0.1","sha256":"00ba09dd879f5fe02a3302a6f1ad36bda1c6b7e2723562f5f62ec85fed125328","role":"frozen_phase0"},{"path":"METRICS_SPEC.md","version":"0.2","sha256":"23b45934e87767ca87e56b97aa4e1d1abdd49e27187d0b9c5a336ca516a96edb","role":"frozen_phase0"},{"path":"EVALUATION_INTEGRITY.md","version":"0.1","sha256":"50c5529c16164ee53e4d99502ed1ec24202f36152b36281870bf285185672dc3","role":"frozen_phase0"},{"path":"HERO_BENCHMARK_SPEC.md","version":"0.1","sha256":"d1a0849d888a35ae3c9bd552bb920ee46417b7eeb4f8b687f8b5825e6fb851b2","role":"frozen_phase0"},{"path":"THEORY_TO_CODE_TRACEABILITY.md","version":"0.2","sha256":"1b94c402804c1167bfc5c04b45a86364ac5061bc41273b87a36f184991bbeec2","role":"frozen_phase0"},{"path":"VALIDATION_AND_FALSIFICATION.md","version":"0.2","sha256":"6aaa5b01290d3c6b9746f20d47c2092c038587d72d7e090ee3ad73438794ef00","role":"frozen_phase0"},{"path":"UNRESOLVED_DECISIONS.md","version":"0.7","sha256":"5539ebbf859d0d423845fceb8b9ceda065f05e202d86d2ae662912aa2632a412","role":"frozen_phase0"},{"path":"PHASE_0_APPROVAL.md","version":"0.1","sha256":"0d09da04ffd07568b1657ebc92c9b46fc09a489b9dde843fb1b424d048213db7","role":"frozen_phase0"},{"path":"PHASE_1_PLAN.md","version":"0.1","sha256":"4a4137d1fa444c212af71740e439624c341ed485584ee3878e358f1e9424f704","role":"approved_execution_plan"}],
-"theory_sources":[{"name":"SD","filename":"The Structural Determinacy of LLM Generation_ Active Structure, Convergence Frontiers, and the Misreading of Randomness.pdf","sha256":"357c0c3994e34fc1831ce91bf1c7e579925d64827579f80eb0a8708e85c93f32","bundled":false},{"name":"SI","filename":"Structural Inbreeding in Synthetic Data.pdf","sha256":"80c193231af343d383544cee924a11fbb063a5c4ccee02d996ea4f904979565a","bundled":false}],
-"engineering_requirements":[{"id":"ENG-01","test_bindings":["tests.test_scaffold.PackageTests.test_import_under_standard_library_only","tests.test_scaffold.PackageTests.test_version_matches_metadata","tests.test_scaffold.PackageTests.test_metadata_has_no_runtime_dependencies","tests.test_scaffold.PackageTests.test_distribution_excludes_tests_docs_and_pdfs"]},{"id":"ENG-02","test_bindings":["tests.test_scaffold.CommandTests.test_help","tests.test_scaffold.CommandTests.test_version","tests.test_scaffold.CommandTests.test_no_arguments_show_help","tests.test_scaffold.CommandTests.test_validate_and_analyze_require_input_or_are_unavailable","tests.test_scaffold.CommandTests.test_forbidden_commands_are_rejected","tests.test_scaffold.CommandTests.test_unknown_option_is_error"]},{"id":"ENG-03","test_bindings":["tests.test_scaffold.BaselineTests.test_all_baseline_hashes_match","tests.test_scaffold.BaselineTests.test_expected_hashes_match_plan_appendix","tests.test_scaffold.BaselineTests.test_matrix_preserves_vf_catalogue","tests.test_scaffold.BaselineTests.test_matrix_preserves_trace_catalogue","tests.test_scaffold.BaselineTests.test_matrix_preserves_report_catalogue","tests.test_scaffold.BaselineTests.test_all_54_scope_dispositions_and_37_m_families","tests.test_scaffold.BaselineTests.test_matrix_validation"]},{"id":"ENG-04","test_bindings":["tests.test_scaffold.HarnessTests.test_empty_discovery_fails_both_gates","tests.test_scaffold.HarnessTests.test_missing_scaffold_binding_fails","tests.test_scaffold.HarnessTests.test_missing_m_bindings_fail_final_gate","tests.test_scaffold.HarnessTests.test_missing_trace_binding_fails_final_gate","tests.test_scaffold.HarnessTests.test_skipped_test_is_not_accepted","tests.test_scaffold.HarnessTests.test_expected_failure_is_not_accepted","tests.test_scaffold.HarnessTests.test_failure_and_error_are_recorded","tests.test_scaffold.HarnessTests.test_subtest_failure_is_recorded","tests.test_scaffold.HarnessTests.test_duplicate_discovery_fails","tests.test_scaffold.HarnessTests.test_broken_binding_fails","tests.test_scaffold.HarnessTests.test_future_evidence_is_not_executed","tests.test_scaffold.HarnessTests.test_journal_retains_prior_runs","tests.test_scaffold.HarnessTests.test_corrupt_journal_is_not_overwritten","tests.test_scaffold.HarnessTests.test_runner_help_does_not_run_tests","tests.test_scaffold.HarnessTests.test_class_fixture_error_is_recorded","tests.test_scaffold.HarnessTests.test_unexpected_success_is_not_accepted","tests.test_scaffold.HarnessTests.test_required_m_skip_blocks_final_gate"]},{"id":"ENG-05","test_bindings":["tests.test_scaffold.PackageTests.test_no_public_analysis_api","tests.test_scaffold.CommandTests.test_runtime_help_and_version_do_not_use_network_or_child_processes","tests.test_scaffold.CommandTests.test_trusted_helper_rejects_arbitrary_commands","tests.test_scaffold.BaselineTests.test_readme_scope_is_explicit"]}],
-"vf_tests":[{"id":"VT-01","m_required":true,"scope_records":{"M":{"implementation_status":"partial","test_bindings":["tests.test_records.KnowledgeTests.test_known_zero_false_empty_and_null_are_retained","tests.test_records.RecordShapeTests.test_missing_optional_data_stays_absent"]}},"catalogue_row":"VT-01"},{"id":"VT-02","m_required":true,"scope_records":{"M":{"implementation_status":"partial","test_bindings":["tests.test_evidence.AdmissionTests.test_no_pin_never_selects_latest","tests.test_evidence.CorrectionTests.test_revision_with_new_evidence_requires_new_pin","tests.test_inventory.AdditionalInventoryTests.test_duplicate_group_position_with_unknown_attempt_is_unresolved","tests.test_inventory.InventoryTests.test_duplicate_id_is_ambiguous_never_deduplicated_silently","tests.test_inventory.InventoryTests.test_duplicate_malformed_id_remains_ambiguous","tests.test_inventory.InventoryTests.test_repeated_bytes_with_distinct_positions_remain_observations","tests.test_inventory.InventoryTests.test_same_attempt_position_cannot_count_twice_under_two_ids","tests.test_records.IdentityTests.test_identical_content_with_distinct_ids_is_not_deduplicated"],"reason":"Step 4 accounting and prior record checks are bound. Remaining full M integration/report/metric duties are not marked complete. No substantive E validation."}},"catalogue_row":"VT-02"},{"id":"VT-03","m_required":true,"scope_records":{"M":{"implementation_status":"partial","test_bindings":["tests.test_inventory.InventoryTests.test_attempts_and_realizations_are_separate","tests.test_inventory.InventoryTests.test_extra_output_is_preserved_unselected","tests.test_inventory.InventoryTests.test_failed_five_candidate_call_does_not_create_samples","tests.test_inventory.InventoryTests.test_retry_is_preserved_without_adding_planned_slots","tests.test_inventory.InventoryTests.test_selecting_extra_output_cannot_extend_planned_budget","tests.test_inventory.InventoryTests.test_unattempted_slot_is_not_an_invocation","tests.test_inventory.InventoryTests.test_unknown_attempt_history_is_not_one_call_per_sample"],"reason":"Step 4 accounting and prior record checks are bound. Remaining full M integration/report/metric duties are not marked complete. No substantive E validation."},"V":{"implementation_status":"outside_phase1","test_bindings":[]}},"catalogue_row":"VT-03"},{"id":"VT-04","m_required":true,"scope_records":{"M":{"implementation_status":"partial","test_bindings":["tests.test_evidence.AdmissionTests.test_fixture_positive_is_only_stipulated","tests.test_evidence.AdmissionTests.test_import_requires_adjudication_record","tests.test_evidence.AdmissionTests.test_fixture_missing_declaration_is_local","tests.test_evidence.AdmissionTests.test_missing_independence_does_not_remove_mechanism"]}},"catalogue_row":"VT-04"},{"id":"VT-05","m_required":true,"scope_records":{"M":{"implementation_status":"partial","test_bindings":["tests.test_populations.PopulationTests.test_axes_overlap_and_each_reconciles_to_selected_inventory","tests.test_populations.PopulationTests.test_mf07_all_five_ratios_keep_unreduced_accounting","tests.test_populations.PopulationTests.test_mf07_exact_memberships","tests.test_populations.PopulationTests.test_validity_does_not_fill_unresolved_or_provisional_class"],"reason":"Step 4 accounting and prior record checks are bound. Remaining full M integration/report/metric duties are not marked complete. No substantive E validation."}},"catalogue_row":"VT-05"},{"id":"VT-06","m_required":true,"scope_records":{"M":{"implementation_status":"partial","test_bindings":["tests.test_evidence.AdmissionTests.test_invalid_validity_does_not_erase_class","tests.test_evidence.AdmissionTests.test_not_assessed_does_not_create_invalidity","tests.test_inventory.InventoryTests.test_known_empty_and_truncated_emissions_remain_samples","tests.test_inventory.InventoryTests.test_known_empty_selection_is_zero_with_exclusions","tests.test_local_io.BundleTests.test_empty_and_malformed_records_remain_distinct","tests.test_populations.AdversePopulationTests.test_actual_empty_input_has_no_invented_observations","tests.test_populations.PopulationTests.test_all_invalid_can_still_have_structural_population","tests.test_populations.PopulationTests.test_known_empty_selection_has_undefined_ratios","tests.test_populations.PopulationTests.test_one_class_is_distinct_from_no_class","tests.test_populations.PopulationTests.test_wholly_unclassified_selection_remains_known_zero"],"reason":"Step 4 accounting and prior record checks are bound. Remaining full M integration/report/metric duties are not marked complete. No substantive E validation."}},"catalogue_row":"VT-06"},{"id":"VT-07","m_required":true,"scope_records":{"M":{"implementation_status":"not_implemented","test_bindings":[]}},"catalogue_row":"VT-07"},{"id":"VT-08","m_required":true,"scope_records":{"M":{"implementation_status":"not_implemented","test_bindings":[]}},"catalogue_row":"VT-08"},{"id":"VT-09","m_required":true,"scope_records":{"M":{"implementation_status":"not_implemented","test_bindings":[]}},"catalogue_row":"VT-09"},{"id":"VT-10","m_required":true,"scope_records":{"M":{"implementation_status":"partial","test_bindings":["tests.test_inventory.InventoryTests.test_original_storage_order_is_not_experimental_sequence","tests.test_populations.PopulationTests.test_renaming_supported_class_ids_preserves_population_counts","tests.test_populations.PrefixTests.test_actual_order_change_may_change_prefix","tests.test_populations.PrefixTests.test_storage_order_change_cannot_change_prefix"],"reason":"Step 4 accounting and prior record checks are bound. Remaining full M integration/report/metric duties are not marked complete. No substantive E validation."}},"catalogue_row":"VT-10"},{"id":"VT-11","m_required":true,"scope_records":{"M":{"implementation_status":"partial","test_bindings":["tests.test_populations.PrefixTests.test_accumulation_monotonicity_on_fixed_assignments","tests.test_populations.PrefixTests.test_actual_order_change_may_change_prefix","tests.test_populations.PrefixTests.test_available_unclassified_prefix_has_count_zero","tests.test_populations.PrefixTests.test_grid_preserved_and_not_sorted_after_results","tests.test_populations.PrefixTests.test_invalid_and_omitted_k_have_distinct_outcomes","tests.test_populations.PrefixTests.test_invalid_or_unresolved_positions_are_not_backfilled","tests.test_populations.PrefixTests.test_invalid_view_and_mode_fail_explicitly","tests.test_populations.PrefixTests.test_mf10_exact_prefix_oracles","tests.test_populations.PrefixTests.test_partial_group_flag_is_descriptive_only","tests.test_populations.PrefixTests.test_storage_order_change_cannot_change_prefix"],"reason":"Step 4 accounting and prior record checks are bound. Remaining full M integration/report/metric duties are not marked complete. No substantive E validation."}},"catalogue_row":"VT-11"},{"id":"VT-12","m_required":true,"scope_records":{"V":{"implementation_status":"outside_phase1","test_bindings":[]},"M":{"implementation_status":"partial","test_bindings":["tests.test_inventory.AdditionalInventoryTests.test_absent_future_attempt_preserves_earlier_group_plan","tests.test_populations.AdversePopulationTests.test_later_unrecorded_attempt_does_not_block_first_hero_endpoint","tests.test_populations.HeroEndpointTests.test_empty_classified_complete_twenty_is_legitimate_zero","tests.test_populations.HeroEndpointTests.test_group_plan_cannot_be_inferred_from_twenty_rows","tests.test_populations.HeroEndpointTests.test_hero_membership_5_10_20_matches_frozen_design","tests.test_populations.HeroEndpointTests.test_last_group_failure_does_not_erase_earlier_endpoint","tests.test_populations.HeroEndpointTests.test_missing_g2_p5_allows_descriptive_but_not_matched_prefix","tests.test_populations.HeroEndpointTests.test_same_group_records_are_not_independent_draws","tests.test_populations.HeroEndpointTests.test_supplementary_single_candidate_k_is_not_hero_endpoint","tests.test_populations.HeroEndpointTests.test_unclassified_position_is_kept_without_replacement","tests.test_populations.HeroEndpointTests.test_wrong_primary_attempt_blocks_matching_group"],"reason":"Step 4 accounting and prior record checks are bound. Remaining full M integration/report/metric duties are not marked complete. No substantive E validation."}},"catalogue_row":"VT-12"},{"id":"VT-13","m_required":true,"scope_records":{"M":{"implementation_status":"not_implemented","test_bindings":[]}},"catalogue_row":"VT-13"},{"id":"VT-14","m_required":true,"scope_records":{"M":{"implementation_status":"partial","test_bindings":["tests.test_evidence.AdmissionTests.test_wrong_frame_withholds_only_affected_sample","tests.test_evidence.AdmissionTests.test_wrong_rubric_withholds_validity_only","tests.test_inventory.InventoryTests.test_frame_failure_is_scoped_and_distinct_from_empty","tests.test_inventory.InventoryTests.test_protocol_mismatch_is_frame_error","tests.test_populations.PopulationTests.test_other_cell_survives_malformed_frame_and_no_pooling","tests.test_populations.PopulationTests.test_shared_schema_failure_is_unavailable_not_zero_classes","tests.test_records.ManifestTests.test_incompatible_frame_version_is_not_empty_data"],"reason":"Step 4 accounting and prior record checks are bound. Remaining full M integration/report/metric duties are not marked complete. No substantive E validation."},"V":{"implementation_status":"outside_phase1","test_bindings":[]}},"catalogue_row":"VT-14"},{"id":"VT-15","m_required":true,"scope_records":{"M":{"implementation_status":"partial","test_bindings":["tests.test_evidence.AdmissionTests.test_sorted_outputs_do_not_identify_algorithm","tests.test_evidence.AdmissionTests.test_model_label_and_embedding_methods_do_not_admit","tests.test_evidence.AdmissionTests.test_inaccessible_essential_report_withholds_label"]},"E":{"implementation_status":"evidence_not_supplied","test_bindings":[]}},"catalogue_row":"VT-15"},{"id":"VT-16","m_required":true,"scope_records":{"M":{"implementation_status":"partial","test_bindings":["tests.test_evidence.AdmissionTests.test_unresolved_adjudicated_retains_epistemic_state","tests.test_evidence.AdmissionTests.test_explicit_evidence_contradiction_is_preserved","tests.test_integrity_records.IntegrityTests.test_unreviewed_intake_preserves_original_anomaly"]},"E":{"implementation_status":"evidence_not_supplied","test_bindings":[]}},"catalogue_row":"VT-16"},{"id":"VT-17","m_required":true,"scope_records":{"M":{"implementation_status":"partial","test_bindings":["tests.test_evidence.CorrectionTests.test_impact_records_link_without_recalculating_metrics","tests.test_evidence.CorrectionTests.test_raw_bundle_is_unchanged_by_review","tests.test_evidence.CorrectionTests.test_shared_schema_challenge_affects_all_dependent_labels","tests.test_evidence.CorrectionTests.test_withdrawal_preserves_other_assignment_and_validity","tests.test_populations.AdversePopulationTests.test_local_failed_adjudication_never_withholds_entire_population","tests.test_populations.PopulationTests.test_old_and_corrected_populations_keep_sample_identity"],"reason":"Step 4 accounting and prior record checks are bound. Remaining full M integration/report/metric duties are not marked complete. No substantive E validation."},"V":{"implementation_status":"outside_phase1","test_bindings":[]}},"catalogue_row":"VT-17"},{"id":"VT-18","m_required":true,"scope_records":{"M":{"implementation_status":"partial","test_bindings":["tests.test_evidence.AdmissionTests.test_missing_independence_does_not_remove_mechanism","tests.test_evidence.CorrectionTests.test_independence_only_withdrawal_keeps_label","tests.test_populations.PopulationTests.test_independence_only_correction_preserves_counts"],"reason":"Step 4 accounting and prior record checks are bound. Remaining full M integration/report/metric duties are not marked complete. No substantive E validation."},"V":{"implementation_status":"outside_phase1","test_bindings":[]}},"catalogue_row":"VT-18"},{"id":"VT-19","m_required":true,"scope_records":{"M":{"implementation_status":"partial","test_bindings":["tests.test_security.PassiveInputTests.test_hostile_text_never_executes_or_calls_network","tests.test_evidence.CorrectionTests.test_passive_review_never_invokes_network_or_executes","tests.test_security.PassiveInputTests.test_private_artifact_does_not_attempt_local_read"]},"V":{"implementation_status":"outside_phase1","test_bindings":[]}},"catalogue_row":"VT-19"},{"id":"VT-20","m_required":true,"scope_records":{"M":{"implementation_status":"not_implemented","test_bindings":[]},"V":{"implementation_status":"outside_phase1","test_bindings":[]}},"catalogue_row":"VT-20"},{"id":"VT-21","m_required":true,"scope_records":{"M":{"implementation_status":"partial","test_bindings":["tests.test_integrity_records.IntegrityTests.test_unknown_parent_remains_unknown","tests.test_integrity_records.IntegrityTests.test_lineage_cycles_do_not_trigger_universal_dag_rejection","tests.test_integrity_records.IntegrityTests.test_source_unknowns_cannot_become_inferred_ancestry","tests.test_evidence.AdmissionTests.test_cycle_of_evidence_support_is_not_grounding"]},"E":{"implementation_status":"evidence_not_supplied","test_bindings":[]}},"catalogue_row":"VT-21"},{"id":"VT-22","m_required":true,"scope_records":{"M":{"implementation_status":"partial","test_bindings":["tests.test_integrity_records.IntegrityTests.test_two_sessions_by_one_person_fail_two_person_requirement","tests.test_integrity_records.IntegrityTests.test_initial_label_exposure_is_not_independent_first_pass","tests.test_integrity_records.IntegrityTests.test_disagreement_preserves_both_initial_outcomes","tests.test_integrity_records.IntegrityTests.test_two_mock_humans_are_only_record_consistent"]},"E":{"implementation_status":"evidence_not_supplied","test_bindings":[]}},"catalogue_row":"VT-22"},{"id":"VT-23","m_required":true,"scope_records":{"M":{"implementation_status":"partial","test_bindings":["tests.test_integrity_records.IntegrityTests.test_empty_intake_is_distinct_from_received_evidence","tests.test_integrity_records.IntegrityTests.test_unreviewed_intake_preserves_original_anomaly","tests.test_integrity_records.IntegrityTests.test_checked_in_integrity_cases_are_actual_mock_payloads"]},"E":{"implementation_status":"evidence_not_supplied","test_bindings":[]}},"catalogue_row":"VT-23"},{"id":"VT-24","m_required":true,"scope_records":{"M":{"implementation_status":"partial","test_bindings":["tests.test_integrity_records.IntegrityTests.test_unknown_exposure_does_not_become_false","tests.test_integrity_records.IntegrityTests.test_known_prior_exposure_overrides_false_annotation_flag","tests.test_integrity_records.IntegrityTests.test_later_discussion_does_not_rewrite_first_pass"]},"V":{"implementation_status":"outside_phase1","test_bindings":[]},"E":{"implementation_status":"evidence_not_supplied","test_bindings":[]}},"catalogue_row":"VT-24"},{"id":"VT-25","m_required":true,"scope_records":{"M":{"implementation_status":"partial","test_bindings":["tests.test_records.RegistryTests.test_registry_is_exact_transcription_with_no_validation_claim","tests.test_integrity_records.IntegrityTests.test_design_32_core_and_28_pairs_remains_a_plan"]},"E":{"implementation_status":"evidence_not_supplied","test_bindings":[]}},"catalogue_row":"VT-25"},{"id":"VT-26","m_required":true,"scope_records":{"M":{"implementation_status":"partial","test_bindings":["tests.test_integrity_records.IntegrityTests.test_design_8995_tests_does_not_count_as_performed_validation"]},"E":{"implementation_status":"evidence_not_supplied","test_bindings":[]}},"catalogue_row":"VT-26"},{"id":"VT-27","m_required":true,"scope_records":{"M":{"implementation_status":"partial","test_bindings":["tests.test_evidence.AdmissionTests.test_execution_record_required_for_coding_validity","tests.test_integrity_records.IntegrityTests.test_domain_property_mismatch_is_not_execution_evidence","tests.test_integrity_records.IntegrityTests.test_withdrawn_suite_cannot_support_execution_record"]},"E":{"implementation_status":"evidence_not_supplied","test_bindings":[]}},"catalogue_row":"VT-27"},{"id":"VT-28","m_required":true,"scope_records":{"M":{"implementation_status":"partial","test_bindings":["tests.test_evidence.AdmissionTests.test_timeout_cannot_validate_or_invalidate_program","tests.test_evidence.AdmissionTests.test_repaired_artifact_cannot_validate_original","tests.test_evidence.AdmissionTests.test_wrong_execution_subject_is_detected"]},"E":{"implementation_status":"evidence_not_supplied","test_bindings":[]}},"catalogue_row":"VT-28"},{"id":"VT-29","m_required":true,"scope_records":{"M":{"implementation_status":"partial","test_bindings":["tests.test_integrity_records.IntegrityTests.test_audit_extra_review_does_not_replace_missing_planned_position","tests.test_integrity_records.IntegrityTests.test_audit_needs_annotations_for_each_reviewed_target","tests.test_integrity_records.IntegrityTests.test_matching_mock_audit_stays_record_only"]},"E":{"implementation_status":"evidence_not_supplied","test_bindings":[]}},"catalogue_row":"VT-29"},{"id":"VT-30","m_required":true,"scope_records":{"M":{"implementation_status":"partial","test_bindings":["tests.test_integrity_records.IntegrityTests.test_complete_mock_form_never_certifies_operational_openness","tests.test_integrity_records.IntegrityTests.test_complete_review_keeps_sources_and_classifications_passive"]}},"catalogue_row":"VT-30"},{"id":"VT-31","m_required":false,"scope_records":{"V":{"implementation_status":"outside_phase1","test_bindings":[]}},"catalogue_row":"VT-31"},{"id":"VT-32","m_required":false,"scope_records":{"V":{"implementation_status":"outside_phase1","test_bindings":[]}},"catalogue_row":"VT-32"},{"id":"VT-33","m_required":false,"scope_records":{"V":{"implementation_status":"outside_phase1","test_bindings":[]}},"catalogue_row":"VT-33"},{"id":"VT-34","m_required":false,"scope_records":{"V":{"implementation_status":"outside_phase1","test_bindings":[]},"E":{"implementation_status":"evidence_not_supplied","test_bindings":[]}},"catalogue_row":"VT-34"},{"id":"VT-35","m_required":false,"scope_records":{"V":{"implementation_status":"outside_phase1","test_bindings":[]},"E":{"implementation_status":"evidence_not_supplied","test_bindings":[]}},"catalogue_row":"VT-35"},{"id":"VT-36","m_required":true,"scope_records":{"V":{"implementation_status":"outside_phase1","test_bindings":[]},"M":{"implementation_status":"partial","test_bindings":["tests.test_inventory.AdditionalInventoryTests.test_declared_output_offsets_cannot_add_a_new_realization_twice","tests.test_inventory.ArtifactAssociationTests.test_character_offsets_cannot_replace_byte_offsets","tests.test_inventory.ArtifactAssociationTests.test_empty_emitted_region_is_real_bytes_not_missing_slot","tests.test_inventory.ArtifactAssociationTests.test_exact_byte_region_keeps_unicode_and_crlf","tests.test_inventory.ArtifactAssociationTests.test_missing_raw_is_unavailable_not_an_extraction_guess","tests.test_inventory.ArtifactAssociationTests.test_negative_bool_and_oversized_spans_are_controlled","tests.test_inventory.ArtifactAssociationTests.test_raw_response_mismatch_cannot_be_repaired_by_neighbor","tests.test_inventory.ArtifactAssociationTests.test_truncated_known_text_can_be_associated_without_completion","tests.test_populations.AdversePopulationTests.test_association_error_withholds_both_affected_axes_without_deleting_sample"],"reason":"Step 4 accounting and prior record checks are bound. Remaining full M integration/report/metric duties are not marked complete. No substantive E validation."}},"catalogue_row":"VT-36"},{"id":"VT-37","m_required":false,"scope_records":{"V":{"implementation_status":"outside_phase1","test_bindings":[]}},"catalogue_row":"VT-37"},{"id":"VT-38","m_required":false,"scope_records":{"V":{"implementation_status":"outside_phase1","test_bindings":[]}},"catalogue_row":"VT-38"},{"id":"VT-39","m_required":false,"scope_records":{"V":{"implementation_status":"outside_phase1","test_bindings":[]}},"catalogue_row":"VT-39"},{"id":"VT-40","m_required":false,"scope_records":{"V":{"implementation_status":"outside_phase1","test_bindings":[]}},"catalogue_row":"VT-40"},{"id":"VT-41","m_required":false,"scope_records":{"V":{"implementation_status":"outside_phase1","test_bindings":[]}},"catalogue_row":"VT-41"},{"id":"VT-42","m_required":false,"scope_records":{"V":{"implementation_status":"outside_phase1","test_bindings":[]}},"catalogue_row":"VT-42"},{"id":"VT-43","m_required":false,"scope_records":{"V":{"implementation_status":"outside_phase1","test_bindings":[]}},"catalogue_row":"VT-43"},{"id":"VT-44","m_required":false,"scope_records":{"V":{"implementation_status":"outside_phase1","test_bindings":[]}},"catalogue_row":"VT-44"},{"id":"VT-45","m_required":false,"scope_records":{"V":{"implementation_status":"outside_phase1","test_bindings":[]}},"catalogue_row":"VT-45"},{"id":"VT-46","m_required":true,"scope_records":{"M":{"implementation_status":"not_implemented","test_bindings":[]},"V":{"implementation_status":"outside_phase1","test_bindings":[]}},"catalogue_row":"VT-46"},{"id":"VT-47","m_required":true,"scope_records":{"E":{"implementation_status":"evidence_not_supplied","test_bindings":[]},"M":{"implementation_status":"partial","test_bindings":["tests.test_evidence.AdmissionTests.test_import_positive_carries_restricted_scientific_scope","tests.test_integrity_records.IntegrityTests.test_two_mock_humans_are_only_record_consistent","tests.test_integrity_records.IntegrityTests.test_complete_review_keeps_sources_and_classifications_passive"]},"V":{"implementation_status":"outside_phase1","test_bindings":[]}},"catalogue_row":"VT-47"},{"id":"VT-48","m_required":false,"scope_records":{"E":{"implementation_status":"evidence_not_supplied","test_bindings":[]}},"catalogue_row":"VT-48"},{"id":"VT-49","m_required":false,"scope_records":{"E":{"implementation_status":"evidence_not_supplied","test_bindings":[]}},"catalogue_row":"VT-49"},{"id":"VT-50","m_required":false,"scope_records":{"V":{"implementation_status":"outside_phase1","test_bindings":[]},"E":{"implementation_status":"evidence_not_supplied","test_bindings":[]}},"catalogue_row":"VT-50"},{"id":"VT-51","m_required":true,"scope_records":{"M":{"implementation_status":"not_implemented","test_bindings":[]},"D":{"implementation_status":"deferred","test_bindings":[]}},"catalogue_row":"VT-51"},{"id":"VT-52","m_required":true,"scope_records":{"M":{"implementation_status":"not_implemented","test_bindings":[]},"D":{"implementation_status":"deferred","test_bindings":[]}},"catalogue_row":"VT-52"},{"id":"VT-53","m_required":true,"scope_records":{"M":{"implementation_status":"not_implemented","test_bindings":[]},"D":{"implementation_status":"deferred","test_bindings":[]}},"catalogue_row":"VT-53"},{"id":"VT-54","m_required":true,"scope_records":{"M":{"implementation_status":"not_implemented","test_bindings":[]},"D":{"implementation_status":"deferred","test_bindings":[]}},"catalogue_row":"VT-54"}],
-"trace_requirements":[{"id":"TR-01","m_applicable":true,"implementation_status":"not_implemented"},{"id":"TR-02","m_applicable":true,"implementation_status":"not_implemented"},{"id":"TR-03","m_applicable":true,"implementation_status":"not_implemented"},{"id":"TR-04","m_applicable":true,"implementation_status":"not_implemented"},{"id":"TR-05","m_applicable":true,"implementation_status":"not_implemented"},{"id":"TR-06","m_applicable":true,"implementation_status":"not_implemented"},{"id":"TR-07","m_applicable":true,"implementation_status":"not_implemented"},{"id":"TR-08","m_applicable":true,"implementation_status":"not_implemented"},{"id":"TR-09","m_applicable":true,"implementation_status":"not_implemented"},{"id":"TR-10","m_applicable":true,"implementation_status":"not_implemented"},{"id":"TR-11","m_applicable":true,"implementation_status":"not_implemented"},{"id":"TR-12","m_applicable":true,"implementation_status":"not_implemented"},{"id":"TR-13","m_applicable":true,"implementation_status":"not_implemented"},{"id":"TR-14","m_applicable":true,"implementation_status":"not_implemented"},{"id":"TR-15","m_applicable":true,"implementation_status":"not_implemented"},{"id":"TR-16","m_applicable":false,"implementation_status":"outside_phase1"},{"id":"TR-17","m_applicable":false,"implementation_status":"outside_phase1"},{"id":"TR-18","m_applicable":false,"implementation_status":"outside_phase1"},{"id":"TR-19","m_applicable":true,"implementation_status":"not_implemented"},{"id":"TR-20","m_applicable":false,"implementation_status":"outside_phase1"},{"id":"TR-21","m_applicable":false,"implementation_status":"outside_phase1"},{"id":"TR-22","m_applicable":true,"implementation_status":"not_implemented"},{"id":"TR-23","m_applicable":false,"implementation_status":"outside_phase1"},{"id":"TR-24","m_applicable":false,"implementation_status":"outside_phase1"},{"id":"TR-25","m_applicable":true,"implementation_status":"not_implemented"},{"id":"TR-26","m_applicable":true,"implementation_status":"not_implemented"},{"id":"TR-27","m_applicable":true,"implementation_status":"not_implemented"},{"id":"TR-28","m_applicable":true,"implementation_status":"not_implemented"},{"id":"TR-29","m_applicable":true,"implementation_status":"not_implemented"},{"id":"TR-30","m_applicable":true,"implementation_status":"not_implemented"},{"id":"TR-31","m_applicable":true,"implementation_status":"not_implemented"},{"id":"TR-32","m_applicable":true,"implementation_status":"not_implemented"},{"id":"TR-33","m_applicable":true,"implementation_status":"not_implemented"},{"id":"TR-34","m_applicable":true,"implementation_status":"not_implemented"},{"id":"TR-35","m_applicable":true,"implementation_status":"not_implemented"},{"id":"TR-36","m_applicable":true,"implementation_status":"not_implemented"},{"id":"TR-37","m_applicable":true,"implementation_status":"not_implemented"},{"id":"TR-38","m_applicable":true,"implementation_status":"not_implemented"},{"id":"TR-39","m_applicable":true,"implementation_status":"not_implemented"},{"id":"TR-40","m_applicable":true,"implementation_status":"not_implemented"}],
-"report_groups":[{"id":"RF-01","m_applicable":true,"implementation_status":"not_implemented"},{"id":"RF-02","m_applicable":true,"implementation_status":"not_implemented"},{"id":"RF-03","m_applicable":true,"implementation_status":"not_implemented"},{"id":"RF-04","m_applicable":true,"implementation_status":"not_implemented"},{"id":"RF-05","m_applicable":true,"implementation_status":"not_implemented"},{"id":"RF-06","m_applicable":true,"implementation_status":"not_implemented"},{"id":"RF-07","m_applicable":true,"implementation_status":"not_implemented"},{"id":"RF-08","m_applicable":true,"implementation_status":"not_implemented"},{"id":"RF-09","m_applicable":true,"implementation_status":"not_implemented"},{"id":"RF-10","m_applicable":true,"implementation_status":"not_implemented"},{"id":"RF-11","m_applicable":true,"implementation_status":"not_implemented"},{"id":"RF-12","m_applicable":true,"implementation_status":"not_implemented"},{"id":"RF-13","m_applicable":true,"implementation_status":"not_implemented"},{"id":"RF-14","m_applicable":true,"implementation_status":"not_implemented"},{"id":"RF-15","m_applicable":true,"implementation_status":"not_implemented"},{"id":"RF-16","m_applicable":true,"implementation_status":"not_implemented"},{"id":"RF-17","m_applicable":true,"implementation_status":"not_implemented"},{"id":"RF-18","m_applicable":true,"implementation_status":"not_implemented"},{"id":"RF-19","m_applicable":true,"implementation_status":"not_implemented"},{"id":"RF-20","m_applicable":true,"implementation_status":"not_implemented"},{"id":"RF-21","m_applicable":false,"implementation_status":"outside_phase1"},{"id":"RF-22","m_applicable":false,"implementation_status":"outside_phase1"},{"id":"RF-23","m_applicable":false,"implementation_status":"outside_phase1"},{"id":"RF-24","m_applicable":false,"implementation_status":"outside_phase1"},{"id":"RF-25","m_applicable":false,"implementation_status":"outside_phase1"},{"id":"RF-26","m_applicable":false,"implementation_status":"outside_phase1"},{"id":"RF-27","m_applicable":false,"implementation_status":"outside_phase1"},{"id":"RF-28","m_applicable":false,"implementation_status":"outside_phase1"},{"id":"RF-29","m_applicable":true,"implementation_status":"not_implemented"},{"id":"RF-30","m_applicable":true,"implementation_status":"not_implemented"},{"id":"RF-31","m_applicable":true,"implementation_status":"not_implemented"},{"id":"RF-32","m_applicable":true,"implementation_status":"not_implemented"},{"id":"RF-33","m_applicable":true,"implementation_status":"not_implemented"},{"id":"RF-34","m_applicable":true,"implementation_status":"not_implemented"},{"id":"RF-35","m_applicable":true,"implementation_status":"not_implemented"},{"id":"RF-36","m_applicable":true,"implementation_status":"not_implemented"}],
-"scope_note":"Test bindings name real canonical unittest methods only. Execution results belong to artifacts/phase1/test_results.json. No M/V/E/D scientific check is fulfilled by a scaffold test.",
-"authorization_history":[{"owner_instruction":"很好，给我phase 1 step 1","interpretation":"Approves the delivered Phase 1 plan and authorizes Step 1 only.","does_not_authorize":["Step 2 or later implementation","GitHub writes or repository creation","model calls or spending","publication or license selection"],"decision_timestamp":null,"timestamp_note":"No exact owner-decision timestamp asserted."},{"owner_instruction":"批准，继续Phase 1 Step 2","interpretation":"Input layer and original GitHub synchronization authorized."}],
-"step2_acceptance":{"scope":"input_layer_only","test_bindings":["tests.test_local_io.BundleTests.test_bad_required_version_never_becomes_empty_success","tests.test_local_io.BundleTests.test_empty_and_malformed_records_remain_distinct","tests.test_local_io.BundleTests.test_external_and_unavailable_artifacts_are_inert","tests.test_local_io.BundleTests.test_hash_mismatch_is_scoped_and_keeps_expected_hash","tests.test_local_io.BundleTests.test_line_limit_does_not_turn_suffix_into_next_row","tests.test_local_io.BundleTests.test_malformed_line_does_not_erase_next_record","tests.test_local_io.BundleTests.test_only_declared_files_are_read","tests.test_local_io.BundleTests.test_read_order_does_not_become_scientific_order","tests.test_local_io.BundleTests.test_record_file_hash_mismatch_preserves_inventory","tests.test_local_io.BundleTests.test_record_limit_is_not_silent_sampling","tests.test_local_io.BundleTests.test_sample_hash_uses_analyzed_bytes","tests.test_local_io.BundleTests.test_source_pin_mismatch_does_not_trigger_retrieval","tests.test_local_io.BundleTests.test_wrong_file_role_preserves_raw_record","tests.test_local_io.SnapshotTests.test_change_during_read_is_detected","tests.test_local_io.SnapshotTests.test_directory_and_fifo_are_rejected_without_blocking","tests.test_local_io.SnapshotTests.test_file_and_total_byte_limits","tests.test_local_io.SnapshotTests.test_internal_external_and_root_symlinks_are_rejected","tests.test_local_io.SnapshotTests.test_path_grammar_rejects_remote_and_expansion","tests.test_local_io.SnapshotTests.test_snapshot_and_repeated_path_read","tests.test_local_io.SnapshotTests.test_snapshot_stays_stable_after_path_replacement","tests.test_local_io.SnapshotTests.test_unsupported_platform_has_no_unsafe_fallback","tests.test_local_io.StrictJSONTests.test_bad_manifest_field_types_have_controlled_errors","tests.test_local_io.StrictJSONTests.test_depth_bound_respects_strings","tests.test_local_io.StrictJSONTests.test_duplicate_keys_and_escaped_aliases_fail","tests.test_local_io.StrictJSONTests.test_invalid_overrides_never_weaken_limits","tests.test_local_io.StrictJSONTests.test_large_finite_exponent_is_not_float_infinity","tests.test_local_io.StrictJSONTests.test_nonfinite_constants_fail","tests.test_local_io.StrictJSONTests.test_number_length_and_file_limits","tests.test_local_io.StrictJSONTests.test_utf8_bom_surrogates_and_bad_syntax_fail","tests.test_records.CatalogueReferenceTests.test_mismatched_row_reference_cannot_redirect_requirement","tests.test_records.CatalogueReferenceTests.test_modified_source_is_rejected_before_catalogue_expansion","tests.test_records.IdentityTests.test_duplicate_id_including_bad_record_is_ambiguous","tests.test_records.IdentityTests.test_explicit_revisions_and_conflicting_pins","tests.test_records.IdentityTests.test_identical_content_with_distinct_ids_is_not_deduplicated","tests.test_records.IdentityTests.test_missing_reference_keeps_other_records","tests.test_records.IdentityTests.test_unallocated_sample_is_retained","tests.test_records.IdentityTests.test_wrong_protocol_version_is_diagnosed","tests.test_records.InputBoundaryReviewTests.test_declaration_limit_is_explicit","tests.test_records.InputBoundaryReviewTests.test_duplicate_source_pins_and_wrong_registry_reference_fail","tests.test_records.InputBoundaryReviewTests.test_nested_ref_shaped_metadata_does_not_crash","tests.test_records.InputBoundaryReviewTests.test_unsupported_kind_cannot_leak_into_identity_diagnostics","tests.test_records.KnowledgeTests.test_axes_cannot_be_substituted","tests.test_records.KnowledgeTests.test_bad_tagged_values_have_safe_failures","tests.test_records.KnowledgeTests.test_knowledge_freezes_caller_owned_data","tests.test_records.KnowledgeTests.test_known_zero_false_empty_and_null_are_retained","tests.test_records.KnowledgeTests.test_missing_value_and_contradictory_knowledge_fail","tests.test_records.KnowledgeTests.test_unknown_unavailable_and_not_applicable_are_distinct","tests.test_records.ManifestTests.test_bad_manifest_and_duplicate_files_fail","tests.test_records.ManifestTests.test_exact_decimal_string_and_number_tokens","tests.test_records.ManifestTests.test_incompatible_frame_version_is_not_empty_data","tests.test_records.ManifestTests.test_invalid_thresholds_and_k_are_scoped","tests.test_records.ManifestTests.test_minimal_manifest_has_no_default_controls","tests.test_records.ManifestTests.test_missing_frame_does_not_erase_other_frame","tests.test_records.ManifestTests.test_source_and_ec_addendum_pins_match","tests.test_records.RecordShapeTests.test_assigned_without_class_is_rejected","tests.test_records.RecordShapeTests.test_assignment_states_preserve_review_and_candidates","tests.test_records.RecordShapeTests.test_class_on_unresolved_is_rejected","tests.test_records.RecordShapeTests.test_counts_reject_booleans_and_nonintegers","tests.test_records.RecordShapeTests.test_evidence_payload_is_envelope_only","tests.test_records.RecordShapeTests.test_hostile_payload_is_preserved_not_interpreted","tests.test_records.RecordShapeTests.test_malformed_and_alias_ids_fail_without_echoing_content","tests.test_records.RecordShapeTests.test_missing_optional_data_stays_absent","tests.test_records.RecordShapeTests.test_unsupported_version_kind_and_fields_preserve_raw","tests.test_records.RecordShapeTests.test_validity_is_separate_and_not_inferred","tests.test_records.RegistryTests.test_named_negative_cases_are_fixture_only","tests.test_records.RegistryTests.test_registry_is_definition_not_model_samples","tests.test_records.RegistryTests.test_registry_is_exact_transcription_with_no_validation_claim","tests.test_records.Step2MatrixTests.test_additive_source_history_preserves_baseline_authorization","tests.test_records.Step2MatrixTests.test_catalogue_binds_actual_input_tests","tests.test_records.Step2MatrixTests.test_partial_input_bindings_do_not_close_vt_or_evidence","tests.test_security.PassiveInputTests.test_hostile_text_never_executes_or_calls_network","tests.test_security.PassiveInputTests.test_no_model_metric_or_candidate_runner_surface","tests.test_security.PassiveInputTests.test_private_artifact_does_not_attempt_local_read","tests.test_security.PassiveInputTests.test_unsafe_local_urls_never_reach_network"]},
-"step3_acceptance":{"scope":"evidence_record_handling_only","test_bindings":["tests.test_evidence.AdmissionTests.test_conflicting_assertion_is_not_vote","tests.test_evidence.AdmissionTests.test_cycle_of_evidence_support_is_not_grounding","tests.test_evidence.AdmissionTests.test_duplicate_invalid_record_still_ambiguous","tests.test_evidence.AdmissionTests.test_duplicate_pin_even_identical_is_conflict","tests.test_evidence.AdmissionTests.test_execution_record_required_for_coding_validity","tests.test_evidence.AdmissionTests.test_explicit_evidence_contradiction_is_preserved","tests.test_evidence.AdmissionTests.test_fixture_cannot_validate_import","tests.test_evidence.AdmissionTests.test_fixture_missing_declaration_is_local","tests.test_evidence.AdmissionTests.test_fixture_policy_cannot_present_empirical_context","tests.test_evidence.AdmissionTests.test_fixture_positive_is_only_stipulated","tests.test_evidence.AdmissionTests.test_import_positive_carries_restricted_scientific_scope","tests.test_evidence.AdmissionTests.test_import_requires_adjudication_record","tests.test_evidence.AdmissionTests.test_imported_outcome_conflict_is_not_ignored","tests.test_evidence.AdmissionTests.test_inaccessible_essential_report_withholds_label","tests.test_evidence.AdmissionTests.test_invalid_validity_does_not_erase_class","tests.test_evidence.AdmissionTests.test_known_malformed_method_is_controlled","tests.test_evidence.AdmissionTests.test_missing_independence_does_not_remove_mechanism","tests.test_evidence.AdmissionTests.test_missing_reviewer_is_not_adjudication","tests.test_evidence.AdmissionTests.test_missing_text_is_not_automatic_membership_failure","tests.test_evidence.AdmissionTests.test_model_label_and_embedding_methods_do_not_admit","tests.test_evidence.AdmissionTests.test_no_pin_never_selects_latest","tests.test_evidence.AdmissionTests.test_not_assessed_does_not_create_invalidity","tests.test_evidence.AdmissionTests.test_payload_shape_does_not_certify_evidence","tests.test_evidence.AdmissionTests.test_provisional_is_not_admitted","tests.test_evidence.AdmissionTests.test_repaired_artifact_cannot_validate_original","tests.test_evidence.AdmissionTests.test_revision_pin_mismatch_is_not_repaired","tests.test_evidence.AdmissionTests.test_sorted_outputs_do_not_identify_algorithm","tests.test_evidence.AdmissionTests.test_timeout_cannot_validate_or_invalidate_program","tests.test_evidence.AdmissionTests.test_unclassified_stays_unclassified","tests.test_evidence.AdmissionTests.test_undetermined_and_absent_validity_are_distinct","tests.test_evidence.AdmissionTests.test_unresolved_adjudicated_retains_epistemic_state","tests.test_evidence.AdmissionTests.test_wrong_execution_subject_is_detected","tests.test_evidence.AdmissionTests.test_wrong_frame_withholds_only_affected_sample","tests.test_evidence.AdmissionTests.test_wrong_rubric_withholds_validity_only","tests.test_evidence.CorrectionTests.test_cross_sample_predecessor_does_not_merge_samples","tests.test_evidence.CorrectionTests.test_cyclic_revision_link_is_detected","tests.test_evidence.CorrectionTests.test_impact_records_link_without_recalculating_metrics","tests.test_evidence.CorrectionTests.test_independence_only_withdrawal_keeps_label","tests.test_evidence.CorrectionTests.test_passive_review_never_invokes_network_or_executes","tests.test_evidence.CorrectionTests.test_pending_challenge_is_explicit","tests.test_evidence.CorrectionTests.test_raw_bundle_is_unchanged_by_review","tests.test_evidence.CorrectionTests.test_rejected_challenge_cannot_withdraw","tests.test_evidence.CorrectionTests.test_revision_with_new_evidence_requires_new_pin","tests.test_evidence.CorrectionTests.test_shared_schema_challenge_affects_all_dependent_labels","tests.test_evidence.CorrectionTests.test_withdrawal_preserves_other_assignment_and_validity","tests.test_integrity_records.IntegrityTests.test_absent_target_does_not_validate_by_two_votes","tests.test_integrity_records.IntegrityTests.test_all_nineteen_support_types_have_explicit_payload_validation","tests.test_integrity_records.IntegrityTests.test_audit_extra_review_does_not_replace_missing_planned_position","tests.test_integrity_records.IntegrityTests.test_audit_needs_annotations_for_each_reviewed_target","tests.test_integrity_records.IntegrityTests.test_checked_in_integrity_cases_are_actual_mock_payloads","tests.test_integrity_records.IntegrityTests.test_complete_mock_form_never_certifies_operational_openness","tests.test_integrity_records.IntegrityTests.test_complete_review_keeps_sources_and_classifications_passive","tests.test_integrity_records.IntegrityTests.test_design_32_core_and_28_pairs_remains_a_plan","tests.test_integrity_records.IntegrityTests.test_design_8995_tests_does_not_count_as_performed_validation","tests.test_integrity_records.IntegrityTests.test_disagreement_preserves_both_initial_outcomes","tests.test_integrity_records.IntegrityTests.test_domain_property_mismatch_is_not_execution_evidence","tests.test_integrity_records.IntegrityTests.test_empty_intake_is_distinct_from_received_evidence","tests.test_integrity_records.IntegrityTests.test_four_conditions_cannot_claim_five_condition_openness","tests.test_integrity_records.IntegrityTests.test_initial_judgment_materials_must_match","tests.test_integrity_records.IntegrityTests.test_initial_label_exposure_is_not_independent_first_pass","tests.test_integrity_records.IntegrityTests.test_known_prior_exposure_overrides_false_annotation_flag","tests.test_integrity_records.IntegrityTests.test_later_discussion_does_not_rewrite_first_pass","tests.test_integrity_records.IntegrityTests.test_lineage_cycles_do_not_trigger_universal_dag_rejection","tests.test_integrity_records.IntegrityTests.test_malformed_public_annotation_reference_is_controlled","tests.test_integrity_records.IntegrityTests.test_matching_mock_audit_stays_record_only","tests.test_integrity_records.IntegrityTests.test_missing_claim_evidence_is_unresolved_not_satisfied","tests.test_integrity_records.IntegrityTests.test_missing_mock_marker_is_not_defaulted","tests.test_integrity_records.IntegrityTests.test_mistyped_annotation_actor_is_controlled","tests.test_integrity_records.IntegrityTests.test_mistyped_domain_suite_reference_is_controlled","tests.test_integrity_records.IntegrityTests.test_nonapplicable_cannot_evade_mandatory_condition","tests.test_integrity_records.IntegrityTests.test_one_unresolved_condition_cannot_be_averaged_away","tests.test_integrity_records.IntegrityTests.test_source_unknowns_cannot_become_inferred_ancestry","tests.test_integrity_records.IntegrityTests.test_step3_matrix_binds_all_actual_step3_checks","tests.test_integrity_records.IntegrityTests.test_structural_schema_challenge_keeps_separate_validity","tests.test_integrity_records.IntegrityTests.test_support_value_type_mutations_do_not_crash","tests.test_integrity_records.IntegrityTests.test_two_mock_humans_are_only_record_consistent","tests.test_integrity_records.IntegrityTests.test_two_sessions_by_one_person_fail_two_person_requirement","tests.test_integrity_records.IntegrityTests.test_unknown_expiry_does_not_invent_validity_period","tests.test_integrity_records.IntegrityTests.test_unknown_exposure_does_not_become_false","tests.test_integrity_records.IntegrityTests.test_unknown_parent_remains_unknown","tests.test_integrity_records.IntegrityTests.test_unknown_payload_fields_are_not_executable_extensions","tests.test_integrity_records.IntegrityTests.test_unreviewed_intake_preserves_original_anomaly","tests.test_integrity_records.IntegrityTests.test_withdrawn_suite_cannot_support_execution_record"],"substantive_evidence_supplied":false},
-"ec001_supplement":{"source":{"name":"EC","sha256":"002d2393d05cb2c8b1db0a70e844e3d775e2be2155db7b2ffaadaa8080c8b950"},"documents":[{"path":"EVALUATION_CLOSURE_ADDENDUM.md","sha256":"31d2387ff2867e67e07adf60bca723b6783d0c3155b905d5477d2f844e1d9ce8"},{"path":"BASELINE_UPDATE_EC_001.md","sha256":"c4a876c86b97bec68ab2691704fe37e40bbee16a94bfdf3a08c783e450c982a2"},{"path":"THEORY_SOURCES.md","sha256":"33554654857da067870221d5d882fb5ef06cf005b8624079dda986085068d83e"}],"requirements":[{"id":"EC-C01","implementation_status":"partial","test_bindings":["tests.test_integrity_records.IntegrityTests.test_structural_schema_challenge_keeps_separate_validity"],"evidence_status":"not_supplied","reason":"Record checks only; reports and actual evidence pending."},{"id":"EC-C02","implementation_status":"partial","test_bindings":["tests.test_integrity_records.IntegrityTests.test_four_conditions_cannot_claim_five_condition_openness","tests.test_integrity_records.IntegrityTests.test_one_unresolved_condition_cannot_be_averaged_away"],"evidence_status":"not_supplied","reason":"Record checks only; reports and actual evidence pending."},{"id":"EC-C03","implementation_status":"partial","test_bindings":["tests.test_evidence.AdmissionTests.test_execution_record_required_for_coding_validity"],"evidence_status":"not_supplied","reason":"Record checks only; reports and actual evidence pending."},{"id":"EC-C04","implementation_status":"partial","test_bindings":["tests.test_evidence.CorrectionTests.test_impact_records_link_without_recalculating_metrics"],"evidence_status":"not_supplied","reason":"Record checks only; reports and actual evidence pending."},{"id":"EC-C05","implementation_status":"partial","test_bindings":["tests.test_integrity_records.IntegrityTests.test_unreviewed_intake_preserves_original_anomaly"],"evidence_status":"not_supplied","reason":"Record checks only; reports and actual evidence pending."},{"id":"EC-C06","implementation_status":"partial","test_bindings":["tests.test_integrity_records.IntegrityTests.test_complete_mock_form_never_certifies_operational_openness"],"evidence_status":"not_supplied","reason":"Record checks only; reports and actual evidence pending."},{"id":"EC-C07","implementation_status":"partial","test_bindings":["tests.test_integrity_records.IntegrityTests.test_unknown_expiry_does_not_invent_validity_period"],"evidence_status":"not_supplied","reason":"Record checks only; reports and actual evidence pending."},{"id":"EC-C08","implementation_status":"partial","test_bindings":["tests.test_records.RegistryTests.test_registry_is_definition_not_model_samples","tests.test_evidence.CorrectionTests.test_raw_bundle_is_unchanged_by_review"],"evidence_status":"not_supplied","reason":"Record checks only; reports and actual evidence pending."}]},
-"catalogue_encoding":"pinned_source_rows_v1",
-"current_step_scope":"Legacy Step 3 catalogue snapshot retained for preserved tests. See delivery_progress for the current delivery.",
-"delivery_progress":{"version":"0.2","phase":1,"step":5,"implementation_scope":"core_metrics_exact_thresholds_and_arithmetic_oracles","phase1_complete":false,"authorization":{"owner_instruction":"很好，继续Phase 1 Step 5","interpretation":"Accept Step 4; implement and publish Phase 1 Step 5. Stop before Step 6. No model calls, candidate execution, comparisons, independent empirical validation or package publication."}},
-"step4_acceptance":{"scope":"inventory_population_prefix_handling_only","test_bindings":["tests.test_inventory.AdditionalInventoryTests.test_absent_future_attempt_preserves_earlier_group_plan","tests.test_inventory.AdditionalInventoryTests.test_declared_output_offsets_cannot_add_a_new_realization_twice","tests.test_inventory.AdditionalInventoryTests.test_duplicate_group_position_with_unknown_attempt_is_unresolved","tests.test_inventory.AdditionalInventoryTests.test_extra_later_failure_does_not_contaminate_known_selected_ids","tests.test_inventory.AdditionalInventoryTests.test_malformed_manifest_stays_unavailable_not_successful_empty_study","tests.test_inventory.AdditionalInventoryTests.test_shared_group_across_cells_is_retained_without_pooling","tests.test_inventory.ArtifactAssociationTests.test_character_offsets_cannot_replace_byte_offsets","tests.test_inventory.ArtifactAssociationTests.test_empty_emitted_region_is_real_bytes_not_missing_slot","tests.test_inventory.ArtifactAssociationTests.test_exact_byte_region_keeps_unicode_and_crlf","tests.test_inventory.ArtifactAssociationTests.test_missing_raw_is_unavailable_not_an_extraction_guess","tests.test_inventory.ArtifactAssociationTests.test_negative_bool_and_oversized_spans_are_controlled","tests.test_inventory.ArtifactAssociationTests.test_raw_response_mismatch_cannot_be_repaired_by_neighbor","tests.test_inventory.ArtifactAssociationTests.test_truncated_known_text_can_be_associated_without_completion","tests.test_inventory.InventoryTests.test_attempt_cell_mismatch_is_preserved","tests.test_inventory.InventoryTests.test_attempts_and_realizations_are_separate","tests.test_inventory.InventoryTests.test_conflicting_order_sources_are_not_resolved_by_preference","tests.test_inventory.InventoryTests.test_duplicate_id_is_ambiguous_never_deduplicated_silently","tests.test_inventory.InventoryTests.test_duplicate_malformed_id_remains_ambiguous","tests.test_inventory.InventoryTests.test_duplicate_planned_position_is_unavailable","tests.test_inventory.InventoryTests.test_extra_output_is_preserved_unselected","tests.test_inventory.InventoryTests.test_failed_five_candidate_call_does_not_create_samples","tests.test_inventory.InventoryTests.test_frame_failure_is_scoped_and_distinct_from_empty","tests.test_inventory.InventoryTests.test_known_empty_and_truncated_emissions_remain_samples","tests.test_inventory.InventoryTests.test_known_empty_selection_is_zero_with_exclusions","tests.test_inventory.InventoryTests.test_large_attempt_count_does_not_expand_unbounded_positions","tests.test_inventory.InventoryTests.test_malformed_observation_retains_row_and_complete_count_uncertainty","tests.test_inventory.InventoryTests.test_missing_requested_sample_cannot_create_observation","tests.test_inventory.InventoryTests.test_no_io_after_loading","tests.test_inventory.InventoryTests.test_original_storage_order_is_not_experimental_sequence","tests.test_inventory.InventoryTests.test_partial_explicit_order_is_unavailable","tests.test_inventory.InventoryTests.test_plan_without_attempt_records_does_not_invent_attempts","tests.test_inventory.InventoryTests.test_position_plan_mutations_have_controlled_diagnostics","tests.test_inventory.InventoryTests.test_primary_attempt_metadata_can_supply_plan","tests.test_inventory.InventoryTests.test_private_and_missing_text_do_not_zero_inventory","tests.test_inventory.InventoryTests.test_protocol_mismatch_is_frame_error","tests.test_inventory.InventoryTests.test_recorded_ordinals_can_supply_order","tests.test_inventory.InventoryTests.test_repeated_bytes_with_distinct_positions_remain_observations","tests.test_inventory.InventoryTests.test_retry_is_preserved_without_adding_planned_slots","tests.test_inventory.InventoryTests.test_same_attempt_position_cannot_count_twice_under_two_ids","tests.test_inventory.InventoryTests.test_selecting_extra_output_cannot_extend_planned_budget","tests.test_inventory.InventoryTests.test_unattempted_slot_is_not_an_invocation","tests.test_inventory.InventoryTests.test_unknown_attempt_history_is_not_one_call_per_sample","tests.test_inventory.InventoryTests.test_unknown_cell_remains_unallocated","tests.test_inventory.InventoryTests.test_unknown_order_does_not_erase_selection","tests.test_inventory.InventoryTests.test_unknown_selection_is_not_automatically_all","tests.test_inventory.InventoryTests.test_wrong_record_file_hash_cannot_supply_selected_identity","tests.test_populations.AdversePopulationTests.test_actual_empty_input_has_no_invented_observations","tests.test_populations.AdversePopulationTests.test_association_error_withholds_both_affected_axes_without_deleting_sample","tests.test_populations.AdversePopulationTests.test_later_unrecorded_attempt_does_not_block_first_hero_endpoint","tests.test_populations.AdversePopulationTests.test_local_failed_adjudication_never_withholds_entire_population","tests.test_populations.AdversePopulationTests.test_missing_text_is_not_automatic_missing_artifact_identity","tests.test_populations.AdversePopulationTests.test_public_surface_stops_before_metrics_and_comparisons","tests.test_populations.AdversePopulationTests.test_reference_registry_and_incident_never_add_model_samples","tests.test_populations.AdversePopulationTests.test_repeated_call_without_new_identity_never_adds_sample","tests.test_populations.HeroEndpointTests.test_empty_classified_complete_twenty_is_legitimate_zero","tests.test_populations.HeroEndpointTests.test_group_plan_cannot_be_inferred_from_twenty_rows","tests.test_populations.HeroEndpointTests.test_hero_membership_5_10_20_matches_frozen_design","tests.test_populations.HeroEndpointTests.test_last_group_failure_does_not_erase_earlier_endpoint","tests.test_populations.HeroEndpointTests.test_missing_g2_p5_allows_descriptive_but_not_matched_prefix","tests.test_populations.HeroEndpointTests.test_same_group_records_are_not_independent_draws","tests.test_populations.HeroEndpointTests.test_supplementary_single_candidate_k_is_not_hero_endpoint","tests.test_populations.HeroEndpointTests.test_unclassified_position_is_kept_without_replacement","tests.test_populations.HeroEndpointTests.test_wrong_primary_attempt_blocks_matching_group","tests.test_populations.PopulationTests.test_all_invalid_can_still_have_structural_population","tests.test_populations.PopulationTests.test_axes_overlap_and_each_reconciles_to_selected_inventory","tests.test_populations.PopulationTests.test_conflicting_pin_is_local","tests.test_populations.PopulationTests.test_independence_only_correction_preserves_counts","tests.test_populations.PopulationTests.test_inputs_remain_unchanged_and_results_are_immutable","tests.test_populations.PopulationTests.test_known_empty_selection_has_undefined_ratios","tests.test_populations.PopulationTests.test_mf07_all_five_ratios_keep_unreduced_accounting","tests.test_populations.PopulationTests.test_mf07_exact_memberships","tests.test_populations.PopulationTests.test_missing_assignment_pin_has_no_latest_fallback","tests.test_populations.PopulationTests.test_missing_essential_class_evidence_preserves_other_samples","tests.test_populations.PopulationTests.test_missing_text_does_not_become_zero_coverage","tests.test_populations.PopulationTests.test_missing_validity_does_not_become_invalid","tests.test_populations.PopulationTests.test_no_io_or_model_calls_in_population_pass","tests.test_populations.PopulationTests.test_old_and_corrected_populations_keep_sample_identity","tests.test_populations.PopulationTests.test_one_class_is_distinct_from_no_class","tests.test_populations.PopulationTests.test_other_cell_survives_malformed_frame_and_no_pooling","tests.test_populations.PopulationTests.test_registry_zeros_remain_and_never_add_observations","tests.test_populations.PopulationTests.test_renaming_supported_class_ids_preserves_population_counts","tests.test_populations.PopulationTests.test_schema_correction_scopes_class_and_validity_separately","tests.test_populations.PopulationTests.test_shared_schema_failure_is_unavailable_not_zero_classes","tests.test_populations.PopulationTests.test_unknown_order_leaves_whole_cell_population_available","tests.test_populations.PopulationTests.test_unknown_selection_is_unavailable_not_empty","tests.test_populations.PopulationTests.test_validity_does_not_fill_unresolved_or_provisional_class","tests.test_populations.PopulationTests.test_wholly_unclassified_selection_remains_known_zero","tests.test_populations.PrefixTests.test_accumulation_monotonicity_on_fixed_assignments","tests.test_populations.PrefixTests.test_actual_order_change_may_change_prefix","tests.test_populations.PrefixTests.test_available_unclassified_prefix_has_count_zero","tests.test_populations.PrefixTests.test_grid_preserved_and_not_sorted_after_results","tests.test_populations.PrefixTests.test_invalid_and_omitted_k_have_distinct_outcomes","tests.test_populations.PrefixTests.test_invalid_or_unresolved_positions_are_not_backfilled","tests.test_populations.PrefixTests.test_invalid_view_and_mode_fail_explicitly","tests.test_populations.PrefixTests.test_mf10_exact_prefix_oracles","tests.test_populations.PrefixTests.test_partial_group_flag_is_descriptive_only","tests.test_populations.PrefixTests.test_storage_order_change_cannot_change_prefix","tests.test_populations.Step4MatrixTests.test_prior_requirement_and_source_identities_remain_intact","tests.test_populations.Step4MatrixTests.test_step4_progress_and_bindings_cover_executed_methods"],"substantive_evidence_supplied":false},
-"delivery_history":[{"version":"0.1","phase":1,"step":4,"implementation_scope":"inventories_populations_fixed_prefixes_and_coverage","phase1_complete":false,"authorization":{"owner_instruction":"可以，Phase 1 Step 4  开始","interpretation":"Accept Step 3. Implement Phase 1 Step 4 and publish on the existing GitHub repository. Stop before Step 5; no model calls, candidate execution, or external validation."}}],
-"step5_acceptance":{"scope":"core_count_metrics_and_fixed_prefix_components","test_bindings":["tests.test_metrics.Arithmetic.test_source_oracles","tests.test_metrics.Arithmetic.test_oracle_identity_and_role","tests.test_metrics.Arithmetic.test_higher_precision_independent_check","tests.test_metrics.Arithmetic.test_effective_counts_differ","tests.test_metrics.Arithmetic.test_one_class","tests.test_metrics.Arithmetic.test_zero_registry_entries","tests.test_metrics.Arithmetic.test_sci_with_replacement","tests.test_metrics.Arithmetic.test_unrounded_derivation","tests.test_metrics.Arithmetic.test_units_and_scope","tests.test_metrics.Thresholds.test_source_thresholds","tests.test_metrics.Thresholds.test_beyond_float_boundary","tests.test_metrics.Thresholds.test_no_renormalization","tests.test_metrics.Thresholds.test_other_metrics_unchanged","tests.test_metrics.Thresholds.test_omitted_vs_null","tests.test_metrics.Thresholds.test_empty_requested","tests.test_metrics.Thresholds.test_invalid_values","tests.test_metrics.Thresholds.test_invalid_empty","tests.test_metrics.Thresholds.test_lexemes_and_origins","tests.test_metrics.Thresholds.test_revalidate_token_object","tests.test_metrics.Thresholds.test_zero_never_passes","tests.test_metrics.Thresholds.test_large_negative_exponent","tests.test_metrics.Thresholds.test_large_integer_equality","tests.test_metrics.Thresholds.test_one_threshold_spellings","tests.test_metrics.Thresholds.test_token_limit","tests.test_metrics.Numerical.test_invalid_counts","tests.test_metrics.Numerical.test_exact_total","tests.test_metrics.Numerical.test_resource_limits","tests.test_metrics.Numerical.test_underflow_preserves_exact_support","tests.test_metrics.Numerical.test_renaming_and_order","tests.test_metrics.Numerical.test_uniform_scaling","tests.test_metrics.Numerical.test_624_small_tables","tests.test_metrics.Numerical.test_tiny_boundary_record","tests.test_metrics.Numerical.test_signed_zero","tests.test_metrics.Numerical.test_material_errors","tests.test_metrics.Numerical.test_tolerance_sum","tests.test_metrics.Numerical.test_exp_failure_scoped","tests.test_metrics.Numerical.test_log_failure_scoped","tests.test_metrics.Numerical.test_normalization_failure","tests.test_metrics.Numerical.test_effective_order_failure","tests.test_metrics.Numerical.test_immutable_results","tests.test_metrics.Numerical.test_no_deferred_estimators","tests.test_metrics.Populations.test_mf07_views_and_ratios","tests.test_metrics.Populations.test_all_invalid","tests.test_metrics.Populations.test_unclassified","tests.test_metrics.Populations.test_empty_selection","tests.test_metrics.Populations.test_frame_failure","tests.test_metrics.Populations.test_local_evidence_failure","tests.test_metrics.Populations.test_independence_only_withdrawal","tests.test_metrics.Populations.test_unknown_checkpoint","tests.test_metrics.Populations.test_malformed_threshold_is_component_specific","tests.test_metrics.Populations.test_ambiguous_ids","tests.test_metrics.Populations.test_population_duplicate_ids","tests.test_metrics.Populations.test_population_conservation","tests.test_metrics.Populations.test_passive_arithmetic","tests.test_metrics.Populations.test_bad_component_types","tests.test_metrics.Populations.test_no_hero_program_or_report_created","tests.test_metrics.Prefixes.test_mf10","tests.test_metrics.Prefixes.test_storage_order_invariant","tests.test_metrics.Prefixes.test_real_order_change","tests.test_metrics.Prefixes.test_missing_order","tests.test_metrics.Prefixes.test_zero_vs_missing_prefix","tests.test_metrics.Prefixes.test_partial_group","tests.test_metrics.Prefixes.test_k_states","tests.test_metrics.Prefixes.test_monotone_accumulation","tests.test_metrics.Prefixes.test_prefix_conservation","tests.test_metrics.Prefixes.test_hero_count_projection","tests.test_metrics.Prefixes.test_hero_invalid_projection","tests.test_metrics.Prefixes.test_hero_missing_intended_slot","tests.test_metrics.Prefixes.test_revision_preserves_old_result","tests.test_metrics.Matrix.test_explicit_test_bindings","tests.test_metrics.Matrix.test_frozen_and_external_scopes","tests.test_metrics.Matrix.test_complete_arithmetic_not_complete_report","tests.test_metrics.Matrix.test_history_and_actual_runner_step","tests.test_metrics.Matrix.test_invalid_binding_class","tests.test_metrics.Matrix.test_non_m_update_forbidden","tests.test_metrics.Matrix.test_old_bindings_preserved"],"end_to_end_report_implemented":false,"substantive_evidence_supplied":false,"oracle_file":"tests/fixtures/arithmetic_oracles.json","numerical_convention":{"absolute_tolerance":1e-12,"relative_tolerance":1e-10,"combination":"absolute + relative * abs(expected)"},"snapshot_policy":"Raw catalogue keeps historical dispositions. load_matrix validates and expands explicit implementation_updates into current M-only bindings and step identity for actual QA runs."},
-"implementation_updates":{"vf_tests":[{"id":"VT-05","implementation_status":"partial","binding_classes":["tests.test_metrics.Populations"],"reason":"Step 5 arithmetic/component checks only. Final report or complete integrated conformance remains for later steps.","fixture_refs":["MET sections 5-7 and 12","VF sections 5.1-5.2","tests/fixtures/arithmetic_oracles.json"]},{"id":"VT-06","implementation_status":"partial","binding_classes":["tests.test_metrics.Populations","tests.test_metrics.Arithmetic","tests.test_metrics.Numerical"],"reason":"Step 5 arithmetic/component checks only. Final report or complete integrated conformance remains for later steps.","fixture_refs":["MET sections 5-7 and 12","VF sections 5.1-5.2","tests/fixtures/arithmetic_oracles.json"]},{"id":"VT-07","implementation_status":"implemented","binding_classes":["tests.test_metrics.Arithmetic"],"reason":"Step 5 arithmetic/component checks only. This M arithmetic obligation is implemented.","fixture_refs":["MET sections 5-7 and 12","VF sections 5.1-5.2","tests/fixtures/arithmetic_oracles.json"]},{"id":"VT-08","implementation_status":"implemented","binding_classes":["tests.test_metrics.Thresholds"],"reason":"Step 5 arithmetic/component checks only. This M arithmetic obligation is implemented.","fixture_refs":["MET sections 5-7 and 12","VF sections 5.1-5.2","tests/fixtures/arithmetic_oracles.json"]},{"id":"VT-09","implementation_status":"implemented","binding_classes":["tests.test_metrics.Numerical","tests.test_metrics.Arithmetic"],"reason":"Step 5 arithmetic/component checks only. This M arithmetic obligation is implemented.","fixture_refs":["MET sections 5-7 and 12","VF sections 5.1-5.2","tests/fixtures/arithmetic_oracles.json"]},{"id":"VT-10","implementation_status":"implemented","binding_classes":["tests.test_metrics.Numerical","tests.test_metrics.Prefixes"],"reason":"Step 5 arithmetic/component checks only. This M arithmetic obligation is implemented.","fixture_refs":["MET sections 5-7 and 12","VF sections 5.1-5.2","tests/fixtures/arithmetic_oracles.json"]},{"id":"VT-11","implementation_status":"implemented","binding_classes":["tests.test_metrics.Prefixes"],"reason":"Step 5 arithmetic/component checks only. This M arithmetic obligation is implemented.","fixture_refs":["MET sections 5-7 and 12","VF sections 5.1-5.2","tests/fixtures/arithmetic_oracles.json"]},{"id":"VT-13","implementation_status":"partial","binding_classes":["tests.test_metrics.Populations","tests.test_metrics.Prefixes"],"reason":"Step 5 arithmetic/component checks only. Final report or complete integrated conformance remains for later steps.","fixture_refs":["MET sections 5-7 and 12","VF sections 5.1-5.2","tests/fixtures/arithmetic_oracles.json"]}],"trace_requirements":[{"id":"TR-03","implementation_status":"partial","binding_classes":["tests.test_metrics.Arithmetic","tests.test_metrics.Thresholds"],"reason":"Step 5 arithmetic/component checks only. Final report or complete integrated conformance remains for later steps.","fixture_refs":["MET sections 5-7 and 12","VF sections 5.1-5.2","tests/fixtures/arithmetic_oracles.json"]},{"id":"TR-10","implementation_status":"partial","binding_classes":["tests.test_metrics.Arithmetic","tests.test_metrics.Populations"],"reason":"Step 5 arithmetic/component checks only. Final report or complete integrated conformance remains for later steps.","fixture_refs":["MET sections 5-7 and 12","VF sections 5.1-5.2","tests/fixtures/arithmetic_oracles.json"]},{"id":"TR-11","implementation_status":"partial","binding_classes":["tests.test_metrics.Thresholds"],"reason":"Step 5 arithmetic/component checks only. Final report or complete integrated conformance remains for later steps.","fixture_refs":["MET sections 5-7 and 12","VF sections 5.1-5.2","tests/fixtures/arithmetic_oracles.json"]},{"id":"TR-12","implementation_status":"partial","binding_classes":["tests.test_metrics.Arithmetic","tests.test_metrics.Numerical"],"reason":"Step 5 arithmetic/component checks only. Final report or complete integrated conformance remains for later steps.","fixture_refs":["MET sections 5-7 and 12","VF sections 5.1-5.2","tests/fixtures/arithmetic_oracles.json"]},{"id":"TR-13","implementation_status":"partial","binding_classes":["tests.test_metrics.Arithmetic","tests.test_metrics.Numerical"],"reason":"Step 5 arithmetic/component checks only. Final report or complete integrated conformance remains for later steps.","fixture_refs":["MET sections 5-7 and 12","VF sections 5.1-5.2","tests/fixtures/arithmetic_oracles.json"]},{"id":"TR-14","implementation_status":"partial","binding_classes":["tests.test_metrics.Arithmetic","tests.test_metrics.Numerical"],"reason":"Step 5 arithmetic/component checks only. Final report or complete integrated conformance remains for later steps.","fixture_refs":["MET sections 5-7 and 12","VF sections 5.1-5.2","tests/fixtures/arithmetic_oracles.json"]},{"id":"TR-15","implementation_status":"partial","binding_classes":["tests.test_metrics.Prefixes"],"reason":"Step 5 arithmetic/component checks only. Final report or complete integrated conformance remains for later steps.","fixture_refs":["MET sections 5-7 and 12","VF sections 5.1-5.2","tests/fixtures/arithmetic_oracles.json"]}]}
+  "schema_version": "0.1",
+  "project": "StructDet-Bench",
+  "phase": 1,
+  "current_step": 3,
+  "implementation_status": "input_evidence_inventory_and_population_layers_only",
+  "authorization": {
+    "owner_instruction": "很好，继续phase 1 step 3",
+    "interpretation": "Step 2 local handoff accepted; Step 3 implementation and outstanding authorized GitHub synchronization. Stop before Step 4. No empirical collection, expense, automatic judging or input execution."
+  },
+  "baseline": [
+    {
+      "path": "PHASE_0_PLAN.md",
+      "version": "0.1",
+      "sha256": "5df37f3fef1d012d462a116d7839909c9379dfe6d59a1b3356cae004bcfac6a4",
+      "role": "frozen_phase0"
+    },
+    {
+      "path": "PROJECT_SCOPE.md",
+      "version": "0.1",
+      "sha256": "2eec02825c8df4281cc538d00dcb809907dc2eb8a2b1b73b597cbab17d975a11",
+      "role": "frozen_phase0"
+    },
+    {
+      "path": "DEFINITIONS_AND_UNITS.md",
+      "version": "0.1",
+      "sha256": "a3da3e356a21f59468178050944baf58787edd65204fbf40b3b1742cd38104ab",
+      "role": "frozen_phase0"
+    },
+    {
+      "path": "STRUCTURAL_CLASS_CONTRACT.md",
+      "version": "0.1",
+      "sha256": "00ba09dd879f5fe02a3302a6f1ad36bda1c6b7e2723562f5f62ec85fed125328",
+      "role": "frozen_phase0"
+    },
+    {
+      "path": "METRICS_SPEC.md",
+      "version": "0.2",
+      "sha256": "23b45934e87767ca87e56b97aa4e1d1abdd49e27187d0b9c5a336ca516a96edb",
+      "role": "frozen_phase0"
+    },
+    {
+      "path": "EVALUATION_INTEGRITY.md",
+      "version": "0.1",
+      "sha256": "50c5529c16164ee53e4d99502ed1ec24202f36152b36281870bf285185672dc3",
+      "role": "frozen_phase0"
+    },
+    {
+      "path": "HERO_BENCHMARK_SPEC.md",
+      "version": "0.1",
+      "sha256": "d1a0849d888a35ae3c9bd552bb920ee46417b7eeb4f8b687f8b5825e6fb851b2",
+      "role": "frozen_phase0"
+    },
+    {
+      "path": "THEORY_TO_CODE_TRACEABILITY.md",
+      "version": "0.2",
+      "sha256": "1b94c402804c1167bfc5c04b45a86364ac5061bc41273b87a36f184991bbeec2",
+      "role": "frozen_phase0"
+    },
+    {
+      "path": "VALIDATION_AND_FALSIFICATION.md",
+      "version": "0.2",
+      "sha256": "6aaa5b01290d3c6b9746f20d47c2092c038587d72d7e090ee3ad73438794ef00",
+      "role": "frozen_phase0"
+    },
+    {
+      "path": "UNRESOLVED_DECISIONS.md",
+      "version": "0.7",
+      "sha256": "5539ebbf859d0d423845fceb8b9ceda065f05e202d86d2ae662912aa2632a412",
+      "role": "frozen_phase0"
+    },
+    {
+      "path": "PHASE_0_APPROVAL.md",
+      "version": "0.1",
+      "sha256": "0d09da04ffd07568b1657ebc92c9b46fc09a489b9dde843fb1b424d048213db7",
+      "role": "frozen_phase0"
+    },
+    {
+      "path": "PHASE_1_PLAN.md",
+      "version": "0.1",
+      "sha256": "4a4137d1fa444c212af71740e439624c341ed485584ee3878e358f1e9424f704",
+      "role": "approved_execution_plan"
+    }
+  ],
+  "theory_sources": [
+    {
+      "name": "SD",
+      "filename": "The Structural Determinacy of LLM Generation_ Active Structure, Convergence Frontiers, and the Misreading of Randomness.pdf",
+      "sha256": "357c0c3994e34fc1831ce91bf1c7e579925d64827579f80eb0a8708e85c93f32",
+      "bundled": false
+    },
+    {
+      "name": "SI",
+      "filename": "Structural Inbreeding in Synthetic Data.pdf",
+      "sha256": "80c193231af343d383544cee924a11fbb063a5c4ccee02d996ea4f904979565a",
+      "bundled": false
+    }
+  ],
+  "engineering_requirements": [
+    {
+      "id": "ENG-01",
+      "test_bindings": [
+        "tests.test_scaffold.PackageTests.test_import_under_standard_library_only",
+        "tests.test_scaffold.PackageTests.test_version_matches_metadata",
+        "tests.test_scaffold.PackageTests.test_metadata_has_no_runtime_dependencies",
+        "tests.test_scaffold.PackageTests.test_distribution_excludes_tests_docs_and_pdfs"
+      ]
+    },
+    {
+      "id": "ENG-02",
+      "test_bindings": [
+        "tests.test_scaffold.CommandTests.test_help",
+        "tests.test_scaffold.CommandTests.test_version",
+        "tests.test_scaffold.CommandTests.test_no_arguments_show_help",
+        "tests.test_scaffold.CommandTests.test_validate_and_analyze_require_input_or_are_unavailable",
+        "tests.test_scaffold.CommandTests.test_forbidden_commands_are_rejected",
+        "tests.test_scaffold.CommandTests.test_unknown_option_is_error"
+      ]
+    },
+    {
+      "id": "ENG-03",
+      "test_bindings": [
+        "tests.test_scaffold.BaselineTests.test_all_baseline_hashes_match",
+        "tests.test_scaffold.BaselineTests.test_expected_hashes_match_plan_appendix",
+        "tests.test_scaffold.BaselineTests.test_matrix_preserves_vf_catalogue",
+        "tests.test_scaffold.BaselineTests.test_matrix_preserves_trace_catalogue",
+        "tests.test_scaffold.BaselineTests.test_matrix_preserves_report_catalogue",
+        "tests.test_scaffold.BaselineTests.test_all_54_scope_dispositions_and_37_m_families",
+        "tests.test_scaffold.BaselineTests.test_matrix_validation"
+      ]
+    },
+    {
+      "id": "ENG-04",
+      "test_bindings": [
+        "tests.test_scaffold.HarnessTests.test_empty_discovery_fails_both_gates",
+        "tests.test_scaffold.HarnessTests.test_missing_scaffold_binding_fails",
+        "tests.test_scaffold.HarnessTests.test_missing_m_bindings_fail_final_gate",
+        "tests.test_scaffold.HarnessTests.test_missing_trace_binding_fails_final_gate",
+        "tests.test_scaffold.HarnessTests.test_skipped_test_is_not_accepted",
+        "tests.test_scaffold.HarnessTests.test_expected_failure_is_not_accepted",
+        "tests.test_scaffold.HarnessTests.test_failure_and_error_are_recorded",
+        "tests.test_scaffold.HarnessTests.test_subtest_failure_is_recorded",
+        "tests.test_scaffold.HarnessTests.test_duplicate_discovery_fails",
+        "tests.test_scaffold.HarnessTests.test_broken_binding_fails",
+        "tests.test_scaffold.HarnessTests.test_future_evidence_is_not_executed",
+        "tests.test_scaffold.HarnessTests.test_journal_retains_prior_runs",
+        "tests.test_scaffold.HarnessTests.test_corrupt_journal_is_not_overwritten",
+        "tests.test_scaffold.HarnessTests.test_runner_help_does_not_run_tests",
+        "tests.test_scaffold.HarnessTests.test_class_fixture_error_is_recorded",
+        "tests.test_scaffold.HarnessTests.test_unexpected_success_is_not_accepted",
+        "tests.test_scaffold.HarnessTests.test_required_m_skip_blocks_final_gate"
+      ]
+    },
+    {
+      "id": "ENG-05",
+      "test_bindings": [
+        "tests.test_scaffold.PackageTests.test_no_public_analysis_api",
+        "tests.test_scaffold.CommandTests.test_runtime_help_and_version_do_not_use_network_or_child_processes",
+        "tests.test_scaffold.CommandTests.test_trusted_helper_rejects_arbitrary_commands",
+        "tests.test_scaffold.BaselineTests.test_readme_scope_is_explicit"
+      ]
+    }
+  ],
+  "vf_tests": [
+    {
+      "id": "VT-01",
+      "m_required": true,
+      "scope_records": {
+        "M": {
+          "implementation_status": "partial",
+          "test_bindings": [
+            "tests.test_records.KnowledgeTests.test_known_zero_false_empty_and_null_are_retained",
+            "tests.test_records.RecordShapeTests.test_missing_optional_data_stays_absent"
+          ]
+        }
+      },
+      "catalogue_row": "VT-01"
+    },
+    {
+      "id": "VT-02",
+      "m_required": true,
+      "scope_records": {
+        "M": {
+          "implementation_status": "partial",
+          "test_bindings": [
+            "tests.test_evidence.AdmissionTests.test_no_pin_never_selects_latest",
+            "tests.test_evidence.CorrectionTests.test_revision_with_new_evidence_requires_new_pin",
+            "tests.test_inventory.AdditionalInventoryTests.test_duplicate_group_position_with_unknown_attempt_is_unresolved",
+            "tests.test_inventory.InventoryTests.test_duplicate_id_is_ambiguous_never_deduplicated_silently",
+            "tests.test_inventory.InventoryTests.test_duplicate_malformed_id_remains_ambiguous",
+            "tests.test_inventory.InventoryTests.test_repeated_bytes_with_distinct_positions_remain_observations",
+            "tests.test_inventory.InventoryTests.test_same_attempt_position_cannot_count_twice_under_two_ids",
+            "tests.test_records.IdentityTests.test_identical_content_with_distinct_ids_is_not_deduplicated"
+          ],
+          "reason": "Step 4 accounting and prior record checks are bound. Remaining full M integration/report/metric duties are not marked complete. No substantive E validation."
+        }
+      },
+      "catalogue_row": "VT-02"
+    },
+    {
+      "id": "VT-03",
+      "m_required": true,
+      "scope_records": {
+        "M": {
+          "implementation_status": "partial",
+          "test_bindings": [
+            "tests.test_inventory.InventoryTests.test_attempts_and_realizations_are_separate",
+            "tests.test_inventory.InventoryTests.test_extra_output_is_preserved_unselected",
+            "tests.test_inventory.InventoryTests.test_failed_five_candidate_call_does_not_create_samples",
+            "tests.test_inventory.InventoryTests.test_retry_is_preserved_without_adding_planned_slots",
+            "tests.test_inventory.InventoryTests.test_selecting_extra_output_cannot_extend_planned_budget",
+            "tests.test_inventory.InventoryTests.test_unattempted_slot_is_not_an_invocation",
+            "tests.test_inventory.InventoryTests.test_unknown_attempt_history_is_not_one_call_per_sample"
+          ],
+          "reason": "Step 4 accounting and prior record checks are bound. Remaining full M integration/report/metric duties are not marked complete. No substantive E validation."
+        },
+        "V": {
+          "implementation_status": "outside_phase1",
+          "test_bindings": []
+        }
+      },
+      "catalogue_row": "VT-03"
+    },
+    {
+      "id": "VT-04",
+      "m_required": true,
+      "scope_records": {
+        "M": {
+          "implementation_status": "partial",
+          "test_bindings": [
+            "tests.test_evidence.AdmissionTests.test_fixture_positive_is_only_stipulated",
+            "tests.test_evidence.AdmissionTests.test_import_requires_adjudication_record",
+            "tests.test_evidence.AdmissionTests.test_fixture_missing_declaration_is_local",
+            "tests.test_evidence.AdmissionTests.test_missing_independence_does_not_remove_mechanism"
+          ]
+        }
+      },
+      "catalogue_row": "VT-04"
+    },
+    {
+      "id": "VT-05",
+      "m_required": true,
+      "scope_records": {
+        "M": {
+          "implementation_status": "partial",
+          "test_bindings": [
+            "tests.test_populations.PopulationTests.test_axes_overlap_and_each_reconciles_to_selected_inventory",
+            "tests.test_populations.PopulationTests.test_mf07_all_five_ratios_keep_unreduced_accounting",
+            "tests.test_populations.PopulationTests.test_mf07_exact_memberships",
+            "tests.test_populations.PopulationTests.test_validity_does_not_fill_unresolved_or_provisional_class"
+          ],
+          "reason": "Step 4 accounting and prior record checks are bound. Remaining full M integration/report/metric duties are not marked complete. No substantive E validation."
+        }
+      },
+      "catalogue_row": "VT-05"
+    },
+    {
+      "id": "VT-06",
+      "m_required": true,
+      "scope_records": {
+        "M": {
+          "implementation_status": "partial",
+          "test_bindings": [
+            "tests.test_evidence.AdmissionTests.test_invalid_validity_does_not_erase_class",
+            "tests.test_evidence.AdmissionTests.test_not_assessed_does_not_create_invalidity",
+            "tests.test_inventory.InventoryTests.test_known_empty_and_truncated_emissions_remain_samples",
+            "tests.test_inventory.InventoryTests.test_known_empty_selection_is_zero_with_exclusions",
+            "tests.test_local_io.BundleTests.test_empty_and_malformed_records_remain_distinct",
+            "tests.test_populations.AdversePopulationTests.test_actual_empty_input_has_no_invented_observations",
+            "tests.test_populations.PopulationTests.test_all_invalid_can_still_have_structural_population",
+            "tests.test_populations.PopulationTests.test_known_empty_selection_has_undefined_ratios",
+            "tests.test_populations.PopulationTests.test_one_class_is_distinct_from_no_class",
+            "tests.test_populations.PopulationTests.test_wholly_unclassified_selection_remains_known_zero"
+          ],
+          "reason": "Step 4 accounting and prior record checks are bound. Remaining full M integration/report/metric duties are not marked complete. No substantive E validation."
+        }
+      },
+      "catalogue_row": "VT-06"
+    },
+    {
+      "id": "VT-07",
+      "m_required": true,
+      "scope_records": {
+        "M": {
+          "implementation_status": "not_implemented",
+          "test_bindings": []
+        }
+      },
+      "catalogue_row": "VT-07"
+    },
+    {
+      "id": "VT-08",
+      "m_required": true,
+      "scope_records": {
+        "M": {
+          "implementation_status": "not_implemented",
+          "test_bindings": []
+        }
+      },
+      "catalogue_row": "VT-08"
+    },
+    {
+      "id": "VT-09",
+      "m_required": true,
+      "scope_records": {
+        "M": {
+          "implementation_status": "not_implemented",
+          "test_bindings": []
+        }
+      },
+      "catalogue_row": "VT-09"
+    },
+    {
+      "id": "VT-10",
+      "m_required": true,
+      "scope_records": {
+        "M": {
+          "implementation_status": "partial",
+          "test_bindings": [
+            "tests.test_inventory.InventoryTests.test_original_storage_order_is_not_experimental_sequence",
+            "tests.test_populations.PopulationTests.test_renaming_supported_class_ids_preserves_population_counts",
+            "tests.test_populations.PrefixTests.test_actual_order_change_may_change_prefix",
+            "tests.test_populations.PrefixTests.test_storage_order_change_cannot_change_prefix"
+          ],
+          "reason": "Step 4 accounting and prior record checks are bound. Remaining full M integration/report/metric duties are not marked complete. No substantive E validation."
+        }
+      },
+      "catalogue_row": "VT-10"
+    },
+    {
+      "id": "VT-11",
+      "m_required": true,
+      "scope_records": {
+        "M": {
+          "implementation_status": "partial",
+          "test_bindings": [
+            "tests.test_populations.PrefixTests.test_accumulation_monotonicity_on_fixed_assignments",
+            "tests.test_populations.PrefixTests.test_actual_order_change_may_change_prefix",
+            "tests.test_populations.PrefixTests.test_available_unclassified_prefix_has_count_zero",
+            "tests.test_populations.PrefixTests.test_grid_preserved_and_not_sorted_after_results",
+            "tests.test_populations.PrefixTests.test_invalid_and_omitted_k_have_distinct_outcomes",
+            "tests.test_populations.PrefixTests.test_invalid_or_unresolved_positions_are_not_backfilled",
+            "tests.test_populations.PrefixTests.test_invalid_view_and_mode_fail_explicitly",
+            "tests.test_populations.PrefixTests.test_mf10_exact_prefix_oracles",
+            "tests.test_populations.PrefixTests.test_partial_group_flag_is_descriptive_only",
+            "tests.test_populations.PrefixTests.test_storage_order_change_cannot_change_prefix"
+          ],
+          "reason": "Step 4 accounting and prior record checks are bound. Remaining full M integration/report/metric duties are not marked complete. No substantive E validation."
+        }
+      },
+      "catalogue_row": "VT-11"
+    },
+    {
+      "id": "VT-12",
+      "m_required": true,
+      "scope_records": {
+        "V": {
+          "implementation_status": "outside_phase1",
+          "test_bindings": []
+        },
+        "M": {
+          "implementation_status": "partial",
+          "test_bindings": [
+            "tests.test_inventory.AdditionalInventoryTests.test_absent_future_attempt_preserves_earlier_group_plan",
+            "tests.test_populations.AdversePopulationTests.test_later_unrecorded_attempt_does_not_block_first_hero_endpoint",
+            "tests.test_populations.HeroEndpointTests.test_empty_classified_complete_twenty_is_legitimate_zero",
+            "tests.test_populations.HeroEndpointTests.test_group_plan_cannot_be_inferred_from_twenty_rows",
+            "tests.test_populations.HeroEndpointTests.test_hero_membership_5_10_20_matches_frozen_design",
+            "tests.test_populations.HeroEndpointTests.test_last_group_failure_does_not_erase_earlier_endpoint",
+            "tests.test_populations.HeroEndpointTests.test_missing_g2_p5_allows_descriptive_but_not_matched_prefix",
+            "tests.test_populations.HeroEndpointTests.test_same_group_records_are_not_independent_draws",
+            "tests.test_populations.HeroEndpointTests.test_supplementary_single_candidate_k_is_not_hero_endpoint",
+            "tests.test_populations.HeroEndpointTests.test_unclassified_position_is_kept_without_replacement",
+            "tests.test_populations.HeroEndpointTests.test_wrong_primary_attempt_blocks_matching_group"
+          ],
+          "reason": "Step 4 accounting and prior record checks are bound. Remaining full M integration/report/metric duties are not marked complete. No substantive E validation."
+        }
+      },
+      "catalogue_row": "VT-12"
+    },
+    {
+      "id": "VT-13",
+      "m_required": true,
+      "scope_records": {
+        "M": {
+          "implementation_status": "not_implemented",
+          "test_bindings": []
+        }
+      },
+      "catalogue_row": "VT-13"
+    },
+    {
+      "id": "VT-14",
+      "m_required": true,
+      "scope_records": {
+        "M": {
+          "implementation_status": "partial",
+          "test_bindings": [
+            "tests.test_evidence.AdmissionTests.test_wrong_frame_withholds_only_affected_sample",
+            "tests.test_evidence.AdmissionTests.test_wrong_rubric_withholds_validity_only",
+            "tests.test_inventory.InventoryTests.test_frame_failure_is_scoped_and_distinct_from_empty",
+            "tests.test_inventory.InventoryTests.test_protocol_mismatch_is_frame_error",
+            "tests.test_populations.PopulationTests.test_other_cell_survives_malformed_frame_and_no_pooling",
+            "tests.test_populations.PopulationTests.test_shared_schema_failure_is_unavailable_not_zero_classes",
+            "tests.test_records.ManifestTests.test_incompatible_frame_version_is_not_empty_data"
+          ],
+          "reason": "Step 4 accounting and prior record checks are bound. Remaining full M integration/report/metric duties are not marked complete. No substantive E validation."
+        },
+        "V": {
+          "implementation_status": "outside_phase1",
+          "test_bindings": []
+        }
+      },
+      "catalogue_row": "VT-14"
+    },
+    {
+      "id": "VT-15",
+      "m_required": true,
+      "scope_records": {
+        "M": {
+          "implementation_status": "partial",
+          "test_bindings": [
+            "tests.test_evidence.AdmissionTests.test_sorted_outputs_do_not_identify_algorithm",
+            "tests.test_evidence.AdmissionTests.test_model_label_and_embedding_methods_do_not_admit",
+            "tests.test_evidence.AdmissionTests.test_inaccessible_essential_report_withholds_label"
+          ]
+        },
+        "E": {
+          "implementation_status": "evidence_not_supplied",
+          "test_bindings": []
+        }
+      },
+      "catalogue_row": "VT-15"
+    },
+    {
+      "id": "VT-16",
+      "m_required": true,
+      "scope_records": {
+        "M": {
+          "implementation_status": "partial",
+          "test_bindings": [
+            "tests.test_evidence.AdmissionTests.test_unresolved_adjudicated_retains_epistemic_state",
+            "tests.test_evidence.AdmissionTests.test_explicit_evidence_contradiction_is_preserved",
+            "tests.test_integrity_records.IntegrityTests.test_unreviewed_intake_preserves_original_anomaly"
+          ]
+        },
+        "E": {
+          "implementation_status": "evidence_not_supplied",
+          "test_bindings": []
+        }
+      },
+      "catalogue_row": "VT-16"
+    },
+    {
+      "id": "VT-17",
+      "m_required": true,
+      "scope_records": {
+        "M": {
+          "implementation_status": "partial",
+          "test_bindings": [
+            "tests.test_evidence.CorrectionTests.test_impact_records_link_without_recalculating_metrics",
+            "tests.test_evidence.CorrectionTests.test_raw_bundle_is_unchanged_by_review",
+            "tests.test_evidence.CorrectionTests.test_shared_schema_challenge_affects_all_dependent_labels",
+            "tests.test_evidence.CorrectionTests.test_withdrawal_preserves_other_assignment_and_validity",
+            "tests.test_populations.AdversePopulationTests.test_local_failed_adjudication_never_withholds_entire_population",
+            "tests.test_populations.PopulationTests.test_old_and_corrected_populations_keep_sample_identity"
+          ],
+          "reason": "Step 4 accounting and prior record checks are bound. Remaining full M integration/report/metric duties are not marked complete. No substantive E validation."
+        },
+        "V": {
+          "implementation_status": "outside_phase1",
+          "test_bindings": []
+        }
+      },
+      "catalogue_row": "VT-17"
+    },
+    {
+      "id": "VT-18",
+      "m_required": true,
+      "scope_records": {
+        "M": {
+          "implementation_status": "partial",
+          "test_bindings": [
+            "tests.test_evidence.AdmissionTests.test_missing_independence_does_not_remove_mechanism",
+            "tests.test_evidence.CorrectionTests.test_independence_only_withdrawal_keeps_label",
+            "tests.test_populations.PopulationTests.test_independence_only_correction_preserves_counts"
+          ],
+          "reason": "Step 4 accounting and prior record checks are bound. Remaining full M integration/report/metric duties are not marked complete. No substantive E validation."
+        },
+        "V": {
+          "implementation_status": "outside_phase1",
+          "test_bindings": []
+        }
+      },
+      "catalogue_row": "VT-18"
+    },
+    {
+      "id": "VT-19",
+      "m_required": true,
+      "scope_records": {
+        "M": {
+          "implementation_status": "partial",
+          "test_bindings": [
+            "tests.test_security.PassiveInputTests.test_hostile_text_never_executes_or_calls_network",
+            "tests.test_evidence.CorrectionTests.test_passive_review_never_invokes_network_or_executes",
+            "tests.test_security.PassiveInputTests.test_private_artifact_does_not_attempt_local_read"
+          ]
+        },
+        "V": {
+          "implementation_status": "outside_phase1",
+          "test_bindings": []
+        }
+      },
+      "catalogue_row": "VT-19"
+    },
+    {
+      "id": "VT-20",
+      "m_required": true,
+      "scope_records": {
+        "M": {
+          "implementation_status": "not_implemented",
+          "test_bindings": []
+        },
+        "V": {
+          "implementation_status": "outside_phase1",
+          "test_bindings": []
+        }
+      },
+      "catalogue_row": "VT-20"
+    },
+    {
+      "id": "VT-21",
+      "m_required": true,
+      "scope_records": {
+        "M": {
+          "implementation_status": "partial",
+          "test_bindings": [
+            "tests.test_integrity_records.IntegrityTests.test_unknown_parent_remains_unknown",
+            "tests.test_integrity_records.IntegrityTests.test_lineage_cycles_do_not_trigger_universal_dag_rejection",
+            "tests.test_integrity_records.IntegrityTests.test_source_unknowns_cannot_become_inferred_ancestry",
+            "tests.test_evidence.AdmissionTests.test_cycle_of_evidence_support_is_not_grounding"
+          ]
+        },
+        "E": {
+          "implementation_status": "evidence_not_supplied",
+          "test_bindings": []
+        }
+      },
+      "catalogue_row": "VT-21"
+    },
+    {
+      "id": "VT-22",
+      "m_required": true,
+      "scope_records": {
+        "M": {
+          "implementation_status": "partial",
+          "test_bindings": [
+            "tests.test_integrity_records.IntegrityTests.test_two_sessions_by_one_person_fail_two_person_requirement",
+            "tests.test_integrity_records.IntegrityTests.test_initial_label_exposure_is_not_independent_first_pass",
+            "tests.test_integrity_records.IntegrityTests.test_disagreement_preserves_both_initial_outcomes",
+            "tests.test_integrity_records.IntegrityTests.test_two_mock_humans_are_only_record_consistent"
+          ]
+        },
+        "E": {
+          "implementation_status": "evidence_not_supplied",
+          "test_bindings": []
+        }
+      },
+      "catalogue_row": "VT-22"
+    },
+    {
+      "id": "VT-23",
+      "m_required": true,
+      "scope_records": {
+        "M": {
+          "implementation_status": "partial",
+          "test_bindings": [
+            "tests.test_integrity_records.IntegrityTests.test_empty_intake_is_distinct_from_received_evidence",
+            "tests.test_integrity_records.IntegrityTests.test_unreviewed_intake_preserves_original_anomaly",
+            "tests.test_integrity_records.IntegrityTests.test_checked_in_integrity_cases_are_actual_mock_payloads"
+          ]
+        },
+        "E": {
+          "implementation_status": "evidence_not_supplied",
+          "test_bindings": []
+        }
+      },
+      "catalogue_row": "VT-23"
+    },
+    {
+      "id": "VT-24",
+      "m_required": true,
+      "scope_records": {
+        "M": {
+          "implementation_status": "partial",
+          "test_bindings": [
+            "tests.test_integrity_records.IntegrityTests.test_unknown_exposure_does_not_become_false",
+            "tests.test_integrity_records.IntegrityTests.test_known_prior_exposure_overrides_false_annotation_flag",
+            "tests.test_integrity_records.IntegrityTests.test_later_discussion_does_not_rewrite_first_pass"
+          ]
+        },
+        "V": {
+          "implementation_status": "outside_phase1",
+          "test_bindings": []
+        },
+        "E": {
+          "implementation_status": "evidence_not_supplied",
+          "test_bindings": []
+        }
+      },
+      "catalogue_row": "VT-24"
+    },
+    {
+      "id": "VT-25",
+      "m_required": true,
+      "scope_records": {
+        "M": {
+          "implementation_status": "partial",
+          "test_bindings": [
+            "tests.test_records.RegistryTests.test_registry_is_exact_transcription_with_no_validation_claim",
+            "tests.test_integrity_records.IntegrityTests.test_design_32_core_and_28_pairs_remains_a_plan"
+          ]
+        },
+        "E": {
+          "implementation_status": "evidence_not_supplied",
+          "test_bindings": []
+        }
+      },
+      "catalogue_row": "VT-25"
+    },
+    {
+      "id": "VT-26",
+      "m_required": true,
+      "scope_records": {
+        "M": {
+          "implementation_status": "partial",
+          "test_bindings": [
+            "tests.test_integrity_records.IntegrityTests.test_design_8995_tests_does_not_count_as_performed_validation"
+          ]
+        },
+        "E": {
+          "implementation_status": "evidence_not_supplied",
+          "test_bindings": []
+        }
+      },
+      "catalogue_row": "VT-26"
+    },
+    {
+      "id": "VT-27",
+      "m_required": true,
+      "scope_records": {
+        "M": {
+          "implementation_status": "partial",
+          "test_bindings": [
+            "tests.test_evidence.AdmissionTests.test_execution_record_required_for_coding_validity",
+            "tests.test_integrity_records.IntegrityTests.test_domain_property_mismatch_is_not_execution_evidence",
+            "tests.test_integrity_records.IntegrityTests.test_withdrawn_suite_cannot_support_execution_record"
+          ]
+        },
+        "E": {
+          "implementation_status": "evidence_not_supplied",
+          "test_bindings": []
+        }
+      },
+      "catalogue_row": "VT-27"
+    },
+    {
+      "id": "VT-28",
+      "m_required": true,
+      "scope_records": {
+        "M": {
+          "implementation_status": "partial",
+          "test_bindings": [
+            "tests.test_evidence.AdmissionTests.test_timeout_cannot_validate_or_invalidate_program",
+            "tests.test_evidence.AdmissionTests.test_repaired_artifact_cannot_validate_original",
+            "tests.test_evidence.AdmissionTests.test_wrong_execution_subject_is_detected"
+          ]
+        },
+        "E": {
+          "implementation_status": "evidence_not_supplied",
+          "test_bindings": []
+        }
+      },
+      "catalogue_row": "VT-28"
+    },
+    {
+      "id": "VT-29",
+      "m_required": true,
+      "scope_records": {
+        "M": {
+          "implementation_status": "partial",
+          "test_bindings": [
+            "tests.test_integrity_records.IntegrityTests.test_audit_extra_review_does_not_replace_missing_planned_position",
+            "tests.test_integrity_records.IntegrityTests.test_audit_needs_annotations_for_each_reviewed_target",
+            "tests.test_integrity_records.IntegrityTests.test_matching_mock_audit_stays_record_only"
+          ]
+        },
+        "E": {
+          "implementation_status": "evidence_not_supplied",
+          "test_bindings": []
+        }
+      },
+      "catalogue_row": "VT-29"
+    },
+    {
+      "id": "VT-30",
+      "m_required": true,
+      "scope_records": {
+        "M": {
+          "implementation_status": "partial",
+          "test_bindings": [
+            "tests.test_integrity_records.IntegrityTests.test_complete_mock_form_never_certifies_operational_openness",
+            "tests.test_integrity_records.IntegrityTests.test_complete_review_keeps_sources_and_classifications_passive"
+          ]
+        }
+      },
+      "catalogue_row": "VT-30"
+    },
+    {
+      "id": "VT-31",
+      "m_required": false,
+      "scope_records": {
+        "V": {
+          "implementation_status": "outside_phase1",
+          "test_bindings": []
+        }
+      },
+      "catalogue_row": "VT-31"
+    },
+    {
+      "id": "VT-32",
+      "m_required": false,
+      "scope_records": {
+        "V": {
+          "implementation_status": "outside_phase1",
+          "test_bindings": []
+        }
+      },
+      "catalogue_row": "VT-32"
+    },
+    {
+      "id": "VT-33",
+      "m_required": false,
+      "scope_records": {
+        "V": {
+          "implementation_status": "outside_phase1",
+          "test_bindings": []
+        }
+      },
+      "catalogue_row": "VT-33"
+    },
+    {
+      "id": "VT-34",
+      "m_required": false,
+      "scope_records": {
+        "V": {
+          "implementation_status": "outside_phase1",
+          "test_bindings": []
+        },
+        "E": {
+          "implementation_status": "evidence_not_supplied",
+          "test_bindings": []
+        }
+      },
+      "catalogue_row": "VT-34"
+    },
+    {
+      "id": "VT-35",
+      "m_required": false,
+      "scope_records": {
+        "V": {
+          "implementation_status": "outside_phase1",
+          "test_bindings": []
+        },
+        "E": {
+          "implementation_status": "evidence_not_supplied",
+          "test_bindings": []
+        }
+      },
+      "catalogue_row": "VT-35"
+    },
+    {
+      "id": "VT-36",
+      "m_required": true,
+      "scope_records": {
+        "V": {
+          "implementation_status": "outside_phase1",
+          "test_bindings": []
+        },
+        "M": {
+          "implementation_status": "partial",
+          "test_bindings": [
+            "tests.test_inventory.AdditionalInventoryTests.test_declared_output_offsets_cannot_add_a_new_realization_twice",
+            "tests.test_inventory.ArtifactAssociationTests.test_character_offsets_cannot_replace_byte_offsets",
+            "tests.test_inventory.ArtifactAssociationTests.test_empty_emitted_region_is_real_bytes_not_missing_slot",
+            "tests.test_inventory.ArtifactAssociationTests.test_exact_byte_region_keeps_unicode_and_crlf",
+            "tests.test_inventory.ArtifactAssociationTests.test_missing_raw_is_unavailable_not_an_extraction_guess",
+            "tests.test_inventory.ArtifactAssociationTests.test_negative_bool_and_oversized_spans_are_controlled",
+            "tests.test_inventory.ArtifactAssociationTests.test_raw_response_mismatch_cannot_be_repaired_by_neighbor",
+            "tests.test_inventory.ArtifactAssociationTests.test_truncated_known_text_can_be_associated_without_completion",
+            "tests.test_populations.AdversePopulationTests.test_association_error_withholds_both_affected_axes_without_deleting_sample"
+          ],
+          "reason": "Step 4 accounting and prior record checks are bound. Remaining full M integration/report/metric duties are not marked complete. No substantive E validation."
+        }
+      },
+      "catalogue_row": "VT-36"
+    },
+    {
+      "id": "VT-37",
+      "m_required": false,
+      "scope_records": {
+        "V": {
+          "implementation_status": "outside_phase1",
+          "test_bindings": []
+        }
+      },
+      "catalogue_row": "VT-37"
+    },
+    {
+      "id": "VT-38",
+      "m_required": false,
+      "scope_records": {
+        "V": {
+          "implementation_status": "outside_phase1",
+          "test_bindings": []
+        }
+      },
+      "catalogue_row": "VT-38"
+    },
+    {
+      "id": "VT-39",
+      "m_required": false,
+      "scope_records": {
+        "V": {
+          "implementation_status": "outside_phase1",
+          "test_bindings": []
+        }
+      },
+      "catalogue_row": "VT-39"
+    },
+    {
+      "id": "VT-40",
+      "m_required": false,
+      "scope_records": {
+        "V": {
+          "implementation_status": "outside_phase1",
+          "test_bindings": []
+        }
+      },
+      "catalogue_row": "VT-40"
+    },
+    {
+      "id": "VT-41",
+      "m_required": false,
+      "scope_records": {
+        "V": {
+          "implementation_status": "outside_phase1",
+          "test_bindings": []
+        }
+      },
+      "catalogue_row": "VT-41"
+    },
+    {
+      "id": "VT-42",
+      "m_required": false,
+      "scope_records": {
+        "V": {
+          "implementation_status": "outside_phase1",
+          "test_bindings": []
+        }
+      },
+      "catalogue_row": "VT-42"
+    },
+    {
+      "id": "VT-43",
+      "m_required": false,
+      "scope_records": {
+        "V": {
+          "implementation_status": "outside_phase1",
+          "test_bindings": []
+        }
+      },
+      "catalogue_row": "VT-43"
+    },
+    {
+      "id": "VT-44",
+      "m_required": false,
+      "scope_records": {
+        "V": {
+          "implementation_status": "outside_phase1",
+          "test_bindings": []
+        }
+      },
+      "catalogue_row": "VT-44"
+    },
+    {
+      "id": "VT-45",
+      "m_required": false,
+      "scope_records": {
+        "V": {
+          "implementation_status": "outside_phase1",
+          "test_bindings": []
+        }
+      },
+      "catalogue_row": "VT-45"
+    },
+    {
+      "id": "VT-46",
+      "m_required": true,
+      "scope_records": {
+        "M": {
+          "implementation_status": "not_implemented",
+          "test_bindings": []
+        },
+        "V": {
+          "implementation_status": "outside_phase1",
+          "test_bindings": []
+        }
+      },
+      "catalogue_row": "VT-46"
+    },
+    {
+      "id": "VT-47",
+      "m_required": true,
+      "scope_records": {
+        "E": {
+          "implementation_status": "evidence_not_supplied",
+          "test_bindings": []
+        },
+        "M": {
+          "implementation_status": "partial",
+          "test_bindings": [
+            "tests.test_evidence.AdmissionTests.test_import_positive_carries_restricted_scientific_scope",
+            "tests.test_integrity_records.IntegrityTests.test_two_mock_humans_are_only_record_consistent",
+            "tests.test_integrity_records.IntegrityTests.test_complete_review_keeps_sources_and_classifications_passive"
+          ]
+        },
+        "V": {
+          "implementation_status": "outside_phase1",
+          "test_bindings": []
+        }
+      },
+      "catalogue_row": "VT-47"
+    },
+    {
+      "id": "VT-48",
+      "m_required": false,
+      "scope_records": {
+        "E": {
+          "implementation_status": "evidence_not_supplied",
+          "test_bindings": []
+        }
+      },
+      "catalogue_row": "VT-48"
+    },
+    {
+      "id": "VT-49",
+      "m_required": false,
+      "scope_records": {
+        "E": {
+          "implementation_status": "evidence_not_supplied",
+          "test_bindings": []
+        }
+      },
+      "catalogue_row": "VT-49"
+    },
+    {
+      "id": "VT-50",
+      "m_required": false,
+      "scope_records": {
+        "V": {
+          "implementation_status": "outside_phase1",
+          "test_bindings": []
+        },
+        "E": {
+          "implementation_status": "evidence_not_supplied",
+          "test_bindings": []
+        }
+      },
+      "catalogue_row": "VT-50"
+    },
+    {
+      "id": "VT-51",
+      "m_required": true,
+      "scope_records": {
+        "M": {
+          "implementation_status": "not_implemented",
+          "test_bindings": []
+        },
+        "D": {
+          "implementation_status": "deferred",
+          "test_bindings": []
+        }
+      },
+      "catalogue_row": "VT-51"
+    },
+    {
+      "id": "VT-52",
+      "m_required": true,
+      "scope_records": {
+        "M": {
+          "implementation_status": "not_implemented",
+          "test_bindings": []
+        },
+        "D": {
+          "implementation_status": "deferred",
+          "test_bindings": []
+        }
+      },
+      "catalogue_row": "VT-52"
+    },
+    {
+      "id": "VT-53",
+      "m_required": true,
+      "scope_records": {
+        "M": {
+          "implementation_status": "not_implemented",
+          "test_bindings": []
+        },
+        "D": {
+          "implementation_status": "deferred",
+          "test_bindings": []
+        }
+      },
+      "catalogue_row": "VT-53"
+    },
+    {
+      "id": "VT-54",
+      "m_required": true,
+      "scope_records": {
+        "M": {
+          "implementation_status": "not_implemented",
+          "test_bindings": []
+        },
+        "D": {
+          "implementation_status": "deferred",
+          "test_bindings": []
+        }
+      },
+      "catalogue_row": "VT-54"
+    }
+  ],
+  "trace_requirements": [
+    {
+      "id": "TR-01",
+      "m_applicable": true,
+      "implementation_status": "not_implemented"
+    },
+    {
+      "id": "TR-02",
+      "m_applicable": true,
+      "implementation_status": "not_implemented"
+    },
+    {
+      "id": "TR-03",
+      "m_applicable": true,
+      "implementation_status": "not_implemented"
+    },
+    {
+      "id": "TR-04",
+      "m_applicable": true,
+      "implementation_status": "not_implemented"
+    },
+    {
+      "id": "TR-05",
+      "m_applicable": true,
+      "implementation_status": "not_implemented"
+    },
+    {
+      "id": "TR-06",
+      "m_applicable": true,
+      "implementation_status": "not_implemented"
+    },
+    {
+      "id": "TR-07",
+      "m_applicable": true,
+      "implementation_status": "not_implemented"
+    },
+    {
+      "id": "TR-08",
+      "m_applicable": true,
+      "implementation_status": "not_implemented"
+    },
+    {
+      "id": "TR-09",
+      "m_applicable": true,
+      "implementation_status": "not_implemented"
+    },
+    {
+      "id": "TR-10",
+      "m_applicable": true,
+      "implementation_status": "not_implemented"
+    },
+    {
+      "id": "TR-11",
+      "m_applicable": true,
+      "implementation_status": "not_implemented"
+    },
+    {
+      "id": "TR-12",
+      "m_applicable": true,
+      "implementation_status": "not_implemented"
+    },
+    {
+      "id": "TR-13",
+      "m_applicable": true,
+      "implementation_status": "not_implemented"
+    },
+    {
+      "id": "TR-14",
+      "m_applicable": true,
+      "implementation_status": "not_implemented"
+    },
+    {
+      "id": "TR-15",
+      "m_applicable": true,
+      "implementation_status": "not_implemented"
+    },
+    {
+      "id": "TR-16",
+      "m_applicable": false,
+      "implementation_status": "outside_phase1"
+    },
+    {
+      "id": "TR-17",
+      "m_applicable": false,
+      "implementation_status": "outside_phase1"
+    },
+    {
+      "id": "TR-18",
+      "m_applicable": false,
+      "implementation_status": "outside_phase1"
+    },
+    {
+      "id": "TR-19",
+      "m_applicable": true,
+      "implementation_status": "not_implemented"
+    },
+    {
+      "id": "TR-20",
+      "m_applicable": false,
+      "implementation_status": "outside_phase1"
+    },
+    {
+      "id": "TR-21",
+      "m_applicable": false,
+      "implementation_status": "outside_phase1"
+    },
+    {
+      "id": "TR-22",
+      "m_applicable": true,
+      "implementation_status": "not_implemented"
+    },
+    {
+      "id": "TR-23",
+      "m_applicable": false,
+      "implementation_status": "outside_phase1"
+    },
+    {
+      "id": "TR-24",
+      "m_applicable": false,
+      "implementation_status": "outside_phase1"
+    },
+    {
+      "id": "TR-25",
+      "m_applicable": true,
+      "implementation_status": "not_implemented"
+    },
+    {
+      "id": "TR-26",
+      "m_applicable": true,
+      "implementation_status": "not_implemented"
+    },
+    {
+      "id": "TR-27",
+      "m_applicable": true,
+      "implementation_status": "not_implemented"
+    },
+    {
+      "id": "TR-28",
+      "m_applicable": true,
+      "implementation_status": "not_implemented"
+    },
+    {
+      "id": "TR-29",
+      "m_applicable": true,
+      "implementation_status": "not_implemented"
+    },
+    {
+      "id": "TR-30",
+      "m_applicable": true,
+      "implementation_status": "not_implemented"
+    },
+    {
+      "id": "TR-31",
+      "m_applicable": true,
+      "implementation_status": "not_implemented"
+    },
+    {
+      "id": "TR-32",
+      "m_applicable": true,
+      "implementation_status": "not_implemented"
+    },
+    {
+      "id": "TR-33",
+      "m_applicable": true,
+      "implementation_status": "not_implemented"
+    },
+    {
+      "id": "TR-34",
+      "m_applicable": true,
+      "implementation_status": "not_implemented"
+    },
+    {
+      "id": "TR-35",
+      "m_applicable": true,
+      "implementation_status": "not_implemented"
+    },
+    {
+      "id": "TR-36",
+      "m_applicable": true,
+      "implementation_status": "not_implemented"
+    },
+    {
+      "id": "TR-37",
+      "m_applicable": true,
+      "implementation_status": "not_implemented"
+    },
+    {
+      "id": "TR-38",
+      "m_applicable": true,
+      "implementation_status": "not_implemented"
+    },
+    {
+      "id": "TR-39",
+      "m_applicable": true,
+      "implementation_status": "not_implemented"
+    },
+    {
+      "id": "TR-40",
+      "m_applicable": true,
+      "implementation_status": "not_implemented"
+    }
+  ],
+  "report_groups": [
+    {
+      "id": "RF-01",
+      "m_applicable": true,
+      "implementation_status": "not_implemented"
+    },
+    {
+      "id": "RF-02",
+      "m_applicable": true,
+      "implementation_status": "not_implemented"
+    },
+    {
+      "id": "RF-03",
+      "m_applicable": true,
+      "implementation_status": "not_implemented"
+    },
+    {
+      "id": "RF-04",
+      "m_applicable": true,
+      "implementation_status": "not_implemented"
+    },
+    {
+      "id": "RF-05",
+      "m_applicable": true,
+      "implementation_status": "not_implemented"
+    },
+    {
+      "id": "RF-06",
+      "m_applicable": true,
+      "implementation_status": "not_implemented"
+    },
+    {
+      "id": "RF-07",
+      "m_applicable": true,
+      "implementation_status": "not_implemented"
+    },
+    {
+      "id": "RF-08",
+      "m_applicable": true,
+      "implementation_status": "not_implemented"
+    },
+    {
+      "id": "RF-09",
+      "m_applicable": true,
+      "implementation_status": "not_implemented"
+    },
+    {
+      "id": "RF-10",
+      "m_applicable": true,
+      "implementation_status": "not_implemented"
+    },
+    {
+      "id": "RF-11",
+      "m_applicable": true,
+      "implementation_status": "not_implemented"
+    },
+    {
+      "id": "RF-12",
+      "m_applicable": true,
+      "implementation_status": "not_implemented"
+    },
+    {
+      "id": "RF-13",
+      "m_applicable": true,
+      "implementation_status": "not_implemented"
+    },
+    {
+      "id": "RF-14",
+      "m_applicable": true,
+      "implementation_status": "not_implemented"
+    },
+    {
+      "id": "RF-15",
+      "m_applicable": true,
+      "implementation_status": "not_implemented"
+    },
+    {
+      "id": "RF-16",
+      "m_applicable": true,
+      "implementation_status": "not_implemented"
+    },
+    {
+      "id": "RF-17",
+      "m_applicable": true,
+      "implementation_status": "not_implemented"
+    },
+    {
+      "id": "RF-18",
+      "m_applicable": true,
+      "implementation_status": "not_implemented"
+    },
+    {
+      "id": "RF-19",
+      "m_applicable": true,
+      "implementation_status": "not_implemented"
+    },
+    {
+      "id": "RF-20",
+      "m_applicable": true,
+      "implementation_status": "not_implemented"
+    },
+    {
+      "id": "RF-21",
+      "m_applicable": false,
+      "implementation_status": "outside_phase1"
+    },
+    {
+      "id": "RF-22",
+      "m_applicable": false,
+      "implementation_status": "outside_phase1"
+    },
+    {
+      "id": "RF-23",
+      "m_applicable": false,
+      "implementation_status": "outside_phase1"
+    },
+    {
+      "id": "RF-24",
+      "m_applicable": false,
+      "implementation_status": "outside_phase1"
+    },
+    {
+      "id": "RF-25",
+      "m_applicable": false,
+      "implementation_status": "outside_phase1"
+    },
+    {
+      "id": "RF-26",
+      "m_applicable": false,
+      "implementation_status": "outside_phase1"
+    },
+    {
+      "id": "RF-27",
+      "m_applicable": false,
+      "implementation_status": "outside_phase1"
+    },
+    {
+      "id": "RF-28",
+      "m_applicable": false,
+      "implementation_status": "outside_phase1"
+    },
+    {
+      "id": "RF-29",
+      "m_applicable": true,
+      "implementation_status": "not_implemented"
+    },
+    {
+      "id": "RF-30",
+      "m_applicable": true,
+      "implementation_status": "not_implemented"
+    },
+    {
+      "id": "RF-31",
+      "m_applicable": true,
+      "implementation_status": "not_implemented"
+    },
+    {
+      "id": "RF-32",
+      "m_applicable": true,
+      "implementation_status": "not_implemented"
+    },
+    {
+      "id": "RF-33",
+      "m_applicable": true,
+      "implementation_status": "not_implemented"
+    },
+    {
+      "id": "RF-34",
+      "m_applicable": true,
+      "implementation_status": "not_implemented"
+    },
+    {
+      "id": "RF-35",
+      "m_applicable": true,
+      "implementation_status": "not_implemented"
+    },
+    {
+      "id": "RF-36",
+      "m_applicable": true,
+      "implementation_status": "not_implemented"
+    }
+  ],
+  "scope_note": "Test bindings name real canonical unittest methods only. Execution results belong to artifacts/phase1/test_results.json. No M/V/E/D scientific check is fulfilled by a scaffold test.",
+  "authorization_history": [
+    {
+      "owner_instruction": "很好，给我phase 1 step 1",
+      "interpretation": "Approves the delivered Phase 1 plan and authorizes Step 1 only.",
+      "does_not_authorize": [
+        "Step 2 or later implementation",
+        "GitHub writes or repository creation",
+        "model calls or spending",
+        "publication or license selection"
+      ],
+      "decision_timestamp": null,
+      "timestamp_note": "No exact owner-decision timestamp asserted."
+    },
+    {
+      "owner_instruction": "批准，继续Phase 1 Step 2",
+      "interpretation": "Input layer and original GitHub synchronization authorized."
+    }
+  ],
+  "step2_acceptance": {
+    "scope": "input_layer_only",
+    "test_bindings": [
+      "tests.test_local_io.BundleTests.test_bad_required_version_never_becomes_empty_success",
+      "tests.test_local_io.BundleTests.test_empty_and_malformed_records_remain_distinct",
+      "tests.test_local_io.BundleTests.test_external_and_unavailable_artifacts_are_inert",
+      "tests.test_local_io.BundleTests.test_hash_mismatch_is_scoped_and_keeps_expected_hash",
+      "tests.test_local_io.BundleTests.test_line_limit_does_not_turn_suffix_into_next_row",
+      "tests.test_local_io.BundleTests.test_malformed_line_does_not_erase_next_record",
+      "tests.test_local_io.BundleTests.test_only_declared_files_are_read",
+      "tests.test_local_io.BundleTests.test_read_order_does_not_become_scientific_order",
+      "tests.test_local_io.BundleTests.test_record_file_hash_mismatch_preserves_inventory",
+      "tests.test_local_io.BundleTests.test_record_limit_is_not_silent_sampling",
+      "tests.test_local_io.BundleTests.test_sample_hash_uses_analyzed_bytes",
+      "tests.test_local_io.BundleTests.test_source_pin_mismatch_does_not_trigger_retrieval",
+      "tests.test_local_io.BundleTests.test_wrong_file_role_preserves_raw_record",
+      "tests.test_local_io.SnapshotTests.test_change_during_read_is_detected",
+      "tests.test_local_io.SnapshotTests.test_directory_and_fifo_are_rejected_without_blocking",
+      "tests.test_local_io.SnapshotTests.test_file_and_total_byte_limits",
+      "tests.test_local_io.SnapshotTests.test_internal_external_and_root_symlinks_are_rejected",
+      "tests.test_local_io.SnapshotTests.test_path_grammar_rejects_remote_and_expansion",
+      "tests.test_local_io.SnapshotTests.test_snapshot_and_repeated_path_read",
+      "tests.test_local_io.SnapshotTests.test_snapshot_stays_stable_after_path_replacement",
+      "tests.test_local_io.SnapshotTests.test_unsupported_platform_has_no_unsafe_fallback",
+      "tests.test_local_io.StrictJSONTests.test_bad_manifest_field_types_have_controlled_errors",
+      "tests.test_local_io.StrictJSONTests.test_depth_bound_respects_strings",
+      "tests.test_local_io.StrictJSONTests.test_duplicate_keys_and_escaped_aliases_fail",
+      "tests.test_local_io.StrictJSONTests.test_invalid_overrides_never_weaken_limits",
+      "tests.test_local_io.StrictJSONTests.test_large_finite_exponent_is_not_float_infinity",
+      "tests.test_local_io.StrictJSONTests.test_nonfinite_constants_fail",
+      "tests.test_local_io.StrictJSONTests.test_number_length_and_file_limits",
+      "tests.test_local_io.StrictJSONTests.test_utf8_bom_surrogates_and_bad_syntax_fail",
+      "tests.test_records.CatalogueReferenceTests.test_mismatched_row_reference_cannot_redirect_requirement",
+      "tests.test_records.CatalogueReferenceTests.test_modified_source_is_rejected_before_catalogue_expansion",
+      "tests.test_records.IdentityTests.test_duplicate_id_including_bad_record_is_ambiguous",
+      "tests.test_records.IdentityTests.test_explicit_revisions_and_conflicting_pins",
+      "tests.test_records.IdentityTests.test_identical_content_with_distinct_ids_is_not_deduplicated",
+      "tests.test_records.IdentityTests.test_missing_reference_keeps_other_records",
+      "tests.test_records.IdentityTests.test_unallocated_sample_is_retained",
+      "tests.test_records.IdentityTests.test_wrong_protocol_version_is_diagnosed",
+      "tests.test_records.InputBoundaryReviewTests.test_declaration_limit_is_explicit",
+      "tests.test_records.InputBoundaryReviewTests.test_duplicate_source_pins_and_wrong_registry_reference_fail",
+      "tests.test_records.InputBoundaryReviewTests.test_nested_ref_shaped_metadata_does_not_crash",
+      "tests.test_records.InputBoundaryReviewTests.test_unsupported_kind_cannot_leak_into_identity_diagnostics",
+      "tests.test_records.KnowledgeTests.test_axes_cannot_be_substituted",
+      "tests.test_records.KnowledgeTests.test_bad_tagged_values_have_safe_failures",
+      "tests.test_records.KnowledgeTests.test_knowledge_freezes_caller_owned_data",
+      "tests.test_records.KnowledgeTests.test_known_zero_false_empty_and_null_are_retained",
+      "tests.test_records.KnowledgeTests.test_missing_value_and_contradictory_knowledge_fail",
+      "tests.test_records.KnowledgeTests.test_unknown_unavailable_and_not_applicable_are_distinct",
+      "tests.test_records.ManifestTests.test_bad_manifest_and_duplicate_files_fail",
+      "tests.test_records.ManifestTests.test_exact_decimal_string_and_number_tokens",
+      "tests.test_records.ManifestTests.test_incompatible_frame_version_is_not_empty_data",
+      "tests.test_records.ManifestTests.test_invalid_thresholds_and_k_are_scoped",
+      "tests.test_records.ManifestTests.test_minimal_manifest_has_no_default_controls",
+      "tests.test_records.ManifestTests.test_missing_frame_does_not_erase_other_frame",
+      "tests.test_records.ManifestTests.test_source_and_ec_addendum_pins_match",
+      "tests.test_records.RecordShapeTests.test_assigned_without_class_is_rejected",
+      "tests.test_records.RecordShapeTests.test_assignment_states_preserve_review_and_candidates",
+      "tests.test_records.RecordShapeTests.test_class_on_unresolved_is_rejected",
+      "tests.test_records.RecordShapeTests.test_counts_reject_booleans_and_nonintegers",
+      "tests.test_records.RecordShapeTests.test_evidence_payload_is_envelope_only",
+      "tests.test_records.RecordShapeTests.test_hostile_payload_is_preserved_not_interpreted",
+      "tests.test_records.RecordShapeTests.test_malformed_and_alias_ids_fail_without_echoing_content",
+      "tests.test_records.RecordShapeTests.test_missing_optional_data_stays_absent",
+      "tests.test_records.RecordShapeTests.test_unsupported_version_kind_and_fields_preserve_raw",
+      "tests.test_records.RecordShapeTests.test_validity_is_separate_and_not_inferred",
+      "tests.test_records.RegistryTests.test_named_negative_cases_are_fixture_only",
+      "tests.test_records.RegistryTests.test_registry_is_definition_not_model_samples",
+      "tests.test_records.RegistryTests.test_registry_is_exact_transcription_with_no_validation_claim",
+      "tests.test_records.Step2MatrixTests.test_additive_source_history_preserves_baseline_authorization",
+      "tests.test_records.Step2MatrixTests.test_catalogue_binds_actual_input_tests",
+      "tests.test_records.Step2MatrixTests.test_partial_input_bindings_do_not_close_vt_or_evidence",
+      "tests.test_security.PassiveInputTests.test_hostile_text_never_executes_or_calls_network",
+      "tests.test_security.PassiveInputTests.test_no_model_metric_or_candidate_runner_surface",
+      "tests.test_security.PassiveInputTests.test_private_artifact_does_not_attempt_local_read",
+      "tests.test_security.PassiveInputTests.test_unsafe_local_urls_never_reach_network"
+    ]
+  },
+  "step3_acceptance": {
+    "scope": "evidence_record_handling_only",
+    "test_bindings": [
+      "tests.test_evidence.AdmissionTests.test_conflicting_assertion_is_not_vote",
+      "tests.test_evidence.AdmissionTests.test_cycle_of_evidence_support_is_not_grounding",
+      "tests.test_evidence.AdmissionTests.test_duplicate_invalid_record_still_ambiguous",
+      "tests.test_evidence.AdmissionTests.test_duplicate_pin_even_identical_is_conflict",
+      "tests.test_evidence.AdmissionTests.test_execution_record_required_for_coding_validity",
+      "tests.test_evidence.AdmissionTests.test_explicit_evidence_contradiction_is_preserved",
+      "tests.test_evidence.AdmissionTests.test_fixture_cannot_validate_import",
+      "tests.test_evidence.AdmissionTests.test_fixture_missing_declaration_is_local",
+      "tests.test_evidence.AdmissionTests.test_fixture_policy_cannot_present_empirical_context",
+      "tests.test_evidence.AdmissionTests.test_fixture_positive_is_only_stipulated",
+      "tests.test_evidence.AdmissionTests.test_import_positive_carries_restricted_scientific_scope",
+      "tests.test_evidence.AdmissionTests.test_import_requires_adjudication_record",
+      "tests.test_evidence.AdmissionTests.test_imported_outcome_conflict_is_not_ignored",
+      "tests.test_evidence.AdmissionTests.test_inaccessible_essential_report_withholds_label",
+      "tests.test_evidence.AdmissionTests.test_invalid_validity_does_not_erase_class",
+      "tests.test_evidence.AdmissionTests.test_known_malformed_method_is_controlled",
+      "tests.test_evidence.AdmissionTests.test_missing_independence_does_not_remove_mechanism",
+      "tests.test_evidence.AdmissionTests.test_missing_reviewer_is_not_adjudication",
+      "tests.test_evidence.AdmissionTests.test_missing_text_is_not_automatic_membership_failure",
+      "tests.test_evidence.AdmissionTests.test_model_label_and_embedding_methods_do_not_admit",
+      "tests.test_evidence.AdmissionTests.test_no_pin_never_selects_latest",
+      "tests.test_evidence.AdmissionTests.test_not_assessed_does_not_create_invalidity",
+      "tests.test_evidence.AdmissionTests.test_payload_shape_does_not_certify_evidence",
+      "tests.test_evidence.AdmissionTests.test_provisional_is_not_admitted",
+      "tests.test_evidence.AdmissionTests.test_repaired_artifact_cannot_validate_original",
+      "tests.test_evidence.AdmissionTests.test_revision_pin_mismatch_is_not_repaired",
+      "tests.test_evidence.AdmissionTests.test_sorted_outputs_do_not_identify_algorithm",
+      "tests.test_evidence.AdmissionTests.test_timeout_cannot_validate_or_invalidate_program",
+      "tests.test_evidence.AdmissionTests.test_unclassified_stays_unclassified",
+      "tests.test_evidence.AdmissionTests.test_undetermined_and_absent_validity_are_distinct",
+      "tests.test_evidence.AdmissionTests.test_unresolved_adjudicated_retains_epistemic_state",
+      "tests.test_evidence.AdmissionTests.test_wrong_execution_subject_is_detected",
+      "tests.test_evidence.AdmissionTests.test_wrong_frame_withholds_only_affected_sample",
+      "tests.test_evidence.AdmissionTests.test_wrong_rubric_withholds_validity_only",
+      "tests.test_evidence.CorrectionTests.test_cross_sample_predecessor_does_not_merge_samples",
+      "tests.test_evidence.CorrectionTests.test_cyclic_revision_link_is_detected",
+      "tests.test_evidence.CorrectionTests.test_impact_records_link_without_recalculating_metrics",
+      "tests.test_evidence.CorrectionTests.test_independence_only_withdrawal_keeps_label",
+      "tests.test_evidence.CorrectionTests.test_passive_review_never_invokes_network_or_executes",
+      "tests.test_evidence.CorrectionTests.test_pending_challenge_is_explicit",
+      "tests.test_evidence.CorrectionTests.test_raw_bundle_is_unchanged_by_review",
+      "tests.test_evidence.CorrectionTests.test_rejected_challenge_cannot_withdraw",
+      "tests.test_evidence.CorrectionTests.test_revision_with_new_evidence_requires_new_pin",
+      "tests.test_evidence.CorrectionTests.test_shared_schema_challenge_affects_all_dependent_labels",
+      "tests.test_evidence.CorrectionTests.test_withdrawal_preserves_other_assignment_and_validity",
+      "tests.test_integrity_records.IntegrityTests.test_absent_target_does_not_validate_by_two_votes",
+      "tests.test_integrity_records.IntegrityTests.test_all_nineteen_support_types_have_explicit_payload_validation",
+      "tests.test_integrity_records.IntegrityTests.test_audit_extra_review_does_not_replace_missing_planned_position",
+      "tests.test_integrity_records.IntegrityTests.test_audit_needs_annotations_for_each_reviewed_target",
+      "tests.test_integrity_records.IntegrityTests.test_checked_in_integrity_cases_are_actual_mock_payloads",
+      "tests.test_integrity_records.IntegrityTests.test_complete_mock_form_never_certifies_operational_openness",
+      "tests.test_integrity_records.IntegrityTests.test_complete_review_keeps_sources_and_classifications_passive",
+      "tests.test_integrity_records.IntegrityTests.test_design_32_core_and_28_pairs_remains_a_plan",
+      "tests.test_integrity_records.IntegrityTests.test_design_8995_tests_does_not_count_as_performed_validation",
+      "tests.test_integrity_records.IntegrityTests.test_disagreement_preserves_both_initial_outcomes",
+      "tests.test_integrity_records.IntegrityTests.test_domain_property_mismatch_is_not_execution_evidence",
+      "tests.test_integrity_records.IntegrityTests.test_empty_intake_is_distinct_from_received_evidence",
+      "tests.test_integrity_records.IntegrityTests.test_four_conditions_cannot_claim_five_condition_openness",
+      "tests.test_integrity_records.IntegrityTests.test_initial_judgment_materials_must_match",
+      "tests.test_integrity_records.IntegrityTests.test_initial_label_exposure_is_not_independent_first_pass",
+      "tests.test_integrity_records.IntegrityTests.test_known_prior_exposure_overrides_false_annotation_flag",
+      "tests.test_integrity_records.IntegrityTests.test_later_discussion_does_not_rewrite_first_pass",
+      "tests.test_integrity_records.IntegrityTests.test_lineage_cycles_do_not_trigger_universal_dag_rejection",
+      "tests.test_integrity_records.IntegrityTests.test_malformed_public_annotation_reference_is_controlled",
+      "tests.test_integrity_records.IntegrityTests.test_matching_mock_audit_stays_record_only",
+      "tests.test_integrity_records.IntegrityTests.test_missing_claim_evidence_is_unresolved_not_satisfied",
+      "tests.test_integrity_records.IntegrityTests.test_missing_mock_marker_is_not_defaulted",
+      "tests.test_integrity_records.IntegrityTests.test_mistyped_annotation_actor_is_controlled",
+      "tests.test_integrity_records.IntegrityTests.test_mistyped_domain_suite_reference_is_controlled",
+      "tests.test_integrity_records.IntegrityTests.test_nonapplicable_cannot_evade_mandatory_condition",
+      "tests.test_integrity_records.IntegrityTests.test_one_unresolved_condition_cannot_be_averaged_away",
+      "tests.test_integrity_records.IntegrityTests.test_source_unknowns_cannot_become_inferred_ancestry",
+      "tests.test_integrity_records.IntegrityTests.test_step3_matrix_binds_all_actual_step3_checks",
+      "tests.test_integrity_records.IntegrityTests.test_structural_schema_challenge_keeps_separate_validity",
+      "tests.test_integrity_records.IntegrityTests.test_support_value_type_mutations_do_not_crash",
+      "tests.test_integrity_records.IntegrityTests.test_two_mock_humans_are_only_record_consistent",
+      "tests.test_integrity_records.IntegrityTests.test_two_sessions_by_one_person_fail_two_person_requirement",
+      "tests.test_integrity_records.IntegrityTests.test_unknown_expiry_does_not_invent_validity_period",
+      "tests.test_integrity_records.IntegrityTests.test_unknown_exposure_does_not_become_false",
+      "tests.test_integrity_records.IntegrityTests.test_unknown_parent_remains_unknown",
+      "tests.test_integrity_records.IntegrityTests.test_unknown_payload_fields_are_not_executable_extensions",
+      "tests.test_integrity_records.IntegrityTests.test_unreviewed_intake_preserves_original_anomaly",
+      "tests.test_integrity_records.IntegrityTests.test_withdrawn_suite_cannot_support_execution_record"
+    ],
+    "substantive_evidence_supplied": false
+  },
+  "ec001_supplement": {
+    "source": {
+      "name": "EC",
+      "sha256": "002d2393d05cb2c8b1db0a70e844e3d775e2be2155db7b2ffaadaa8080c8b950"
+    },
+    "documents": [
+      {
+        "path": "EVALUATION_CLOSURE_ADDENDUM.md",
+        "sha256": "31d2387ff2867e67e07adf60bca723b6783d0c3155b905d5477d2f844e1d9ce8"
+      },
+      {
+        "path": "BASELINE_UPDATE_EC_001.md",
+        "sha256": "c4a876c86b97bec68ab2691704fe37e40bbee16a94bfdf3a08c783e450c982a2"
+      },
+      {
+        "path": "THEORY_SOURCES.md",
+        "sha256": "33554654857da067870221d5d882fb5ef06cf005b8624079dda986085068d83e"
+      }
+    ],
+    "requirements": [
+      {
+        "id": "EC-C01",
+        "implementation_status": "partial",
+        "test_bindings": [
+          "tests.test_integrity_records.IntegrityTests.test_structural_schema_challenge_keeps_separate_validity"
+        ],
+        "evidence_status": "not_supplied",
+        "reason": "Record checks only; reports and actual evidence pending."
+      },
+      {
+        "id": "EC-C02",
+        "implementation_status": "partial",
+        "test_bindings": [
+          "tests.test_integrity_records.IntegrityTests.test_four_conditions_cannot_claim_five_condition_openness",
+          "tests.test_integrity_records.IntegrityTests.test_one_unresolved_condition_cannot_be_averaged_away"
+        ],
+        "evidence_status": "not_supplied",
+        "reason": "Record checks only; reports and actual evidence pending."
+      },
+      {
+        "id": "EC-C03",
+        "implementation_status": "partial",
+        "test_bindings": [
+          "tests.test_evidence.AdmissionTests.test_execution_record_required_for_coding_validity"
+        ],
+        "evidence_status": "not_supplied",
+        "reason": "Record checks only; reports and actual evidence pending."
+      },
+      {
+        "id": "EC-C04",
+        "implementation_status": "partial",
+        "test_bindings": [
+          "tests.test_evidence.CorrectionTests.test_impact_records_link_without_recalculating_metrics"
+        ],
+        "evidence_status": "not_supplied",
+        "reason": "Record checks only; reports and actual evidence pending."
+      },
+      {
+        "id": "EC-C05",
+        "implementation_status": "partial",
+        "test_bindings": [
+          "tests.test_integrity_records.IntegrityTests.test_unreviewed_intake_preserves_original_anomaly"
+        ],
+        "evidence_status": "not_supplied",
+        "reason": "Record checks only; reports and actual evidence pending."
+      },
+      {
+        "id": "EC-C06",
+        "implementation_status": "partial",
+        "test_bindings": [
+          "tests.test_integrity_records.IntegrityTests.test_complete_mock_form_never_certifies_operational_openness"
+        ],
+        "evidence_status": "not_supplied",
+        "reason": "Record checks only; reports and actual evidence pending."
+      },
+      {
+        "id": "EC-C07",
+        "implementation_status": "partial",
+        "test_bindings": [
+          "tests.test_integrity_records.IntegrityTests.test_unknown_expiry_does_not_invent_validity_period"
+        ],
+        "evidence_status": "not_supplied",
+        "reason": "Record checks only; reports and actual evidence pending."
+      },
+      {
+        "id": "EC-C08",
+        "implementation_status": "partial",
+        "test_bindings": [
+          "tests.test_records.RegistryTests.test_registry_is_definition_not_model_samples",
+          "tests.test_evidence.CorrectionTests.test_raw_bundle_is_unchanged_by_review"
+        ],
+        "evidence_status": "not_supplied",
+        "reason": "Record checks only; reports and actual evidence pending."
+      }
+    ]
+  },
+  "catalogue_encoding": "pinned_source_rows_v1",
+  "current_step_scope": "Legacy Step 3 catalogue snapshot retained for preserved tests. See delivery_progress for the current delivery.",
+  "delivery_progress": {
+    "step": 6,
+    "implementation_scope": "offline_cli_reports_hero_fixtures_and_safe_publication",
+    "phase1_complete": false,
+    "authorization": {
+      "owner_instruction": "可以，继续phase 1 step 6",
+      "interpretation": "Authorize Phase 1 Step 6 within its existing file ledger; no Step 7 or scientific-baseline change.",
+      "maintenance_amendment": {
+        "amendment_id": "STEP6-TEST-MAINTENANCE-001",
+        "owner_instruction": "批准",
+        "approval_context": "Approval of the three changes in PROPOSED_TEST_MAINTENANCE.patch proposed with the Step 6 candidate delivery.",
+        "authorized_path": "tests/test_metrics.py",
+        "authorized_changes": [
+          "Populations.test_no_hero_program_or_report_created",
+          "Matrix.test_explicit_test_bindings",
+          "Matrix.test_history_and_actual_runner_step"
+        ],
+        "patch_sha256": "fb3e0d0df0d32cb13b782ef2bab710a7e947ed6bc6fa0a2bfc0b53538497cc80",
+        "before_sha256": "2e380e1f6a3b2a4266dbec69e91f1d753e5ab78a096c9c253bf3bb01b1618baf",
+        "after_sha256": "fc08970aba91153340211af6f9ef1c0ffdeb6467a9469e0c314a6c9b8ecd81f8",
+        "test_identities_preserved": true,
+        "scientific_contracts_changed": false,
+        "later_steps_authorized": false,
+        "status": "applied_as_approved"
+      }
+    }
+  },
+  "step4_acceptance": {
+    "scope": "inventory_population_prefix_handling_only",
+    "test_bindings": [
+      "tests.test_inventory.AdditionalInventoryTests.test_absent_future_attempt_preserves_earlier_group_plan",
+      "tests.test_inventory.AdditionalInventoryTests.test_declared_output_offsets_cannot_add_a_new_realization_twice",
+      "tests.test_inventory.AdditionalInventoryTests.test_duplicate_group_position_with_unknown_attempt_is_unresolved",
+      "tests.test_inventory.AdditionalInventoryTests.test_extra_later_failure_does_not_contaminate_known_selected_ids",
+      "tests.test_inventory.AdditionalInventoryTests.test_malformed_manifest_stays_unavailable_not_successful_empty_study",
+      "tests.test_inventory.AdditionalInventoryTests.test_shared_group_across_cells_is_retained_without_pooling",
+      "tests.test_inventory.ArtifactAssociationTests.test_character_offsets_cannot_replace_byte_offsets",
+      "tests.test_inventory.ArtifactAssociationTests.test_empty_emitted_region_is_real_bytes_not_missing_slot",
+      "tests.test_inventory.ArtifactAssociationTests.test_exact_byte_region_keeps_unicode_and_crlf",
+      "tests.test_inventory.ArtifactAssociationTests.test_missing_raw_is_unavailable_not_an_extraction_guess",
+      "tests.test_inventory.ArtifactAssociationTests.test_negative_bool_and_oversized_spans_are_controlled",
+      "tests.test_inventory.ArtifactAssociationTests.test_raw_response_mismatch_cannot_be_repaired_by_neighbor",
+      "tests.test_inventory.ArtifactAssociationTests.test_truncated_known_text_can_be_associated_without_completion",
+      "tests.test_inventory.InventoryTests.test_attempt_cell_mismatch_is_preserved",
+      "tests.test_inventory.InventoryTests.test_attempts_and_realizations_are_separate",
+      "tests.test_inventory.InventoryTests.test_conflicting_order_sources_are_not_resolved_by_preference",
+      "tests.test_inventory.InventoryTests.test_duplicate_id_is_ambiguous_never_deduplicated_silently",
+      "tests.test_inventory.InventoryTests.test_duplicate_malformed_id_remains_ambiguous",
+      "tests.test_inventory.InventoryTests.test_duplicate_planned_position_is_unavailable",
+      "tests.test_inventory.InventoryTests.test_extra_output_is_preserved_unselected",
+      "tests.test_inventory.InventoryTests.test_failed_five_candidate_call_does_not_create_samples",
+      "tests.test_inventory.InventoryTests.test_frame_failure_is_scoped_and_distinct_from_empty",
+      "tests.test_inventory.InventoryTests.test_known_empty_and_truncated_emissions_remain_samples",
+      "tests.test_inventory.InventoryTests.test_known_empty_selection_is_zero_with_exclusions",
+      "tests.test_inventory.InventoryTests.test_large_attempt_count_does_not_expand_unbounded_positions",
+      "tests.test_inventory.InventoryTests.test_malformed_observation_retains_row_and_complete_count_uncertainty",
+      "tests.test_inventory.InventoryTests.test_missing_requested_sample_cannot_create_observation",
+      "tests.test_inventory.InventoryTests.test_no_io_after_loading",
+      "tests.test_inventory.InventoryTests.test_original_storage_order_is_not_experimental_sequence",
+      "tests.test_inventory.InventoryTests.test_partial_explicit_order_is_unavailable",
+      "tests.test_inventory.InventoryTests.test_plan_without_attempt_records_does_not_invent_attempts",
+      "tests.test_inventory.InventoryTests.test_position_plan_mutations_have_controlled_diagnostics",
+      "tests.test_inventory.InventoryTests.test_primary_attempt_metadata_can_supply_plan",
+      "tests.test_inventory.InventoryTests.test_private_and_missing_text_do_not_zero_inventory",
+      "tests.test_inventory.InventoryTests.test_protocol_mismatch_is_frame_error",
+      "tests.test_inventory.InventoryTests.test_recorded_ordinals_can_supply_order",
+      "tests.test_inventory.InventoryTests.test_repeated_bytes_with_distinct_positions_remain_observations",
+      "tests.test_inventory.InventoryTests.test_retry_is_preserved_without_adding_planned_slots",
+      "tests.test_inventory.InventoryTests.test_same_attempt_position_cannot_count_twice_under_two_ids",
+      "tests.test_inventory.InventoryTests.test_selecting_extra_output_cannot_extend_planned_budget",
+      "tests.test_inventory.InventoryTests.test_unattempted_slot_is_not_an_invocation",
+      "tests.test_inventory.InventoryTests.test_unknown_attempt_history_is_not_one_call_per_sample",
+      "tests.test_inventory.InventoryTests.test_unknown_cell_remains_unallocated",
+      "tests.test_inventory.InventoryTests.test_unknown_order_does_not_erase_selection",
+      "tests.test_inventory.InventoryTests.test_unknown_selection_is_not_automatically_all",
+      "tests.test_inventory.InventoryTests.test_wrong_record_file_hash_cannot_supply_selected_identity",
+      "tests.test_populations.AdversePopulationTests.test_actual_empty_input_has_no_invented_observations",
+      "tests.test_populations.AdversePopulationTests.test_association_error_withholds_both_affected_axes_without_deleting_sample",
+      "tests.test_populations.AdversePopulationTests.test_later_unrecorded_attempt_does_not_block_first_hero_endpoint",
+      "tests.test_populations.AdversePopulationTests.test_local_failed_adjudication_never_withholds_entire_population",
+      "tests.test_populations.AdversePopulationTests.test_missing_text_is_not_automatic_missing_artifact_identity",
+      "tests.test_populations.AdversePopulationTests.test_public_surface_stops_before_metrics_and_comparisons",
+      "tests.test_populations.AdversePopulationTests.test_reference_registry_and_incident_never_add_model_samples",
+      "tests.test_populations.AdversePopulationTests.test_repeated_call_without_new_identity_never_adds_sample",
+      "tests.test_populations.HeroEndpointTests.test_empty_classified_complete_twenty_is_legitimate_zero",
+      "tests.test_populations.HeroEndpointTests.test_group_plan_cannot_be_inferred_from_twenty_rows",
+      "tests.test_populations.HeroEndpointTests.test_hero_membership_5_10_20_matches_frozen_design",
+      "tests.test_populations.HeroEndpointTests.test_last_group_failure_does_not_erase_earlier_endpoint",
+      "tests.test_populations.HeroEndpointTests.test_missing_g2_p5_allows_descriptive_but_not_matched_prefix",
+      "tests.test_populations.HeroEndpointTests.test_same_group_records_are_not_independent_draws",
+      "tests.test_populations.HeroEndpointTests.test_supplementary_single_candidate_k_is_not_hero_endpoint",
+      "tests.test_populations.HeroEndpointTests.test_unclassified_position_is_kept_without_replacement",
+      "tests.test_populations.HeroEndpointTests.test_wrong_primary_attempt_blocks_matching_group",
+      "tests.test_populations.PopulationTests.test_all_invalid_can_still_have_structural_population",
+      "tests.test_populations.PopulationTests.test_axes_overlap_and_each_reconciles_to_selected_inventory",
+      "tests.test_populations.PopulationTests.test_conflicting_pin_is_local",
+      "tests.test_populations.PopulationTests.test_independence_only_correction_preserves_counts",
+      "tests.test_populations.PopulationTests.test_inputs_remain_unchanged_and_results_are_immutable",
+      "tests.test_populations.PopulationTests.test_known_empty_selection_has_undefined_ratios",
+      "tests.test_populations.PopulationTests.test_mf07_all_five_ratios_keep_unreduced_accounting",
+      "tests.test_populations.PopulationTests.test_mf07_exact_memberships",
+      "tests.test_populations.PopulationTests.test_missing_assignment_pin_has_no_latest_fallback",
+      "tests.test_populations.PopulationTests.test_missing_essential_class_evidence_preserves_other_samples",
+      "tests.test_populations.PopulationTests.test_missing_text_does_not_become_zero_coverage",
+      "tests.test_populations.PopulationTests.test_missing_validity_does_not_become_invalid",
+      "tests.test_populations.PopulationTests.test_no_io_or_model_calls_in_population_pass",
+      "tests.test_populations.PopulationTests.test_old_and_corrected_populations_keep_sample_identity",
+      "tests.test_populations.PopulationTests.test_one_class_is_distinct_from_no_class",
+      "tests.test_populations.PopulationTests.test_other_cell_survives_malformed_frame_and_no_pooling",
+      "tests.test_populations.PopulationTests.test_registry_zeros_remain_and_never_add_observations",
+      "tests.test_populations.PopulationTests.test_renaming_supported_class_ids_preserves_population_counts",
+      "tests.test_populations.PopulationTests.test_schema_correction_scopes_class_and_validity_separately",
+      "tests.test_populations.PopulationTests.test_shared_schema_failure_is_unavailable_not_zero_classes",
+      "tests.test_populations.PopulationTests.test_unknown_order_leaves_whole_cell_population_available",
+      "tests.test_populations.PopulationTests.test_unknown_selection_is_unavailable_not_empty",
+      "tests.test_populations.PopulationTests.test_validity_does_not_fill_unresolved_or_provisional_class",
+      "tests.test_populations.PopulationTests.test_wholly_unclassified_selection_remains_known_zero",
+      "tests.test_populations.PrefixTests.test_accumulation_monotonicity_on_fixed_assignments",
+      "tests.test_populations.PrefixTests.test_actual_order_change_may_change_prefix",
+      "tests.test_populations.PrefixTests.test_available_unclassified_prefix_has_count_zero",
+      "tests.test_populations.PrefixTests.test_grid_preserved_and_not_sorted_after_results",
+      "tests.test_populations.PrefixTests.test_invalid_and_omitted_k_have_distinct_outcomes",
+      "tests.test_populations.PrefixTests.test_invalid_or_unresolved_positions_are_not_backfilled",
+      "tests.test_populations.PrefixTests.test_invalid_view_and_mode_fail_explicitly",
+      "tests.test_populations.PrefixTests.test_mf10_exact_prefix_oracles",
+      "tests.test_populations.PrefixTests.test_partial_group_flag_is_descriptive_only",
+      "tests.test_populations.PrefixTests.test_storage_order_change_cannot_change_prefix",
+      "tests.test_populations.Step4MatrixTests.test_prior_requirement_and_source_identities_remain_intact",
+      "tests.test_populations.Step4MatrixTests.test_step4_progress_and_bindings_cover_executed_methods"
+    ],
+    "substantive_evidence_supplied": false
+  },
+  "delivery_history": [
+    {
+      "version": "0.1",
+      "phase": 1,
+      "step": 4,
+      "implementation_scope": "inventories_populations_fixed_prefixes_and_coverage",
+      "phase1_complete": false,
+      "authorization": {
+        "owner_instruction": "可以，Phase 1 Step 4  开始",
+        "interpretation": "Accept Step 3. Implement Phase 1 Step 4 and publish on the existing GitHub repository. Stop before Step 5; no model calls, candidate execution, or external validation."
+      }
+    },
+    {
+      "version": "0.2",
+      "phase": 1,
+      "step": 5,
+      "implementation_scope": "core_metrics_exact_thresholds_and_arithmetic_oracles",
+      "phase1_complete": false,
+      "authorization": {
+        "owner_instruction": "很好，继续Phase 1 Step 5",
+        "interpretation": "Accept Step 4; implement and publish Phase 1 Step 5. Stop before Step 6. No model calls, candidate execution, comparisons, independent empirical validation or package publication."
+      }
+    }
+  ],
+  "step5_acceptance": {
+    "scope": "core_count_metrics_and_fixed_prefix_components",
+    "test_bindings": [
+      "tests.test_metrics.Arithmetic.test_source_oracles",
+      "tests.test_metrics.Arithmetic.test_oracle_identity_and_role",
+      "tests.test_metrics.Arithmetic.test_higher_precision_independent_check",
+      "tests.test_metrics.Arithmetic.test_effective_counts_differ",
+      "tests.test_metrics.Arithmetic.test_one_class",
+      "tests.test_metrics.Arithmetic.test_zero_registry_entries",
+      "tests.test_metrics.Arithmetic.test_sci_with_replacement",
+      "tests.test_metrics.Arithmetic.test_unrounded_derivation",
+      "tests.test_metrics.Arithmetic.test_units_and_scope",
+      "tests.test_metrics.Thresholds.test_source_thresholds",
+      "tests.test_metrics.Thresholds.test_beyond_float_boundary",
+      "tests.test_metrics.Thresholds.test_no_renormalization",
+      "tests.test_metrics.Thresholds.test_other_metrics_unchanged",
+      "tests.test_metrics.Thresholds.test_omitted_vs_null",
+      "tests.test_metrics.Thresholds.test_empty_requested",
+      "tests.test_metrics.Thresholds.test_invalid_values",
+      "tests.test_metrics.Thresholds.test_invalid_empty",
+      "tests.test_metrics.Thresholds.test_lexemes_and_origins",
+      "tests.test_metrics.Thresholds.test_revalidate_token_object",
+      "tests.test_metrics.Thresholds.test_zero_never_passes",
+      "tests.test_metrics.Thresholds.test_large_negative_exponent",
+      "tests.test_metrics.Thresholds.test_large_integer_equality",
+      "tests.test_metrics.Thresholds.test_one_threshold_spellings",
+      "tests.test_metrics.Thresholds.test_token_limit",
+      "tests.test_metrics.Numerical.test_invalid_counts",
+      "tests.test_metrics.Numerical.test_exact_total",
+      "tests.test_metrics.Numerical.test_resource_limits",
+      "tests.test_metrics.Numerical.test_underflow_preserves_exact_support",
+      "tests.test_metrics.Numerical.test_renaming_and_order",
+      "tests.test_metrics.Numerical.test_uniform_scaling",
+      "tests.test_metrics.Numerical.test_624_small_tables",
+      "tests.test_metrics.Numerical.test_tiny_boundary_record",
+      "tests.test_metrics.Numerical.test_signed_zero",
+      "tests.test_metrics.Numerical.test_material_errors",
+      "tests.test_metrics.Numerical.test_tolerance_sum",
+      "tests.test_metrics.Numerical.test_exp_failure_scoped",
+      "tests.test_metrics.Numerical.test_log_failure_scoped",
+      "tests.test_metrics.Numerical.test_normalization_failure",
+      "tests.test_metrics.Numerical.test_effective_order_failure",
+      "tests.test_metrics.Numerical.test_immutable_results",
+      "tests.test_metrics.Numerical.test_no_deferred_estimators",
+      "tests.test_metrics.Populations.test_mf07_views_and_ratios",
+      "tests.test_metrics.Populations.test_all_invalid",
+      "tests.test_metrics.Populations.test_unclassified",
+      "tests.test_metrics.Populations.test_empty_selection",
+      "tests.test_metrics.Populations.test_frame_failure",
+      "tests.test_metrics.Populations.test_local_evidence_failure",
+      "tests.test_metrics.Populations.test_independence_only_withdrawal",
+      "tests.test_metrics.Populations.test_unknown_checkpoint",
+      "tests.test_metrics.Populations.test_malformed_threshold_is_component_specific",
+      "tests.test_metrics.Populations.test_ambiguous_ids",
+      "tests.test_metrics.Populations.test_population_duplicate_ids",
+      "tests.test_metrics.Populations.test_population_conservation",
+      "tests.test_metrics.Populations.test_passive_arithmetic",
+      "tests.test_metrics.Populations.test_bad_component_types",
+      "tests.test_metrics.Populations.test_no_hero_program_or_report_created",
+      "tests.test_metrics.Prefixes.test_mf10",
+      "tests.test_metrics.Prefixes.test_storage_order_invariant",
+      "tests.test_metrics.Prefixes.test_real_order_change",
+      "tests.test_metrics.Prefixes.test_missing_order",
+      "tests.test_metrics.Prefixes.test_zero_vs_missing_prefix",
+      "tests.test_metrics.Prefixes.test_partial_group",
+      "tests.test_metrics.Prefixes.test_k_states",
+      "tests.test_metrics.Prefixes.test_monotone_accumulation",
+      "tests.test_metrics.Prefixes.test_prefix_conservation",
+      "tests.test_metrics.Prefixes.test_hero_count_projection",
+      "tests.test_metrics.Prefixes.test_hero_invalid_projection",
+      "tests.test_metrics.Prefixes.test_hero_missing_intended_slot",
+      "tests.test_metrics.Prefixes.test_revision_preserves_old_result",
+      "tests.test_metrics.Matrix.test_explicit_test_bindings",
+      "tests.test_metrics.Matrix.test_frozen_and_external_scopes",
+      "tests.test_metrics.Matrix.test_complete_arithmetic_not_complete_report",
+      "tests.test_metrics.Matrix.test_history_and_actual_runner_step",
+      "tests.test_metrics.Matrix.test_invalid_binding_class",
+      "tests.test_metrics.Matrix.test_non_m_update_forbidden",
+      "tests.test_metrics.Matrix.test_old_bindings_preserved"
+    ],
+    "end_to_end_report_implemented": false,
+    "substantive_evidence_supplied": false,
+    "oracle_file": "tests/fixtures/arithmetic_oracles.json",
+    "numerical_convention": {
+      "absolute_tolerance": 1e-12,
+      "relative_tolerance": 1e-10,
+      "combination": "absolute + relative * abs(expected)"
+    },
+    "snapshot_policy": "Raw catalogue keeps historical dispositions. load_matrix validates and expands explicit implementation_updates into current M-only bindings and step identity for actual QA runs."
+  },
+  "implementation_updates": {
+    "vf_tests": [
+      {
+        "id": "VT-05",
+        "implementation_status": "partial",
+        "binding_classes": [
+          "tests.test_metrics.Populations"
+        ],
+        "reason": "Step 5 arithmetic/component checks only. Final report or complete integrated conformance remains for later steps.",
+        "fixture_refs": [
+          "MET sections 5-7 and 12",
+          "VF sections 5.1-5.2",
+          "tests/fixtures/arithmetic_oracles.json"
+        ]
+      },
+      {
+        "id": "VT-06",
+        "implementation_status": "partial",
+        "binding_classes": [
+          "tests.test_metrics.Populations",
+          "tests.test_metrics.Arithmetic",
+          "tests.test_metrics.Numerical"
+        ],
+        "reason": "Step 5 arithmetic/component checks only. Final report or complete integrated conformance remains for later steps.",
+        "fixture_refs": [
+          "MET sections 5-7 and 12",
+          "VF sections 5.1-5.2",
+          "tests/fixtures/arithmetic_oracles.json"
+        ]
+      },
+      {
+        "id": "VT-07",
+        "implementation_status": "implemented",
+        "binding_classes": [
+          "tests.test_metrics.Arithmetic"
+        ],
+        "reason": "Step 5 arithmetic/component checks only. This M arithmetic obligation is implemented.",
+        "fixture_refs": [
+          "MET sections 5-7 and 12",
+          "VF sections 5.1-5.2",
+          "tests/fixtures/arithmetic_oracles.json"
+        ]
+      },
+      {
+        "id": "VT-08",
+        "implementation_status": "implemented",
+        "binding_classes": [
+          "tests.test_metrics.Thresholds"
+        ],
+        "reason": "Step 5 arithmetic/component checks only. This M arithmetic obligation is implemented.",
+        "fixture_refs": [
+          "MET sections 5-7 and 12",
+          "VF sections 5.1-5.2",
+          "tests/fixtures/arithmetic_oracles.json"
+        ]
+      },
+      {
+        "id": "VT-09",
+        "implementation_status": "implemented",
+        "binding_classes": [
+          "tests.test_metrics.Numerical",
+          "tests.test_metrics.Arithmetic"
+        ],
+        "reason": "Step 5 arithmetic/component checks only. This M arithmetic obligation is implemented.",
+        "fixture_refs": [
+          "MET sections 5-7 and 12",
+          "VF sections 5.1-5.2",
+          "tests/fixtures/arithmetic_oracles.json"
+        ]
+      },
+      {
+        "id": "VT-10",
+        "implementation_status": "implemented",
+        "binding_classes": [
+          "tests.test_metrics.Numerical",
+          "tests.test_metrics.Prefixes"
+        ],
+        "reason": "Step 5 arithmetic/component checks only. This M arithmetic obligation is implemented.",
+        "fixture_refs": [
+          "MET sections 5-7 and 12",
+          "VF sections 5.1-5.2",
+          "tests/fixtures/arithmetic_oracles.json"
+        ]
+      },
+      {
+        "id": "VT-11",
+        "implementation_status": "implemented",
+        "binding_classes": [
+          "tests.test_metrics.Prefixes"
+        ],
+        "reason": "Step 5 arithmetic/component checks only. This M arithmetic obligation is implemented.",
+        "fixture_refs": [
+          "MET sections 5-7 and 12",
+          "VF sections 5.1-5.2",
+          "tests/fixtures/arithmetic_oracles.json"
+        ]
+      },
+      {
+        "id": "VT-13",
+        "implementation_status": "partial",
+        "binding_classes": [
+          "tests.test_metrics.Populations",
+          "tests.test_metrics.Prefixes",
+          "tests.test_pipeline.HeroPipelineTests"
+        ],
+        "reason": "Step 5 arithmetic/component checks only. Final report or complete integrated conformance remains for later steps.",
+        "fixture_refs": [
+          "MET sections 5-7 and 12",
+          "VF sections 5.1-5.2",
+          "tests/fixtures/arithmetic_oracles.json"
+        ]
+      },
+      {
+        "id": "VT-17",
+        "implementation_status": "partial",
+        "binding_classes": [
+          "tests.test_pipeline.HeroPipelineTests",
+          "tests.test_pipeline.AdversePipelineTests"
+        ],
+        "reason": "Step 6 executable path; integrated M coverage remains for Step 7. No E evidence supplied.",
+        "fixture_refs": [
+          "HF-00",
+          "HF-01",
+          "HF-02",
+          "HF-03",
+          "HF-04",
+          "HF-05",
+          "HF-06"
+        ]
+      },
+      {
+        "id": "VT-18",
+        "implementation_status": "partial",
+        "binding_classes": [
+          "tests.test_pipeline.AdversePipelineTests"
+        ],
+        "reason": "Step 6 executable path; integrated M coverage remains for Step 7. No E evidence supplied.",
+        "fixture_refs": [
+          "HF-00",
+          "HF-01",
+          "HF-02",
+          "HF-03",
+          "HF-04",
+          "HF-05",
+          "HF-06"
+        ]
+      },
+      {
+        "id": "VT-19",
+        "implementation_status": "partial",
+        "binding_classes": [
+          "tests.test_pipeline.OutputTransactionTests",
+          "tests.test_pipeline.PipelineBoundaryTests"
+        ],
+        "reason": "Step 6 executable path; integrated M coverage remains for Step 7. No E evidence supplied.",
+        "fixture_refs": [
+          "HF-00",
+          "HF-01",
+          "HF-02",
+          "HF-03",
+          "HF-04",
+          "HF-05",
+          "HF-06"
+        ]
+      },
+      {
+        "id": "VT-20",
+        "implementation_status": "partial",
+        "binding_classes": [
+          "tests.test_reporting.ReportTests",
+          "tests.test_pipeline.HeroPipelineTests"
+        ],
+        "reason": "Step 6 executable path; integrated M coverage remains for Step 7. No E evidence supplied.",
+        "fixture_refs": [
+          "HF-00",
+          "HF-01",
+          "HF-02",
+          "HF-03",
+          "HF-04",
+          "HF-05",
+          "HF-06"
+        ]
+      },
+      {
+        "id": "VT-30",
+        "implementation_status": "partial",
+        "binding_classes": [
+          "tests.test_reporting.ReportTests"
+        ],
+        "reason": "Step 6 executable path; integrated M coverage remains for Step 7. No E evidence supplied.",
+        "fixture_refs": [
+          "HF-00",
+          "HF-01",
+          "HF-02",
+          "HF-03",
+          "HF-04",
+          "HF-05",
+          "HF-06"
+        ]
+      },
+      {
+        "id": "VT-36",
+        "implementation_status": "partial",
+        "binding_classes": [
+          "tests.test_pipeline.HeroPipelineTests"
+        ],
+        "reason": "Step 6 executable path; integrated M coverage remains for Step 7. No E evidence supplied.",
+        "fixture_refs": [
+          "HF-00",
+          "HF-01",
+          "HF-02",
+          "HF-03",
+          "HF-04",
+          "HF-05",
+          "HF-06"
+        ]
+      },
+      {
+        "id": "VT-46",
+        "implementation_status": "partial",
+        "binding_classes": [
+          "tests.test_reporting.ReportTests",
+          "tests.test_pipeline.OutputTransactionTests"
+        ],
+        "reason": "Step 6 executable path; integrated M coverage remains for Step 7. No E evidence supplied.",
+        "fixture_refs": [
+          "HF-00",
+          "HF-01",
+          "HF-02",
+          "HF-03",
+          "HF-04",
+          "HF-05",
+          "HF-06"
+        ]
+      },
+      {
+        "id": "VT-51",
+        "implementation_status": "partial",
+        "binding_classes": [
+          "tests.test_reporting.ReportTests"
+        ],
+        "reason": "Step 6 executable path; integrated M coverage remains for Step 7. No E evidence supplied.",
+        "fixture_refs": [
+          "HF-00",
+          "HF-01",
+          "HF-02",
+          "HF-03",
+          "HF-04",
+          "HF-05",
+          "HF-06"
+        ]
+      },
+      {
+        "id": "VT-52",
+        "implementation_status": "partial",
+        "binding_classes": [
+          "tests.test_reporting.ReportTests"
+        ],
+        "reason": "Step 6 executable path; integrated M coverage remains for Step 7. No E evidence supplied.",
+        "fixture_refs": [
+          "HF-00",
+          "HF-01",
+          "HF-02",
+          "HF-03",
+          "HF-04",
+          "HF-05",
+          "HF-06"
+        ]
+      },
+      {
+        "id": "VT-53",
+        "implementation_status": "partial",
+        "binding_classes": [
+          "tests.test_reporting.ReportTests"
+        ],
+        "reason": "Step 6 executable path; integrated M coverage remains for Step 7. No E evidence supplied.",
+        "fixture_refs": [
+          "HF-00",
+          "HF-01",
+          "HF-02",
+          "HF-03",
+          "HF-04",
+          "HF-05",
+          "HF-06"
+        ]
+      },
+      {
+        "id": "VT-54",
+        "implementation_status": "partial",
+        "binding_classes": [
+          "tests.test_reporting.ReportTests"
+        ],
+        "reason": "Step 6 executable path; integrated M coverage remains for Step 7. No E evidence supplied.",
+        "fixture_refs": [
+          "HF-00",
+          "HF-01",
+          "HF-02",
+          "HF-03",
+          "HF-04",
+          "HF-05",
+          "HF-06"
+        ]
+      }
+    ],
+    "trace_requirements": [
+      {
+        "id": "TR-03",
+        "implementation_status": "partial",
+        "binding_classes": [
+          "tests.test_metrics.Arithmetic",
+          "tests.test_metrics.Thresholds"
+        ],
+        "reason": "Step 5 arithmetic/component checks only. Final report or complete integrated conformance remains for later steps.",
+        "fixture_refs": [
+          "MET sections 5-7 and 12",
+          "VF sections 5.1-5.2",
+          "tests/fixtures/arithmetic_oracles.json"
+        ]
+      },
+      {
+        "id": "TR-10",
+        "implementation_status": "partial",
+        "binding_classes": [
+          "tests.test_metrics.Arithmetic",
+          "tests.test_metrics.Populations"
+        ],
+        "reason": "Step 5 arithmetic/component checks only. Final report or complete integrated conformance remains for later steps.",
+        "fixture_refs": [
+          "MET sections 5-7 and 12",
+          "VF sections 5.1-5.2",
+          "tests/fixtures/arithmetic_oracles.json"
+        ]
+      },
+      {
+        "id": "TR-11",
+        "implementation_status": "partial",
+        "binding_classes": [
+          "tests.test_metrics.Thresholds"
+        ],
+        "reason": "Step 5 arithmetic/component checks only. Final report or complete integrated conformance remains for later steps.",
+        "fixture_refs": [
+          "MET sections 5-7 and 12",
+          "VF sections 5.1-5.2",
+          "tests/fixtures/arithmetic_oracles.json"
+        ]
+      },
+      {
+        "id": "TR-12",
+        "implementation_status": "partial",
+        "binding_classes": [
+          "tests.test_metrics.Arithmetic",
+          "tests.test_metrics.Numerical"
+        ],
+        "reason": "Step 5 arithmetic/component checks only. Final report or complete integrated conformance remains for later steps.",
+        "fixture_refs": [
+          "MET sections 5-7 and 12",
+          "VF sections 5.1-5.2",
+          "tests/fixtures/arithmetic_oracles.json"
+        ]
+      },
+      {
+        "id": "TR-13",
+        "implementation_status": "partial",
+        "binding_classes": [
+          "tests.test_metrics.Arithmetic",
+          "tests.test_metrics.Numerical"
+        ],
+        "reason": "Step 5 arithmetic/component checks only. Final report or complete integrated conformance remains for later steps.",
+        "fixture_refs": [
+          "MET sections 5-7 and 12",
+          "VF sections 5.1-5.2",
+          "tests/fixtures/arithmetic_oracles.json"
+        ]
+      },
+      {
+        "id": "TR-14",
+        "implementation_status": "partial",
+        "binding_classes": [
+          "tests.test_metrics.Arithmetic",
+          "tests.test_metrics.Numerical"
+        ],
+        "reason": "Step 5 arithmetic/component checks only. Final report or complete integrated conformance remains for later steps.",
+        "fixture_refs": [
+          "MET sections 5-7 and 12",
+          "VF sections 5.1-5.2",
+          "tests/fixtures/arithmetic_oracles.json"
+        ]
+      },
+      {
+        "id": "TR-15",
+        "implementation_status": "partial",
+        "binding_classes": [
+          "tests.test_metrics.Prefixes"
+        ],
+        "reason": "Step 5 arithmetic/component checks only. Final report or complete integrated conformance remains for later steps.",
+        "fixture_refs": [
+          "MET sections 5-7 and 12",
+          "VF sections 5.1-5.2",
+          "tests/fixtures/arithmetic_oracles.json"
+        ]
+      }
+    ]
+  },
+  "step6_acceptance": {
+    "test_bindings": [
+      "tests.test_pipeline.HeroPipelineTests.test_hf00_original_twenty_record_workflow",
+      "tests.test_pipeline.HeroPipelineTests.test_hf01_invalid_but_classifiable",
+      "tests.test_pipeline.HeroPipelineTests.test_hf02_unresolved_class_keeps_validity",
+      "tests.test_pipeline.HeroPipelineTests.test_hf03_provisional_label_has_distinct_reason",
+      "tests.test_pipeline.HeroPipelineTests.test_hf04_missing_evidence_is_local_limit",
+      "tests.test_pipeline.HeroPipelineTests.test_hf05_missing_position_is_not_backfilled",
+      "tests.test_pipeline.HeroPipelineTests.test_hf06_new_assignment_preserves_old_identity",
+      "tests.test_pipeline.HeroPipelineTests.test_pinned_base_remains_byte_identical_after_all_variants",
+      "tests.test_pipeline.HeroPipelineTests.test_materializer_refuses_unregistered_variant",
+      "tests.test_pipeline.HeroPipelineTests.test_hf00_materialization_matches_pinned_original",
+      "tests.test_pipeline.HeroPipelineTests.test_program_text_and_generation_cost_are_never_invented",
+      "tests.test_pipeline.HeroPipelineTests.test_replay_canonical_reports_and_manifest_time",
+      "tests.test_pipeline.HeroPipelineTests.test_explicit_run_identity_changes_metadata_not_metrics",
+      "tests.test_pipeline.HeroPipelineTests.test_invalid_run_identity_and_naive_time_rejected",
+      "tests.test_pipeline.HeroPipelineTests.test_input_changes_get_new_fingerprint_without_overwriting_old_report",
+      "tests.test_pipeline.HeroPipelineTests.test_validate_has_no_metric_calculation",
+      "tests.test_pipeline.HeroPipelineTests.test_report_hashes_identify_actual_written_bytes",
+      "tests.test_pipeline.AdversePipelineTests.test_empty_selected_inventory_has_zero_support_and_undefined_entropy",
+      "tests.test_pipeline.AdversePipelineTests.test_nonempty_unclassified_inventory_is_not_empty_study",
+      "tests.test_pipeline.AdversePipelineTests.test_missing_shared_frame_withholds_distribution_keeps_inventory",
+      "tests.test_pipeline.AdversePipelineTests.test_malformed_manifest_is_error_not_empty_success",
+      "tests.test_pipeline.AdversePipelineTests.test_malformed_analysis_object_retains_safe_error_report",
+      "tests.test_pipeline.AdversePipelineTests.test_unknown_prefix_mode_not_guessed_into_success",
+      "tests.test_pipeline.AdversePipelineTests.test_invalid_threshold_is_contract_failure_not_zero",
+      "tests.test_pipeline.AdversePipelineTests.test_omitted_threshold_keeps_not_requested",
+      "tests.test_pipeline.AdversePipelineTests.test_mock_imported_adjudication_uses_same_pipeline",
+      "tests.test_pipeline.AdversePipelineTests.test_independence_only_correction_does_not_erase_supported_counts",
+      "tests.test_pipeline.AdversePipelineTests.test_four_sample_evidence_correction_exact_sequence",
+      "tests.test_pipeline.AdversePipelineTests.test_duplicate_record_is_error_not_a_second_observation",
+      "tests.test_pipeline.AdversePipelineTests.test_unknown_model_identity_does_not_destroy_arithmetic",
+      "tests.test_pipeline.AdversePipelineTests.test_hash_mismatch_is_not_repaired_by_pipeline",
+      "tests.test_pipeline.CommandIntegrationTests.test_validate_command_success_and_no_writes",
+      "tests.test_pipeline.CommandIntegrationTests.test_analyze_command_publishes_three_files",
+      "tests.test_pipeline.CommandIntegrationTests.test_analyze_refuses_existing_output",
+      "tests.test_pipeline.CommandIntegrationTests.test_invalid_input_has_exit_two_and_safe_diagnostics",
+      "tests.test_pipeline.CommandIntegrationTests.test_missing_arguments_do_not_echo_sensitive_paths",
+      "tests.test_pipeline.CommandIntegrationTests.test_unimplemented_commands_remain_errors",
+      "tests.test_pipeline.CommandIntegrationTests.test_contract_error_report_can_be_written_without_success_claim",
+      "tests.test_pipeline.CommandIntegrationTests.test_internal_failure_returns_three_without_traceback",
+      "tests.test_pipeline.OutputTransactionTests.test_publishes_exact_complete_set",
+      "tests.test_pipeline.OutputTransactionTests.test_existing_file_and_empty_directory_are_not_replaced",
+      "tests.test_pipeline.OutputTransactionTests.test_output_inside_input_is_rejected",
+      "tests.test_pipeline.OutputTransactionTests.test_output_symlink_and_symlink_parent_are_rejected",
+      "tests.test_pipeline.OutputTransactionTests.test_remote_expanding_and_traversing_output_paths_are_rejected",
+      "tests.test_pipeline.OutputTransactionTests.test_only_fixed_three_filenames_are_allowed",
+      "tests.test_pipeline.OutputTransactionTests.test_missing_parent_does_not_create_an_implicit_tree",
+      "tests.test_pipeline.OutputTransactionTests.test_interrupted_write_cleans_staging",
+      "tests.test_pipeline.OutputTransactionTests.test_short_writes_are_retried_without_truncation",
+      "tests.test_pipeline.OutputTransactionTests.test_zero_length_write_is_failure_and_cleanup",
+      "tests.test_pipeline.OutputTransactionTests.test_complete_staging_precedes_atomic_publish",
+      "tests.test_pipeline.OutputTransactionTests.test_racing_target_is_preserved_and_staging_cleaned",
+      "tests.test_pipeline.OutputTransactionTests.test_unsupported_atomic_operation_has_no_overwrite_fallback",
+      "tests.test_pipeline.OutputTransactionTests.test_private_permissions_do_not_depend_on_umask",
+      "tests.test_pipeline.PipelineBoundaryTests.test_full_pipeline_never_runs_candidate_or_fetches_remote",
+      "tests.test_pipeline.PipelineBoundaryTests.test_external_locator_remains_inert_and_private_in_report",
+      "tests.test_pipeline.PipelineBoundaryTests.test_serialization_failure_never_creates_output",
+      "tests.test_pipeline.PipelineBoundaryTests.test_validate_does_not_write_any_inputs",
+      "tests.test_reporting.ReportTests.test_required_section_order",
+      "tests.test_reporting.ReportTests.test_evidence_limitations_precede_numeric_results",
+      "tests.test_reporting.ReportTests.test_json_and_markdown_consume_identical_tree",
+      "tests.test_reporting.ReportTests.test_every_scalar_value_unit_status_and_reason_survives_markdown",
+      "tests.test_reporting.ReportTests.test_json_keeps_unrounded_float",
+      "tests.test_reporting.ReportTests.test_all_v_and_d_results_are_null_with_explicit_status",
+      "tests.test_reporting.ReportTests.test_no_empirical_support_or_score_fabricated",
+      "tests.test_reporting.ReportTests.test_five_conjunctive_conditions_visible",
+      "tests.test_reporting.ReportTests.test_all_ten_ec_disclosures_and_unknown_expiry_visible",
+      "tests.test_reporting.ReportTests.test_source_lineage_pins_and_transform_references_retained",
+      "tests.test_reporting.ReportTests.test_scoped_ids_retained_without_private_person_mappings",
+      "tests.test_reporting.ReportTests.test_private_root_absent_from_all_outputs",
+      "tests.test_reporting.ReportTests.test_control_characters_links_html_and_pipes_are_inert",
+      "tests.test_reporting.ReportTests.test_nonfinite_results_cannot_be_serialized",
+      "tests.test_reporting.ReportTests.test_missing_required_section_fails_serialization",
+      "tests.test_reporting.ReportTests.test_zero_false_and_known_null_are_not_unknown",
+      "tests.test_reporting.ReportTests.test_unknown_unavailable_and_inapplicable_retain_distinction",
+      "tests.test_reporting.ReportTests.test_canonical_dictionary_order_invariance",
+      "tests.test_reporting.ReportTests.test_pinned_input_hashes_do_not_claim_program_hashes",
+      "tests.test_reporting.ReportTests.test_zero_count_registry_classes_are_visible",
+      "tests.test_reporting.ReportTests.test_held_evidence_prose_and_task_metadata_not_copied",
+      "tests.test_reporting.ReportTests.test_reanalysis_and_v_dependents_remain_separate",
+      "tests.test_reporting.SourceAssociationDisclosureTests.test_actual_output_hash_is_preserved_while_body_is_withheld"
+    ],
+    "scope": "fixture_import_to_report_only",
+    "status": "implementation_present_execution_outcomes_in_qa_artifacts",
+    "known_predecessor_assertion_conflicts": [
+      {
+        "test_id": "tests.test_metrics.Populations.test_no_hero_program_or_report_created",
+        "reason": "asserts examples/hero_hf00/bundle.json absent, contrary to required Step 6 materialization"
+      },
+      {
+        "test_id": "tests.test_metrics.Matrix.test_explicit_test_bindings",
+        "reason": "asserts current delivery step is 5"
+      },
+      {
+        "test_id": "tests.test_metrics.Matrix.test_history_and_actual_runner_step",
+        "reason": "asserts current effective matrix step and authorization are Step 5"
+      }
+    ],
+    "amendment_requested": {
+      "path": "tests/test_metrics.py",
+      "action": "Make only these three stage-specific assertions progression-aware while retaining their underlying arithmetic, no-generated-source and history checks. Existing scientific baselines and tests stay unchanged pending owner approval.",
+      "status": "approved_and_applied"
+    },
+    "tests_disabled": false,
+    "predecessor_assertion_resolution": {
+      "amendment_id": "STEP6-TEST-MAINTENANCE-001",
+      "owner_instruction": "批准",
+      "approval_context": "Approval of the three changes in PROPOSED_TEST_MAINTENANCE.patch proposed with the Step 6 candidate delivery.",
+      "authorized_path": "tests/test_metrics.py",
+      "authorized_changes": [
+        "Populations.test_no_hero_program_or_report_created",
+        "Matrix.test_explicit_test_bindings",
+        "Matrix.test_history_and_actual_runner_step"
+      ],
+      "patch_sha256": "fb3e0d0df0d32cb13b782ef2bab710a7e947ed6bc6fa0a2bfc0b53538497cc80",
+      "before_sha256": "2e380e1f6a3b2a4266dbec69e91f1d753e5ab78a096c9c253bf3bb01b1618baf",
+      "after_sha256": "fc08970aba91153340211af6f9ef1c0ffdeb6467a9469e0c314a6c9b8ecd81f8",
+      "test_identities_preserved": true,
+      "scientific_contracts_changed": false,
+      "later_steps_authorized": false,
+      "status": "applied_as_approved"
+    }
+  }
 }

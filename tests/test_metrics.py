@@ -380,9 +380,15 @@ class Populations(CellFixture):
             with self.assertRaises(InputError):op()
 
     def test_no_hero_program_or_report_created(self):
+        fixture_root = ROOT / 'examples/hero_hf00'
+        before_files = {p.relative_to(fixture_root).as_posix(): p.read_bytes()
+                        for p in fixture_root.rglob('*') if p.is_file()}
         r=cell_metrics(self.build(HERO,groups=(5,5,5,5)),ks=(5,10,20),prefix_mode='hero')
         self.assertEqual(r.distributions['classified_all'].results[C].exact_ratio,(57,200));self.assertFalse(r.independent_validation_performed)
-        self.assertFalse((ROOT/'examples/hero_hf00/bundle.json').exists());self.assertFalse(hasattr(r,'source_text_diagnostic'))
+        after_files = {p.relative_to(fixture_root).as_posix(): p.read_bytes()
+                       for p in fixture_root.rglob('*') if p.is_file()}
+        self.assertEqual(before_files, after_files)
+        self.assertFalse(hasattr(r,'source_text_diagnostic'))
 
 
 class Prefixes(CellFixture):
@@ -476,7 +482,10 @@ class Matrix(unittest.TestCase):
         for cls in ast.parse((ROOT/'tests/test_metrics.py').read_text()).body:
             if isinstance(cls,ast.ClassDef):actual.extend('tests.test_metrics.'+cls.name+'.'+f.name for f in cls.body if isinstance(f,ast.FunctionDef) and f.name.startswith('test_'))
         self.assertEqual(set(raw['step5_acceptance']['test_bindings']),set(actual));self.assertEqual(len(raw['step5_acceptance']['test_bindings']),len(actual))
-        self.assertEqual(raw['delivery_progress']['step'],5);self.assertFalse(raw['delivery_progress']['phase1_complete'])
+        deliveries = raw.get('delivery_history', []) + [raw['delivery_progress']]
+        step5 = [x for x in deliveries if x['step'] == 5]
+        self.assertEqual(len(step5), 1)
+        self.assertFalse(step5[0]['phase1_complete'])
 
     def test_frozen_and_external_scopes(self):
         from tests.helpers import load_matrix,baseline_checks
@@ -499,8 +508,14 @@ class Matrix(unittest.TestCase):
         raw=json.loads((ROOT/'tests/phase1_matrix.json').read_text());old=[x for x in raw['delivery_history'] if x['step']==4]
         self.assertEqual(len(old),1);self.assertEqual(old[0]['implementation_scope'],'inventories_populations_fixed_prefixes_and_coverage')
         self.assertEqual(raw['current_step'],3);self.assertIn('snapshot',raw['current_step_scope'])
-        live=load_matrix();self.assertEqual(live['current_step'],5);self.assertEqual(live['metadata_snapshot_step'],3)
-        self.assertIn('Step 5',live['authorization']['interpretation'])
+        live=load_matrix()
+        self.assertEqual(live['current_step'], raw['delivery_progress']['step'])
+        self.assertEqual(live['metadata_snapshot_step'],3)
+        self.assertEqual(live['authorization'], raw['delivery_progress']['authorization'])
+        step5 = [x for x in raw.get('delivery_history', []) + [raw['delivery_progress']]
+                 if x['step'] == 5]
+        self.assertEqual(len(step5), 1)
+        self.assertIn('Step 5', step5[0]['authorization']['interpretation'])
 
     def test_invalid_binding_class(self):
         from tests.helpers import load_matrix

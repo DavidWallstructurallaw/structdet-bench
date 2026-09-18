@@ -91,7 +91,7 @@ def load_matrix() -> dict[str, Any]:
             classes = change["binding_classes"]
             if not isinstance(classes, list) or not classes or not all(isinstance(x, str) for x in classes):
                 raise ValueError("Invalid binding class references")
-            catalogue = matrix["step5_acceptance"]["test_bindings"]
+            catalogue = matrix["step5_acceptance"]["test_bindings"] + matrix.get("step6_acceptance", {}).get("test_bindings", [])
             additions = []
             for name in classes:
                 found = [method for method in catalogue if method.startswith(name + ".")]
@@ -388,3 +388,74 @@ def population_bundle(root: Path, labels: list[str | None], *, validity: list[st
         start += size
     if group_sizes: selected["registered_positions"] = tagged(positions)
     return rewrite_evidence_bundle(root,obs,support,manifest),obs,support,manifest
+
+# Step 6 trusted test-only materializer. This is never called by the runtime.
+def materialize_hero(directory: Path, fixture_id: str = "HF-00") -> tuple[Path, dict[str, Any]]:
+    import copy
+    catalogue = json.loads((ROOT / "tests/fixtures/hero_variants.json").read_text())
+    selected = [x for x in catalogue["variants"] if x["fixture_id"] == fixture_id]
+    if len(selected) != 1:
+        raise ValueError("Unknown pinned fixture")
+    spec = selected[0]
+    base = ROOT / "examples/hero_hf00"
+    for name, expected in catalogue["base_files"].items():
+        if sha256_file(base / name) != expected:
+            raise ValueError("Pinned fixture identity mismatch")
+    for name, expected in catalogue["source_pins"].items():
+        if sha256_file(ROOT / name) != expected:
+            raise ValueError("Pinned source mismatch")
+    manifest = json.loads((base / "bundle.json").read_text())
+    obs = [json.loads(x) for x in (base / "records.jsonl").read_text().splitlines()]
+    sup = [json.loads(x) for x in (base / "evidence.jsonl").read_text().splitlines()]
+    def record(rows, identity):
+        return next(r for r in rows if r["record_id"] == identity)
+    operation = spec["operation"]
+    if operation == "invalid":
+        record(obs,"v10")["validity_status"] = "invalid"
+        record(sup,"e-v10")["payload"]["assertion"] = tagged("invalid")
+    elif operation == "unresolved":
+        record(obs,"a10").update(assignment_status="unresolved", structural_class_id=None,
+                                candidate_class_ids=["SORT-RADIX","SORT-COUNT"])
+    elif operation == "provisional":
+        record(obs,"a10")["assignment_review_status"] = "provisional"
+    elif operation == "missing_declaration":
+        sup = [r for r in sup if r["record_id"] != "e-a10"]
+    elif operation == "not_emitted":
+        obs = [r for r in obs if r["record_id"] not in {"s10","a10","v10"}]
+        sup = [r for r in sup if r["record_id"] not in {"e-a10","e-v10"}]
+        selection = manifest["analysis_config"]["selection"][0]
+        for field in ("selected_sample_ids","sample_order"):
+            selection[field]["value"].remove("s10")
+        for axis in ("assignment","validity"):
+            manifest["analysis_config"][axis+"_pins"] = [p for p in manifest["analysis_config"][axis+"_pins"] if p["sample_id"] != "s10"]
+    elif operation == "corrected_assignment":
+        new = copy.deepcopy(record(obs,"a10"))
+        new.update(record_id="a10-r2", assignment_id="a10-r2", assignment_version="0.2",
+                   structural_class_id="SORT-COUNT", supersedes_assignment_id=tagged("a10"),
+                   evidence_refs=[record_ref("evidence","e-a10-r2")])
+        proof = copy.deepcopy(record(sup,"e-a10")); proof["record_id"] = "e-a10-r2"
+        proof["payload"].update(target_ref=record_ref("assignment","a10-r2"),assertion=tagged("SORT-COUNT"))
+        obs.append(new);sup.append(proof)
+        for p in manifest["analysis_config"]["assignment_pins"]:
+            if p["sample_id"] == "s10":p.update(assignment_id="a10-r2",assignment_version="0.2")
+        sup.append(support_record("correction","hf06-correction",effect="membership",action="replace",stage="applied",
+            event_type="correction",target_refs=[record_ref("assignment","a10")],replacement_refs=[record_ref("assignment","a10-r2")],
+            prior_result_ids=["HF-00"],reason=tagged("Stipulated label correction; no new generation."),
+            reviewer_refs=[record_ref("role","reviewer")],evidence_refs=[record_ref("evidence","e-a10-r2")]))
+    elif operation != "original":
+        raise ValueError("Unsupported pinned fixture operation")
+    manifest["bundle_id"] = fixture_id
+    manifest["extensions"]["fixture_id"] = fixture_id
+    manifest["analysis_config"]["analysis_config_id"] = fixture_id + "-config"
+    if operation != "original":
+        manifest["extensions"]["base_manifest_sha256"] = catalogue["base_files"]["bundle.json"]
+    directory.mkdir(parents=True, exist_ok=True)
+    def encode(value):
+        return (json.dumps(value,ensure_ascii=True,sort_keys=True,separators=(",",":"))+"\n").encode()
+    for name, rows in (("records.jsonl", obs),("evidence.jsonl",sup)):
+        (directory/name).write_bytes(b"".join(encode(r) for r in rows))
+    for item in manifest["record_files"]:
+        item["expected_sha256"] = tagged(sha256_file(directory/item["path"]))
+    (directory/"bundle.json").write_bytes(encode(manifest))
+    (directory/"expected.json").write_bytes(encode(spec["expected"]))
+    return directory/"bundle.json", copy.deepcopy(spec["expected"])

@@ -630,3 +630,124 @@ The unchanged README remains the preceding Step 3 handoff; this section records
 the current Step 4 API within the plan's allowed documentation paths. README and
 CLI integration are scheduled for Step 6. No metrics implementation, publication
 to a package registry, GitHub-hosted CI or substantive E evidence is added here.
+
+## Step 6 addendum: complete local reporting path
+
+Document progression: v0.4, 2026-09-17. Earlier schema identities and scientific
+contracts remain unchanged. This section adds CLI/output bindings to the existing
+record semantics; it does not redefine classes, validity or any estimator.
+
+`python -m structdet_bench validate --bundle PATH/bundle.json` reads the passive
+bundle and emits a redacted validation JSON object to stdout. It writes no files
+and computes no structural metrics. `analyze --bundle PATH --output-dir NEW_DIR`
+connects the existing evidence, inventory, population and metric modules and
+writes a three-file report set. No generator, judge, code-execution or comparison
+command is supplied.
+
+### Prefix configuration
+
+`analysis_config.extensions.prefix_mode` may be `descriptive` or `hero`.
+Absent mode selects the already-supported descriptive-prefix interpretation; HF-00
+explicitly requests `hero`. The requested k grid still comes from `requested_k`.
+An unrecognized mode is an input failure and cannot silently fall back to a
+successful analysis. No other extension becomes a runtime transformation rule.
+
+### Errors versus evidential restrictions
+
+Missing linked evidence can withhold a local assignment while leaving other
+accepted records calculable. HF-04 therefore completes processing with a visible
+missing-reference diagnostic and nineteen classified records. Malformed input,
+duplicate identities, incompatible versions, invalid configurations and resource
+failures return exit 2. Where serialization and output paths remain safe, an error
+report preserves supported inventory and affected scopes. It is explicitly marked
+with processing exit 2, even when a remaining descriptive quantity is available.
+Known mathematical undefinedness and absent independent validation alone do not
+make software processing fail. Unexpected local I/O/internal failures use exit 3
+and bounded public diagnostics without private argument values or tracebacks.
+
+### Common report tree and field coverage
+
+`report.json` and `report.md` render the same eight ordered sections required by
+HERO section 11.2. Scalars retain names, units, statuses, reasons, denominators and
+unrounded stored values. Markdown uses readable summary tables with expandable
+complete records. It HTML-escapes cell content and serializes control characters;
+raw source content is not rendered as active Markdown or HTML.
+
+RF-01 through RF-20 map to sections 1 through 5; RF-21 through RF-28 remain explicit
+unimplemented V slots in sections 6 and 7; RF-29 through RF-36 map to the scoped
+integrity/disclosure/correction and unavailable-capability records in section 8.
+EC-001's five conditions remain conjunctive, and all ten reporting disclosures
+are present. Imported review declarations never become toolkit certifications.
+Unknown result expiry stays explicit. Reopening event names remain record content;
+no automatic taxonomy change or model recovery is inferred.
+
+The report binds every result to a cell and accepted population, with pinned
+revision IDs, selected and counted sample IDs, shared groups and exact threshold
+metadata. Input filenames and private roots are replaced by hashed locator
+identities. Ordinary reports preserve scoped record IDs and readable metadata
+states while withholding raw bodies, person mappings and unrestricted prose.
+Exact local inputs remain necessary to inspect those privately retained records.
+
+### Run manifest and replay
+
+`run_manifest.json` records input byte hashes, configuration identity, source-code
+file fingerprints, software/interpreter identifiers, operational limits and report
+hashes. It does not hash itself. Input fingerprints identify the actual byte
+snapshots, not independently validated observations or nonexistent fixture program
+text. The default run ID is a deterministic digest of input, configuration and
+implementation identity. The API permits an explicit safe run ID.
+
+The same pinned input/configuration/implementation produces byte-identical JSON
+and Markdown. The run-manifest UTC recording time and recorded interpreter/platform
+are identified variable metadata. Supplied recording time must include a UTC
+offset; it is not an asserted model-collection date. `recorded_at` can be pinned
+for replay tests. No reproducible-model-generation claim follows.
+
+### Output transaction
+
+All three files must serialize before publication. The writer accepts only the
+three fixed filenames and limits the combined payload to 128 MiB, with explicit
+failure rather than truncation. The caller's output parent must exist. The output
+is a new directory outside the input bundle tree. Existing files, directories and
+symlinks are not replaced, including a concurrently created target.
+
+The writer holds a no-follow descriptor for the parent, writes a private sibling
+staging directory, synchronizes the files, then publishes with Linux
+`renameat2(RENAME_NOREPLACE)`. Directory/file permissions are 0700/0600. Failed
+pre-publication writes remove staging content. A synchronization error after the
+atomic rename reports durability uncertainty and leaves the complete published
+set intact. There is no destructive fallback on unsupported platforms/filesystems.
+The low-level contract is documented in Linux `rename(2)` and Python's `os`
+documentation; network filesystems and hostile OS/root-level actors are not covered
+by a general sandbox or universal durability guarantee.
+
+### Fixture identities and correction
+
+`examples/hero_hf00/` contains the original four-by-five fixture as three input
+files plus an independent `expected.json`. `tests/fixtures/hero_variants.json`
+pins the base file hashes and six separately named changes with their own oracles.
+Only the trusted test helper materializes these variants. Its output manifest and
+record hashes are finalized before analysis; it cannot be invoked by input data
+or the runtime CLI. All variants retain explicit fixture origin.
+
+A corrected input is analyzed into a new output directory. Old input/output bytes,
+sample identities and budgets remain unchanged. Current M fields are recomputed,
+while V dependents stay unimplemented. HF-06 records a supported label revision;
+it does not assert structural reopening or model learning. A separate
+independence-only correction retains supported arithmetic and records the narrower
+claim status.
+
+### Approved test-maintenance amendment
+
+The owner approved `STEP6-TEST-MAINTENANCE-001` for `tests/test_metrics.py`.
+The three historical stage assertions now check that arithmetic leaves HF-00 files
+unchanged, that the Step 5 delivery remains uniquely recorded, and that the
+effective current step/authorization matches current delivery metadata. All test
+identities and arithmetic assertions are preserved. The exact approved patch and
+before/after fingerprints are recorded in the delivery evidence; the existing
+matrix retains both the original request and its resolution.
+
+The complete current regression contains 450 passing tests with no skips.
+The end-to-end Step 6 path is implemented; full Phase 1 integration and final
+completion remain Steps 7 and 8. This amendment does not authorize those steps
+or change any frozen scientific contract.

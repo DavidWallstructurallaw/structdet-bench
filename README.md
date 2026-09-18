@@ -1,57 +1,99 @@
 # StructDet-Bench
 
-**Phase 1 Step 3: passive local inputs and imported evidence-record checks.**
-Version `0.1.0.dev0`. The CLI remains **scaffold only**, with help and version.
-The Python APIs provide `load_bundle` and `review_evidence`; no metric engine,
-model calls, automatic structural classifier, or program execution is present.
+An offline toolkit for task-relative structural measurement of recorded LLM outputs.
 
-```text
+## Current delivery
+
+Phase 1 Step 6 implements the local `validate` and `analyze` commands, the original
+HF-00 fixture, six pinned variants, JSON/Markdown reports and no-overwrite output
+publication. The owner-approved maintenance amendment updates three historical
+Step 5 assertions without changing test identities or arithmetic checks. All 450
+current tests pass in the recorded local environment. The full Phase 1 integration
+audit and completion record remain Steps 7 and 8.
+
+This delivery builds on the accepted Step 5 commit `af94d81`. The twelve pinned
+planning/scientific documents and EC-001 retain their approved bytes. Local test
+results are not GitHub Actions results or independent scientific validation.
+
+## Run locally
+
+Use the standard-library module path from this directory. No API key or model
+account is required, and no package installation is needed.
+
+```bash
 python -m structdet_bench --help
-python -m unittest discover -s tests -v
-python -m unittest tests.test_evidence tests.test_integrity_records -v
-python tools/run_phase1_checks.py --scope scaffold
+python -m structdet_bench --version
+python -m structdet_bench validate --bundle examples/hero_hf00/bundle.json
+python -m structdet_bench analyze --bundle examples/hero_hf00/bundle.json --output-dir hf00-output
 ```
 
-The final Phase 1 gate remains incomplete; **exit code 1 is expected** from
-`python tools/run_phase1_checks.py` until the later M steps are implemented.
-Tests check software behavior on stipulated records, not independent human
-judgment, actual program correctness, or theory confirmation. UD-006 remains open.
-See `INPUT_FORMAT.md` for APIs, record schemas, acceptance and correction rules.
+The output parent must already exist; `hf00-output` itself must not exist. The
+command writes `report.json`, `report.md` and `run_manifest.json` together. For a
+second run choose a new directory. Existing reports and source inputs are never
+overwritten. A malformed bundle can produce a safe diagnostic report with exit 2;
+that report does not declare processing success.
 
-## Governing material
+Current secure input reads require POSIX no-follow descriptor operations. Atomic
+no-replace report publication additionally requires Linux `renameat2` support in
+the host C library, kernel and filesystem. Unsupported publication fails safely;
+there is no overwrite fallback. Tested interpreter/platform are recorded in the
+actual QA artifacts, rather than inferred from the Python >=3.11 language floor.
 
-Use the eleven frozen Phase 0 files, `PHASE_1_PLAN.md`, and EC-001's
-`EVALUATION_CLOSURE_ADDENDUM.md` and `BASELINE_UPDATE_EC_001.md`. Their historical
-approval headers remain intact. The original baseline uses SD/SI; EC-001 adds
-Evaluation Closure without rewriting those documents. Step 3 does not authorize
-Step 4, metrics, model collection, spending, or generated-code execution.
+## What the demo establishes
 
-## Evidence handling
+HF-00 contains twenty stipulated records, in the exact four groups of five from
+the approved benchmark specification. Its observed counts are 8, 6, 3, 2 and 1.
+The expected support is 5, support at threshold 0.10 is 4, and SCI is 57/200.
+Shannon and Simpson effective class counts are reported separately.
 
-`fixture_only` and `adjudicated_import` are separate policies. Missing decisive
-membership evidence withholds the affected assignment. Independence-only gaps
-restrict a stronger claim without necessarily removing a supported imported
-label. Annotation identity, exposure, validity, structural class and numeric
-availability are separate concepts. All independent/scientific validation flags
-remain false in these software fixtures.
+These are **software fixtures**. No sorting-program source, actual model output,
+API charge, completed human annotation or execution-validation result is supplied.
+The demo checks computation and evidence-record handling. It supplies no empirical
+P1/P5 finding, deployment assurance or estimate of full model capacity.
 
-Runtime and tests use the standard library. The passive reader requires the
-recorded POSIX no-follow/descriptor operations; no untested native-Windows
-compatibility or system sandbox is claimed. Build/install, hosted CI and package
-registry publication have not been run by this step.
+Imported classification/validity records follow the same pipeline under the
+selected evidence policy. A record-consistent imported assertion remains a
+supplied assertion, with independent scientific validation explicitly unperformed
+by the toolkit. Unknown metadata and unsupported conclusions are retained.
 
-## Publication and licensing
+## Reports and privacy
 
-The original Step 1 record said: **No public software license has been selected**.
-Later owner-authorized repository publication adopted this mixed-license split:
+Reports separate planned calls and positions from actual realizations, preserve
+fixed prefixes without backfilling, show both classified populations and their
+five coverage ratios, and keep evidence restrictions ahead of numerical results.
+Unavailable/deferred comparisons and estimators have null values and reasons.
 
-Code, test code, tooling and configuration: Apache-2.0.
-Project specifications, documentation and repository-created example data:
-CC BY 4.0 unless specifically marked otherwise.
-Theory publications and third-party assets retain their stated licenses.
-The three theory PDFs are excluded from the public software repository.
-See `LICENSE`, `LICENSES/`, `NOTICE`, `LICENSING_NOTES.md`, and `THEORY_SOURCES.md`.
+Ordinary reports omit raw bodies, private identity mappings, paths and unrestricted
+evidence prose. Hashed references and scoped record IDs retain local audit links.
+A public report alone cannot reproduce privately retained evidence.
 
-The local delivery is complete through Step 3 and includes retained QA history.
-Remote publication is confirmed by its actual commit and verification record;
-local test success alone is not evidence of a GitHub branch update.
+## Tests
+
+```bash
+python -B -S -m unittest discover -s tests -t . -v
+python -B -S -m unittest tests.test_pipeline tests.test_reporting -v
+python tools/run_phase1_checks.py --scope scaffold
+python tools/run_phase1_checks.py
+```
+
+The complete current suite passes without skips. The three historical Step 5
+assertions now preserve Step 5 history while checking the actual current delivery
+and absence of arithmetic-side file mutation. The scaffold gate passes. The last
+command also checks the full Phase 1 scope, which remains incomplete and returns
+exit 1 until the remaining M requirements are implemented and verified.
+`tests/phase1_matrix.json` preserves historical scopes and current bindings.
+GitHub QA captures are retained summaries; the companion delivery archive contains
+the full actual execution journals.
+
+## Sources and licensing
+
+Read `PHASE_1_PLAN.md` with the frozen Phase 0 contracts and
+`EVALUATION_CLOSURE_ADDENDUM.md`. `THEORY_SOURCES.md` pins SD, SI and EC.
+Source adoption is not empirical validation.
+
+Code, tools, tests and code-adjacent configuration use Apache-2.0; project
+specifications and benchmark documentation use CC BY 4.0 as detailed in
+`LICENSING_NOTES.md`. Theory publications retain their original licenses and are
+not included as PDFs. Third-party terms remain in `THIRD_PARTY_NOTICES.md`.
+
+Historical license note: Step 1 originally stated “No public software license has been selected”. The owner later adopted the mixed licensing described above; that earlier statement is not the current license status.

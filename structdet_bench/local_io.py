@@ -342,3 +342,122 @@ def load_bundle(manifest_path: str | Path, *, limits: ReadLimits | None = None) 
         error(exc, "bundle", "bundle")
     snapshots = MappingProxyType(dict(reader.snapshots)) if reader else MappingProxyType({})
     return LoadedBundle(manifest, tuple(entries), snapshots, tuple(artifacts), tuple(issues), limits, reader.total if reader else 0, complete)
+
+# Step 6 output transaction. Only complete, pre-serialized fixed-name report sets.
+class PublicationError(OSError):
+    """Bounded local-publication failure; may occur after durable publication."""
+    def __init__(self, code: str) -> None:
+        self.code = code
+        super().__init__(code)
+
+
+def _rename_noreplace(parent_fd: int, old: str, new: str) -> None:
+    """Linux renameat2(RENAME_NOREPLACE), without an overwrite fallback.
+
+    The atomic no-replace contract follows Linux rename(2):
+    https://man7.org/linux/man-pages/man2/rename.2.html
+    Only fixed application-owned basenames are passed; no input code is loaded.
+    """
+    import ctypes
+    import errno
+    import sys
+    if not sys.platform.startswith("linux"):
+        raise InputError("atomic_publication_unavailable")
+    try:
+        library = ctypes.CDLL(None, use_errno=True)
+        rename = library.renameat2
+    except (OSError, AttributeError) as exc:
+        raise InputError("atomic_publication_unavailable") from exc
+    rename.argtypes = (ctypes.c_int, ctypes.c_char_p, ctypes.c_int, ctypes.c_char_p, ctypes.c_uint)
+    rename.restype = ctypes.c_int
+    if rename(parent_fd, os.fsencode(old), parent_fd, os.fsencode(new), 1) != 0:
+        code = ctypes.get_errno()
+        if code in {errno.EEXIST, errno.ENOTEMPTY}:
+            raise InputError("output_already_exists")
+        if code in {errno.ENOSYS, errno.EINVAL, errno.EOPNOTSUPP}:
+            raise InputError("atomic_publication_unavailable")
+        raise PublicationError("output_publication_failed")
+
+
+def publish_report_set(output_dir: str | Path, files: Mapping[str, bytes], *,
+                       bundle_path: str | Path) -> None:
+    """Publish three files as one new private directory; never replace anything.
+
+    The parent must exist. The output cannot be in the input bundle tree. A held
+    no-follow descriptor anchors the parent; Linux no-replace rename publishes
+    the fully written staging directory. Unsupported platforms fail safely.
+    This is an application I/O boundary, not protection from a hostile OS/root.
+    """
+    import uuid
+    required = {"report.json", "report.md", "run_manifest.json"}
+    if (not isinstance(files, Mapping) or set(files) != required
+            or any(not isinstance(v, bytes) for v in files.values())):
+        raise InputError("invalid_report_set")
+    # Explicit output resource bound independent of experiment budgets.
+    if sum(len(v) for v in files.values()) > 128 * 1024 * 1024:
+        raise InputError("report_size_exceeded")
+    name = os.fspath(output_dir)
+    if (not isinstance(name, str) or not name or name.startswith("~")
+            or re.match(r"^[A-Za-z][A-Za-z0-9+.-]*:", name)
+            or any(c in name for c in ("\\", "$", "~"))
+            or any(ord(c) < 32 or ord(c) == 127 for c in name)):
+        raise InputError("unsafe_output_path")
+    target = Path(name)
+    if ".." in target.parts or target.name in {"", ".", ".."}:
+        raise InputError("unsafe_output_path")
+    target = target.absolute()
+    original_root = Path(bundle_path).absolute().parent
+    if target == original_root or original_root in target.parents:
+        raise InputError("output_inside_input_bundle")
+    # Source input cannot be supplied as a different target via a symlink: all
+    # ancestors are opened with O_NOFOLLOW, as in the existing local reader.
+    with LocalReader(target.parent, ReadLimits()) as holder:
+        parent = holder._fd
+        try:
+            os.stat(target.name, dir_fd=parent, follow_symlinks=False)
+        except FileNotFoundError:
+            pass
+        else:
+            raise InputError("output_already_exists")
+        temp = ".structdet-" + uuid.uuid4().hex
+        opened = None
+        created = False
+        published = False
+        written = []
+        try:
+            os.mkdir(temp, mode=0o700, dir_fd=parent)
+            created = True
+            opened = os.open(temp, os.O_RDONLY | os.O_DIRECTORY | os.O_NOFOLLOW, dir_fd=parent)
+            for filename in sorted(required):
+                fd = os.open(filename, os.O_WRONLY | os.O_CREAT | os.O_EXCL | os.O_NOFOLLOW,
+                             mode=0o600, dir_fd=opened)
+                written.append(filename)
+                try:
+                    data = memoryview(files[filename])
+                    while data:
+                        n = os.write(fd, data)
+                        if n <= 0:
+                            raise PublicationError("short_output_write")
+                        data = data[n:]
+                    os.fsync(fd)
+                finally:
+                    os.close(fd)
+            os.fsync(opened)
+            _rename_noreplace(parent, temp, target.name)
+            published = True
+            os.fsync(parent)
+        except InputError:
+            raise
+        except OSError as exc:
+            raise PublicationError("published_durability_unconfirmed" if published else "output_write_failed") from exc
+        finally:
+            if not published and opened is not None:
+                for filename in written:
+                    try:
+                        os.unlink(filename, dir_fd=opened)
+                    except FileNotFoundError:
+                        pass
+            if opened is not None:
+                os.close(opened)
+            if created and not published:
+                os.rmdir(temp, dir_fd=parent)
