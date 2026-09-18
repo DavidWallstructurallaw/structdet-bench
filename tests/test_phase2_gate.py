@@ -130,12 +130,18 @@ class CatalogueTests(unittest.TestCase):
 
 class GateTests(unittest.TestCase):
     def test_stage_pass_is_separate_from_full_v(self):
-        current = gate(); full = gate("phase2")
+        # Explicit incomplete-V fixture stays incomplete even as real stages advance.
+        def incomplete(m, ids, records, previous, remote):
+            m['vt_obligations'][-1].update(implementation_status='not_implemented',test_bindings=[])
+        current = gate(edit=incomplete); full = gate("phase2", incomplete)
         self.assertTrue(current["requested_gate_passed"])
         self.assertTrue(current["harness_checks_passed"])
         self.assertFalse(current["phase2_v_complete"])
         self.assertFalse(full["requested_gate_passed"])
-        self.assertEqual(full["unresolved_v_ids"], list(h.V_IDS))
+        expected=[r['id'] for r in h.read_matrix()['vt_obligations'] if r['implementation_status']!='implemented']
+        expected=list(dict.fromkeys(expected+[h.V_IDS[-1]]))
+        self.assertEqual(full["unresolved_v_ids"],expected)
+        self.assertIn(h.V_IDS[-1],full['unresolved_v_ids'])
 
     def test_empty_discovery_fails_both_scopes(self):
         for scope in ("current", "phase2"):

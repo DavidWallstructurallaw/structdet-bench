@@ -1,6 +1,9 @@
 # Comparison Record Format
 
-Version 0.1. Implemented scope: **Phase 2 Step 2 only**.
+Version 0.2. Implemented scope: **Phase 2 Steps 2 and 3**.
+
+Sections 1 through 9 describe the record-binding layer. Section 10 adds the
+separate text-diagnostic layer; CLI/report integration remains deferred to Step 6.
 
 Read with `PHASE_2_PLAN.md` sections 3, 4.2 and 7 (Step 2), `HERO_BENCHMARK_SPEC.md`
 sections 7 through 10, `METRICS_SPEC.md` section 10.1, and EC-001. The frozen
@@ -337,3 +340,169 @@ it now includes synthetic outcomes for every authorized stage, and its negative
 empty-binding test explicitly empties that list. Test identities and the failure
 conditions are unchanged. Finding P2S2-F01 records the before/after failing cases.
 Current-stage success remains distinct from completion of all 26 V obligations.
+
+## 10. Phase 2 Step 3: original-text and matched-pair diagnostics
+
+Step 3 implements `structdet_bench.text_diagnostics`. It consumes the same loaded
+byte snapshots and accepted population IDs as M, without re-admitting labels or
+running candidate code. The comparison-record interface above remains unchanged.
+CLI dispatch and comparison report rendering remain scheduled for Step 6.
+
+### 10.1 Component interfaces and explicit method pins
+
+```python
+from structdet_bench.local_io import load_bundle
+from structdet_bench.populations import build_populations
+from structdet_bench.comparison_records import review_comparison
+from structdet_bench.text_diagnostics import (
+    method_from_record, limits_from_record, diagnose_cells,
+)
+
+bundle = load_bundle("study/bundle.json")
+populations = build_populations(bundle)
+binding = review_comparison(bundle)
+# Only proceed when the comparison configuration itself is resolved.
+method = method_from_record(binding.configuration["text_method"])
+limits = limits_from_record(binding.configuration["limits"])
+diagnostics = diagnose_cells(bundle, populations.cells, method, limits=limits)
+```
+
+`method_from_record` requires known extraction/category/White_Space identities.
+Unknown method metadata raises a bounded `InputError`; callers must retain the
+corresponding comparison restriction. A recognized but mismatching table/profile
+produces unavailable diagnostics. No method is silently supplied from a host
+that happens to run the code.
+
+The current category table is the standard-library Unicode database **15.1.0**.
+The runtime checks `unicodedata.unidata_version == "15.1.0"`; it does not install
+or download another database. The separate White_Space table is the 25 code points
+in Unicode 15.1.0 PropList, represented by eleven inclusive intervals:
+
+```text
+0009..000D 0020 0085 00A0 1680 2000..200A 2028 2029 202F 205F 3000
+```
+
+Its `white_space_version` is `15.1.0`. `white_space_sha256` is
+`3ec9cc63e7f950c749d0d2159b19bff128966bfc9ee4fc6d37810749309d0604`.
+This identifies ASCII-escaped compact key-sorted JSON with keys `property`,
+`unicode_version`, and decimal integer `ranges`, plus a final newline. It does
+not claim to be the hash of the entire upstream PropList file. The source is
+Unicode's versioned PropList-15.1.0, also maintained in the Unicode Consortium's
+`unicode-org/unicodetools` repository. U+001C through U+001F, U+200B and U+FEFF
+are not White_Space in this profile; a host `str.isspace()` is not substituted.
+
+`TextMethod(extraction_rule_version)` explicitly constructs this supported
+profile for component work. It does not assert that an input study registered it.
+The accepted Step 2 mock study retains its unknown table declarations until a
+later test/study supplies actual pins. Source papers supply the structural versus
+realization distinction; MET supplies this particular lexical proxy.
+
+### 10.2 Exact text and boundary behavior
+
+`tokenize_text(bytes, method, limits=...)` uses strict UTF-8. It converts CRLF and
+standalone CR to LF, retaining every other code point, case, identifier, literal
+and comment. Maximal L*/N*/underscore runs form surface lexical units. Other
+non-White_Space code points form individual units. Combining marks remain separate
+units; there is no Unicode normalization. Boundary symbols are tagged separately
+from all text units, so text spelling `BEGIN`, `end`, or `boundary` cannot collide.
+Consecutive padded triples form a set, not a bag.
+
+An empty emitted body, whitespace-only body, inaccessible artifact, malformed
+UTF-8 and resource failure have distinct reasons. One lexical unit yields one
+trigram. A known truncated region remains truncated and may still be eligible.
+The component reads no live path and searches no fence. A supplied output artifact
+is the already selected region; a supplied extraction span must have been verified
+against the held raw/output bytes. Missing or contradictory span evidence cannot
+trigger another extraction, a repaired body, or a neighboring candidate.
+
+Per-sample records retain assignment revision, completion state, extraction/span
+status, artifact reference, original-byte hash/size, normalized-text hash,
+trigram-set hash/count and surface lexical unit count. Snapshot paths are represented
+by locator hashes. The actual held snapshot is checked against its identity;
+stale associations and mismatched accepted assignment context are rejected.
+No text similarity is used to assign a structural class.
+
+The standalone tokenizer exposes lexical payloads for controlled inspection.
+They are excluded from its default representation and must not be exported as an
+ordinary public report. Population diagnostic results contain hashes, counts and
+references rather than bodies or lexical sequences. They retain a private
+`source_cell` reference for later evidence-aware orchestration.
+
+### 10.3 Populations, pairs and fractions
+
+`diagnose_population(bundle, cell, view, method, limits=..., work=...)` handles
+one `classified_all` or `classified_valid` view. `diagnose_cells` handles explicitly
+supplied cells/views separately, in supplied order, sharing one cumulative budget.
+It performs no pooled estimation or A/B/C comparison.
+
+The original accepted denominator `population_size` and IDs remain unchanged.
+`eligible_sample_ids`, `eligible_count`, per-sample exclusions, and
+`proxy_text_coverage` identify the diagnostic subset. Both surface and structural
+pair means use exactly that subset. All unordered distinct-observation pairs are
+included. Identical bytes can occur in different observations; tokenization caching
+never reduces observation multiplicity or the pair denominator.
+
+Each pair records its two sample IDs, intersection/union counts, exact reduced
+distance fraction, structural disagreement and known/unknown same-call relation.
+Pair counts and distinct recorded calls establish no independent-replicate count.
+The latter remains null. Same-class pairs retain per-class denominators, including
+occupied classes with no eligible text or only one eligible text.
+
+Results are `surface_lexical_trigram_distance`,
+`within_class_realization_diversity_proxy`, and `structural_pair_non_equivalence`.
+Each retains a numeric value plus an exact numerator/denominator, pair denominator,
+unit, status, reason and `MET-0.2` identity. The within-class aggregate weights by
+pair count. The exact text-subset SCI is recorded only as an identity check; it
+never replaces full-population SCI.
+
+With fewer than two eligible texts, pair means are undefined. With all occupied
+classes singleton on the text subset, the within-class aggregate is undefined.
+An unresolved population/frame or method has unavailable results, not zero pairs.
+Ordinary missing/invalid text can reduce coverage while supported M counts remain
+unchanged. No quality/coverage threshold or P1/P5 qualification is decided here.
+
+### 10.4 Explicit workload and precision limits
+
+The four limits retain their Step 2 names and defaults: 100,000 lexical units per
+text, 100,000 pairs per cell/view, 100,000,000 cumulative trigram visits and 131,072
+bits per retained exact numerator/denominator. Overrides must be positive plain
+integers no greater than 2^31-1, declared before calculation. They do not authorize
+approximation or guarantee completion on every machine.
+
+A lexical-unit limit failure makes the affected text subset unresolved for the
+requested diagnostic. The expensive sample is retained and coverage/means become
+unavailable, rather than recomputed after dropping it. Pair-count failure is
+checked before pair enumeration and withholds the requested pair diagnostics.
+
+A logical trigram visit charges both input-set sizes once for each compared pair;
+intersection and union share that charge. The preflight required total is
+`(m - 1) * sum_i |G_i|`. Within-class means reuse those distances. If the remaining
+shared visit budget is insufficient, surface means are unavailable without partial
+enumeration. The exact Q count may remain available on the same fully known subset,
+because its finite-count formula needs no trigram visits. A separately supplied
+WorkBudget must match the declared maximum; it cannot silently reset mid-run.
+
+Exact rational accumulations and means are checked against the bit limit. A failure
+withholds affected means, clears partial pair output, and records actual visits
+and completed pair work. There is no floating fallback, text truncation, pair
+subsampling or partial-mean renormalization. Supported M results remain available.
+
+### 10.5 Verification and stage maintenance
+
+`tests/fixtures/text_oracles.json` contains independently authored token lists,
+trigram sets, source pins and exact pair expectations. MET MF-11 gives 4/5; MF-12
+gives Q=1/2 with SCI_text=5/8. MF-13/14 retain singleton and missing-text boundaries.
+An unequal-class fixture gives pair-weighted within-class mean 9/10; the unweighted
+class mean would be 13/15 and is rejected as a replacement estimator.
+
+P2S3-F01 records four reproduced historical stage-check failures and their narrow
+maintenance under PLAN2 section 6.3. Step 2's 93 method identities and prior V
+statuses remain recorded, synthetic incomplete-V gates stay failure-sensitive,
+and implementation files remain prohibited before their authorized step. No test
+identity or scientific oracle is removed. All Phase 1 runtime, tests, contracts,
+fixtures, matrix and historical QA remain unchanged.
+
+Step 3 completes the VT-31 and VT-33 component obligations. VT-32, VT-36 and
+report/EC integration stay partial until their later prescribed checks. No
+prediction, condition contrast, interval, empirical support claim, model call or
+candidate execution is produced by this layer.

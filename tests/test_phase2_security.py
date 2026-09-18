@@ -96,9 +96,14 @@ class ComparisonBoundaryTests(unittest.TestCase):
         self.assertEqual(next(x for x in r.bindings if x.cell_id=='P01-A').status,'contract_error')
         self.assertNotIn('PRIVATE_COMMAND',repr(r))
     def test_future_components_and_output_example_are_not_implemented(self):
-        for name in ('text_diagnostics','comparisons','uncertainty','predictions','comparison_pipeline'):
-            self.assertFalse((h.ROOT/'structdet_bench'/f'{name}.py').exists())
-        self.assertFalse((h.ROOT/'examples/hero_abc').exists())
+        step=h.read_matrix()['delivery']['step']
+        for name,first_step in (('text_diagnostics',3),('comparisons',4),('uncertainty',5),('predictions',5),('comparison_pipeline',6)):
+            path=h.ROOT/'structdet_bench'/f'{name}.py'
+            if step < first_step:self.assertFalse(path.exists())
+            else:self.assertTrue(path.is_file())
+        if step < 6:self.assertFalse((h.ROOT/'examples/hero_abc').exists())
+        r=review_comparison(self.loaded())
+        self.assertFalse(hasattr(r,'prediction'));self.assertFalse(hasattr(r,'resample_indices'))
     def test_declared_replay_is_retained_without_generating_indices(self):
         cfg=self.man['analysis_config']['extensions']['comparison']
         cfg['resampling']['replay_ref']=tagged(record_ref('artifact','absent-replay'))
@@ -116,3 +121,56 @@ class DeploymentEvidenceBoundary(unittest.TestCase):
             a=next(x for x in r.bindings if x.cell_id=='P01-A')
             self.assertEqual(next(f for f in a.facts if f.name=='deployment_unchanged').status,'unresolved')
             self.assertEqual(next(f for f in a.facts if f.name=='control_temperature').status,'record_consistent')
+
+
+class TextBoundaryTests(unittest.TestCase):
+    def test_diagnostics_never_read_or_run_code_after_loading(self):
+        from structdet_bench.text_diagnostics import TextMethod, diagnose_cells
+        with TemporaryDirectory() as tmp:
+            from tests.test_text_diagnostics import text_fixture
+            p,*_=text_fixture(Path(tmp),['__import__("os").system("PRIVATE_CMD")','a b c'])
+            b=load_bundle(p);cells=build_populations(b).cells
+            with ExitStack() as stack:
+                for target in ('builtins.open','pathlib.Path.open','socket.socket','socket.create_connection',
+                               'urllib.request.urlopen','subprocess.Popen','os.system','builtins.eval','builtins.exec','builtins.compile'):
+                    stack.enter_context(patch(target,side_effect=AssertionError('active operation forbidden')))
+                out=diagnose_cells(b,cells,TextMethod('fixture-original-region-v1'))
+            self.assertEqual(out[0].eligible_count,2);self.assertNotIn('PRIVATE_CMD',repr(out))
+    def test_external_output_locator_is_never_fetched(self):
+        from structdet_bench.text_diagnostics import TextMethod, diagnose_population
+        with TemporaryDirectory() as tmp:
+            from tests.test_text_diagnostics import text_fixture
+            root=Path(tmp);p,o,s,m=text_fixture(root,['a b c','a b d'])
+            next(r for r in o if r['record_id']=='text1')['content_ref']=tagged({'kind':'external','locator':'https://invalid.test/?secret=PRIVATE'})
+            b=load_bundle(rewrite_evidence_bundle(root,o,s,m));c=build_populations(b).cells[0]
+            with patch('urllib.request.urlopen',side_effect=AssertionError('network')):
+                d=diagnose_population(b,c,'classified_all',TextMethod('fixture-original-region-v1'))
+            self.assertEqual(d.eligible_count,1);self.assertNotIn('PRIVATE',repr(d))
+            self.assertEqual(d.samples[0].reasons,('artifact_external_not_fetched',))
+    def test_private_paths_and_source_body_absent_from_diagnostic_repr(self):
+        from structdet_bench.text_diagnostics import TextMethod, diagnose_population
+        with TemporaryDirectory(prefix='PRIVATE_PATH_') as tmp:
+            from tests.test_text_diagnostics import text_fixture
+            p,*_=text_fixture(Path(tmp),['PRIVATE_BODY_A','PRIVATE_BODY_B'])
+            b=load_bundle(p);c=build_populations(b).cells[0]
+            d=diagnose_population(b,c,'classified_all',TextMethod('fixture-original-region-v1'))
+            self.assertNotIn('PRIVATE_BODY',repr(d));self.assertNotIn('PRIVATE_PATH',repr(d))
+            self.assertTrue(all(s.snapshot_locator_sha256 for s in d.samples))
+    def test_diagnostics_leave_loaded_records_and_files_unchanged(self):
+        from structdet_bench.text_diagnostics import TextMethod, diagnose_cells
+        with TemporaryDirectory() as tmp:
+            from tests.test_text_diagnostics import text_fixture
+            root=Path(tmp);p,*_=text_fixture(root,['a b c','a b d'])
+            b=load_bundle(p);cells=build_populations(b).cells
+            before={f.name:f.read_bytes() for f in root.iterdir()}
+            r1=diagnose_cells(b,cells,TextMethod('fixture-original-region-v1'))
+            r2=diagnose_cells(b,cells,TextMethod('fixture-original-region-v1'))
+            self.assertEqual(r1,r2);self.assertEqual(before,{f.name:f.read_bytes() for f in root.iterdir()})
+    def test_legacy_cli_and_M_profile_do_not_dispatch_text_diagnostics(self):
+        from tests.helpers import materialize_hero
+        from structdet_bench.pipeline import analyze_bundle
+        with TemporaryDirectory() as tmp:
+            p,_=materialize_hero(Path(tmp)/'fixture')
+            with patch('structdet_bench.text_diagnostics.diagnose_population',side_effect=AssertionError('early CLI integration')):
+                result=analyze_bundle(p)
+            self.assertEqual(result.exit_code,0)
