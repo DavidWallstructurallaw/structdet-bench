@@ -12,8 +12,14 @@
   "base_commit": "cd554f5c6c59bd7bd47a07e0c5b82c04d13720d4",
   "base_tree": "7037bd58c633bef28ae0bca7e3f837e18946925b",
   "remote_publication": {
-    "status": "awaiting_exact_commit_and_readback",
-    "method": "Exact UTF-8 blobs verified against local Git object hashes; final commit and full tree receipt recorded in the companion archive."
+    "status": "implementation_published_and_read_back",
+    "repository": "DavidWallstructurallaw/structdet-bench",
+    "branch": "main",
+    "implementation_commit": "34628c87865f209d014581e7434dee2124b83d18",
+    "implementation_tree": "8254cf8cf453a1e9aca448124bb025a74df6fcef",
+    "file_count": 85,
+    "changed_paths": 9,
+    "method": "Every UTF-8 upload returned the exact local Git blob identity. The independently constructed complete local tree matched the remote commit tree. main advanced without force and was read back. The later receipt-only commit and archive replay are recorded in companion verification/step3/publication_manifest.json."
   },
   "companion_archive": "StructDet-Bench_Phase2_Step3_Accepted.zip",
   "counts": {
