@@ -4,21 +4,25 @@ An offline toolkit for task-relative structural measurement of recorded LLM outp
 
 ## Current delivery
 
-The local Phase 1 Step 8 audit is complete for owner review. All 503 existing tests
-and the full first-milestone M gate pass in the recorded environment. The scope is
-37 M-bearing VT families, 33 applicable TR rows, 28 RF groups and eight EC-001
-M-only record checks. See `PHASE_1_COMPLETION.md` for the actual exit criteria,
-source/implementation/fixture identities, commands, evidence and limitations.
+Phase 1's complete offline measurement implementation is now synchronized to
+GitHub. Commit `fef1dd05a91d5bec2286ed1b75917659e696fe23` restores all 77 supplied
+upload-package paths, including every one of the 67 byte-exact Phase 1 final files.
+The user's upload commit is preserved as its parent. Frozen scientific documents,
+the original Phase 1 matrix, original tests, fixtures and Phase 1 QA history remain
+unchanged. `PHASE_1_COMPLETION.md` retains its historical local-delivery status;
+`artifacts/phase2/baseline_reconciliation.json` records the later remote resolution.
 
-Final owner acceptance remains pending. The local delivery contains the reviewed
-Step 7 implementation; Step 8 adds no runtime, test, fixture or matrix changes.
-Full v0.1 comparisons and actual independent validation are outside this milestone.
+Phase 2 Step 1 adds its separate verification framework. The inherited 503 tests
+and 47 framework tests pass, for 550 in total. The current-stage gate passes with
+verified baseline delivery; the full Phase 2 gate remains incomplete because its
+26 V obligations and later integration are not implemented. No Step 2 runtime work
+has started. Software checks do not supply independent empirical validation.
 
-**Repository delivery remains pending.** The last verified GitHub main is Step 6
-commit `8cd0fe6`; it must not be represented as containing this local Step 7/8 tree.
-The full source, audit matrix and verification history are retained in the local
-archive. Local test success is neither a hosted CI result nor proof of remote
-synchronization. No Phase 2 work or package release has started.
+The current read-back and execution summary is in
+`artifacts/phase2/verification_manifest.json`. The companion accepted-delivery ZIP
+contains complete fresh logs and replay evidence. Existing Phase 2 journals retain
+the earlier blocked runs exactly; those are historical results, not this acceptance.
+Subsequent local runner invocations append their actual outcomes to that history.
 
 ## Run locally
 
@@ -76,21 +80,21 @@ A public report alone cannot reproduce privately retained evidence.
 
 ```bash
 python -B -S -m unittest discover -s tests -t . -v
-python -B -S -m unittest tests.test_pipeline tests.test_reporting -v
-python tools/run_phase1_checks.py --scope scaffold
-python tools/run_phase1_checks.py
+python -B -S tools/run_phase2_checks.py --scope current
+python -B -S tools/run_phase2_checks.py --scope phase2
 ```
 
-The complete current suite passes without skips. Both gate commands return exit 0
-for the current M scope. The full gate requires every applicable M and EC record
-binding to have actually passed; missing, skipped, expected-failure or unexecuted
-bindings cannot pass it. Each result records expected/actual outcome, contract
-links, source/fixture fingerprints and environment. Final Phase 1 approval remains
-a separate Step 8 decision. `tests/phase1_matrix.json` preserves historical snapshots
-and current bindings; the raw historical `current_step` field is not the effective
-delivery step used by the runner.
-GitHub QA captures are retained summaries; the companion delivery archive contains
-the full actual execution journals.
+The current-stage command also executes the inherited M gate and should return 0.
+The full Phase 2 command should return 1 with explicit unimplemented V obligations.
+Neither command edits Phase 1 QA files. They append hash-chained Phase 2 execution
+records. Missing, skipped, expected-failure and unexecuted bindings cannot pass.
+The historical Phase 1 runner and matrix remain available, but fresh project QA
+should use the Phase 2 runner to preserve the pinned Phase 1 journals.
+
+The tested direct-module environment is CPython 3.13.5 / Linux, with third-party
+site loading disabled. No GitHub Actions, model call, candidate-program execution,
+independent annotation or package publication forms part of this acceptance.
+Later development steps still require their own execution instruction.
 
 ## Sources and licensing
 
