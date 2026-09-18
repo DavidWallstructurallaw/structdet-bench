@@ -21,7 +21,11 @@ from tools import run_phase2_checks as runner
 def synthetic_inputs():
     """Unit-test inputs to gate logic, not executed-run/publication evidence."""
     matrix = h.read_matrix()
-    ids = matrix["predecessor"]["test_ids"] + matrix["stage_bindings"]["1"]["test_bindings"]
+    # The unit fixture includes only synthetic outcomes, now for each authorized
+    # completed stage. It is never evidence that those tests actually ran.
+    current_ids = [name for step in range(1, matrix["delivery"]["step"] + 1)
+                   for name in matrix["stage_bindings"][str(step)]["test_bindings"]]
+    ids = list(dict.fromkeys(matrix["predecessor"]["test_ids"] + current_ids))
     records = [{"test_id": name, "outcome": "passed"} for name in ids]
     remote = {"repository": "DavidWallstructurallaw/structdet-bench", "archive_sha256": h.ARCHIVE_SHA256,
               "project_inventory_sha256": h.INVENTORY_SHA256, "scope": "all_67_original_project_files",
@@ -79,6 +83,7 @@ class CatalogueTests(unittest.TestCase):
 
     def test_implemented_without_real_bindings_is_rejected(self):
         m = h.read_matrix(); m["vt_obligations"][0]["implementation_status"] = "implemented"
+        m["vt_obligations"][0]["test_bindings"] = []
         self.assertIn("VT-03:empty_bindings", h.validate_matrix(m))
 
     def test_E_and_D_cannot_be_promoted(self):

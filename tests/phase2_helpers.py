@@ -64,6 +64,45 @@ def read_matrix() -> dict[str, Any]:
     value = read_json(MATRIX_PATH)
     if not isinstance(value, dict):
         raise ValueError("phase2_matrix_not_object")
+    return expand_matrix(value)
+
+
+def expand_matrix(value: dict[str, Any]) -> dict[str, Any]:
+    """Expand only two explicit pinned-source references, preserving all duties.
+
+    No executable expression or configurable path is accepted. The original
+    Phase 1 matrix supplies method identities, never Phase 2 execution outcomes.
+    """
+    import copy
+    value = copy.deepcopy(value)
+    desc = value.get("catalogues")
+    if isinstance(desc, dict) and desc.get("encoding") == "pinned_catalogues_v1":
+        if set(desc) != {"encoding", "source_sha256", "expanded_sha256"} or desc["source_sha256"] != PHASE1_MATRIX_SHA256:
+            raise ValueError("invalid_catalogue_reference")
+        result = expected_catalogues()
+        if sha256_bytes(canonical_bytes(result)) != desc["expanded_sha256"]:
+            raise ValueError("catalogue_expansion_hash_mismatch")
+        value["catalogues"] = result
+    predecessor = value.get("predecessor")
+    if isinstance(predecessor, dict) and isinstance(predecessor.get("test_ids"), dict):
+        desc = predecessor["test_ids"]
+        if desc != {"encoding": "pinned_predecessor_methods_v1", "source_sha256": PHASE1_MATRIX_SHA256,
+                    "expanded_sha256": PREDECESSOR_IDS_SHA256}:
+            raise ValueError("invalid_method_reference")
+        if sha256_bytes((ROOT / "tests/phase1_matrix.json").read_bytes()) != PHASE1_MATRIX_SHA256:
+            raise ValueError("predecessor_matrix_changed")
+        found = set()
+        def collect(v):
+            if isinstance(v, dict):
+                if isinstance(v.get("test_bindings"), list): found.update(v["test_bindings"])
+                for child in v.values(): collect(child)
+            elif isinstance(v, list):
+                for child in v: collect(child)
+        collect(load_phase1_matrix())
+        ids = sorted(found)
+        if sha256_bytes(("\n".join(ids) + "\n").encode()) != PREDECESSOR_IDS_SHA256:
+            raise ValueError("predecessor_method_expansion_mismatch")
+        predecessor["test_ids"] = ids
     return value
 
 
@@ -249,3 +288,64 @@ def reconciliation_checks(record: Any, file_manifest: dict[str, Any]) -> list[st
     if record.get("remote_files") != file_manifest:
         errors.append("remote_original_file_inventory_not_matched")
     return sorted(set(errors))
+
+
+def comparison_fixture(root: Path, *, role="fixture"):
+    """Mock study records only. Prompts are transcribed independently from HERO.
+
+    Creates no candidate programs, classifications or empirical observations.
+    All temporary inputs and reviewer/control records are explicitly stipulated.
+    """
+    from copy import deepcopy
+    from tests.helpers import minimal_manifest, tagged, record_ref, support_record, artifact_record, rewrite_evidence_bundle
+    root.mkdir(parents=True, exist_ok=True)
+    m = minimal_manifest(); cell = deepcopy(m["cells"][0]); protocol = deepcopy(m["protocols"][0])
+    m["cells"] = []; m["protocols"] = []; m["data_role"] = role
+    cfg = m["analysis_config"]; cfg["selection"] = []; cfg["assignment_pins"] = []; cfg["validity_pins"] = []; cfg["requested_k"] = []
+    m["record_files"].append({"role":"evidence","format":"jsonl","path":"evidence.jsonl","expected_sha256":tagged(state="unknown")})
+    text = (ROOT/"HERO_BENCHMARK_SPEC.md").read_text().split("### 7.2 Exact visible prompt assembly")[1].split("### 7.3")[0]
+    openers = dict(re.findall(r"\| (P0[1-6]) \| `([^`]+)` \|", text))
+    task, ab, c, output = re.findall(r"```text\n(.*?)\n```", text, re.S)
+    o = []; s = [support_record("role","binding-reviewer",entity_type="human",role="fixture-observer",entity_id=tagged("MOCK-OBSERVER"))]; blocks = []
+    permutations = ("ABC","ACB","BAC","BCA","CAB","CBA")
+    for b, (bid, opener) in enumerate(openers.items(),1):
+        block = {"block_id":bid,"conditions":{}}
+        for cond in "ABC":
+            cid = bid+"-"+cond; pid = "protocol-"+cid; aid = "prompt-"+cid; eid = "study-"+cid
+            cr = deepcopy(cell); cr.update(record_id=cid,analysis_cell_id=cid,prompt_block_id=bid,prompt_id=aid,condition_id=cond,generation_protocol_id=pid,
+                model_identifier=tagged("MOCK-MODEL"),model_family=tagged("MOCK-FAMILY"),checkpoint_identifier=tagged("MOCK-STATE"),collection_window=tagged("MOCK-WINDOW"));m["cells"].append(cr)
+            settings = {"temperature":1.0 if cond=="B" else 0.4,"top_p":1.0,"presence_penalty":0,"frequency_penalty":0,"max_output_tokens":8192}
+            pr = deepcopy(protocol);pr.update(record_id=pid,generation_protocol_id=pid,decoding_settings=tagged(settings),seed=tagged(None),conditioning_context_ref=tagged(record_ref("artifact",aid)));m["protocols"].append(pr)
+            content = "\n\n".join((opener,task,ab if cond in "AB" else c,output)).encode();(root/(aid+".txt")).write_bytes(content)
+            ar = artifact_record(aid,aid+".txt");ar["expected_sha256"]=tagged(sha256_bytes(content));o.append(ar)
+            proofref=record_ref("evidence","controls-"+cid)
+            values=dict(settings,generator_seed=None,tools=False,retrieval=False,history=False,best_of=1)
+            controls={k:{"requested":tagged(v),"actual":tagged(v),"enforcement":"recorded","evidence_refs":[proofref]} for k,v in values.items()}
+            s.append(support_record("evidence","controls-"+cid,target_ref=record_ref("cell",cid),purpose="observation",method=tagged("recorded_control_observation"),
+                reviewer_refs=[record_ref("role","binding-reviewer")],extensions={"recorded_controls":{k:{p:v[p] for p in ("requested","actual","enforcement")} for k,v in controls.items()},"recorded_deployment":{"serving_identity":tagged("MOCK-DEPLOYMENT"),"change_detected":tagged(False)}}))
+            budgetref=record_ref("budget","budget-"+cid)
+            s.append(support_record("budget","budget-"+cid,scope_refs=[record_ref("cell",cid)],planned=tagged({"calls":4,"candidate_positions":20,"output_cap_per_call":8192}),actual=tagged(state="unknown")))
+            attempts=[]
+            for g in range(1,5):
+                rid=f"call-{cid}-{g}";o.append({**record_ref("attempt",rid),"attempt_id":rid,"analysis_cell_id":cid,"attempt_status":"succeeded",
+                    "raw_response_ref":tagged(state="unknown"),"retry_of":tagged(None),"generation_group_id":tagged(f"group-{cid}-{g}"),"planned_candidate_count":tagged(5),"registered_call_order":tagged(g)})
+                order=(g-1)*18+(b-1)*3+permutations[(b+g-2)%6].index(cond)+1
+                attempts.append({"group_index":g,"attempt_ref":tagged(record_ref("attempt",rid)),"global_order":tagged(order),"recorded_at":tagged("2026-09-01T01:00:00+00:00")})
+            study={"version":"0.1","comparison_id":"comparison-fixture","comparison_version":"0.1","block_id":bid,"condition_id":cond,"protocol_ref":record_ref("protocol",pid),
+                "sent_prompt":{"artifact_ref":tagged(record_ref("artifact",aid)),"attestation_ref":tagged(state="unknown")},
+                "visible_system_instruction":tagged(None),"platform_context":tagged(None),"reasoning":tagged(None),"controls":controls,
+                "cap":{"unit":tagged("model_tokens"),"tokenizer":tagged("MOCK-TOKENIZER"),"convention":tagged("visible_output_only")},
+                "budget_ref":tagged(budgetref),"attempts":attempts,"automatic_retries":tagged(False),"deployment":{"serving_identity":tagged("MOCK-DEPLOYMENT"),"change_detected":tagged(False),"evidence_refs":[proofref]},"deviations":[]}
+            s.append(support_record("evidence",eid,target_ref=record_ref("cell",cid),purpose="observation",method=tagged("study_binding_v1"),reviewer_refs=[record_ref("role","binding-reviewer")],
+                scope_refs=[record_ref("cell",cid),record_ref("protocol",pid)],artifact_refs=[record_ref("artifact",aid)],extensions={"study_binding":study}))
+            block["conditions"][cond]={"cell_ref":record_ref("cell",cid),"study_record_ref":record_ref("evidence",eid)}
+            cfg["selection"].append({"analysis_cell_id":cid,"selected_sample_ids":tagged([]),"sample_order":tagged([]),"registered_positions":tagged(state="unknown"),"selection_basis":tagged("No generated observations in this fixture")})
+        blocks.append(block)
+    comparison={"comparison_schema_version":"0.1","comparison_id":"comparison-fixture","comparison_version":"0.1","profile":"hero_sort_abc_v1","blocks":blocks,"pilot_cell_refs":[],"questions":["P1","P5"],"views":["classified_all","classified_valid"],
+        "evidence":{k:[] for k in ("registration","exposure","structural_validation","core_audit","integrity","independence","correction")},
+        "text_method":{"extraction_rule_version":tagged("fixture-original-region-v1"),"encoding":"utf-8","proxy_version":"surface_lexical_trigram_jaccard_v1","unicode_category_version":tagged(state="unknown"),"white_space_version":tagged(state="unknown"),"white_space_sha256":tagged(state="unknown")},
+        "resampling":{"method":"paired_prompt_block_bootstrap_v1","seed":20260917,"replicates":2000,"probabilities":["0.025","0.975"],"quantile":"linear_b_minus_one_v1","dependence_assessment_ref":tagged(state="unknown"),"replay_ref":tagged(None)},
+        "limits":{"max_lexical_units":100000,"max_pairs":100000,"max_trigram_visits":100000000,"max_exact_bits":131072},
+        "revision":{"prior_comparison_ids":[],"prior_run_ids":[],"reason":tagged(state="not_applicable",reason="Initial fixture"),"changes":[]}}
+    cfg.setdefault("extensions",{})["comparison"]=comparison
+    return rewrite_evidence_bundle(root,o,s,m),o,s,m

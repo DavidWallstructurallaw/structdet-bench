@@ -1,0 +1,13 @@
+{
+  "schema_version": "0.1",
+  "data_role": "fixture",
+  "source_plan_sha256": "17452ec510cdd31ee960806c6140142dcb411a76ebd87aa138afbdbc6ec639cc",
+  "cases": [
+    {"case_id":"BC-01","container":"comparison","path":["comparison_schema_version"],"value":"9","expected_review_status":"contract_error"},
+    {"case_id":"BC-02","container":"comparison","path":["profile"],"value":"unknown-profile","expected_review_status":"contract_error"},
+    {"case_id":"BC-03","container":"study-B","path":["cap","convention"],"value":{"state":"known","value":"includes_hidden_reasoning"},"expected_pair_fact":"cap_convention_compatibility","expected_status":"inconsistent"},
+    {"case_id":"BC-04","container":"study-B","path":["controls","temperature","enforcement"],"value":"unsupported","expected_binding_fact":"control_temperature","expected_status":"unresolved"},
+    {"case_id":"BC-05","container":"study-B","path":["deployment","change_detected"],"value":{"state":"known","value":true},"expected_binding_fact":"deployment_unchanged","expected_status":"inconsistent"},
+    {"case_id":"BC-06","container":"study-B","path":["automatic_retries"],"value":{"state":"unknown"},"expected_binding_fact":"automatic_retries","expected_status":"unresolved"}
+  ]
+}

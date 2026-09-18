@@ -1,1 +1,113 @@
-{"accepted_baseline_commit":"fef1dd05a91d5bec2286ed1b75917659e696fe23","accepted_baseline_tree":"1db9d7f8d9cb6c001aa55a6236b08b41dfcc959f","approved_phase2_plan_changed":false,"authorization":"Complete the already approved Phase 2 Step 1 upload verification, path restoration, main synchronization and acceptance. Stop before Step 2.","candidate_programs_executed":0,"companion_archive":"StructDet-Bench_Phase2_Step1_Accepted.zip","companion_files":{"verification/accepted_current_console.txt":{"sha256":"cf7e5428f2da5c4b78a4ede33ba53b605dd420d600ec13487be4c7c68d682a78","size_bytes":76742},"verification/accepted_full_phase2_console.txt":{"sha256":"a94d2a1b971ac10e6a395c3c634007f85d69957992642140a1c39e7794f0ebea","size_bytes":76821},"verification/accepted_test_output.txt":{"sha256":"997c93511fa44439d7f649093a02a914366e1dadf88f248262af9cebc7d55103","size_bytes":305894},"verification/accepted_test_results.json":{"sha256":"cf9c8f493b66cb1f7c742f95d3a1283c97f9b4ae1840da1fb26c232f21c55984","size_bytes":2921954},"verification/expected_tree.json":{"sha256":"6735e592f0b14f23b4b5bc7930625cdc539682df6c25ba1024d5e63cd5780053","size_bytes":19805},"verification/predecessor_latest_run.json":{"sha256":"8c2052ea1b891d3641bf815f7131ad82102ca8189b557d0ffe763c4c25337c79","size_bytes":512635},"verification/predecessor_replay_console.txt":{"sha256":"68320236140346a558a9ef832b4979fdaf3f8521d10e4d0fa138de4d464d074b","size_bytes":69600},"verification/upload_replay_tests.txt":{"sha256":"3d1e6c2aaed93a392dffe517c1af37e25bc647474ac33e6046dd3f2e7c29d383","size_bytes":76517}},"current_nonhistorical_changes":["README.md","artifacts/phase2/baseline_reconciliation.json","artifacts/phase2/verification_manifest.json"],"current_validation":{"M_gate_passed":true,"V_complete":false,"current_gate_exit":0,"errors":0,"failures":0,"full_phase2_gate_exit":1,"inherited_tests":503,"passed":550,"phase2_harness_tests":47,"repository_delivery_complete":true,"skipped":0,"tests":550,"unimplemented_V_obligations":26},"environment":{"bytecode_disabled":true,"no_site":true,"platform":"Linux-6.18.44-x86_64-with-glibc2.41","python":"3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]"},"github_actions_run":false,"implementation_or_test_code_changed":false,"independent_validation_performed":false,"main_readback_resource":"/response/turn244","model_calls":0,"original_project_files_verified":67,"owner_instruction":"已上传","package_published":false,"phase":2,"phase1_matrix_changed":false,"phase2_step2_started":false,"predecessor_replay":{"M_gate_exit":0,"errors":0,"failures":0,"passed":503,"skipped":0,"tests":503},"project":"StructDet-Bench","repository_journal_policy":"Existing artifacts/phase2/test_results.json and test_output.txt preserve the earlier blocked runs exactly. This manifest summarizes fresh runs; their full hash-chained journal is in the companion. New runner invocations append actual outcomes to the preserved journal.","restored_upload_package_files":77,"runs":[{"exit_code":0,"full_record_sha256":"e729c0622b3cb976abc6262234c7514ce68e9da906c7e42753ed455e63768683","gate_reasons":[],"outcome_counts":{"passed":550},"recorded_at_utc":"2026-09-18T15:31:44.606951+00:00","run_id":"354cdac6-5267-4af1-bede-08b56f1fb706","scope":"current"},{"exit_code":1,"full_record_sha256":"fb96fddcfa27715bc03714f43beea35a893e31c1144b34efc16f387abc1e3f64","gate_reasons":["full_V_or_engineering_requirements_incomplete","integrated_V_verification_not_reached"],"outcome_counts":{"passed":550},"recorded_at_utc":"2026-09-18T15:32:08.198211+00:00","run_id":"01bc587f-012a-4bcb-9f42-3ac3fb44f9f5","scope":"phase2"}],"schema_version":"0.1","self_reference_policy":"This summary identifies the already verified baseline commit. The later publication commit and current manifest hash are recorded only in the companion post-publication manifest.","status":"step1_accepted_after_exact_remote_reconciliation","step":1,"user_upload_commit":"c7d33cb96440e1ffd25faebbd40300112d461b68"}
+{
+  "schema_version": "0.1",
+  "project": "StructDet-Bench",
+  "phase": 2,
+  "step": 2,
+  "scope": "local_step2_verification",
+  "base_commit": "dacd9e0e47014f1a9590c3244e5a6e261dc049f3",
+  "base_tree": "f734d6b4d93d151f8d6af6d676696bea37c55dfd",
+  "companion_archive": "StructDet-Bench_Phase2_Step2_Local.zip",
+  "journal_policy": "Original repository Phase 1 and Phase 2 journals remain byte-identical. Full actual appended Step 2 records are in companion verification/phase2_full_test_results.json and phase2_full_test_output.txt.",
+  "test_counts": {
+    "predecessor_phase1": 503,
+    "phase2_step1": 47,
+    "phase2_step2": 93,
+    "total": 643,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "current_gate_exit": 0,
+  "phase1_m_complete": true,
+  "full_phase2_gate_exit": 1,
+  "unfinished_v_families": 26,
+  "environment": {
+    "bytecode_disabled": true,
+    "no_site": true,
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+    "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]"
+  },
+  "runs": [
+    {
+      "run_id": "9dbd65ba-98e7-4f21-abf9-7ea4af8fa4f4",
+      "record_sha256": "d1f042285c12e531dcb736f2d8c8e8e36f7ee9b5f994e8b3fdf3007a9c6b782d",
+      "implementation_step": 2,
+      "exit_code": 0,
+      "scope": "current"
+    },
+    {
+      "run_id": "7d5152cf-09c0-4756-9c4f-70f15458cfad",
+      "record_sha256": "b210b29e69d1dd0098734aae517e40b22e7c6f20766fafc7d80dfba117a40e7b",
+      "implementation_step": 2,
+      "exit_code": 1,
+      "scope": "phase2"
+    }
+  ],
+  "full_evidence": {
+    "phase2_full_test_results.json": {
+      "sha256": "6089e65f0ff993084eda48833afccf509a96f2b62caba6192313bb5fa5aa9681",
+      "size_bytes": 3075687
+    },
+    "phase2_full_test_output.txt": {
+      "sha256": "05cceb588cbc9c4ce1bb01171efdeb9bfc53f5f7b65a653ed03c1ec795c44580",
+      "size_bytes": 334662
+    },
+    "final_current_console.txt": {
+      "sha256": "25b1475e7e3adcd6d90da1d3ba2ee73b7874fdb3eb5701a44fe2f0aa6d1c5146",
+      "size_bytes": 91126
+    },
+    "final_phase2_console.txt": {
+      "sha256": "eac06a5e37d87e8c85c60914f0421032dc3cc358a8bbedc94cbcfe4622fce718",
+      "size_bytes": 91205
+    },
+    "preflight_tests.txt": {
+      "sha256": "02bea1599e22d341ac157e9bcc13dde7a4f1a48f2de6c0c7896f5ebe3a50d2b1",
+      "size_bytes": 76517
+    },
+    "before_gate_maintenance.txt": {
+      "sha256": "2a134ffc5e0ecea9bbe86d9d92593c15c2c4d70e861c1f2d24072bea1332595b",
+      "size_bytes": 92124
+    }
+  },
+  "changed_preexisting_files": [
+    "artifacts/phase2/verification_manifest.json",
+    "tests/phase2_helpers.py",
+    "tests/phase2_matrix.json",
+    "tests/test_phase2_gate.py"
+  ],
+  "new_files": [
+    "COMPARISON_FORMAT.md",
+    "tests/test_phase2_security.py",
+    "tests/test_comparison_records.py",
+    "structdet_bench/comparison_records.py",
+    "tests/fixtures/comparison_cases.json"
+  ],
+  "findings": [
+    {
+      "id": "P2S2-F01",
+      "authority": "PHASE_2_PLAN.md section 6.3",
+      "paths": [
+        "tests/test_phase2_gate.py"
+      ],
+      "requirement": "Current-stage test fixtures must represent the authorized stage; a negative empty-binding case must actually use an empty list.",
+      "before": "Four inherited gate tests failed because synthetic inputs contained only Step 1 method outcomes and VT-03 bindings were no longer empty.",
+      "repair": "Preserve all test identities; construct synthetic outcomes for all stages through the current step and explicitly empty the negative-test binding list.",
+      "after": "All 47 gate methods and all inherited 503 methods pass within the complete current regression.",
+      "science_or_runtime_changed": false
+    }
+  ],
+  "old_test_identities_preserved": true,
+  "phase1_matrix_unchanged": true,
+  "catalogue_encoding": "Two lossless pinned-source references; full logical matrix expansion tested. All 54 VT,40 TR,36 RF,8 EC identities and 503 predecessor method IDs preserved.",
+  "independent_validation_performed": false,
+  "model_calls": 0,
+  "candidate_programs_executed": 0,
+  "github_actions_run": false,
+  "step3_started": false,
+  "publication_note": "Local current-stage acceptance includes the already verified historical Phase 1 remote baseline. It does not establish publication of the current Step 2 changes.",
+  "remote_publication": {
+    "status": "not_published",
+    "verified_main": "dacd9e0e47014f1a9590c3244e5a6e261dc049f3",
+    "reason": "Previously used create_blob action returned Resource not found. Fresh GitHub discovery exposes 48 read/query actions and no write actions. Direct git transport failed DNS resolution. No repository update was made."
+  }
+}
