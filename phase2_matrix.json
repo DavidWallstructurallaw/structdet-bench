@@ -1,0 +1,4132 @@
+{
+  "schema_version": "0.1",
+  "project": "StructDet-Bench",
+  "phase": 2,
+  "approved_plan": {
+    "path": "PHASE_2_PLAN.md",
+    "sha256": "17452ec510cdd31ee960806c6140142dcb411a76ebd87aa138afbdbc6ec639cc"
+  },
+  "delivery": {
+    "phase": 2,
+    "step": 1,
+    "implementation_scope": "predecessor_reconciliation_and_verification_harness",
+    "authorization": {
+      "owner_instruction": "批准，开始",
+      "interpretation": "Approve PHASE_2_PLAN.md and start Phase 2 Step 1. No Step 2 runtime, model calls, candidate execution or hosted CI authorized."
+    },
+    "final_owner_acceptance": "not_established_by_software_tests"
+  },
+  "predecessor": {
+    "archive_sha256": "9a38bbd53424ff80d4b8c745774df1b69d1e9bac400320c2fced00669fcaadf4",
+    "project_inventory_sha256": "381966c3d892b7b258cc11af72df1339c44c327fb654972fc6e302c56efd3e8f",
+    "matrix_sha256": "aea567fadfce3befa7c47a133e5bdf4cc27af413e16daddccfc405b67aacd1cf",
+    "file_manifest": {
+      "PHASE_1_COMPLETION.md": {
+        "sha256": "8a93f1f0f3a31740c68b1d4f5661e073f7a8798cf47a7e1696207ccd579e09b5",
+        "git_blob": "857e34fcfddf71ad5da8f9facdea83e43da91a0e",
+        "size": 33565
+      },
+      "STRUCTURAL_CLASS_CONTRACT.md": {
+        "sha256": "00ba09dd879f5fe02a3302a6f1ad36bda1c6b7e2723562f5f62ec85fed125328",
+        "git_blob": "6c1956ed65e1c35cd4f785f238ab1e9eb1d787a8",
+        "size": 44228
+      },
+      "BASELINE_UPDATE_EC_001.md": {
+        "sha256": "c4a876c86b97bec68ab2691704fe37e40bbee16a94bfdf3a08c783e450c982a2",
+        "git_blob": "2926d822641b646c479bb1d9e0135232e6f8ab6a",
+        "size": 8619
+      },
+      "THEORY_TO_CODE_TRACEABILITY.md": {
+        "sha256": "1b94c402804c1167bfc5c04b45a86364ac5061bc41273b87a36f184991bbeec2",
+        "git_blob": "d1d0c64d8e75da8f3d9e5e1d10436dc3b21c4aee",
+        "size": 30961
+      },
+      "LICENSE": {
+        "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+        "git_blob": "d645695673349e3947e8e5ae42332d0ac3164cd7",
+        "size": 11358
+      },
+      "VALIDATION_AND_FALSIFICATION.md": {
+        "sha256": "6aaa5b01290d3c6b9746f20d47c2092c038587d72d7e090ee3ad73438794ef00",
+        "git_blob": "c69ee4a8d7d8f9a75e182c1c2537add6f49f8acf",
+        "size": 58434
+      },
+      "EVALUATION_CLOSURE_ADDENDUM.md": {
+        "sha256": "31d2387ff2867e67e07adf60bca723b6783d0c3155b905d5477d2f844e1d9ce8",
+        "git_blob": "113ece82468ff65833277a3027611a8421baf2ae",
+        "size": 19228
+      },
+      "NOTICE": {
+        "sha256": "2c081bbc0c7d18ec8d7865bd679a2a55aebd7b578ad9cfe1aec23b3a703d6743",
+        "git_blob": "b31b4f63e315291b4c8093def74029ec94a24657",
+        "size": 706
+      },
+      "PHASE_0_PLAN.md": {
+        "sha256": "5df37f3fef1d012d462a116d7839909c9379dfe6d59a1b3356cae004bcfac6a4",
+        "git_blob": "e9e0018e8b5077aa3d7fad7ec8e5df0eb357fdfe",
+        "size": 32510
+      },
+      "THEORY_SOURCES.md": {
+        "sha256": "33554654857da067870221d5d882fb5ef06cf005b8624079dda986085068d83e",
+        "git_blob": "b575914fc6745ca82511b991cc00d30bcfce3c04",
+        "size": 3667
+      },
+      "PHASE_1_PLAN.md": {
+        "sha256": "4a4137d1fa444c212af71740e439624c341ed485584ee3878e358f1e9424f704",
+        "git_blob": "b788228e0304bd6b2c1912652efc4261078f2eb1",
+        "size": 67281
+      },
+      "PROJECT_SCOPE.md": {
+        "sha256": "2eec02825c8df4281cc538d00dcb809907dc2eb8a2b1b73b597cbab17d975a11",
+        "git_blob": "094634485b89d68ffde468b05c3e0864f4753e4e",
+        "size": 17786
+      },
+      "EVALUATION_INTEGRITY.md": {
+        "sha256": "50c5529c16164ee53e4d99502ed1ec24202f36152b36281870bf285185672dc3",
+        "git_blob": "ce7e4c99061aa1cbf9fbbe7c25d680f0217b5a79",
+        "size": 49499
+      },
+      "THIRD_PARTY_NOTICES.md": {
+        "sha256": "4863c5c796e81a07b944ba7725e0ebca0769a94a0f4add6fed38f4a71a48a1a7",
+        "git_blob": "13fff964958d75700277818c1fbc27a18d976cd4",
+        "size": 752
+      },
+      "INPUT_FORMAT.md": {
+        "sha256": "a1ede587cea09cfb231bb62980fe183276d24b4166524239bbcb5f040add4b97",
+        "git_blob": "3fab94838ec7d679f394b11e9ebeb3a4be8bce5c",
+        "size": 50729
+      },
+      "LICENSING_NOTES.md": {
+        "sha256": "343487308d9f27f9b1869edadf1810a9f143a27d0a01277f00e2802d7a847bae",
+        "git_blob": "44e92fd86e19c1a1e47ed19d78a6ff3185df1fd9",
+        "size": 3365
+      },
+      "README.md": {
+        "sha256": "e1235a3662224073f43722a23dd1afad23b70624c97ee0ac17055b4bdc07ef32",
+        "git_blob": "4d7879316629cf75cfcc5bdb24dd9387b32ed590",
+        "size": 5592
+      },
+      "DEFINITIONS_AND_UNITS.md": {
+        "sha256": "a3da3e356a21f59468178050944baf58787edd65204fbf40b3b1742cd38104ab",
+        "git_blob": "aa6cbc9d3da89ae5d7bdcc2285d220b61cd1ad63",
+        "size": 30936
+      },
+      "UNRESOLVED_DECISIONS.md": {
+        "sha256": "5539ebbf859d0d423845fceb8b9ceda065f05e202d86d2ae662912aa2632a412",
+        "git_blob": "e2605c0c400f939956ba7b4d147f81056aebe068",
+        "size": 69195
+      },
+      "PHASE_0_APPROVAL.md": {
+        "sha256": "0d09da04ffd07568b1657ebc92c9b46fc09a489b9dde843fb1b424d048213db7",
+        "git_blob": "f245b26bb387c3a649d66d45be710a5175368084",
+        "size": 25779
+      },
+      "METRICS_SPEC.md": {
+        "sha256": "23b45934e87767ca87e56b97aa4e1d1abdd49e27187d0b9c5a336ca516a96edb",
+        "git_blob": "07012aa0496d6cd3f5b31fc725a4ac460eaf3b6f",
+        "size": 66345
+      },
+      "pyproject.toml": {
+        "sha256": "18957799ac77c5e31608cc60fc24f7af79c908a5956419e0f0b8a80b85226c98",
+        "git_blob": "b9b777411529e4223cec46129debb577fa1814d6",
+        "size": 363
+      },
+      "HERO_BENCHMARK_SPEC.md": {
+        "sha256": "d1a0849d888a35ae3c9bd552bb920ee46417b7eeb4f8b687f8b5825e6fb851b2",
+        "git_blob": "e52e23b51b64f690df8cafa7d50facc787aa22b5",
+        "size": 76545
+      },
+      ".gitignore": {
+        "sha256": "b19f3c2b02ca972990c0842c2c92a89a059d9b100003957d0547f7e73e78f67b",
+        "git_blob": "c2c9f82835db47befc0d81315e4477f4d42f654a",
+        "size": 182
+      },
+      "LICENSES/Apache-2.0.txt": {
+        "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+        "git_blob": "d645695673349e3947e8e5ae42332d0ac3164cd7",
+        "size": 11358
+      },
+      "LICENSES/CC-BY-4.0.txt": {
+        "sha256": "d2c7c5d4b9d5ef1b3a2fa90426df628fb5075c5b077954387df56d94562a6031",
+        "git_blob": "a3f7ca894d580926261238ae086963f17ea72e01",
+        "size": 18616
+      },
+      "tests/test_populations.py": {
+        "sha256": "03fbc487cf4efa20c8517d043af6c95d14f43aee96b77730259881c88d72f353",
+        "git_blob": "bf38480b4326ef2ee716f1aa0c9ceab0dd51cbb3",
+        "size": 26121
+      },
+      "tests/test_reporting.py": {
+        "sha256": "1e4d5c7922e2b1b8f149ceb3f29b0edf1e7ca09d314f92f9712619288edcafad",
+        "git_blob": "ff790a027f357629165be9a9df2b886fd9d43e52",
+        "size": 9807
+      },
+      "tests/test_local_io.py": {
+        "sha256": "181f57cde6004445ee42aa34030ed136ebd15a504053ff1c7d9d9c7476e029af",
+        "git_blob": "d5594f614917b2f2120d8dd00f78a584a3a24893",
+        "size": 15066
+      },
+      "tests/test_pipeline.py": {
+        "sha256": "ecb94c85dc736a73417ab65b0cde8da357ea894b4a8941da7d733f7e4bf5a1ce",
+        "git_blob": "c05d248d6f415c85fa9f03d062a9cf70efabd2cc",
+        "size": 42178
+      },
+      "tests/test_records.py": {
+        "sha256": "a8d724f37c22a8a5fba481b7d3c169cfcbeedf36d81ad4a9433ca1073ee298eb",
+        "git_blob": "3f51bd9b3967f17aae9426dcf230f25f65c472ee",
+        "size": 20574
+      },
+      "tests/test_metrics.py": {
+        "sha256": "822ec7812389e257f8cb8c9390312d2c1be051c6a4af2e843d82b02254f1750d",
+        "git_blob": "7a1d1334d38d210af319e6ff9b4fa05a7fddcdc1",
+        "size": 34536
+      },
+      "tests/helpers.py": {
+        "sha256": "935f6cd9b5d34637da2a1b441152b5ce9e14467c4c8b2b71db8416291494d539",
+        "git_blob": "b9a54dafe71c909c31c112c759b80dde9f28a8ba",
+        "size": 30345
+      },
+      "tests/test_security.py": {
+        "sha256": "07ad26d8e085f1c66696af863ca32ffb6dcb47f9af5e6a4226909d4736a28fa7",
+        "git_blob": "a92d46368d7b07f59a264c73996d76d6dea1d8ba",
+        "size": 7508
+      },
+      "tests/__init__.py": {
+        "sha256": "3b6b6e7d83977fa4c361010646119a42e94baca2cf4247acae03a2bea83206ea",
+        "git_blob": "7d86da3ddebb3d5500acd2afb636108c669de59f",
+        "size": 74
+      },
+      "tests/test_integrity_records.py": {
+        "sha256": "261d9ec0f539a2311422f57c7378f7c5e1ee529fadfa6bff5d7fd0825e82c34b",
+        "git_blob": "ed989b08af3baf5681de1bf29ade4f99c7747831",
+        "size": 35721
+      },
+      "tests/phase1_matrix.json": {
+        "sha256": "aea567fadfce3befa7c47a133e5bdf4cc27af413e16daddccfc405b67aacd1cf",
+        "git_blob": "2333ce7ed896688889fc5546f04ccf6c6321707c",
+        "size": 216077
+      },
+      "tests/test_inventory.py": {
+        "sha256": "76b6a6b35a8c805ac4de7194b96db8818e618dd7123565b0e27b5278c3c13581",
+        "git_blob": "15c9ab8b8186f788a9ace6b03c2b0ef033027422",
+        "size": 18786
+      },
+      "tests/test_scaffold.py": {
+        "sha256": "9fc0ef5f8cc9642b3b98511b90f26ebb82e6519c7c0c2752d3af4e363ece40fc",
+        "git_blob": "6fb86c56015b874a62ab9182f033a47204f20e3c",
+        "size": 20405
+      },
+      "tests/test_evidence.py": {
+        "sha256": "1ca53e369b0b5946a6303b9f58ee9a01c22f470ebfc5e3b53ce39268b2a14f8e",
+        "git_blob": "c17f6454ce67fdab27fce5eb5503aae21eca1aa0",
+        "size": 13678
+      },
+      "tools/run_phase1_checks.py": {
+        "sha256": "a187a0d676879341ca982cc36a16c6505a0f56bed3f08a64d2a7ffb6f5c6a68e",
+        "git_blob": "106935b0b4a1c46f23819860b6f136880b7a7067",
+        "size": 21181
+      },
+      "examples/sorting_reference_eight.json": {
+        "sha256": "f8fd72ee7c186fa16cc6f6706ace159d090e259ba73a979d743b0863c8a2950a",
+        "git_blob": "78e339fdd2f25b8278ae21387fdb1240e258ba38",
+        "size": 12131
+      },
+      "structdet_bench/metrics.py": {
+        "sha256": "f4bbe94e755d2870cbf07c4488834aaa29d2adba16270c30f9549b23f4f69ff4",
+        "git_blob": "a11dfcdb234400eff6112c63d3289c50ae30e731",
+        "size": 16941
+      },
+      "structdet_bench/populations.py": {
+        "sha256": "33d53b4698bfe69f9a2ae7acd5532e349d3db7773a45b7533e7378c3ee9044f1",
+        "git_blob": "16dea15695773c520f04b5d833b7c9a7b3f31cd2",
+        "size": 11250
+      },
+      "structdet_bench/cli.py": {
+        "sha256": "43dd287b7dcc77335365ad730609229ffd663fbdfc7b231dd5d10eb5e8856de8",
+        "git_blob": "b4ae4b6420358c7f0d268e08921dc1683f12ad6e",
+        "size": 3047
+      },
+      "structdet_bench/__main__.py": {
+        "sha256": "5602a3ab022945fc3b93d4c83752937071e700eab540ff491b55444251ba3bf8",
+        "git_blob": "823b51a04c045c561a3cfa4db62d3efabb70d340",
+        "size": 112
+      },
+      "structdet_bench/evidence.py": {
+        "sha256": "bdf8e3f1c7c190dcb0052202e2d90ed8dbf1a5c00826c7b5c784b1f96026fa61",
+        "git_blob": "eb7e8fb92e32dd2018d41e0af7eb3eb5dbfe6358",
+        "size": 59517
+      },
+      "structdet_bench/__init__.py": {
+        "sha256": "43298db9b6b48995796b333d906755f72426a57bd1b60bdb25a7e26ee4489b4e",
+        "git_blob": "30483cafc27323fd03c70cdcd33eff9c39ecfee5",
+        "size": 133
+      },
+      "structdet_bench/pipeline.py": {
+        "sha256": "e2788f8349f6721faa89025435b14310727f302ba670de628afab5c0fc7140e6",
+        "git_blob": "8bff136e54ceb5fbbe1b253e9dd98419f3727e14",
+        "size": 34357
+      },
+      "structdet_bench/local_io.py": {
+        "sha256": "2e38fa7a23c398488a6691a47511526dc26c0109ea048bc85baa7bcceabb81f3",
+        "git_blob": "336e250c945ef4dd6b1e6d40555269e21de553f6",
+        "size": 21282
+      },
+      "structdet_bench/reporting.py": {
+        "sha256": "7214af51dad2e8bfaa92f4c17b09946b487e07c41248961212cc380a5ddd6361",
+        "git_blob": "9adda092bf2eae7c4d20034b3907dc51b3e1d0f2",
+        "size": 7019
+      },
+      "structdet_bench/contracts.py": {
+        "sha256": "a9d88b10d13afa0ddc967804d90b9ac48679eaf45e9aed5d5ead16880e93440a",
+        "git_blob": "ce49d5b426061456f5899da0887f2ba800ec8ab9",
+        "size": 6982
+      },
+      "structdet_bench/records.py": {
+        "sha256": "c34bacbd1f0c7db490b596ff6334e8fe44c3d9425cbcaeb8473a0e99e0620046",
+        "git_blob": "489828af2dadf2c64940f97dc2e247f7ddeef3f7",
+        "size": 23792
+      },
+      "structdet_bench/inventory.py": {
+        "sha256": "c9f03643944d3096aa276bd6bebc52df49cb9b907af254a317a843fb7c72d554",
+        "git_blob": "c345072a6f08d841fb20169fea224f3cb110f5bf",
+        "size": 23299
+      },
+      "examples/hero_hf00/evidence.jsonl": {
+        "sha256": "f1944e7642e57978bb8603b534bc38b15b61189345e46e7f1436410db723f966",
+        "git_blob": "9a492d5d03492cccf03b5a6d37764a18d8ee75f6",
+        "size": 42482
+      },
+      "examples/hero_hf00/records.jsonl": {
+        "sha256": "a541b14061296e716056788c8354b9c3d97a34cdb7064cae310c0eb5df9d7535",
+        "git_blob": "29e3335410e058d4108b8ee6ab4bdde1e646adee",
+        "size": 45470
+      },
+      "examples/hero_hf00/bundle.json": {
+        "sha256": "24660f96852e3fa14c933906fe2dfa904d5ca2a1cefc2cadd8d7fbfb51c77202",
+        "git_blob": "4fd6160846bf32931f2b7171c3cae02216530afe",
+        "size": 9661
+      },
+      "examples/hero_hf00/expected.json": {
+        "sha256": "01649df89ea1bbc0c3201508b516112ad3ca4c6bfd971ac5b624eef95fb8b346",
+        "git_blob": "6e9b6a71ad442cd6240c36e268c1fe28b38fa1c0",
+        "size": 1246
+      },
+      "artifacts/phase1/test_output.txt": {
+        "sha256": "44cfd1fba3fce0bb6628ff8014cfa1aa59ea311bf900cd7ece45c57348664041",
+        "git_blob": "28603e0a4e48821998c8ca7e752bb573b083fb0f",
+        "size": 490991
+      },
+      "artifacts/phase1/test_results.json": {
+        "sha256": "a5e05b1451f76f71c98b3d4185f3bb1ea1473a0a0352763aeb9f99a012fa677b",
+        "git_blob": "ce0a556898591bc00f4522b11a25fc923cae4f7e",
+        "size": 4966058
+      },
+      "artifacts/phase1/hero_hf00/run_manifest.json": {
+        "sha256": "5fa3c5790d5d8c2180987383d2463aa56b2a0a005eabba7bf2bb23d5af40e388",
+        "git_blob": "3576377ff8fc89c6d8e3811fc4e77f9b0acdcc67",
+        "size": 3111
+      },
+      "artifacts/phase1/hero_hf00/report.md": {
+        "sha256": "fd4bda949d86fc82dc9c6e577122f1aec2b08725a433a6fa884a94f3a69700ef",
+        "git_blob": "277f4a55c356de4a71d862d3b18d6172d78b27a6",
+        "size": 532714
+      },
+      "artifacts/phase1/hero_hf00/report.json": {
+        "sha256": "6cb3334506af4315bf56fd06633c4ef91402d5c1bb76aa9ebf85bb286124f4d1",
+        "git_blob": "a454208335bca58190172aaa17ee92e4ddced775",
+        "size": 376808
+      },
+      "tests/fixtures/record_cases.json": {
+        "sha256": "866df0880d3ab11281f71aefe2ba13200f84acec9b93063b9bdb27f5a93a26a1",
+        "git_blob": "949efc103b8ccbb0d5862c57df040bda45e87e6c",
+        "size": 688
+      },
+      "tests/fixtures/arithmetic_oracles.json": {
+        "sha256": "8ad46461b17f0128309cb37aafb9b8ce77d72a89b3fb589c65068f2a30cd65cf",
+        "git_blob": "9f0a1d5bee224721e6aa5fc810c101460efbe083",
+        "size": 8176
+      },
+      "tests/fixtures/hero_variants.json": {
+        "sha256": "2c60560f69673acce60f4f27e0e7943ca9aebd3feb3ccbed6b22c1b2603ab57c",
+        "git_blob": "aaf2b16bee96f49c9b90ecea4ae3076367c6d105",
+        "size": 10168
+      },
+      "tests/fixtures/integrity_cases.json": {
+        "sha256": "d2939da77b6ae32adc33c50b0f19ab86d580b11ac90e80d6f0dc0e52ecc7f3e6",
+        "git_blob": "e8b4247a8d2e1cd98ffbfeeebcf1f39e72d33b62",
+        "size": 3567
+      }
+    },
+    "immutable_paths": [
+      "BASELINE_UPDATE_EC_001.md",
+      "DEFINITIONS_AND_UNITS.md",
+      "EVALUATION_CLOSURE_ADDENDUM.md",
+      "EVALUATION_INTEGRITY.md",
+      "HERO_BENCHMARK_SPEC.md",
+      "LICENSE",
+      "LICENSES/Apache-2.0.txt",
+      "LICENSES/CC-BY-4.0.txt",
+      "LICENSING_NOTES.md",
+      "METRICS_SPEC.md",
+      "NOTICE",
+      "PHASE_0_APPROVAL.md",
+      "PHASE_0_PLAN.md",
+      "PHASE_1_COMPLETION.md",
+      "PHASE_1_PLAN.md",
+      "PROJECT_SCOPE.md",
+      "STRUCTURAL_CLASS_CONTRACT.md",
+      "THEORY_SOURCES.md",
+      "THEORY_TO_CODE_TRACEABILITY.md",
+      "THIRD_PARTY_NOTICES.md",
+      "UNRESOLVED_DECISIONS.md",
+      "VALIDATION_AND_FALSIFICATION.md",
+      "artifacts/phase1/hero_hf00/report.md",
+      "examples/hero_hf00/bundle.json",
+      "examples/hero_hf00/evidence.jsonl",
+      "examples/hero_hf00/expected.json",
+      "examples/hero_hf00/records.jsonl",
+      "examples/sorting_reference_eight.json",
+      "tests/fixtures/arithmetic_oracles.json",
+      "tests/fixtures/hero_variants.json",
+      "tests/fixtures/integrity_cases.json",
+      "tests/fixtures/record_cases.json",
+      "tests/phase1_matrix.json"
+    ],
+    "test_ids": [
+      "tests.test_evidence.AdmissionTests.test_conflicting_assertion_is_not_vote",
+      "tests.test_evidence.AdmissionTests.test_cycle_of_evidence_support_is_not_grounding",
+      "tests.test_evidence.AdmissionTests.test_duplicate_invalid_record_still_ambiguous",
+      "tests.test_evidence.AdmissionTests.test_duplicate_pin_even_identical_is_conflict",
+      "tests.test_evidence.AdmissionTests.test_execution_record_required_for_coding_validity",
+      "tests.test_evidence.AdmissionTests.test_explicit_evidence_contradiction_is_preserved",
+      "tests.test_evidence.AdmissionTests.test_fixture_cannot_validate_import",
+      "tests.test_evidence.AdmissionTests.test_fixture_missing_declaration_is_local",
+      "tests.test_evidence.AdmissionTests.test_fixture_policy_cannot_present_empirical_context",
+      "tests.test_evidence.AdmissionTests.test_fixture_positive_is_only_stipulated",
+      "tests.test_evidence.AdmissionTests.test_import_positive_carries_restricted_scientific_scope",
+      "tests.test_evidence.AdmissionTests.test_import_requires_adjudication_record",
+      "tests.test_evidence.AdmissionTests.test_imported_outcome_conflict_is_not_ignored",
+      "tests.test_evidence.AdmissionTests.test_inaccessible_essential_report_withholds_label",
+      "tests.test_evidence.AdmissionTests.test_invalid_validity_does_not_erase_class",
+      "tests.test_evidence.AdmissionTests.test_known_malformed_method_is_controlled",
+      "tests.test_evidence.AdmissionTests.test_missing_independence_does_not_remove_mechanism",
+      "tests.test_evidence.AdmissionTests.test_missing_reviewer_is_not_adjudication",
+      "tests.test_evidence.AdmissionTests.test_missing_text_is_not_automatic_membership_failure",
+      "tests.test_evidence.AdmissionTests.test_model_label_and_embedding_methods_do_not_admit",
+      "tests.test_evidence.AdmissionTests.test_no_pin_never_selects_latest",
+      "tests.test_evidence.AdmissionTests.test_not_assessed_does_not_create_invalidity",
+      "tests.test_evidence.AdmissionTests.test_payload_shape_does_not_certify_evidence",
+      "tests.test_evidence.AdmissionTests.test_provisional_is_not_admitted",
+      "tests.test_evidence.AdmissionTests.test_repaired_artifact_cannot_validate_original",
+      "tests.test_evidence.AdmissionTests.test_revision_pin_mismatch_is_not_repaired",
+      "tests.test_evidence.AdmissionTests.test_sorted_outputs_do_not_identify_algorithm",
+      "tests.test_evidence.AdmissionTests.test_timeout_cannot_validate_or_invalidate_program",
+      "tests.test_evidence.AdmissionTests.test_unclassified_stays_unclassified",
+      "tests.test_evidence.AdmissionTests.test_undetermined_and_absent_validity_are_distinct",
+      "tests.test_evidence.AdmissionTests.test_unresolved_adjudicated_retains_epistemic_state",
+      "tests.test_evidence.AdmissionTests.test_wrong_execution_subject_is_detected",
+      "tests.test_evidence.AdmissionTests.test_wrong_frame_withholds_only_affected_sample",
+      "tests.test_evidence.AdmissionTests.test_wrong_rubric_withholds_validity_only",
+      "tests.test_evidence.CorrectionTests.test_cross_sample_predecessor_does_not_merge_samples",
+      "tests.test_evidence.CorrectionTests.test_cyclic_revision_link_is_detected",
+      "tests.test_evidence.CorrectionTests.test_impact_records_link_without_recalculating_metrics",
+      "tests.test_evidence.CorrectionTests.test_independence_only_withdrawal_keeps_label",
+      "tests.test_evidence.CorrectionTests.test_passive_review_never_invokes_network_or_executes",
+      "tests.test_evidence.CorrectionTests.test_pending_challenge_is_explicit",
+      "tests.test_evidence.CorrectionTests.test_raw_bundle_is_unchanged_by_review",
+      "tests.test_evidence.CorrectionTests.test_rejected_challenge_cannot_withdraw",
+      "tests.test_evidence.CorrectionTests.test_revision_with_new_evidence_requires_new_pin",
+      "tests.test_evidence.CorrectionTests.test_shared_schema_challenge_affects_all_dependent_labels",
+      "tests.test_evidence.CorrectionTests.test_withdrawal_preserves_other_assignment_and_validity",
+      "tests.test_integrity_records.IntegrityTests.test_absent_target_does_not_validate_by_two_votes",
+      "tests.test_integrity_records.IntegrityTests.test_all_nineteen_support_types_have_explicit_payload_validation",
+      "tests.test_integrity_records.IntegrityTests.test_audit_extra_review_does_not_replace_missing_planned_position",
+      "tests.test_integrity_records.IntegrityTests.test_audit_needs_annotations_for_each_reviewed_target",
+      "tests.test_integrity_records.IntegrityTests.test_checked_in_integrity_cases_are_actual_mock_payloads",
+      "tests.test_integrity_records.IntegrityTests.test_complete_mock_form_never_certifies_operational_openness",
+      "tests.test_integrity_records.IntegrityTests.test_complete_review_keeps_sources_and_classifications_passive",
+      "tests.test_integrity_records.IntegrityTests.test_design_32_core_and_28_pairs_remains_a_plan",
+      "tests.test_integrity_records.IntegrityTests.test_design_8995_tests_does_not_count_as_performed_validation",
+      "tests.test_integrity_records.IntegrityTests.test_disagreement_preserves_both_initial_outcomes",
+      "tests.test_integrity_records.IntegrityTests.test_domain_property_mismatch_is_not_execution_evidence",
+      "tests.test_integrity_records.IntegrityTests.test_empty_intake_is_distinct_from_received_evidence",
+      "tests.test_integrity_records.IntegrityTests.test_four_conditions_cannot_claim_five_condition_openness",
+      "tests.test_integrity_records.IntegrityTests.test_initial_judgment_materials_must_match",
+      "tests.test_integrity_records.IntegrityTests.test_initial_label_exposure_is_not_independent_first_pass",
+      "tests.test_integrity_records.IntegrityTests.test_known_prior_exposure_overrides_false_annotation_flag",
+      "tests.test_integrity_records.IntegrityTests.test_later_discussion_does_not_rewrite_first_pass",
+      "tests.test_integrity_records.IntegrityTests.test_lineage_cycles_do_not_trigger_universal_dag_rejection",
+      "tests.test_integrity_records.IntegrityTests.test_malformed_public_annotation_reference_is_controlled",
+      "tests.test_integrity_records.IntegrityTests.test_matching_mock_audit_stays_record_only",
+      "tests.test_integrity_records.IntegrityTests.test_missing_claim_evidence_is_unresolved_not_satisfied",
+      "tests.test_integrity_records.IntegrityTests.test_missing_mock_marker_is_not_defaulted",
+      "tests.test_integrity_records.IntegrityTests.test_mistyped_annotation_actor_is_controlled",
+      "tests.test_integrity_records.IntegrityTests.test_mistyped_domain_suite_reference_is_controlled",
+      "tests.test_integrity_records.IntegrityTests.test_nonapplicable_cannot_evade_mandatory_condition",
+      "tests.test_integrity_records.IntegrityTests.test_one_unresolved_condition_cannot_be_averaged_away",
+      "tests.test_integrity_records.IntegrityTests.test_source_unknowns_cannot_become_inferred_ancestry",
+      "tests.test_integrity_records.IntegrityTests.test_step3_matrix_binds_all_actual_step3_checks",
+      "tests.test_integrity_records.IntegrityTests.test_structural_schema_challenge_keeps_separate_validity",
+      "tests.test_integrity_records.IntegrityTests.test_support_value_type_mutations_do_not_crash",
+      "tests.test_integrity_records.IntegrityTests.test_two_mock_humans_are_only_record_consistent",
+      "tests.test_integrity_records.IntegrityTests.test_two_sessions_by_one_person_fail_two_person_requirement",
+      "tests.test_integrity_records.IntegrityTests.test_unknown_expiry_does_not_invent_validity_period",
+      "tests.test_integrity_records.IntegrityTests.test_unknown_exposure_does_not_become_false",
+      "tests.test_integrity_records.IntegrityTests.test_unknown_parent_remains_unknown",
+      "tests.test_integrity_records.IntegrityTests.test_unknown_payload_fields_are_not_executable_extensions",
+      "tests.test_integrity_records.IntegrityTests.test_unreviewed_intake_preserves_original_anomaly",
+      "tests.test_integrity_records.IntegrityTests.test_withdrawn_suite_cannot_support_execution_record",
+      "tests.test_integrity_records.Step7CompleteReferenceFixtures.test_complete_core_coverage_is_record_consistent_but_still_mock",
+      "tests.test_integrity_records.Step7CompleteReferenceFixtures.test_complete_systematic_audit_plan_resolves_exact_72_positions",
+      "tests.test_integrity_records.Step7FunctionalRecords.test_absent_oracle_is_not_independent_validation",
+      "tests.test_integrity_records.Step7FunctionalRecords.test_complete_8995_order_construction_and_hash",
+      "tests.test_integrity_records.Step7FunctionalRecords.test_complete_mock_import_is_record_consistent_only",
+      "tests.test_integrity_records.Step7FunctionalRecords.test_containment_or_missing_reference_family_blocks_claim",
+      "tests.test_integrity_records.Step7FunctionalRecords.test_decisive_counterexample_can_precede_full_coverage",
+      "tests.test_integrity_records.Step7FunctionalRecords.test_each_property_is_required_without_boolean_coercion",
+      "tests.test_integrity_records.Step7FunctionalRecords.test_each_segment_construction_is_checked",
+      "tests.test_integrity_records.Step7FunctionalRecords.test_equal_inputs_keep_distinct_ids_and_purposes",
+      "tests.test_integrity_records.Step7FunctionalRecords.test_exception_needs_explicit_task_counterexample",
+      "tests.test_integrity_records.Step7FunctionalRecords.test_forged_manifest_hash_is_rejected",
+      "tests.test_integrity_records.Step7FunctionalRecords.test_missing_test_cannot_pass_by_declared_count",
+      "tests.test_integrity_records.Step7FunctionalRecords.test_mock_child_cannot_validate_nonmock_parent",
+      "tests.test_integrity_records.Step7FunctionalRecords.test_nested_malformed_runtime_metadata_is_controlled",
+      "tests.test_integrity_records.Step7FunctionalRecords.test_partial_pass_does_not_claim_full_validity",
+      "tests.test_integrity_records.Step7FunctionalRecords.test_plain_pass_string_cannot_establish_validity",
+      "tests.test_integrity_records.Step7FunctionalRecords.test_reordering_is_detected_even_with_new_hash",
+      "tests.test_integrity_records.Step7FunctionalRecords.test_repair_cannot_relabel_original_subject",
+      "tests.test_integrity_records.Step7FunctionalRecords.test_timeout_memory_harness_or_oracle_failure_is_not_invalidity",
+      "tests.test_integrity_records.Step7FunctionalRecords.test_unreadable_upstream_evidence_cannot_be_laundered",
+      "tests.test_integrity_records.Step7ReferenceAuditRecords.test_28_pairs_and_four_witnesses_checked_without_fabricating_core",
+      "tests.test_integrity_records.Step7ReferenceAuditRecords.test_32_names_without_artifacts_or_annotations_do_not_pass",
+      "tests.test_integrity_records.Step7ReferenceAuditRecords.test_72_planned_positions_are_not_72_reviews",
+      "tests.test_integrity_records.Step7ReferenceAuditRecords.test_changed_systematic_position_fails",
+      "tests.test_integrity_records.Step7ReferenceAuditRecords.test_generic_audit_must_match_actual_frozen_plan",
+      "tests.test_integrity_records.Step7ReferenceAuditRecords.test_opposite_membership_claims_do_not_transitively_cluster",
+      "tests.test_integrity_records.Step7ReferenceAuditRecords.test_overlap_is_preserved_not_forced_into_partition",
+      "tests.test_integrity_records.Step7ReferenceAuditRecords.test_pair_duplication_cannot_fill_missing_review",
+      "tests.test_integrity_records.Step7ReferenceAuditRecords.test_registry_candidate_can_remain_valid_without_new_class",
+      "tests.test_integrity_records.Step7ReferenceAuditRecords.test_repeated_position_does_not_replace_lost_opportunity",
+      "tests.test_integrity_records.Step7ReferenceAuditRecords.test_witness_shape_not_just_four_names",
+      "tests.test_inventory.AdditionalInventoryTests.test_absent_future_attempt_preserves_earlier_group_plan",
+      "tests.test_inventory.AdditionalInventoryTests.test_declared_output_offsets_cannot_add_a_new_realization_twice",
+      "tests.test_inventory.AdditionalInventoryTests.test_duplicate_group_position_with_unknown_attempt_is_unresolved",
+      "tests.test_inventory.AdditionalInventoryTests.test_extra_later_failure_does_not_contaminate_known_selected_ids",
+      "tests.test_inventory.AdditionalInventoryTests.test_malformed_manifest_stays_unavailable_not_successful_empty_study",
+      "tests.test_inventory.AdditionalInventoryTests.test_shared_group_across_cells_is_retained_without_pooling",
+      "tests.test_inventory.ArtifactAssociationTests.test_character_offsets_cannot_replace_byte_offsets",
+      "tests.test_inventory.ArtifactAssociationTests.test_empty_emitted_region_is_real_bytes_not_missing_slot",
+      "tests.test_inventory.ArtifactAssociationTests.test_exact_byte_region_keeps_unicode_and_crlf",
+      "tests.test_inventory.ArtifactAssociationTests.test_missing_raw_is_unavailable_not_an_extraction_guess",
+      "tests.test_inventory.ArtifactAssociationTests.test_negative_bool_and_oversized_spans_are_controlled",
+      "tests.test_inventory.ArtifactAssociationTests.test_raw_response_mismatch_cannot_be_repaired_by_neighbor",
+      "tests.test_inventory.ArtifactAssociationTests.test_truncated_known_text_can_be_associated_without_completion",
+      "tests.test_inventory.InventoryTests.test_attempt_cell_mismatch_is_preserved",
+      "tests.test_inventory.InventoryTests.test_attempts_and_realizations_are_separate",
+      "tests.test_inventory.InventoryTests.test_conflicting_order_sources_are_not_resolved_by_preference",
+      "tests.test_inventory.InventoryTests.test_duplicate_id_is_ambiguous_never_deduplicated_silently",
+      "tests.test_inventory.InventoryTests.test_duplicate_malformed_id_remains_ambiguous",
+      "tests.test_inventory.InventoryTests.test_duplicate_planned_position_is_unavailable",
+      "tests.test_inventory.InventoryTests.test_extra_output_is_preserved_unselected",
+      "tests.test_inventory.InventoryTests.test_failed_five_candidate_call_does_not_create_samples",
+      "tests.test_inventory.InventoryTests.test_frame_failure_is_scoped_and_distinct_from_empty",
+      "tests.test_inventory.InventoryTests.test_known_empty_and_truncated_emissions_remain_samples",
+      "tests.test_inventory.InventoryTests.test_known_empty_selection_is_zero_with_exclusions",
+      "tests.test_inventory.InventoryTests.test_large_attempt_count_does_not_expand_unbounded_positions",
+      "tests.test_inventory.InventoryTests.test_malformed_observation_retains_row_and_complete_count_uncertainty",
+      "tests.test_inventory.InventoryTests.test_missing_requested_sample_cannot_create_observation",
+      "tests.test_inventory.InventoryTests.test_no_io_after_loading",
+      "tests.test_inventory.InventoryTests.test_original_storage_order_is_not_experimental_sequence",
+      "tests.test_inventory.InventoryTests.test_partial_explicit_order_is_unavailable",
+      "tests.test_inventory.InventoryTests.test_plan_without_attempt_records_does_not_invent_attempts",
+      "tests.test_inventory.InventoryTests.test_position_plan_mutations_have_controlled_diagnostics",
+      "tests.test_inventory.InventoryTests.test_primary_attempt_metadata_can_supply_plan",
+      "tests.test_inventory.InventoryTests.test_private_and_missing_text_do_not_zero_inventory",
+      "tests.test_inventory.InventoryTests.test_protocol_mismatch_is_frame_error",
+      "tests.test_inventory.InventoryTests.test_recorded_ordinals_can_supply_order",
+      "tests.test_inventory.InventoryTests.test_repeated_bytes_with_distinct_positions_remain_observations",
+      "tests.test_inventory.InventoryTests.test_retry_is_preserved_without_adding_planned_slots",
+      "tests.test_inventory.InventoryTests.test_same_attempt_position_cannot_count_twice_under_two_ids",
+      "tests.test_inventory.InventoryTests.test_selecting_extra_output_cannot_extend_planned_budget",
+      "tests.test_inventory.InventoryTests.test_unattempted_slot_is_not_an_invocation",
+      "tests.test_inventory.InventoryTests.test_unknown_attempt_history_is_not_one_call_per_sample",
+      "tests.test_inventory.InventoryTests.test_unknown_cell_remains_unallocated",
+      "tests.test_inventory.InventoryTests.test_unknown_order_does_not_erase_selection",
+      "tests.test_inventory.InventoryTests.test_unknown_selection_is_not_automatically_all",
+      "tests.test_inventory.InventoryTests.test_wrong_record_file_hash_cannot_supply_selected_identity",
+      "tests.test_local_io.BundleTests.test_bad_required_version_never_becomes_empty_success",
+      "tests.test_local_io.BundleTests.test_empty_and_malformed_records_remain_distinct",
+      "tests.test_local_io.BundleTests.test_external_and_unavailable_artifacts_are_inert",
+      "tests.test_local_io.BundleTests.test_hash_mismatch_is_scoped_and_keeps_expected_hash",
+      "tests.test_local_io.BundleTests.test_line_limit_does_not_turn_suffix_into_next_row",
+      "tests.test_local_io.BundleTests.test_malformed_line_does_not_erase_next_record",
+      "tests.test_local_io.BundleTests.test_only_declared_files_are_read",
+      "tests.test_local_io.BundleTests.test_read_order_does_not_become_scientific_order",
+      "tests.test_local_io.BundleTests.test_record_file_hash_mismatch_preserves_inventory",
+      "tests.test_local_io.BundleTests.test_record_limit_is_not_silent_sampling",
+      "tests.test_local_io.BundleTests.test_sample_hash_uses_analyzed_bytes",
+      "tests.test_local_io.BundleTests.test_source_pin_mismatch_does_not_trigger_retrieval",
+      "tests.test_local_io.BundleTests.test_wrong_file_role_preserves_raw_record",
+      "tests.test_local_io.SnapshotTests.test_change_during_read_is_detected",
+      "tests.test_local_io.SnapshotTests.test_directory_and_fifo_are_rejected_without_blocking",
+      "tests.test_local_io.SnapshotTests.test_file_and_total_byte_limits",
+      "tests.test_local_io.SnapshotTests.test_internal_external_and_root_symlinks_are_rejected",
+      "tests.test_local_io.SnapshotTests.test_path_grammar_rejects_remote_and_expansion",
+      "tests.test_local_io.SnapshotTests.test_snapshot_and_repeated_path_read",
+      "tests.test_local_io.SnapshotTests.test_snapshot_stays_stable_after_path_replacement",
+      "tests.test_local_io.SnapshotTests.test_unsupported_platform_has_no_unsafe_fallback",
+      "tests.test_local_io.StrictJSONTests.test_bad_manifest_field_types_have_controlled_errors",
+      "tests.test_local_io.StrictJSONTests.test_depth_bound_respects_strings",
+      "tests.test_local_io.StrictJSONTests.test_duplicate_keys_and_escaped_aliases_fail",
+      "tests.test_local_io.StrictJSONTests.test_invalid_overrides_never_weaken_limits",
+      "tests.test_local_io.StrictJSONTests.test_large_finite_exponent_is_not_float_infinity",
+      "tests.test_local_io.StrictJSONTests.test_nonfinite_constants_fail",
+      "tests.test_local_io.StrictJSONTests.test_number_length_and_file_limits",
+      "tests.test_local_io.StrictJSONTests.test_utf8_bom_surrogates_and_bad_syntax_fail",
+      "tests.test_metrics.Arithmetic.test_effective_counts_differ",
+      "tests.test_metrics.Arithmetic.test_higher_precision_independent_check",
+      "tests.test_metrics.Arithmetic.test_one_class",
+      "tests.test_metrics.Arithmetic.test_oracle_identity_and_role",
+      "tests.test_metrics.Arithmetic.test_sci_with_replacement",
+      "tests.test_metrics.Arithmetic.test_source_oracles",
+      "tests.test_metrics.Arithmetic.test_units_and_scope",
+      "tests.test_metrics.Arithmetic.test_unrounded_derivation",
+      "tests.test_metrics.Arithmetic.test_zero_registry_entries",
+      "tests.test_metrics.Matrix.test_complete_arithmetic_not_complete_report",
+      "tests.test_metrics.Matrix.test_explicit_test_bindings",
+      "tests.test_metrics.Matrix.test_frozen_and_external_scopes",
+      "tests.test_metrics.Matrix.test_history_and_actual_runner_step",
+      "tests.test_metrics.Matrix.test_invalid_binding_class",
+      "tests.test_metrics.Matrix.test_non_m_update_forbidden",
+      "tests.test_metrics.Matrix.test_old_bindings_preserved",
+      "tests.test_metrics.Numerical.test_624_small_tables",
+      "tests.test_metrics.Numerical.test_effective_order_failure",
+      "tests.test_metrics.Numerical.test_exact_total",
+      "tests.test_metrics.Numerical.test_exp_failure_scoped",
+      "tests.test_metrics.Numerical.test_immutable_results",
+      "tests.test_metrics.Numerical.test_invalid_counts",
+      "tests.test_metrics.Numerical.test_log_failure_scoped",
+      "tests.test_metrics.Numerical.test_material_errors",
+      "tests.test_metrics.Numerical.test_no_deferred_estimators",
+      "tests.test_metrics.Numerical.test_normalization_failure",
+      "tests.test_metrics.Numerical.test_renaming_and_order",
+      "tests.test_metrics.Numerical.test_resource_limits",
+      "tests.test_metrics.Numerical.test_signed_zero",
+      "tests.test_metrics.Numerical.test_tiny_boundary_record",
+      "tests.test_metrics.Numerical.test_tolerance_sum",
+      "tests.test_metrics.Numerical.test_underflow_preserves_exact_support",
+      "tests.test_metrics.Numerical.test_uniform_scaling",
+      "tests.test_metrics.Populations.test_all_invalid",
+      "tests.test_metrics.Populations.test_ambiguous_ids",
+      "tests.test_metrics.Populations.test_bad_component_types",
+      "tests.test_metrics.Populations.test_empty_selection",
+      "tests.test_metrics.Populations.test_frame_failure",
+      "tests.test_metrics.Populations.test_independence_only_withdrawal",
+      "tests.test_metrics.Populations.test_local_evidence_failure",
+      "tests.test_metrics.Populations.test_malformed_threshold_is_component_specific",
+      "tests.test_metrics.Populations.test_mf07_views_and_ratios",
+      "tests.test_metrics.Populations.test_no_hero_program_or_report_created",
+      "tests.test_metrics.Populations.test_passive_arithmetic",
+      "tests.test_metrics.Populations.test_population_conservation",
+      "tests.test_metrics.Populations.test_population_duplicate_ids",
+      "tests.test_metrics.Populations.test_unclassified",
+      "tests.test_metrics.Populations.test_unknown_checkpoint",
+      "tests.test_metrics.Prefixes.test_hero_count_projection",
+      "tests.test_metrics.Prefixes.test_hero_invalid_projection",
+      "tests.test_metrics.Prefixes.test_hero_missing_intended_slot",
+      "tests.test_metrics.Prefixes.test_k_states",
+      "tests.test_metrics.Prefixes.test_mf10",
+      "tests.test_metrics.Prefixes.test_missing_order",
+      "tests.test_metrics.Prefixes.test_monotone_accumulation",
+      "tests.test_metrics.Prefixes.test_partial_group",
+      "tests.test_metrics.Prefixes.test_prefix_conservation",
+      "tests.test_metrics.Prefixes.test_real_order_change",
+      "tests.test_metrics.Prefixes.test_revision_preserves_old_result",
+      "tests.test_metrics.Prefixes.test_storage_order_invariant",
+      "tests.test_metrics.Prefixes.test_zero_vs_missing_prefix",
+      "tests.test_metrics.Thresholds.test_beyond_float_boundary",
+      "tests.test_metrics.Thresholds.test_empty_requested",
+      "tests.test_metrics.Thresholds.test_invalid_empty",
+      "tests.test_metrics.Thresholds.test_invalid_values",
+      "tests.test_metrics.Thresholds.test_large_integer_equality",
+      "tests.test_metrics.Thresholds.test_large_negative_exponent",
+      "tests.test_metrics.Thresholds.test_lexemes_and_origins",
+      "tests.test_metrics.Thresholds.test_no_renormalization",
+      "tests.test_metrics.Thresholds.test_omitted_vs_null",
+      "tests.test_metrics.Thresholds.test_one_threshold_spellings",
+      "tests.test_metrics.Thresholds.test_other_metrics_unchanged",
+      "tests.test_metrics.Thresholds.test_revalidate_token_object",
+      "tests.test_metrics.Thresholds.test_source_thresholds",
+      "tests.test_metrics.Thresholds.test_token_limit",
+      "tests.test_metrics.Thresholds.test_zero_never_passes",
+      "tests.test_pipeline.AdversePipelineTests.test_duplicate_record_is_error_not_a_second_observation",
+      "tests.test_pipeline.AdversePipelineTests.test_empty_selected_inventory_has_zero_support_and_undefined_entropy",
+      "tests.test_pipeline.AdversePipelineTests.test_four_sample_evidence_correction_exact_sequence",
+      "tests.test_pipeline.AdversePipelineTests.test_hash_mismatch_is_not_repaired_by_pipeline",
+      "tests.test_pipeline.AdversePipelineTests.test_independence_only_correction_does_not_erase_supported_counts",
+      "tests.test_pipeline.AdversePipelineTests.test_invalid_threshold_is_contract_failure_not_zero",
+      "tests.test_pipeline.AdversePipelineTests.test_malformed_analysis_object_retains_safe_error_report",
+      "tests.test_pipeline.AdversePipelineTests.test_malformed_manifest_is_error_not_empty_success",
+      "tests.test_pipeline.AdversePipelineTests.test_missing_shared_frame_withholds_distribution_keeps_inventory",
+      "tests.test_pipeline.AdversePipelineTests.test_mock_imported_adjudication_uses_same_pipeline",
+      "tests.test_pipeline.AdversePipelineTests.test_nonempty_unclassified_inventory_is_not_empty_study",
+      "tests.test_pipeline.AdversePipelineTests.test_omitted_threshold_keeps_not_requested",
+      "tests.test_pipeline.AdversePipelineTests.test_unknown_model_identity_does_not_destroy_arithmetic",
+      "tests.test_pipeline.AdversePipelineTests.test_unknown_prefix_mode_not_guessed_into_success",
+      "tests.test_pipeline.CommandIntegrationTests.test_analyze_command_publishes_three_files",
+      "tests.test_pipeline.CommandIntegrationTests.test_analyze_refuses_existing_output",
+      "tests.test_pipeline.CommandIntegrationTests.test_contract_error_report_can_be_written_without_success_claim",
+      "tests.test_pipeline.CommandIntegrationTests.test_internal_failure_returns_three_without_traceback",
+      "tests.test_pipeline.CommandIntegrationTests.test_invalid_input_has_exit_two_and_safe_diagnostics",
+      "tests.test_pipeline.CommandIntegrationTests.test_missing_arguments_do_not_echo_sensitive_paths",
+      "tests.test_pipeline.CommandIntegrationTests.test_unimplemented_commands_remain_errors",
+      "tests.test_pipeline.CommandIntegrationTests.test_validate_command_success_and_no_writes",
+      "tests.test_pipeline.HeroPipelineTests.test_explicit_run_identity_changes_metadata_not_metrics",
+      "tests.test_pipeline.HeroPipelineTests.test_hf00_materialization_matches_pinned_original",
+      "tests.test_pipeline.HeroPipelineTests.test_hf00_original_twenty_record_workflow",
+      "tests.test_pipeline.HeroPipelineTests.test_hf01_invalid_but_classifiable",
+      "tests.test_pipeline.HeroPipelineTests.test_hf02_unresolved_class_keeps_validity",
+      "tests.test_pipeline.HeroPipelineTests.test_hf03_provisional_label_has_distinct_reason",
+      "tests.test_pipeline.HeroPipelineTests.test_hf04_missing_evidence_is_local_limit",
+      "tests.test_pipeline.HeroPipelineTests.test_hf05_missing_position_is_not_backfilled",
+      "tests.test_pipeline.HeroPipelineTests.test_hf06_new_assignment_preserves_old_identity",
+      "tests.test_pipeline.HeroPipelineTests.test_input_changes_get_new_fingerprint_without_overwriting_old_report",
+      "tests.test_pipeline.HeroPipelineTests.test_invalid_run_identity_and_naive_time_rejected",
+      "tests.test_pipeline.HeroPipelineTests.test_materializer_refuses_unregistered_variant",
+      "tests.test_pipeline.HeroPipelineTests.test_pinned_base_remains_byte_identical_after_all_variants",
+      "tests.test_pipeline.HeroPipelineTests.test_program_text_and_generation_cost_are_never_invented",
+      "tests.test_pipeline.HeroPipelineTests.test_replay_canonical_reports_and_manifest_time",
+      "tests.test_pipeline.HeroPipelineTests.test_report_hashes_identify_actual_written_bytes",
+      "tests.test_pipeline.HeroPipelineTests.test_validate_has_no_metric_calculation",
+      "tests.test_pipeline.OutputTransactionTests.test_complete_staging_precedes_atomic_publish",
+      "tests.test_pipeline.OutputTransactionTests.test_existing_file_and_empty_directory_are_not_replaced",
+      "tests.test_pipeline.OutputTransactionTests.test_interrupted_write_cleans_staging",
+      "tests.test_pipeline.OutputTransactionTests.test_missing_parent_does_not_create_an_implicit_tree",
+      "tests.test_pipeline.OutputTransactionTests.test_only_fixed_three_filenames_are_allowed",
+      "tests.test_pipeline.OutputTransactionTests.test_output_inside_input_is_rejected",
+      "tests.test_pipeline.OutputTransactionTests.test_output_symlink_and_symlink_parent_are_rejected",
+      "tests.test_pipeline.OutputTransactionTests.test_private_permissions_do_not_depend_on_umask",
+      "tests.test_pipeline.OutputTransactionTests.test_publishes_exact_complete_set",
+      "tests.test_pipeline.OutputTransactionTests.test_racing_target_is_preserved_and_staging_cleaned",
+      "tests.test_pipeline.OutputTransactionTests.test_remote_expanding_and_traversing_output_paths_are_rejected",
+      "tests.test_pipeline.OutputTransactionTests.test_short_writes_are_retried_without_truncation",
+      "tests.test_pipeline.OutputTransactionTests.test_unsupported_atomic_operation_has_no_overwrite_fallback",
+      "tests.test_pipeline.OutputTransactionTests.test_zero_length_write_is_failure_and_cleanup",
+      "tests.test_pipeline.PipelineBoundaryTests.test_external_locator_remains_inert_and_private_in_report",
+      "tests.test_pipeline.PipelineBoundaryTests.test_full_pipeline_never_runs_candidate_or_fetches_remote",
+      "tests.test_pipeline.PipelineBoundaryTests.test_serialization_failure_never_creates_output",
+      "tests.test_pipeline.PipelineBoundaryTests.test_validate_does_not_write_any_inputs",
+      "tests.test_pipeline.Step7GateTests.test_complete_mock_gate_is_M_only_and_not_final_approval",
+      "tests.test_pipeline.Step7GateTests.test_ec_scope_cannot_be_promoted_to_empirical_evidence",
+      "tests.test_pipeline.Step7GateTests.test_missing_ec_binding_cannot_pass_full_gate",
+      "tests.test_pipeline.Step7GateTests.test_nonpassing_ec_binding_cannot_be_overridden",
+      "tests.test_pipeline.Step7GateTests.test_test_records_have_expected_actual_scope_and_no_E_claim",
+      "tests.test_pipeline.Step7ReportIntegration.test_all_36_report_groups_have_explicit_paths",
+      "tests.test_pipeline.Step7ReportIntegration.test_all_deferred_prerequisites_visible_without_estimator",
+      "tests.test_pipeline.Step7ReportIntegration.test_correction_dependencies_identify_both_views_without_resampling",
+      "tests.test_pipeline.Step7ReportIntegration.test_domain_coverage_details_are_visible_and_fixture_stays_fixture",
+      "tests.test_pipeline.Step7ReportIntegration.test_empty_then_received_and_acted_intake_never_adds_samples",
+      "tests.test_pipeline.Step7ReportIntegration.test_every_m_metric_retains_denominator_status_and_source_scope",
+      "tests.test_pipeline.Step7ReportIntegration.test_metadata_time_never_changes_content_or_creates_observation",
+      "tests.test_pipeline.Step7ReportIntegration.test_registered_sources_and_original_fixture_hashes_still_match",
+      "tests.test_pipeline.Step7ReportIntegration.test_relocated_input_replays_all_canonical_content",
+      "tests.test_pipeline.Step7ReportIntegration.test_shared_schema_challenge_affects_all_its_cells_not_other_frames",
+      "tests.test_pipeline.Step7ReportIntegration.test_typed_lineage_exposure_and_annotation_survive_redaction",
+      "tests.test_populations.AdversePopulationTests.test_actual_empty_input_has_no_invented_observations",
+      "tests.test_populations.AdversePopulationTests.test_association_error_withholds_both_affected_axes_without_deleting_sample",
+      "tests.test_populations.AdversePopulationTests.test_later_unrecorded_attempt_does_not_block_first_hero_endpoint",
+      "tests.test_populations.AdversePopulationTests.test_local_failed_adjudication_never_withholds_entire_population",
+      "tests.test_populations.AdversePopulationTests.test_missing_text_is_not_automatic_missing_artifact_identity",
+      "tests.test_populations.AdversePopulationTests.test_public_surface_stops_before_metrics_and_comparisons",
+      "tests.test_populations.AdversePopulationTests.test_reference_registry_and_incident_never_add_model_samples",
+      "tests.test_populations.AdversePopulationTests.test_repeated_call_without_new_identity_never_adds_sample",
+      "tests.test_populations.HeroEndpointTests.test_empty_classified_complete_twenty_is_legitimate_zero",
+      "tests.test_populations.HeroEndpointTests.test_group_plan_cannot_be_inferred_from_twenty_rows",
+      "tests.test_populations.HeroEndpointTests.test_hero_membership_5_10_20_matches_frozen_design",
+      "tests.test_populations.HeroEndpointTests.test_last_group_failure_does_not_erase_earlier_endpoint",
+      "tests.test_populations.HeroEndpointTests.test_missing_g2_p5_allows_descriptive_but_not_matched_prefix",
+      "tests.test_populations.HeroEndpointTests.test_same_group_records_are_not_independent_draws",
+      "tests.test_populations.HeroEndpointTests.test_supplementary_single_candidate_k_is_not_hero_endpoint",
+      "tests.test_populations.HeroEndpointTests.test_unclassified_position_is_kept_without_replacement",
+      "tests.test_populations.HeroEndpointTests.test_wrong_primary_attempt_blocks_matching_group",
+      "tests.test_populations.PopulationTests.test_all_invalid_can_still_have_structural_population",
+      "tests.test_populations.PopulationTests.test_axes_overlap_and_each_reconciles_to_selected_inventory",
+      "tests.test_populations.PopulationTests.test_conflicting_pin_is_local",
+      "tests.test_populations.PopulationTests.test_independence_only_correction_preserves_counts",
+      "tests.test_populations.PopulationTests.test_inputs_remain_unchanged_and_results_are_immutable",
+      "tests.test_populations.PopulationTests.test_known_empty_selection_has_undefined_ratios",
+      "tests.test_populations.PopulationTests.test_mf07_all_five_ratios_keep_unreduced_accounting",
+      "tests.test_populations.PopulationTests.test_mf07_exact_memberships",
+      "tests.test_populations.PopulationTests.test_missing_assignment_pin_has_no_latest_fallback",
+      "tests.test_populations.PopulationTests.test_missing_essential_class_evidence_preserves_other_samples",
+      "tests.test_populations.PopulationTests.test_missing_text_does_not_become_zero_coverage",
+      "tests.test_populations.PopulationTests.test_missing_validity_does_not_become_invalid",
+      "tests.test_populations.PopulationTests.test_no_io_or_model_calls_in_population_pass",
+      "tests.test_populations.PopulationTests.test_old_and_corrected_populations_keep_sample_identity",
+      "tests.test_populations.PopulationTests.test_one_class_is_distinct_from_no_class",
+      "tests.test_populations.PopulationTests.test_other_cell_survives_malformed_frame_and_no_pooling",
+      "tests.test_populations.PopulationTests.test_registry_zeros_remain_and_never_add_observations",
+      "tests.test_populations.PopulationTests.test_renaming_supported_class_ids_preserves_population_counts",
+      "tests.test_populations.PopulationTests.test_schema_correction_scopes_class_and_validity_separately",
+      "tests.test_populations.PopulationTests.test_shared_schema_failure_is_unavailable_not_zero_classes",
+      "tests.test_populations.PopulationTests.test_unknown_order_leaves_whole_cell_population_available",
+      "tests.test_populations.PopulationTests.test_unknown_selection_is_unavailable_not_empty",
+      "tests.test_populations.PopulationTests.test_validity_does_not_fill_unresolved_or_provisional_class",
+      "tests.test_populations.PopulationTests.test_wholly_unclassified_selection_remains_known_zero",
+      "tests.test_populations.PrefixTests.test_accumulation_monotonicity_on_fixed_assignments",
+      "tests.test_populations.PrefixTests.test_actual_order_change_may_change_prefix",
+      "tests.test_populations.PrefixTests.test_available_unclassified_prefix_has_count_zero",
+      "tests.test_populations.PrefixTests.test_grid_preserved_and_not_sorted_after_results",
+      "tests.test_populations.PrefixTests.test_invalid_and_omitted_k_have_distinct_outcomes",
+      "tests.test_populations.PrefixTests.test_invalid_or_unresolved_positions_are_not_backfilled",
+      "tests.test_populations.PrefixTests.test_invalid_view_and_mode_fail_explicitly",
+      "tests.test_populations.PrefixTests.test_mf10_exact_prefix_oracles",
+      "tests.test_populations.PrefixTests.test_partial_group_flag_is_descriptive_only",
+      "tests.test_populations.PrefixTests.test_storage_order_change_cannot_change_prefix",
+      "tests.test_populations.Step4MatrixTests.test_prior_requirement_and_source_identities_remain_intact",
+      "tests.test_populations.Step4MatrixTests.test_step4_progress_and_bindings_cover_executed_methods",
+      "tests.test_records.CatalogueReferenceTests.test_mismatched_row_reference_cannot_redirect_requirement",
+      "tests.test_records.CatalogueReferenceTests.test_modified_source_is_rejected_before_catalogue_expansion",
+      "tests.test_records.IdentityTests.test_duplicate_id_including_bad_record_is_ambiguous",
+      "tests.test_records.IdentityTests.test_explicit_revisions_and_conflicting_pins",
+      "tests.test_records.IdentityTests.test_identical_content_with_distinct_ids_is_not_deduplicated",
+      "tests.test_records.IdentityTests.test_missing_reference_keeps_other_records",
+      "tests.test_records.IdentityTests.test_unallocated_sample_is_retained",
+      "tests.test_records.IdentityTests.test_wrong_protocol_version_is_diagnosed",
+      "tests.test_records.InputBoundaryReviewTests.test_declaration_limit_is_explicit",
+      "tests.test_records.InputBoundaryReviewTests.test_duplicate_source_pins_and_wrong_registry_reference_fail",
+      "tests.test_records.InputBoundaryReviewTests.test_nested_ref_shaped_metadata_does_not_crash",
+      "tests.test_records.InputBoundaryReviewTests.test_unsupported_kind_cannot_leak_into_identity_diagnostics",
+      "tests.test_records.KnowledgeTests.test_axes_cannot_be_substituted",
+      "tests.test_records.KnowledgeTests.test_bad_tagged_values_have_safe_failures",
+      "tests.test_records.KnowledgeTests.test_knowledge_freezes_caller_owned_data",
+      "tests.test_records.KnowledgeTests.test_known_zero_false_empty_and_null_are_retained",
+      "tests.test_records.KnowledgeTests.test_missing_value_and_contradictory_knowledge_fail",
+      "tests.test_records.KnowledgeTests.test_unknown_unavailable_and_not_applicable_are_distinct",
+      "tests.test_records.ManifestTests.test_bad_manifest_and_duplicate_files_fail",
+      "tests.test_records.ManifestTests.test_exact_decimal_string_and_number_tokens",
+      "tests.test_records.ManifestTests.test_incompatible_frame_version_is_not_empty_data",
+      "tests.test_records.ManifestTests.test_invalid_thresholds_and_k_are_scoped",
+      "tests.test_records.ManifestTests.test_minimal_manifest_has_no_default_controls",
+      "tests.test_records.ManifestTests.test_missing_frame_does_not_erase_other_frame",
+      "tests.test_records.ManifestTests.test_source_and_ec_addendum_pins_match",
+      "tests.test_records.RecordShapeTests.test_assigned_without_class_is_rejected",
+      "tests.test_records.RecordShapeTests.test_assignment_states_preserve_review_and_candidates",
+      "tests.test_records.RecordShapeTests.test_class_on_unresolved_is_rejected",
+      "tests.test_records.RecordShapeTests.test_counts_reject_booleans_and_nonintegers",
+      "tests.test_records.RecordShapeTests.test_evidence_payload_is_envelope_only",
+      "tests.test_records.RecordShapeTests.test_hostile_payload_is_preserved_not_interpreted",
+      "tests.test_records.RecordShapeTests.test_malformed_and_alias_ids_fail_without_echoing_content",
+      "tests.test_records.RecordShapeTests.test_missing_optional_data_stays_absent",
+      "tests.test_records.RecordShapeTests.test_unsupported_version_kind_and_fields_preserve_raw",
+      "tests.test_records.RecordShapeTests.test_validity_is_separate_and_not_inferred",
+      "tests.test_records.RegistryTests.test_named_negative_cases_are_fixture_only",
+      "tests.test_records.RegistryTests.test_registry_is_definition_not_model_samples",
+      "tests.test_records.RegistryTests.test_registry_is_exact_transcription_with_no_validation_claim",
+      "tests.test_records.Step2MatrixTests.test_additive_source_history_preserves_baseline_authorization",
+      "tests.test_records.Step2MatrixTests.test_catalogue_binds_actual_input_tests",
+      "tests.test_records.Step2MatrixTests.test_partial_input_bindings_do_not_close_vt_or_evidence",
+      "tests.test_reporting.ReportTests.test_all_ten_ec_disclosures_and_unknown_expiry_visible",
+      "tests.test_reporting.ReportTests.test_all_v_and_d_results_are_null_with_explicit_status",
+      "tests.test_reporting.ReportTests.test_canonical_dictionary_order_invariance",
+      "tests.test_reporting.ReportTests.test_control_characters_links_html_and_pipes_are_inert",
+      "tests.test_reporting.ReportTests.test_every_scalar_value_unit_status_and_reason_survives_markdown",
+      "tests.test_reporting.ReportTests.test_evidence_limitations_precede_numeric_results",
+      "tests.test_reporting.ReportTests.test_five_conjunctive_conditions_visible",
+      "tests.test_reporting.ReportTests.test_held_evidence_prose_and_task_metadata_not_copied",
+      "tests.test_reporting.ReportTests.test_json_and_markdown_consume_identical_tree",
+      "tests.test_reporting.ReportTests.test_json_keeps_unrounded_float",
+      "tests.test_reporting.ReportTests.test_missing_required_section_fails_serialization",
+      "tests.test_reporting.ReportTests.test_no_empirical_support_or_score_fabricated",
+      "tests.test_reporting.ReportTests.test_nonfinite_results_cannot_be_serialized",
+      "tests.test_reporting.ReportTests.test_pinned_input_hashes_do_not_claim_program_hashes",
+      "tests.test_reporting.ReportTests.test_private_root_absent_from_all_outputs",
+      "tests.test_reporting.ReportTests.test_reanalysis_and_v_dependents_remain_separate",
+      "tests.test_reporting.ReportTests.test_required_section_order",
+      "tests.test_reporting.ReportTests.test_scoped_ids_retained_without_private_person_mappings",
+      "tests.test_reporting.ReportTests.test_source_lineage_pins_and_transform_references_retained",
+      "tests.test_reporting.ReportTests.test_unknown_unavailable_and_inapplicable_retain_distinction",
+      "tests.test_reporting.ReportTests.test_zero_count_registry_classes_are_visible",
+      "tests.test_reporting.ReportTests.test_zero_false_and_known_null_are_not_unknown",
+      "tests.test_reporting.SourceAssociationDisclosureTests.test_actual_output_hash_is_preserved_while_body_is_withheld",
+      "tests.test_scaffold.BaselineTests.test_all_54_scope_dispositions_and_37_m_families",
+      "tests.test_scaffold.BaselineTests.test_all_baseline_hashes_match",
+      "tests.test_scaffold.BaselineTests.test_expected_hashes_match_plan_appendix",
+      "tests.test_scaffold.BaselineTests.test_matrix_preserves_report_catalogue",
+      "tests.test_scaffold.BaselineTests.test_matrix_preserves_trace_catalogue",
+      "tests.test_scaffold.BaselineTests.test_matrix_preserves_vf_catalogue",
+      "tests.test_scaffold.BaselineTests.test_matrix_validation",
+      "tests.test_scaffold.BaselineTests.test_readme_scope_is_explicit",
+      "tests.test_scaffold.CommandTests.test_forbidden_commands_are_rejected",
+      "tests.test_scaffold.CommandTests.test_help",
+      "tests.test_scaffold.CommandTests.test_no_arguments_show_help",
+      "tests.test_scaffold.CommandTests.test_runtime_help_and_version_do_not_use_network_or_child_processes",
+      "tests.test_scaffold.CommandTests.test_trusted_helper_rejects_arbitrary_commands",
+      "tests.test_scaffold.CommandTests.test_unknown_option_is_error",
+      "tests.test_scaffold.CommandTests.test_validate_and_analyze_require_input_or_are_unavailable",
+      "tests.test_scaffold.CommandTests.test_version",
+      "tests.test_scaffold.HarnessTests.test_broken_binding_fails",
+      "tests.test_scaffold.HarnessTests.test_class_fixture_error_is_recorded",
+      "tests.test_scaffold.HarnessTests.test_corrupt_journal_is_not_overwritten",
+      "tests.test_scaffold.HarnessTests.test_duplicate_discovery_fails",
+      "tests.test_scaffold.HarnessTests.test_empty_discovery_fails_both_gates",
+      "tests.test_scaffold.HarnessTests.test_expected_failure_is_not_accepted",
+      "tests.test_scaffold.HarnessTests.test_failure_and_error_are_recorded",
+      "tests.test_scaffold.HarnessTests.test_future_evidence_is_not_executed",
+      "tests.test_scaffold.HarnessTests.test_journal_retains_prior_runs",
+      "tests.test_scaffold.HarnessTests.test_missing_m_bindings_fail_final_gate",
+      "tests.test_scaffold.HarnessTests.test_missing_scaffold_binding_fails",
+      "tests.test_scaffold.HarnessTests.test_missing_trace_binding_fails_final_gate",
+      "tests.test_scaffold.HarnessTests.test_required_m_skip_blocks_final_gate",
+      "tests.test_scaffold.HarnessTests.test_runner_help_does_not_run_tests",
+      "tests.test_scaffold.HarnessTests.test_skipped_test_is_not_accepted",
+      "tests.test_scaffold.HarnessTests.test_subtest_failure_is_recorded",
+      "tests.test_scaffold.HarnessTests.test_unexpected_success_is_not_accepted",
+      "tests.test_scaffold.PackageTests.test_distribution_excludes_tests_docs_and_pdfs",
+      "tests.test_scaffold.PackageTests.test_import_under_standard_library_only",
+      "tests.test_scaffold.PackageTests.test_metadata_has_no_runtime_dependencies",
+      "tests.test_scaffold.PackageTests.test_no_public_analysis_api",
+      "tests.test_scaffold.PackageTests.test_version_matches_metadata",
+      "tests.test_security.PassiveInputTests.test_hostile_text_never_executes_or_calls_network",
+      "tests.test_security.PassiveInputTests.test_no_model_metric_or_candidate_runner_surface",
+      "tests.test_security.PassiveInputTests.test_private_artifact_does_not_attempt_local_read",
+      "tests.test_security.PassiveInputTests.test_unsafe_local_urls_never_reach_network",
+      "tests.test_security.Step7SafetyTests.test_cli_errors_do_not_echo_credentials_or_paths",
+      "tests.test_security.Step7SafetyTests.test_entire_import_analysis_is_inert_under_hostile_evidence",
+      "tests.test_security.Step7SafetyTests.test_failure_after_atomic_publication_keeps_published_bytes",
+      "tests.test_security.Step7SafetyTests.test_no_runtime_imports_of_test_harness",
+      "tests.test_security.Step7SafetyTests.test_published_report_directory_cannot_be_overwritten"
+    ],
+    "test_ids_sha256": "6301ae91d0ea4ed99da217bab6ce36604d616950a2ed4041228bb4a22460f084",
+    "actual_replay_ref": "artifacts/phase2/baseline_test_results.json",
+    "remote_reconciliation_ref": "artifacts/phase2/baseline_reconciliation.json"
+  },
+  "catalogues": {
+    "vt": [
+      {
+        "id": "VT-01",
+        "source_file": "VALIDATION_AND_FALSIFICATION.md",
+        "source_row_sha256": "e106e4949423b37a27ad1966a1423690b493d9a1d738ce02b212d89c530bce72",
+        "scopes": [
+          "M"
+        ],
+        "m_regression": true,
+        "v_required": false,
+        "evidence_status": "not_applicable",
+        "deferred_status": "not_applicable"
+      },
+      {
+        "id": "VT-02",
+        "source_file": "VALIDATION_AND_FALSIFICATION.md",
+        "source_row_sha256": "d0f58edc34e1008539ce67f18edc26a559d6708debe3e9f63c21cf5ec33aab42",
+        "scopes": [
+          "M"
+        ],
+        "m_regression": true,
+        "v_required": false,
+        "evidence_status": "not_applicable",
+        "deferred_status": "not_applicable"
+      },
+      {
+        "id": "VT-03",
+        "source_file": "VALIDATION_AND_FALSIFICATION.md",
+        "source_row_sha256": "02bdcc8065679cdf8db221b9adcc6b9da2f94834e41680895e1d7d7287e2d5b6",
+        "scopes": [
+          "M",
+          "V"
+        ],
+        "m_regression": true,
+        "v_required": true,
+        "evidence_status": "not_applicable",
+        "deferred_status": "not_applicable"
+      },
+      {
+        "id": "VT-04",
+        "source_file": "VALIDATION_AND_FALSIFICATION.md",
+        "source_row_sha256": "f69f22312f2547827ab22798b750ccec325bdb79923d1ac3c9fe628b47fdacb1",
+        "scopes": [
+          "M"
+        ],
+        "m_regression": true,
+        "v_required": false,
+        "evidence_status": "not_applicable",
+        "deferred_status": "not_applicable"
+      },
+      {
+        "id": "VT-05",
+        "source_file": "VALIDATION_AND_FALSIFICATION.md",
+        "source_row_sha256": "ae45309c189ae02e2a8dd5687e829af89b0e42570d18638bfe989a997867769e",
+        "scopes": [
+          "M"
+        ],
+        "m_regression": true,
+        "v_required": false,
+        "evidence_status": "not_applicable",
+        "deferred_status": "not_applicable"
+      },
+      {
+        "id": "VT-06",
+        "source_file": "VALIDATION_AND_FALSIFICATION.md",
+        "source_row_sha256": "d1ad7a1654538fa101e4229d84a6cfc161be0d1fc8d6408dd0439954c3430842",
+        "scopes": [
+          "M"
+        ],
+        "m_regression": true,
+        "v_required": false,
+        "evidence_status": "not_applicable",
+        "deferred_status": "not_applicable"
+      },
+      {
+        "id": "VT-07",
+        "source_file": "VALIDATION_AND_FALSIFICATION.md",
+        "source_row_sha256": "388a3668bafbfdc6c5dc5fe55e135f13ddb8074de0a752f0e132a49f4e7872f1",
+        "scopes": [
+          "M"
+        ],
+        "m_regression": true,
+        "v_required": false,
+        "evidence_status": "not_applicable",
+        "deferred_status": "not_applicable"
+      },
+      {
+        "id": "VT-08",
+        "source_file": "VALIDATION_AND_FALSIFICATION.md",
+        "source_row_sha256": "038e2b17c2c001bad2b5326004fbd4b839767e17b35224b2d54b726ba0210652",
+        "scopes": [
+          "M"
+        ],
+        "m_regression": true,
+        "v_required": false,
+        "evidence_status": "not_applicable",
+        "deferred_status": "not_applicable"
+      },
+      {
+        "id": "VT-09",
+        "source_file": "VALIDATION_AND_FALSIFICATION.md",
+        "source_row_sha256": "8c7b0e2b92cd494c58345f4e60aa49c4b500d56837b2b2ab84baf571efdbbbf0",
+        "scopes": [
+          "M"
+        ],
+        "m_regression": true,
+        "v_required": false,
+        "evidence_status": "not_applicable",
+        "deferred_status": "not_applicable"
+      },
+      {
+        "id": "VT-10",
+        "source_file": "VALIDATION_AND_FALSIFICATION.md",
+        "source_row_sha256": "6e5a42cf684db14101502314066c59116019ccd8ce99cb3debb80488aed74a97",
+        "scopes": [
+          "M"
+        ],
+        "m_regression": true,
+        "v_required": false,
+        "evidence_status": "not_applicable",
+        "deferred_status": "not_applicable"
+      },
+      {
+        "id": "VT-11",
+        "source_file": "VALIDATION_AND_FALSIFICATION.md",
+        "source_row_sha256": "da88c42d9ecd0503d54ff60fa03df83747566262d0c3834c6f13255d9a52c231",
+        "scopes": [
+          "M"
+        ],
+        "m_regression": true,
+        "v_required": false,
+        "evidence_status": "not_applicable",
+        "deferred_status": "not_applicable"
+      },
+      {
+        "id": "VT-12",
+        "source_file": "VALIDATION_AND_FALSIFICATION.md",
+        "source_row_sha256": "9709cec34af4177c3c9690c8d6adace911946924637c15b0a7cbcfa046c9116e",
+        "scopes": [
+          "M",
+          "V"
+        ],
+        "m_regression": true,
+        "v_required": true,
+        "evidence_status": "not_applicable",
+        "deferred_status": "not_applicable"
+      },
+      {
+        "id": "VT-13",
+        "source_file": "VALIDATION_AND_FALSIFICATION.md",
+        "source_row_sha256": "e1983b85606847fe5028cb6394df4f9e207ea47a0ed65b1b0169f91193de8bb9",
+        "scopes": [
+          "M"
+        ],
+        "m_regression": true,
+        "v_required": false,
+        "evidence_status": "not_applicable",
+        "deferred_status": "not_applicable"
+      },
+      {
+        "id": "VT-14",
+        "source_file": "VALIDATION_AND_FALSIFICATION.md",
+        "source_row_sha256": "b5c579175ef2707450d023590e9c4f2e9f68d34a8057c20e53ef0fe91787ee47",
+        "scopes": [
+          "M",
+          "V"
+        ],
+        "m_regression": true,
+        "v_required": true,
+        "evidence_status": "not_applicable",
+        "deferred_status": "not_applicable"
+      },
+      {
+        "id": "VT-15",
+        "source_file": "VALIDATION_AND_FALSIFICATION.md",
+        "source_row_sha256": "9625822e4e1457ecebccd70b25c9cdd4d8e1db228891aaeef8e8482805718484",
+        "scopes": [
+          "E",
+          "M"
+        ],
+        "m_regression": true,
+        "v_required": false,
+        "evidence_status": "not_supplied",
+        "deferred_status": "not_applicable"
+      },
+      {
+        "id": "VT-16",
+        "source_file": "VALIDATION_AND_FALSIFICATION.md",
+        "source_row_sha256": "5aa82da6c22958428d5211b90c39058ac9788594c4646c8b52019a4e30291a7c",
+        "scopes": [
+          "E",
+          "M"
+        ],
+        "m_regression": true,
+        "v_required": false,
+        "evidence_status": "not_supplied",
+        "deferred_status": "not_applicable"
+      },
+      {
+        "id": "VT-17",
+        "source_file": "VALIDATION_AND_FALSIFICATION.md",
+        "source_row_sha256": "1dac7d44fcb6f8d7776d9585fadd05c42e9d9e670bedb51f657e61215d7c3053",
+        "scopes": [
+          "M",
+          "V"
+        ],
+        "m_regression": true,
+        "v_required": true,
+        "evidence_status": "not_applicable",
+        "deferred_status": "not_applicable"
+      },
+      {
+        "id": "VT-18",
+        "source_file": "VALIDATION_AND_FALSIFICATION.md",
+        "source_row_sha256": "118349949f3d21c43e086284290c1fe035630f3ccca783d1777cdf68fff29334",
+        "scopes": [
+          "M",
+          "V"
+        ],
+        "m_regression": true,
+        "v_required": true,
+        "evidence_status": "not_applicable",
+        "deferred_status": "not_applicable"
+      },
+      {
+        "id": "VT-19",
+        "source_file": "VALIDATION_AND_FALSIFICATION.md",
+        "source_row_sha256": "e8a94b3f970ed3d78efc640a66b17e6ffd1b94261ad8e8bd9b5b52de9d63d1a3",
+        "scopes": [
+          "M",
+          "V"
+        ],
+        "m_regression": true,
+        "v_required": true,
+        "evidence_status": "not_applicable",
+        "deferred_status": "not_applicable"
+      },
+      {
+        "id": "VT-20",
+        "source_file": "VALIDATION_AND_FALSIFICATION.md",
+        "source_row_sha256": "15b96fc281d9ae12249c296de8c0e196ddda952fa83823452ea30da9cc3fd2fa",
+        "scopes": [
+          "M",
+          "V"
+        ],
+        "m_regression": true,
+        "v_required": true,
+        "evidence_status": "not_applicable",
+        "deferred_status": "not_applicable"
+      },
+      {
+        "id": "VT-21",
+        "source_file": "VALIDATION_AND_FALSIFICATION.md",
+        "source_row_sha256": "cd3e081a30096693a950fa2448d1deacc4c2db011aabdf34c451eae2fb7ca4ce",
+        "scopes": [
+          "E",
+          "M"
+        ],
+        "m_regression": true,
+        "v_required": false,
+        "evidence_status": "not_supplied",
+        "deferred_status": "not_applicable"
+      },
+      {
+        "id": "VT-22",
+        "source_file": "VALIDATION_AND_FALSIFICATION.md",
+        "source_row_sha256": "c963ed2a940ccb58ac63f01ac004d63203789a1a14e0be6b3f93796e1894f581",
+        "scopes": [
+          "E",
+          "M"
+        ],
+        "m_regression": true,
+        "v_required": false,
+        "evidence_status": "not_supplied",
+        "deferred_status": "not_applicable"
+      },
+      {
+        "id": "VT-23",
+        "source_file": "VALIDATION_AND_FALSIFICATION.md",
+        "source_row_sha256": "7f653307754f74c74b6ffb415035bab0bff4fc90f439aa9cc0c5946511c69f35",
+        "scopes": [
+          "E",
+          "M"
+        ],
+        "m_regression": true,
+        "v_required": false,
+        "evidence_status": "not_supplied",
+        "deferred_status": "not_applicable"
+      },
+      {
+        "id": "VT-24",
+        "source_file": "VALIDATION_AND_FALSIFICATION.md",
+        "source_row_sha256": "c2a89eada7140029a2dbcaf851a6fbbeb5cf9a6caf4f47b27fdfb4c4a6026d29",
+        "scopes": [
+          "E",
+          "M",
+          "V"
+        ],
+        "m_regression": true,
+        "v_required": true,
+        "evidence_status": "not_supplied",
+        "deferred_status": "not_applicable"
+      },
+      {
+        "id": "VT-25",
+        "source_file": "VALIDATION_AND_FALSIFICATION.md",
+        "source_row_sha256": "db8873858b9949fb108b09765b787974f99aa3b65691335f597476cb9f633ecd",
+        "scopes": [
+          "E",
+          "M"
+        ],
+        "m_regression": true,
+        "v_required": false,
+        "evidence_status": "not_supplied",
+        "deferred_status": "not_applicable"
+      },
+      {
+        "id": "VT-26",
+        "source_file": "VALIDATION_AND_FALSIFICATION.md",
+        "source_row_sha256": "e499985d5d1802a5b8e3588e61e91a16d3e5c413ca66fca34f85ff81ef4e0be0",
+        "scopes": [
+          "E",
+          "M"
+        ],
+        "m_regression": true,
+        "v_required": false,
+        "evidence_status": "not_supplied",
+        "deferred_status": "not_applicable"
+      },
+      {
+        "id": "VT-27",
+        "source_file": "VALIDATION_AND_FALSIFICATION.md",
+        "source_row_sha256": "ae08b338308ca175f3f7ab849b3e79ba0866512ade05416c83e6be397941a3ae",
+        "scopes": [
+          "E",
+          "M"
+        ],
+        "m_regression": true,
+        "v_required": false,
+        "evidence_status": "not_supplied",
+        "deferred_status": "not_applicable"
+      },
+      {
+        "id": "VT-28",
+        "source_file": "VALIDATION_AND_FALSIFICATION.md",
+        "source_row_sha256": "6d5327bd7c2b63cbe5cf12494c969650808550d1e6d0180b5d90ea8a682f181e",
+        "scopes": [
+          "E",
+          "M"
+        ],
+        "m_regression": true,
+        "v_required": false,
+        "evidence_status": "not_supplied",
+        "deferred_status": "not_applicable"
+      },
+      {
+        "id": "VT-29",
+        "source_file": "VALIDATION_AND_FALSIFICATION.md",
+        "source_row_sha256": "b2e93a443252971467b7f58b99f01cd16d7f0d001afea1e2240c11338d944e11",
+        "scopes": [
+          "E",
+          "M"
+        ],
+        "m_regression": true,
+        "v_required": false,
+        "evidence_status": "not_supplied",
+        "deferred_status": "not_applicable"
+      },
+      {
+        "id": "VT-30",
+        "source_file": "VALIDATION_AND_FALSIFICATION.md",
+        "source_row_sha256": "cd8112e91fc226cf43ca6d726be9b15ca25c0c8317260b357ad2aaf6065fffad",
+        "scopes": [
+          "M"
+        ],
+        "m_regression": true,
+        "v_required": false,
+        "evidence_status": "not_applicable",
+        "deferred_status": "not_applicable"
+      },
+      {
+        "id": "VT-31",
+        "source_file": "VALIDATION_AND_FALSIFICATION.md",
+        "source_row_sha256": "4e32cb18735a651e3a4daa49ef0d496562155806bbb9c6c792855201c9ab6ca6",
+        "scopes": [
+          "V"
+        ],
+        "m_regression": false,
+        "v_required": true,
+        "evidence_status": "not_applicable",
+        "deferred_status": "not_applicable"
+      },
+      {
+        "id": "VT-32",
+        "source_file": "VALIDATION_AND_FALSIFICATION.md",
+        "source_row_sha256": "1673bd604a9e8edcba2e4dc42e702d9077e2c434aa51e84713163be2d348d2f7",
+        "scopes": [
+          "V"
+        ],
+        "m_regression": false,
+        "v_required": true,
+        "evidence_status": "not_applicable",
+        "deferred_status": "not_applicable"
+      },
+      {
+        "id": "VT-33",
+        "source_file": "VALIDATION_AND_FALSIFICATION.md",
+        "source_row_sha256": "243c5139d8c44704ec2cb42bd21833a463dbd6e73713d373eb38e987bd2bec83",
+        "scopes": [
+          "V"
+        ],
+        "m_regression": false,
+        "v_required": true,
+        "evidence_status": "not_applicable",
+        "deferred_status": "not_applicable"
+      },
+      {
+        "id": "VT-34",
+        "source_file": "VALIDATION_AND_FALSIFICATION.md",
+        "source_row_sha256": "663e065d198ee95b3398aed53e70a0b651c26103a83d06138c644d96b21bb30b",
+        "scopes": [
+          "E",
+          "V"
+        ],
+        "m_regression": false,
+        "v_required": true,
+        "evidence_status": "not_supplied",
+        "deferred_status": "not_applicable"
+      },
+      {
+        "id": "VT-35",
+        "source_file": "VALIDATION_AND_FALSIFICATION.md",
+        "source_row_sha256": "e2e68384af37cc8850b742d316024a112599c907f7f444e0a678b5ca9e73ca54",
+        "scopes": [
+          "E",
+          "V"
+        ],
+        "m_regression": false,
+        "v_required": true,
+        "evidence_status": "not_supplied",
+        "deferred_status": "not_applicable"
+      },
+      {
+        "id": "VT-36",
+        "source_file": "VALIDATION_AND_FALSIFICATION.md",
+        "source_row_sha256": "85b9298a50d314397871cc0effd254851d8ae849e6e972970288f594d2150954",
+        "scopes": [
+          "M",
+          "V"
+        ],
+        "m_regression": true,
+        "v_required": true,
+        "evidence_status": "not_applicable",
+        "deferred_status": "not_applicable"
+      },
+      {
+        "id": "VT-37",
+        "source_file": "VALIDATION_AND_FALSIFICATION.md",
+        "source_row_sha256": "c21bb0eb0001e1ded4f37f0a78fa398f166b3b7424a7dca8d5cb0db4c2826d3f",
+        "scopes": [
+          "V"
+        ],
+        "m_regression": false,
+        "v_required": true,
+        "evidence_status": "not_applicable",
+        "deferred_status": "not_applicable"
+      },
+      {
+        "id": "VT-38",
+        "source_file": "VALIDATION_AND_FALSIFICATION.md",
+        "source_row_sha256": "c62ee59e98428d910fbbc5d2581bfaa0610d77559f5c9efb39a99b147225a285",
+        "scopes": [
+          "V"
+        ],
+        "m_regression": false,
+        "v_required": true,
+        "evidence_status": "not_applicable",
+        "deferred_status": "not_applicable"
+      },
+      {
+        "id": "VT-39",
+        "source_file": "VALIDATION_AND_FALSIFICATION.md",
+        "source_row_sha256": "2d36315a16e413d7058c1aca7833f16f1a3aadc1f9e1ff40311a2aaf899dfc79",
+        "scopes": [
+          "V"
+        ],
+        "m_regression": false,
+        "v_required": true,
+        "evidence_status": "not_applicable",
+        "deferred_status": "not_applicable"
+      },
+      {
+        "id": "VT-40",
+        "source_file": "VALIDATION_AND_FALSIFICATION.md",
+        "source_row_sha256": "f626a2f5402d875fe6e3d8079ac82a58126a349f1b54f7224b1d2631d2420b38",
+        "scopes": [
+          "V"
+        ],
+        "m_regression": false,
+        "v_required": true,
+        "evidence_status": "not_applicable",
+        "deferred_status": "not_applicable"
+      },
+      {
+        "id": "VT-41",
+        "source_file": "VALIDATION_AND_FALSIFICATION.md",
+        "source_row_sha256": "a25d8deab8e6433a5c1865c182c3805d04dbc455c97aa2c6a797c828021d5d54",
+        "scopes": [
+          "V"
+        ],
+        "m_regression": false,
+        "v_required": true,
+        "evidence_status": "not_applicable",
+        "deferred_status": "not_applicable"
+      },
+      {
+        "id": "VT-42",
+        "source_file": "VALIDATION_AND_FALSIFICATION.md",
+        "source_row_sha256": "5e12fb0681dca1d6402fb36af8ac7975fffcc2cff9e93a759be31ba188484158",
+        "scopes": [
+          "V"
+        ],
+        "m_regression": false,
+        "v_required": true,
+        "evidence_status": "not_applicable",
+        "deferred_status": "not_applicable"
+      },
+      {
+        "id": "VT-43",
+        "source_file": "VALIDATION_AND_FALSIFICATION.md",
+        "source_row_sha256": "bd18395b69b4a99fd171dab4402628ffeccbe05643d887b854f8e1d8c645e263",
+        "scopes": [
+          "V"
+        ],
+        "m_regression": false,
+        "v_required": true,
+        "evidence_status": "not_applicable",
+        "deferred_status": "not_applicable"
+      },
+      {
+        "id": "VT-44",
+        "source_file": "VALIDATION_AND_FALSIFICATION.md",
+        "source_row_sha256": "d6166dd98249d44194b27dfe697d3f3814228be4b64ede5fcbd18f50975daf90",
+        "scopes": [
+          "V"
+        ],
+        "m_regression": false,
+        "v_required": true,
+        "evidence_status": "not_applicable",
+        "deferred_status": "not_applicable"
+      },
+      {
+        "id": "VT-45",
+        "source_file": "VALIDATION_AND_FALSIFICATION.md",
+        "source_row_sha256": "eefe2c0cf267735b3de9988d7ea639c72bbb86979a49c0c3a185538928c972c1",
+        "scopes": [
+          "V"
+        ],
+        "m_regression": false,
+        "v_required": true,
+        "evidence_status": "not_applicable",
+        "deferred_status": "not_applicable"
+      },
+      {
+        "id": "VT-46",
+        "source_file": "VALIDATION_AND_FALSIFICATION.md",
+        "source_row_sha256": "19dc87abd36ee65b7002299767ac3ae2311dcd5840625c26b7e29d0ec9fd047b",
+        "scopes": [
+          "M",
+          "V"
+        ],
+        "m_regression": true,
+        "v_required": true,
+        "evidence_status": "not_applicable",
+        "deferred_status": "not_applicable"
+      },
+      {
+        "id": "VT-47",
+        "source_file": "VALIDATION_AND_FALSIFICATION.md",
+        "source_row_sha256": "a200329dfbc8ea772c5ce3ecd400f8a03e2568e64f762fafd62461a8a038ca93",
+        "scopes": [
+          "E",
+          "M",
+          "V"
+        ],
+        "m_regression": true,
+        "v_required": true,
+        "evidence_status": "not_supplied",
+        "deferred_status": "not_applicable"
+      },
+      {
+        "id": "VT-48",
+        "source_file": "VALIDATION_AND_FALSIFICATION.md",
+        "source_row_sha256": "268f518f0b6706cc7ca9ddfe402389d515dde49c9363d3890a6b18bcd2c5d3af",
+        "scopes": [
+          "E"
+        ],
+        "m_regression": false,
+        "v_required": false,
+        "evidence_status": "not_supplied",
+        "deferred_status": "not_applicable"
+      },
+      {
+        "id": "VT-49",
+        "source_file": "VALIDATION_AND_FALSIFICATION.md",
+        "source_row_sha256": "f71062f5ba60a243e74e75aa4946c71860dfce73a446e6b3ee025c18d1bee358",
+        "scopes": [
+          "E"
+        ],
+        "m_regression": false,
+        "v_required": false,
+        "evidence_status": "not_supplied",
+        "deferred_status": "not_applicable"
+      },
+      {
+        "id": "VT-50",
+        "source_file": "VALIDATION_AND_FALSIFICATION.md",
+        "source_row_sha256": "d0773b1b3ab331d05fc7ae790778be2b32eec31313d2f5671a273d1753dd9c0d",
+        "scopes": [
+          "E",
+          "V"
+        ],
+        "m_regression": false,
+        "v_required": true,
+        "evidence_status": "not_supplied",
+        "deferred_status": "not_applicable"
+      },
+      {
+        "id": "VT-51",
+        "source_file": "VALIDATION_AND_FALSIFICATION.md",
+        "source_row_sha256": "b19f602c5c467b29ad72e174b5c91ac77f3148c26a368919ff4ea86eee1a8534",
+        "scopes": [
+          "D",
+          "M"
+        ],
+        "m_regression": true,
+        "v_required": false,
+        "evidence_status": "not_applicable",
+        "deferred_status": "deferred"
+      },
+      {
+        "id": "VT-52",
+        "source_file": "VALIDATION_AND_FALSIFICATION.md",
+        "source_row_sha256": "fc689c11c817bc25c5665b053fc440a5d7fb70892f8a976c3cec925ece22fd34",
+        "scopes": [
+          "D",
+          "M"
+        ],
+        "m_regression": true,
+        "v_required": false,
+        "evidence_status": "not_applicable",
+        "deferred_status": "deferred"
+      },
+      {
+        "id": "VT-53",
+        "source_file": "VALIDATION_AND_FALSIFICATION.md",
+        "source_row_sha256": "3a2dd9a04bca05f8992c5f7284d461578d314fee3b4b4b3bd126e01af9500b63",
+        "scopes": [
+          "D",
+          "M"
+        ],
+        "m_regression": true,
+        "v_required": false,
+        "evidence_status": "not_applicable",
+        "deferred_status": "deferred"
+      },
+      {
+        "id": "VT-54",
+        "source_file": "VALIDATION_AND_FALSIFICATION.md",
+        "source_row_sha256": "bd479813ff7acc96434b4d35c81cbb34669e1d19dad8691d2d4a564c567b7378",
+        "scopes": [
+          "D",
+          "M"
+        ],
+        "m_regression": true,
+        "v_required": false,
+        "evidence_status": "not_applicable",
+        "deferred_status": "deferred"
+      }
+    ],
+    "tr": [
+      {
+        "id": "TR-01",
+        "source_file": "THEORY_TO_CODE_TRACEABILITY.md",
+        "source_row_sha256": "29e9352ed0f9e46f592d4c608f150b641f21bedf68be1b76d9864ea49bc7b499",
+        "vf_ids": [
+          "VT-01",
+          "VT-24",
+          "VT-30"
+        ],
+        "m_regression": true,
+        "v_required": true,
+        "report_groups": [
+          "RF-01",
+          "RF-33"
+        ]
+      },
+      {
+        "id": "TR-02",
+        "source_file": "THEORY_TO_CODE_TRACEABILITY.md",
+        "source_row_sha256": "2e1b525f14a24fe6ff0e3a00907e4eb376c9bc40acdc2f480fc4f0b96e4a61e3",
+        "vf_ids": [
+          "VT-14",
+          "VT-15",
+          "VT-25"
+        ],
+        "m_regression": true,
+        "v_required": true,
+        "report_groups": [
+          "RF-02",
+          "RF-03"
+        ]
+      },
+      {
+        "id": "TR-03",
+        "source_file": "THEORY_TO_CODE_TRACEABILITY.md",
+        "source_row_sha256": "fb914899409c4ada361cd869122f9fc2e08ca6131dc2748d898dbdf18ea12e8a",
+        "vf_ids": [
+          "VT-07",
+          "VT-08",
+          "VT-09"
+        ],
+        "m_regression": true,
+        "v_required": false,
+        "report_groups": [
+          "RF-18",
+          "RF-19"
+        ]
+      },
+      {
+        "id": "TR-04",
+        "source_file": "THEORY_TO_CODE_TRACEABILITY.md",
+        "source_row_sha256": "8ba0814a57e918bfd32cdf3661704688aba9425f803599d39839b49b136d66ee",
+        "vf_ids": [
+          "VT-02",
+          "VT-03",
+          "VT-35",
+          "VT-36"
+        ],
+        "m_regression": true,
+        "v_required": true,
+        "report_groups": [
+          "RF-07",
+          "RF-08",
+          "RF-09",
+          "RF-10"
+        ]
+      },
+      {
+        "id": "TR-05",
+        "source_file": "THEORY_TO_CODE_TRACEABILITY.md",
+        "source_row_sha256": "69335dbf031d33615fb714c0ce3a8ceaf8b102bddde04338b0e72b1dafe09002",
+        "vf_ids": [
+          "VT-01",
+          "VT-06",
+          "VT-20"
+        ],
+        "m_regression": true,
+        "v_required": true,
+        "report_groups": [
+          "RF-12",
+          "RF-15",
+          "RF-29"
+        ]
+      },
+      {
+        "id": "TR-06",
+        "source_file": "THEORY_TO_CODE_TRACEABILITY.md",
+        "source_row_sha256": "1ff26791627226a564bd6bb10ceb1638d219b38e0fd6dc9cd6490528217e2f43",
+        "vf_ids": [
+          "VT-04",
+          "VT-15",
+          "VT-47"
+        ],
+        "m_regression": true,
+        "v_required": true,
+        "report_groups": [
+          "RF-12",
+          "RF-14"
+        ]
+      },
+      {
+        "id": "TR-07",
+        "source_file": "THEORY_TO_CODE_TRACEABILITY.md",
+        "source_row_sha256": "42a191135d1fcca2b881349038db33929f6eeb40a6841a15f3b886a597c4c488",
+        "vf_ids": [
+          "VT-05",
+          "VT-06",
+          "VT-13",
+          "VT-15"
+        ],
+        "m_regression": true,
+        "v_required": false,
+        "report_groups": [
+          "RF-13",
+          "RF-16",
+          "RF-17"
+        ]
+      },
+      {
+        "id": "TR-08",
+        "source_file": "THEORY_TO_CODE_TRACEABILITY.md",
+        "source_row_sha256": "83268daadf27cb79c23c864db5ee520d2b0bab4c3c9df5e671d29c926c2aed2a",
+        "vf_ids": [
+          "VT-16",
+          "VT-25",
+          "VT-50"
+        ],
+        "m_regression": true,
+        "v_required": true,
+        "report_groups": [
+          "RF-12",
+          "RF-30",
+          "RF-31"
+        ]
+      },
+      {
+        "id": "TR-09",
+        "source_file": "THEORY_TO_CODE_TRACEABILITY.md",
+        "source_row_sha256": "0a616cf4d92d9aae9ab6fb9ac3273d6e54127617aa1d32c2692d2957bcc3594c",
+        "vf_ids": [
+          "VT-05",
+          "VT-06",
+          "VT-37"
+        ],
+        "m_regression": true,
+        "v_required": true,
+        "report_groups": [
+          "RF-11",
+          "RF-16",
+          "RF-17"
+        ]
+      },
+      {
+        "id": "TR-10",
+        "source_file": "THEORY_TO_CODE_TRACEABILITY.md",
+        "source_row_sha256": "2bc36cb62c4f0cc24162fbf0e964079866e091aa1d68fdea9c120ae79a82da37",
+        "vf_ids": [
+          "VT-06",
+          "VT-07",
+          "VT-13"
+        ],
+        "m_regression": true,
+        "v_required": false,
+        "report_groups": [
+          "RF-18"
+        ]
+      },
+      {
+        "id": "TR-11",
+        "source_file": "THEORY_TO_CODE_TRACEABILITY.md",
+        "source_row_sha256": "cf7bc73bbf6f6413106f3145b9c30a907e017100f9209b3ecef6efd9096ddbbc",
+        "vf_ids": [
+          "VT-08",
+          "VT-13"
+        ],
+        "m_regression": true,
+        "v_required": false,
+        "report_groups": [
+          "RF-19"
+        ]
+      },
+      {
+        "id": "TR-12",
+        "source_file": "THEORY_TO_CODE_TRACEABILITY.md",
+        "source_row_sha256": "b1f1024a34197cf6e4d2002a2ce183faef688fc3f7e6eb5d7384886c7f5f386c",
+        "vf_ids": [
+          "VT-06",
+          "VT-07",
+          "VT-09",
+          "VT-10"
+        ],
+        "m_regression": true,
+        "v_required": false,
+        "report_groups": [
+          "RF-18"
+        ]
+      },
+      {
+        "id": "TR-13",
+        "source_file": "THEORY_TO_CODE_TRACEABILITY.md",
+        "source_row_sha256": "80dcb71eb07410d9a1e539350aabd528d297a2ce1ab8df353ac720f108a0df8d",
+        "vf_ids": [
+          "VT-07",
+          "VT-09",
+          "VT-33"
+        ],
+        "m_regression": true,
+        "v_required": true,
+        "report_groups": [
+          "RF-18"
+        ]
+      },
+      {
+        "id": "TR-14",
+        "source_file": "THEORY_TO_CODE_TRACEABILITY.md",
+        "source_row_sha256": "c35cb5a08dfb02444bf16e5bdf7e6d11c4b1802ac6721e4c537df3df2741cf14",
+        "vf_ids": [
+          "VT-07",
+          "VT-09",
+          "VT-13"
+        ],
+        "m_regression": true,
+        "v_required": false,
+        "report_groups": [
+          "RF-18"
+        ]
+      },
+      {
+        "id": "TR-15",
+        "source_file": "THEORY_TO_CODE_TRACEABILITY.md",
+        "source_row_sha256": "c8cfb210e1c466594e61f66952bdb3aca67ebbc8669859963d1554f350508bb8",
+        "vf_ids": [
+          "VT-10",
+          "VT-11",
+          "VT-12",
+          "VT-13"
+        ],
+        "m_regression": true,
+        "v_required": true,
+        "report_groups": [
+          "RF-20"
+        ]
+      },
+      {
+        "id": "TR-16",
+        "source_file": "THEORY_TO_CODE_TRACEABILITY.md",
+        "source_row_sha256": "5213db355ebf58ddf2f69151c1e05986a1d1a00174871088b88117f31dd51470",
+        "vf_ids": [
+          "VT-31",
+          "VT-32"
+        ],
+        "m_regression": false,
+        "v_required": true,
+        "report_groups": [
+          "RF-21"
+        ]
+      },
+      {
+        "id": "TR-17",
+        "source_file": "THEORY_TO_CODE_TRACEABILITY.md",
+        "source_row_sha256": "30494feae151f34c046cb5a55ff13e553148e389c875f3a1990b92711164b3c8",
+        "vf_ids": [
+          "VT-31",
+          "VT-32"
+        ],
+        "m_regression": false,
+        "v_required": true,
+        "report_groups": [
+          "RF-22"
+        ]
+      },
+      {
+        "id": "TR-18",
+        "source_file": "THEORY_TO_CODE_TRACEABILITY.md",
+        "source_row_sha256": "963e74bfc9f062a7cfc1db725850eba01b2ead0a3ff37b2dc385aafcdc307d07",
+        "vf_ids": [
+          "VT-32",
+          "VT-33"
+        ],
+        "m_regression": false,
+        "v_required": true,
+        "report_groups": [
+          "RF-23"
+        ]
+      },
+      {
+        "id": "TR-19",
+        "source_file": "THEORY_TO_CODE_TRACEABILITY.md",
+        "source_row_sha256": "58ca1f7cc825321805b8c1154668b7d52a01c28cc47f466d6c76f6ecdb1878a5",
+        "vf_ids": [
+          "VT-14",
+          "VT-34",
+          "VT-35"
+        ],
+        "m_regression": true,
+        "v_required": true,
+        "report_groups": [
+          "RF-05",
+          "RF-06",
+          "RF-28"
+        ]
+      },
+      {
+        "id": "TR-20",
+        "source_file": "THEORY_TO_CODE_TRACEABILITY.md",
+        "source_row_sha256": "bd80a009094878e6ecc32fc40c3b9433fb587078f7ff9c2fbdb835d32314cf97",
+        "vf_ids": [
+          "VT-38",
+          "VT-42",
+          "VT-44",
+          "VT-48"
+        ],
+        "m_regression": false,
+        "v_required": true,
+        "report_groups": [
+          "RF-24",
+          "RF-26",
+          "RF-28"
+        ]
+      },
+      {
+        "id": "TR-21",
+        "source_file": "THEORY_TO_CODE_TRACEABILITY.md",
+        "source_row_sha256": "5f74924c2c3292826380a1e052de02e51b38beb9497d1a3bf131260aabc961b3",
+        "vf_ids": [
+          "VT-37",
+          "VT-38",
+          "VT-43",
+          "VT-49"
+        ],
+        "m_regression": false,
+        "v_required": true,
+        "report_groups": [
+          "RF-25",
+          "RF-28"
+        ]
+      },
+      {
+        "id": "TR-22",
+        "source_file": "THEORY_TO_CODE_TRACEABILITY.md",
+        "source_row_sha256": "b950ef9ca9784c5f7549ed6ddb63a2d7009e55c45dd56b9199035a951729de16",
+        "vf_ids": [
+          "VT-12",
+          "VT-35",
+          "VT-37",
+          "VT-44",
+          "VT-45"
+        ],
+        "m_regression": true,
+        "v_required": true,
+        "report_groups": [
+          "RF-07",
+          "RF-17",
+          "RF-28"
+        ]
+      },
+      {
+        "id": "TR-23",
+        "source_file": "THEORY_TO_CODE_TRACEABILITY.md",
+        "source_row_sha256": "741419bc53bb81ac5f3f5c5f6e4c586c2ce5c0d57c649916cacd534201f2dee7",
+        "vf_ids": [
+          "VT-39",
+          "VT-40",
+          "VT-41"
+        ],
+        "m_regression": false,
+        "v_required": true,
+        "report_groups": [
+          "RF-26",
+          "RF-27"
+        ]
+      },
+      {
+        "id": "TR-24",
+        "source_file": "THEORY_TO_CODE_TRACEABILITY.md",
+        "source_row_sha256": "2c3495dd48c8437a0912adf5494ae8f6c8f6007f7ca35ff953fc7c2acac5557e",
+        "vf_ids": [
+          "VT-42",
+          "VT-43",
+          "VT-45",
+          "VT-50"
+        ],
+        "m_regression": false,
+        "v_required": true,
+        "report_groups": [
+          "RF-24",
+          "RF-25",
+          "RF-28",
+          "RF-34"
+        ]
+      },
+      {
+        "id": "TR-25",
+        "source_file": "THEORY_TO_CODE_TRACEABILITY.md",
+        "source_row_sha256": "e3ed88894a245d51a58bfc4bc9e850d9cc62f7027b0c5539d40831f68577af82",
+        "vf_ids": [
+          "VT-14",
+          "VT-25",
+          "VT-47"
+        ],
+        "m_regression": true,
+        "v_required": true,
+        "report_groups": [
+          "RF-02",
+          "RF-03",
+          "RF-30"
+        ]
+      },
+      {
+        "id": "TR-26",
+        "source_file": "THEORY_TO_CODE_TRACEABILITY.md",
+        "source_row_sha256": "206cb55f62d612b4f37772c2e59c8b03a17074a17b891dad6af2a624c8c07c4c",
+        "vf_ids": [
+          "VT-26",
+          "VT-27",
+          "VT-28"
+        ],
+        "m_regression": true,
+        "v_required": false,
+        "report_groups": [
+          "RF-13",
+          "RF-14",
+          "RF-30"
+        ]
+      },
+      {
+        "id": "TR-27",
+        "source_file": "THEORY_TO_CODE_TRACEABILITY.md",
+        "source_row_sha256": "78fca37dd99aa7d7f0d770ef39eae75a2a36f8fa822f8615ed3eede1d95716ec",
+        "vf_ids": [
+          "VT-22",
+          "VT-29",
+          "VT-47"
+        ],
+        "m_regression": true,
+        "v_required": true,
+        "report_groups": [
+          "RF-30",
+          "RF-32"
+        ]
+      },
+      {
+        "id": "TR-28",
+        "source_file": "THEORY_TO_CODE_TRACEABILITY.md",
+        "source_row_sha256": "246dca6738a69322a69eb66bba03d7db3d352864ee3ee18b2ea8902a1fea26b4",
+        "vf_ids": [
+          "VT-21",
+          "VT-22",
+          "VT-24"
+        ],
+        "m_regression": true,
+        "v_required": true,
+        "report_groups": [
+          "RF-14",
+          "RF-29",
+          "RF-32"
+        ]
+      },
+      {
+        "id": "TR-29",
+        "source_file": "THEORY_TO_CODE_TRACEABILITY.md",
+        "source_row_sha256": "2c1fd6eec5cd38de2bf1512d4bdb0c942192e715a5989309fd1dc36994fbeb86",
+        "vf_ids": [
+          "VT-21",
+          "VT-23",
+          "VT-47"
+        ],
+        "m_regression": true,
+        "v_required": true,
+        "report_groups": [
+          "RF-04",
+          "RF-29",
+          "RF-31"
+        ]
+      },
+      {
+        "id": "TR-30",
+        "source_file": "THEORY_TO_CODE_TRACEABILITY.md",
+        "source_row_sha256": "1b72c594ff4ab27cef446cf63716401a64d99f632adb4a98a5b05d365f16634d",
+        "vf_ids": [
+          "VT-16",
+          "VT-23",
+          "VT-29"
+        ],
+        "m_regression": true,
+        "v_required": false,
+        "report_groups": [
+          "RF-04",
+          "RF-30",
+          "RF-31"
+        ]
+      },
+      {
+        "id": "TR-31",
+        "source_file": "THEORY_TO_CODE_TRACEABILITY.md",
+        "source_row_sha256": "204dbeb8d3d381e3d0bb19043f7f28a84499814721bcfc6ffad5774179e30936",
+        "vf_ids": [
+          "VT-17",
+          "VT-18",
+          "VT-46"
+        ],
+        "m_regression": true,
+        "v_required": true,
+        "report_groups": [
+          "RF-12",
+          "RF-16",
+          "RF-33",
+          "RF-34"
+        ]
+      },
+      {
+        "id": "TR-32",
+        "source_file": "THEORY_TO_CODE_TRACEABILITY.md",
+        "source_row_sha256": "586dfc9a80b1998efb150315e95decd5938b7d710db62def59697f3f8da443b8",
+        "vf_ids": [
+          "VT-04",
+          "VT-20",
+          "VT-22",
+          "VT-47"
+        ],
+        "m_regression": true,
+        "v_required": true,
+        "report_groups": [
+          "RF-15",
+          "RF-29",
+          "RF-34"
+        ]
+      },
+      {
+        "id": "TR-33",
+        "source_file": "THEORY_TO_CODE_TRACEABILITY.md",
+        "source_row_sha256": "5f93434e13ffa9a4cd7bd53fb779b78f8a2a34f8577ed3e895aa31f084cf3bae",
+        "vf_ids": [
+          "VT-19",
+          "VT-28",
+          "VT-36"
+        ],
+        "m_regression": true,
+        "v_required": true,
+        "report_groups": [
+          "RF-09",
+          "RF-11",
+          "RF-36"
+        ]
+      },
+      {
+        "id": "TR-34",
+        "source_file": "THEORY_TO_CODE_TRACEABILITY.md",
+        "source_row_sha256": "989316c835597f5f5c46f6a1483bd77098daccef382c58926d5a509bd913fc82",
+        "vf_ids": [
+          "VT-09",
+          "VT-20",
+          "VT-39",
+          "VT-46"
+        ],
+        "m_regression": true,
+        "v_required": true,
+        "report_groups": [
+          "RF-01",
+          "RF-15",
+          "RF-27",
+          "RF-34",
+          "RF-36"
+        ]
+      },
+      {
+        "id": "TR-35",
+        "source_file": "THEORY_TO_CODE_TRACEABILITY.md",
+        "source_row_sha256": "feaa8e23b9617948e11af9222f84210c80a75a86d0af0a6b40d995f1414ca772",
+        "vf_ids": [
+          "VT-19",
+          "VT-30"
+        ],
+        "m_regression": true,
+        "v_required": true,
+        "report_groups": [
+          "RF-01",
+          "RF-34",
+          "RF-35"
+        ]
+      },
+      {
+        "id": "TR-36",
+        "source_file": "THEORY_TO_CODE_TRACEABILITY.md",
+        "source_row_sha256": "cd110aebb53c823000e3aec6c41a68585e21483cb3a92becf2dded214406d16f",
+        "vf_ids": [
+          "VT-51"
+        ],
+        "m_regression": true,
+        "v_required": false,
+        "report_groups": [
+          "RF-35"
+        ]
+      },
+      {
+        "id": "TR-37",
+        "source_file": "THEORY_TO_CODE_TRACEABILITY.md",
+        "source_row_sha256": "3306daa62a3c9bca43fc0de6ab2f10a95b5d42078dee003725e99d390aa08889",
+        "vf_ids": [
+          "VT-52"
+        ],
+        "m_regression": true,
+        "v_required": false,
+        "report_groups": [
+          "RF-35"
+        ]
+      },
+      {
+        "id": "TR-38",
+        "source_file": "THEORY_TO_CODE_TRACEABILITY.md",
+        "source_row_sha256": "09e5aa2bb2c92e0b6dbf583b37913a3012dab17bbce8a00a5d7cb3cb20c86c68",
+        "vf_ids": [
+          "VT-53"
+        ],
+        "m_regression": true,
+        "v_required": false,
+        "report_groups": [
+          "RF-35"
+        ]
+      },
+      {
+        "id": "TR-39",
+        "source_file": "THEORY_TO_CODE_TRACEABILITY.md",
+        "source_row_sha256": "ad72188db5090f30d47678567fedc2d00247ccf669eb6f628645967386689da2",
+        "vf_ids": [
+          "VT-54"
+        ],
+        "m_regression": true,
+        "v_required": false,
+        "report_groups": [
+          "RF-35"
+        ]
+      },
+      {
+        "id": "TR-40",
+        "source_file": "THEORY_TO_CODE_TRACEABILITY.md",
+        "source_row_sha256": "2c37978bec362a3239362bd385bfe34d41d58ba876004324ab47efc244eb9281",
+        "vf_ids": [
+          "VT-16",
+          "VT-51"
+        ],
+        "m_regression": true,
+        "v_required": false,
+        "report_groups": [
+          "RF-12",
+          "RF-35"
+        ]
+      }
+    ],
+    "rf": [
+      {
+        "id": "RF-01",
+        "source_file": "THEORY_TO_CODE_TRACEABILITY.md",
+        "source_row_sha256": "a2cc80876fda660dcbf5682619deff9020a48c0a333511521cc96b6a41f2e992",
+        "vf_ids": [
+          "VT-01",
+          "VT-20",
+          "VT-30"
+        ],
+        "m_regression": true,
+        "v_required": true,
+        "trace_ids": [
+          "TR-01",
+          "TR-34",
+          "TR-35"
+        ]
+      },
+      {
+        "id": "RF-02",
+        "source_file": "THEORY_TO_CODE_TRACEABILITY.md",
+        "source_row_sha256": "747b7dd29d7fb0b67cbf04ade4da1cde2f2a32ed1205bc882fbe48ee60f534ce",
+        "vf_ids": [
+          "VT-14",
+          "VT-25"
+        ],
+        "m_regression": true,
+        "v_required": true,
+        "trace_ids": [
+          "TR-02",
+          "TR-25"
+        ]
+      },
+      {
+        "id": "RF-03",
+        "source_file": "THEORY_TO_CODE_TRACEABILITY.md",
+        "source_row_sha256": "7bc33107bb2f4933dc6e7a67055d84a1fc1b4f38fac91a58547349717b3c1905",
+        "vf_ids": [
+          "VT-14",
+          "VT-16",
+          "VT-25"
+        ],
+        "m_regression": true,
+        "v_required": true,
+        "trace_ids": [
+          "TR-02",
+          "TR-08",
+          "TR-25"
+        ]
+      },
+      {
+        "id": "RF-04",
+        "source_file": "THEORY_TO_CODE_TRACEABILITY.md",
+        "source_row_sha256": "207ab865b129479878cd026f2bf5baac7eb329801ad8cb785bc7ff05e6e4bd5c",
+        "vf_ids": [
+          "VT-23",
+          "VT-29"
+        ],
+        "m_regression": true,
+        "v_required": false,
+        "trace_ids": [
+          "TR-29",
+          "TR-30"
+        ]
+      },
+      {
+        "id": "RF-05",
+        "source_file": "THEORY_TO_CODE_TRACEABILITY.md",
+        "source_row_sha256": "dc05b1fefc7eabac48e20ed1ebfe722a45bea4a05d92ef87fca855387814b0fc",
+        "vf_ids": [
+          "VT-01",
+          "VT-21",
+          "VT-34"
+        ],
+        "m_regression": true,
+        "v_required": true,
+        "trace_ids": [
+          "TR-19",
+          "TR-28"
+        ]
+      },
+      {
+        "id": "RF-06",
+        "source_file": "THEORY_TO_CODE_TRACEABILITY.md",
+        "source_row_sha256": "72b198f9c235516f97ee0b9f0ff6a6f929c7a74ea37ebbf5f6949603debecda5",
+        "vf_ids": [
+          "VT-03",
+          "VT-24",
+          "VT-34",
+          "VT-35"
+        ],
+        "m_regression": true,
+        "v_required": true,
+        "trace_ids": [
+          "TR-04",
+          "TR-19"
+        ]
+      },
+      {
+        "id": "RF-07",
+        "source_file": "THEORY_TO_CODE_TRACEABILITY.md",
+        "source_row_sha256": "017db185b27c07e805173ad5f11a795075824fe72f3a8d41a79fc9927e673d60",
+        "vf_ids": [
+          "VT-03",
+          "VT-34",
+          "VT-35"
+        ],
+        "m_regression": true,
+        "v_required": true,
+        "trace_ids": [
+          "TR-04",
+          "TR-22"
+        ]
+      },
+      {
+        "id": "RF-08",
+        "source_file": "THEORY_TO_CODE_TRACEABILITY.md",
+        "source_row_sha256": "daa3d12dc6b628c5e93d4e30d6361ebe5942080c0b571d60912ec17ac733b23e",
+        "vf_ids": [
+          "VT-02",
+          "VT-03",
+          "VT-35"
+        ],
+        "m_regression": true,
+        "v_required": true,
+        "trace_ids": [
+          "TR-04"
+        ]
+      },
+      {
+        "id": "RF-09",
+        "source_file": "THEORY_TO_CODE_TRACEABILITY.md",
+        "source_row_sha256": "683189cf805f1d7b24a8b56c2d794af47ed99d29acac23f2dcdbc5dedd5e97c0",
+        "vf_ids": [
+          "VT-02",
+          "VT-19",
+          "VT-36"
+        ],
+        "m_regression": true,
+        "v_required": true,
+        "trace_ids": [
+          "TR-04",
+          "TR-33"
+        ]
+      },
+      {
+        "id": "RF-10",
+        "source_file": "THEORY_TO_CODE_TRACEABILITY.md",
+        "source_row_sha256": "8924747f8640e0c94657fd551e87e0b8ada60627fb678dd8701ebed035b0ffc9",
+        "vf_ids": [
+          "VT-03",
+          "VT-11",
+          "VT-12",
+          "VT-40"
+        ],
+        "m_regression": true,
+        "v_required": true,
+        "trace_ids": [
+          "TR-04",
+          "TR-15"
+        ]
+      },
+      {
+        "id": "RF-11",
+        "source_file": "THEORY_TO_CODE_TRACEABILITY.md",
+        "source_row_sha256": "9b685d5442d6520e7f36672a9e38d9a655fbea4f78f08696dea9d0c4acd24bbb",
+        "vf_ids": [
+          "VT-03",
+          "VT-06",
+          "VT-12",
+          "VT-36"
+        ],
+        "m_regression": true,
+        "v_required": true,
+        "trace_ids": [
+          "TR-09",
+          "TR-33"
+        ]
+      },
+      {
+        "id": "RF-12",
+        "source_file": "THEORY_TO_CODE_TRACEABILITY.md",
+        "source_row_sha256": "9e753cd7b603d58b9bb132a984d57be3656c60820b7f414069c1196dfe9e79ad",
+        "vf_ids": [
+          "VT-04",
+          "VT-15",
+          "VT-16",
+          "VT-17"
+        ],
+        "m_regression": true,
+        "v_required": true,
+        "trace_ids": [
+          "TR-06",
+          "TR-08",
+          "TR-31",
+          "TR-40"
+        ]
+      },
+      {
+        "id": "RF-13",
+        "source_file": "THEORY_TO_CODE_TRACEABILITY.md",
+        "source_row_sha256": "29e8541e8c09bd333585f4773c4bdd94a32ae06b8cfbd64d2fdc04da52ac5049",
+        "vf_ids": [
+          "VT-05",
+          "VT-06",
+          "VT-26",
+          "VT-27",
+          "VT-28"
+        ],
+        "m_regression": true,
+        "v_required": false,
+        "trace_ids": [
+          "TR-07",
+          "TR-26"
+        ]
+      },
+      {
+        "id": "RF-14",
+        "source_file": "THEORY_TO_CODE_TRACEABILITY.md",
+        "source_row_sha256": "2d8b3cfa601acc74ffd7d043f60bf5c9becf98487614718fac1afc71a674486d",
+        "vf_ids": [
+          "VT-04",
+          "VT-15",
+          "VT-21",
+          "VT-22"
+        ],
+        "m_regression": true,
+        "v_required": false,
+        "trace_ids": [
+          "TR-06",
+          "TR-26",
+          "TR-28"
+        ]
+      },
+      {
+        "id": "RF-15",
+        "source_file": "THEORY_TO_CODE_TRACEABILITY.md",
+        "source_row_sha256": "e9df5df5f4df91d628a153f41673baedb513fe4749d13adbd2f1ba34a62aac3a",
+        "vf_ids": [
+          "VT-01",
+          "VT-06",
+          "VT-20",
+          "VT-41"
+        ],
+        "m_regression": true,
+        "v_required": true,
+        "trace_ids": [
+          "TR-05",
+          "TR-32",
+          "TR-34"
+        ]
+      },
+      {
+        "id": "RF-16",
+        "source_file": "THEORY_TO_CODE_TRACEABILITY.md",
+        "source_row_sha256": "a4b8ec7e06912d02bf8da3c6a7908295dfd9456f91befead8c13ea8564bec12f",
+        "vf_ids": [
+          "VT-02",
+          "VT-05",
+          "VT-17"
+        ],
+        "m_regression": true,
+        "v_required": true,
+        "trace_ids": [
+          "TR-07",
+          "TR-09",
+          "TR-31"
+        ]
+      },
+      {
+        "id": "RF-17",
+        "source_file": "THEORY_TO_CODE_TRACEABILITY.md",
+        "source_row_sha256": "37ed846f08ad25ce975cd8891590aa2f55ba8b47cc12fdcb97337e6a9bc65b35",
+        "vf_ids": [
+          "VT-05",
+          "VT-06",
+          "VT-37"
+        ],
+        "m_regression": true,
+        "v_required": true,
+        "trace_ids": [
+          "TR-07",
+          "TR-09",
+          "TR-22"
+        ]
+      },
+      {
+        "id": "RF-18",
+        "source_file": "THEORY_TO_CODE_TRACEABILITY.md",
+        "source_row_sha256": "2f1d15800a689e7995bcc50a0b4f9de27ff9c751d1a22443798ce8de74b8a5b7",
+        "vf_ids": [
+          "VT-06",
+          "VT-07",
+          "VT-09",
+          "VT-10",
+          "VT-13"
+        ],
+        "m_regression": true,
+        "v_required": false,
+        "trace_ids": [
+          "TR-03",
+          "TR-10",
+          "TR-12",
+          "TR-13",
+          "TR-14"
+        ]
+      },
+      {
+        "id": "RF-19",
+        "source_file": "THEORY_TO_CODE_TRACEABILITY.md",
+        "source_row_sha256": "07ecfeb4c6adfc471f6854e20ca5eb55e92aac1b080e2ce7f9d97c9254b4b0c7",
+        "vf_ids": [
+          "VT-08",
+          "VT-13"
+        ],
+        "m_regression": true,
+        "v_required": false,
+        "trace_ids": [
+          "TR-03",
+          "TR-11"
+        ]
+      },
+      {
+        "id": "RF-20",
+        "source_file": "THEORY_TO_CODE_TRACEABILITY.md",
+        "source_row_sha256": "f1c8caf17248b797be6934538042ce24508466da06364f0540babd5b973c60c0",
+        "vf_ids": [
+          "VT-10",
+          "VT-11",
+          "VT-12",
+          "VT-13"
+        ],
+        "m_regression": true,
+        "v_required": true,
+        "trace_ids": [
+          "TR-15"
+        ]
+      },
+      {
+        "id": "RF-21",
+        "source_file": "THEORY_TO_CODE_TRACEABILITY.md",
+        "source_row_sha256": "470aebf7992d385e7c731a80d43330b41af7a3301bf04ef4269ba32253e7a1a4",
+        "vf_ids": [
+          "VT-31",
+          "VT-32"
+        ],
+        "m_regression": false,
+        "v_required": true,
+        "trace_ids": [
+          "TR-16"
+        ]
+      },
+      {
+        "id": "RF-22",
+        "source_file": "THEORY_TO_CODE_TRACEABILITY.md",
+        "source_row_sha256": "635cfd6fa10b4f94031d1eba033754cc94e959603f0cbf42ed22fd301531a8b8",
+        "vf_ids": [
+          "VT-31",
+          "VT-32"
+        ],
+        "m_regression": false,
+        "v_required": true,
+        "trace_ids": [
+          "TR-17"
+        ]
+      },
+      {
+        "id": "RF-23",
+        "source_file": "THEORY_TO_CODE_TRACEABILITY.md",
+        "source_row_sha256": "85feabdc0e47e17fbf353461c7cd00cf55bcdceb143f7b2deb0b86e80fa5b429",
+        "vf_ids": [
+          "VT-32",
+          "VT-33"
+        ],
+        "m_regression": false,
+        "v_required": true,
+        "trace_ids": [
+          "TR-18"
+        ]
+      },
+      {
+        "id": "RF-24",
+        "source_file": "THEORY_TO_CODE_TRACEABILITY.md",
+        "source_row_sha256": "c8f9e2ae430a8642b328fd3daaabe57163db43f9fa6fb0f3a507d3af265089f2",
+        "vf_ids": [
+          "VT-38",
+          "VT-42",
+          "VT-44",
+          "VT-48"
+        ],
+        "m_regression": false,
+        "v_required": true,
+        "trace_ids": [
+          "TR-20",
+          "TR-24"
+        ]
+      },
+      {
+        "id": "RF-25",
+        "source_file": "THEORY_TO_CODE_TRACEABILITY.md",
+        "source_row_sha256": "48ca11fac8b2809e99fe54fffa396c91ddcfdee0a1139320bcbb7d14a01f68f7",
+        "vf_ids": [
+          "VT-38",
+          "VT-43",
+          "VT-49"
+        ],
+        "m_regression": false,
+        "v_required": true,
+        "trace_ids": [
+          "TR-21",
+          "TR-24"
+        ]
+      },
+      {
+        "id": "RF-26",
+        "source_file": "THEORY_TO_CODE_TRACEABILITY.md",
+        "source_row_sha256": "3c582d748176bd093a7f7baeb6c65faeb604c38844a94a0717d89eb69ee5e59f",
+        "vf_ids": [
+          "VT-38",
+          "VT-39",
+          "VT-40"
+        ],
+        "m_regression": false,
+        "v_required": true,
+        "trace_ids": [
+          "TR-20",
+          "TR-23"
+        ]
+      },
+      {
+        "id": "RF-27",
+        "source_file": "THEORY_TO_CODE_TRACEABILITY.md",
+        "source_row_sha256": "fa2e880993ee281aa5c8dac80e0b631e5df07a66618c2c4e88d49b484c54f047",
+        "vf_ids": [
+          "VT-39",
+          "VT-40",
+          "VT-41"
+        ],
+        "m_regression": false,
+        "v_required": true,
+        "trace_ids": [
+          "TR-23",
+          "TR-34"
+        ]
+      },
+      {
+        "id": "RF-28",
+        "source_file": "THEORY_TO_CODE_TRACEABILITY.md",
+        "source_row_sha256": "0132934aee2e4d105cd9ef32e2a74db5cc81694327d55eb38fac4627c732e699",
+        "vf_ids": [
+          "VT-12",
+          "VT-34",
+          "VT-37",
+          "VT-42",
+          "VT-43",
+          "VT-44",
+          "VT-45"
+        ],
+        "m_regression": false,
+        "v_required": true,
+        "trace_ids": [
+          "TR-19",
+          "TR-20",
+          "TR-21",
+          "TR-22",
+          "TR-24"
+        ]
+      },
+      {
+        "id": "RF-29",
+        "source_file": "THEORY_TO_CODE_TRACEABILITY.md",
+        "source_row_sha256": "eba20a7d91c11792a57850168b3ecd2905f2f71618848dde7e3eff221f969395",
+        "vf_ids": [
+          "VT-21",
+          "VT-22",
+          "VT-23",
+          "VT-47"
+        ],
+        "m_regression": true,
+        "v_required": true,
+        "trace_ids": [
+          "TR-05",
+          "TR-28",
+          "TR-29",
+          "TR-32"
+        ]
+      },
+      {
+        "id": "RF-30",
+        "source_file": "THEORY_TO_CODE_TRACEABILITY.md",
+        "source_row_sha256": "177c71c69cb1b133bfed750d9b05c5ac3249fd9a394321e2962fbddf68c95497",
+        "vf_ids": [
+          "VT-22",
+          "VT-25",
+          "VT-26",
+          "VT-27",
+          "VT-29",
+          "VT-47"
+        ],
+        "m_regression": true,
+        "v_required": true,
+        "trace_ids": [
+          "TR-08",
+          "TR-25",
+          "TR-26",
+          "TR-27",
+          "TR-30"
+        ]
+      },
+      {
+        "id": "RF-31",
+        "source_file": "THEORY_TO_CODE_TRACEABILITY.md",
+        "source_row_sha256": "0aeb67365fb192f9938dd3a4b804c4bd31b1b6a4e1da7df8745ed6dd785ca541",
+        "vf_ids": [
+          "VT-16",
+          "VT-23",
+          "VT-29"
+        ],
+        "m_regression": true,
+        "v_required": false,
+        "trace_ids": [
+          "TR-08",
+          "TR-29",
+          "TR-30"
+        ]
+      },
+      {
+        "id": "RF-32",
+        "source_file": "THEORY_TO_CODE_TRACEABILITY.md",
+        "source_row_sha256": "ea6df53f9fb65252be166aec6620955ee3d3d21a0b48c7bf9267bf181642e4a0",
+        "vf_ids": [
+          "VT-22",
+          "VT-24",
+          "VT-47"
+        ],
+        "m_regression": true,
+        "v_required": true,
+        "trace_ids": [
+          "TR-27",
+          "TR-28"
+        ]
+      },
+      {
+        "id": "RF-33",
+        "source_file": "THEORY_TO_CODE_TRACEABILITY.md",
+        "source_row_sha256": "cc6c4356f077c74b09de31e04b78f77a71bb7ab79f5c985fe163f43bdb1ded0c",
+        "vf_ids": [
+          "VT-17",
+          "VT-18",
+          "VT-24"
+        ],
+        "m_regression": true,
+        "v_required": true,
+        "trace_ids": [
+          "TR-01",
+          "TR-31"
+        ]
+      },
+      {
+        "id": "RF-34",
+        "source_file": "THEORY_TO_CODE_TRACEABILITY.md",
+        "source_row_sha256": "d99bee0a677e44798a755c49435081c597cb5f177e65147db2dd514fb67f522b",
+        "vf_ids": [
+          "VT-20",
+          "VT-30",
+          "VT-42",
+          "VT-43",
+          "VT-47",
+          "VT-50"
+        ],
+        "m_regression": true,
+        "v_required": true,
+        "trace_ids": [
+          "TR-24",
+          "TR-31",
+          "TR-32",
+          "TR-34",
+          "TR-35"
+        ]
+      },
+      {
+        "id": "RF-35",
+        "source_file": "THEORY_TO_CODE_TRACEABILITY.md",
+        "source_row_sha256": "d92491320045a0bb8cef25dcbc42ae2c613c276c61c536776a1fd81748f514b5",
+        "vf_ids": [
+          "VT-30",
+          "VT-51",
+          "VT-52",
+          "VT-53",
+          "VT-54"
+        ],
+        "m_regression": true,
+        "v_required": false,
+        "trace_ids": [
+          "TR-35",
+          "TR-36",
+          "TR-37",
+          "TR-38",
+          "TR-39",
+          "TR-40"
+        ]
+      },
+      {
+        "id": "RF-36",
+        "source_file": "THEORY_TO_CODE_TRACEABILITY.md",
+        "source_row_sha256": "3438c79e4448616eebe775219a8dd00a55b795b2d2b3fedbca61a2a1f5814912",
+        "vf_ids": [
+          "VT-19",
+          "VT-20",
+          "VT-32",
+          "VT-46"
+        ],
+        "m_regression": true,
+        "v_required": true,
+        "trace_ids": [
+          "TR-33",
+          "TR-34"
+        ]
+      }
+    ]
+  },
+  "vt_obligations": [
+    {
+      "id": "VT-03",
+      "description": "Calls, failed/retried attempts, intended positions and dependency groups remain correct in comparisons.",
+      "required_by_step": 7,
+      "principal_steps": [
+        2,
+        4,
+        6,
+        7
+      ],
+      "implementation_status": "not_implemented",
+      "test_bindings": [],
+      "evidence_status": "not_supplied"
+    },
+    {
+      "id": "VT-12",
+      "description": "Intended-group endpoints cannot use later groups to fill missing early positions.",
+      "required_by_step": 7,
+      "principal_steps": [
+        4,
+        6
+      ],
+      "implementation_status": "not_implemented",
+      "test_bindings": [],
+      "evidence_status": "not_supplied"
+    },
+    {
+      "id": "VT-14",
+      "description": "Incompatible/missing domains, horizons, schema/rubric meanings restrict affected comparisons.",
+      "required_by_step": 7,
+      "principal_steps": [
+        2,
+        4,
+        7
+      ],
+      "implementation_status": "not_implemented",
+      "test_bindings": [],
+      "evidence_status": "not_supplied"
+    },
+    {
+      "id": "VT-17",
+      "description": "Revisions recompute pair subsets, comparisons, means, intervals and decisions without new samples.",
+      "required_by_step": 7,
+      "principal_steps": [
+        6,
+        7
+      ],
+      "implementation_status": "not_implemented",
+      "test_bindings": [],
+      "evidence_status": "not_supplied"
+    },
+    {
+      "id": "VT-18",
+      "description": "Independence-only withdrawal updates claim scope while retaining justified arithmetic.",
+      "required_by_step": 7,
+      "principal_steps": [
+        4,
+        6,
+        7
+      ],
+      "implementation_status": "not_implemented",
+      "test_bindings": [],
+      "evidence_status": "not_supplied"
+    },
+    {
+      "id": "VT-19",
+      "description": "Text, replay, metadata and external references remain passive/private as required.",
+      "required_by_step": 7,
+      "principal_steps": [
+        2,
+        3,
+        5,
+        6,
+        7
+      ],
+      "implementation_status": "not_implemented",
+      "test_bindings": [],
+      "evidence_status": "not_supplied"
+    },
+    {
+      "id": "VT-20",
+      "description": "JSON/Markdown preserve all V result states, operands, units, reasons and evidence scope.",
+      "required_by_step": 7,
+      "principal_steps": [
+        6,
+        7
+      ],
+      "implementation_status": "not_implemented",
+      "test_bindings": [],
+      "evidence_status": "not_supplied"
+    },
+    {
+      "id": "VT-24",
+      "description": "Registration, actual exposure and post-hoc/re-analysis distinctions survive comparison reporting.",
+      "required_by_step": 7,
+      "principal_steps": [
+        2,
+        4,
+        6
+      ],
+      "implementation_status": "not_implemented",
+      "test_bindings": [],
+      "evidence_status": "not_supplied"
+    },
+    {
+      "id": "VT-31",
+      "description": "Exact proxy tokenization, versioned Unicode, normalization, boundaries and MF-11.",
+      "required_by_step": 7,
+      "principal_steps": [
+        3
+      ],
+      "implementation_status": "not_implemented",
+      "test_bindings": [],
+      "evidence_status": "not_supplied"
+    },
+    {
+      "id": "VT-32",
+      "description": "Common text subset, missing-text counts, singleton/within-class denominators and limits.",
+      "required_by_step": 7,
+      "principal_steps": [
+        3,
+        6
+      ],
+      "implementation_status": "not_implemented",
+      "test_bindings": [],
+      "evidence_status": "not_supplied"
+    },
+    {
+      "id": "VT-33",
+      "description": "Exact distinct-pair statistic and finite-count identity on the same text subset.",
+      "required_by_step": 7,
+      "principal_steps": [
+        3
+      ],
+      "implementation_status": "not_implemented",
+      "test_bindings": [],
+      "evidence_status": "not_supplied"
+    },
+    {
+      "id": "VT-34",
+      "description": "Deployment/control/cap/schema limitations; preserve a qualified C-A path when B is unusable.",
+      "required_by_step": 7,
+      "principal_steps": [
+        2,
+        4,
+        6
+      ],
+      "implementation_status": "not_implemented",
+      "test_bindings": [],
+      "evidence_status": "not_supplied"
+    },
+    {
+      "id": "VT-35",
+      "description": "Six exact openers, A/B byte equality, C clause, groups, interleaving, pilot and controls.",
+      "required_by_step": 7,
+      "principal_steps": [
+        2,
+        4,
+        6
+      ],
+      "implementation_status": "not_implemented",
+      "test_bindings": [],
+      "evidence_status": "not_supplied"
+    },
+    {
+      "id": "VT-36",
+      "description": "Exact extracted-text association and empty/absent/truncated/ambiguous cases, without repairs.",
+      "required_by_step": 7,
+      "principal_steps": [
+        3,
+        6,
+        7
+      ],
+      "implementation_status": "not_implemented",
+      "test_bindings": [],
+      "evidence_status": "not_supplied"
+    },
+    {
+      "id": "VT-37",
+      "description": "All exact per-endpoint coverage/floor/band boundaries, including text-independent P5.",
+      "required_by_step": 7,
+      "principal_steps": [
+        4,
+        6
+      ],
+      "implementation_status": "not_implemented",
+      "test_bindings": [],
+      "evidence_status": "not_supplied"
+    },
+    {
+      "id": "VT-38",
+      "description": "Correct operands/signs/units for P1, both P5 deltas and linked block sets.",
+      "required_by_step": 7,
+      "principal_steps": [
+        4,
+        5
+      ],
+      "implementation_status": "not_implemented",
+      "test_bindings": [],
+      "evidence_status": "not_supplied"
+    },
+    {
+      "id": "VT-39",
+      "description": "MF-18, full 2,000-index replay, mean statistic and fixed percentile interpolation.",
+      "required_by_step": 7,
+      "principal_steps": [
+        5
+      ],
+      "implementation_status": "not_implemented",
+      "test_bindings": [],
+      "evidence_status": "not_supplied"
+    },
+    {
+      "id": "VT-40",
+      "description": "One/missing/dependent blocks, equal weighting, explicit attrition and no pseudoreplication.",
+      "required_by_step": 7,
+      "principal_steps": [
+        4,
+        5,
+        6
+      ],
+      "implementation_status": "not_implemented",
+      "test_bindings": [],
+      "evidence_status": "not_supplied"
+    },
+    {
+      "id": "VT-41",
+      "description": "Fixed-suite sensitivity wording and degenerate ranges with limited evidential meaning.",
+      "required_by_step": 7,
+      "principal_steps": [
+        5,
+        6
+      ],
+      "implementation_status": "not_implemented",
+      "test_bindings": [],
+      "evidence_status": "not_supplied"
+    },
+    {
+      "id": "VT-42",
+      "description": "P1 joint directions, false-favorable contrast, ties and zero-straddling outcomes.",
+      "required_by_step": 7,
+      "principal_steps": [
+        5,
+        6
+      ],
+      "implementation_status": "not_implemented",
+      "test_bindings": [],
+      "evidence_status": "not_supplied"
+    },
+    {
+      "id": "VT-43",
+      "description": "Two P5 comparators, full-pattern routing, proxy-only failure and incomplete prerequisites.",
+      "required_by_step": 7,
+      "principal_steps": [
+        5,
+        6
+      ],
+      "implementation_status": "not_implemented",
+      "test_bindings": [],
+      "evidence_status": "not_supplied"
+    },
+    {
+      "id": "VT-44",
+      "description": "Adverse valid-only P1/quality diagnostics and P5 outside quality match remain visible.",
+      "required_by_step": 7,
+      "principal_steps": [
+        4,
+        5,
+        6
+      ],
+      "implementation_status": "not_implemented",
+      "test_bindings": [],
+      "evidence_status": "not_supplied"
+    },
+    {
+      "id": "VT-45",
+      "description": "Surface/registry ceiling flags; no secondary-endpoint or ontology substitution.",
+      "required_by_step": 7,
+      "principal_steps": [
+        4,
+        5,
+        6
+      ],
+      "implementation_status": "not_implemented",
+      "test_bindings": [],
+      "evidence_status": "not_supplied"
+    },
+    {
+      "id": "VT-46",
+      "description": "Complete original/variant M and full A/B/C V fixture-to-report paths, fields and correction.",
+      "required_by_step": 7,
+      "principal_steps": [
+        6,
+        7
+      ],
+      "implementation_status": "not_implemented",
+      "test_bindings": [],
+      "evidence_status": "not_supplied"
+    },
+    {
+      "id": "VT-47",
+      "description": "Actual supplied schema/core/audit/exposure/independence evidence limits the claimed comparison; test routing only.",
+      "required_by_step": 7,
+      "principal_steps": [
+        2,
+        4,
+        5,
+        7
+      ],
+      "implementation_status": "not_implemented",
+      "test_bindings": [],
+      "evidence_status": "not_supplied"
+    },
+    {
+      "id": "VT-50",
+      "description": "Adverse results and measurement challenges get symmetric preservation/re-analysis.",
+      "required_by_step": 7,
+      "principal_steps": [
+        5,
+        6,
+        7
+      ],
+      "implementation_status": "not_implemented",
+      "test_bindings": [],
+      "evidence_status": "not_supplied"
+    }
+  ],
+  "trace_requirements": [
+    {
+      "id": "TR-01",
+      "description": "Source-linked Phase 2 responsibility; original row retained in catalogues.tr",
+      "required_by_step": 7,
+      "principal_steps": [
+        7
+      ],
+      "implementation_status": "not_implemented",
+      "test_bindings": [],
+      "evidence_status": "not_supplied"
+    },
+    {
+      "id": "TR-02",
+      "description": "Source-linked Phase 2 responsibility; original row retained in catalogues.tr",
+      "required_by_step": 7,
+      "principal_steps": [
+        7
+      ],
+      "implementation_status": "not_implemented",
+      "test_bindings": [],
+      "evidence_status": "not_supplied"
+    },
+    {
+      "id": "TR-04",
+      "description": "Source-linked Phase 2 responsibility; original row retained in catalogues.tr",
+      "required_by_step": 7,
+      "principal_steps": [
+        7
+      ],
+      "implementation_status": "not_implemented",
+      "test_bindings": [],
+      "evidence_status": "not_supplied"
+    },
+    {
+      "id": "TR-05",
+      "description": "Source-linked Phase 2 responsibility; original row retained in catalogues.tr",
+      "required_by_step": 7,
+      "principal_steps": [
+        7
+      ],
+      "implementation_status": "not_implemented",
+      "test_bindings": [],
+      "evidence_status": "not_supplied"
+    },
+    {
+      "id": "TR-06",
+      "description": "Source-linked Phase 2 responsibility; original row retained in catalogues.tr",
+      "required_by_step": 7,
+      "principal_steps": [
+        7
+      ],
+      "implementation_status": "not_implemented",
+      "test_bindings": [],
+      "evidence_status": "not_supplied"
+    },
+    {
+      "id": "TR-08",
+      "description": "Source-linked Phase 2 responsibility; original row retained in catalogues.tr",
+      "required_by_step": 7,
+      "principal_steps": [
+        7
+      ],
+      "implementation_status": "not_implemented",
+      "test_bindings": [],
+      "evidence_status": "not_supplied"
+    },
+    {
+      "id": "TR-09",
+      "description": "Source-linked Phase 2 responsibility; original row retained in catalogues.tr",
+      "required_by_step": 7,
+      "principal_steps": [
+        7
+      ],
+      "implementation_status": "not_implemented",
+      "test_bindings": [],
+      "evidence_status": "not_supplied"
+    },
+    {
+      "id": "TR-13",
+      "description": "Source-linked Phase 2 responsibility; original row retained in catalogues.tr",
+      "required_by_step": 7,
+      "principal_steps": [
+        7
+      ],
+      "implementation_status": "not_implemented",
+      "test_bindings": [],
+      "evidence_status": "not_supplied"
+    },
+    {
+      "id": "TR-15",
+      "description": "Source-linked Phase 2 responsibility; original row retained in catalogues.tr",
+      "required_by_step": 7,
+      "principal_steps": [
+        7
+      ],
+      "implementation_status": "not_implemented",
+      "test_bindings": [],
+      "evidence_status": "not_supplied"
+    },
+    {
+      "id": "TR-16",
+      "description": "Source-linked Phase 2 responsibility; original row retained in catalogues.tr",
+      "required_by_step": 7,
+      "principal_steps": [
+        7
+      ],
+      "implementation_status": "not_implemented",
+      "test_bindings": [],
+      "evidence_status": "not_supplied"
+    },
+    {
+      "id": "TR-17",
+      "description": "Source-linked Phase 2 responsibility; original row retained in catalogues.tr",
+      "required_by_step": 7,
+      "principal_steps": [
+        7
+      ],
+      "implementation_status": "not_implemented",
+      "test_bindings": [],
+      "evidence_status": "not_supplied"
+    },
+    {
+      "id": "TR-18",
+      "description": "Source-linked Phase 2 responsibility; original row retained in catalogues.tr",
+      "required_by_step": 7,
+      "principal_steps": [
+        7
+      ],
+      "implementation_status": "not_implemented",
+      "test_bindings": [],
+      "evidence_status": "not_supplied"
+    },
+    {
+      "id": "TR-19",
+      "description": "Source-linked Phase 2 responsibility; original row retained in catalogues.tr",
+      "required_by_step": 7,
+      "principal_steps": [
+        7
+      ],
+      "implementation_status": "not_implemented",
+      "test_bindings": [],
+      "evidence_status": "not_supplied"
+    },
+    {
+      "id": "TR-20",
+      "description": "Source-linked Phase 2 responsibility; original row retained in catalogues.tr",
+      "required_by_step": 7,
+      "principal_steps": [
+        7
+      ],
+      "implementation_status": "not_implemented",
+      "test_bindings": [],
+      "evidence_status": "not_supplied"
+    },
+    {
+      "id": "TR-21",
+      "description": "Source-linked Phase 2 responsibility; original row retained in catalogues.tr",
+      "required_by_step": 7,
+      "principal_steps": [
+        7
+      ],
+      "implementation_status": "not_implemented",
+      "test_bindings": [],
+      "evidence_status": "not_supplied"
+    },
+    {
+      "id": "TR-22",
+      "description": "Source-linked Phase 2 responsibility; original row retained in catalogues.tr",
+      "required_by_step": 7,
+      "principal_steps": [
+        7
+      ],
+      "implementation_status": "not_implemented",
+      "test_bindings": [],
+      "evidence_status": "not_supplied"
+    },
+    {
+      "id": "TR-23",
+      "description": "Source-linked Phase 2 responsibility; original row retained in catalogues.tr",
+      "required_by_step": 7,
+      "principal_steps": [
+        7
+      ],
+      "implementation_status": "not_implemented",
+      "test_bindings": [],
+      "evidence_status": "not_supplied"
+    },
+    {
+      "id": "TR-24",
+      "description": "Source-linked Phase 2 responsibility; original row retained in catalogues.tr",
+      "required_by_step": 7,
+      "principal_steps": [
+        7
+      ],
+      "implementation_status": "not_implemented",
+      "test_bindings": [],
+      "evidence_status": "not_supplied"
+    },
+    {
+      "id": "TR-25",
+      "description": "Source-linked Phase 2 responsibility; original row retained in catalogues.tr",
+      "required_by_step": 7,
+      "principal_steps": [
+        7
+      ],
+      "implementation_status": "not_implemented",
+      "test_bindings": [],
+      "evidence_status": "not_supplied"
+    },
+    {
+      "id": "TR-27",
+      "description": "Source-linked Phase 2 responsibility; original row retained in catalogues.tr",
+      "required_by_step": 7,
+      "principal_steps": [
+        7
+      ],
+      "implementation_status": "not_implemented",
+      "test_bindings": [],
+      "evidence_status": "not_supplied"
+    },
+    {
+      "id": "TR-28",
+      "description": "Source-linked Phase 2 responsibility; original row retained in catalogues.tr",
+      "required_by_step": 7,
+      "principal_steps": [
+        7
+      ],
+      "implementation_status": "not_implemented",
+      "test_bindings": [],
+      "evidence_status": "not_supplied"
+    },
+    {
+      "id": "TR-29",
+      "description": "Source-linked Phase 2 responsibility; original row retained in catalogues.tr",
+      "required_by_step": 7,
+      "principal_steps": [
+        7
+      ],
+      "implementation_status": "not_implemented",
+      "test_bindings": [],
+      "evidence_status": "not_supplied"
+    },
+    {
+      "id": "TR-31",
+      "description": "Source-linked Phase 2 responsibility; original row retained in catalogues.tr",
+      "required_by_step": 7,
+      "principal_steps": [
+        7
+      ],
+      "implementation_status": "not_implemented",
+      "test_bindings": [],
+      "evidence_status": "not_supplied"
+    },
+    {
+      "id": "TR-32",
+      "description": "Source-linked Phase 2 responsibility; original row retained in catalogues.tr",
+      "required_by_step": 7,
+      "principal_steps": [
+        7
+      ],
+      "implementation_status": "not_implemented",
+      "test_bindings": [],
+      "evidence_status": "not_supplied"
+    },
+    {
+      "id": "TR-33",
+      "description": "Source-linked Phase 2 responsibility; original row retained in catalogues.tr",
+      "required_by_step": 7,
+      "principal_steps": [
+        7
+      ],
+      "implementation_status": "not_implemented",
+      "test_bindings": [],
+      "evidence_status": "not_supplied"
+    },
+    {
+      "id": "TR-34",
+      "description": "Source-linked Phase 2 responsibility; original row retained in catalogues.tr",
+      "required_by_step": 7,
+      "principal_steps": [
+        7
+      ],
+      "implementation_status": "not_implemented",
+      "test_bindings": [],
+      "evidence_status": "not_supplied"
+    },
+    {
+      "id": "TR-35",
+      "description": "Source-linked Phase 2 responsibility; original row retained in catalogues.tr",
+      "required_by_step": 7,
+      "principal_steps": [
+        7
+      ],
+      "implementation_status": "not_implemented",
+      "test_bindings": [],
+      "evidence_status": "not_supplied"
+    }
+  ],
+  "report_groups": [
+    {
+      "id": "RF-01",
+      "description": "Supported and missing/withheld V record paths; original RF row retained",
+      "required_by_step": 7,
+      "principal_steps": [
+        7
+      ],
+      "implementation_status": "not_implemented",
+      "test_bindings": [],
+      "evidence_status": "not_supplied"
+    },
+    {
+      "id": "RF-02",
+      "description": "Supported and missing/withheld V record paths; original RF row retained",
+      "required_by_step": 7,
+      "principal_steps": [
+        7
+      ],
+      "implementation_status": "not_implemented",
+      "test_bindings": [],
+      "evidence_status": "not_supplied"
+    },
+    {
+      "id": "RF-03",
+      "description": "Supported and missing/withheld V record paths; original RF row retained",
+      "required_by_step": 7,
+      "principal_steps": [
+        7
+      ],
+      "implementation_status": "not_implemented",
+      "test_bindings": [],
+      "evidence_status": "not_supplied"
+    },
+    {
+      "id": "RF-05",
+      "description": "Supported and missing/withheld V record paths; original RF row retained",
+      "required_by_step": 7,
+      "principal_steps": [
+        7
+      ],
+      "implementation_status": "not_implemented",
+      "test_bindings": [],
+      "evidence_status": "not_supplied"
+    },
+    {
+      "id": "RF-06",
+      "description": "Supported and missing/withheld V record paths; original RF row retained",
+      "required_by_step": 7,
+      "principal_steps": [
+        7
+      ],
+      "implementation_status": "not_implemented",
+      "test_bindings": [],
+      "evidence_status": "not_supplied"
+    },
+    {
+      "id": "RF-07",
+      "description": "Supported and missing/withheld V record paths; original RF row retained",
+      "required_by_step": 7,
+      "principal_steps": [
+        7
+      ],
+      "implementation_status": "not_implemented",
+      "test_bindings": [],
+      "evidence_status": "not_supplied"
+    },
+    {
+      "id": "RF-08",
+      "description": "Supported and missing/withheld V record paths; original RF row retained",
+      "required_by_step": 7,
+      "principal_steps": [
+        7
+      ],
+      "implementation_status": "not_implemented",
+      "test_bindings": [],
+      "evidence_status": "not_supplied"
+    },
+    {
+      "id": "RF-09",
+      "description": "Supported and missing/withheld V record paths; original RF row retained",
+      "required_by_step": 7,
+      "principal_steps": [
+        7
+      ],
+      "implementation_status": "not_implemented",
+      "test_bindings": [],
+      "evidence_status": "not_supplied"
+    },
+    {
+      "id": "RF-10",
+      "description": "Supported and missing/withheld V record paths; original RF row retained",
+      "required_by_step": 7,
+      "principal_steps": [
+        7
+      ],
+      "implementation_status": "not_implemented",
+      "test_bindings": [],
+      "evidence_status": "not_supplied"
+    },
+    {
+      "id": "RF-11",
+      "description": "Supported and missing/withheld V record paths; original RF row retained",
+      "required_by_step": 7,
+      "principal_steps": [
+        7
+      ],
+      "implementation_status": "not_implemented",
+      "test_bindings": [],
+      "evidence_status": "not_supplied"
+    },
+    {
+      "id": "RF-12",
+      "description": "Supported and missing/withheld V record paths; original RF row retained",
+      "required_by_step": 7,
+      "principal_steps": [
+        7
+      ],
+      "implementation_status": "not_implemented",
+      "test_bindings": [],
+      "evidence_status": "not_supplied"
+    },
+    {
+      "id": "RF-15",
+      "description": "Supported and missing/withheld V record paths; original RF row retained",
+      "required_by_step": 7,
+      "principal_steps": [
+        7
+      ],
+      "implementation_status": "not_implemented",
+      "test_bindings": [],
+      "evidence_status": "not_supplied"
+    },
+    {
+      "id": "RF-16",
+      "description": "Supported and missing/withheld V record paths; original RF row retained",
+      "required_by_step": 7,
+      "principal_steps": [
+        7
+      ],
+      "implementation_status": "not_implemented",
+      "test_bindings": [],
+      "evidence_status": "not_supplied"
+    },
+    {
+      "id": "RF-17",
+      "description": "Supported and missing/withheld V record paths; original RF row retained",
+      "required_by_step": 7,
+      "principal_steps": [
+        7
+      ],
+      "implementation_status": "not_implemented",
+      "test_bindings": [],
+      "evidence_status": "not_supplied"
+    },
+    {
+      "id": "RF-20",
+      "description": "Supported and missing/withheld V record paths; original RF row retained",
+      "required_by_step": 7,
+      "principal_steps": [
+        7
+      ],
+      "implementation_status": "not_implemented",
+      "test_bindings": [],
+      "evidence_status": "not_supplied"
+    },
+    {
+      "id": "RF-21",
+      "description": "Supported and missing/withheld V record paths; original RF row retained",
+      "required_by_step": 7,
+      "principal_steps": [
+        7
+      ],
+      "implementation_status": "not_implemented",
+      "test_bindings": [],
+      "evidence_status": "not_supplied"
+    },
+    {
+      "id": "RF-22",
+      "description": "Supported and missing/withheld V record paths; original RF row retained",
+      "required_by_step": 7,
+      "principal_steps": [
+        7
+      ],
+      "implementation_status": "not_implemented",
+      "test_bindings": [],
+      "evidence_status": "not_supplied"
+    },
+    {
+      "id": "RF-23",
+      "description": "Supported and missing/withheld V record paths; original RF row retained",
+      "required_by_step": 7,
+      "principal_steps": [
+        7
+      ],
+      "implementation_status": "not_implemented",
+      "test_bindings": [],
+      "evidence_status": "not_supplied"
+    },
+    {
+      "id": "RF-24",
+      "description": "Supported and missing/withheld V record paths; original RF row retained",
+      "required_by_step": 7,
+      "principal_steps": [
+        7
+      ],
+      "implementation_status": "not_implemented",
+      "test_bindings": [],
+      "evidence_status": "not_supplied"
+    },
+    {
+      "id": "RF-25",
+      "description": "Supported and missing/withheld V record paths; original RF row retained",
+      "required_by_step": 7,
+      "principal_steps": [
+        7
+      ],
+      "implementation_status": "not_implemented",
+      "test_bindings": [],
+      "evidence_status": "not_supplied"
+    },
+    {
+      "id": "RF-26",
+      "description": "Supported and missing/withheld V record paths; original RF row retained",
+      "required_by_step": 7,
+      "principal_steps": [
+        7
+      ],
+      "implementation_status": "not_implemented",
+      "test_bindings": [],
+      "evidence_status": "not_supplied"
+    },
+    {
+      "id": "RF-27",
+      "description": "Supported and missing/withheld V record paths; original RF row retained",
+      "required_by_step": 7,
+      "principal_steps": [
+        7
+      ],
+      "implementation_status": "not_implemented",
+      "test_bindings": [],
+      "evidence_status": "not_supplied"
+    },
+    {
+      "id": "RF-28",
+      "description": "Supported and missing/withheld V record paths; original RF row retained",
+      "required_by_step": 7,
+      "principal_steps": [
+        7
+      ],
+      "implementation_status": "not_implemented",
+      "test_bindings": [],
+      "evidence_status": "not_supplied"
+    },
+    {
+      "id": "RF-29",
+      "description": "Supported and missing/withheld V record paths; original RF row retained",
+      "required_by_step": 7,
+      "principal_steps": [
+        7
+      ],
+      "implementation_status": "not_implemented",
+      "test_bindings": [],
+      "evidence_status": "not_supplied"
+    },
+    {
+      "id": "RF-30",
+      "description": "Supported and missing/withheld V record paths; original RF row retained",
+      "required_by_step": 7,
+      "principal_steps": [
+        7
+      ],
+      "implementation_status": "not_implemented",
+      "test_bindings": [],
+      "evidence_status": "not_supplied"
+    },
+    {
+      "id": "RF-32",
+      "description": "Supported and missing/withheld V record paths; original RF row retained",
+      "required_by_step": 7,
+      "principal_steps": [
+        7
+      ],
+      "implementation_status": "not_implemented",
+      "test_bindings": [],
+      "evidence_status": "not_supplied"
+    },
+    {
+      "id": "RF-33",
+      "description": "Supported and missing/withheld V record paths; original RF row retained",
+      "required_by_step": 7,
+      "principal_steps": [
+        7
+      ],
+      "implementation_status": "not_implemented",
+      "test_bindings": [],
+      "evidence_status": "not_supplied"
+    },
+    {
+      "id": "RF-34",
+      "description": "Supported and missing/withheld V record paths; original RF row retained",
+      "required_by_step": 7,
+      "principal_steps": [
+        7
+      ],
+      "implementation_status": "not_implemented",
+      "test_bindings": [],
+      "evidence_status": "not_supplied"
+    },
+    {
+      "id": "RF-36",
+      "description": "Supported and missing/withheld V record paths; original RF row retained",
+      "required_by_step": 7,
+      "principal_steps": [
+        7
+      ],
+      "implementation_status": "not_implemented",
+      "test_bindings": [],
+      "evidence_status": "not_supplied"
+    }
+  ],
+  "ec_requirements": [
+    {
+      "id": "EC-C01",
+      "description": "EC-001 supplemental V record/claim checks; E remains unperformed",
+      "required_by_step": 7,
+      "principal_steps": [
+        7
+      ],
+      "implementation_status": "not_implemented",
+      "test_bindings": [],
+      "evidence_status": "not_supplied"
+    },
+    {
+      "id": "EC-C02",
+      "description": "EC-001 supplemental V record/claim checks; E remains unperformed",
+      "required_by_step": 7,
+      "principal_steps": [
+        7
+      ],
+      "implementation_status": "not_implemented",
+      "test_bindings": [],
+      "evidence_status": "not_supplied"
+    },
+    {
+      "id": "EC-C03",
+      "description": "EC-001 supplemental V record/claim checks; E remains unperformed",
+      "required_by_step": 7,
+      "principal_steps": [
+        7
+      ],
+      "implementation_status": "not_implemented",
+      "test_bindings": [],
+      "evidence_status": "not_supplied"
+    },
+    {
+      "id": "EC-C04",
+      "description": "EC-001 supplemental V record/claim checks; E remains unperformed",
+      "required_by_step": 7,
+      "principal_steps": [
+        7
+      ],
+      "implementation_status": "not_implemented",
+      "test_bindings": [],
+      "evidence_status": "not_supplied"
+    },
+    {
+      "id": "EC-C05",
+      "description": "EC-001 supplemental V record/claim checks; E remains unperformed",
+      "required_by_step": 7,
+      "principal_steps": [
+        7
+      ],
+      "implementation_status": "not_implemented",
+      "test_bindings": [],
+      "evidence_status": "not_supplied"
+    },
+    {
+      "id": "EC-C06",
+      "description": "EC-001 supplemental V record/claim checks; E remains unperformed",
+      "required_by_step": 7,
+      "principal_steps": [
+        7
+      ],
+      "implementation_status": "not_implemented",
+      "test_bindings": [],
+      "evidence_status": "not_supplied"
+    },
+    {
+      "id": "EC-C07",
+      "description": "EC-001 supplemental V record/claim checks; E remains unperformed",
+      "required_by_step": 7,
+      "principal_steps": [
+        7
+      ],
+      "implementation_status": "not_implemented",
+      "test_bindings": [],
+      "evidence_status": "not_supplied"
+    },
+    {
+      "id": "EC-C08",
+      "description": "EC-001 supplemental V record/claim checks; E remains unperformed",
+      "required_by_step": 7,
+      "principal_steps": [
+        7
+      ],
+      "implementation_status": "not_implemented",
+      "test_bindings": [],
+      "evidence_status": "not_supplied"
+    }
+  ],
+  "engineering_requirements": [
+    {
+      "id": "P2-ENG-01",
+      "description": "Pinned archive, every original project file and exact remote reconciliation",
+      "required_by_step": 1,
+      "principal_steps": [
+        1
+      ],
+      "implementation_status": "implemented",
+      "test_bindings": [
+        "tests.test_phase2_gate.CatalogueTests.test_E_and_D_cannot_be_promoted",
+        "tests.test_phase2_gate.CatalogueTests.test_approved_plan_change_is_rejected",
+        "tests.test_phase2_gate.CatalogueTests.test_bad_or_duplicate_binding_lists_are_rejected",
+        "tests.test_phase2_gate.GateTests.test_passed_harness_cannot_hide_pending_remote_baseline",
+        "tests.test_phase2_gate.GateTests.test_partial_remote_file_inventory_cannot_pass"
+      ],
+      "evidence_status": "not_supplied"
+    },
+    {
+      "id": "P2-ENG-02",
+      "description": "Actual predecessor M gate and all 503 method identities retained",
+      "required_by_step": 1,
+      "principal_steps": [
+        1
+      ],
+      "implementation_status": "implemented",
+      "test_bindings": [
+        "tests.test_phase2_gate.CatalogueTests.test_original_503_methods_and_matrix_are_preserved",
+        "tests.test_phase2_gate.GateTests.test_M_gate_failure_blocks_both_scopes",
+        "tests.test_phase2_gate.GateTests.test_missing_predecessor_test_fails_even_with_nominal_M_pass"
+      ],
+      "evidence_status": "not_supplied"
+    },
+    {
+      "id": "P2-ENG-03",
+      "description": "Faithful VT/TR/RF/EC catalogue identities and E/D separation",
+      "required_by_step": 1,
+      "principal_steps": [
+        1
+      ],
+      "implementation_status": "implemented",
+      "test_bindings": [
+        "tests.test_phase2_gate.CatalogueTests.test_E_and_D_cannot_be_promoted",
+        "tests.test_phase2_gate.CatalogueTests.test_approved_plan_change_is_rejected",
+        "tests.test_phase2_gate.CatalogueTests.test_bad_or_duplicate_binding_lists_are_rejected",
+        "tests.test_phase2_gate.CatalogueTests.test_current_inherited_file_identities_match",
+        "tests.test_phase2_gate.CatalogueTests.test_implemented_without_real_bindings_is_rejected",
+        "tests.test_phase2_gate.CatalogueTests.test_json_duplicate_keys_and_nonfinite_are_refused",
+        "tests.test_phase2_gate.CatalogueTests.test_matrix_preserves_source_catalogues_and_all_26_v_obligations",
+        "tests.test_phase2_gate.CatalogueTests.test_missing_duplicate_and_renamed_v_requirements_are_rejected",
+        "tests.test_phase2_gate.CatalogueTests.test_missing_or_changed_predecessor_method_is_rejected",
+        "tests.test_phase2_gate.CatalogueTests.test_no_new_comparison_runtime_module_exists_in_step1",
+        "tests.test_phase2_gate.CatalogueTests.test_nonobject_or_unknown_matrix_version_is_controlled",
+        "tests.test_phase2_gate.CatalogueTests.test_original_503_methods_and_matrix_are_preserved",
+        "tests.test_phase2_gate.CatalogueTests.test_wrong_source_row_or_scope_is_rejected"
+      ],
+      "evidence_status": "not_supplied"
+    },
+    {
+      "id": "P2-ENG-04",
+      "description": "Current/full gates fail closed for absent, duplicate, skipped and failed evidence",
+      "required_by_step": 1,
+      "principal_steps": [
+        1
+      ],
+      "implementation_status": "implemented",
+      "test_bindings": [
+        "tests.test_phase2_gate.GateTests.test_M_gate_failure_blocks_both_scopes",
+        "tests.test_phase2_gate.GateTests.test_binding_to_unrun_method_fails",
+        "tests.test_phase2_gate.GateTests.test_blob_creation_is_not_branch_publication",
+        "tests.test_phase2_gate.GateTests.test_duplicate_discovery_or_execution_fails",
+        "tests.test_phase2_gate.GateTests.test_empty_discovery_fails_both_scopes",
+        "tests.test_phase2_gate.GateTests.test_extra_execution_record_is_rejected",
+        "tests.test_phase2_gate.GateTests.test_failure_error_skip_expected_failure_and_unexpected_success_fail",
+        "tests.test_phase2_gate.GateTests.test_missing_predecessor_test_fails_even_with_nominal_M_pass",
+        "tests.test_phase2_gate.GateTests.test_missing_stage_binding_fails_current_acceptance",
+        "tests.test_phase2_gate.GateTests.test_partial_implementation_does_not_count_as_complete",
+        "tests.test_phase2_gate.GateTests.test_partial_remote_file_inventory_cannot_pass",
+        "tests.test_phase2_gate.GateTests.test_passed_harness_cannot_hide_pending_remote_baseline",
+        "tests.test_phase2_gate.GateTests.test_pin_failure_blocks_acceptance",
+        "tests.test_phase2_gate.GateTests.test_preflight_state_is_retained_without_assuming_sync",
+        "tests.test_phase2_gate.GateTests.test_records_never_certify_E_or_owner_acceptance",
+        "tests.test_phase2_gate.GateTests.test_stage_pass_is_separate_from_full_v",
+        "tests.test_phase2_gate.GateTests.test_unexecuted_discovered_test_is_not_a_pass",
+        "tests.test_phase2_gate.GateTests.test_unknown_gate_scope_fails_explicitly",
+        "tests.test_phase2_gate.GateTests.test_wrong_repository_or_baseline_is_rejected"
+      ],
+      "evidence_status": "not_supplied"
+    },
+    {
+      "id": "P2-ENG-05",
+      "description": "Append-retained execution journal and explicit broken-history handling",
+      "required_by_step": 1,
+      "principal_steps": [
+        1
+      ],
+      "implementation_status": "implemented",
+      "test_bindings": [
+        "tests.test_phase2_gate.JournalTests.test_changed_old_result_breaks_chain",
+        "tests.test_phase2_gate.JournalTests.test_changed_or_missing_console_fails_closed",
+        "tests.test_phase2_gate.JournalTests.test_corrupt_json_is_not_overwritten",
+        "tests.test_phase2_gate.JournalTests.test_duplicate_run_refused_without_modifying_files",
+        "tests.test_phase2_gate.JournalTests.test_missing_journal_with_existing_console_is_not_reset",
+        "tests.test_phase2_gate.JournalTests.test_nonfinite_new_run_has_no_written_capture",
+        "tests.test_phase2_gate.JournalTests.test_symlink_history_is_not_followed",
+        "tests.test_phase2_gate.JournalTests.test_two_runs_retain_first_record_and_chain",
+        "tests.test_phase2_gate.JournalTests.test_write_failure_preserves_existing_history"
+      ],
+      "evidence_status": "not_supplied"
+    },
+    {
+      "id": "P2-ENG-06",
+      "description": "Real recorder outcomes, no active operations, no test-to-production dependency",
+      "required_by_step": 1,
+      "principal_steps": [
+        1
+      ],
+      "implementation_status": "implemented",
+      "test_bindings": [
+        "tests.test_phase2_gate.RecorderTests.test_annotation_records_scope_oracle_and_expected_actual",
+        "tests.test_phase2_gate.RecorderTests.test_failure_and_skip_results_are_actual_recorder_states",
+        "tests.test_phase2_gate.RecorderTests.test_gate_evaluation_performs_no_network_process_or_input_execution",
+        "tests.test_phase2_gate.RecorderTests.test_help_does_not_discover_or_execute_tests",
+        "tests.test_phase2_gate.RecorderTests.test_no_production_imports_from_phase2_test_helpers",
+        "tests.test_phase2_gate.RecorderTests.test_setup_error_is_retained_even_without_test_start"
+      ],
+      "evidence_status": "not_supplied"
+    },
+    {
+      "id": "P2-ENG-07",
+      "description": "Complete V input/method/oracle identity and current-stage reproducibility",
+      "required_by_step": 7,
+      "principal_steps": [
+        7
+      ],
+      "implementation_status": "not_implemented",
+      "test_bindings": [],
+      "evidence_status": "not_supplied"
+    },
+    {
+      "id": "P2-ENG-08",
+      "description": "Complete text-bearing A/B/C, privacy, error, correction and replay audit",
+      "required_by_step": 7,
+      "principal_steps": [
+        7
+      ],
+      "implementation_status": "not_implemented",
+      "test_bindings": [],
+      "evidence_status": "not_supplied"
+    }
+  ],
+  "stage_bindings": {
+    "1": {
+      "implementation_status": "implemented",
+      "test_bindings": [
+        "tests.test_phase2_gate.CatalogueTests.test_E_and_D_cannot_be_promoted",
+        "tests.test_phase2_gate.CatalogueTests.test_approved_plan_change_is_rejected",
+        "tests.test_phase2_gate.CatalogueTests.test_bad_or_duplicate_binding_lists_are_rejected",
+        "tests.test_phase2_gate.CatalogueTests.test_current_inherited_file_identities_match",
+        "tests.test_phase2_gate.CatalogueTests.test_implemented_without_real_bindings_is_rejected",
+        "tests.test_phase2_gate.CatalogueTests.test_json_duplicate_keys_and_nonfinite_are_refused",
+        "tests.test_phase2_gate.CatalogueTests.test_matrix_preserves_source_catalogues_and_all_26_v_obligations",
+        "tests.test_phase2_gate.CatalogueTests.test_missing_duplicate_and_renamed_v_requirements_are_rejected",
+        "tests.test_phase2_gate.CatalogueTests.test_missing_or_changed_predecessor_method_is_rejected",
+        "tests.test_phase2_gate.CatalogueTests.test_no_new_comparison_runtime_module_exists_in_step1",
+        "tests.test_phase2_gate.CatalogueTests.test_nonobject_or_unknown_matrix_version_is_controlled",
+        "tests.test_phase2_gate.CatalogueTests.test_original_503_methods_and_matrix_are_preserved",
+        "tests.test_phase2_gate.CatalogueTests.test_wrong_source_row_or_scope_is_rejected",
+        "tests.test_phase2_gate.GateTests.test_M_gate_failure_blocks_both_scopes",
+        "tests.test_phase2_gate.GateTests.test_binding_to_unrun_method_fails",
+        "tests.test_phase2_gate.GateTests.test_blob_creation_is_not_branch_publication",
+        "tests.test_phase2_gate.GateTests.test_duplicate_discovery_or_execution_fails",
+        "tests.test_phase2_gate.GateTests.test_empty_discovery_fails_both_scopes",
+        "tests.test_phase2_gate.GateTests.test_extra_execution_record_is_rejected",
+        "tests.test_phase2_gate.GateTests.test_failure_error_skip_expected_failure_and_unexpected_success_fail",
+        "tests.test_phase2_gate.GateTests.test_missing_predecessor_test_fails_even_with_nominal_M_pass",
+        "tests.test_phase2_gate.GateTests.test_missing_stage_binding_fails_current_acceptance",
+        "tests.test_phase2_gate.GateTests.test_partial_implementation_does_not_count_as_complete",
+        "tests.test_phase2_gate.GateTests.test_partial_remote_file_inventory_cannot_pass",
+        "tests.test_phase2_gate.GateTests.test_passed_harness_cannot_hide_pending_remote_baseline",
+        "tests.test_phase2_gate.GateTests.test_pin_failure_blocks_acceptance",
+        "tests.test_phase2_gate.GateTests.test_preflight_state_is_retained_without_assuming_sync",
+        "tests.test_phase2_gate.GateTests.test_records_never_certify_E_or_owner_acceptance",
+        "tests.test_phase2_gate.GateTests.test_stage_pass_is_separate_from_full_v",
+        "tests.test_phase2_gate.GateTests.test_unexecuted_discovered_test_is_not_a_pass",
+        "tests.test_phase2_gate.GateTests.test_unknown_gate_scope_fails_explicitly",
+        "tests.test_phase2_gate.GateTests.test_wrong_repository_or_baseline_is_rejected",
+        "tests.test_phase2_gate.JournalTests.test_changed_old_result_breaks_chain",
+        "tests.test_phase2_gate.JournalTests.test_changed_or_missing_console_fails_closed",
+        "tests.test_phase2_gate.JournalTests.test_corrupt_json_is_not_overwritten",
+        "tests.test_phase2_gate.JournalTests.test_duplicate_run_refused_without_modifying_files",
+        "tests.test_phase2_gate.JournalTests.test_missing_journal_with_existing_console_is_not_reset",
+        "tests.test_phase2_gate.JournalTests.test_nonfinite_new_run_has_no_written_capture",
+        "tests.test_phase2_gate.JournalTests.test_symlink_history_is_not_followed",
+        "tests.test_phase2_gate.JournalTests.test_two_runs_retain_first_record_and_chain",
+        "tests.test_phase2_gate.JournalTests.test_write_failure_preserves_existing_history",
+        "tests.test_phase2_gate.RecorderTests.test_annotation_records_scope_oracle_and_expected_actual",
+        "tests.test_phase2_gate.RecorderTests.test_failure_and_skip_results_are_actual_recorder_states",
+        "tests.test_phase2_gate.RecorderTests.test_gate_evaluation_performs_no_network_process_or_input_execution",
+        "tests.test_phase2_gate.RecorderTests.test_help_does_not_discover_or_execute_tests",
+        "tests.test_phase2_gate.RecorderTests.test_no_production_imports_from_phase2_test_helpers",
+        "tests.test_phase2_gate.RecorderTests.test_setup_error_is_retained_even_without_test_start"
+      ]
+    },
+    "2": {
+      "implementation_status": "not_implemented",
+      "test_bindings": []
+    },
+    "3": {
+      "implementation_status": "not_implemented",
+      "test_bindings": []
+    },
+    "4": {
+      "implementation_status": "not_implemented",
+      "test_bindings": []
+    },
+    "5": {
+      "implementation_status": "not_implemented",
+      "test_bindings": []
+    },
+    "6": {
+      "implementation_status": "not_implemented",
+      "test_bindings": []
+    },
+    "7": {
+      "implementation_status": "not_implemented",
+      "test_bindings": []
+    },
+    "8": {
+      "implementation_status": "not_implemented",
+      "test_bindings": []
+    }
+  },
+  "limits": {
+    "test_timeout_seconds": 120
+  },
+  "evidence_status": "not_supplied",
+  "deferred_status": "deferred"
+}

@@ -1,0 +1,474 @@
+{
+  "project": "StructDet-Bench",
+  "phase": 2,
+  "step": 1,
+  "status": "local_harness_passed_remote_preflight_pending",
+  "owner_instruction": "批准，开始",
+  "approved_plan_sha256": "17452ec510cdd31ee960806c6140142dcb411a76ebd87aa138afbdbc6ec639cc",
+  "predecessor_original_project_files": [
+    {
+      "path": "PHASE_1_COMPLETION.md",
+      "expected_sha256": "8a93f1f0f3a31740c68b1d4f5661e073f7a8798cf47a7e1696207ccd579e09b5",
+      "actual_sha256": "8a93f1f0f3a31740c68b1d4f5661e073f7a8798cf47a7e1696207ccd579e09b5",
+      "matches": true
+    },
+    {
+      "path": "STRUCTURAL_CLASS_CONTRACT.md",
+      "expected_sha256": "00ba09dd879f5fe02a3302a6f1ad36bda1c6b7e2723562f5f62ec85fed125328",
+      "actual_sha256": "00ba09dd879f5fe02a3302a6f1ad36bda1c6b7e2723562f5f62ec85fed125328",
+      "matches": true
+    },
+    {
+      "path": "BASELINE_UPDATE_EC_001.md",
+      "expected_sha256": "c4a876c86b97bec68ab2691704fe37e40bbee16a94bfdf3a08c783e450c982a2",
+      "actual_sha256": "c4a876c86b97bec68ab2691704fe37e40bbee16a94bfdf3a08c783e450c982a2",
+      "matches": true
+    },
+    {
+      "path": "THEORY_TO_CODE_TRACEABILITY.md",
+      "expected_sha256": "1b94c402804c1167bfc5c04b45a86364ac5061bc41273b87a36f184991bbeec2",
+      "actual_sha256": "1b94c402804c1167bfc5c04b45a86364ac5061bc41273b87a36f184991bbeec2",
+      "matches": true
+    },
+    {
+      "path": "LICENSE",
+      "expected_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "actual_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "matches": true
+    },
+    {
+      "path": "VALIDATION_AND_FALSIFICATION.md",
+      "expected_sha256": "6aaa5b01290d3c6b9746f20d47c2092c038587d72d7e090ee3ad73438794ef00",
+      "actual_sha256": "6aaa5b01290d3c6b9746f20d47c2092c038587d72d7e090ee3ad73438794ef00",
+      "matches": true
+    },
+    {
+      "path": "EVALUATION_CLOSURE_ADDENDUM.md",
+      "expected_sha256": "31d2387ff2867e67e07adf60bca723b6783d0c3155b905d5477d2f844e1d9ce8",
+      "actual_sha256": "31d2387ff2867e67e07adf60bca723b6783d0c3155b905d5477d2f844e1d9ce8",
+      "matches": true
+    },
+    {
+      "path": "NOTICE",
+      "expected_sha256": "2c081bbc0c7d18ec8d7865bd679a2a55aebd7b578ad9cfe1aec23b3a703d6743",
+      "actual_sha256": "2c081bbc0c7d18ec8d7865bd679a2a55aebd7b578ad9cfe1aec23b3a703d6743",
+      "matches": true
+    },
+    {
+      "path": "PHASE_0_PLAN.md",
+      "expected_sha256": "5df37f3fef1d012d462a116d7839909c9379dfe6d59a1b3356cae004bcfac6a4",
+      "actual_sha256": "5df37f3fef1d012d462a116d7839909c9379dfe6d59a1b3356cae004bcfac6a4",
+      "matches": true
+    },
+    {
+      "path": "THEORY_SOURCES.md",
+      "expected_sha256": "33554654857da067870221d5d882fb5ef06cf005b8624079dda986085068d83e",
+      "actual_sha256": "33554654857da067870221d5d882fb5ef06cf005b8624079dda986085068d83e",
+      "matches": true
+    },
+    {
+      "path": "PHASE_1_PLAN.md",
+      "expected_sha256": "4a4137d1fa444c212af71740e439624c341ed485584ee3878e358f1e9424f704",
+      "actual_sha256": "4a4137d1fa444c212af71740e439624c341ed485584ee3878e358f1e9424f704",
+      "matches": true
+    },
+    {
+      "path": "PROJECT_SCOPE.md",
+      "expected_sha256": "2eec02825c8df4281cc538d00dcb809907dc2eb8a2b1b73b597cbab17d975a11",
+      "actual_sha256": "2eec02825c8df4281cc538d00dcb809907dc2eb8a2b1b73b597cbab17d975a11",
+      "matches": true
+    },
+    {
+      "path": "EVALUATION_INTEGRITY.md",
+      "expected_sha256": "50c5529c16164ee53e4d99502ed1ec24202f36152b36281870bf285185672dc3",
+      "actual_sha256": "50c5529c16164ee53e4d99502ed1ec24202f36152b36281870bf285185672dc3",
+      "matches": true
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "expected_sha256": "4863c5c796e81a07b944ba7725e0ebca0769a94a0f4add6fed38f4a71a48a1a7",
+      "actual_sha256": "4863c5c796e81a07b944ba7725e0ebca0769a94a0f4add6fed38f4a71a48a1a7",
+      "matches": true
+    },
+    {
+      "path": "INPUT_FORMAT.md",
+      "expected_sha256": "a1ede587cea09cfb231bb62980fe183276d24b4166524239bbcb5f040add4b97",
+      "actual_sha256": "a1ede587cea09cfb231bb62980fe183276d24b4166524239bbcb5f040add4b97",
+      "matches": true
+    },
+    {
+      "path": "LICENSING_NOTES.md",
+      "expected_sha256": "343487308d9f27f9b1869edadf1810a9f143a27d0a01277f00e2802d7a847bae",
+      "actual_sha256": "343487308d9f27f9b1869edadf1810a9f143a27d0a01277f00e2802d7a847bae",
+      "matches": true
+    },
+    {
+      "path": "README.md",
+      "expected_sha256": "e1235a3662224073f43722a23dd1afad23b70624c97ee0ac17055b4bdc07ef32",
+      "actual_sha256": "e1235a3662224073f43722a23dd1afad23b70624c97ee0ac17055b4bdc07ef32",
+      "matches": true
+    },
+    {
+      "path": "DEFINITIONS_AND_UNITS.md",
+      "expected_sha256": "a3da3e356a21f59468178050944baf58787edd65204fbf40b3b1742cd38104ab",
+      "actual_sha256": "a3da3e356a21f59468178050944baf58787edd65204fbf40b3b1742cd38104ab",
+      "matches": true
+    },
+    {
+      "path": "UNRESOLVED_DECISIONS.md",
+      "expected_sha256": "5539ebbf859d0d423845fceb8b9ceda065f05e202d86d2ae662912aa2632a412",
+      "actual_sha256": "5539ebbf859d0d423845fceb8b9ceda065f05e202d86d2ae662912aa2632a412",
+      "matches": true
+    },
+    {
+      "path": "PHASE_0_APPROVAL.md",
+      "expected_sha256": "0d09da04ffd07568b1657ebc92c9b46fc09a489b9dde843fb1b424d048213db7",
+      "actual_sha256": "0d09da04ffd07568b1657ebc92c9b46fc09a489b9dde843fb1b424d048213db7",
+      "matches": true
+    },
+    {
+      "path": "METRICS_SPEC.md",
+      "expected_sha256": "23b45934e87767ca87e56b97aa4e1d1abdd49e27187d0b9c5a336ca516a96edb",
+      "actual_sha256": "23b45934e87767ca87e56b97aa4e1d1abdd49e27187d0b9c5a336ca516a96edb",
+      "matches": true
+    },
+    {
+      "path": "pyproject.toml",
+      "expected_sha256": "18957799ac77c5e31608cc60fc24f7af79c908a5956419e0f0b8a80b85226c98",
+      "actual_sha256": "18957799ac77c5e31608cc60fc24f7af79c908a5956419e0f0b8a80b85226c98",
+      "matches": true
+    },
+    {
+      "path": "HERO_BENCHMARK_SPEC.md",
+      "expected_sha256": "d1a0849d888a35ae3c9bd552bb920ee46417b7eeb4f8b687f8b5825e6fb851b2",
+      "actual_sha256": "d1a0849d888a35ae3c9bd552bb920ee46417b7eeb4f8b687f8b5825e6fb851b2",
+      "matches": true
+    },
+    {
+      "path": ".gitignore",
+      "expected_sha256": "b19f3c2b02ca972990c0842c2c92a89a059d9b100003957d0547f7e73e78f67b",
+      "actual_sha256": "b19f3c2b02ca972990c0842c2c92a89a059d9b100003957d0547f7e73e78f67b",
+      "matches": true
+    },
+    {
+      "path": "LICENSES/Apache-2.0.txt",
+      "expected_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "actual_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "matches": true
+    },
+    {
+      "path": "LICENSES/CC-BY-4.0.txt",
+      "expected_sha256": "d2c7c5d4b9d5ef1b3a2fa90426df628fb5075c5b077954387df56d94562a6031",
+      "actual_sha256": "d2c7c5d4b9d5ef1b3a2fa90426df628fb5075c5b077954387df56d94562a6031",
+      "matches": true
+    },
+    {
+      "path": "tests/test_populations.py",
+      "expected_sha256": "03fbc487cf4efa20c8517d043af6c95d14f43aee96b77730259881c88d72f353",
+      "actual_sha256": "03fbc487cf4efa20c8517d043af6c95d14f43aee96b77730259881c88d72f353",
+      "matches": true
+    },
+    {
+      "path": "tests/test_reporting.py",
+      "expected_sha256": "1e4d5c7922e2b1b8f149ceb3f29b0edf1e7ca09d314f92f9712619288edcafad",
+      "actual_sha256": "1e4d5c7922e2b1b8f149ceb3f29b0edf1e7ca09d314f92f9712619288edcafad",
+      "matches": true
+    },
+    {
+      "path": "tests/test_local_io.py",
+      "expected_sha256": "181f57cde6004445ee42aa34030ed136ebd15a504053ff1c7d9d9c7476e029af",
+      "actual_sha256": "181f57cde6004445ee42aa34030ed136ebd15a504053ff1c7d9d9c7476e029af",
+      "matches": true
+    },
+    {
+      "path": "tests/test_pipeline.py",
+      "expected_sha256": "ecb94c85dc736a73417ab65b0cde8da357ea894b4a8941da7d733f7e4bf5a1ce",
+      "actual_sha256": "ecb94c85dc736a73417ab65b0cde8da357ea894b4a8941da7d733f7e4bf5a1ce",
+      "matches": true
+    },
+    {
+      "path": "tests/test_records.py",
+      "expected_sha256": "a8d724f37c22a8a5fba481b7d3c169cfcbeedf36d81ad4a9433ca1073ee298eb",
+      "actual_sha256": "a8d724f37c22a8a5fba481b7d3c169cfcbeedf36d81ad4a9433ca1073ee298eb",
+      "matches": true
+    },
+    {
+      "path": "tests/test_metrics.py",
+      "expected_sha256": "822ec7812389e257f8cb8c9390312d2c1be051c6a4af2e843d82b02254f1750d",
+      "actual_sha256": "822ec7812389e257f8cb8c9390312d2c1be051c6a4af2e843d82b02254f1750d",
+      "matches": true
+    },
+    {
+      "path": "tests/helpers.py",
+      "expected_sha256": "935f6cd9b5d34637da2a1b441152b5ce9e14467c4c8b2b71db8416291494d539",
+      "actual_sha256": "935f6cd9b5d34637da2a1b441152b5ce9e14467c4c8b2b71db8416291494d539",
+      "matches": true
+    },
+    {
+      "path": "tests/test_security.py",
+      "expected_sha256": "07ad26d8e085f1c66696af863ca32ffb6dcb47f9af5e6a4226909d4736a28fa7",
+      "actual_sha256": "07ad26d8e085f1c66696af863ca32ffb6dcb47f9af5e6a4226909d4736a28fa7",
+      "matches": true
+    },
+    {
+      "path": "tests/__init__.py",
+      "expected_sha256": "3b6b6e7d83977fa4c361010646119a42e94baca2cf4247acae03a2bea83206ea",
+      "actual_sha256": "3b6b6e7d83977fa4c361010646119a42e94baca2cf4247acae03a2bea83206ea",
+      "matches": true
+    },
+    {
+      "path": "tests/test_integrity_records.py",
+      "expected_sha256": "261d9ec0f539a2311422f57c7378f7c5e1ee529fadfa6bff5d7fd0825e82c34b",
+      "actual_sha256": "261d9ec0f539a2311422f57c7378f7c5e1ee529fadfa6bff5d7fd0825e82c34b",
+      "matches": true
+    },
+    {
+      "path": "tests/phase1_matrix.json",
+      "expected_sha256": "aea567fadfce3befa7c47a133e5bdf4cc27af413e16daddccfc405b67aacd1cf",
+      "actual_sha256": "aea567fadfce3befa7c47a133e5bdf4cc27af413e16daddccfc405b67aacd1cf",
+      "matches": true
+    },
+    {
+      "path": "tests/test_inventory.py",
+      "expected_sha256": "76b6a6b35a8c805ac4de7194b96db8818e618dd7123565b0e27b5278c3c13581",
+      "actual_sha256": "76b6a6b35a8c805ac4de7194b96db8818e618dd7123565b0e27b5278c3c13581",
+      "matches": true
+    },
+    {
+      "path": "tests/test_scaffold.py",
+      "expected_sha256": "9fc0ef5f8cc9642b3b98511b90f26ebb82e6519c7c0c2752d3af4e363ece40fc",
+      "actual_sha256": "9fc0ef5f8cc9642b3b98511b90f26ebb82e6519c7c0c2752d3af4e363ece40fc",
+      "matches": true
+    },
+    {
+      "path": "tests/test_evidence.py",
+      "expected_sha256": "1ca53e369b0b5946a6303b9f58ee9a01c22f470ebfc5e3b53ce39268b2a14f8e",
+      "actual_sha256": "1ca53e369b0b5946a6303b9f58ee9a01c22f470ebfc5e3b53ce39268b2a14f8e",
+      "matches": true
+    },
+    {
+      "path": "tools/run_phase1_checks.py",
+      "expected_sha256": "a187a0d676879341ca982cc36a16c6505a0f56bed3f08a64d2a7ffb6f5c6a68e",
+      "actual_sha256": "a187a0d676879341ca982cc36a16c6505a0f56bed3f08a64d2a7ffb6f5c6a68e",
+      "matches": true
+    },
+    {
+      "path": "examples/sorting_reference_eight.json",
+      "expected_sha256": "f8fd72ee7c186fa16cc6f6706ace159d090e259ba73a979d743b0863c8a2950a",
+      "actual_sha256": "f8fd72ee7c186fa16cc6f6706ace159d090e259ba73a979d743b0863c8a2950a",
+      "matches": true
+    },
+    {
+      "path": "structdet_bench/metrics.py",
+      "expected_sha256": "f4bbe94e755d2870cbf07c4488834aaa29d2adba16270c30f9549b23f4f69ff4",
+      "actual_sha256": "f4bbe94e755d2870cbf07c4488834aaa29d2adba16270c30f9549b23f4f69ff4",
+      "matches": true
+    },
+    {
+      "path": "structdet_bench/populations.py",
+      "expected_sha256": "33d53b4698bfe69f9a2ae7acd5532e349d3db7773a45b7533e7378c3ee9044f1",
+      "actual_sha256": "33d53b4698bfe69f9a2ae7acd5532e349d3db7773a45b7533e7378c3ee9044f1",
+      "matches": true
+    },
+    {
+      "path": "structdet_bench/cli.py",
+      "expected_sha256": "43dd287b7dcc77335365ad730609229ffd663fbdfc7b231dd5d10eb5e8856de8",
+      "actual_sha256": "43dd287b7dcc77335365ad730609229ffd663fbdfc7b231dd5d10eb5e8856de8",
+      "matches": true
+    },
+    {
+      "path": "structdet_bench/__main__.py",
+      "expected_sha256": "5602a3ab022945fc3b93d4c83752937071e700eab540ff491b55444251ba3bf8",
+      "actual_sha256": "5602a3ab022945fc3b93d4c83752937071e700eab540ff491b55444251ba3bf8",
+      "matches": true
+    },
+    {
+      "path": "structdet_bench/evidence.py",
+      "expected_sha256": "bdf8e3f1c7c190dcb0052202e2d90ed8dbf1a5c00826c7b5c784b1f96026fa61",
+      "actual_sha256": "bdf8e3f1c7c190dcb0052202e2d90ed8dbf1a5c00826c7b5c784b1f96026fa61",
+      "matches": true
+    },
+    {
+      "path": "structdet_bench/__init__.py",
+      "expected_sha256": "43298db9b6b48995796b333d906755f72426a57bd1b60bdb25a7e26ee4489b4e",
+      "actual_sha256": "43298db9b6b48995796b333d906755f72426a57bd1b60bdb25a7e26ee4489b4e",
+      "matches": true
+    },
+    {
+      "path": "structdet_bench/pipeline.py",
+      "expected_sha256": "e2788f8349f6721faa89025435b14310727f302ba670de628afab5c0fc7140e6",
+      "actual_sha256": "e2788f8349f6721faa89025435b14310727f302ba670de628afab5c0fc7140e6",
+      "matches": true
+    },
+    {
+      "path": "structdet_bench/local_io.py",
+      "expected_sha256": "2e38fa7a23c398488a6691a47511526dc26c0109ea048bc85baa7bcceabb81f3",
+      "actual_sha256": "2e38fa7a23c398488a6691a47511526dc26c0109ea048bc85baa7bcceabb81f3",
+      "matches": true
+    },
+    {
+      "path": "structdet_bench/reporting.py",
+      "expected_sha256": "7214af51dad2e8bfaa92f4c17b09946b487e07c41248961212cc380a5ddd6361",
+      "actual_sha256": "7214af51dad2e8bfaa92f4c17b09946b487e07c41248961212cc380a5ddd6361",
+      "matches": true
+    },
+    {
+      "path": "structdet_bench/contracts.py",
+      "expected_sha256": "a9d88b10d13afa0ddc967804d90b9ac48679eaf45e9aed5d5ead16880e93440a",
+      "actual_sha256": "a9d88b10d13afa0ddc967804d90b9ac48679eaf45e9aed5d5ead16880e93440a",
+      "matches": true
+    },
+    {
+      "path": "structdet_bench/records.py",
+      "expected_sha256": "c34bacbd1f0c7db490b596ff6334e8fe44c3d9425cbcaeb8473a0e99e0620046",
+      "actual_sha256": "c34bacbd1f0c7db490b596ff6334e8fe44c3d9425cbcaeb8473a0e99e0620046",
+      "matches": true
+    },
+    {
+      "path": "structdet_bench/inventory.py",
+      "expected_sha256": "c9f03643944d3096aa276bd6bebc52df49cb9b907af254a317a843fb7c72d554",
+      "actual_sha256": "c9f03643944d3096aa276bd6bebc52df49cb9b907af254a317a843fb7c72d554",
+      "matches": true
+    },
+    {
+      "path": "examples/hero_hf00/evidence.jsonl",
+      "expected_sha256": "f1944e7642e57978bb8603b534bc38b15b61189345e46e7f1436410db723f966",
+      "actual_sha256": "f1944e7642e57978bb8603b534bc38b15b61189345e46e7f1436410db723f966",
+      "matches": true
+    },
+    {
+      "path": "examples/hero_hf00/records.jsonl",
+      "expected_sha256": "a541b14061296e716056788c8354b9c3d97a34cdb7064cae310c0eb5df9d7535",
+      "actual_sha256": "a541b14061296e716056788c8354b9c3d97a34cdb7064cae310c0eb5df9d7535",
+      "matches": true
+    },
+    {
+      "path": "examples/hero_hf00/bundle.json",
+      "expected_sha256": "24660f96852e3fa14c933906fe2dfa904d5ca2a1cefc2cadd8d7fbfb51c77202",
+      "actual_sha256": "24660f96852e3fa14c933906fe2dfa904d5ca2a1cefc2cadd8d7fbfb51c77202",
+      "matches": true
+    },
+    {
+      "path": "examples/hero_hf00/expected.json",
+      "expected_sha256": "01649df89ea1bbc0c3201508b516112ad3ca4c6bfd971ac5b624eef95fb8b346",
+      "actual_sha256": "01649df89ea1bbc0c3201508b516112ad3ca4c6bfd971ac5b624eef95fb8b346",
+      "matches": true
+    },
+    {
+      "path": "artifacts/phase1/test_output.txt",
+      "expected_sha256": "44cfd1fba3fce0bb6628ff8014cfa1aa59ea311bf900cd7ece45c57348664041",
+      "actual_sha256": "44cfd1fba3fce0bb6628ff8014cfa1aa59ea311bf900cd7ece45c57348664041",
+      "matches": true
+    },
+    {
+      "path": "artifacts/phase1/test_results.json",
+      "expected_sha256": "a5e05b1451f76f71c98b3d4185f3bb1ea1473a0a0352763aeb9f99a012fa677b",
+      "actual_sha256": "a5e05b1451f76f71c98b3d4185f3bb1ea1473a0a0352763aeb9f99a012fa677b",
+      "matches": true
+    },
+    {
+      "path": "artifacts/phase1/hero_hf00/run_manifest.json",
+      "expected_sha256": "5fa3c5790d5d8c2180987383d2463aa56b2a0a005eabba7bf2bb23d5af40e388",
+      "actual_sha256": "5fa3c5790d5d8c2180987383d2463aa56b2a0a005eabba7bf2bb23d5af40e388",
+      "matches": true
+    },
+    {
+      "path": "artifacts/phase1/hero_hf00/report.md",
+      "expected_sha256": "fd4bda949d86fc82dc9c6e577122f1aec2b08725a433a6fa884a94f3a69700ef",
+      "actual_sha256": "fd4bda949d86fc82dc9c6e577122f1aec2b08725a433a6fa884a94f3a69700ef",
+      "matches": true
+    },
+    {
+      "path": "artifacts/phase1/hero_hf00/report.json",
+      "expected_sha256": "6cb3334506af4315bf56fd06633c4ef91402d5c1bb76aa9ebf85bb286124f4d1",
+      "actual_sha256": "6cb3334506af4315bf56fd06633c4ef91402d5c1bb76aa9ebf85bb286124f4d1",
+      "matches": true
+    },
+    {
+      "path": "tests/fixtures/record_cases.json",
+      "expected_sha256": "866df0880d3ab11281f71aefe2ba13200f84acec9b93063b9bdb27f5a93a26a1",
+      "actual_sha256": "866df0880d3ab11281f71aefe2ba13200f84acec9b93063b9bdb27f5a93a26a1",
+      "matches": true
+    },
+    {
+      "path": "tests/fixtures/arithmetic_oracles.json",
+      "expected_sha256": "8ad46461b17f0128309cb37aafb9b8ce77d72a89b3fb589c65068f2a30cd65cf",
+      "actual_sha256": "8ad46461b17f0128309cb37aafb9b8ce77d72a89b3fb589c65068f2a30cd65cf",
+      "matches": true
+    },
+    {
+      "path": "tests/fixtures/hero_variants.json",
+      "expected_sha256": "2c60560f69673acce60f4f27e0e7943ca9aebd3feb3ccbed6b22c1b2603ab57c",
+      "actual_sha256": "2c60560f69673acce60f4f27e0e7943ca9aebd3feb3ccbed6b22c1b2603ab57c",
+      "matches": true
+    },
+    {
+      "path": "tests/fixtures/integrity_cases.json",
+      "expected_sha256": "d2939da77b6ae32adc33c50b0f19ab86d580b11ac90e80d6f0dc0e52ecc7f3e6",
+      "actual_sha256": "d2939da77b6ae32adc33c50b0f19ab86d580b11ac90e80d6f0dc0e52ecc7f3e6",
+      "matches": true
+    }
+  ],
+  "original_files_unchanged": 67,
+  "new_implementation_paths": [
+    "tests/phase2_helpers.py",
+    "tests/phase2_matrix.json",
+    "tests/test_phase2_gate.py",
+    "tools/run_phase2_checks.py"
+  ],
+  "new_runtime_modules": [],
+  "predecessor_replay_tests": 503,
+  "new_test_methods": 47,
+  "complete_regression_tests": 550,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 0,
+  "current_gate_exit": 1,
+  "full_phase2_gate_exit": 1,
+  "M_gate_passed": true,
+  "V_obligations_not_implemented": 26,
+  "current_gate_blocker": "Exact Phase 1 remote synchronization and complete read-back have not been completed.",
+  "source_catalogue_counts": {
+    "VT": 54,
+    "TR": 40,
+    "RF": 36,
+    "EC": 8
+  },
+  "V_associated_catalogue_counts": {
+    "VT": 26,
+    "TR": 27,
+    "RF": 29,
+    "EC": 8
+  },
+  "environment": {
+    "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.41"
+  },
+  "initial_local_fix": {
+    "id": "P2-S1-F01",
+    "test": "tests.test_phase2_gate.JournalTests.test_write_failure_preserves_existing_history",
+    "finding": "A failed fsync could leave an unregistered temporary file. The temporary path is now recorded before writing/fsync, so the existing finally cleanup removes it.",
+    "changed_path": "tools/run_phase2_checks.py",
+    "initial_log": "verification/harness_initial_console.txt",
+    "existing_Phase1_files_changed": false
+  },
+  "new_authorization_required_for_current_scope": false,
+  "phase2_step2_started": false,
+  "model_calls": 0,
+  "candidate_programs_executed": 0,
+  "independent_empirical_validation_performed": false,
+  "github_actions_run": false,
+  "package_published": false,
+  "publication_note": "A dedicated phase2-baseline-sync branch was created from the observed Step 6 commit and read back. No implementation files or existing branch were updated. Exact remote baseline is still pending.",
+  "self_hash_policy": "This manifest intentionally has no digest of itself or of an archive containing itself.",
+  "archive_replay": {
+    "tests": 550,
+    "passed": 550,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0,
+    "exit_code": 0,
+    "command": "python -B -S -m unittest discover -s tests -t . -v",
+    "console_ref": "verification/archive_replay_console.txt"
+  }
+}

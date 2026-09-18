@@ -1,15 +1,17 @@
 # Input and Evidence Format
 
-Version: 0.3. Input schema: `0.1`. Record envelope: `0.1`. Evidence payload: `0.1`.
+Version: 0.4. Input schema: `0.1`. Record envelope: `0.1`. Evidence payload: `0.1`.
 
-This document specifies the implemented **passive input layer**. Read it with
-`PHASE_1_PLAN.md`, the frozen Phase 0 contracts, and
-`EVALUATION_CLOSURE_ADDENDUM.md`. None of those scientific contracts is changed.
-The module accepts records and inspects their shape, identity and byte references.
-The passive loader does not admit evidence. Step 3 provides a separate
-record-qualified admission pass. The loading and evidence APIs do not classify programs or construct populations.
-Step 4 adds the separate inventory/population APIs in Section 11. No API computes
-entropy, SCI, a model comparison, or a benchmark report at this step.
+This document describes the current passive input, evidence, inventory, metric and
+report interfaces through Phase 1 Step 7. Read it with `PHASE_1_PLAN.md`, the frozen
+Phase 0 contracts, and `EVALUATION_CLOSURE_ADDENDUM.md`. Those contracts retain their
+approved bytes. Physical support extensions below encode already approved
+requirements; they do not certify an imported assertion or add a new estimator.
+
+The loader reads and checks records. The separate evidence pass decides record-
+qualified admission. Inventory and metric components operate on the accepted
+scope. `validate` and `analyze` are available through the CLI; Section 12 describes
+the report path. Section 13 documents the Step 7 integrated record checks.
 
 ## 1. Interface and limits
 
@@ -31,8 +33,9 @@ limits. Neither property establishes scientific validity or analysis readiness.
 A shape-valid record may have unresolved references, unknown metadata or unsupported
 assertions. Evidence admission belongs to Step 3.
 
-`python -m structdet_bench` still offers only help and version commands. The
-`validate` and `analyze` CLI commands belong to Step 6 and are unavailable here.
+`python -m structdet_bench` provides help, version, `validate` and `analyze`.
+The input loader remains passive; exposing a CLI does not authorize execution of
+candidate programs or automatic retrieval of external evidence.
 
 | Bound | Default |
 |---|---|
@@ -751,3 +754,94 @@ The complete current regression contains 450 passing tests with no skips.
 The end-to-end Step 6 path is implemented; full Phase 1 integration and final
 completion remain Steps 7 and 8. This amendment does not authorize those steps
 or change any frozen scientific contract.
+
+
+## 13. Step 7 integrated evidence-record checks
+
+These are physical encodings of HERO sections 5, 7 and 12, EI and EC-001. They
+apply when the corresponding supplied record claims the relevant coverage. They
+are not prerequisites for the clearly stipulated HF-00 software fixture.
+
+### 13.1 Ordered functional-suite manifest
+
+A `domain_suite` payload for `sorting_behavior` can carry
+`extensions.functional_manifest` with `version: "0.1"`, `tests`, and `sha256`.
+Each test row has `test_id`, `segment`, and the exact integer `input` list. The
+canonical digest is SHA-256 of ASCII-escaped, key-sorted compact JSON of `tests`
+plus one newline. The required 8,995 rows are the prescribed 781 V-SMALL, 18
+V-SHAPE, 8,192 V-KEY and four V-STAGE cases, in their registered order.
+
+The encoding uses `V-SMALL-0001` through `V-SMALL-0781`, `V-SHAPE-01` through
+`V-SHAPE-18`, `V-KEY-0001` through `V-KEY-8192`, and `V-STAGE-01` through
+`V-STAGE-04`. These suffixes are project serialization choices. The input
+constructions and four witnesses come from the frozen HERO specification. Equal
+input lists with different test IDs retain their separate purposes. Boolean values
+cannot stand in for integer entries. Missing, repeated, reordered or modified rows
+are unresolved, with their actual count and reason retained.
+
+The toolkit reconstructs the expected input descriptions only to check the
+supplied manifest. It does not execute any program against them.
+
+### 13.2 Imported runtime and property observations
+
+A sorting `domain_result` identifies the exact realization hash and suite-manifest
+hash. Its known `observations` value is a record with `tested_ids`,
+`runtime_status`, `property_checks`, and, where needed, `counterexample`.
+A claimed pass requires coverage of every required ID, `runtime_status: completed`
+and six explicitly true property checks: `fresh_plain_list`, `plain_integers`,
+`length_preserved`, `nondecreasing`, `multiplicity_preserved`, `input_unchanged`.
+The original full-suite denominator is retained.
+
+A decisive imported failure may occur before the suite is complete. Its
+counterexample must identify a tested case, violated property, explicit
+`observed_violation`, exact subject hash and supporting evidence references.
+Syntax, prohibited capability, exception and output-protocol violations can be
+recorded explicitly. Timeout, memory limit, harness, containment and oracle error
+remain different outcomes and cannot alone establish invalidity or nontermination.
+
+The known environment record carries `containment_status`, `oracle_reviewer_refs`
+and `accommodated_class_ids`. A complete imported validity claim needs the declared
+passed containment check, resolvable oracle review and all eight reference
+families. These are inspections of supplied records, not independent execution or
+proof of the environment's behavior. Mock/fixture evidence on a decisive child path
+cannot be promoted by a nonmock parent declaration. Missing essential evidence
+withholds the affected judgment; it does not erase separately supported samples.
+
+### 13.3 Reference and audit coverage
+
+A supplied `domain_suite` may carry `extensions.reference_review` with
+`descriptor_pairs`, `witnesses` and `core_roles`. The check inspects all 28
+unordered descriptor pairs, the four exact W-01 through W-04 witness inputs and
+the 32 prescribed core roles. Core IDs are `CORE-<family without SORT->-A/B/D`
+and `CORE-X01` through `CORE-X08`. Every core entry links its distinct material,
+assignment annotations and validity annotations. Positive A/B entries identify at
+least two witnesses. Initial human identities, exposure and target/rubric agreement
+are checked as records. Unresolved pair overlap and missing material remain visible.
+A complete mock record arrangement remains mock and supplies no actual program,
+expert annotation or independently validated taxonomy.
+
+A `sampling_plan` may carry `extensions.hero_audit_positions` and
+`extensions.hero_block_ids`. The latter declares the ordered six prompt-block IDs.
+The former has 72 rows, each with `block_index`, `condition_index`, `group_index`,
+`within_group_index`, and tagged `sample_ref`. Indices are one-based; conditions
+1, 2 and 3 refer to A, B and C. The selected within-group position is exactly
+`1 + ((block_index + condition_index + group_index - 3) % 5)`.
+The sample's cell, group, attempt and position must agree. A missing opportunity
+cannot be filled by a repeated sample or a targeted extra review. These records
+add zero model observations. Generic audit records must agree with their actual
+linked sampling plan, and reviewed items require corresponding annotation records.
+
+### 13.4 Report and gate interpretation
+
+Public reports retain typed source relationships, role and evidence references,
+review/coverage states, sampled positions and correction dependencies. Raw bodies,
+private actor mappings, unconstrained prose and locators remain protected. Known
+absence is reported explicitly rather than hidden behind only a payload digest.
+Deferred V/D quantities have their own null entries and named prerequisites.
+
+The QA matrix links the original 54 VT, 40 TR and 36 RF identities to the current
+M tests. Eight EC supplemental record checks are separately bound. Gate success
+means that the applicable software/record-handling checks passed. All substantive
+E duties remain unperformed, and Step 8 final audit/owner approval remains pending.
+Historical Step 2 through Step 6 deliveries and earlier failed executions remain
+part of the record. No old test identity or arithmetic oracle is removed.

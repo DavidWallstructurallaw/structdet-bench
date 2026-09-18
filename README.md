@@ -4,16 +4,21 @@ An offline toolkit for task-relative structural measurement of recorded LLM outp
 
 ## Current delivery
 
-Phase 1 Step 6 implements the local `validate` and `analyze` commands, the original
-HF-00 fixture, six pinned variants, JSON/Markdown reports and no-overwrite output
-publication. The owner-approved maintenance amendment updates three historical
-Step 5 assertions without changing test identities or arithmetic checks. All 450
-current tests pass in the recorded local environment. The full Phase 1 integration
-audit and completion record remain Steps 7 and 8.
+The local Phase 1 Step 8 audit is complete for owner review. All 503 existing tests
+and the full first-milestone M gate pass in the recorded environment. The scope is
+37 M-bearing VT families, 33 applicable TR rows, 28 RF groups and eight EC-001
+M-only record checks. See `PHASE_1_COMPLETION.md` for the actual exit criteria,
+source/implementation/fixture identities, commands, evidence and limitations.
 
-This delivery builds on the accepted Step 5 commit `af94d81`. The twelve pinned
-planning/scientific documents and EC-001 retain their approved bytes. Local test
-results are not GitHub Actions results or independent scientific validation.
+Final owner acceptance remains pending. The local delivery contains the reviewed
+Step 7 implementation; Step 8 adds no runtime, test, fixture or matrix changes.
+Full v0.1 comparisons and actual independent validation are outside this milestone.
+
+**Repository delivery remains pending.** The last verified GitHub main is Step 6
+commit `8cd0fe6`; it must not be represented as containing this local Step 7/8 tree.
+The full source, audit matrix and verification history are retained in the local
+archive. Local test success is neither a hosted CI result nor proof of remote
+synchronization. No Phase 2 work or package release has started.
 
 ## Run locally
 
@@ -76,12 +81,14 @@ python tools/run_phase1_checks.py --scope scaffold
 python tools/run_phase1_checks.py
 ```
 
-The complete current suite passes without skips. The three historical Step 5
-assertions now preserve Step 5 history while checking the actual current delivery
-and absence of arithmetic-side file mutation. The scaffold gate passes. The last
-command also checks the full Phase 1 scope, which remains incomplete and returns
-exit 1 until the remaining M requirements are implemented and verified.
-`tests/phase1_matrix.json` preserves historical scopes and current bindings.
+The complete current suite passes without skips. Both gate commands return exit 0
+for the current M scope. The full gate requires every applicable M and EC record
+binding to have actually passed; missing, skipped, expected-failure or unexecuted
+bindings cannot pass it. Each result records expected/actual outcome, contract
+links, source/fixture fingerprints and environment. Final Phase 1 approval remains
+a separate Step 8 decision. `tests/phase1_matrix.json` preserves historical snapshots
+and current bindings; the raw historical `current_step` field is not the effective
+delivery step used by the runner.
 GitHub QA captures are retained summaries; the companion delivery archive contains
 the full actual execution journals.
 
