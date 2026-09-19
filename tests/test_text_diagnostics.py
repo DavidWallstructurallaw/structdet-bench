@@ -461,11 +461,16 @@ class BatchAndContextTests(TextFixture):
                 if isinstance(cls,ast.ClassDef) and (module=='test_text_diagnostics' or cls.name=='TextBoundaryTests'):
                     methods.extend(f'tests.{module}.{cls.name}.{m.name}' for m in cls.body if isinstance(m,ast.FunctionDef) and m.name.startswith('test_'))
         self.assertEqual(set(declared),set(methods));self.assertEqual(len(declared),len(methods))
-        self.assertEqual(matrix['delivery']['step'],3)
+        deliveries=matrix['delivery']['history']+[matrix['delivery']]
+        step3=[row for row in deliveries if row['step']==3]
+        self.assertEqual(len(step3),1)
+        self.assertGreaterEqual(matrix['delivery']['step'],3)
         self.assertEqual(len(matrix['vt_obligations']),26)
     def test_prior_stage_records_preserved_without_new_phase1_claim(self):
         matrix=helper.read_matrix()
-        self.assertEqual([r['step'] for r in matrix['delivery']['history']],[1,2])
+        history=[r['step'] for r in matrix['delivery']['history']]
+        self.assertEqual(history,list(range(1,matrix['delivery']['step'])))
+        self.assertEqual(history[:2],[1,2])
         self.assertEqual(len(matrix['predecessor']['test_ids']),503)
         self.assertEqual(matrix['evidence_status'],'not_supplied')
         self.assertEqual(matrix['deferred_status'],'deferred')

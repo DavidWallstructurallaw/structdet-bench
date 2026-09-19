@@ -3,11 +3,336 @@
   "data_role": "fixture",
   "source_plan_sha256": "17452ec510cdd31ee960806c6140142dcb411a76ebd87aa138afbdbc6ec639cc",
   "cases": [
-    {"case_id":"BC-01","container":"comparison","path":["comparison_schema_version"],"value":"9","expected_review_status":"contract_error"},
-    {"case_id":"BC-02","container":"comparison","path":["profile"],"value":"unknown-profile","expected_review_status":"contract_error"},
-    {"case_id":"BC-03","container":"study-B","path":["cap","convention"],"value":{"state":"known","value":"includes_hidden_reasoning"},"expected_pair_fact":"cap_convention_compatibility","expected_status":"inconsistent"},
-    {"case_id":"BC-04","container":"study-B","path":["controls","temperature","enforcement"],"value":"unsupported","expected_binding_fact":"control_temperature","expected_status":"unresolved"},
-    {"case_id":"BC-05","container":"study-B","path":["deployment","change_detected"],"value":{"state":"known","value":true},"expected_binding_fact":"deployment_unchanged","expected_status":"inconsistent"},
-    {"case_id":"BC-06","container":"study-B","path":["automatic_retries"],"value":{"state":"unknown"},"expected_binding_fact":"automatic_retries","expected_status":"unresolved"}
+    {
+      "case_id": "BC-01",
+      "container": "comparison",
+      "path": [
+        "comparison_schema_version"
+      ],
+      "value": "9",
+      "expected_review_status": "contract_error"
+    },
+    {
+      "case_id": "BC-02",
+      "container": "comparison",
+      "path": [
+        "profile"
+      ],
+      "value": "unknown-profile",
+      "expected_review_status": "contract_error"
+    },
+    {
+      "case_id": "BC-03",
+      "container": "study-B",
+      "path": [
+        "cap",
+        "convention"
+      ],
+      "value": {
+        "state": "known",
+        "value": "includes_hidden_reasoning"
+      },
+      "expected_pair_fact": "cap_convention_compatibility",
+      "expected_status": "inconsistent"
+    },
+    {
+      "case_id": "BC-04",
+      "container": "study-B",
+      "path": [
+        "controls",
+        "temperature",
+        "enforcement"
+      ],
+      "value": "unsupported",
+      "expected_binding_fact": "control_temperature",
+      "expected_status": "unresolved"
+    },
+    {
+      "case_id": "BC-05",
+      "container": "study-B",
+      "path": [
+        "deployment",
+        "change_detected"
+      ],
+      "value": {
+        "state": "known",
+        "value": true
+      },
+      "expected_binding_fact": "deployment_unchanged",
+      "expected_status": "inconsistent"
+    },
+    {
+      "case_id": "BC-06",
+      "container": "study-B",
+      "path": [
+        "automatic_retries"
+      ],
+      "value": {
+        "state": "unknown"
+      },
+      "expected_binding_fact": "automatic_retries",
+      "expected_status": "unresolved"
+    }
+  ],
+  "gate_source_pins": {
+    "VALIDATION_AND_FALSIFICATION.md": "6aaa5b01290d3c6b9746f20d47c2092c038587d72d7e090ee3ad73438794ef00",
+    "HERO_BENCHMARK_SPEC.md": "d1a0849d888a35ae3c9bd552bb920ee46417b7eeb4f8b687f8b5825e6fb851b2"
+  },
+  "gate_cases": [
+    {
+      "case_id": "GATE-01",
+      "name": "classification",
+      "observed": [
+        18,
+        20
+      ],
+      "ratio_status": "available",
+      "threshold": [
+        9,
+        10
+      ],
+      "maximum": false,
+      "expected": "passed"
+    },
+    {
+      "case_id": "GATE-02",
+      "name": "classification",
+      "observed": [
+        17,
+        20
+      ],
+      "ratio_status": "available",
+      "threshold": [
+        9,
+        10
+      ],
+      "maximum": false,
+      "expected": "failed"
+    },
+    {
+      "case_id": "GATE-03",
+      "name": "decisive",
+      "observed": [
+        19,
+        20
+      ],
+      "ratio_status": "available",
+      "threshold": [
+        19,
+        20
+      ],
+      "maximum": false,
+      "expected": "passed"
+    },
+    {
+      "case_id": "GATE-04",
+      "name": "decisive",
+      "observed": [
+        18,
+        20
+      ],
+      "ratio_status": "available",
+      "threshold": [
+        19,
+        20
+      ],
+      "maximum": false,
+      "expected": "failed"
+    },
+    {
+      "case_id": "GATE-05",
+      "name": "valid_coverage",
+      "observed": [
+        15,
+        16
+      ],
+      "ratio_status": "available",
+      "threshold": [
+        9,
+        10
+      ],
+      "maximum": false,
+      "expected": "passed"
+    },
+    {
+      "case_id": "GATE-06",
+      "name": "valid_coverage",
+      "observed": [
+        14,
+        16
+      ],
+      "ratio_status": "available",
+      "threshold": [
+        9,
+        10
+      ],
+      "maximum": false,
+      "expected": "failed"
+    },
+    {
+      "case_id": "GATE-07",
+      "name": "text_coverage",
+      "observed": [
+        19,
+        20
+      ],
+      "ratio_status": "available",
+      "threshold": [
+        19,
+        20
+      ],
+      "maximum": false,
+      "expected": "passed"
+    },
+    {
+      "case_id": "GATE-08",
+      "name": "text_coverage",
+      "observed": [
+        18,
+        20
+      ],
+      "ratio_status": "available",
+      "threshold": [
+        19,
+        20
+      ],
+      "maximum": false,
+      "expected": "failed"
+    },
+    {
+      "case_id": "GATE-09",
+      "name": "text_coverage",
+      "observed": [
+        17,
+        18
+      ],
+      "ratio_status": "available",
+      "threshold": [
+        19,
+        20
+      ],
+      "maximum": false,
+      "expected": "failed"
+    },
+    {
+      "case_id": "GATE-10",
+      "name": "text_coverage",
+      "observed": [
+        18,
+        18
+      ],
+      "ratio_status": "available",
+      "threshold": [
+        19,
+        20
+      ],
+      "maximum": false,
+      "expected": "passed"
+    },
+    {
+      "case_id": "GATE-11",
+      "name": "text_coverage",
+      "observed": [
+        18,
+        19
+      ],
+      "ratio_status": "available",
+      "threshold": [
+        19,
+        20
+      ],
+      "maximum": false,
+      "expected": "failed"
+    },
+    {
+      "case_id": "GATE-12",
+      "name": "text_coverage",
+      "observed": [
+        19,
+        19
+      ],
+      "ratio_status": "available",
+      "threshold": [
+        19,
+        20
+      ],
+      "maximum": false,
+      "expected": "passed"
+    },
+    {
+      "case_id": "GATE-13",
+      "name": "floor",
+      "observed": [
+        16,
+        20
+      ],
+      "ratio_status": "available",
+      "threshold": [
+        4,
+        5
+      ],
+      "maximum": false,
+      "expected": "passed"
+    },
+    {
+      "case_id": "GATE-14",
+      "name": "floor",
+      "observed": [
+        15,
+        20
+      ],
+      "ratio_status": "available",
+      "threshold": [
+        4,
+        5
+      ],
+      "maximum": false,
+      "expected": "failed"
+    },
+    {
+      "case_id": "GATE-15",
+      "name": "band",
+      "observed": [
+        2,
+        20
+      ],
+      "ratio_status": "available",
+      "threshold": [
+        1,
+        10
+      ],
+      "maximum": true,
+      "expected": "passed"
+    },
+    {
+      "case_id": "GATE-16",
+      "name": "band",
+      "observed": [
+        3,
+        20
+      ],
+      "ratio_status": "available",
+      "threshold": [
+        1,
+        10
+      ],
+      "maximum": true,
+      "expected": "failed"
+    },
+    {
+      "case_id": "GATE-17",
+      "name": "valid_coverage",
+      "observed": [
+        0,
+        0
+      ],
+      "ratio_status": "undefined",
+      "threshold": [
+        9,
+        10
+      ],
+      "conditional": true,
+      "expected": "conditional_not_applicable"
+    }
   ]
 }

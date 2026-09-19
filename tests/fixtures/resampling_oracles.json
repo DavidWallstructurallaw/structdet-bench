@@ -1,0 +1,129 @@
+{
+  "version": "0.1",
+  "data_role": "fixture",
+  "source_pins": {
+    "METRICS_SPEC.md": "23b45934e87767ca87e56b97aa4e1d1abdd49e27187d0b9c5a336ca516a96edb",
+    "VALIDATION_AND_FALSIFICATION.md": "6aaa5b01290d3c6b9746f20d47c2092c038587d72d7e090ee3ad73438794ef00",
+    "PHASE_2_PLAN.md": "17452ec510cdd31ee960806c6140142dcb411a76ebd87aa138afbdbc6ec639cc"
+  },
+  "toy": {
+    "source": "MET MF-18 / VF 5.4",
+    "values": [
+      "0.1",
+      "0.3"
+    ],
+    "index_base": 0,
+    "draws": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "means": [
+      "0.1",
+      "0.2",
+      "0.3"
+    ]
+  },
+  "quantiles": {
+    "source": "VF 5.4",
+    "values_rule": "v[j] = j/1999",
+    "replicates": 2000,
+    "ranks": [
+      "49.975",
+      "1949.025"
+    ],
+    "probabilities": [
+      "0.025",
+      "0.975"
+    ],
+    "expected": [
+      "0.025",
+      "0.975"
+    ]
+  },
+  "rng_reference": {
+    "scope": "CPython Random MT19937 state version 3, reference getrandbits rejection; software-only",
+    "seed": 20260917,
+    "cases": {
+      "2": {
+        "first_rows": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "indices_sha256": "633b874a7a8125e84b3398ab15d21c086b81daf6b17011a94013e299e91ccb56"
+      },
+      "6": {
+        "first_rows": [
+          [
+            4,
+            1,
+            5,
+            2,
+            2,
+            4
+          ],
+          [
+            1,
+            0,
+            1,
+            2,
+            4,
+            2
+          ],
+          [
+            4,
+            4,
+            1,
+            5,
+            1,
+            3
+          ],
+          [
+            5,
+            3,
+            0,
+            2,
+            5,
+            5
+          ],
+          [
+            0,
+            1,
+            4,
+            0,
+            2,
+            0
+          ]
+        ],
+        "indices_sha256": "a1014f66fdd6e833e44ec38e4b3bf6f24356a99621f34a39e10cf400af41e8fd"
+      }
+    }
+  }
+}

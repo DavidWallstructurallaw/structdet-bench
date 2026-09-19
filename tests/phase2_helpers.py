@@ -75,6 +75,38 @@ def expand_matrix(value: dict[str, Any]) -> dict[str, Any]:
     """
     import copy
     value = copy.deepcopy(value)
+    storage = value.get("delivery", {}).pop("binding_storage", None)
+    if storage is not None:
+        if (not isinstance(storage, dict) or set(storage) != {"encoding", "pool", "expanded_sha256"}
+                or storage["encoding"] != "explicit_binding_dictionary_v1"):
+            raise ValueError("invalid_binding_dictionary")
+        pool = storage["pool"]
+        if (not isinstance(pool, list) or not 1 <= len(pool) <= 20000
+                or any(not isinstance(x, str) or not METHOD_PATTERN.fullmatch(x) for x in pool)
+                or pool != sorted(set(pool))):
+            raise ValueError("invalid_binding_dictionary_pool")
+        def expand(item):
+            if isinstance(item, dict):
+                for key, child in list(item.items()):
+                    if key == "test_bindings" and isinstance(child, dict):
+                        if set(child) != {"encoding", "indices", "sha256"} or child["encoding"] != "binding_indices_v1":
+                            raise ValueError("invalid_binding_list_reference")
+                        indices = child["indices"]
+                        if (not isinstance(indices, list) or len(indices) > len(pool)
+                                or any(type(i) is not int or not 0 <= i < len(pool) for i in indices)
+                                or len(set(indices)) != len(indices)):
+                            raise ValueError("invalid_binding_dictionary_index")
+                        names = [pool[i] for i in indices]
+                        if sha256_bytes(canonical_bytes(names)) != child["sha256"]:
+                            raise ValueError("binding_list_hash_mismatch")
+                        item[key] = names
+                    else:
+                        expand(child)
+            elif isinstance(item, list):
+                for child in item: expand(child)
+        expand(value)
+        if sha256_bytes(canonical_bytes(value)) != storage["expanded_sha256"]:
+            raise ValueError("expanded_binding_matrix_hash_mismatch")
     desc = value.get("catalogues")
     if isinstance(desc, dict) and desc.get("encoding") == "pinned_catalogues_v1":
         if set(desc) != {"encoding", "source_sha256", "expanded_sha256"} or desc["source_sha256"] != PHASE1_MATRIX_SHA256:
@@ -349,3 +381,115 @@ def comparison_fixture(root: Path, *, role="fixture"):
         "revision":{"prior_comparison_ids":[],"prior_run_ids":[],"reason":tagged(state="not_applicable",reason="Initial fixture"),"changes":[]}}
     cfg.setdefault("extensions",{})["comparison"]=comparison
     return rewrite_evidence_bundle(root,o,s,m),o,s,m
+
+
+def populated_comparison_fixture(root: Path, *, blocks=('P01',), labels=None,
+                                 validity=None, texts=None):
+    """Trusted Step 4 component fixture with actual text and stipulated labels.
+
+    The full intended six-block role list stays registered. Absent blocks stay
+    absent, never silently changing the primary target. Repeated text has one
+    consistent structural label. There are no model calls or executed programs.
+    """
+    from copy import deepcopy
+    from tests.helpers import (tagged, record_ref, support_record, artifact_record,
+                                sample_record, assignment_record, rewrite_evidence_bundle)
+    from structdet_bench.text_diagnostics import WHITE_SPACE_SHA256
+    p,o,s,m=comparison_fixture(root)
+    cfg=m['analysis_config'];cmp=cfg['extensions']['comparison']
+    labels=labels or {};validity=validity or {};texts=texts or {}
+    kept={bid+'-'+c for bid in blocks for c in 'ABC'}
+    m['cells']=[c for c in m['cells'] if c['analysis_cell_id'] in kept]
+    m['protocols']=[r for r in m['protocols'] if r['generation_protocol_id'][9:] in kept]
+    cfg['selection']=[r for r in cfg['selection'] if r['analysis_cell_id'] in kept]
+    cfg['requested_k']=[5,10,20]
+    cmp['text_method'].update(unicode_category_version=tagged('15.1.0'),white_space_version=tagged('15.1.0'),
+                               white_space_sha256=tagged(WHITE_SPACE_SHA256))
+    o=[r for r in o if r['record_type']!='attempt' or r['analysis_cell_id'] in kept]
+    for sel in cfg['selection']:
+        cid=sel['analysis_cell_id'];condition=cid[-1]
+        labs=list(labels.get(cid, ['SORT-ADJ']*20 if condition!='C' else ['SORT-ADJ']*10+['SORT-INS']*10))
+        vals=list(validity.get(cid,['valid']*len(labs)))
+        bodies=texts.get(cid)
+        if bodies is None:
+            bodies=[('a b c' if condition!='B' or i%2==0 else 'a b d') if label in (None,'SORT-ADJ')
+                    else 'mechanism '+label+' x' for i,label in enumerate(labs)]
+        if len(vals)!=len(labs) or len(bodies)!=len(labs):raise ValueError('bad component fixture dimensions')
+        selected=[]
+        for i,(label,v,body) in enumerate(zip(labs,vals,bodies),1):
+            sid=f'{cid}-s{i}';aid=f'{cid}-a{i}';vid=f'{cid}-v{i}';g=(i-1)//5+1;pos=(i-1)%5+1
+            sample=sample_record(sid);sample.update(analysis_cell_id=cid,sample_order=tagged(i),
+                attempt_id=tagged(f'call-{cid}-{g}'),generation_group_id=tagged(f'group-{cid}-{g}'),
+                within_group_index=tagged(pos),extraction_rule_version=tagged('fixture-original-region-v1'))
+            if body is None:
+                sample['output_ref']=tagged(state='unavailable',reason='Stipulated missing proxy bytes')
+                sample['output_content_hash']=tagged(state='unknown')
+            else:
+                data=body.encode() if isinstance(body,str) else body
+                rid='text-'+sid;fn=rid+'.txt';(root/fn).write_bytes(data)
+                artifact=artifact_record(rid,fn);artifact['expected_sha256']=tagged(sha256_bytes(data));o.append(artifact)
+                sample['output_ref']=tagged(record_ref('artifact',rid));sample['output_content_hash']=tagged(sha256_bytes(data))
+            a=assignment_record(aid,sid);a.update(structural_class_id=label,assignment_status='assigned' if label else 'unresolved')
+            val={**record_ref('validity',vid),'validity_id':vid,'validity_version':'0.1','sample_id':sid,
+                 'validity_status':v,'validity_review_status':'fixture','validity_rubric_ref':tagged('bounded_integer_sort_validity_v1'),
+                 'decision_rationale':tagged('Stipulated Step 4 fixture'),'supersedes_validity_id':tagged(None),'evidence_refs':[]}
+            for axis,row,outcome in (('assignment',a,label),('validity',val,v)):
+                eid='e-'+row['record_id'];row['evidence_refs']=[record_ref('evidence',eid)]
+                s.append(support_record('evidence',eid,target_ref=record_ref(axis,row['record_id']),
+                    purpose='fixture_declaration',assertion=tagged(outcome),method=tagged('stipulated'),
+                    detail=tagged('Software component fixture; no empirical evidence'),access='readable',conflict_status='none_declared'))
+                cfg[axis+'_pins'].append({'sample_id':sid,axis+'_id':row['record_id'],axis+'_version':'0.1'})
+            o.extend([sample,a,val]);selected.append(sid)
+        sel['selected_sample_ids']=tagged(selected);sel['sample_order']=tagged(selected)
+        sel['selection_basis']=tagged('Prospective fixed fixture positions before outcome conditioning')
+    return rewrite_evidence_bundle(root,o,s,m),o,s,m
+
+
+# Step 5 test builders. Every assumed person, assessment and outcome is stipulated.
+def paired_summary_fixture(surface=None, structural=None, *, p5=None, pair='B-A',
+                           view='classified_all', blocks=None, gated=True,
+                           subset=False):
+    """Independent exact test arithmetic; no model study or evidence acquisition."""
+    from fractions import Fraction
+    from structdet_bench.comparisons import BlockSummary, number
+    from structdet_bench.contracts import freeze
+    ids=tuple(blocks or ('P01','P02','P03','P04','P05','P06'))
+    question='P5' if p5 is not None else 'P1'
+    def vector(x):
+        values=list(x) if isinstance(x,(list,tuple)) else [x]*len(ids)
+        if len(values)!=len(ids):raise ValueError('fixture_block_length')
+        return [Fraction(v) for v in values]
+    if question=='P1':
+        a,b=vector(surface or '0'),vector(structural or '0')
+        arrays={'surface_gain':a,'structural_gain':b,'p1_proxy_gain_contrast':[x-y for x,y in zip(a,b)]}
+        unit='dimensionless_distinct_observation_pair_mean'
+    else:
+        arrays={'p5_valid_distinct_k_delta':vector(p5)};unit='classes_among_k_realization_prefix'
+        view='classified_valid'
+    rows={bid:{name:number(name,unit,values[i]) for name,values in arrays.items()} for i,bid in enumerate(ids)}
+    means={name:number(name,unit,sum(values,Fraction())/len(ids)) for name,values in arrays.items()}
+    full=ids==('P01','P02','P03','P04','P05','P06')
+    return BlockSummary(question,pair,view,'available_block_descriptive_subset' if subset else 'full_intended_target',
+        ('P01','P02','P03','P04','P05','P06'),ids,freeze({b:('fixture_missing',) for b in ('P01','P02','P03','P04','P05','P06') if b not in ids}),
+        freeze({} if gated else {ids[0]:('fixture_endpoint_gate_failed',)}),freeze(means),freeze(rows),full,full and gated)
+
+
+def add_fixture_dependence(observations, supports, manifest):
+    """Add an explicit mock resampling assumption; never independent evidence."""
+    from tests.helpers import support_record, record_ref, tagged
+    cfg=manifest['analysis_config']['extensions']['comparison']
+    evidence=record_ref('evidence','resampling-assumption')
+    supports.append(support_record('evidence','resampling-assumption',purpose='observation',
+        target_ref=record_ref('role','binding-reviewer'),method=tagged('stipulated_resampling_assumption'),
+        reviewer_refs=[record_ref('role','binding-reviewer')]))
+    supports.append(support_record('independence_assessment','paired-dependence',
+        left_ref=record_ref('cell',manifest['cells'][0]['record_id']),
+        right_ref=record_ref('cell',manifest['cells'][-1]['record_id']),
+        dimension='paired_prompt_block_resampling',outcome='supported_for_scope',
+        criterion=tagged('Stipulated fixed-block applicability, software test only'),
+        scope_refs=[record_ref('cell',c['record_id']) for c in manifest['cells']],
+        reviewer_refs=[record_ref('role','binding-reviewer')],evidence_refs=[evidence],
+        extensions={'paired_block_dependence':{'version':'0.1','block_ids':['P01','P02','P03','P04','P05','P06'],
+            'unit':'paired_prompt_block','target':'fixed_wording_suite',
+            'cross_block_shared_history':tagged(False),'condition_pairs':['B-A','C-A','C-B']}}))
+    cfg['resampling']['dependence_assessment_ref']=tagged(record_ref('independence_assessment','paired-dependence'))

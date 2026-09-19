@@ -1,9 +1,11 @@
 # Comparison Record Format
 
-Version 0.2. Implemented scope: **Phase 2 Steps 2 and 3**.
+Version 0.4. Implemented scope: **Phase 2 Steps 2 through 5**.
 
 Sections 1 through 9 describe the record-binding layer. Section 10 adds the
-separate text-diagnostic layer; CLI/report integration remains deferred to Step 6.
+separate text-diagnostic layer. Section 11 adds endpoint gates, contrasts and
+block summaries. Section 12 adds paired sensitivity and P1/P5 decisions;
+CLI/report integration remains deferred to Step 6.
 
 Read with `PHASE_2_PLAN.md` sections 3, 4.2 and 7 (Step 2), `HERO_BENCHMARK_SPEC.md`
 sections 7 through 10, `METRICS_SPEC.md` section 10.1, and EC-001. The frozen
@@ -506,3 +508,414 @@ Step 3 completes the VT-31 and VT-33 component obligations. VT-32, VT-36 and
 report/EC integration stay partial until their later prescribed checks. No
 prediction, condition contrast, interval, empirical support claim, model call or
 candidate execution is produced by this layer.
+
+## 11. Step 4 endpoint gates, contrasts and block summaries
+
+The implementation is `structdet_bench.comparisons`. The controlling rules are
+PLAN2 sections 3.4-3.5 and Step 4, MET sections 10-11.2, HERO sections 8-10 and
+VF sections 5.3 and 6.2. This layer consumes the original loaded snapshot, accepted
+M populations and Step 3 diagnostics. It neither changes the structural partition
+nor reconstructs labels from public reports.
+
+### 11.1 Interface and returned scope
+
+```python
+from structdet_bench.local_io import load_bundle
+from structdet_bench.populations import build_populations
+from structdet_bench.comparison_records import review_comparison
+from structdet_bench.text_diagnostics import (
+    diagnose_cells, method_from_record, limits_from_record,
+)
+from structdet_bench.comparisons import compare_study
+
+bundle = load_bundle("local-study/bundle.json")
+populations = build_populations(bundle)
+review = review_comparison(bundle)
+if review.configuration is None:
+    raise ValueError("No supported comparison configuration")
+config = review.configuration
+diagnostics = diagnose_cells(
+    bundle, populations.cells,
+    method_from_record(config["text_method"]),
+    limits=limits_from_record(config["limits"]),
+)
+result = compare_study(bundle, populations, diagnostics)
+for block in result.blocks:
+    print(block.block_id, block.condition_pair, block.view)
+    print(block.values, block.eligible_before_resampling)
+```
+
+A count-only caller can omit `diagnostics`. P5 then retains its supported count
+comparisons. Requested P1 quantities expose missing diagnostic prerequisites.
+No text is fetched, re-extracted or synthesized inside `compare_study`.
+
+The result contains the actual comparison configuration identity, material role,
+record review, all intended block/condition roles, per-block operands, gates,
+qualifications, dependencies, primary summaries and secondary summaries. Unknown
+and unbound cells remain in the supplied review. The status `processed` describes
+component processing, including limited results; it does not assert that every
+endpoint is eligible. Requested malformed configurations retain `contract_error`.
+
+Each `Number` retains a name, unit, result status, exact fraction where available,
+unrounded numerical value, and reasons. Each `Operand` identifies its cell, view,
+selected and counted sample IDs, original population size, both axes' revision
+pins, prefix k where relevant, and method metadata. Thresholded support companions
+identify their fixed secondary threshold 0.10. Every subtraction retains both
+operands even when the contrast is withheld.
+
+These component records retain private provenance and metadata for local audit.
+They are not a public redacted report. The comparison CLI and report attachment
+remain deferred to Phase 2 Step 6.
+
+### 11.2 Exact, endpoint-specific gates
+
+| Gate | Exact test | Applicability |
+|---|---|---|
+| Intended positions | Twenty selected realizations in the original four groups of five; the HERO prefix must be complete and unambiguous. | Primary P1/P5. |
+| Classification coverage | Accepted classified / selected >= 9/10. | Both questions. |
+| Decisive validity coverage | Accepted valid or invalid / selected >= 19/20. | Both questions. |
+| Valid-output structural coverage | Classified-valid / accepted valid >= 9/10 when that denominator exists. | Both questions, conditional denominator rule. |
+| Proxy text coverage | Eligible text / the relevant classified view >= 19/20, with at least two texts. | P1 and its valid-only sensitivity. |
+| Validity floor | Accepted valid / selected >= 4/5. | Required for P5; separately recorded quality diagnostic for primary P1. |
+| Matched quality | Absolute difference in compared cells' valid fractions <= 1/10. | C-A and C-B separately for P5; diagnostic for primary B-A P1. |
+| Shared frame/policy | Compatible context, horizon, task/schema/rubric meanings, extraction, material and evidence policy. | Each affected contrast. |
+| Controls and resources | Participating cell and pair records support the registered manipulation and planned-resource match. | Each affected comparator. |
+| Evidence scope | Appropriate scoped supplied evidence, or explicitly stipulated fixture treatment. | Evidence-qualified eligibility; no real validation is performed. |
+
+Counts are compared as exact fractions. At n=20, 18 classified samples and 19
+decisive validity assessments meet their respective thresholds. With 16 valid
+outputs, 15 classifiable-valid samples meet 9/10; 14 do not. Text coverage 19/20
+meets 19/20, but 17/18 and 18/19 do not. The P5 floor passes at 16/20, and its
+quality band passes at a 2/20 difference and fails at 3/20. These cases are pinned
+in `tests/fixtures/comparison_cases.json` alongside the earlier binding fixtures.
+
+A valid-output coverage denominator of zero stays `undefined` in the original
+ratio and yields `conditional_not_applicable` for that particular gate. It is
+never relabeled zero or one. P5 still fails its separate validity floor. Primary
+P1 can remain eligible with determined invalid outputs if its own classification,
+text and other prerequisites hold, with the quality deterioration exposed.
+
+`Gate.status` is `passed`, `failed`, `unresolved`,
+`conditional_not_applicable`, or `fixture_stipulated`. Required versus diagnostic
+status is explicit. `eligible_before_resampling` requires all of the relevant
+required gates and all primary quantities to be available. The additional
+`clean_quality_eligible` property also requires the quality floor and band.
+Neither property asserts a supported theory result or an available interval.
+
+Each P5 comparator is independent of the other comparator's missing role. An
+unusable B control can leave C-A eligible. Missing C can leave B-A intact. Proxy
+text loss, a Unicode-table problem or exhausted surface-work budget cannot veto
+P5 when its own identity, membership and validity evidence remain sufficient.
+Material essential to those separate judgments retains its ordinary consequence.
+
+A legitimately unexposed presence/frequency penalty retains its justified
+non-applicability. The Step 2 aggregate participant status is retained as evidence;
+Step 4 evaluates its underlying facts with this explicit conditional rule instead
+of letting a redundant unresolved aggregate veto the exception. Other unknown
+controls remain unresolved. Equal planned allowances never assert equal actual
+token use, hidden compute, money or latency.
+
+### 11.3 Compatible arithmetic and evidence-qualified interpretation
+
+Known incompatible frame, prompt, control, cap or serving records withhold the
+corresponding contrast while retaining separate supported operand values. Missing
+checkpoint or hidden-control evidence can leave a qualified descriptive contrast
+available, with the stronger endpoint gate restricted. A single bad condition
+cannot erase independently sufficient comparator records.
+
+The component checks that supplied populations still correspond to the loaded
+selection, original sample associations and exact admitted revisions. It also
+checks the diagnostic's source population, method, workload limits, eligible IDs
+and pair denominator. Stale contexts are rejected, without automatic re-admission
+through a weaker path or silent rebinding of old diagnostics. Changes require the
+caller to recompute the appropriate upstream component on the revised input.
+
+All ordinary differences require identical metric names and units. Entropy
+contrasts remain in nats; concentration, support and effective counts keep their
+own meanings. A generic subtraction cannot combine entropy and lexical distance.
+The one explicitly authorized cross-estimand expression is the registered P1 G.
+Exact arithmetic observes the declared bit bound; nonfinite or unstable numerical
+results are withheld. Neither silent truncation nor a floating fallback is used
+to rescue an over-limit exact calculation.
+
+Fixture gates describe stipulated software cases and preserve
+`independent_validation_performed=False`. Absent real human or field evidence does
+not prevent fixture development. A supplied contradictory fixture registration
+still restricts its gate, and an active independence correction can restrict the
+claim while leaving justified arithmetic unchanged.
+
+For nonfixture data, the evidence gate retains registration timing and
+configuration binding, the participant-scoped structural/core/audit records,
+exposure and independence records, integrity assessment and active corrections.
+Referenced checks must have their required content; an `all_gates_passed` boolean
+is not accepted. Mandatory structural-validity and source-integrity requirements
+cannot be waived with `not_applicable`. A descriptive/pilot or revised collection
+cannot silently become a new confirmatory sample. These inspections establish
+record consistency only. They never certify the truth of an imported claim,
+conduct the reported execution or annotation, close UD-006, or establish ongoing
+operational openness from offline records.
+
+### 11.4 Per-block quantities and companion diagnostics
+
+P1 uses `classified_all` as its primary view. Within each condition, the surface
+mean L and structural pair non-equivalence Q use the exact same eligible texts and
+unordered pairs. The per-block values are:
+
+```text
+surface_gain = L_B - L_A
+structural_gain = Q_B - Q_A
+p1_proxy_gain_contrast = surface_gain - structural_gain
+```
+
+The original M population and its coverage remain separate. The valid-only view
+is a labeled sensitivity, with its own text subset and denominators. Negative or
+zero structural gain is retained. No directional verdict is produced here.
+
+P5's primary view is `classified_valid`, with separate C-A and C-B differences in
+the original intended distinct-20 prefix. The all-classified view and k=5/10 are
+companions. There is no best-of selection, replacement of a missing candidate,
+quality equalization by deleting successes, or extra sampling after a repeated
+mechanism. A complete but wholly unclassified prefix can have a known zero count;
+a missing intended position cannot be repaired by a later group's output.
+
+Companions include same-unit differences in the six core M quantities, all five
+coverage ratios, k=5/10/20 structural distinctness and the available Step 3 means.
+Class-aligned tables retain all eight registered classes, original counts, each
+view's denominator, exact frequencies and compared-cell differences. Reference
+zeros are distinguished from an undefined frequency in an empty classified
+population. No automatic new class is created.
+
+`surface_proxy_near_ceiling` applies at baseline surface distance >=19/20.
+Observing all eight registered classes produces a registry-ceiling qualification.
+These are interpretation flags only. They cannot replace an endpoint, trigger an
+extra sample or imply that the registry exhausts the model's repertoire.
+
+### 11.5 Equal-block summaries and explicit attrition
+
+Full primary summaries use the intended ordered P01-P06 block list. Every block
+receives equal weight, regardless of its number of accepted outputs or pairs.
+P1's two gains and G share one included block set. Each P5 comparator preserves
+its own set, missing-block reasons and failed eligibility gates.
+
+The default does not provide a substitute mean for an incomplete full target.
+An explicit `include_descriptive_subset=True` request additionally returns an
+`available_block_descriptive_subset`: all intended blocks with jointly defined,
+compatible operands, without selecting on sign or favorability. It retains the
+original intended list and exact missing reasons. Its subset rule is recorded;
+it cannot impersonate the six-block result. Numerically defined blocks with a
+quality or evidence restriction remain visible with that restriction, rather than
+being silently excluded to improve a mean.
+
+`BlockSummary` contains intended/included block IDs, missing reasons, gate
+failures, per-block values, means and the separate full-target/eligibility states.
+Zero available blocks yield unavailable means. A custom smaller list passed to
+`summarize_blocks` is explicitly `declared_descriptive_target`, even if complete;
+it cannot establish completion of the registered six-block design.
+
+`secondary_summaries` applies the same equal-block arithmetic separately to each
+companion quantity and k. A secondary entropy contrast can remain available when
+missing text prevents P1. Its availability supplies no primary P1/P5 claim. Mean
+per-block entropy is never replaced by entropy of pooled counts, and a mean
+structural count is never replaced by the union of classes over prompts.
+
+All group associations, possible shared cross-cell dependencies, original budget
+and supplied resampling records remain attached. Pairs and candidate rows do not
+become statistical replicates. Intervals, resample-index generation, dependence-
+qualified uncertainty and final P1/P5 outcomes remain Phase 2 Step 5 work.
+
+### 11.6 Test history and stop boundary
+
+P2S4-F01 records the two reproduced Step 3 historical-stage assertion conflicts.
+The unchanged test identities now require a unique retained Step 3 delivery and
+contiguous earlier-stage history including Steps 1 and 2. Exact method-binding,
+predecessor, evidence and deferred-scope checks remain in place. The original
+failure output, applied patch and before/after fingerprints accompany the delivery.
+The repair follows PLAN2 section 6.3 and changes no scientific contract.
+
+Step 4 adds component gate/contrast/summary coverage. VT-31 and VT-33 retain their
+Step 3 implemented status; the remaining applicable V families continue to await
+their complete later-step checks. All substantive E duties stay unperformed and
+D capabilities remain deferred. This layer supplies no provider client, candidate
+execution, automatic classifier, public report dispatch or Step 5 verdict.
+
+## 12. Step 5 paired sensitivity and operational decisions
+
+Interface progression: v0.4. The scientific baseline, primary endpoints, coverage
+and quality rules are unchanged. Sections 10 and 11 describe predecessor layers;
+their historical statements about deferred Step 5 work remain historical.
+
+```python
+from structdet_bench.uncertainty import resample_study
+from structdet_bench.predictions import evaluate_predictions
+
+# bundle and comparisons must refer to the same acquired input snapshot.
+sensitivity = resample_study(bundle, comparisons)
+results = evaluate_predictions(sensitivity)
+```
+
+These component APIs consume immutable local records. They do not read new files,
+execute candidates, call models, change labels or publish reports. Comparison
+CLI/report dispatch and inclusion of replay data in `run_manifest.json` remain
+Phase 2 Step 6. The existing M-only CLI is unchanged.
+
+### 12.1 Index manifests and deterministic replay
+
+`make_replay(ordered_block_ids)` uses a private `random.Random(20260917)` and
+`randrange(P)` to produce exactly 2,000 rows, each containing P zero-based indices
+sampled with replacement. P is between two and six in this bounded design. One
+row selects complete paired blocks; it never samples candidate rows or pairs.
+The complete ordered block list, indices, seed, method, statistic, quantile rule,
+probabilities, RNG algorithm/API, implementation, Python version and RNG state
+version are retained. The RNG is MT19937 with state version 3. Global RNG state
+is untouched.
+
+Canonical replay bytes use UTF-8 JSON with ASCII escaping, sorted object keys,
+compact separators and one final newline. `indices_sha256` hashes the complete
+index array. `sha256` hashes the manifest except its own `sha256` field.
+`validate_replay` checks every field, exact dimensions, strict integer indices,
+method/version/seed, ordered block identities, both hashes and an optional expected
+manifest identity. Booleans cannot represent indices or numeric version fields.
+Unknown RNG algorithms, methods and malformed version records are rejected.
+
+Replay uses stored indices rather than regenerating them with the current RNG.
+An older declared runtime version therefore remains replayable when its supported
+method and pinned metadata are intact. Changing metadata without updating the
+identity fails; an externally pinned expected digest additionally detects any
+replacement with a new self-consistent record. Hashes establish byte/record
+identity, not authenticity or independent origin.
+
+A known-null comparison `resampling.replay_ref` requests fresh generation.
+Unknown/unavailable replay choice is not silently treated as known-null. A known
+artifact reference must resolve to an already acquired, loader-checked snapshot
+whose `schema_version` is `0.1` and whose `replays` field is an array of
+complete manifest objects. The collection contains one to twelve distinct ordered block sets. A requested
+missing, malformed, inaccessible or mismatched replay is not replaced by new
+random indices. External locators stay passive. Linked P1 quantities always use
+one common manifest; other endpoints on the same ordered block set reuse it.
+A different block subset receives a distinct identity and cannot impersonate the
+six-block target. Reanalysis of corrected values on the same declared blocks may
+reuse indices, but recomputes every replicate statistic and its operand identity.
+
+### 12.2 Record-qualified dependence assessment
+
+The existing `independence_assessment` referenced by
+`resampling.dependence_assessment_ref` has dimension
+`paired_prompt_block_resampling`, a supported-for-scope outcome, an active readable
+support path, known criterion, resolvable subject/reviewer/evidence references,
+and scope references covering the participating cells. Its extension is:
+
+```json
+{
+  "paired_block_dependence": {
+    "version": "0.1",
+    "block_ids": ["P01","P02","P03","P04","P05","P06"],
+    "unit": "paired_prompt_block",
+    "target": "fixed_wording_suite",
+    "cross_block_shared_history": {"state":"known","value":false,"evidence_refs":[]},
+    "condition_pairs": ["B-A","C-A","C-B"]
+  }
+}
+```
+
+These are physical encodings of the adopted dependence requirement. The declared
+condition-pair scope can be narrower when only some comparisons are supported.
+The original evidence pass's support traversal is reused, including downstream
+mock, unreadable, conflicted and corrected evidence. Record consistency does not
+independently certify the judgment. Fixture assumptions remain fixture-only.
+
+Observable shared generation groups or shared context across different included
+blocks override a blanket declaration of independence. Within-block dependence is
+retained by resampling the entire block. Unsupported cross-block dependence gives
+an unavailable interval; no higher-level cluster estimator is substituted.
+Unknown or missing support does not create an interval merely because six blocks
+have names. All returned records keep `independent_validation_performed=false`.
+
+### 12.3 Statistics, quantiles and numerical scope
+
+Each row computes the equal-block mean for every linked component. Complete
+unrounded values and exact ratios are used; binary float inputs, when present,
+are interpreted as their exact represented binary values with that provenance
+explicit. Original means are checked against the actual block values. P1's
+`surface_gain`, `structural_gain` and `p1_proxy_gain_contrast` share the same block
+set and draw; the latter must equal the first minus the second in every block.
+
+The 0.025 and 0.975 quantiles use `h=(2000-1)*q`, giving zero-based ranks 49.975 and
+1949.025. Linear interpolation is exact rational arithmetic where supplied data
+permit it. Boundary equality remains equality, not a tolerance-defined effect.
+Invalid/nonfinite operands, mismatched units, stale means, exact-arithmetic limit
+failure and diagnosed sign/representation instability withhold the affected
+linked interval rather than discarding replicates or returning an approximate
+substitute. No truncated replay can qualify as the registered 2,000-replicate run.
+
+The output is `prompt_resampling_sensitivity`, conditional on these recorded
+within-block outputs. It supplies no prompt-population confidence, familywise
+significance, ontology validity or total-generation uncertainty. One block retains
+its descriptive number and has no interval. A separately requested descriptive
+subset of at least two blocks can have its own supported range, but cannot yield a
+full six-block verdict. Numerically defined quality-limited blocks remain in the
+descriptive calculation with their limitations; they are never deleted to improve
+an effect. A degenerate range does not imply general certainty.
+
+### 12.4 P1/P5 outcomes
+
+`evaluate_predictions` preserves all registered primaries and the separate
+valid-only P1 sensitivity. Each endpoint requires its existing eligibility and a
+supported six-block interval. Positive retention is strictly `mean>0 and lower>0`;
+negative retention is strictly `mean<0 and upper<0`. A touching or crossing zero
+range is inconclusive. A diagnosed precision limitation is not evaluated.
+
+P1 is supporting only when surface gain and the gain contrast both retain positive
+directions; either retained negative direction is contrary. Otherwise an evaluable
+comparison is inconclusive. A positive contrast formed from two decreasing
+quantities cannot establish surface growth. Clean-quality failure and adverse
+valid-only sensitivity qualify the original primary; they do not replace it.
+
+P5 separately evaluates the valid distinct-20 C-A and C-B comparisons. Both
+supporting gives a supporting full pattern. With both evaluable, any contrary
+member gives a contrary full pattern; otherwise any inconclusive member gives an
+inconclusive full pattern. Either not evaluated makes the full pattern not
+evaluated, while the narrower available member remains visible. Mixed comparator
+behavior is a qualification, not a fifth top-level outcome. All-view counts,
+k=5/10, thresholded support or alternative labels cannot replace these primaries.
+
+Surface >=0.95 and eight-class registry ceiling flags survive unchanged. No proxy
+switch, additional sampling, effect-size threshold or overall score is introduced.
+Small positive effects remain explicitly small. Fixture outcomes retain
+`fixture_only`; empirical scopes cannot be obtained by copying mock assumptions.
+
+### 12.5 Corrective integration and retained history
+
+P2S5-F02 reproduced a stale-input failure: changing an evidence record while
+retaining the same comparison configuration could let an old comparison feed a
+new resampling run. `Comparisons.input_snapshot_sha256` now binds acquired snapshot
+identities, parser limits, artifact states and diagnostics. A downstream mismatch
+withholds intervals, preserving old descriptive results without applying them to
+the changed input. This is an input-identity repair under PLAN2 section 6.3. No
+metric, denominator or evidence threshold changed. Corrected analyses must rebuild
+comparisons before resampling, even when they intentionally reuse index draws.
+
+P2S5-F01 retains the Step 4 tests' history and component-boundary assertions while
+allowing the now-authorized Step 5 modules. Original test identities, arithmetic
+oracles and all frozen contracts are retained. The exact failure reproduction and
+before/after patches accompany the delivery. VT-39 is complete at component scope;
+the other outcome/report families remain partial until their specified integrated
+report tests. No Phase 2 Step 6 work is authorized by this handoff.
+
+
+### 12.6 Verification binding storage
+
+The Phase 2 matrix now stores repeated test method names through a finite explicit
+string dictionary. Each indexed binding list carries its own decoded hash, and
+the complete decoded matrix has a separate pinned hash. The helper expands this
+representation before the unchanged catalogue, predecessor and gate checks.
+All method identities, ordering, requirement assignments and history remain
+identical to the retained expanded representation. No method is discovered,
+imported, inferred or automatically added by dictionary expansion. Invalid indices,
+booleans, duplicate references, edited pools and mismatched hashes fail closed.
+The full readable decoded matrix is retained with the delivery verification files.
+This is lossless QA storage; it changes no runtime or scientific requirement.
+
+Operand fingerprints use the named `signed_hex_ratio_v1` encoding for exact
+numerators and denominators. This avoids decimal integer-string expansion limits
+without reducing precision or changing interpreter-wide resource limits. Stored
+interval values and their exact ratios retain the original arithmetic meaning.

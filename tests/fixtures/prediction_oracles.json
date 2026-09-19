@@ -1,0 +1,184 @@
+{
+  "version": "0.1",
+  "data_role": "fixture",
+  "source": "VF section 7, OF-01 through OF-14",
+  "source_pins": {
+    "METRICS_SPEC.md": "23b45934e87767ca87e56b97aa4e1d1abdd49e27187d0b9c5a336ca516a96edb",
+    "VALIDATION_AND_FALSIFICATION.md": "6aaa5b01290d3c6b9746f20d47c2092c038587d72d7e090ee3ad73438794ef00",
+    "PHASE_2_PLAN.md": "17452ec510cdd31ee960806c6140142dcb411a76ebd87aa138afbdbc6ec639cc"
+  },
+  "note": "Conditional decision fixtures. OF-05 provides an explicit six-block instantiation of the source interval-crossing condition. OF-13 is one of the source alternatives. No real experiment, text analysis or independent evidence is claimed.",
+  "cases": [
+    {
+      "fixture_id": "OF-01",
+      "question": "P1",
+      "inputs": {
+        "surface": "0.10",
+        "structural": "0"
+      },
+      "expected": "supporting",
+      "qualifications": []
+    },
+    {
+      "fixture_id": "OF-02",
+      "question": "P1",
+      "inputs": {
+        "surface": "0.10",
+        "structural": "0.20"
+      },
+      "expected": "contrary",
+      "qualifications": []
+    },
+    {
+      "fixture_id": "OF-03",
+      "question": "P1",
+      "inputs": {
+        "surface": "-0.10",
+        "structural": "-0.20"
+      },
+      "expected": "contrary",
+      "qualifications": []
+    },
+    {
+      "fixture_id": "OF-04",
+      "question": "P1",
+      "inputs": {
+        "surface": "0",
+        "structural": "0"
+      },
+      "expected": "inconclusive",
+      "qualifications": []
+    },
+    {
+      "fixture_id": "OF-05",
+      "question": "P1",
+      "inputs": {
+        "surface": [
+          "-0.3",
+          "-0.1",
+          "0.1",
+          "0.2",
+          "0.2",
+          "0.3"
+        ],
+        "structural": "0"
+      },
+      "expected": "inconclusive",
+      "qualifications": [
+        "positive_mean_range_crosses_zero"
+      ]
+    },
+    {
+      "fixture_id": "OF-06",
+      "question": "P1",
+      "inputs": {
+        "surface": "0.02",
+        "structural": "0",
+        "surface_A": "0.96",
+        "surface_B": "0.98"
+      },
+      "expected": "supporting",
+      "qualifications": [
+        "surface_proxy_near_ceiling"
+      ]
+    },
+    {
+      "fixture_id": "OF-07",
+      "question": "P1",
+      "inputs": {
+        "surface": "0.10",
+        "structural": "0",
+        "valid_surface": "-0.10",
+        "valid_structural": "0",
+        "clean_quality": false
+      },
+      "expected": "supporting",
+      "qualifications": [
+        "clean_quality_comparable_P1_unavailable"
+      ]
+    },
+    {
+      "fixture_id": "OF-08",
+      "question": "P5",
+      "inputs": {
+        "C-A": 2,
+        "C-B": 1
+      },
+      "expected": "supporting",
+      "qualifications": []
+    },
+    {
+      "fixture_id": "OF-09",
+      "question": "P5",
+      "inputs": {
+        "C-A": 1,
+        "C-B": -1
+      },
+      "expected": "contrary",
+      "qualifications": [
+        "mixed_comparator_behavior"
+      ]
+    },
+    {
+      "fixture_id": "OF-10",
+      "question": "P5",
+      "inputs": {
+        "C-A": 1,
+        "C-B": 0
+      },
+      "expected": "inconclusive",
+      "qualifications": []
+    },
+    {
+      "fixture_id": "OF-11",
+      "question": "P5",
+      "inputs": {
+        "C-A": -1,
+        "C-B": -2
+      },
+      "expected": "contrary",
+      "qualifications": []
+    },
+    {
+      "fixture_id": "OF-12",
+      "question": "P5",
+      "inputs": {
+        "C-A": 2,
+        "C-B": 1,
+        "gated": false,
+        "C_valid": [
+          19,
+          20
+        ],
+        "comparator_valid": [
+          16,
+          20
+        ]
+      },
+      "expected": "not_evaluated",
+      "qualifications": []
+    },
+    {
+      "fixture_id": "OF-13",
+      "question": "P1",
+      "inputs": {
+        "surface": "0.10",
+        "structural": "0",
+        "gated": false
+      },
+      "expected": "not_evaluated",
+      "qualifications": []
+    },
+    {
+      "fixture_id": "OF-14",
+      "question": "P5",
+      "inputs": {
+        "C-A": -1,
+        "C-B": 0,
+        "favorable_secondary_k5": 2
+      },
+      "expected": "contrary",
+      "qualifications": []
+    }
+  ]
+}
