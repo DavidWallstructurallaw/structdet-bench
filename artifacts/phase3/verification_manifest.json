@@ -1,1 +1,90 @@
-{"baseline":{"branch":"phase2-step7-sync","commit":"43278ae3b42ceb43859259a1dfc93513919c3903","exact_file_count":114,"tree":"a89d81f134964843e6a10e86d7539670d7d37273"},"boundaries":{"UD-006":"actual independent evidence remains outstanding","candidate_programs_executed":0,"final_owner_acceptance":"not_established_by_software_tests","github_actions_run":false,"model_calls":0,"package_published":false,"runtime_started":false,"step2_started":false,"substantive_validation_performed":false},"clean_replay_current_exit":0,"companion_archive":"StructDet-Bench_Phase3_Step1_Accepted.zip","completed_L_ids":["P3-L01"],"counts":{"errors":0,"failed":0,"inherited":1018,"passed":1077,"phase3_scaffold":59,"skipped":0,"total":1077},"current_gate_exit":0,"environment":{"bytecode_disabled":true,"no_site":true,"platform":"Linux-6.18.44-x86_64-with-glibc2.41","python":"3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]"},"full_L_assessment_basis":"Both current and full scopes assessed against the same actually executed test records, without inventing a second execution.","full_L_gate_passed":false,"full_evidence":[{"path":"verification/acceptance_journal/history/57ae5feef97c4089acc139c7f81cb43d/run.json","sha256":"f6f696ab9a3cf57abcc5883a2d1fa999777bb74c7d31c02a9bca98ecfb9b20bd","size_bytes":2096787},{"path":"verification/accepted_current_console.txt","sha256":"e7767cdc08f363c138b4a6af6575aea472543a54ba76093c90f24c2bbf4dd9b5","size_bytes":158164},{"path":"verification/replay_journal/history/650b03c71ffd4fcd81b298a606948fad/run.json","sha256":"0427a1f2d74c7954c3931bff32705a3e01ee9328edb5c4e5d0378af9a4a588fa","size_bytes":2096774},{"path":"verification/replay_current_console.txt","sha256":"16d5f1bf8a73655bf8709b3f70fe80920718e42c41ba93da2e221544a6e333fe","size_bytes":158164},{"path":"verification/P3S1-F01.patch","sha256":"35bcb919abcf2eef2a1f6c9f503d7fb00298696b6ba0b13b489905f363d4b108","size_bytes":624},{"path":"verification/receipt_transition_gate_tests.txt","sha256":"8db34f701b4e7161a9beccc328f134a58357cba5fbd99fdbe9468dc846e73512","size_bytes":9249}],"inherited_M_passed":true,"inherited_V_passed":true,"phase":3,"preservation":{"README":"Ordinary Step 1 handoff updated; original remains in the exact baseline snapshot.","historical_repository_journal":"The original complete blocked run and index retain their exact bytes. Current full journals reside in the named companion archive and are not replaced by summaries.","original_1018_test_ids":true,"readonly_predecessor_paths_matched":113,"test_maintenance":"P3S1-F01: explicitly empty one negative-test fixture after actual L01 bindings were added. Same method identity and rejection requirement."},"project":"StructDet-Bench","remote_publication":{"branch":"main","commit":"fd2faea84dfa773c01a3500f12ffc5e6735e7ece","evidence_refs":["/response/turn405","/response/turn406"],"file_count":133,"receipt_scope":"This record identifies the tested implementation commit. The subsequent metadata-only commit and final full-file inventory are recorded in companion verification/publication_manifest.json.","status":"implementation_published_and_read_back","tree":"19837abf41e80ee9fa5c0d31f15a03bda159bfa7"},"replay_run_id":"650b03c71ffd4fcd81b298a606948fad","schema_version":"0.1","scope":"baseline_reconciliation_and_isolated_scaffold_only","source_run_id":"57ae5feef97c4089acc139c7f81cb43d","status":"step1_software_accepted","step":1,"storage_representation":"summary_with_hash_linked_full_companion_logs","unimplemented_L_count":39,"unimplemented_oracle_count":24,"unimplemented_report_count":16}
+{
+  "schema_version": "0.1",
+  "project": "StructDet-Bench",
+  "phase": 3,
+  "step": 2,
+  "scope": "longitudinal_record_components_with_inherited_M_V_regression",
+  "authorization": {
+    "owner_instruction": "Phase 3 Step 2",
+    "plan_sha256": "1ca74fbba06bea44f2b656b3f4e6b46b0c6747cf13640c3f1ea29c69ef3d6352",
+    "stop_before_step": 3
+  },
+  "base_commit": "a694c843fa4709391c2daed20b05584271bd7f08",
+  "base_tree": "c0b3d008be5bf0076206a0b048bc8e3a869646b9",
+  "counts": {
+    "inherited": 1077,
+    "new": 120,
+    "total": 1197,
+    "passed": 1197,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "gates": {
+    "current_exit": 0,
+    "inherited_M": true,
+    "inherited_V": true,
+    "full_L_complete": false,
+    "unfinished_L_requirements": 35,
+    "newly_implemented": [
+      "P3-L02",
+      "P3-L03",
+      "P3-L04",
+      "P3-L05"
+    ],
+    "future_reports": 16,
+    "future_oracles": 24,
+    "full_L_scope_assessment_exit": 1,
+    "full_L_assessment_basis": "Alternate scope assessed from the same actually executed 1197 methods; no second execution is claimed."
+  },
+  "remote_publication": {
+    "status": "awaiting_complete_tree_commit_and_readback",
+    "base_verified": true
+  },
+  "companion_archive": "StructDet-Bench_Phase3_Step2_Accepted.zip",
+  "previous_records": "Original Step 1 repository journal bytes are preserved. Complete new source, isolated baseline and clean-replay journals are in the companion verification directory.",
+  "execution_refs": [
+    {
+      "path": "verification/current_console.txt",
+      "size_bytes": 177631,
+      "sha256": "7c3369fc44e56e94cbc288ce3fd47082aad88aee3570a31897790ac3cbd60f6e"
+    },
+    {
+      "path": "verification/clean_console.txt",
+      "size_bytes": 177631,
+      "sha256": "e93dc7e059f8540ef99ab575f374a75678a82e12246c1d3c227da5091d9bd899"
+    },
+    {
+      "path": "verification/isolated_baseline_console.txt",
+      "size_bytes": 158164,
+      "sha256": "4b746a651c1d096db0316cc2235099d21ae4ec43856c0a80eb4d5f87f3aa31c9"
+    },
+    {
+      "path": "verification/final_payload_console.txt",
+      "size_bytes": 177631,
+      "sha256": "295f75c9ee4d902c353b7a9140453300aef7f5c1bfb9127bd33b5659dd30eeef"
+    },
+    {
+      "path": "verification/final_payload_runs/history/d640d6592e914ab1bd1f28c5ec8e2382/run.json",
+      "size_bytes": 2311530,
+      "sha256": "c39fe8f34d281bef5e1322fd6d1ce148fee695c6875ed3768e6b4de728532b4d"
+    }
+  ],
+  "immutable_scope": "No prior production source, test, reader, metric, earlier matrix, plan, scientific contract, example or history edited. Phase 3 matrix advances authorized Step 2 only.",
+  "boundaries": {
+    "statistics_computed": false,
+    "substantive_validation_performed": false,
+    "UD006": "outstanding",
+    "CLI_longitudinal_dispatch": "Step 8",
+    "hosted_CI": false,
+    "model_calls": false,
+    "candidate_execution": false
+  },
+  "environment": {
+    "bytecode_disabled": true,
+    "no_site": true,
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+    "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]"
+  },
+  "preflight_note": "An early nonisolated preflight overlapped new-file creation and failed a stage-absence assertion; retained as failed history and excluded from baseline evidence. An untouched isolated Step 1 replay subsequently passed all 1077 tests. No predecessor source or test was modified."
+}

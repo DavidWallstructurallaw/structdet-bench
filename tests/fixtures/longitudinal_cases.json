@@ -1,0 +1,1273 @@
+{
+  "schema_version": "0.1",
+  "data_role": "fixture",
+  "purpose": "P3 Step 2 record, reference and clock cases; no model or independent human experiment.",
+  "plan_sha256": "1ca74fbba06bea44f2b656b3f4e6b46b0c6747cf13640c3f1ea29c69ef3d6352",
+  "extension": {
+    "version": "0.1",
+    "profile": "structdet_longitudinal_v1",
+    "study_id": "fixture-study1",
+    "study_version": "0.1",
+    "data_role": "fixture",
+    "registered_design_ref": {
+      "state": "known",
+      "evidence_refs": [],
+      "value": {
+        "record_type": "preregistration",
+        "record_id": "registration",
+        "record_version": "0.1"
+      }
+    },
+    "source_pins": {
+      "SD": "357c0c3994e34fc1831ce91bf1c7e579925d64827579f80eb0a8708e85c93f32",
+      "SI": "80c193231af343d383544cee924a11fbb063a5c4ccee02d996ea4f904979565a",
+      "EC": "002d2393d05cb2c8b1db0a70e844e3d775e2be2155db7b2ffaadaa8080c8b950"
+    },
+    "method_id": "longitudinal_records_v1",
+    "capabilities": [
+      "observed"
+    ],
+    "limits": {},
+    "states": [
+      {
+        "object_kind": "state",
+        "object_id": "S0",
+        "object_version": "0.1",
+        "evidence": {
+          "origin": [
+            {
+              "record_type": "source",
+              "record_id": "origin",
+              "record_version": "0.1"
+            }
+          ],
+          "process": [],
+          "independence": [],
+          "validation": [],
+          "review": [],
+          "correction": []
+        },
+        "state_kind": "model_system",
+        "stage_role": "probe_output",
+        "state_time": {
+          "state": "known",
+          "evidence_refs": [],
+          "value": "2026-01-02T00:00:00+00:00"
+        },
+        "subject_identity": {
+          "state": "known",
+          "evidence_refs": [],
+          "value": {
+            "parameter_identity": {
+              "state": "known",
+              "evidence_refs": [],
+              "value": "theta-0"
+            },
+            "checkpoint_sha256": {
+              "state": "known",
+              "evidence_refs": [],
+              "value": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "serving_identity": {
+              "state": "known",
+              "evidence_refs": [],
+              "value": "server"
+            },
+            "retrieval_identity": {
+              "state": "known",
+              "evidence_refs": [],
+              "value": "none"
+            },
+            "tool_identity": {
+              "state": "known",
+              "evidence_refs": [],
+              "value": "none"
+            },
+            "system_identity": {
+              "state": "known",
+              "evidence_refs": [],
+              "value": "fixed-system"
+            }
+          }
+        },
+        "ancestor_refs": {
+          "state": "known",
+          "evidence_refs": [],
+          "value": []
+        },
+        "measurement_refs": [
+          {
+            "object_kind": "measurement",
+            "object_id": "M0",
+            "object_version": "0.1"
+          }
+        ]
+      },
+      {
+        "object_kind": "state",
+        "object_id": "S1",
+        "object_version": "0.1",
+        "evidence": {
+          "origin": [
+            {
+              "record_type": "source",
+              "record_id": "origin",
+              "record_version": "0.1"
+            }
+          ],
+          "process": [],
+          "independence": [],
+          "validation": [],
+          "review": [],
+          "correction": []
+        },
+        "state_kind": "model_system",
+        "stage_role": "probe_output",
+        "state_time": {
+          "state": "known",
+          "evidence_refs": [],
+          "value": "2026-01-02T01:00:00+00:00"
+        },
+        "subject_identity": {
+          "state": "known",
+          "evidence_refs": [],
+          "value": {
+            "parameter_identity": {
+              "state": "known",
+              "evidence_refs": [],
+              "value": "theta-1"
+            },
+            "checkpoint_sha256": {
+              "state": "known",
+              "evidence_refs": [],
+              "value": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "serving_identity": {
+              "state": "known",
+              "evidence_refs": [],
+              "value": "server"
+            },
+            "retrieval_identity": {
+              "state": "known",
+              "evidence_refs": [],
+              "value": "none"
+            },
+            "tool_identity": {
+              "state": "known",
+              "evidence_refs": [],
+              "value": "none"
+            },
+            "system_identity": {
+              "state": "known",
+              "evidence_refs": [],
+              "value": "fixed-system"
+            }
+          }
+        },
+        "ancestor_refs": {
+          "state": "known",
+          "evidence_refs": [],
+          "value": [
+            {
+              "object_kind": "state",
+              "object_id": "S0",
+              "object_version": "0.1"
+            }
+          ]
+        },
+        "measurement_refs": []
+      },
+      {
+        "object_kind": "state",
+        "object_id": "S2",
+        "object_version": "0.1",
+        "evidence": {
+          "origin": [
+            {
+              "record_type": "source",
+              "record_id": "origin",
+              "record_version": "0.1"
+            }
+          ],
+          "process": [],
+          "independence": [],
+          "validation": [],
+          "review": [],
+          "correction": []
+        },
+        "state_kind": "model_system",
+        "stage_role": "probe_output",
+        "state_time": {
+          "state": "known",
+          "evidence_refs": [],
+          "value": "2026-01-02T02:00:00+00:00"
+        },
+        "subject_identity": {
+          "state": "known",
+          "evidence_refs": [],
+          "value": {
+            "parameter_identity": {
+              "state": "known",
+              "evidence_refs": [],
+              "value": "theta-2"
+            },
+            "checkpoint_sha256": {
+              "state": "known",
+              "evidence_refs": [],
+              "value": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "serving_identity": {
+              "state": "known",
+              "evidence_refs": [],
+              "value": "server"
+            },
+            "retrieval_identity": {
+              "state": "known",
+              "evidence_refs": [],
+              "value": "none"
+            },
+            "tool_identity": {
+              "state": "known",
+              "evidence_refs": [],
+              "value": "none"
+            },
+            "system_identity": {
+              "state": "known",
+              "evidence_refs": [],
+              "value": "fixed-system"
+            }
+          }
+        },
+        "ancestor_refs": {
+          "state": "known",
+          "evidence_refs": [],
+          "value": [
+            {
+              "object_kind": "state",
+              "object_id": "S1",
+              "object_version": "0.1"
+            }
+          ]
+        },
+        "measurement_refs": [
+          {
+            "object_kind": "measurement",
+            "object_id": "M2",
+            "object_version": "0.1"
+          }
+        ]
+      }
+    ],
+    "panels": [
+      {
+        "object_kind": "panel",
+        "object_id": "P1",
+        "object_version": "0.1",
+        "evidence": {
+          "origin": [
+            {
+              "record_type": "source",
+              "record_id": "origin",
+              "record_version": "0.1"
+            }
+          ],
+          "process": [],
+          "independence": [],
+          "validation": [],
+          "review": [],
+          "correction": []
+        },
+        "frame_ref": {
+          "record_type": "frame",
+          "record_id": "frame1",
+          "record_version": "0.1"
+        },
+        "protocol_ref": {
+          "record_type": "protocol",
+          "record_id": "protocol1",
+          "record_version": "0.1"
+        },
+        "registry_ref": {
+          "record_type": "reference_registry",
+          "record_id": "sorting_reference_eight",
+          "record_version": "0.1"
+        },
+        "stage_role": "probe_output",
+        "view": "classified_all",
+        "planned_realizations": {
+          "state": "known",
+          "evidence_refs": [],
+          "value": 2
+        },
+        "selection_rule": {
+          "state": "known",
+          "evidence_refs": [],
+          "value": "Predetermined fixture identities; no quality or class selection."
+        }
+      }
+    ],
+    "measurements": [
+      {
+        "object_kind": "measurement",
+        "object_id": "M0",
+        "object_version": "0.1",
+        "evidence": {
+          "origin": [
+            {
+              "record_type": "source",
+              "record_id": "origin",
+              "record_version": "0.1"
+            }
+          ],
+          "process": [],
+          "independence": [],
+          "validation": [],
+          "review": [],
+          "correction": []
+        },
+        "state_ref": {
+          "object_kind": "state",
+          "object_id": "S0",
+          "object_version": "0.1"
+        },
+        "cell_ref": {
+          "record_type": "cell",
+          "record_id": "cell1",
+          "record_version": "0.1"
+        },
+        "panel_ref": {
+          "state": "known",
+          "evidence_refs": [],
+          "value": {
+            "object_kind": "panel",
+            "object_id": "P1",
+            "object_version": "0.1"
+          }
+        },
+        "frame_ref": {
+          "record_type": "frame",
+          "record_id": "frame1",
+          "record_version": "0.1"
+        },
+        "protocol_ref": {
+          "record_type": "protocol",
+          "record_id": "protocol1",
+          "record_version": "0.1"
+        },
+        "registry_ref": {
+          "record_type": "reference_registry",
+          "record_id": "sorting_reference_eight",
+          "record_version": "0.1"
+        },
+        "view": "classified_all",
+        "data_role": "fixture",
+        "planned_realizations": {
+          "state": "known",
+          "evidence_refs": [],
+          "value": 2
+        },
+        "selection_rule": {
+          "state": "known",
+          "evidence_refs": [],
+          "value": "Predetermined fixture identities; no quality or class selection."
+        },
+        "sample_refs": {
+          "state": "known",
+          "evidence_refs": [],
+          "value": [
+            {
+              "record_type": "realization",
+              "record_id": "s1",
+              "record_version": "0.1"
+            },
+            {
+              "record_type": "realization",
+              "record_id": "s2",
+              "record_version": "0.1"
+            }
+          ]
+        },
+        "budget_ref": {
+          "state": "known",
+          "evidence_refs": [],
+          "value": {
+            "record_type": "budget",
+            "record_id": "budget",
+            "record_version": "0.1"
+          }
+        }
+      },
+      {
+        "object_kind": "measurement",
+        "object_id": "M2",
+        "object_version": "0.1",
+        "evidence": {
+          "origin": [
+            {
+              "record_type": "source",
+              "record_id": "origin",
+              "record_version": "0.1"
+            }
+          ],
+          "process": [],
+          "independence": [],
+          "validation": [],
+          "review": [],
+          "correction": []
+        },
+        "state_ref": {
+          "object_kind": "state",
+          "object_id": "S2",
+          "object_version": "0.1"
+        },
+        "cell_ref": {
+          "record_type": "cell",
+          "record_id": "cell2",
+          "record_version": "0.1"
+        },
+        "panel_ref": {
+          "state": "known",
+          "evidence_refs": [],
+          "value": {
+            "object_kind": "panel",
+            "object_id": "P1",
+            "object_version": "0.1"
+          }
+        },
+        "frame_ref": {
+          "record_type": "frame",
+          "record_id": "frame1",
+          "record_version": "0.1"
+        },
+        "protocol_ref": {
+          "record_type": "protocol",
+          "record_id": "protocol1",
+          "record_version": "0.1"
+        },
+        "registry_ref": {
+          "record_type": "reference_registry",
+          "record_id": "sorting_reference_eight",
+          "record_version": "0.1"
+        },
+        "view": "classified_all",
+        "data_role": "fixture",
+        "planned_realizations": {
+          "state": "known",
+          "evidence_refs": [],
+          "value": 2
+        },
+        "selection_rule": {
+          "state": "known",
+          "evidence_refs": [],
+          "value": "Predetermined fixture identities; no quality or class selection."
+        },
+        "sample_refs": {
+          "state": "known",
+          "evidence_refs": [],
+          "value": [
+            {
+              "record_type": "realization",
+              "record_id": "s3",
+              "record_version": "0.1"
+            },
+            {
+              "record_type": "realization",
+              "record_id": "s4",
+              "record_version": "0.1"
+            }
+          ]
+        },
+        "budget_ref": {
+          "state": "known",
+          "evidence_refs": [],
+          "value": {
+            "record_type": "budget",
+            "record_id": "budget",
+            "record_version": "0.1"
+          }
+        }
+      }
+    ],
+    "roots": [
+      {
+        "object_kind": "root",
+        "object_id": "R1",
+        "object_version": "0.1",
+        "evidence": {
+          "origin": [
+            {
+              "record_type": "source",
+              "record_id": "origin",
+              "record_version": "0.1"
+            }
+          ],
+          "process": [],
+          "independence": [],
+          "validation": [],
+          "review": [],
+          "correction": []
+        },
+        "ancestor_refs": {
+          "state": "known",
+          "evidence_refs": [],
+          "value": []
+        },
+        "dependency_group": {
+          "state": "known",
+          "evidence_refs": [],
+          "value": "shared-root1"
+        },
+        "independence_ref": {
+          "state": "unknown",
+          "evidence_refs": []
+        }
+      }
+    ],
+    "transitions": [
+      {
+        "object_kind": "transition",
+        "object_id": "T1",
+        "object_version": "0.1",
+        "evidence": {
+          "origin": [
+            {
+              "record_type": "source",
+              "record_id": "origin",
+              "record_version": "0.1"
+            }
+          ],
+          "process": [
+            {
+              "record_type": "evidence",
+              "record_id": "process1",
+              "record_version": "0.1"
+            }
+          ],
+          "independence": [],
+          "validation": [],
+          "review": [],
+          "correction": []
+        },
+        "transition_kind": "learning_update",
+        "parent_refs": {
+          "state": "known",
+          "evidence_refs": [],
+          "value": [
+            {
+              "object_kind": "state",
+              "object_id": "S0",
+              "object_version": "0.1"
+            }
+          ]
+        },
+        "child_ref": {
+          "object_kind": "state",
+          "object_id": "S1",
+          "object_version": "0.1"
+        },
+        "round_distance": {
+          "state": "known",
+          "evidence_refs": [],
+          "value": 1
+        },
+        "event_time": {
+          "state": "known",
+          "evidence_refs": [],
+          "value": "2026-01-02T00:30:00+00:00"
+        },
+        "process_status": "completed",
+        "effective_change": {
+          "state": "known",
+          "evidence_refs": [],
+          "value": false
+        },
+        "parameter_change": {
+          "state": "known",
+          "evidence_refs": [],
+          "value": false
+        },
+        "retained_parameters": {
+          "state": "known",
+          "evidence_refs": [],
+          "value": true
+        },
+        "retained_data_refs": {
+          "state": "known",
+          "evidence_refs": [],
+          "value": []
+        },
+        "contributions": [],
+        "external_contribution_refs": [],
+        "component_refs": []
+      },
+      {
+        "object_kind": "transition",
+        "object_id": "T2",
+        "object_version": "0.1",
+        "evidence": {
+          "origin": [
+            {
+              "record_type": "source",
+              "record_id": "origin",
+              "record_version": "0.1"
+            }
+          ],
+          "process": [
+            {
+              "record_type": "evidence",
+              "record_id": "process2",
+              "record_version": "0.1"
+            }
+          ],
+          "independence": [],
+          "validation": [],
+          "review": [],
+          "correction": []
+        },
+        "transition_kind": "learning_update",
+        "parent_refs": {
+          "state": "known",
+          "evidence_refs": [],
+          "value": [
+            {
+              "object_kind": "state",
+              "object_id": "S1",
+              "object_version": "0.1"
+            }
+          ]
+        },
+        "child_ref": {
+          "object_kind": "state",
+          "object_id": "S2",
+          "object_version": "0.1"
+        },
+        "round_distance": {
+          "state": "known",
+          "evidence_refs": [],
+          "value": 1
+        },
+        "event_time": {
+          "state": "known",
+          "evidence_refs": [],
+          "value": "2026-01-02T01:30:00+00:00"
+        },
+        "process_status": "completed",
+        "effective_change": {
+          "state": "known",
+          "evidence_refs": [],
+          "value": false
+        },
+        "parameter_change": {
+          "state": "known",
+          "evidence_refs": [],
+          "value": false
+        },
+        "retained_parameters": {
+          "state": "known",
+          "evidence_refs": [],
+          "value": true
+        },
+        "retained_data_refs": {
+          "state": "known",
+          "evidence_refs": [],
+          "value": []
+        },
+        "contributions": [],
+        "external_contribution_refs": [],
+        "component_refs": []
+      }
+    ],
+    "trajectories": [
+      {
+        "object_kind": "trajectory",
+        "object_id": "path1",
+        "object_version": "0.1",
+        "evidence": {
+          "origin": [
+            {
+              "record_type": "source",
+              "record_id": "origin",
+              "record_version": "0.1"
+            }
+          ],
+          "process": [],
+          "independence": [],
+          "validation": [],
+          "review": [],
+          "correction": []
+        },
+        "state_refs": [
+          {
+            "object_kind": "state",
+            "object_id": "S0",
+            "object_version": "0.1"
+          },
+          {
+            "object_kind": "state",
+            "object_id": "S1",
+            "object_version": "0.1"
+          },
+          {
+            "object_kind": "state",
+            "object_id": "S2",
+            "object_version": "0.1"
+          }
+        ],
+        "transition_refs": [
+          {
+            "object_kind": "transition",
+            "object_id": "T1",
+            "object_version": "0.1"
+          },
+          {
+            "object_kind": "transition",
+            "object_id": "T2",
+            "object_version": "0.1"
+          }
+        ],
+        "round_coordinates": [
+          {
+            "state": "known",
+            "evidence_refs": [],
+            "value": 0
+          },
+          {
+            "state": "known",
+            "evidence_refs": [],
+            "value": 1
+          },
+          {
+            "state": "known",
+            "evidence_refs": [],
+            "value": 2
+          }
+        ],
+        "panel_refs": [
+          {
+            "object_kind": "panel",
+            "object_id": "P1",
+            "object_version": "0.1"
+          }
+        ],
+        "root_ref": {
+          "object_kind": "root",
+          "object_id": "R1",
+          "object_version": "0.1"
+        },
+        "schedule": [
+          {
+            "state_ref": {
+              "object_kind": "state",
+              "object_id": "S0",
+              "object_version": "0.1"
+            },
+            "panel_ref": {
+              "object_kind": "panel",
+              "object_id": "P1",
+              "object_version": "0.1"
+            },
+            "recursive_round_index": {
+              "state": "known",
+              "evidence_refs": [],
+              "value": 0
+            },
+            "observation_status": "observed",
+            "measurement_ref": {
+              "state": "known",
+              "evidence_refs": [],
+              "value": {
+                "object_kind": "measurement",
+                "object_id": "M0",
+                "object_version": "0.1"
+              }
+            },
+            "reason": {
+              "state": "known",
+              "evidence_refs": [],
+              "value": "Planned fixture observation"
+            },
+            "evidence": {
+              "origin": [],
+              "process": [],
+              "independence": [],
+              "validation": [],
+              "review": [],
+              "correction": []
+            }
+          },
+          {
+            "state_ref": {
+              "object_kind": "state",
+              "object_id": "S1",
+              "object_version": "0.1"
+            },
+            "panel_ref": {
+              "object_kind": "panel",
+              "object_id": "P1",
+              "object_version": "0.1"
+            },
+            "recursive_round_index": {
+              "state": "known",
+              "evidence_refs": [],
+              "value": 1
+            },
+            "observation_status": "intentionally_unsampled",
+            "measurement_ref": {
+              "state": "known",
+              "evidence_refs": [],
+              "value": null
+            },
+            "reason": {
+              "state": "known",
+              "evidence_refs": [],
+              "value": "Prespecified unsampled state"
+            },
+            "evidence": {
+              "origin": [],
+              "process": [],
+              "independence": [],
+              "validation": [],
+              "review": [],
+              "correction": []
+            }
+          },
+          {
+            "state_ref": {
+              "object_kind": "state",
+              "object_id": "S2",
+              "object_version": "0.1"
+            },
+            "panel_ref": {
+              "object_kind": "panel",
+              "object_id": "P1",
+              "object_version": "0.1"
+            },
+            "recursive_round_index": {
+              "state": "known",
+              "evidence_refs": [],
+              "value": 2
+            },
+            "observation_status": "observed",
+            "measurement_ref": {
+              "state": "known",
+              "evidence_refs": [],
+              "value": {
+                "object_kind": "measurement",
+                "object_id": "M2",
+                "object_version": "0.1"
+              }
+            },
+            "reason": {
+              "state": "known",
+              "evidence_refs": [],
+              "value": "Planned fixture observation"
+            },
+            "evidence": {
+              "origin": [],
+              "process": [],
+              "independence": [],
+              "validation": [],
+              "review": [],
+              "correction": []
+            }
+          }
+        ],
+        "registration_ref": {
+          "state": "known",
+          "evidence_refs": [],
+          "value": {
+            "record_type": "preregistration",
+            "record_id": "registration",
+            "record_version": "0.1"
+          }
+        }
+      }
+    ],
+    "observed_requests": [
+      {
+        "object_kind": "observed_request",
+        "object_id": "observe1",
+        "object_version": "0.1",
+        "evidence": {
+          "origin": [
+            {
+              "record_type": "source",
+              "record_id": "origin",
+              "record_version": "0.1"
+            }
+          ],
+          "process": [],
+          "independence": [],
+          "validation": [],
+          "review": [],
+          "correction": []
+        },
+        "state_refs": [
+          {
+            "object_kind": "state",
+            "object_id": "S0",
+            "object_version": "0.1"
+          },
+          {
+            "object_kind": "state",
+            "object_id": "S2",
+            "object_version": "0.1"
+          }
+        ],
+        "trajectory_ref": {
+          "state": "known",
+          "evidence_refs": [],
+          "value": {
+            "object_kind": "trajectory",
+            "object_id": "path1",
+            "object_version": "0.1"
+          }
+        },
+        "view": "classified_all",
+        "support_type": "occurrence",
+        "threshold": {
+          "state": "known",
+          "evidence_refs": [],
+          "value": null
+        },
+        "matched_budget": {
+          "state": "known",
+          "evidence_refs": [],
+          "value": 2
+        },
+        "protected_tail_ref": {
+          "state": "unknown",
+          "evidence_refs": []
+        },
+        "comparison_mode": "matched"
+      }
+    ],
+    "null_scenarios": [],
+    "shl_requests": [],
+    "assays": [],
+    "interventions": [],
+    "recovery_episodes": [],
+    "revisions": [],
+    "replays": []
+  },
+  "support_records": [
+    {
+      "record_type": "source",
+      "record_id": "origin",
+      "record_version": "0.1",
+      "payload": {
+        "payload_version": "0.1",
+        "data_role": "fixture",
+        "mock": true,
+        "state": "active",
+        "scope_refs": [
+          {
+            "record_type": "frame",
+            "record_id": "frame1",
+            "record_version": "0.1"
+          }
+        ],
+        "origin": {
+          "state": "known",
+          "evidence_refs": [],
+          "value": "Artificial test record"
+        },
+        "knowledge_type": {
+          "state": "known",
+          "evidence_refs": [],
+          "value": "fixture"
+        },
+        "transformation_refs": [],
+        "evidence_refs": [],
+        "source_id": "mock-origin",
+        "sha256": {
+          "state": "unknown",
+          "evidence_refs": []
+        },
+        "locator": {
+          "state": "known",
+          "evidence_refs": [],
+          "value": "Stipulated source, no independent evidence"
+        }
+      }
+    },
+    {
+      "record_type": "preregistration",
+      "record_id": "registration",
+      "record_version": "0.1",
+      "payload": {
+        "payload_version": "0.1",
+        "data_role": "fixture",
+        "mock": true,
+        "state": "active",
+        "scope_refs": [
+          {
+            "record_type": "frame",
+            "record_id": "frame1",
+            "record_version": "0.1"
+          }
+        ],
+        "origin": {
+          "state": "known",
+          "evidence_refs": [],
+          "value": "Artificial test record"
+        },
+        "knowledge_type": {
+          "state": "known",
+          "evidence_refs": [],
+          "value": "fixture"
+        },
+        "transformation_refs": [],
+        "evidence_refs": [],
+        "registration_id": "design1",
+        "registered_at": {
+          "state": "known",
+          "evidence_refs": [],
+          "value": "2026-01-01T00:00:00+00:00"
+        },
+        "material_refs": []
+      }
+    },
+    {
+      "record_type": "budget",
+      "record_id": "budget",
+      "record_version": "0.1",
+      "payload": {
+        "payload_version": "0.1",
+        "data_role": "fixture",
+        "mock": true,
+        "state": "active",
+        "scope_refs": [
+          {
+            "record_type": "frame",
+            "record_id": "frame1",
+            "record_version": "0.1"
+          }
+        ],
+        "origin": {
+          "state": "known",
+          "evidence_refs": [],
+          "value": "Artificial test record"
+        },
+        "knowledge_type": {
+          "state": "known",
+          "evidence_refs": [],
+          "value": "fixture"
+        },
+        "transformation_refs": [],
+        "evidence_refs": [],
+        "planned": {
+          "state": "known",
+          "evidence_refs": [],
+          "value": {
+            "realizations": 2
+          }
+        },
+        "actual": {
+          "state": "known",
+          "evidence_refs": [],
+          "value": {
+            "realizations": 2
+          }
+        }
+      }
+    },
+    {
+      "record_type": "evidence",
+      "record_id": "process1",
+      "record_version": "0.1",
+      "payload": {
+        "payload_version": "0.1",
+        "data_role": "fixture",
+        "mock": true,
+        "state": "active",
+        "scope_refs": [
+          {
+            "record_type": "frame",
+            "record_id": "frame1",
+            "record_version": "0.1"
+          }
+        ],
+        "origin": {
+          "state": "known",
+          "evidence_refs": [],
+          "value": "Artificial test record"
+        },
+        "knowledge_type": {
+          "state": "known",
+          "evidence_refs": [],
+          "value": "fixture"
+        },
+        "transformation_refs": [],
+        "evidence_refs": [],
+        "target_ref": {
+          "record_type": "cell",
+          "record_id": "cell2",
+          "record_version": "0.1"
+        },
+        "purpose": "observation",
+        "assertion": {
+          "state": "known",
+          "evidence_refs": [],
+          "value": "Stipulated completed update; no actual model update"
+        },
+        "method": {
+          "state": "unknown",
+          "evidence_refs": []
+        },
+        "detail": {
+          "state": "unknown",
+          "evidence_refs": []
+        },
+        "artifact_refs": [],
+        "reviewer_refs": [
+          {
+            "record_type": "role",
+            "record_id": "reviewer",
+            "record_version": "0.1"
+          }
+        ],
+        "subject_hash": {
+          "state": "unknown",
+          "evidence_refs": []
+        },
+        "access": "readable",
+        "conflict_status": "none_declared",
+        "extensions": {
+          "longitudinal_target": {
+            "object_kind": "transition",
+            "object_id": "T1",
+            "object_version": "0.1"
+          }
+        }
+      }
+    },
+    {
+      "record_type": "evidence",
+      "record_id": "process2",
+      "record_version": "0.1",
+      "payload": {
+        "payload_version": "0.1",
+        "data_role": "fixture",
+        "mock": true,
+        "state": "active",
+        "scope_refs": [
+          {
+            "record_type": "frame",
+            "record_id": "frame1",
+            "record_version": "0.1"
+          }
+        ],
+        "origin": {
+          "state": "known",
+          "evidence_refs": [],
+          "value": "Artificial test record"
+        },
+        "knowledge_type": {
+          "state": "known",
+          "evidence_refs": [],
+          "value": "fixture"
+        },
+        "transformation_refs": [],
+        "evidence_refs": [],
+        "target_ref": {
+          "record_type": "cell",
+          "record_id": "cell2",
+          "record_version": "0.1"
+        },
+        "purpose": "observation",
+        "assertion": {
+          "state": "known",
+          "evidence_refs": [],
+          "value": "Stipulated completed update; no actual model update"
+        },
+        "method": {
+          "state": "unknown",
+          "evidence_refs": []
+        },
+        "detail": {
+          "state": "unknown",
+          "evidence_refs": []
+        },
+        "artifact_refs": [],
+        "reviewer_refs": [
+          {
+            "record_type": "role",
+            "record_id": "reviewer",
+            "record_version": "0.1"
+          }
+        ],
+        "subject_hash": {
+          "state": "unknown",
+          "evidence_refs": []
+        },
+        "access": "readable",
+        "conflict_status": "none_declared",
+        "extensions": {
+          "longitudinal_target": {
+            "object_kind": "transition",
+            "object_id": "T2",
+            "object_version": "0.1"
+          }
+        }
+      }
+    }
+  ],
+  "variants": [
+    {
+      "id": "LR-00",
+      "kind": "missing_observation",
+      "expected_behavior": "Remove one measurement and mark the planned slot missing; no new state is invented."
+    },
+    {
+      "id": "LR-01",
+      "kind": "unknown_ancestor",
+      "expected_behavior": "Unknown parent history is retained and restricts only the affected path."
+    },
+    {
+      "id": "LR-02",
+      "kind": "fork",
+      "expected_behavior": "Select an explicit branch and retain the other branch separately."
+    },
+    {
+      "id": "LR-03",
+      "kind": "merge",
+      "expected_behavior": "Record both parents and their separately typed weights; do not infer structural independence."
+    },
+    {
+      "id": "LR-04",
+      "kind": "inference_clock",
+      "expected_behavior": "Fixed-model configuration change has zero reproduction distance."
+    },
+    {
+      "id": "LR-05",
+      "kind": "cycle",
+      "expected_behavior": "Typed reproduction cycle restricts the affected path while unrelated state bindings remain."
+    },
+    {
+      "id": "LR-06",
+      "kind": "review_cycle",
+      "expected_behavior": "General lineage/review references are not subjected to the reproduction DAG."
+    },
+    {
+      "id": "LR-07",
+      "kind": "duplicate_pin",
+      "expected_behavior": "Conflicting object versions never resolve using a latest-version choice."
+    },
+    {
+      "id": "LR-08",
+      "kind": "clocks",
+      "expected_behavior": "Measured states at rounds 0 and 2 retain the documented intermediate round 1."
+    },
+    {
+      "id": "LR-09",
+      "kind": "unknown_subject",
+      "expected_behavior": "Missing checkpoint information remains unknown."
+    },
+    {
+      "id": "LR-10",
+      "kind": "requests_only",
+      "expected_behavior": "Future estimator declarations contain no produced metrics or decisions."
+    }
+  ]
+}
