@@ -1,0 +1,6254 @@
+{
+  "analysis_config": {
+    "analysis_config_id": "fixture-config1",
+    "assignment_evidence_policy_id": "fixture_only",
+    "assignment_evidence_policy_version": "0.1",
+    "assignment_pins": [
+      {
+        "assignment_id": "P01-A-a1",
+        "assignment_version": "0.1",
+        "sample_id": "P01-A-s1"
+      },
+      {
+        "assignment_id": "P01-A-a2",
+        "assignment_version": "0.1",
+        "sample_id": "P01-A-s2"
+      },
+      {
+        "assignment_id": "P01-A-a3",
+        "assignment_version": "0.1",
+        "sample_id": "P01-A-s3"
+      },
+      {
+        "assignment_id": "P01-A-a4",
+        "assignment_version": "0.1",
+        "sample_id": "P01-A-s4"
+      },
+      {
+        "assignment_id": "P01-A-a5",
+        "assignment_version": "0.1",
+        "sample_id": "P01-A-s5"
+      },
+      {
+        "assignment_id": "P01-A-a6",
+        "assignment_version": "0.1",
+        "sample_id": "P01-A-s6"
+      },
+      {
+        "assignment_id": "P01-A-a7",
+        "assignment_version": "0.1",
+        "sample_id": "P01-A-s7"
+      },
+      {
+        "assignment_id": "P01-A-a8",
+        "assignment_version": "0.1",
+        "sample_id": "P01-A-s8"
+      },
+      {
+        "assignment_id": "P01-A-a9",
+        "assignment_version": "0.1",
+        "sample_id": "P01-A-s9"
+      },
+      {
+        "assignment_id": "P01-A-a10",
+        "assignment_version": "0.1",
+        "sample_id": "P01-A-s10"
+      },
+      {
+        "assignment_id": "P01-A-a11",
+        "assignment_version": "0.1",
+        "sample_id": "P01-A-s11"
+      },
+      {
+        "assignment_id": "P01-A-a12",
+        "assignment_version": "0.1",
+        "sample_id": "P01-A-s12"
+      },
+      {
+        "assignment_id": "P01-A-a13",
+        "assignment_version": "0.1",
+        "sample_id": "P01-A-s13"
+      },
+      {
+        "assignment_id": "P01-A-a14",
+        "assignment_version": "0.1",
+        "sample_id": "P01-A-s14"
+      },
+      {
+        "assignment_id": "P01-A-a15",
+        "assignment_version": "0.1",
+        "sample_id": "P01-A-s15"
+      },
+      {
+        "assignment_id": "P01-A-a16",
+        "assignment_version": "0.1",
+        "sample_id": "P01-A-s16"
+      },
+      {
+        "assignment_id": "P01-A-a17",
+        "assignment_version": "0.1",
+        "sample_id": "P01-A-s17"
+      },
+      {
+        "assignment_id": "P01-A-a18",
+        "assignment_version": "0.1",
+        "sample_id": "P01-A-s18"
+      },
+      {
+        "assignment_id": "P01-A-a19",
+        "assignment_version": "0.1",
+        "sample_id": "P01-A-s19"
+      },
+      {
+        "assignment_id": "P01-A-a20",
+        "assignment_version": "0.1",
+        "sample_id": "P01-A-s20"
+      },
+      {
+        "assignment_id": "P01-B-a1",
+        "assignment_version": "0.1",
+        "sample_id": "P01-B-s1"
+      },
+      {
+        "assignment_id": "P01-B-a2",
+        "assignment_version": "0.1",
+        "sample_id": "P01-B-s2"
+      },
+      {
+        "assignment_id": "P01-B-a3",
+        "assignment_version": "0.1",
+        "sample_id": "P01-B-s3"
+      },
+      {
+        "assignment_id": "P01-B-a4",
+        "assignment_version": "0.1",
+        "sample_id": "P01-B-s4"
+      },
+      {
+        "assignment_id": "P01-B-a5",
+        "assignment_version": "0.1",
+        "sample_id": "P01-B-s5"
+      },
+      {
+        "assignment_id": "P01-B-a6",
+        "assignment_version": "0.1",
+        "sample_id": "P01-B-s6"
+      },
+      {
+        "assignment_id": "P01-B-a7",
+        "assignment_version": "0.1",
+        "sample_id": "P01-B-s7"
+      },
+      {
+        "assignment_id": "P01-B-a8",
+        "assignment_version": "0.1",
+        "sample_id": "P01-B-s8"
+      },
+      {
+        "assignment_id": "P01-B-a9",
+        "assignment_version": "0.1",
+        "sample_id": "P01-B-s9"
+      },
+      {
+        "assignment_id": "P01-B-a10",
+        "assignment_version": "0.1",
+        "sample_id": "P01-B-s10"
+      },
+      {
+        "assignment_id": "P01-B-a11",
+        "assignment_version": "0.1",
+        "sample_id": "P01-B-s11"
+      },
+      {
+        "assignment_id": "P01-B-a12",
+        "assignment_version": "0.1",
+        "sample_id": "P01-B-s12"
+      },
+      {
+        "assignment_id": "P01-B-a13",
+        "assignment_version": "0.1",
+        "sample_id": "P01-B-s13"
+      },
+      {
+        "assignment_id": "P01-B-a14",
+        "assignment_version": "0.1",
+        "sample_id": "P01-B-s14"
+      },
+      {
+        "assignment_id": "P01-B-a15",
+        "assignment_version": "0.1",
+        "sample_id": "P01-B-s15"
+      },
+      {
+        "assignment_id": "P01-B-a16",
+        "assignment_version": "0.1",
+        "sample_id": "P01-B-s16"
+      },
+      {
+        "assignment_id": "P01-B-a17",
+        "assignment_version": "0.1",
+        "sample_id": "P01-B-s17"
+      },
+      {
+        "assignment_id": "P01-B-a18",
+        "assignment_version": "0.1",
+        "sample_id": "P01-B-s18"
+      },
+      {
+        "assignment_id": "P01-B-a19",
+        "assignment_version": "0.1",
+        "sample_id": "P01-B-s19"
+      },
+      {
+        "assignment_id": "P01-B-a20",
+        "assignment_version": "0.1",
+        "sample_id": "P01-B-s20"
+      },
+      {
+        "assignment_id": "P01-C-a1",
+        "assignment_version": "0.1",
+        "sample_id": "P01-C-s1"
+      },
+      {
+        "assignment_id": "P01-C-a2",
+        "assignment_version": "0.1",
+        "sample_id": "P01-C-s2"
+      },
+      {
+        "assignment_id": "P01-C-a3",
+        "assignment_version": "0.1",
+        "sample_id": "P01-C-s3"
+      },
+      {
+        "assignment_id": "P01-C-a4",
+        "assignment_version": "0.1",
+        "sample_id": "P01-C-s4"
+      },
+      {
+        "assignment_id": "P01-C-a5",
+        "assignment_version": "0.1",
+        "sample_id": "P01-C-s5"
+      },
+      {
+        "assignment_id": "P01-C-a6",
+        "assignment_version": "0.1",
+        "sample_id": "P01-C-s6"
+      },
+      {
+        "assignment_id": "P01-C-a7",
+        "assignment_version": "0.1",
+        "sample_id": "P01-C-s7"
+      },
+      {
+        "assignment_id": "P01-C-a8",
+        "assignment_version": "0.1",
+        "sample_id": "P01-C-s8"
+      },
+      {
+        "assignment_id": "P01-C-a9",
+        "assignment_version": "0.1",
+        "sample_id": "P01-C-s9"
+      },
+      {
+        "assignment_id": "P01-C-a10",
+        "assignment_version": "0.1",
+        "sample_id": "P01-C-s10"
+      },
+      {
+        "assignment_id": "P01-C-a11",
+        "assignment_version": "0.1",
+        "sample_id": "P01-C-s11"
+      },
+      {
+        "assignment_id": "P01-C-a12",
+        "assignment_version": "0.1",
+        "sample_id": "P01-C-s12"
+      },
+      {
+        "assignment_id": "P01-C-a13",
+        "assignment_version": "0.1",
+        "sample_id": "P01-C-s13"
+      },
+      {
+        "assignment_id": "P01-C-a14",
+        "assignment_version": "0.1",
+        "sample_id": "P01-C-s14"
+      },
+      {
+        "assignment_id": "P01-C-a15",
+        "assignment_version": "0.1",
+        "sample_id": "P01-C-s15"
+      },
+      {
+        "assignment_id": "P01-C-a16",
+        "assignment_version": "0.1",
+        "sample_id": "P01-C-s16"
+      },
+      {
+        "assignment_id": "P01-C-a17",
+        "assignment_version": "0.1",
+        "sample_id": "P01-C-s17"
+      },
+      {
+        "assignment_id": "P01-C-a18",
+        "assignment_version": "0.1",
+        "sample_id": "P01-C-s18"
+      },
+      {
+        "assignment_id": "P01-C-a19",
+        "assignment_version": "0.1",
+        "sample_id": "P01-C-s19"
+      },
+      {
+        "assignment_id": "P01-C-a20",
+        "assignment_version": "0.1",
+        "sample_id": "P01-C-s20"
+      },
+      {
+        "assignment_id": "P02-A-a1",
+        "assignment_version": "0.1",
+        "sample_id": "P02-A-s1"
+      },
+      {
+        "assignment_id": "P02-A-a2",
+        "assignment_version": "0.1",
+        "sample_id": "P02-A-s2"
+      },
+      {
+        "assignment_id": "P02-A-a3",
+        "assignment_version": "0.1",
+        "sample_id": "P02-A-s3"
+      },
+      {
+        "assignment_id": "P02-A-a4",
+        "assignment_version": "0.1",
+        "sample_id": "P02-A-s4"
+      },
+      {
+        "assignment_id": "P02-A-a5",
+        "assignment_version": "0.1",
+        "sample_id": "P02-A-s5"
+      },
+      {
+        "assignment_id": "P02-A-a6",
+        "assignment_version": "0.1",
+        "sample_id": "P02-A-s6"
+      },
+      {
+        "assignment_id": "P02-A-a7",
+        "assignment_version": "0.1",
+        "sample_id": "P02-A-s7"
+      },
+      {
+        "assignment_id": "P02-A-a8",
+        "assignment_version": "0.1",
+        "sample_id": "P02-A-s8"
+      },
+      {
+        "assignment_id": "P02-A-a9",
+        "assignment_version": "0.1",
+        "sample_id": "P02-A-s9"
+      },
+      {
+        "assignment_id": "P02-A-a10",
+        "assignment_version": "0.1",
+        "sample_id": "P02-A-s10"
+      },
+      {
+        "assignment_id": "P02-A-a11",
+        "assignment_version": "0.1",
+        "sample_id": "P02-A-s11"
+      },
+      {
+        "assignment_id": "P02-A-a12",
+        "assignment_version": "0.1",
+        "sample_id": "P02-A-s12"
+      },
+      {
+        "assignment_id": "P02-A-a13",
+        "assignment_version": "0.1",
+        "sample_id": "P02-A-s13"
+      },
+      {
+        "assignment_id": "P02-A-a14",
+        "assignment_version": "0.1",
+        "sample_id": "P02-A-s14"
+      },
+      {
+        "assignment_id": "P02-A-a15",
+        "assignment_version": "0.1",
+        "sample_id": "P02-A-s15"
+      },
+      {
+        "assignment_id": "P02-A-a16",
+        "assignment_version": "0.1",
+        "sample_id": "P02-A-s16"
+      },
+      {
+        "assignment_id": "P02-A-a17",
+        "assignment_version": "0.1",
+        "sample_id": "P02-A-s17"
+      },
+      {
+        "assignment_id": "P02-A-a18",
+        "assignment_version": "0.1",
+        "sample_id": "P02-A-s18"
+      },
+      {
+        "assignment_id": "P02-A-a19",
+        "assignment_version": "0.1",
+        "sample_id": "P02-A-s19"
+      },
+      {
+        "assignment_id": "P02-A-a20",
+        "assignment_version": "0.1",
+        "sample_id": "P02-A-s20"
+      },
+      {
+        "assignment_id": "P02-B-a1",
+        "assignment_version": "0.1",
+        "sample_id": "P02-B-s1"
+      },
+      {
+        "assignment_id": "P02-B-a2",
+        "assignment_version": "0.1",
+        "sample_id": "P02-B-s2"
+      },
+      {
+        "assignment_id": "P02-B-a3",
+        "assignment_version": "0.1",
+        "sample_id": "P02-B-s3"
+      },
+      {
+        "assignment_id": "P02-B-a4",
+        "assignment_version": "0.1",
+        "sample_id": "P02-B-s4"
+      },
+      {
+        "assignment_id": "P02-B-a5",
+        "assignment_version": "0.1",
+        "sample_id": "P02-B-s5"
+      },
+      {
+        "assignment_id": "P02-B-a6",
+        "assignment_version": "0.1",
+        "sample_id": "P02-B-s6"
+      },
+      {
+        "assignment_id": "P02-B-a7",
+        "assignment_version": "0.1",
+        "sample_id": "P02-B-s7"
+      },
+      {
+        "assignment_id": "P02-B-a8",
+        "assignment_version": "0.1",
+        "sample_id": "P02-B-s8"
+      },
+      {
+        "assignment_id": "P02-B-a9",
+        "assignment_version": "0.1",
+        "sample_id": "P02-B-s9"
+      },
+      {
+        "assignment_id": "P02-B-a10",
+        "assignment_version": "0.1",
+        "sample_id": "P02-B-s10"
+      },
+      {
+        "assignment_id": "P02-B-a11",
+        "assignment_version": "0.1",
+        "sample_id": "P02-B-s11"
+      },
+      {
+        "assignment_id": "P02-B-a12",
+        "assignment_version": "0.1",
+        "sample_id": "P02-B-s12"
+      },
+      {
+        "assignment_id": "P02-B-a13",
+        "assignment_version": "0.1",
+        "sample_id": "P02-B-s13"
+      },
+      {
+        "assignment_id": "P02-B-a14",
+        "assignment_version": "0.1",
+        "sample_id": "P02-B-s14"
+      },
+      {
+        "assignment_id": "P02-B-a15",
+        "assignment_version": "0.1",
+        "sample_id": "P02-B-s15"
+      },
+      {
+        "assignment_id": "P02-B-a16",
+        "assignment_version": "0.1",
+        "sample_id": "P02-B-s16"
+      },
+      {
+        "assignment_id": "P02-B-a17",
+        "assignment_version": "0.1",
+        "sample_id": "P02-B-s17"
+      },
+      {
+        "assignment_id": "P02-B-a18",
+        "assignment_version": "0.1",
+        "sample_id": "P02-B-s18"
+      },
+      {
+        "assignment_id": "P02-B-a19",
+        "assignment_version": "0.1",
+        "sample_id": "P02-B-s19"
+      },
+      {
+        "assignment_id": "P02-B-a20",
+        "assignment_version": "0.1",
+        "sample_id": "P02-B-s20"
+      },
+      {
+        "assignment_id": "P02-C-a1",
+        "assignment_version": "0.1",
+        "sample_id": "P02-C-s1"
+      },
+      {
+        "assignment_id": "P02-C-a2",
+        "assignment_version": "0.1",
+        "sample_id": "P02-C-s2"
+      },
+      {
+        "assignment_id": "P02-C-a3",
+        "assignment_version": "0.1",
+        "sample_id": "P02-C-s3"
+      },
+      {
+        "assignment_id": "P02-C-a4",
+        "assignment_version": "0.1",
+        "sample_id": "P02-C-s4"
+      },
+      {
+        "assignment_id": "P02-C-a5",
+        "assignment_version": "0.1",
+        "sample_id": "P02-C-s5"
+      },
+      {
+        "assignment_id": "P02-C-a6",
+        "assignment_version": "0.1",
+        "sample_id": "P02-C-s6"
+      },
+      {
+        "assignment_id": "P02-C-a7",
+        "assignment_version": "0.1",
+        "sample_id": "P02-C-s7"
+      },
+      {
+        "assignment_id": "P02-C-a8",
+        "assignment_version": "0.1",
+        "sample_id": "P02-C-s8"
+      },
+      {
+        "assignment_id": "P02-C-a9",
+        "assignment_version": "0.1",
+        "sample_id": "P02-C-s9"
+      },
+      {
+        "assignment_id": "P02-C-a10",
+        "assignment_version": "0.1",
+        "sample_id": "P02-C-s10"
+      },
+      {
+        "assignment_id": "P02-C-a11",
+        "assignment_version": "0.1",
+        "sample_id": "P02-C-s11"
+      },
+      {
+        "assignment_id": "P02-C-a12",
+        "assignment_version": "0.1",
+        "sample_id": "P02-C-s12"
+      },
+      {
+        "assignment_id": "P02-C-a13",
+        "assignment_version": "0.1",
+        "sample_id": "P02-C-s13"
+      },
+      {
+        "assignment_id": "P02-C-a14",
+        "assignment_version": "0.1",
+        "sample_id": "P02-C-s14"
+      },
+      {
+        "assignment_id": "P02-C-a15",
+        "assignment_version": "0.1",
+        "sample_id": "P02-C-s15"
+      },
+      {
+        "assignment_id": "P02-C-a16",
+        "assignment_version": "0.1",
+        "sample_id": "P02-C-s16"
+      },
+      {
+        "assignment_id": "P02-C-a17",
+        "assignment_version": "0.1",
+        "sample_id": "P02-C-s17"
+      },
+      {
+        "assignment_id": "P02-C-a18",
+        "assignment_version": "0.1",
+        "sample_id": "P02-C-s18"
+      },
+      {
+        "assignment_id": "P02-C-a19",
+        "assignment_version": "0.1",
+        "sample_id": "P02-C-s19"
+      },
+      {
+        "assignment_id": "P02-C-a20",
+        "assignment_version": "0.1",
+        "sample_id": "P02-C-s20"
+      },
+      {
+        "assignment_id": "P03-A-a1",
+        "assignment_version": "0.1",
+        "sample_id": "P03-A-s1"
+      },
+      {
+        "assignment_id": "P03-A-a2",
+        "assignment_version": "0.1",
+        "sample_id": "P03-A-s2"
+      },
+      {
+        "assignment_id": "P03-A-a3",
+        "assignment_version": "0.1",
+        "sample_id": "P03-A-s3"
+      },
+      {
+        "assignment_id": "P03-A-a4",
+        "assignment_version": "0.1",
+        "sample_id": "P03-A-s4"
+      },
+      {
+        "assignment_id": "P03-A-a5",
+        "assignment_version": "0.1",
+        "sample_id": "P03-A-s5"
+      },
+      {
+        "assignment_id": "P03-A-a6",
+        "assignment_version": "0.1",
+        "sample_id": "P03-A-s6"
+      },
+      {
+        "assignment_id": "P03-A-a7",
+        "assignment_version": "0.1",
+        "sample_id": "P03-A-s7"
+      },
+      {
+        "assignment_id": "P03-A-a8",
+        "assignment_version": "0.1",
+        "sample_id": "P03-A-s8"
+      },
+      {
+        "assignment_id": "P03-A-a9",
+        "assignment_version": "0.1",
+        "sample_id": "P03-A-s9"
+      },
+      {
+        "assignment_id": "P03-A-a10",
+        "assignment_version": "0.1",
+        "sample_id": "P03-A-s10"
+      },
+      {
+        "assignment_id": "P03-A-a11",
+        "assignment_version": "0.1",
+        "sample_id": "P03-A-s11"
+      },
+      {
+        "assignment_id": "P03-A-a12",
+        "assignment_version": "0.1",
+        "sample_id": "P03-A-s12"
+      },
+      {
+        "assignment_id": "P03-A-a13",
+        "assignment_version": "0.1",
+        "sample_id": "P03-A-s13"
+      },
+      {
+        "assignment_id": "P03-A-a14",
+        "assignment_version": "0.1",
+        "sample_id": "P03-A-s14"
+      },
+      {
+        "assignment_id": "P03-A-a15",
+        "assignment_version": "0.1",
+        "sample_id": "P03-A-s15"
+      },
+      {
+        "assignment_id": "P03-A-a16",
+        "assignment_version": "0.1",
+        "sample_id": "P03-A-s16"
+      },
+      {
+        "assignment_id": "P03-A-a17",
+        "assignment_version": "0.1",
+        "sample_id": "P03-A-s17"
+      },
+      {
+        "assignment_id": "P03-A-a18",
+        "assignment_version": "0.1",
+        "sample_id": "P03-A-s18"
+      },
+      {
+        "assignment_id": "P03-A-a19",
+        "assignment_version": "0.1",
+        "sample_id": "P03-A-s19"
+      },
+      {
+        "assignment_id": "P03-A-a20",
+        "assignment_version": "0.1",
+        "sample_id": "P03-A-s20"
+      },
+      {
+        "assignment_id": "P03-B-a1",
+        "assignment_version": "0.1",
+        "sample_id": "P03-B-s1"
+      },
+      {
+        "assignment_id": "P03-B-a2",
+        "assignment_version": "0.1",
+        "sample_id": "P03-B-s2"
+      },
+      {
+        "assignment_id": "P03-B-a3",
+        "assignment_version": "0.1",
+        "sample_id": "P03-B-s3"
+      },
+      {
+        "assignment_id": "P03-B-a4",
+        "assignment_version": "0.1",
+        "sample_id": "P03-B-s4"
+      },
+      {
+        "assignment_id": "P03-B-a5",
+        "assignment_version": "0.1",
+        "sample_id": "P03-B-s5"
+      },
+      {
+        "assignment_id": "P03-B-a6",
+        "assignment_version": "0.1",
+        "sample_id": "P03-B-s6"
+      },
+      {
+        "assignment_id": "P03-B-a7",
+        "assignment_version": "0.1",
+        "sample_id": "P03-B-s7"
+      },
+      {
+        "assignment_id": "P03-B-a8",
+        "assignment_version": "0.1",
+        "sample_id": "P03-B-s8"
+      },
+      {
+        "assignment_id": "P03-B-a9",
+        "assignment_version": "0.1",
+        "sample_id": "P03-B-s9"
+      },
+      {
+        "assignment_id": "P03-B-a10",
+        "assignment_version": "0.1",
+        "sample_id": "P03-B-s10"
+      },
+      {
+        "assignment_id": "P03-B-a11",
+        "assignment_version": "0.1",
+        "sample_id": "P03-B-s11"
+      },
+      {
+        "assignment_id": "P03-B-a12",
+        "assignment_version": "0.1",
+        "sample_id": "P03-B-s12"
+      },
+      {
+        "assignment_id": "P03-B-a13",
+        "assignment_version": "0.1",
+        "sample_id": "P03-B-s13"
+      },
+      {
+        "assignment_id": "P03-B-a14",
+        "assignment_version": "0.1",
+        "sample_id": "P03-B-s14"
+      },
+      {
+        "assignment_id": "P03-B-a15",
+        "assignment_version": "0.1",
+        "sample_id": "P03-B-s15"
+      },
+      {
+        "assignment_id": "P03-B-a16",
+        "assignment_version": "0.1",
+        "sample_id": "P03-B-s16"
+      },
+      {
+        "assignment_id": "P03-B-a17",
+        "assignment_version": "0.1",
+        "sample_id": "P03-B-s17"
+      },
+      {
+        "assignment_id": "P03-B-a18",
+        "assignment_version": "0.1",
+        "sample_id": "P03-B-s18"
+      },
+      {
+        "assignment_id": "P03-B-a19",
+        "assignment_version": "0.1",
+        "sample_id": "P03-B-s19"
+      },
+      {
+        "assignment_id": "P03-B-a20",
+        "assignment_version": "0.1",
+        "sample_id": "P03-B-s20"
+      },
+      {
+        "assignment_id": "P03-C-a1",
+        "assignment_version": "0.1",
+        "sample_id": "P03-C-s1"
+      },
+      {
+        "assignment_id": "P03-C-a2",
+        "assignment_version": "0.1",
+        "sample_id": "P03-C-s2"
+      },
+      {
+        "assignment_id": "P03-C-a3",
+        "assignment_version": "0.1",
+        "sample_id": "P03-C-s3"
+      },
+      {
+        "assignment_id": "P03-C-a4",
+        "assignment_version": "0.1",
+        "sample_id": "P03-C-s4"
+      },
+      {
+        "assignment_id": "P03-C-a5",
+        "assignment_version": "0.1",
+        "sample_id": "P03-C-s5"
+      },
+      {
+        "assignment_id": "P03-C-a6",
+        "assignment_version": "0.1",
+        "sample_id": "P03-C-s6"
+      },
+      {
+        "assignment_id": "P03-C-a7",
+        "assignment_version": "0.1",
+        "sample_id": "P03-C-s7"
+      },
+      {
+        "assignment_id": "P03-C-a8",
+        "assignment_version": "0.1",
+        "sample_id": "P03-C-s8"
+      },
+      {
+        "assignment_id": "P03-C-a9",
+        "assignment_version": "0.1",
+        "sample_id": "P03-C-s9"
+      },
+      {
+        "assignment_id": "P03-C-a10",
+        "assignment_version": "0.1",
+        "sample_id": "P03-C-s10"
+      },
+      {
+        "assignment_id": "P03-C-a11",
+        "assignment_version": "0.1",
+        "sample_id": "P03-C-s11"
+      },
+      {
+        "assignment_id": "P03-C-a12",
+        "assignment_version": "0.1",
+        "sample_id": "P03-C-s12"
+      },
+      {
+        "assignment_id": "P03-C-a13",
+        "assignment_version": "0.1",
+        "sample_id": "P03-C-s13"
+      },
+      {
+        "assignment_id": "P03-C-a14",
+        "assignment_version": "0.1",
+        "sample_id": "P03-C-s14"
+      },
+      {
+        "assignment_id": "P03-C-a15",
+        "assignment_version": "0.1",
+        "sample_id": "P03-C-s15"
+      },
+      {
+        "assignment_id": "P03-C-a16",
+        "assignment_version": "0.1",
+        "sample_id": "P03-C-s16"
+      },
+      {
+        "assignment_id": "P03-C-a17",
+        "assignment_version": "0.1",
+        "sample_id": "P03-C-s17"
+      },
+      {
+        "assignment_id": "P03-C-a18",
+        "assignment_version": "0.1",
+        "sample_id": "P03-C-s18"
+      },
+      {
+        "assignment_id": "P03-C-a19",
+        "assignment_version": "0.1",
+        "sample_id": "P03-C-s19"
+      },
+      {
+        "assignment_id": "P03-C-a20",
+        "assignment_version": "0.1",
+        "sample_id": "P03-C-s20"
+      },
+      {
+        "assignment_id": "P04-A-a1",
+        "assignment_version": "0.1",
+        "sample_id": "P04-A-s1"
+      },
+      {
+        "assignment_id": "P04-A-a2",
+        "assignment_version": "0.1",
+        "sample_id": "P04-A-s2"
+      },
+      {
+        "assignment_id": "P04-A-a3",
+        "assignment_version": "0.1",
+        "sample_id": "P04-A-s3"
+      },
+      {
+        "assignment_id": "P04-A-a4",
+        "assignment_version": "0.1",
+        "sample_id": "P04-A-s4"
+      },
+      {
+        "assignment_id": "P04-A-a5",
+        "assignment_version": "0.1",
+        "sample_id": "P04-A-s5"
+      },
+      {
+        "assignment_id": "P04-A-a6",
+        "assignment_version": "0.1",
+        "sample_id": "P04-A-s6"
+      },
+      {
+        "assignment_id": "P04-A-a7",
+        "assignment_version": "0.1",
+        "sample_id": "P04-A-s7"
+      },
+      {
+        "assignment_id": "P04-A-a8",
+        "assignment_version": "0.1",
+        "sample_id": "P04-A-s8"
+      },
+      {
+        "assignment_id": "P04-A-a9",
+        "assignment_version": "0.1",
+        "sample_id": "P04-A-s9"
+      },
+      {
+        "assignment_id": "P04-A-a10",
+        "assignment_version": "0.1",
+        "sample_id": "P04-A-s10"
+      },
+      {
+        "assignment_id": "P04-A-a11",
+        "assignment_version": "0.1",
+        "sample_id": "P04-A-s11"
+      },
+      {
+        "assignment_id": "P04-A-a12",
+        "assignment_version": "0.1",
+        "sample_id": "P04-A-s12"
+      },
+      {
+        "assignment_id": "P04-A-a13",
+        "assignment_version": "0.1",
+        "sample_id": "P04-A-s13"
+      },
+      {
+        "assignment_id": "P04-A-a14",
+        "assignment_version": "0.1",
+        "sample_id": "P04-A-s14"
+      },
+      {
+        "assignment_id": "P04-A-a15",
+        "assignment_version": "0.1",
+        "sample_id": "P04-A-s15"
+      },
+      {
+        "assignment_id": "P04-A-a16",
+        "assignment_version": "0.1",
+        "sample_id": "P04-A-s16"
+      },
+      {
+        "assignment_id": "P04-A-a17",
+        "assignment_version": "0.1",
+        "sample_id": "P04-A-s17"
+      },
+      {
+        "assignment_id": "P04-A-a18",
+        "assignment_version": "0.1",
+        "sample_id": "P04-A-s18"
+      },
+      {
+        "assignment_id": "P04-A-a19",
+        "assignment_version": "0.1",
+        "sample_id": "P04-A-s19"
+      },
+      {
+        "assignment_id": "P04-A-a20",
+        "assignment_version": "0.1",
+        "sample_id": "P04-A-s20"
+      },
+      {
+        "assignment_id": "P04-B-a1",
+        "assignment_version": "0.1",
+        "sample_id": "P04-B-s1"
+      },
+      {
+        "assignment_id": "P04-B-a2",
+        "assignment_version": "0.1",
+        "sample_id": "P04-B-s2"
+      },
+      {
+        "assignment_id": "P04-B-a3",
+        "assignment_version": "0.1",
+        "sample_id": "P04-B-s3"
+      },
+      {
+        "assignment_id": "P04-B-a4",
+        "assignment_version": "0.1",
+        "sample_id": "P04-B-s4"
+      },
+      {
+        "assignment_id": "P04-B-a5",
+        "assignment_version": "0.1",
+        "sample_id": "P04-B-s5"
+      },
+      {
+        "assignment_id": "P04-B-a6",
+        "assignment_version": "0.1",
+        "sample_id": "P04-B-s6"
+      },
+      {
+        "assignment_id": "P04-B-a7",
+        "assignment_version": "0.1",
+        "sample_id": "P04-B-s7"
+      },
+      {
+        "assignment_id": "P04-B-a8",
+        "assignment_version": "0.1",
+        "sample_id": "P04-B-s8"
+      },
+      {
+        "assignment_id": "P04-B-a9",
+        "assignment_version": "0.1",
+        "sample_id": "P04-B-s9"
+      },
+      {
+        "assignment_id": "P04-B-a10",
+        "assignment_version": "0.1",
+        "sample_id": "P04-B-s10"
+      },
+      {
+        "assignment_id": "P04-B-a11",
+        "assignment_version": "0.1",
+        "sample_id": "P04-B-s11"
+      },
+      {
+        "assignment_id": "P04-B-a12",
+        "assignment_version": "0.1",
+        "sample_id": "P04-B-s12"
+      },
+      {
+        "assignment_id": "P04-B-a13",
+        "assignment_version": "0.1",
+        "sample_id": "P04-B-s13"
+      },
+      {
+        "assignment_id": "P04-B-a14",
+        "assignment_version": "0.1",
+        "sample_id": "P04-B-s14"
+      },
+      {
+        "assignment_id": "P04-B-a15",
+        "assignment_version": "0.1",
+        "sample_id": "P04-B-s15"
+      },
+      {
+        "assignment_id": "P04-B-a16",
+        "assignment_version": "0.1",
+        "sample_id": "P04-B-s16"
+      },
+      {
+        "assignment_id": "P04-B-a17",
+        "assignment_version": "0.1",
+        "sample_id": "P04-B-s17"
+      },
+      {
+        "assignment_id": "P04-B-a18",
+        "assignment_version": "0.1",
+        "sample_id": "P04-B-s18"
+      },
+      {
+        "assignment_id": "P04-B-a19",
+        "assignment_version": "0.1",
+        "sample_id": "P04-B-s19"
+      },
+      {
+        "assignment_id": "P04-B-a20",
+        "assignment_version": "0.1",
+        "sample_id": "P04-B-s20"
+      },
+      {
+        "assignment_id": "P04-C-a1",
+        "assignment_version": "0.1",
+        "sample_id": "P04-C-s1"
+      },
+      {
+        "assignment_id": "P04-C-a2",
+        "assignment_version": "0.1",
+        "sample_id": "P04-C-s2"
+      },
+      {
+        "assignment_id": "P04-C-a3",
+        "assignment_version": "0.1",
+        "sample_id": "P04-C-s3"
+      },
+      {
+        "assignment_id": "P04-C-a4",
+        "assignment_version": "0.1",
+        "sample_id": "P04-C-s4"
+      },
+      {
+        "assignment_id": "P04-C-a5",
+        "assignment_version": "0.1",
+        "sample_id": "P04-C-s5"
+      },
+      {
+        "assignment_id": "P04-C-a6",
+        "assignment_version": "0.1",
+        "sample_id": "P04-C-s6"
+      },
+      {
+        "assignment_id": "P04-C-a7",
+        "assignment_version": "0.1",
+        "sample_id": "P04-C-s7"
+      },
+      {
+        "assignment_id": "P04-C-a8",
+        "assignment_version": "0.1",
+        "sample_id": "P04-C-s8"
+      },
+      {
+        "assignment_id": "P04-C-a9",
+        "assignment_version": "0.1",
+        "sample_id": "P04-C-s9"
+      },
+      {
+        "assignment_id": "P04-C-a10",
+        "assignment_version": "0.1",
+        "sample_id": "P04-C-s10"
+      },
+      {
+        "assignment_id": "P04-C-a11",
+        "assignment_version": "0.1",
+        "sample_id": "P04-C-s11"
+      },
+      {
+        "assignment_id": "P04-C-a12",
+        "assignment_version": "0.1",
+        "sample_id": "P04-C-s12"
+      },
+      {
+        "assignment_id": "P04-C-a13",
+        "assignment_version": "0.1",
+        "sample_id": "P04-C-s13"
+      },
+      {
+        "assignment_id": "P04-C-a14",
+        "assignment_version": "0.1",
+        "sample_id": "P04-C-s14"
+      },
+      {
+        "assignment_id": "P04-C-a15",
+        "assignment_version": "0.1",
+        "sample_id": "P04-C-s15"
+      },
+      {
+        "assignment_id": "P04-C-a16",
+        "assignment_version": "0.1",
+        "sample_id": "P04-C-s16"
+      },
+      {
+        "assignment_id": "P04-C-a17",
+        "assignment_version": "0.1",
+        "sample_id": "P04-C-s17"
+      },
+      {
+        "assignment_id": "P04-C-a18",
+        "assignment_version": "0.1",
+        "sample_id": "P04-C-s18"
+      },
+      {
+        "assignment_id": "P04-C-a19",
+        "assignment_version": "0.1",
+        "sample_id": "P04-C-s19"
+      },
+      {
+        "assignment_id": "P04-C-a20",
+        "assignment_version": "0.1",
+        "sample_id": "P04-C-s20"
+      },
+      {
+        "assignment_id": "P05-A-a1",
+        "assignment_version": "0.1",
+        "sample_id": "P05-A-s1"
+      },
+      {
+        "assignment_id": "P05-A-a2",
+        "assignment_version": "0.1",
+        "sample_id": "P05-A-s2"
+      },
+      {
+        "assignment_id": "P05-A-a3",
+        "assignment_version": "0.1",
+        "sample_id": "P05-A-s3"
+      },
+      {
+        "assignment_id": "P05-A-a4",
+        "assignment_version": "0.1",
+        "sample_id": "P05-A-s4"
+      },
+      {
+        "assignment_id": "P05-A-a5",
+        "assignment_version": "0.1",
+        "sample_id": "P05-A-s5"
+      },
+      {
+        "assignment_id": "P05-A-a6",
+        "assignment_version": "0.1",
+        "sample_id": "P05-A-s6"
+      },
+      {
+        "assignment_id": "P05-A-a7",
+        "assignment_version": "0.1",
+        "sample_id": "P05-A-s7"
+      },
+      {
+        "assignment_id": "P05-A-a8",
+        "assignment_version": "0.1",
+        "sample_id": "P05-A-s8"
+      },
+      {
+        "assignment_id": "P05-A-a9",
+        "assignment_version": "0.1",
+        "sample_id": "P05-A-s9"
+      },
+      {
+        "assignment_id": "P05-A-a10",
+        "assignment_version": "0.1",
+        "sample_id": "P05-A-s10"
+      },
+      {
+        "assignment_id": "P05-A-a11",
+        "assignment_version": "0.1",
+        "sample_id": "P05-A-s11"
+      },
+      {
+        "assignment_id": "P05-A-a12",
+        "assignment_version": "0.1",
+        "sample_id": "P05-A-s12"
+      },
+      {
+        "assignment_id": "P05-A-a13",
+        "assignment_version": "0.1",
+        "sample_id": "P05-A-s13"
+      },
+      {
+        "assignment_id": "P05-A-a14",
+        "assignment_version": "0.1",
+        "sample_id": "P05-A-s14"
+      },
+      {
+        "assignment_id": "P05-A-a15",
+        "assignment_version": "0.1",
+        "sample_id": "P05-A-s15"
+      },
+      {
+        "assignment_id": "P05-A-a16",
+        "assignment_version": "0.1",
+        "sample_id": "P05-A-s16"
+      },
+      {
+        "assignment_id": "P05-A-a17",
+        "assignment_version": "0.1",
+        "sample_id": "P05-A-s17"
+      },
+      {
+        "assignment_id": "P05-A-a18",
+        "assignment_version": "0.1",
+        "sample_id": "P05-A-s18"
+      },
+      {
+        "assignment_id": "P05-A-a19",
+        "assignment_version": "0.1",
+        "sample_id": "P05-A-s19"
+      },
+      {
+        "assignment_id": "P05-A-a20",
+        "assignment_version": "0.1",
+        "sample_id": "P05-A-s20"
+      },
+      {
+        "assignment_id": "P05-B-a1",
+        "assignment_version": "0.1",
+        "sample_id": "P05-B-s1"
+      },
+      {
+        "assignment_id": "P05-B-a2",
+        "assignment_version": "0.1",
+        "sample_id": "P05-B-s2"
+      },
+      {
+        "assignment_id": "P05-B-a3",
+        "assignment_version": "0.1",
+        "sample_id": "P05-B-s3"
+      },
+      {
+        "assignment_id": "P05-B-a4",
+        "assignment_version": "0.1",
+        "sample_id": "P05-B-s4"
+      },
+      {
+        "assignment_id": "P05-B-a5",
+        "assignment_version": "0.1",
+        "sample_id": "P05-B-s5"
+      },
+      {
+        "assignment_id": "P05-B-a6",
+        "assignment_version": "0.1",
+        "sample_id": "P05-B-s6"
+      },
+      {
+        "assignment_id": "P05-B-a7",
+        "assignment_version": "0.1",
+        "sample_id": "P05-B-s7"
+      },
+      {
+        "assignment_id": "P05-B-a8",
+        "assignment_version": "0.1",
+        "sample_id": "P05-B-s8"
+      },
+      {
+        "assignment_id": "P05-B-a9",
+        "assignment_version": "0.1",
+        "sample_id": "P05-B-s9"
+      },
+      {
+        "assignment_id": "P05-B-a10",
+        "assignment_version": "0.1",
+        "sample_id": "P05-B-s10"
+      },
+      {
+        "assignment_id": "P05-B-a11",
+        "assignment_version": "0.1",
+        "sample_id": "P05-B-s11"
+      },
+      {
+        "assignment_id": "P05-B-a12",
+        "assignment_version": "0.1",
+        "sample_id": "P05-B-s12"
+      },
+      {
+        "assignment_id": "P05-B-a13",
+        "assignment_version": "0.1",
+        "sample_id": "P05-B-s13"
+      },
+      {
+        "assignment_id": "P05-B-a14",
+        "assignment_version": "0.1",
+        "sample_id": "P05-B-s14"
+      },
+      {
+        "assignment_id": "P05-B-a15",
+        "assignment_version": "0.1",
+        "sample_id": "P05-B-s15"
+      },
+      {
+        "assignment_id": "P05-B-a16",
+        "assignment_version": "0.1",
+        "sample_id": "P05-B-s16"
+      },
+      {
+        "assignment_id": "P05-B-a17",
+        "assignment_version": "0.1",
+        "sample_id": "P05-B-s17"
+      },
+      {
+        "assignment_id": "P05-B-a18",
+        "assignment_version": "0.1",
+        "sample_id": "P05-B-s18"
+      },
+      {
+        "assignment_id": "P05-B-a19",
+        "assignment_version": "0.1",
+        "sample_id": "P05-B-s19"
+      },
+      {
+        "assignment_id": "P05-B-a20",
+        "assignment_version": "0.1",
+        "sample_id": "P05-B-s20"
+      },
+      {
+        "assignment_id": "P05-C-a1",
+        "assignment_version": "0.1",
+        "sample_id": "P05-C-s1"
+      },
+      {
+        "assignment_id": "P05-C-a2",
+        "assignment_version": "0.1",
+        "sample_id": "P05-C-s2"
+      },
+      {
+        "assignment_id": "P05-C-a3",
+        "assignment_version": "0.1",
+        "sample_id": "P05-C-s3"
+      },
+      {
+        "assignment_id": "P05-C-a4",
+        "assignment_version": "0.1",
+        "sample_id": "P05-C-s4"
+      },
+      {
+        "assignment_id": "P05-C-a5",
+        "assignment_version": "0.1",
+        "sample_id": "P05-C-s5"
+      },
+      {
+        "assignment_id": "P05-C-a6",
+        "assignment_version": "0.1",
+        "sample_id": "P05-C-s6"
+      },
+      {
+        "assignment_id": "P05-C-a7",
+        "assignment_version": "0.1",
+        "sample_id": "P05-C-s7"
+      },
+      {
+        "assignment_id": "P05-C-a8",
+        "assignment_version": "0.1",
+        "sample_id": "P05-C-s8"
+      },
+      {
+        "assignment_id": "P05-C-a9",
+        "assignment_version": "0.1",
+        "sample_id": "P05-C-s9"
+      },
+      {
+        "assignment_id": "P05-C-a10",
+        "assignment_version": "0.1",
+        "sample_id": "P05-C-s10"
+      },
+      {
+        "assignment_id": "P05-C-a11",
+        "assignment_version": "0.1",
+        "sample_id": "P05-C-s11"
+      },
+      {
+        "assignment_id": "P05-C-a12",
+        "assignment_version": "0.1",
+        "sample_id": "P05-C-s12"
+      },
+      {
+        "assignment_id": "P05-C-a13",
+        "assignment_version": "0.1",
+        "sample_id": "P05-C-s13"
+      },
+      {
+        "assignment_id": "P05-C-a14",
+        "assignment_version": "0.1",
+        "sample_id": "P05-C-s14"
+      },
+      {
+        "assignment_id": "P05-C-a15",
+        "assignment_version": "0.1",
+        "sample_id": "P05-C-s15"
+      },
+      {
+        "assignment_id": "P05-C-a16",
+        "assignment_version": "0.1",
+        "sample_id": "P05-C-s16"
+      },
+      {
+        "assignment_id": "P05-C-a17",
+        "assignment_version": "0.1",
+        "sample_id": "P05-C-s17"
+      },
+      {
+        "assignment_id": "P05-C-a18",
+        "assignment_version": "0.1",
+        "sample_id": "P05-C-s18"
+      },
+      {
+        "assignment_id": "P05-C-a19",
+        "assignment_version": "0.1",
+        "sample_id": "P05-C-s19"
+      },
+      {
+        "assignment_id": "P05-C-a20",
+        "assignment_version": "0.1",
+        "sample_id": "P05-C-s20"
+      },
+      {
+        "assignment_id": "P06-A-a1",
+        "assignment_version": "0.1",
+        "sample_id": "P06-A-s1"
+      },
+      {
+        "assignment_id": "P06-A-a2",
+        "assignment_version": "0.1",
+        "sample_id": "P06-A-s2"
+      },
+      {
+        "assignment_id": "P06-A-a3",
+        "assignment_version": "0.1",
+        "sample_id": "P06-A-s3"
+      },
+      {
+        "assignment_id": "P06-A-a4",
+        "assignment_version": "0.1",
+        "sample_id": "P06-A-s4"
+      },
+      {
+        "assignment_id": "P06-A-a5",
+        "assignment_version": "0.1",
+        "sample_id": "P06-A-s5"
+      },
+      {
+        "assignment_id": "P06-A-a6",
+        "assignment_version": "0.1",
+        "sample_id": "P06-A-s6"
+      },
+      {
+        "assignment_id": "P06-A-a7",
+        "assignment_version": "0.1",
+        "sample_id": "P06-A-s7"
+      },
+      {
+        "assignment_id": "P06-A-a8",
+        "assignment_version": "0.1",
+        "sample_id": "P06-A-s8"
+      },
+      {
+        "assignment_id": "P06-A-a9",
+        "assignment_version": "0.1",
+        "sample_id": "P06-A-s9"
+      },
+      {
+        "assignment_id": "P06-A-a10",
+        "assignment_version": "0.1",
+        "sample_id": "P06-A-s10"
+      },
+      {
+        "assignment_id": "P06-A-a11",
+        "assignment_version": "0.1",
+        "sample_id": "P06-A-s11"
+      },
+      {
+        "assignment_id": "P06-A-a12",
+        "assignment_version": "0.1",
+        "sample_id": "P06-A-s12"
+      },
+      {
+        "assignment_id": "P06-A-a13",
+        "assignment_version": "0.1",
+        "sample_id": "P06-A-s13"
+      },
+      {
+        "assignment_id": "P06-A-a14",
+        "assignment_version": "0.1",
+        "sample_id": "P06-A-s14"
+      },
+      {
+        "assignment_id": "P06-A-a15",
+        "assignment_version": "0.1",
+        "sample_id": "P06-A-s15"
+      },
+      {
+        "assignment_id": "P06-A-a16",
+        "assignment_version": "0.1",
+        "sample_id": "P06-A-s16"
+      },
+      {
+        "assignment_id": "P06-A-a17",
+        "assignment_version": "0.1",
+        "sample_id": "P06-A-s17"
+      },
+      {
+        "assignment_id": "P06-A-a18",
+        "assignment_version": "0.1",
+        "sample_id": "P06-A-s18"
+      },
+      {
+        "assignment_id": "P06-A-a19",
+        "assignment_version": "0.1",
+        "sample_id": "P06-A-s19"
+      },
+      {
+        "assignment_id": "P06-A-a20",
+        "assignment_version": "0.1",
+        "sample_id": "P06-A-s20"
+      },
+      {
+        "assignment_id": "P06-B-a1",
+        "assignment_version": "0.1",
+        "sample_id": "P06-B-s1"
+      },
+      {
+        "assignment_id": "P06-B-a2",
+        "assignment_version": "0.1",
+        "sample_id": "P06-B-s2"
+      },
+      {
+        "assignment_id": "P06-B-a3",
+        "assignment_version": "0.1",
+        "sample_id": "P06-B-s3"
+      },
+      {
+        "assignment_id": "P06-B-a4",
+        "assignment_version": "0.1",
+        "sample_id": "P06-B-s4"
+      },
+      {
+        "assignment_id": "P06-B-a5",
+        "assignment_version": "0.1",
+        "sample_id": "P06-B-s5"
+      },
+      {
+        "assignment_id": "P06-B-a6",
+        "assignment_version": "0.1",
+        "sample_id": "P06-B-s6"
+      },
+      {
+        "assignment_id": "P06-B-a7",
+        "assignment_version": "0.1",
+        "sample_id": "P06-B-s7"
+      },
+      {
+        "assignment_id": "P06-B-a8",
+        "assignment_version": "0.1",
+        "sample_id": "P06-B-s8"
+      },
+      {
+        "assignment_id": "P06-B-a9",
+        "assignment_version": "0.1",
+        "sample_id": "P06-B-s9"
+      },
+      {
+        "assignment_id": "P06-B-a10",
+        "assignment_version": "0.1",
+        "sample_id": "P06-B-s10"
+      },
+      {
+        "assignment_id": "P06-B-a11",
+        "assignment_version": "0.1",
+        "sample_id": "P06-B-s11"
+      },
+      {
+        "assignment_id": "P06-B-a12",
+        "assignment_version": "0.1",
+        "sample_id": "P06-B-s12"
+      },
+      {
+        "assignment_id": "P06-B-a13",
+        "assignment_version": "0.1",
+        "sample_id": "P06-B-s13"
+      },
+      {
+        "assignment_id": "P06-B-a14",
+        "assignment_version": "0.1",
+        "sample_id": "P06-B-s14"
+      },
+      {
+        "assignment_id": "P06-B-a15",
+        "assignment_version": "0.1",
+        "sample_id": "P06-B-s15"
+      },
+      {
+        "assignment_id": "P06-B-a16",
+        "assignment_version": "0.1",
+        "sample_id": "P06-B-s16"
+      },
+      {
+        "assignment_id": "P06-B-a17",
+        "assignment_version": "0.1",
+        "sample_id": "P06-B-s17"
+      },
+      {
+        "assignment_id": "P06-B-a18",
+        "assignment_version": "0.1",
+        "sample_id": "P06-B-s18"
+      },
+      {
+        "assignment_id": "P06-B-a19",
+        "assignment_version": "0.1",
+        "sample_id": "P06-B-s19"
+      },
+      {
+        "assignment_id": "P06-B-a20",
+        "assignment_version": "0.1",
+        "sample_id": "P06-B-s20"
+      },
+      {
+        "assignment_id": "P06-C-a1",
+        "assignment_version": "0.1",
+        "sample_id": "P06-C-s1"
+      },
+      {
+        "assignment_id": "P06-C-a2",
+        "assignment_version": "0.1",
+        "sample_id": "P06-C-s2"
+      },
+      {
+        "assignment_id": "P06-C-a3",
+        "assignment_version": "0.1",
+        "sample_id": "P06-C-s3"
+      },
+      {
+        "assignment_id": "P06-C-a4",
+        "assignment_version": "0.1",
+        "sample_id": "P06-C-s4"
+      },
+      {
+        "assignment_id": "P06-C-a5",
+        "assignment_version": "0.1",
+        "sample_id": "P06-C-s5"
+      },
+      {
+        "assignment_id": "P06-C-a6",
+        "assignment_version": "0.1",
+        "sample_id": "P06-C-s6"
+      },
+      {
+        "assignment_id": "P06-C-a7",
+        "assignment_version": "0.1",
+        "sample_id": "P06-C-s7"
+      },
+      {
+        "assignment_id": "P06-C-a8",
+        "assignment_version": "0.1",
+        "sample_id": "P06-C-s8"
+      },
+      {
+        "assignment_id": "P06-C-a9",
+        "assignment_version": "0.1",
+        "sample_id": "P06-C-s9"
+      },
+      {
+        "assignment_id": "P06-C-a10",
+        "assignment_version": "0.1",
+        "sample_id": "P06-C-s10"
+      },
+      {
+        "assignment_id": "P06-C-a11",
+        "assignment_version": "0.1",
+        "sample_id": "P06-C-s11"
+      },
+      {
+        "assignment_id": "P06-C-a12",
+        "assignment_version": "0.1",
+        "sample_id": "P06-C-s12"
+      },
+      {
+        "assignment_id": "P06-C-a13",
+        "assignment_version": "0.1",
+        "sample_id": "P06-C-s13"
+      },
+      {
+        "assignment_id": "P06-C-a14",
+        "assignment_version": "0.1",
+        "sample_id": "P06-C-s14"
+      },
+      {
+        "assignment_id": "P06-C-a15",
+        "assignment_version": "0.1",
+        "sample_id": "P06-C-s15"
+      },
+      {
+        "assignment_id": "P06-C-a16",
+        "assignment_version": "0.1",
+        "sample_id": "P06-C-s16"
+      },
+      {
+        "assignment_id": "P06-C-a17",
+        "assignment_version": "0.1",
+        "sample_id": "P06-C-s17"
+      },
+      {
+        "assignment_id": "P06-C-a18",
+        "assignment_version": "0.1",
+        "sample_id": "P06-C-s18"
+      },
+      {
+        "assignment_id": "P06-C-a19",
+        "assignment_version": "0.1",
+        "sample_id": "P06-C-s19"
+      },
+      {
+        "assignment_id": "P06-C-a20",
+        "assignment_version": "0.1",
+        "sample_id": "P06-C-s20"
+      }
+    ],
+    "extensions": {
+      "comparison": {
+        "blocks": [
+          {
+            "block_id": "P01",
+            "conditions": {
+              "A": {
+                "cell_ref": {
+                  "record_id": "P01-A",
+                  "record_type": "cell",
+                  "record_version": "0.1"
+                },
+                "study_record_ref": {
+                  "record_id": "study-P01-A",
+                  "record_type": "evidence",
+                  "record_version": "0.1"
+                }
+              },
+              "B": {
+                "cell_ref": {
+                  "record_id": "P01-B",
+                  "record_type": "cell",
+                  "record_version": "0.1"
+                },
+                "study_record_ref": {
+                  "record_id": "study-P01-B",
+                  "record_type": "evidence",
+                  "record_version": "0.1"
+                }
+              },
+              "C": {
+                "cell_ref": {
+                  "record_id": "P01-C",
+                  "record_type": "cell",
+                  "record_version": "0.1"
+                },
+                "study_record_ref": {
+                  "record_id": "study-P01-C",
+                  "record_type": "evidence",
+                  "record_version": "0.1"
+                }
+              }
+            }
+          },
+          {
+            "block_id": "P02",
+            "conditions": {
+              "A": {
+                "cell_ref": {
+                  "record_id": "P02-A",
+                  "record_type": "cell",
+                  "record_version": "0.1"
+                },
+                "study_record_ref": {
+                  "record_id": "study-P02-A",
+                  "record_type": "evidence",
+                  "record_version": "0.1"
+                }
+              },
+              "B": {
+                "cell_ref": {
+                  "record_id": "P02-B",
+                  "record_type": "cell",
+                  "record_version": "0.1"
+                },
+                "study_record_ref": {
+                  "record_id": "study-P02-B",
+                  "record_type": "evidence",
+                  "record_version": "0.1"
+                }
+              },
+              "C": {
+                "cell_ref": {
+                  "record_id": "P02-C",
+                  "record_type": "cell",
+                  "record_version": "0.1"
+                },
+                "study_record_ref": {
+                  "record_id": "study-P02-C",
+                  "record_type": "evidence",
+                  "record_version": "0.1"
+                }
+              }
+            }
+          },
+          {
+            "block_id": "P03",
+            "conditions": {
+              "A": {
+                "cell_ref": {
+                  "record_id": "P03-A",
+                  "record_type": "cell",
+                  "record_version": "0.1"
+                },
+                "study_record_ref": {
+                  "record_id": "study-P03-A",
+                  "record_type": "evidence",
+                  "record_version": "0.1"
+                }
+              },
+              "B": {
+                "cell_ref": {
+                  "record_id": "P03-B",
+                  "record_type": "cell",
+                  "record_version": "0.1"
+                },
+                "study_record_ref": {
+                  "record_id": "study-P03-B",
+                  "record_type": "evidence",
+                  "record_version": "0.1"
+                }
+              },
+              "C": {
+                "cell_ref": {
+                  "record_id": "P03-C",
+                  "record_type": "cell",
+                  "record_version": "0.1"
+                },
+                "study_record_ref": {
+                  "record_id": "study-P03-C",
+                  "record_type": "evidence",
+                  "record_version": "0.1"
+                }
+              }
+            }
+          },
+          {
+            "block_id": "P04",
+            "conditions": {
+              "A": {
+                "cell_ref": {
+                  "record_id": "P04-A",
+                  "record_type": "cell",
+                  "record_version": "0.1"
+                },
+                "study_record_ref": {
+                  "record_id": "study-P04-A",
+                  "record_type": "evidence",
+                  "record_version": "0.1"
+                }
+              },
+              "B": {
+                "cell_ref": {
+                  "record_id": "P04-B",
+                  "record_type": "cell",
+                  "record_version": "0.1"
+                },
+                "study_record_ref": {
+                  "record_id": "study-P04-B",
+                  "record_type": "evidence",
+                  "record_version": "0.1"
+                }
+              },
+              "C": {
+                "cell_ref": {
+                  "record_id": "P04-C",
+                  "record_type": "cell",
+                  "record_version": "0.1"
+                },
+                "study_record_ref": {
+                  "record_id": "study-P04-C",
+                  "record_type": "evidence",
+                  "record_version": "0.1"
+                }
+              }
+            }
+          },
+          {
+            "block_id": "P05",
+            "conditions": {
+              "A": {
+                "cell_ref": {
+                  "record_id": "P05-A",
+                  "record_type": "cell",
+                  "record_version": "0.1"
+                },
+                "study_record_ref": {
+                  "record_id": "study-P05-A",
+                  "record_type": "evidence",
+                  "record_version": "0.1"
+                }
+              },
+              "B": {
+                "cell_ref": {
+                  "record_id": "P05-B",
+                  "record_type": "cell",
+                  "record_version": "0.1"
+                },
+                "study_record_ref": {
+                  "record_id": "study-P05-B",
+                  "record_type": "evidence",
+                  "record_version": "0.1"
+                }
+              },
+              "C": {
+                "cell_ref": {
+                  "record_id": "P05-C",
+                  "record_type": "cell",
+                  "record_version": "0.1"
+                },
+                "study_record_ref": {
+                  "record_id": "study-P05-C",
+                  "record_type": "evidence",
+                  "record_version": "0.1"
+                }
+              }
+            }
+          },
+          {
+            "block_id": "P06",
+            "conditions": {
+              "A": {
+                "cell_ref": {
+                  "record_id": "P06-A",
+                  "record_type": "cell",
+                  "record_version": "0.1"
+                },
+                "study_record_ref": {
+                  "record_id": "study-P06-A",
+                  "record_type": "evidence",
+                  "record_version": "0.1"
+                }
+              },
+              "B": {
+                "cell_ref": {
+                  "record_id": "P06-B",
+                  "record_type": "cell",
+                  "record_version": "0.1"
+                },
+                "study_record_ref": {
+                  "record_id": "study-P06-B",
+                  "record_type": "evidence",
+                  "record_version": "0.1"
+                }
+              },
+              "C": {
+                "cell_ref": {
+                  "record_id": "P06-C",
+                  "record_type": "cell",
+                  "record_version": "0.1"
+                },
+                "study_record_ref": {
+                  "record_id": "study-P06-C",
+                  "record_type": "evidence",
+                  "record_version": "0.1"
+                }
+              }
+            }
+          }
+        ],
+        "comparison_id": "comparison-fixture",
+        "comparison_schema_version": "0.1",
+        "comparison_version": "0.1",
+        "evidence": {
+          "core_audit": [],
+          "correction": [],
+          "exposure": [],
+          "independence": [],
+          "integrity": [],
+          "registration": [],
+          "structural_validation": []
+        },
+        "limits": {
+          "max_exact_bits": 131072,
+          "max_lexical_units": 100000,
+          "max_pairs": 100000,
+          "max_trigram_visits": 100000000
+        },
+        "pilot_cell_refs": [],
+        "profile": "hero_sort_abc_v1",
+        "questions": [
+          "P1",
+          "P5"
+        ],
+        "resampling": {
+          "dependence_assessment_ref": {
+            "evidence_refs": [],
+            "state": "known",
+            "value": {
+              "record_id": "paired-dependence",
+              "record_type": "independence_assessment",
+              "record_version": "0.1"
+            }
+          },
+          "method": "paired_prompt_block_bootstrap_v1",
+          "probabilities": [
+            "0.025",
+            "0.975"
+          ],
+          "quantile": "linear_b_minus_one_v1",
+          "replay_ref": {
+            "evidence_refs": [],
+            "state": "known",
+            "value": null
+          },
+          "replicates": 2000,
+          "seed": 20260917
+        },
+        "revision": {
+          "changes": [],
+          "prior_comparison_ids": [],
+          "prior_run_ids": [],
+          "reason": {
+            "evidence_refs": [],
+            "reason": "Initial fixture",
+            "state": "not_applicable"
+          }
+        },
+        "text_method": {
+          "encoding": "utf-8",
+          "extraction_rule_version": {
+            "evidence_refs": [],
+            "state": "known",
+            "value": "fixture-original-region-v1"
+          },
+          "proxy_version": "surface_lexical_trigram_jaccard_v1",
+          "unicode_category_version": {
+            "evidence_refs": [],
+            "state": "known",
+            "value": "15.1.0"
+          },
+          "white_space_sha256": {
+            "evidence_refs": [],
+            "state": "known",
+            "value": "3ec9cc63e7f950c749d0d2159b19bff128966bfc9ee4fc6d37810749309d0604"
+          },
+          "white_space_version": {
+            "evidence_refs": [],
+            "state": "known",
+            "value": "15.1.0"
+          }
+        },
+        "views": [
+          "classified_all",
+          "classified_valid"
+        ]
+      },
+      "prefix_mode": "hero"
+    },
+    "requested_k": [
+      5,
+      10,
+      20
+    ],
+    "selection": [
+      {
+        "analysis_cell_id": "P01-A",
+        "registered_positions": {
+          "evidence_refs": [],
+          "state": "unknown"
+        },
+        "sample_order": {
+          "evidence_refs": [],
+          "state": "known",
+          "value": [
+            "P01-A-s1",
+            "P01-A-s2",
+            "P01-A-s3",
+            "P01-A-s4",
+            "P01-A-s5",
+            "P01-A-s6",
+            "P01-A-s7",
+            "P01-A-s8",
+            "P01-A-s9",
+            "P01-A-s10",
+            "P01-A-s11",
+            "P01-A-s12",
+            "P01-A-s13",
+            "P01-A-s14",
+            "P01-A-s15",
+            "P01-A-s16",
+            "P01-A-s17",
+            "P01-A-s18",
+            "P01-A-s19",
+            "P01-A-s20"
+          ]
+        },
+        "selected_sample_ids": {
+          "evidence_refs": [],
+          "state": "known",
+          "value": [
+            "P01-A-s1",
+            "P01-A-s2",
+            "P01-A-s3",
+            "P01-A-s4",
+            "P01-A-s5",
+            "P01-A-s6",
+            "P01-A-s7",
+            "P01-A-s8",
+            "P01-A-s9",
+            "P01-A-s10",
+            "P01-A-s11",
+            "P01-A-s12",
+            "P01-A-s13",
+            "P01-A-s14",
+            "P01-A-s15",
+            "P01-A-s16",
+            "P01-A-s17",
+            "P01-A-s18",
+            "P01-A-s19",
+            "P01-A-s20"
+          ]
+        },
+        "selection_basis": {
+          "evidence_refs": [],
+          "state": "known",
+          "value": "360 distinct stipulated positions selected before outcome conditioning; no actual generator calls."
+        }
+      },
+      {
+        "analysis_cell_id": "P01-B",
+        "registered_positions": {
+          "evidence_refs": [],
+          "state": "unknown"
+        },
+        "sample_order": {
+          "evidence_refs": [],
+          "state": "known",
+          "value": [
+            "P01-B-s1",
+            "P01-B-s2",
+            "P01-B-s3",
+            "P01-B-s4",
+            "P01-B-s5",
+            "P01-B-s6",
+            "P01-B-s7",
+            "P01-B-s8",
+            "P01-B-s9",
+            "P01-B-s10",
+            "P01-B-s11",
+            "P01-B-s12",
+            "P01-B-s13",
+            "P01-B-s14",
+            "P01-B-s15",
+            "P01-B-s16",
+            "P01-B-s17",
+            "P01-B-s18",
+            "P01-B-s19",
+            "P01-B-s20"
+          ]
+        },
+        "selected_sample_ids": {
+          "evidence_refs": [],
+          "state": "known",
+          "value": [
+            "P01-B-s1",
+            "P01-B-s2",
+            "P01-B-s3",
+            "P01-B-s4",
+            "P01-B-s5",
+            "P01-B-s6",
+            "P01-B-s7",
+            "P01-B-s8",
+            "P01-B-s9",
+            "P01-B-s10",
+            "P01-B-s11",
+            "P01-B-s12",
+            "P01-B-s13",
+            "P01-B-s14",
+            "P01-B-s15",
+            "P01-B-s16",
+            "P01-B-s17",
+            "P01-B-s18",
+            "P01-B-s19",
+            "P01-B-s20"
+          ]
+        },
+        "selection_basis": {
+          "evidence_refs": [],
+          "state": "known",
+          "value": "360 distinct stipulated positions selected before outcome conditioning; no actual generator calls."
+        }
+      },
+      {
+        "analysis_cell_id": "P01-C",
+        "registered_positions": {
+          "evidence_refs": [],
+          "state": "unknown"
+        },
+        "sample_order": {
+          "evidence_refs": [],
+          "state": "known",
+          "value": [
+            "P01-C-s1",
+            "P01-C-s2",
+            "P01-C-s3",
+            "P01-C-s4",
+            "P01-C-s5",
+            "P01-C-s6",
+            "P01-C-s7",
+            "P01-C-s8",
+            "P01-C-s9",
+            "P01-C-s10",
+            "P01-C-s11",
+            "P01-C-s12",
+            "P01-C-s13",
+            "P01-C-s14",
+            "P01-C-s15",
+            "P01-C-s16",
+            "P01-C-s17",
+            "P01-C-s18",
+            "P01-C-s19",
+            "P01-C-s20"
+          ]
+        },
+        "selected_sample_ids": {
+          "evidence_refs": [],
+          "state": "known",
+          "value": [
+            "P01-C-s1",
+            "P01-C-s2",
+            "P01-C-s3",
+            "P01-C-s4",
+            "P01-C-s5",
+            "P01-C-s6",
+            "P01-C-s7",
+            "P01-C-s8",
+            "P01-C-s9",
+            "P01-C-s10",
+            "P01-C-s11",
+            "P01-C-s12",
+            "P01-C-s13",
+            "P01-C-s14",
+            "P01-C-s15",
+            "P01-C-s16",
+            "P01-C-s17",
+            "P01-C-s18",
+            "P01-C-s19",
+            "P01-C-s20"
+          ]
+        },
+        "selection_basis": {
+          "evidence_refs": [],
+          "state": "known",
+          "value": "360 distinct stipulated positions selected before outcome conditioning; no actual generator calls."
+        }
+      },
+      {
+        "analysis_cell_id": "P02-A",
+        "registered_positions": {
+          "evidence_refs": [],
+          "state": "unknown"
+        },
+        "sample_order": {
+          "evidence_refs": [],
+          "state": "known",
+          "value": [
+            "P02-A-s1",
+            "P02-A-s2",
+            "P02-A-s3",
+            "P02-A-s4",
+            "P02-A-s5",
+            "P02-A-s6",
+            "P02-A-s7",
+            "P02-A-s8",
+            "P02-A-s9",
+            "P02-A-s10",
+            "P02-A-s11",
+            "P02-A-s12",
+            "P02-A-s13",
+            "P02-A-s14",
+            "P02-A-s15",
+            "P02-A-s16",
+            "P02-A-s17",
+            "P02-A-s18",
+            "P02-A-s19",
+            "P02-A-s20"
+          ]
+        },
+        "selected_sample_ids": {
+          "evidence_refs": [],
+          "state": "known",
+          "value": [
+            "P02-A-s1",
+            "P02-A-s2",
+            "P02-A-s3",
+            "P02-A-s4",
+            "P02-A-s5",
+            "P02-A-s6",
+            "P02-A-s7",
+            "P02-A-s8",
+            "P02-A-s9",
+            "P02-A-s10",
+            "P02-A-s11",
+            "P02-A-s12",
+            "P02-A-s13",
+            "P02-A-s14",
+            "P02-A-s15",
+            "P02-A-s16",
+            "P02-A-s17",
+            "P02-A-s18",
+            "P02-A-s19",
+            "P02-A-s20"
+          ]
+        },
+        "selection_basis": {
+          "evidence_refs": [],
+          "state": "known",
+          "value": "360 distinct stipulated positions selected before outcome conditioning; no actual generator calls."
+        }
+      },
+      {
+        "analysis_cell_id": "P02-B",
+        "registered_positions": {
+          "evidence_refs": [],
+          "state": "unknown"
+        },
+        "sample_order": {
+          "evidence_refs": [],
+          "state": "known",
+          "value": [
+            "P02-B-s1",
+            "P02-B-s2",
+            "P02-B-s3",
+            "P02-B-s4",
+            "P02-B-s5",
+            "P02-B-s6",
+            "P02-B-s7",
+            "P02-B-s8",
+            "P02-B-s9",
+            "P02-B-s10",
+            "P02-B-s11",
+            "P02-B-s12",
+            "P02-B-s13",
+            "P02-B-s14",
+            "P02-B-s15",
+            "P02-B-s16",
+            "P02-B-s17",
+            "P02-B-s18",
+            "P02-B-s19",
+            "P02-B-s20"
+          ]
+        },
+        "selected_sample_ids": {
+          "evidence_refs": [],
+          "state": "known",
+          "value": [
+            "P02-B-s1",
+            "P02-B-s2",
+            "P02-B-s3",
+            "P02-B-s4",
+            "P02-B-s5",
+            "P02-B-s6",
+            "P02-B-s7",
+            "P02-B-s8",
+            "P02-B-s9",
+            "P02-B-s10",
+            "P02-B-s11",
+            "P02-B-s12",
+            "P02-B-s13",
+            "P02-B-s14",
+            "P02-B-s15",
+            "P02-B-s16",
+            "P02-B-s17",
+            "P02-B-s18",
+            "P02-B-s19",
+            "P02-B-s20"
+          ]
+        },
+        "selection_basis": {
+          "evidence_refs": [],
+          "state": "known",
+          "value": "360 distinct stipulated positions selected before outcome conditioning; no actual generator calls."
+        }
+      },
+      {
+        "analysis_cell_id": "P02-C",
+        "registered_positions": {
+          "evidence_refs": [],
+          "state": "unknown"
+        },
+        "sample_order": {
+          "evidence_refs": [],
+          "state": "known",
+          "value": [
+            "P02-C-s1",
+            "P02-C-s2",
+            "P02-C-s3",
+            "P02-C-s4",
+            "P02-C-s5",
+            "P02-C-s6",
+            "P02-C-s7",
+            "P02-C-s8",
+            "P02-C-s9",
+            "P02-C-s10",
+            "P02-C-s11",
+            "P02-C-s12",
+            "P02-C-s13",
+            "P02-C-s14",
+            "P02-C-s15",
+            "P02-C-s16",
+            "P02-C-s17",
+            "P02-C-s18",
+            "P02-C-s19",
+            "P02-C-s20"
+          ]
+        },
+        "selected_sample_ids": {
+          "evidence_refs": [],
+          "state": "known",
+          "value": [
+            "P02-C-s1",
+            "P02-C-s2",
+            "P02-C-s3",
+            "P02-C-s4",
+            "P02-C-s5",
+            "P02-C-s6",
+            "P02-C-s7",
+            "P02-C-s8",
+            "P02-C-s9",
+            "P02-C-s10",
+            "P02-C-s11",
+            "P02-C-s12",
+            "P02-C-s13",
+            "P02-C-s14",
+            "P02-C-s15",
+            "P02-C-s16",
+            "P02-C-s17",
+            "P02-C-s18",
+            "P02-C-s19",
+            "P02-C-s20"
+          ]
+        },
+        "selection_basis": {
+          "evidence_refs": [],
+          "state": "known",
+          "value": "360 distinct stipulated positions selected before outcome conditioning; no actual generator calls."
+        }
+      },
+      {
+        "analysis_cell_id": "P03-A",
+        "registered_positions": {
+          "evidence_refs": [],
+          "state": "unknown"
+        },
+        "sample_order": {
+          "evidence_refs": [],
+          "state": "known",
+          "value": [
+            "P03-A-s1",
+            "P03-A-s2",
+            "P03-A-s3",
+            "P03-A-s4",
+            "P03-A-s5",
+            "P03-A-s6",
+            "P03-A-s7",
+            "P03-A-s8",
+            "P03-A-s9",
+            "P03-A-s10",
+            "P03-A-s11",
+            "P03-A-s12",
+            "P03-A-s13",
+            "P03-A-s14",
+            "P03-A-s15",
+            "P03-A-s16",
+            "P03-A-s17",
+            "P03-A-s18",
+            "P03-A-s19",
+            "P03-A-s20"
+          ]
+        },
+        "selected_sample_ids": {
+          "evidence_refs": [],
+          "state": "known",
+          "value": [
+            "P03-A-s1",
+            "P03-A-s2",
+            "P03-A-s3",
+            "P03-A-s4",
+            "P03-A-s5",
+            "P03-A-s6",
+            "P03-A-s7",
+            "P03-A-s8",
+            "P03-A-s9",
+            "P03-A-s10",
+            "P03-A-s11",
+            "P03-A-s12",
+            "P03-A-s13",
+            "P03-A-s14",
+            "P03-A-s15",
+            "P03-A-s16",
+            "P03-A-s17",
+            "P03-A-s18",
+            "P03-A-s19",
+            "P03-A-s20"
+          ]
+        },
+        "selection_basis": {
+          "evidence_refs": [],
+          "state": "known",
+          "value": "360 distinct stipulated positions selected before outcome conditioning; no actual generator calls."
+        }
+      },
+      {
+        "analysis_cell_id": "P03-B",
+        "registered_positions": {
+          "evidence_refs": [],
+          "state": "unknown"
+        },
+        "sample_order": {
+          "evidence_refs": [],
+          "state": "known",
+          "value": [
+            "P03-B-s1",
+            "P03-B-s2",
+            "P03-B-s3",
+            "P03-B-s4",
+            "P03-B-s5",
+            "P03-B-s6",
+            "P03-B-s7",
+            "P03-B-s8",
+            "P03-B-s9",
+            "P03-B-s10",
+            "P03-B-s11",
+            "P03-B-s12",
+            "P03-B-s13",
+            "P03-B-s14",
+            "P03-B-s15",
+            "P03-B-s16",
+            "P03-B-s17",
+            "P03-B-s18",
+            "P03-B-s19",
+            "P03-B-s20"
+          ]
+        },
+        "selected_sample_ids": {
+          "evidence_refs": [],
+          "state": "known",
+          "value": [
+            "P03-B-s1",
+            "P03-B-s2",
+            "P03-B-s3",
+            "P03-B-s4",
+            "P03-B-s5",
+            "P03-B-s6",
+            "P03-B-s7",
+            "P03-B-s8",
+            "P03-B-s9",
+            "P03-B-s10",
+            "P03-B-s11",
+            "P03-B-s12",
+            "P03-B-s13",
+            "P03-B-s14",
+            "P03-B-s15",
+            "P03-B-s16",
+            "P03-B-s17",
+            "P03-B-s18",
+            "P03-B-s19",
+            "P03-B-s20"
+          ]
+        },
+        "selection_basis": {
+          "evidence_refs": [],
+          "state": "known",
+          "value": "360 distinct stipulated positions selected before outcome conditioning; no actual generator calls."
+        }
+      },
+      {
+        "analysis_cell_id": "P03-C",
+        "registered_positions": {
+          "evidence_refs": [],
+          "state": "unknown"
+        },
+        "sample_order": {
+          "evidence_refs": [],
+          "state": "known",
+          "value": [
+            "P03-C-s1",
+            "P03-C-s2",
+            "P03-C-s3",
+            "P03-C-s4",
+            "P03-C-s5",
+            "P03-C-s6",
+            "P03-C-s7",
+            "P03-C-s8",
+            "P03-C-s9",
+            "P03-C-s10",
+            "P03-C-s11",
+            "P03-C-s12",
+            "P03-C-s13",
+            "P03-C-s14",
+            "P03-C-s15",
+            "P03-C-s16",
+            "P03-C-s17",
+            "P03-C-s18",
+            "P03-C-s19",
+            "P03-C-s20"
+          ]
+        },
+        "selected_sample_ids": {
+          "evidence_refs": [],
+          "state": "known",
+          "value": [
+            "P03-C-s1",
+            "P03-C-s2",
+            "P03-C-s3",
+            "P03-C-s4",
+            "P03-C-s5",
+            "P03-C-s6",
+            "P03-C-s7",
+            "P03-C-s8",
+            "P03-C-s9",
+            "P03-C-s10",
+            "P03-C-s11",
+            "P03-C-s12",
+            "P03-C-s13",
+            "P03-C-s14",
+            "P03-C-s15",
+            "P03-C-s16",
+            "P03-C-s17",
+            "P03-C-s18",
+            "P03-C-s19",
+            "P03-C-s20"
+          ]
+        },
+        "selection_basis": {
+          "evidence_refs": [],
+          "state": "known",
+          "value": "360 distinct stipulated positions selected before outcome conditioning; no actual generator calls."
+        }
+      },
+      {
+        "analysis_cell_id": "P04-A",
+        "registered_positions": {
+          "evidence_refs": [],
+          "state": "unknown"
+        },
+        "sample_order": {
+          "evidence_refs": [],
+          "state": "known",
+          "value": [
+            "P04-A-s1",
+            "P04-A-s2",
+            "P04-A-s3",
+            "P04-A-s4",
+            "P04-A-s5",
+            "P04-A-s6",
+            "P04-A-s7",
+            "P04-A-s8",
+            "P04-A-s9",
+            "P04-A-s10",
+            "P04-A-s11",
+            "P04-A-s12",
+            "P04-A-s13",
+            "P04-A-s14",
+            "P04-A-s15",
+            "P04-A-s16",
+            "P04-A-s17",
+            "P04-A-s18",
+            "P04-A-s19",
+            "P04-A-s20"
+          ]
+        },
+        "selected_sample_ids": {
+          "evidence_refs": [],
+          "state": "known",
+          "value": [
+            "P04-A-s1",
+            "P04-A-s2",
+            "P04-A-s3",
+            "P04-A-s4",
+            "P04-A-s5",
+            "P04-A-s6",
+            "P04-A-s7",
+            "P04-A-s8",
+            "P04-A-s9",
+            "P04-A-s10",
+            "P04-A-s11",
+            "P04-A-s12",
+            "P04-A-s13",
+            "P04-A-s14",
+            "P04-A-s15",
+            "P04-A-s16",
+            "P04-A-s17",
+            "P04-A-s18",
+            "P04-A-s19",
+            "P04-A-s20"
+          ]
+        },
+        "selection_basis": {
+          "evidence_refs": [],
+          "state": "known",
+          "value": "360 distinct stipulated positions selected before outcome conditioning; no actual generator calls."
+        }
+      },
+      {
+        "analysis_cell_id": "P04-B",
+        "registered_positions": {
+          "evidence_refs": [],
+          "state": "unknown"
+        },
+        "sample_order": {
+          "evidence_refs": [],
+          "state": "known",
+          "value": [
+            "P04-B-s1",
+            "P04-B-s2",
+            "P04-B-s3",
+            "P04-B-s4",
+            "P04-B-s5",
+            "P04-B-s6",
+            "P04-B-s7",
+            "P04-B-s8",
+            "P04-B-s9",
+            "P04-B-s10",
+            "P04-B-s11",
+            "P04-B-s12",
+            "P04-B-s13",
+            "P04-B-s14",
+            "P04-B-s15",
+            "P04-B-s16",
+            "P04-B-s17",
+            "P04-B-s18",
+            "P04-B-s19",
+            "P04-B-s20"
+          ]
+        },
+        "selected_sample_ids": {
+          "evidence_refs": [],
+          "state": "known",
+          "value": [
+            "P04-B-s1",
+            "P04-B-s2",
+            "P04-B-s3",
+            "P04-B-s4",
+            "P04-B-s5",
+            "P04-B-s6",
+            "P04-B-s7",
+            "P04-B-s8",
+            "P04-B-s9",
+            "P04-B-s10",
+            "P04-B-s11",
+            "P04-B-s12",
+            "P04-B-s13",
+            "P04-B-s14",
+            "P04-B-s15",
+            "P04-B-s16",
+            "P04-B-s17",
+            "P04-B-s18",
+            "P04-B-s19",
+            "P04-B-s20"
+          ]
+        },
+        "selection_basis": {
+          "evidence_refs": [],
+          "state": "known",
+          "value": "360 distinct stipulated positions selected before outcome conditioning; no actual generator calls."
+        }
+      },
+      {
+        "analysis_cell_id": "P04-C",
+        "registered_positions": {
+          "evidence_refs": [],
+          "state": "unknown"
+        },
+        "sample_order": {
+          "evidence_refs": [],
+          "state": "known",
+          "value": [
+            "P04-C-s1",
+            "P04-C-s2",
+            "P04-C-s3",
+            "P04-C-s4",
+            "P04-C-s5",
+            "P04-C-s6",
+            "P04-C-s7",
+            "P04-C-s8",
+            "P04-C-s9",
+            "P04-C-s10",
+            "P04-C-s11",
+            "P04-C-s12",
+            "P04-C-s13",
+            "P04-C-s14",
+            "P04-C-s15",
+            "P04-C-s16",
+            "P04-C-s17",
+            "P04-C-s18",
+            "P04-C-s19",
+            "P04-C-s20"
+          ]
+        },
+        "selected_sample_ids": {
+          "evidence_refs": [],
+          "state": "known",
+          "value": [
+            "P04-C-s1",
+            "P04-C-s2",
+            "P04-C-s3",
+            "P04-C-s4",
+            "P04-C-s5",
+            "P04-C-s6",
+            "P04-C-s7",
+            "P04-C-s8",
+            "P04-C-s9",
+            "P04-C-s10",
+            "P04-C-s11",
+            "P04-C-s12",
+            "P04-C-s13",
+            "P04-C-s14",
+            "P04-C-s15",
+            "P04-C-s16",
+            "P04-C-s17",
+            "P04-C-s18",
+            "P04-C-s19",
+            "P04-C-s20"
+          ]
+        },
+        "selection_basis": {
+          "evidence_refs": [],
+          "state": "known",
+          "value": "360 distinct stipulated positions selected before outcome conditioning; no actual generator calls."
+        }
+      },
+      {
+        "analysis_cell_id": "P05-A",
+        "registered_positions": {
+          "evidence_refs": [],
+          "state": "unknown"
+        },
+        "sample_order": {
+          "evidence_refs": [],
+          "state": "known",
+          "value": [
+            "P05-A-s1",
+            "P05-A-s2",
+            "P05-A-s3",
+            "P05-A-s4",
+            "P05-A-s5",
+            "P05-A-s6",
+            "P05-A-s7",
+            "P05-A-s8",
+            "P05-A-s9",
+            "P05-A-s10",
+            "P05-A-s11",
+            "P05-A-s12",
+            "P05-A-s13",
+            "P05-A-s14",
+            "P05-A-s15",
+            "P05-A-s16",
+            "P05-A-s17",
+            "P05-A-s18",
+            "P05-A-s19",
+            "P05-A-s20"
+          ]
+        },
+        "selected_sample_ids": {
+          "evidence_refs": [],
+          "state": "known",
+          "value": [
+            "P05-A-s1",
+            "P05-A-s2",
+            "P05-A-s3",
+            "P05-A-s4",
+            "P05-A-s5",
+            "P05-A-s6",
+            "P05-A-s7",
+            "P05-A-s8",
+            "P05-A-s9",
+            "P05-A-s10",
+            "P05-A-s11",
+            "P05-A-s12",
+            "P05-A-s13",
+            "P05-A-s14",
+            "P05-A-s15",
+            "P05-A-s16",
+            "P05-A-s17",
+            "P05-A-s18",
+            "P05-A-s19",
+            "P05-A-s20"
+          ]
+        },
+        "selection_basis": {
+          "evidence_refs": [],
+          "state": "known",
+          "value": "360 distinct stipulated positions selected before outcome conditioning; no actual generator calls."
+        }
+      },
+      {
+        "analysis_cell_id": "P05-B",
+        "registered_positions": {
+          "evidence_refs": [],
+          "state": "unknown"
+        },
+        "sample_order": {
+          "evidence_refs": [],
+          "state": "known",
+          "value": [
+            "P05-B-s1",
+            "P05-B-s2",
+            "P05-B-s3",
+            "P05-B-s4",
+            "P05-B-s5",
+            "P05-B-s6",
+            "P05-B-s7",
+            "P05-B-s8",
+            "P05-B-s9",
+            "P05-B-s10",
+            "P05-B-s11",
+            "P05-B-s12",
+            "P05-B-s13",
+            "P05-B-s14",
+            "P05-B-s15",
+            "P05-B-s16",
+            "P05-B-s17",
+            "P05-B-s18",
+            "P05-B-s19",
+            "P05-B-s20"
+          ]
+        },
+        "selected_sample_ids": {
+          "evidence_refs": [],
+          "state": "known",
+          "value": [
+            "P05-B-s1",
+            "P05-B-s2",
+            "P05-B-s3",
+            "P05-B-s4",
+            "P05-B-s5",
+            "P05-B-s6",
+            "P05-B-s7",
+            "P05-B-s8",
+            "P05-B-s9",
+            "P05-B-s10",
+            "P05-B-s11",
+            "P05-B-s12",
+            "P05-B-s13",
+            "P05-B-s14",
+            "P05-B-s15",
+            "P05-B-s16",
+            "P05-B-s17",
+            "P05-B-s18",
+            "P05-B-s19",
+            "P05-B-s20"
+          ]
+        },
+        "selection_basis": {
+          "evidence_refs": [],
+          "state": "known",
+          "value": "360 distinct stipulated positions selected before outcome conditioning; no actual generator calls."
+        }
+      },
+      {
+        "analysis_cell_id": "P05-C",
+        "registered_positions": {
+          "evidence_refs": [],
+          "state": "unknown"
+        },
+        "sample_order": {
+          "evidence_refs": [],
+          "state": "known",
+          "value": [
+            "P05-C-s1",
+            "P05-C-s2",
+            "P05-C-s3",
+            "P05-C-s4",
+            "P05-C-s5",
+            "P05-C-s6",
+            "P05-C-s7",
+            "P05-C-s8",
+            "P05-C-s9",
+            "P05-C-s10",
+            "P05-C-s11",
+            "P05-C-s12",
+            "P05-C-s13",
+            "P05-C-s14",
+            "P05-C-s15",
+            "P05-C-s16",
+            "P05-C-s17",
+            "P05-C-s18",
+            "P05-C-s19",
+            "P05-C-s20"
+          ]
+        },
+        "selected_sample_ids": {
+          "evidence_refs": [],
+          "state": "known",
+          "value": [
+            "P05-C-s1",
+            "P05-C-s2",
+            "P05-C-s3",
+            "P05-C-s4",
+            "P05-C-s5",
+            "P05-C-s6",
+            "P05-C-s7",
+            "P05-C-s8",
+            "P05-C-s9",
+            "P05-C-s10",
+            "P05-C-s11",
+            "P05-C-s12",
+            "P05-C-s13",
+            "P05-C-s14",
+            "P05-C-s15",
+            "P05-C-s16",
+            "P05-C-s17",
+            "P05-C-s18",
+            "P05-C-s19",
+            "P05-C-s20"
+          ]
+        },
+        "selection_basis": {
+          "evidence_refs": [],
+          "state": "known",
+          "value": "360 distinct stipulated positions selected before outcome conditioning; no actual generator calls."
+        }
+      },
+      {
+        "analysis_cell_id": "P06-A",
+        "registered_positions": {
+          "evidence_refs": [],
+          "state": "unknown"
+        },
+        "sample_order": {
+          "evidence_refs": [],
+          "state": "known",
+          "value": [
+            "P06-A-s1",
+            "P06-A-s2",
+            "P06-A-s3",
+            "P06-A-s4",
+            "P06-A-s5",
+            "P06-A-s6",
+            "P06-A-s7",
+            "P06-A-s8",
+            "P06-A-s9",
+            "P06-A-s10",
+            "P06-A-s11",
+            "P06-A-s12",
+            "P06-A-s13",
+            "P06-A-s14",
+            "P06-A-s15",
+            "P06-A-s16",
+            "P06-A-s17",
+            "P06-A-s18",
+            "P06-A-s19",
+            "P06-A-s20"
+          ]
+        },
+        "selected_sample_ids": {
+          "evidence_refs": [],
+          "state": "known",
+          "value": [
+            "P06-A-s1",
+            "P06-A-s2",
+            "P06-A-s3",
+            "P06-A-s4",
+            "P06-A-s5",
+            "P06-A-s6",
+            "P06-A-s7",
+            "P06-A-s8",
+            "P06-A-s9",
+            "P06-A-s10",
+            "P06-A-s11",
+            "P06-A-s12",
+            "P06-A-s13",
+            "P06-A-s14",
+            "P06-A-s15",
+            "P06-A-s16",
+            "P06-A-s17",
+            "P06-A-s18",
+            "P06-A-s19",
+            "P06-A-s20"
+          ]
+        },
+        "selection_basis": {
+          "evidence_refs": [],
+          "state": "known",
+          "value": "360 distinct stipulated positions selected before outcome conditioning; no actual generator calls."
+        }
+      },
+      {
+        "analysis_cell_id": "P06-B",
+        "registered_positions": {
+          "evidence_refs": [],
+          "state": "unknown"
+        },
+        "sample_order": {
+          "evidence_refs": [],
+          "state": "known",
+          "value": [
+            "P06-B-s1",
+            "P06-B-s2",
+            "P06-B-s3",
+            "P06-B-s4",
+            "P06-B-s5",
+            "P06-B-s6",
+            "P06-B-s7",
+            "P06-B-s8",
+            "P06-B-s9",
+            "P06-B-s10",
+            "P06-B-s11",
+            "P06-B-s12",
+            "P06-B-s13",
+            "P06-B-s14",
+            "P06-B-s15",
+            "P06-B-s16",
+            "P06-B-s17",
+            "P06-B-s18",
+            "P06-B-s19",
+            "P06-B-s20"
+          ]
+        },
+        "selected_sample_ids": {
+          "evidence_refs": [],
+          "state": "known",
+          "value": [
+            "P06-B-s1",
+            "P06-B-s2",
+            "P06-B-s3",
+            "P06-B-s4",
+            "P06-B-s5",
+            "P06-B-s6",
+            "P06-B-s7",
+            "P06-B-s8",
+            "P06-B-s9",
+            "P06-B-s10",
+            "P06-B-s11",
+            "P06-B-s12",
+            "P06-B-s13",
+            "P06-B-s14",
+            "P06-B-s15",
+            "P06-B-s16",
+            "P06-B-s17",
+            "P06-B-s18",
+            "P06-B-s19",
+            "P06-B-s20"
+          ]
+        },
+        "selection_basis": {
+          "evidence_refs": [],
+          "state": "known",
+          "value": "360 distinct stipulated positions selected before outcome conditioning; no actual generator calls."
+        }
+      },
+      {
+        "analysis_cell_id": "P06-C",
+        "registered_positions": {
+          "evidence_refs": [],
+          "state": "unknown"
+        },
+        "sample_order": {
+          "evidence_refs": [],
+          "state": "known",
+          "value": [
+            "P06-C-s1",
+            "P06-C-s2",
+            "P06-C-s3",
+            "P06-C-s4",
+            "P06-C-s5",
+            "P06-C-s6",
+            "P06-C-s7",
+            "P06-C-s8",
+            "P06-C-s9",
+            "P06-C-s10",
+            "P06-C-s11",
+            "P06-C-s12",
+            "P06-C-s13",
+            "P06-C-s14",
+            "P06-C-s15",
+            "P06-C-s16",
+            "P06-C-s17",
+            "P06-C-s18",
+            "P06-C-s19",
+            "P06-C-s20"
+          ]
+        },
+        "selected_sample_ids": {
+          "evidence_refs": [],
+          "state": "known",
+          "value": [
+            "P06-C-s1",
+            "P06-C-s2",
+            "P06-C-s3",
+            "P06-C-s4",
+            "P06-C-s5",
+            "P06-C-s6",
+            "P06-C-s7",
+            "P06-C-s8",
+            "P06-C-s9",
+            "P06-C-s10",
+            "P06-C-s11",
+            "P06-C-s12",
+            "P06-C-s13",
+            "P06-C-s14",
+            "P06-C-s15",
+            "P06-C-s16",
+            "P06-C-s17",
+            "P06-C-s18",
+            "P06-C-s19",
+            "P06-C-s20"
+          ]
+        },
+        "selection_basis": {
+          "evidence_refs": [],
+          "state": "known",
+          "value": "360 distinct stipulated positions selected before outcome conditioning; no actual generator calls."
+        }
+      }
+    ],
+    "validity_pins": [
+      {
+        "sample_id": "P01-A-s1",
+        "validity_id": "P01-A-v1",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P01-A-s2",
+        "validity_id": "P01-A-v2",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P01-A-s3",
+        "validity_id": "P01-A-v3",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P01-A-s4",
+        "validity_id": "P01-A-v4",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P01-A-s5",
+        "validity_id": "P01-A-v5",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P01-A-s6",
+        "validity_id": "P01-A-v6",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P01-A-s7",
+        "validity_id": "P01-A-v7",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P01-A-s8",
+        "validity_id": "P01-A-v8",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P01-A-s9",
+        "validity_id": "P01-A-v9",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P01-A-s10",
+        "validity_id": "P01-A-v10",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P01-A-s11",
+        "validity_id": "P01-A-v11",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P01-A-s12",
+        "validity_id": "P01-A-v12",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P01-A-s13",
+        "validity_id": "P01-A-v13",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P01-A-s14",
+        "validity_id": "P01-A-v14",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P01-A-s15",
+        "validity_id": "P01-A-v15",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P01-A-s16",
+        "validity_id": "P01-A-v16",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P01-A-s17",
+        "validity_id": "P01-A-v17",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P01-A-s18",
+        "validity_id": "P01-A-v18",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P01-A-s19",
+        "validity_id": "P01-A-v19",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P01-A-s20",
+        "validity_id": "P01-A-v20",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P01-B-s1",
+        "validity_id": "P01-B-v1",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P01-B-s2",
+        "validity_id": "P01-B-v2",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P01-B-s3",
+        "validity_id": "P01-B-v3",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P01-B-s4",
+        "validity_id": "P01-B-v4",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P01-B-s5",
+        "validity_id": "P01-B-v5",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P01-B-s6",
+        "validity_id": "P01-B-v6",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P01-B-s7",
+        "validity_id": "P01-B-v7",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P01-B-s8",
+        "validity_id": "P01-B-v8",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P01-B-s9",
+        "validity_id": "P01-B-v9",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P01-B-s10",
+        "validity_id": "P01-B-v10",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P01-B-s11",
+        "validity_id": "P01-B-v11",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P01-B-s12",
+        "validity_id": "P01-B-v12",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P01-B-s13",
+        "validity_id": "P01-B-v13",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P01-B-s14",
+        "validity_id": "P01-B-v14",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P01-B-s15",
+        "validity_id": "P01-B-v15",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P01-B-s16",
+        "validity_id": "P01-B-v16",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P01-B-s17",
+        "validity_id": "P01-B-v17",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P01-B-s18",
+        "validity_id": "P01-B-v18",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P01-B-s19",
+        "validity_id": "P01-B-v19",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P01-B-s20",
+        "validity_id": "P01-B-v20",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P01-C-s1",
+        "validity_id": "P01-C-v1",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P01-C-s2",
+        "validity_id": "P01-C-v2",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P01-C-s3",
+        "validity_id": "P01-C-v3",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P01-C-s4",
+        "validity_id": "P01-C-v4",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P01-C-s5",
+        "validity_id": "P01-C-v5",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P01-C-s6",
+        "validity_id": "P01-C-v6",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P01-C-s7",
+        "validity_id": "P01-C-v7",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P01-C-s8",
+        "validity_id": "P01-C-v8",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P01-C-s9",
+        "validity_id": "P01-C-v9",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P01-C-s10",
+        "validity_id": "P01-C-v10",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P01-C-s11",
+        "validity_id": "P01-C-v11",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P01-C-s12",
+        "validity_id": "P01-C-v12",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P01-C-s13",
+        "validity_id": "P01-C-v13",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P01-C-s14",
+        "validity_id": "P01-C-v14",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P01-C-s15",
+        "validity_id": "P01-C-v15",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P01-C-s16",
+        "validity_id": "P01-C-v16",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P01-C-s17",
+        "validity_id": "P01-C-v17",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P01-C-s18",
+        "validity_id": "P01-C-v18",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P01-C-s19",
+        "validity_id": "P01-C-v19",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P01-C-s20",
+        "validity_id": "P01-C-v20",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P02-A-s1",
+        "validity_id": "P02-A-v1",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P02-A-s2",
+        "validity_id": "P02-A-v2",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P02-A-s3",
+        "validity_id": "P02-A-v3",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P02-A-s4",
+        "validity_id": "P02-A-v4",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P02-A-s5",
+        "validity_id": "P02-A-v5",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P02-A-s6",
+        "validity_id": "P02-A-v6",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P02-A-s7",
+        "validity_id": "P02-A-v7",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P02-A-s8",
+        "validity_id": "P02-A-v8",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P02-A-s9",
+        "validity_id": "P02-A-v9",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P02-A-s10",
+        "validity_id": "P02-A-v10",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P02-A-s11",
+        "validity_id": "P02-A-v11",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P02-A-s12",
+        "validity_id": "P02-A-v12",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P02-A-s13",
+        "validity_id": "P02-A-v13",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P02-A-s14",
+        "validity_id": "P02-A-v14",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P02-A-s15",
+        "validity_id": "P02-A-v15",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P02-A-s16",
+        "validity_id": "P02-A-v16",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P02-A-s17",
+        "validity_id": "P02-A-v17",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P02-A-s18",
+        "validity_id": "P02-A-v18",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P02-A-s19",
+        "validity_id": "P02-A-v19",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P02-A-s20",
+        "validity_id": "P02-A-v20",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P02-B-s1",
+        "validity_id": "P02-B-v1",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P02-B-s2",
+        "validity_id": "P02-B-v2",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P02-B-s3",
+        "validity_id": "P02-B-v3",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P02-B-s4",
+        "validity_id": "P02-B-v4",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P02-B-s5",
+        "validity_id": "P02-B-v5",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P02-B-s6",
+        "validity_id": "P02-B-v6",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P02-B-s7",
+        "validity_id": "P02-B-v7",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P02-B-s8",
+        "validity_id": "P02-B-v8",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P02-B-s9",
+        "validity_id": "P02-B-v9",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P02-B-s10",
+        "validity_id": "P02-B-v10",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P02-B-s11",
+        "validity_id": "P02-B-v11",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P02-B-s12",
+        "validity_id": "P02-B-v12",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P02-B-s13",
+        "validity_id": "P02-B-v13",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P02-B-s14",
+        "validity_id": "P02-B-v14",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P02-B-s15",
+        "validity_id": "P02-B-v15",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P02-B-s16",
+        "validity_id": "P02-B-v16",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P02-B-s17",
+        "validity_id": "P02-B-v17",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P02-B-s18",
+        "validity_id": "P02-B-v18",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P02-B-s19",
+        "validity_id": "P02-B-v19",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P02-B-s20",
+        "validity_id": "P02-B-v20",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P02-C-s1",
+        "validity_id": "P02-C-v1",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P02-C-s2",
+        "validity_id": "P02-C-v2",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P02-C-s3",
+        "validity_id": "P02-C-v3",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P02-C-s4",
+        "validity_id": "P02-C-v4",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P02-C-s5",
+        "validity_id": "P02-C-v5",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P02-C-s6",
+        "validity_id": "P02-C-v6",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P02-C-s7",
+        "validity_id": "P02-C-v7",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P02-C-s8",
+        "validity_id": "P02-C-v8",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P02-C-s9",
+        "validity_id": "P02-C-v9",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P02-C-s10",
+        "validity_id": "P02-C-v10",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P02-C-s11",
+        "validity_id": "P02-C-v11",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P02-C-s12",
+        "validity_id": "P02-C-v12",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P02-C-s13",
+        "validity_id": "P02-C-v13",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P02-C-s14",
+        "validity_id": "P02-C-v14",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P02-C-s15",
+        "validity_id": "P02-C-v15",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P02-C-s16",
+        "validity_id": "P02-C-v16",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P02-C-s17",
+        "validity_id": "P02-C-v17",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P02-C-s18",
+        "validity_id": "P02-C-v18",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P02-C-s19",
+        "validity_id": "P02-C-v19",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P02-C-s20",
+        "validity_id": "P02-C-v20",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P03-A-s1",
+        "validity_id": "P03-A-v1",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P03-A-s2",
+        "validity_id": "P03-A-v2",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P03-A-s3",
+        "validity_id": "P03-A-v3",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P03-A-s4",
+        "validity_id": "P03-A-v4",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P03-A-s5",
+        "validity_id": "P03-A-v5",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P03-A-s6",
+        "validity_id": "P03-A-v6",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P03-A-s7",
+        "validity_id": "P03-A-v7",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P03-A-s8",
+        "validity_id": "P03-A-v8",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P03-A-s9",
+        "validity_id": "P03-A-v9",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P03-A-s10",
+        "validity_id": "P03-A-v10",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P03-A-s11",
+        "validity_id": "P03-A-v11",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P03-A-s12",
+        "validity_id": "P03-A-v12",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P03-A-s13",
+        "validity_id": "P03-A-v13",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P03-A-s14",
+        "validity_id": "P03-A-v14",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P03-A-s15",
+        "validity_id": "P03-A-v15",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P03-A-s16",
+        "validity_id": "P03-A-v16",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P03-A-s17",
+        "validity_id": "P03-A-v17",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P03-A-s18",
+        "validity_id": "P03-A-v18",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P03-A-s19",
+        "validity_id": "P03-A-v19",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P03-A-s20",
+        "validity_id": "P03-A-v20",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P03-B-s1",
+        "validity_id": "P03-B-v1",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P03-B-s2",
+        "validity_id": "P03-B-v2",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P03-B-s3",
+        "validity_id": "P03-B-v3",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P03-B-s4",
+        "validity_id": "P03-B-v4",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P03-B-s5",
+        "validity_id": "P03-B-v5",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P03-B-s6",
+        "validity_id": "P03-B-v6",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P03-B-s7",
+        "validity_id": "P03-B-v7",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P03-B-s8",
+        "validity_id": "P03-B-v8",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P03-B-s9",
+        "validity_id": "P03-B-v9",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P03-B-s10",
+        "validity_id": "P03-B-v10",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P03-B-s11",
+        "validity_id": "P03-B-v11",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P03-B-s12",
+        "validity_id": "P03-B-v12",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P03-B-s13",
+        "validity_id": "P03-B-v13",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P03-B-s14",
+        "validity_id": "P03-B-v14",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P03-B-s15",
+        "validity_id": "P03-B-v15",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P03-B-s16",
+        "validity_id": "P03-B-v16",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P03-B-s17",
+        "validity_id": "P03-B-v17",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P03-B-s18",
+        "validity_id": "P03-B-v18",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P03-B-s19",
+        "validity_id": "P03-B-v19",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P03-B-s20",
+        "validity_id": "P03-B-v20",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P03-C-s1",
+        "validity_id": "P03-C-v1",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P03-C-s2",
+        "validity_id": "P03-C-v2",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P03-C-s3",
+        "validity_id": "P03-C-v3",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P03-C-s4",
+        "validity_id": "P03-C-v4",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P03-C-s5",
+        "validity_id": "P03-C-v5",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P03-C-s6",
+        "validity_id": "P03-C-v6",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P03-C-s7",
+        "validity_id": "P03-C-v7",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P03-C-s8",
+        "validity_id": "P03-C-v8",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P03-C-s9",
+        "validity_id": "P03-C-v9",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P03-C-s10",
+        "validity_id": "P03-C-v10",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P03-C-s11",
+        "validity_id": "P03-C-v11",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P03-C-s12",
+        "validity_id": "P03-C-v12",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P03-C-s13",
+        "validity_id": "P03-C-v13",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P03-C-s14",
+        "validity_id": "P03-C-v14",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P03-C-s15",
+        "validity_id": "P03-C-v15",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P03-C-s16",
+        "validity_id": "P03-C-v16",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P03-C-s17",
+        "validity_id": "P03-C-v17",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P03-C-s18",
+        "validity_id": "P03-C-v18",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P03-C-s19",
+        "validity_id": "P03-C-v19",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P03-C-s20",
+        "validity_id": "P03-C-v20",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P04-A-s1",
+        "validity_id": "P04-A-v1",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P04-A-s2",
+        "validity_id": "P04-A-v2",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P04-A-s3",
+        "validity_id": "P04-A-v3",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P04-A-s4",
+        "validity_id": "P04-A-v4",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P04-A-s5",
+        "validity_id": "P04-A-v5",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P04-A-s6",
+        "validity_id": "P04-A-v6",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P04-A-s7",
+        "validity_id": "P04-A-v7",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P04-A-s8",
+        "validity_id": "P04-A-v8",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P04-A-s9",
+        "validity_id": "P04-A-v9",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P04-A-s10",
+        "validity_id": "P04-A-v10",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P04-A-s11",
+        "validity_id": "P04-A-v11",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P04-A-s12",
+        "validity_id": "P04-A-v12",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P04-A-s13",
+        "validity_id": "P04-A-v13",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P04-A-s14",
+        "validity_id": "P04-A-v14",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P04-A-s15",
+        "validity_id": "P04-A-v15",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P04-A-s16",
+        "validity_id": "P04-A-v16",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P04-A-s17",
+        "validity_id": "P04-A-v17",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P04-A-s18",
+        "validity_id": "P04-A-v18",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P04-A-s19",
+        "validity_id": "P04-A-v19",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P04-A-s20",
+        "validity_id": "P04-A-v20",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P04-B-s1",
+        "validity_id": "P04-B-v1",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P04-B-s2",
+        "validity_id": "P04-B-v2",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P04-B-s3",
+        "validity_id": "P04-B-v3",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P04-B-s4",
+        "validity_id": "P04-B-v4",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P04-B-s5",
+        "validity_id": "P04-B-v5",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P04-B-s6",
+        "validity_id": "P04-B-v6",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P04-B-s7",
+        "validity_id": "P04-B-v7",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P04-B-s8",
+        "validity_id": "P04-B-v8",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P04-B-s9",
+        "validity_id": "P04-B-v9",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P04-B-s10",
+        "validity_id": "P04-B-v10",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P04-B-s11",
+        "validity_id": "P04-B-v11",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P04-B-s12",
+        "validity_id": "P04-B-v12",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P04-B-s13",
+        "validity_id": "P04-B-v13",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P04-B-s14",
+        "validity_id": "P04-B-v14",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P04-B-s15",
+        "validity_id": "P04-B-v15",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P04-B-s16",
+        "validity_id": "P04-B-v16",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P04-B-s17",
+        "validity_id": "P04-B-v17",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P04-B-s18",
+        "validity_id": "P04-B-v18",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P04-B-s19",
+        "validity_id": "P04-B-v19",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P04-B-s20",
+        "validity_id": "P04-B-v20",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P04-C-s1",
+        "validity_id": "P04-C-v1",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P04-C-s2",
+        "validity_id": "P04-C-v2",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P04-C-s3",
+        "validity_id": "P04-C-v3",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P04-C-s4",
+        "validity_id": "P04-C-v4",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P04-C-s5",
+        "validity_id": "P04-C-v5",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P04-C-s6",
+        "validity_id": "P04-C-v6",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P04-C-s7",
+        "validity_id": "P04-C-v7",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P04-C-s8",
+        "validity_id": "P04-C-v8",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P04-C-s9",
+        "validity_id": "P04-C-v9",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P04-C-s10",
+        "validity_id": "P04-C-v10",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P04-C-s11",
+        "validity_id": "P04-C-v11",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P04-C-s12",
+        "validity_id": "P04-C-v12",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P04-C-s13",
+        "validity_id": "P04-C-v13",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P04-C-s14",
+        "validity_id": "P04-C-v14",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P04-C-s15",
+        "validity_id": "P04-C-v15",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P04-C-s16",
+        "validity_id": "P04-C-v16",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P04-C-s17",
+        "validity_id": "P04-C-v17",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P04-C-s18",
+        "validity_id": "P04-C-v18",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P04-C-s19",
+        "validity_id": "P04-C-v19",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P04-C-s20",
+        "validity_id": "P04-C-v20",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P05-A-s1",
+        "validity_id": "P05-A-v1",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P05-A-s2",
+        "validity_id": "P05-A-v2",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P05-A-s3",
+        "validity_id": "P05-A-v3",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P05-A-s4",
+        "validity_id": "P05-A-v4",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P05-A-s5",
+        "validity_id": "P05-A-v5",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P05-A-s6",
+        "validity_id": "P05-A-v6",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P05-A-s7",
+        "validity_id": "P05-A-v7",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P05-A-s8",
+        "validity_id": "P05-A-v8",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P05-A-s9",
+        "validity_id": "P05-A-v9",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P05-A-s10",
+        "validity_id": "P05-A-v10",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P05-A-s11",
+        "validity_id": "P05-A-v11",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P05-A-s12",
+        "validity_id": "P05-A-v12",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P05-A-s13",
+        "validity_id": "P05-A-v13",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P05-A-s14",
+        "validity_id": "P05-A-v14",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P05-A-s15",
+        "validity_id": "P05-A-v15",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P05-A-s16",
+        "validity_id": "P05-A-v16",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P05-A-s17",
+        "validity_id": "P05-A-v17",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P05-A-s18",
+        "validity_id": "P05-A-v18",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P05-A-s19",
+        "validity_id": "P05-A-v19",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P05-A-s20",
+        "validity_id": "P05-A-v20",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P05-B-s1",
+        "validity_id": "P05-B-v1",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P05-B-s2",
+        "validity_id": "P05-B-v2",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P05-B-s3",
+        "validity_id": "P05-B-v3",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P05-B-s4",
+        "validity_id": "P05-B-v4",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P05-B-s5",
+        "validity_id": "P05-B-v5",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P05-B-s6",
+        "validity_id": "P05-B-v6",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P05-B-s7",
+        "validity_id": "P05-B-v7",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P05-B-s8",
+        "validity_id": "P05-B-v8",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P05-B-s9",
+        "validity_id": "P05-B-v9",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P05-B-s10",
+        "validity_id": "P05-B-v10",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P05-B-s11",
+        "validity_id": "P05-B-v11",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P05-B-s12",
+        "validity_id": "P05-B-v12",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P05-B-s13",
+        "validity_id": "P05-B-v13",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P05-B-s14",
+        "validity_id": "P05-B-v14",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P05-B-s15",
+        "validity_id": "P05-B-v15",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P05-B-s16",
+        "validity_id": "P05-B-v16",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P05-B-s17",
+        "validity_id": "P05-B-v17",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P05-B-s18",
+        "validity_id": "P05-B-v18",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P05-B-s19",
+        "validity_id": "P05-B-v19",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P05-B-s20",
+        "validity_id": "P05-B-v20",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P05-C-s1",
+        "validity_id": "P05-C-v1",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P05-C-s2",
+        "validity_id": "P05-C-v2",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P05-C-s3",
+        "validity_id": "P05-C-v3",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P05-C-s4",
+        "validity_id": "P05-C-v4",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P05-C-s5",
+        "validity_id": "P05-C-v5",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P05-C-s6",
+        "validity_id": "P05-C-v6",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P05-C-s7",
+        "validity_id": "P05-C-v7",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P05-C-s8",
+        "validity_id": "P05-C-v8",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P05-C-s9",
+        "validity_id": "P05-C-v9",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P05-C-s10",
+        "validity_id": "P05-C-v10",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P05-C-s11",
+        "validity_id": "P05-C-v11",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P05-C-s12",
+        "validity_id": "P05-C-v12",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P05-C-s13",
+        "validity_id": "P05-C-v13",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P05-C-s14",
+        "validity_id": "P05-C-v14",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P05-C-s15",
+        "validity_id": "P05-C-v15",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P05-C-s16",
+        "validity_id": "P05-C-v16",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P05-C-s17",
+        "validity_id": "P05-C-v17",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P05-C-s18",
+        "validity_id": "P05-C-v18",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P05-C-s19",
+        "validity_id": "P05-C-v19",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P05-C-s20",
+        "validity_id": "P05-C-v20",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P06-A-s1",
+        "validity_id": "P06-A-v1",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P06-A-s2",
+        "validity_id": "P06-A-v2",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P06-A-s3",
+        "validity_id": "P06-A-v3",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P06-A-s4",
+        "validity_id": "P06-A-v4",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P06-A-s5",
+        "validity_id": "P06-A-v5",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P06-A-s6",
+        "validity_id": "P06-A-v6",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P06-A-s7",
+        "validity_id": "P06-A-v7",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P06-A-s8",
+        "validity_id": "P06-A-v8",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P06-A-s9",
+        "validity_id": "P06-A-v9",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P06-A-s10",
+        "validity_id": "P06-A-v10",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P06-A-s11",
+        "validity_id": "P06-A-v11",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P06-A-s12",
+        "validity_id": "P06-A-v12",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P06-A-s13",
+        "validity_id": "P06-A-v13",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P06-A-s14",
+        "validity_id": "P06-A-v14",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P06-A-s15",
+        "validity_id": "P06-A-v15",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P06-A-s16",
+        "validity_id": "P06-A-v16",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P06-A-s17",
+        "validity_id": "P06-A-v17",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P06-A-s18",
+        "validity_id": "P06-A-v18",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P06-A-s19",
+        "validity_id": "P06-A-v19",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P06-A-s20",
+        "validity_id": "P06-A-v20",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P06-B-s1",
+        "validity_id": "P06-B-v1",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P06-B-s2",
+        "validity_id": "P06-B-v2",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P06-B-s3",
+        "validity_id": "P06-B-v3",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P06-B-s4",
+        "validity_id": "P06-B-v4",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P06-B-s5",
+        "validity_id": "P06-B-v5",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P06-B-s6",
+        "validity_id": "P06-B-v6",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P06-B-s7",
+        "validity_id": "P06-B-v7",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P06-B-s8",
+        "validity_id": "P06-B-v8",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P06-B-s9",
+        "validity_id": "P06-B-v9",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P06-B-s10",
+        "validity_id": "P06-B-v10",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P06-B-s11",
+        "validity_id": "P06-B-v11",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P06-B-s12",
+        "validity_id": "P06-B-v12",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P06-B-s13",
+        "validity_id": "P06-B-v13",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P06-B-s14",
+        "validity_id": "P06-B-v14",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P06-B-s15",
+        "validity_id": "P06-B-v15",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P06-B-s16",
+        "validity_id": "P06-B-v16",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P06-B-s17",
+        "validity_id": "P06-B-v17",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P06-B-s18",
+        "validity_id": "P06-B-v18",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P06-B-s19",
+        "validity_id": "P06-B-v19",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P06-B-s20",
+        "validity_id": "P06-B-v20",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P06-C-s1",
+        "validity_id": "P06-C-v1",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P06-C-s2",
+        "validity_id": "P06-C-v2",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P06-C-s3",
+        "validity_id": "P06-C-v3",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P06-C-s4",
+        "validity_id": "P06-C-v4",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P06-C-s5",
+        "validity_id": "P06-C-v5",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P06-C-s6",
+        "validity_id": "P06-C-v6",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P06-C-s7",
+        "validity_id": "P06-C-v7",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P06-C-s8",
+        "validity_id": "P06-C-v8",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P06-C-s9",
+        "validity_id": "P06-C-v9",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P06-C-s10",
+        "validity_id": "P06-C-v10",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P06-C-s11",
+        "validity_id": "P06-C-v11",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P06-C-s12",
+        "validity_id": "P06-C-v12",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P06-C-s13",
+        "validity_id": "P06-C-v13",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P06-C-s14",
+        "validity_id": "P06-C-v14",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P06-C-s15",
+        "validity_id": "P06-C-v15",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P06-C-s16",
+        "validity_id": "P06-C-v16",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P06-C-s17",
+        "validity_id": "P06-C-v17",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P06-C-s18",
+        "validity_id": "P06-C-v18",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P06-C-s19",
+        "validity_id": "P06-C-v19",
+        "validity_version": "0.1"
+      },
+      {
+        "sample_id": "P06-C-s20",
+        "validity_id": "P06-C-v20",
+        "validity_version": "0.1"
+      }
+    ]
+  },
+  "bundle_id": "fixture-bundle1",
+  "cells": [
+    {
+      "analysis_cell_id": "P01-A",
+      "checkpoint_identifier": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": "MOCK-STATE"
+      },
+      "collection_window": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": "MOCK-WINDOW"
+      },
+      "condition_id": "A",
+      "frame_id": "frame1",
+      "generation_protocol_id": "protocol-P01-A",
+      "generation_protocol_version": "0.1",
+      "model_family": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": "MOCK-FAMILY"
+      },
+      "model_identifier": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": "MOCK-MODEL"
+      },
+      "prompt_block_id": "P01",
+      "prompt_id": "prompt-P01-A",
+      "record_id": "P01-A",
+      "record_type": "cell",
+      "record_version": "0.1"
+    },
+    {
+      "analysis_cell_id": "P01-B",
+      "checkpoint_identifier": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": "MOCK-STATE"
+      },
+      "collection_window": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": "MOCK-WINDOW"
+      },
+      "condition_id": "B",
+      "frame_id": "frame1",
+      "generation_protocol_id": "protocol-P01-B",
+      "generation_protocol_version": "0.1",
+      "model_family": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": "MOCK-FAMILY"
+      },
+      "model_identifier": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": "MOCK-MODEL"
+      },
+      "prompt_block_id": "P01",
+      "prompt_id": "prompt-P01-B",
+      "record_id": "P01-B",
+      "record_type": "cell",
+      "record_version": "0.1"
+    },
+    {
+      "analysis_cell_id": "P01-C",
+      "checkpoint_identifier": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": "MOCK-STATE"
+      },
+      "collection_window": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": "MOCK-WINDOW"
+      },
+      "condition_id": "C",
+      "frame_id": "frame1",
+      "generation_protocol_id": "protocol-P01-C",
+      "generation_protocol_version": "0.1",
+      "model_family": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": "MOCK-FAMILY"
+      },
+      "model_identifier": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": "MOCK-MODEL"
+      },
+      "prompt_block_id": "P01",
+      "prompt_id": "prompt-P01-C",
+      "record_id": "P01-C",
+      "record_type": "cell",
+      "record_version": "0.1"
+    },
+    {
+      "analysis_cell_id": "P02-A",
+      "checkpoint_identifier": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": "MOCK-STATE"
+      },
+      "collection_window": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": "MOCK-WINDOW"
+      },
+      "condition_id": "A",
+      "frame_id": "frame1",
+      "generation_protocol_id": "protocol-P02-A",
+      "generation_protocol_version": "0.1",
+      "model_family": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": "MOCK-FAMILY"
+      },
+      "model_identifier": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": "MOCK-MODEL"
+      },
+      "prompt_block_id": "P02",
+      "prompt_id": "prompt-P02-A",
+      "record_id": "P02-A",
+      "record_type": "cell",
+      "record_version": "0.1"
+    },
+    {
+      "analysis_cell_id": "P02-B",
+      "checkpoint_identifier": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": "MOCK-STATE"
+      },
+      "collection_window": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": "MOCK-WINDOW"
+      },
+      "condition_id": "B",
+      "frame_id": "frame1",
+      "generation_protocol_id": "protocol-P02-B",
+      "generation_protocol_version": "0.1",
+      "model_family": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": "MOCK-FAMILY"
+      },
+      "model_identifier": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": "MOCK-MODEL"
+      },
+      "prompt_block_id": "P02",
+      "prompt_id": "prompt-P02-B",
+      "record_id": "P02-B",
+      "record_type": "cell",
+      "record_version": "0.1"
+    },
+    {
+      "analysis_cell_id": "P02-C",
+      "checkpoint_identifier": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": "MOCK-STATE"
+      },
+      "collection_window": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": "MOCK-WINDOW"
+      },
+      "condition_id": "C",
+      "frame_id": "frame1",
+      "generation_protocol_id": "protocol-P02-C",
+      "generation_protocol_version": "0.1",
+      "model_family": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": "MOCK-FAMILY"
+      },
+      "model_identifier": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": "MOCK-MODEL"
+      },
+      "prompt_block_id": "P02",
+      "prompt_id": "prompt-P02-C",
+      "record_id": "P02-C",
+      "record_type": "cell",
+      "record_version": "0.1"
+    },
+    {
+      "analysis_cell_id": "P03-A",
+      "checkpoint_identifier": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": "MOCK-STATE"
+      },
+      "collection_window": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": "MOCK-WINDOW"
+      },
+      "condition_id": "A",
+      "frame_id": "frame1",
+      "generation_protocol_id": "protocol-P03-A",
+      "generation_protocol_version": "0.1",
+      "model_family": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": "MOCK-FAMILY"
+      },
+      "model_identifier": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": "MOCK-MODEL"
+      },
+      "prompt_block_id": "P03",
+      "prompt_id": "prompt-P03-A",
+      "record_id": "P03-A",
+      "record_type": "cell",
+      "record_version": "0.1"
+    },
+    {
+      "analysis_cell_id": "P03-B",
+      "checkpoint_identifier": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": "MOCK-STATE"
+      },
+      "collection_window": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": "MOCK-WINDOW"
+      },
+      "condition_id": "B",
+      "frame_id": "frame1",
+      "generation_protocol_id": "protocol-P03-B",
+      "generation_protocol_version": "0.1",
+      "model_family": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": "MOCK-FAMILY"
+      },
+      "model_identifier": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": "MOCK-MODEL"
+      },
+      "prompt_block_id": "P03",
+      "prompt_id": "prompt-P03-B",
+      "record_id": "P03-B",
+      "record_type": "cell",
+      "record_version": "0.1"
+    },
+    {
+      "analysis_cell_id": "P03-C",
+      "checkpoint_identifier": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": "MOCK-STATE"
+      },
+      "collection_window": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": "MOCK-WINDOW"
+      },
+      "condition_id": "C",
+      "frame_id": "frame1",
+      "generation_protocol_id": "protocol-P03-C",
+      "generation_protocol_version": "0.1",
+      "model_family": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": "MOCK-FAMILY"
+      },
+      "model_identifier": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": "MOCK-MODEL"
+      },
+      "prompt_block_id": "P03",
+      "prompt_id": "prompt-P03-C",
+      "record_id": "P03-C",
+      "record_type": "cell",
+      "record_version": "0.1"
+    },
+    {
+      "analysis_cell_id": "P04-A",
+      "checkpoint_identifier": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": "MOCK-STATE"
+      },
+      "collection_window": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": "MOCK-WINDOW"
+      },
+      "condition_id": "A",
+      "frame_id": "frame1",
+      "generation_protocol_id": "protocol-P04-A",
+      "generation_protocol_version": "0.1",
+      "model_family": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": "MOCK-FAMILY"
+      },
+      "model_identifier": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": "MOCK-MODEL"
+      },
+      "prompt_block_id": "P04",
+      "prompt_id": "prompt-P04-A",
+      "record_id": "P04-A",
+      "record_type": "cell",
+      "record_version": "0.1"
+    },
+    {
+      "analysis_cell_id": "P04-B",
+      "checkpoint_identifier": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": "MOCK-STATE"
+      },
+      "collection_window": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": "MOCK-WINDOW"
+      },
+      "condition_id": "B",
+      "frame_id": "frame1",
+      "generation_protocol_id": "protocol-P04-B",
+      "generation_protocol_version": "0.1",
+      "model_family": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": "MOCK-FAMILY"
+      },
+      "model_identifier": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": "MOCK-MODEL"
+      },
+      "prompt_block_id": "P04",
+      "prompt_id": "prompt-P04-B",
+      "record_id": "P04-B",
+      "record_type": "cell",
+      "record_version": "0.1"
+    },
+    {
+      "analysis_cell_id": "P04-C",
+      "checkpoint_identifier": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": "MOCK-STATE"
+      },
+      "collection_window": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": "MOCK-WINDOW"
+      },
+      "condition_id": "C",
+      "frame_id": "frame1",
+      "generation_protocol_id": "protocol-P04-C",
+      "generation_protocol_version": "0.1",
+      "model_family": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": "MOCK-FAMILY"
+      },
+      "model_identifier": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": "MOCK-MODEL"
+      },
+      "prompt_block_id": "P04",
+      "prompt_id": "prompt-P04-C",
+      "record_id": "P04-C",
+      "record_type": "cell",
+      "record_version": "0.1"
+    },
+    {
+      "analysis_cell_id": "P05-A",
+      "checkpoint_identifier": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": "MOCK-STATE"
+      },
+      "collection_window": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": "MOCK-WINDOW"
+      },
+      "condition_id": "A",
+      "frame_id": "frame1",
+      "generation_protocol_id": "protocol-P05-A",
+      "generation_protocol_version": "0.1",
+      "model_family": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": "MOCK-FAMILY"
+      },
+      "model_identifier": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": "MOCK-MODEL"
+      },
+      "prompt_block_id": "P05",
+      "prompt_id": "prompt-P05-A",
+      "record_id": "P05-A",
+      "record_type": "cell",
+      "record_version": "0.1"
+    },
+    {
+      "analysis_cell_id": "P05-B",
+      "checkpoint_identifier": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": "MOCK-STATE"
+      },
+      "collection_window": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": "MOCK-WINDOW"
+      },
+      "condition_id": "B",
+      "frame_id": "frame1",
+      "generation_protocol_id": "protocol-P05-B",
+      "generation_protocol_version": "0.1",
+      "model_family": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": "MOCK-FAMILY"
+      },
+      "model_identifier": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": "MOCK-MODEL"
+      },
+      "prompt_block_id": "P05",
+      "prompt_id": "prompt-P05-B",
+      "record_id": "P05-B",
+      "record_type": "cell",
+      "record_version": "0.1"
+    },
+    {
+      "analysis_cell_id": "P05-C",
+      "checkpoint_identifier": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": "MOCK-STATE"
+      },
+      "collection_window": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": "MOCK-WINDOW"
+      },
+      "condition_id": "C",
+      "frame_id": "frame1",
+      "generation_protocol_id": "protocol-P05-C",
+      "generation_protocol_version": "0.1",
+      "model_family": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": "MOCK-FAMILY"
+      },
+      "model_identifier": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": "MOCK-MODEL"
+      },
+      "prompt_block_id": "P05",
+      "prompt_id": "prompt-P05-C",
+      "record_id": "P05-C",
+      "record_type": "cell",
+      "record_version": "0.1"
+    },
+    {
+      "analysis_cell_id": "P06-A",
+      "checkpoint_identifier": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": "MOCK-STATE"
+      },
+      "collection_window": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": "MOCK-WINDOW"
+      },
+      "condition_id": "A",
+      "frame_id": "frame1",
+      "generation_protocol_id": "protocol-P06-A",
+      "generation_protocol_version": "0.1",
+      "model_family": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": "MOCK-FAMILY"
+      },
+      "model_identifier": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": "MOCK-MODEL"
+      },
+      "prompt_block_id": "P06",
+      "prompt_id": "prompt-P06-A",
+      "record_id": "P06-A",
+      "record_type": "cell",
+      "record_version": "0.1"
+    },
+    {
+      "analysis_cell_id": "P06-B",
+      "checkpoint_identifier": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": "MOCK-STATE"
+      },
+      "collection_window": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": "MOCK-WINDOW"
+      },
+      "condition_id": "B",
+      "frame_id": "frame1",
+      "generation_protocol_id": "protocol-P06-B",
+      "generation_protocol_version": "0.1",
+      "model_family": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": "MOCK-FAMILY"
+      },
+      "model_identifier": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": "MOCK-MODEL"
+      },
+      "prompt_block_id": "P06",
+      "prompt_id": "prompt-P06-B",
+      "record_id": "P06-B",
+      "record_type": "cell",
+      "record_version": "0.1"
+    },
+    {
+      "analysis_cell_id": "P06-C",
+      "checkpoint_identifier": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": "MOCK-STATE"
+      },
+      "collection_window": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": "MOCK-WINDOW"
+      },
+      "condition_id": "C",
+      "frame_id": "frame1",
+      "generation_protocol_id": "protocol-P06-C",
+      "generation_protocol_version": "0.1",
+      "model_family": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": "MOCK-FAMILY"
+      },
+      "model_identifier": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": "MOCK-MODEL"
+      },
+      "prompt_block_id": "P06",
+      "prompt_id": "prompt-P06-C",
+      "record_id": "P06-C",
+      "record_type": "cell",
+      "record_version": "0.1"
+    }
+  ],
+  "data_role": "fixture",
+  "extensions": {
+    "description": "Illustrative three-word texts with stipulated mechanism and validity; these are not verified sorting programs, model outputs or real reviewer judgments.",
+    "fixture_id": "ABC-00"
+  },
+  "frames": [
+    {
+      "admissible_substitutions": "Registered mechanism-preserving variations.",
+      "analytic_resolution_id": "sorting_mechanism_family",
+      "analytic_resolution_version": "0.1",
+      "consequence_horizon": "One complete invocation across the declared input domain.",
+      "consequence_signature_spec": "Inspect mechanism, not just returned values.",
+      "equivalence_rule_ref": "HERO_BENCHMARK_SPEC.md section 4",
+      "evidence_requirement": "This fixture supplies no independent mechanism evidence.",
+      "exceptional_case_rules": "Preserve unresolved and unknown mechanisms.",
+      "frame_id": "frame1",
+      "load_bearing_invariants": [
+        "Role of ordering mechanism."
+      ],
+      "record_id": "frame1",
+      "record_type": "frame",
+      "record_version": "0.1",
+      "reference_registry_id": "sorting_reference_eight",
+      "reference_registry_version": "0.1",
+      "registration_ref": {
+        "evidence_refs": [],
+        "state": "unknown"
+      },
+      "structural_schema_id": "sorting_mechanism_partition",
+      "structural_schema_version": "0.1",
+      "task_context": "Stipulated input-shape fixture for the adopted sorting task.",
+      "task_id": "bounded_integer_sort",
+      "task_version": "0.1",
+      "validity_rubric_ref": "bounded_integer_sort_validity_v1"
+    }
+  ],
+  "input_schema_version": "0.1",
+  "protocols": [
+    {
+      "conditioning_context_ref": {
+        "evidence_refs": [],
+        "reason": "Fixture assembly retained in prompts.json; no actual model invocation.",
+        "state": "unavailable"
+      },
+      "decoding_settings": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": {
+          "frequency_penalty": 0,
+          "max_output_tokens": 8192,
+          "presence_penalty": 0,
+          "temperature": 0.4,
+          "top_p": 1.0
+        }
+      },
+      "generation_protocol_id": "protocol-P01-A",
+      "generation_protocol_version": "0.1",
+      "record_id": "protocol-P01-A",
+      "record_type": "protocol",
+      "record_version": "0.1",
+      "seed": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": null
+      }
+    },
+    {
+      "conditioning_context_ref": {
+        "evidence_refs": [],
+        "reason": "Fixture assembly retained in prompts.json; no actual model invocation.",
+        "state": "unavailable"
+      },
+      "decoding_settings": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": {
+          "frequency_penalty": 0,
+          "max_output_tokens": 8192,
+          "presence_penalty": 0,
+          "temperature": 1.0,
+          "top_p": 1.0
+        }
+      },
+      "generation_protocol_id": "protocol-P01-B",
+      "generation_protocol_version": "0.1",
+      "record_id": "protocol-P01-B",
+      "record_type": "protocol",
+      "record_version": "0.1",
+      "seed": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": null
+      }
+    },
+    {
+      "conditioning_context_ref": {
+        "evidence_refs": [],
+        "reason": "Fixture assembly retained in prompts.json; no actual model invocation.",
+        "state": "unavailable"
+      },
+      "decoding_settings": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": {
+          "frequency_penalty": 0,
+          "max_output_tokens": 8192,
+          "presence_penalty": 0,
+          "temperature": 0.4,
+          "top_p": 1.0
+        }
+      },
+      "generation_protocol_id": "protocol-P01-C",
+      "generation_protocol_version": "0.1",
+      "record_id": "protocol-P01-C",
+      "record_type": "protocol",
+      "record_version": "0.1",
+      "seed": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": null
+      }
+    },
+    {
+      "conditioning_context_ref": {
+        "evidence_refs": [],
+        "reason": "Fixture assembly retained in prompts.json; no actual model invocation.",
+        "state": "unavailable"
+      },
+      "decoding_settings": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": {
+          "frequency_penalty": 0,
+          "max_output_tokens": 8192,
+          "presence_penalty": 0,
+          "temperature": 0.4,
+          "top_p": 1.0
+        }
+      },
+      "generation_protocol_id": "protocol-P02-A",
+      "generation_protocol_version": "0.1",
+      "record_id": "protocol-P02-A",
+      "record_type": "protocol",
+      "record_version": "0.1",
+      "seed": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": null
+      }
+    },
+    {
+      "conditioning_context_ref": {
+        "evidence_refs": [],
+        "reason": "Fixture assembly retained in prompts.json; no actual model invocation.",
+        "state": "unavailable"
+      },
+      "decoding_settings": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": {
+          "frequency_penalty": 0,
+          "max_output_tokens": 8192,
+          "presence_penalty": 0,
+          "temperature": 1.0,
+          "top_p": 1.0
+        }
+      },
+      "generation_protocol_id": "protocol-P02-B",
+      "generation_protocol_version": "0.1",
+      "record_id": "protocol-P02-B",
+      "record_type": "protocol",
+      "record_version": "0.1",
+      "seed": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": null
+      }
+    },
+    {
+      "conditioning_context_ref": {
+        "evidence_refs": [],
+        "reason": "Fixture assembly retained in prompts.json; no actual model invocation.",
+        "state": "unavailable"
+      },
+      "decoding_settings": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": {
+          "frequency_penalty": 0,
+          "max_output_tokens": 8192,
+          "presence_penalty": 0,
+          "temperature": 0.4,
+          "top_p": 1.0
+        }
+      },
+      "generation_protocol_id": "protocol-P02-C",
+      "generation_protocol_version": "0.1",
+      "record_id": "protocol-P02-C",
+      "record_type": "protocol",
+      "record_version": "0.1",
+      "seed": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": null
+      }
+    },
+    {
+      "conditioning_context_ref": {
+        "evidence_refs": [],
+        "reason": "Fixture assembly retained in prompts.json; no actual model invocation.",
+        "state": "unavailable"
+      },
+      "decoding_settings": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": {
+          "frequency_penalty": 0,
+          "max_output_tokens": 8192,
+          "presence_penalty": 0,
+          "temperature": 0.4,
+          "top_p": 1.0
+        }
+      },
+      "generation_protocol_id": "protocol-P03-A",
+      "generation_protocol_version": "0.1",
+      "record_id": "protocol-P03-A",
+      "record_type": "protocol",
+      "record_version": "0.1",
+      "seed": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": null
+      }
+    },
+    {
+      "conditioning_context_ref": {
+        "evidence_refs": [],
+        "reason": "Fixture assembly retained in prompts.json; no actual model invocation.",
+        "state": "unavailable"
+      },
+      "decoding_settings": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": {
+          "frequency_penalty": 0,
+          "max_output_tokens": 8192,
+          "presence_penalty": 0,
+          "temperature": 1.0,
+          "top_p": 1.0
+        }
+      },
+      "generation_protocol_id": "protocol-P03-B",
+      "generation_protocol_version": "0.1",
+      "record_id": "protocol-P03-B",
+      "record_type": "protocol",
+      "record_version": "0.1",
+      "seed": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": null
+      }
+    },
+    {
+      "conditioning_context_ref": {
+        "evidence_refs": [],
+        "reason": "Fixture assembly retained in prompts.json; no actual model invocation.",
+        "state": "unavailable"
+      },
+      "decoding_settings": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": {
+          "frequency_penalty": 0,
+          "max_output_tokens": 8192,
+          "presence_penalty": 0,
+          "temperature": 0.4,
+          "top_p": 1.0
+        }
+      },
+      "generation_protocol_id": "protocol-P03-C",
+      "generation_protocol_version": "0.1",
+      "record_id": "protocol-P03-C",
+      "record_type": "protocol",
+      "record_version": "0.1",
+      "seed": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": null
+      }
+    },
+    {
+      "conditioning_context_ref": {
+        "evidence_refs": [],
+        "reason": "Fixture assembly retained in prompts.json; no actual model invocation.",
+        "state": "unavailable"
+      },
+      "decoding_settings": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": {
+          "frequency_penalty": 0,
+          "max_output_tokens": 8192,
+          "presence_penalty": 0,
+          "temperature": 0.4,
+          "top_p": 1.0
+        }
+      },
+      "generation_protocol_id": "protocol-P04-A",
+      "generation_protocol_version": "0.1",
+      "record_id": "protocol-P04-A",
+      "record_type": "protocol",
+      "record_version": "0.1",
+      "seed": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": null
+      }
+    },
+    {
+      "conditioning_context_ref": {
+        "evidence_refs": [],
+        "reason": "Fixture assembly retained in prompts.json; no actual model invocation.",
+        "state": "unavailable"
+      },
+      "decoding_settings": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": {
+          "frequency_penalty": 0,
+          "max_output_tokens": 8192,
+          "presence_penalty": 0,
+          "temperature": 1.0,
+          "top_p": 1.0
+        }
+      },
+      "generation_protocol_id": "protocol-P04-B",
+      "generation_protocol_version": "0.1",
+      "record_id": "protocol-P04-B",
+      "record_type": "protocol",
+      "record_version": "0.1",
+      "seed": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": null
+      }
+    },
+    {
+      "conditioning_context_ref": {
+        "evidence_refs": [],
+        "reason": "Fixture assembly retained in prompts.json; no actual model invocation.",
+        "state": "unavailable"
+      },
+      "decoding_settings": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": {
+          "frequency_penalty": 0,
+          "max_output_tokens": 8192,
+          "presence_penalty": 0,
+          "temperature": 0.4,
+          "top_p": 1.0
+        }
+      },
+      "generation_protocol_id": "protocol-P04-C",
+      "generation_protocol_version": "0.1",
+      "record_id": "protocol-P04-C",
+      "record_type": "protocol",
+      "record_version": "0.1",
+      "seed": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": null
+      }
+    },
+    {
+      "conditioning_context_ref": {
+        "evidence_refs": [],
+        "reason": "Fixture assembly retained in prompts.json; no actual model invocation.",
+        "state": "unavailable"
+      },
+      "decoding_settings": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": {
+          "frequency_penalty": 0,
+          "max_output_tokens": 8192,
+          "presence_penalty": 0,
+          "temperature": 0.4,
+          "top_p": 1.0
+        }
+      },
+      "generation_protocol_id": "protocol-P05-A",
+      "generation_protocol_version": "0.1",
+      "record_id": "protocol-P05-A",
+      "record_type": "protocol",
+      "record_version": "0.1",
+      "seed": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": null
+      }
+    },
+    {
+      "conditioning_context_ref": {
+        "evidence_refs": [],
+        "reason": "Fixture assembly retained in prompts.json; no actual model invocation.",
+        "state": "unavailable"
+      },
+      "decoding_settings": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": {
+          "frequency_penalty": 0,
+          "max_output_tokens": 8192,
+          "presence_penalty": 0,
+          "temperature": 1.0,
+          "top_p": 1.0
+        }
+      },
+      "generation_protocol_id": "protocol-P05-B",
+      "generation_protocol_version": "0.1",
+      "record_id": "protocol-P05-B",
+      "record_type": "protocol",
+      "record_version": "0.1",
+      "seed": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": null
+      }
+    },
+    {
+      "conditioning_context_ref": {
+        "evidence_refs": [],
+        "reason": "Fixture assembly retained in prompts.json; no actual model invocation.",
+        "state": "unavailable"
+      },
+      "decoding_settings": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": {
+          "frequency_penalty": 0,
+          "max_output_tokens": 8192,
+          "presence_penalty": 0,
+          "temperature": 0.4,
+          "top_p": 1.0
+        }
+      },
+      "generation_protocol_id": "protocol-P05-C",
+      "generation_protocol_version": "0.1",
+      "record_id": "protocol-P05-C",
+      "record_type": "protocol",
+      "record_version": "0.1",
+      "seed": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": null
+      }
+    },
+    {
+      "conditioning_context_ref": {
+        "evidence_refs": [],
+        "reason": "Fixture assembly retained in prompts.json; no actual model invocation.",
+        "state": "unavailable"
+      },
+      "decoding_settings": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": {
+          "frequency_penalty": 0,
+          "max_output_tokens": 8192,
+          "presence_penalty": 0,
+          "temperature": 0.4,
+          "top_p": 1.0
+        }
+      },
+      "generation_protocol_id": "protocol-P06-A",
+      "generation_protocol_version": "0.1",
+      "record_id": "protocol-P06-A",
+      "record_type": "protocol",
+      "record_version": "0.1",
+      "seed": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": null
+      }
+    },
+    {
+      "conditioning_context_ref": {
+        "evidence_refs": [],
+        "reason": "Fixture assembly retained in prompts.json; no actual model invocation.",
+        "state": "unavailable"
+      },
+      "decoding_settings": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": {
+          "frequency_penalty": 0,
+          "max_output_tokens": 8192,
+          "presence_penalty": 0,
+          "temperature": 1.0,
+          "top_p": 1.0
+        }
+      },
+      "generation_protocol_id": "protocol-P06-B",
+      "generation_protocol_version": "0.1",
+      "record_id": "protocol-P06-B",
+      "record_type": "protocol",
+      "record_version": "0.1",
+      "seed": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": null
+      }
+    },
+    {
+      "conditioning_context_ref": {
+        "evidence_refs": [],
+        "reason": "Fixture assembly retained in prompts.json; no actual model invocation.",
+        "state": "unavailable"
+      },
+      "decoding_settings": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": {
+          "frequency_penalty": 0,
+          "max_output_tokens": 8192,
+          "presence_penalty": 0,
+          "temperature": 0.4,
+          "top_p": 1.0
+        }
+      },
+      "generation_protocol_id": "protocol-P06-C",
+      "generation_protocol_version": "0.1",
+      "record_id": "protocol-P06-C",
+      "record_type": "protocol",
+      "record_version": "0.1",
+      "seed": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": null
+      }
+    }
+  ],
+  "record_files": [
+    {
+      "expected_sha256": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": "da82fb18b224e1cde4bd5a73f229fbca415364535fe5279da1e7d7a2a13c689b"
+      },
+      "format": "jsonl",
+      "path": "records.jsonl",
+      "role": "observations"
+    },
+    {
+      "expected_sha256": {
+        "evidence_refs": [],
+        "state": "known",
+        "value": "ed31c9a7f4fbfa5457a35bc80e5ac6a4c5ca8ac3bc062e2f55401e504a8dc0cf"
+      },
+      "format": "jsonl",
+      "path": "evidence.jsonl",
+      "role": "evidence"
+    }
+  ],
+  "study_id": "fixture-study1"
+}

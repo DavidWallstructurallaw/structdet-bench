@@ -1,0 +1,307 @@
+{
+  "cells": {
+    "P01-A": {
+      "L": {
+        "denominator": 1,
+        "numerator": 0
+      },
+      "Q": {
+        "denominator": 1,
+        "numerator": 0
+      },
+      "pairs": 190,
+      "support": 1,
+      "within": {
+        "denominator": 1,
+        "numerator": 0
+      }
+    },
+    "P01-B": {
+      "L": {
+        "denominator": 19,
+        "numerator": 8
+      },
+      "Q": {
+        "denominator": 1,
+        "numerator": 0
+      },
+      "pairs": 190,
+      "support": 1,
+      "within": {
+        "denominator": 19,
+        "numerator": 8
+      }
+    },
+    "P01-C": {
+      "L": {
+        "denominator": 19,
+        "numerator": 10
+      },
+      "Q": {
+        "denominator": 19,
+        "numerator": 10
+      },
+      "pairs": 190,
+      "support": 2,
+      "within": {
+        "denominator": 1,
+        "numerator": 0
+      }
+    },
+    "P02-A": {
+      "L": {
+        "denominator": 1,
+        "numerator": 0
+      },
+      "Q": {
+        "denominator": 1,
+        "numerator": 0
+      },
+      "pairs": 190,
+      "support": 1,
+      "within": {
+        "denominator": 1,
+        "numerator": 0
+      }
+    },
+    "P02-B": {
+      "L": {
+        "denominator": 19,
+        "numerator": 8
+      },
+      "Q": {
+        "denominator": 1,
+        "numerator": 0
+      },
+      "pairs": 190,
+      "support": 1,
+      "within": {
+        "denominator": 19,
+        "numerator": 8
+      }
+    },
+    "P02-C": {
+      "L": {
+        "denominator": 19,
+        "numerator": 10
+      },
+      "Q": {
+        "denominator": 19,
+        "numerator": 10
+      },
+      "pairs": 190,
+      "support": 2,
+      "within": {
+        "denominator": 1,
+        "numerator": 0
+      }
+    },
+    "P03-A": {
+      "L": {
+        "denominator": 1,
+        "numerator": 0
+      },
+      "Q": {
+        "denominator": 1,
+        "numerator": 0
+      },
+      "pairs": 190,
+      "support": 1,
+      "within": {
+        "denominator": 1,
+        "numerator": 0
+      }
+    },
+    "P03-B": {
+      "L": {
+        "denominator": 19,
+        "numerator": 8
+      },
+      "Q": {
+        "denominator": 1,
+        "numerator": 0
+      },
+      "pairs": 190,
+      "support": 1,
+      "within": {
+        "denominator": 19,
+        "numerator": 8
+      }
+    },
+    "P03-C": {
+      "L": {
+        "denominator": 19,
+        "numerator": 10
+      },
+      "Q": {
+        "denominator": 19,
+        "numerator": 10
+      },
+      "pairs": 190,
+      "support": 2,
+      "within": {
+        "denominator": 1,
+        "numerator": 0
+      }
+    },
+    "P04-A": {
+      "L": {
+        "denominator": 1,
+        "numerator": 0
+      },
+      "Q": {
+        "denominator": 1,
+        "numerator": 0
+      },
+      "pairs": 190,
+      "support": 1,
+      "within": {
+        "denominator": 1,
+        "numerator": 0
+      }
+    },
+    "P04-B": {
+      "L": {
+        "denominator": 19,
+        "numerator": 8
+      },
+      "Q": {
+        "denominator": 1,
+        "numerator": 0
+      },
+      "pairs": 190,
+      "support": 1,
+      "within": {
+        "denominator": 19,
+        "numerator": 8
+      }
+    },
+    "P04-C": {
+      "L": {
+        "denominator": 19,
+        "numerator": 10
+      },
+      "Q": {
+        "denominator": 19,
+        "numerator": 10
+      },
+      "pairs": 190,
+      "support": 2,
+      "within": {
+        "denominator": 1,
+        "numerator": 0
+      }
+    },
+    "P05-A": {
+      "L": {
+        "denominator": 1,
+        "numerator": 0
+      },
+      "Q": {
+        "denominator": 1,
+        "numerator": 0
+      },
+      "pairs": 190,
+      "support": 1,
+      "within": {
+        "denominator": 1,
+        "numerator": 0
+      }
+    },
+    "P05-B": {
+      "L": {
+        "denominator": 19,
+        "numerator": 8
+      },
+      "Q": {
+        "denominator": 1,
+        "numerator": 0
+      },
+      "pairs": 190,
+      "support": 1,
+      "within": {
+        "denominator": 19,
+        "numerator": 8
+      }
+    },
+    "P05-C": {
+      "L": {
+        "denominator": 19,
+        "numerator": 10
+      },
+      "Q": {
+        "denominator": 19,
+        "numerator": 10
+      },
+      "pairs": 190,
+      "support": 2,
+      "within": {
+        "denominator": 1,
+        "numerator": 0
+      }
+    },
+    "P06-A": {
+      "L": {
+        "denominator": 1,
+        "numerator": 0
+      },
+      "Q": {
+        "denominator": 1,
+        "numerator": 0
+      },
+      "pairs": 190,
+      "support": 1,
+      "within": {
+        "denominator": 1,
+        "numerator": 0
+      }
+    },
+    "P06-B": {
+      "L": {
+        "denominator": 19,
+        "numerator": 8
+      },
+      "Q": {
+        "denominator": 1,
+        "numerator": 0
+      },
+      "pairs": 190,
+      "support": 1,
+      "within": {
+        "denominator": 19,
+        "numerator": 8
+      }
+    },
+    "P06-C": {
+      "L": {
+        "denominator": 19,
+        "numerator": 10
+      },
+      "Q": {
+        "denominator": 19,
+        "numerator": 10
+      },
+      "pairs": 190,
+      "support": 2,
+      "within": {
+        "denominator": 1,
+        "numerator": 0
+      }
+    }
+  },
+  "data_role": "fixture",
+  "indices_sha256": "a1014f66fdd6e833e44ec38e4b3bf6f24356a99621f34a39e10cf400af41e8fd",
+  "oracle_method": "hand_specified_sets_and_independent_fraction_enumeration",
+  "p1_lower": {
+    "denominator": 19,
+    "numerator": 8
+  },
+  "p1_mean": {
+    "denominator": 19,
+    "numerator": 8
+  },
+  "p1_upper": {
+    "denominator": 19,
+    "numerator": 8
+  }
+}

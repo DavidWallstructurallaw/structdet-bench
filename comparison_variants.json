@@ -1,0 +1,401 @@
+{
+  "base_sha256": {
+    "bundle.json": "bd66ed90785e175c54a1164c885d19b2dea000caa0548ef27fafbc62011edf00",
+    "evidence.jsonl": "ed31c9a7f4fbfa5457a35bc80e5ac6a4c5ca8ac3bc062e2f55401e504a8dc0cf",
+    "expected.json": "42eb9cddd34c74b9c166abdbf0a9419614c376ae983aa86e367c578def7b9767",
+    "prompts.json": "a0814e9b5aa62b5ab100918ffbb2338897960de828a6da035a03e5999b9ac90a",
+    "records.jsonl": "da82fb18b224e1cde4bd5a73f229fbca415364535fe5279da1e7d7a2a13c689b",
+    "text_01.txt": "0e9f64031fcb2bc708b531c2a20441580425d151a38503f38592a7dd36019d3b",
+    "text_02.txt": "4b71bbf7fd991ad862ac16878f15cf8937218093994058590c42f9a83e4ce96b",
+    "text_03.txt": "95769b3309738c5c2257ca003fe4c728143ba8370fec00fd3bcaf98506e75558",
+    "text_04.txt": "987b8f9a43a2057a3e6db36970c21501ab8ac1c28bdc75e5e5170e74e7c6f84e",
+    "text_05.txt": "4ab09a4d73db334fcfdcfd8803967285a2eaee0e19deb7b4bbd968d6bcb3ce8a",
+    "text_06.txt": "c21e5c571740f59771999882ad63dda44b71a500b186300da895f08d47146d57",
+    "text_07.txt": "01a0be27ebbabe826b989f05acdd1f956984b31c556921ac26ebd303e9f17b55",
+    "text_08.txt": "c702b2f9f1fda6cf34aa207b57468039d3612865a03a18c444dc9695fa865ad2"
+  },
+  "data_role": "fixture",
+  "description": "Only registered trusted test transformations; never runtime input programs. Expected states are author-stipulated, arithmetic is independently enumerated.",
+  "heterogeneous_expected": {
+    "cells": {
+      "P01-A": {
+        "L": {
+          "denominator": 19,
+          "numerator": 8
+        },
+        "Q": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "pairs": 190,
+        "support": 1,
+        "within": {
+          "denominator": 19,
+          "numerator": 8
+        }
+      },
+      "P01-B": {
+        "L": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "Q": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "pairs": 190,
+        "support": 1,
+        "within": {
+          "denominator": 1,
+          "numerator": 0
+        }
+      },
+      "P01-C": {
+        "L": {
+          "denominator": 19,
+          "numerator": 10
+        },
+        "Q": {
+          "denominator": 19,
+          "numerator": 10
+        },
+        "pairs": 190,
+        "support": 2,
+        "within": {
+          "denominator": 1,
+          "numerator": 0
+        }
+      },
+      "P02-A": {
+        "L": {
+          "denominator": 19,
+          "numerator": 8
+        },
+        "Q": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "pairs": 190,
+        "support": 1,
+        "within": {
+          "denominator": 19,
+          "numerator": 8
+        }
+      },
+      "P02-B": {
+        "L": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "Q": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "pairs": 190,
+        "support": 1,
+        "within": {
+          "denominator": 1,
+          "numerator": 0
+        }
+      },
+      "P02-C": {
+        "L": {
+          "denominator": 19,
+          "numerator": 10
+        },
+        "Q": {
+          "denominator": 19,
+          "numerator": 10
+        },
+        "pairs": 190,
+        "support": 2,
+        "within": {
+          "denominator": 1,
+          "numerator": 0
+        }
+      },
+      "P03-A": {
+        "L": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "Q": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "pairs": 190,
+        "support": 1,
+        "within": {
+          "denominator": 1,
+          "numerator": 0
+        }
+      },
+      "P03-B": {
+        "L": {
+          "denominator": 19,
+          "numerator": 8
+        },
+        "Q": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "pairs": 190,
+        "support": 1,
+        "within": {
+          "denominator": 19,
+          "numerator": 8
+        }
+      },
+      "P03-C": {
+        "L": {
+          "denominator": 19,
+          "numerator": 10
+        },
+        "Q": {
+          "denominator": 19,
+          "numerator": 10
+        },
+        "pairs": 190,
+        "support": 2,
+        "within": {
+          "denominator": 1,
+          "numerator": 0
+        }
+      },
+      "P04-A": {
+        "L": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "Q": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "pairs": 190,
+        "support": 1,
+        "within": {
+          "denominator": 1,
+          "numerator": 0
+        }
+      },
+      "P04-B": {
+        "L": {
+          "denominator": 19,
+          "numerator": 8
+        },
+        "Q": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "pairs": 190,
+        "support": 1,
+        "within": {
+          "denominator": 19,
+          "numerator": 8
+        }
+      },
+      "P04-C": {
+        "L": {
+          "denominator": 19,
+          "numerator": 10
+        },
+        "Q": {
+          "denominator": 19,
+          "numerator": 10
+        },
+        "pairs": 190,
+        "support": 2,
+        "within": {
+          "denominator": 1,
+          "numerator": 0
+        }
+      },
+      "P05-A": {
+        "L": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "Q": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "pairs": 190,
+        "support": 1,
+        "within": {
+          "denominator": 1,
+          "numerator": 0
+        }
+      },
+      "P05-B": {
+        "L": {
+          "denominator": 19,
+          "numerator": 8
+        },
+        "Q": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "pairs": 190,
+        "support": 1,
+        "within": {
+          "denominator": 19,
+          "numerator": 8
+        }
+      },
+      "P05-C": {
+        "L": {
+          "denominator": 19,
+          "numerator": 10
+        },
+        "Q": {
+          "denominator": 19,
+          "numerator": 10
+        },
+        "pairs": 190,
+        "support": 2,
+        "within": {
+          "denominator": 1,
+          "numerator": 0
+        }
+      },
+      "P06-A": {
+        "L": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "Q": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "pairs": 190,
+        "support": 1,
+        "within": {
+          "denominator": 1,
+          "numerator": 0
+        }
+      },
+      "P06-B": {
+        "L": {
+          "denominator": 19,
+          "numerator": 8
+        },
+        "Q": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "pairs": 190,
+        "support": 1,
+        "within": {
+          "denominator": 19,
+          "numerator": 8
+        }
+      },
+      "P06-C": {
+        "L": {
+          "denominator": 19,
+          "numerator": 10
+        },
+        "Q": {
+          "denominator": 19,
+          "numerator": 10
+        },
+        "pairs": 190,
+        "support": 2,
+        "within": {
+          "denominator": 1,
+          "numerator": 0
+        }
+      }
+    },
+    "data_role": "fixture",
+    "indices_sha256": "a1014f66fdd6e833e44ec38e4b3bf6f24356a99621f34a39e10cf400af41e8fd",
+    "oracle_method": "hand_specified_sets_and_independent_fraction_enumeration",
+    "p1_lower": {
+      "denominator": 57,
+      "numerator": -8
+    },
+    "p1_mean": {
+      "denominator": 57,
+      "numerator": 8
+    },
+    "p1_upper": {
+      "denominator": 19,
+      "numerator": 8
+    }
+  },
+  "schema_version": "0.1",
+  "variants": [
+    {
+      "P1": "supporting",
+      "P5": "supporting",
+      "expected_processing_exit": 0,
+      "id": "ABC-00"
+    },
+    {
+      "P1": "contrary",
+      "P5": "supporting",
+      "expected_processing_exit": 0,
+      "id": "ABC-CONTRARY"
+    },
+    {
+      "P1": "inconclusive",
+      "P5": "contrary",
+      "expected_processing_exit": 0,
+      "id": "ABC-MIXED"
+    },
+    {
+      "P1": "inconclusive",
+      "P5": "supporting",
+      "expected_processing_exit": 0,
+      "id": "ABC-HETEROGENEOUS"
+    },
+    {
+      "P1": "not_evaluated",
+      "P5": "supporting",
+      "expected_processing_exit": 0,
+      "id": "ABC-NO-TEXT"
+    },
+    {
+      "P1": "not_evaluated",
+      "P5": "not_evaluated",
+      "expected_processing_exit": 0,
+      "id": "ABC-NO-B-CONTROL"
+    },
+    {
+      "P1": "not_evaluated",
+      "P5": "not_evaluated",
+      "expected_processing_exit": 0,
+      "id": "ABC-MISSING-BLOCK"
+    },
+    {
+      "P1": "supporting",
+      "P5": "inconclusive",
+      "expected_processing_exit": 0,
+      "id": "ABC-CORRECTED"
+    },
+    {
+      "P1": "supporting",
+      "P5": "not_evaluated",
+      "expected_processing_exit": 0,
+      "id": "ABC-QUALITY"
+    },
+    {
+      "P1": "not_evaluated",
+      "P5": "not_evaluated",
+      "expected_processing_exit": 0,
+      "id": "ABC-INDEPENDENCE-WITHDRAWN"
+    },
+    {
+      "P1": "inconclusive",
+      "P5": "supporting",
+      "expected_processing_exit": 0,
+      "id": "ABC-TEXT-CHANGED"
+    },
+    {
+      "P1": null,
+      "P5": "supporting",
+      "expected_processing_exit": 0,
+      "id": "ABC-P5-ONLY"
+    }
+  ]
+}

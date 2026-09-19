@@ -1,15 +1,18 @@
 # Comparison Record Format
 
-Version 0.4. Implemented scope: **Phase 2 Steps 2 through 5**.
+Version 0.6. Implemented scope: **Phase 2 Steps 2 through 7; Step 8 closeout**.
 
 Sections 1 through 9 describe the record-binding layer. Section 10 adds the
 separate text-diagnostic layer. Section 11 adds endpoint gates, contrasts and
 block summaries. Section 12 adds paired sensitivity and P1/P5 decisions;
-CLI/report integration remains deferred to Step 6.
+Section 13 documents the implemented CLI/report integration. Section 14 records
+the integrated repairs and current final-audit boundary.
 
 Read with `PHASE_2_PLAN.md` sections 3, 4.2 and 7 (Step 2), `HERO_BENCHMARK_SPEC.md`
 sections 7 through 10, `METRICS_SPEC.md` section 10.1, and EC-001. The frozen
-scientific contracts, Phase 1 code and original Phase 1 matrix remain unchanged.
+scientific contracts and original Phase 1 matrix remain unchanged. Authorized
+Phase 2 orchestration/report extensions and Step 7 repairs are identified below;
+Step 8 changes no runtime, test, fixture or oracle.
 Names introduced here are physical record encodings, not additional theory claims.
 
 ## 1. Interface and scope
@@ -36,16 +39,16 @@ unsupported version returns a requested `contract_error`; it is never ignored as
 an absent request by this interface. A malformed main manifest instead returns
 `unavailable`, because whether a comparison was requested cannot be established.
 
-The existing M-only CLI/report pipeline is unchanged at this step. Its `validate`
-command does not yet claim to validate this new comparison contract. Until Phase 2
-Step 6 connects optional dispatch, use the separate API above for comparison
-record validation. A valid or invalid comparison cannot change M populations,
-class assignments, metrics, denominators or original report behavior.
+The separate API above remains the record-binding entry point. The implemented
+CLI also validates explicitly supplied comparison records and replay material,
+without performing numerical comparison during `validate`. `analyze` dispatches
+the optional V path as described in Section 13. Comparison records do not reassign
+M labels or change the inherited population and metric definitions.
 
 The returned object includes private supplied metadata and evidence references.
-Its default representation hides unrestricted payloads, but it is not the public
-redacted report interface. Keep it local; later report integration applies the
-existing privacy contract.
+Its default representation hides unrestricted payloads; the public report is a
+separate redacted projection. Keep the direct object local. Section 13 documents
+the implemented report privacy contract.
 
 ## 2. Result vocabulary
 
@@ -919,3 +922,203 @@ Operand fingerprints use the named `signed_hex_ratio_v1` encoding for exact
 numerators and denominators. This avoids decimal integer-string expansion limits
 without reducing precision or changing interpreter-wide resource limits. Stored
 interval values and their exact ratios retain the original arithmetic meaning.
+
+## 13. Phase 2 Step 6: complete offline comparison reports
+
+Current document progression: **v0.5**. Input and comparison schemas remain 0.1.
+This section extends the Step 2 through Step 5 component descriptions. Their
+statistical definitions, evidence rules and frozen source contracts are unchanged.
+The V workflow is now connected to the existing commands:
+
+```bash
+python -m structdet_bench validate --bundle examples/hero_abc/bundle.json
+python -m structdet_bench analyze --bundle examples/hero_abc/bundle.json --output-dir abc-output
+```
+
+The parent of `abc-output` must exist and the target itself must not exist. The
+same no-overwrite transaction writes exactly `report.json`, `report.md`, and
+`run_manifest.json`. There is no new provider, generation, execution or comparison
+subcommand, no discovery of undeclared input files, and no runtime import of tests.
+
+### 13.1 Activation, processing and scope
+
+An absent `analysis_config.extensions.comparison` follows the M-only profile.
+A present object requests comparison processing; a null, boolean, unsupported
+version or malformed object is a contract error, never an instruction to ignore
+that request. `validate` checks study bindings and any supplied replay record. It
+computes no distance, block difference, interval or P1/P5 outcome and writes no
+reports. `analyze` builds M populations from one immutable loaded bundle, then
+passes that same bundle and those populations to the new `comparison_pipeline`.
+
+Text diagnostics run in the registered cell/view order with one shared work
+budget. Unbound cells remain visible in the M inventory but do not consume the
+registered study's text-work budget. Comparison, uncertainty and prediction
+components retain their own scoped prerequisites. Missing text or an unresolved
+Unicode method cannot by itself invalidate text-independent P5 structure counts.
+A malformed individual condition produces processing exit 2 while preserving a
+separately justified comparison of the unaffected conditions.
+
+Processing exit 0 means the declared workflow completed, including restricted,
+contrary, inconclusive, undefined and evidence-limited results. An evidence-limited
+`not_evaluated` is not a claim that the input is a successful empirical study.
+Malformed declarations or replay contents yield exit 2. Unexpected internal or
+publication failures yield exit 3 with the existing bounded public diagnostics.
+Scientific outcome direction never determines the process exit code.
+
+### 13.2 Versioned report profiles and shared records
+
+The legacy report schema 0.1 is explicitly identified as
+`structdet_measurement_v1`. Its inherited absent-V entries describe that selected
+profile. The executable separately advertises that the optional V path is
+implemented. Existing M formulas, sample identities, default CLI entry points,
+HF-00 inputs and all original fixture expectations remain intact. Source-code
+identity changes can change run IDs, even when M numbers do not change.
+
+An explicitly requested comparison uses schema 0.2 and profile
+`structdet_comparison_v1`. It retains the same eight ordered sections:
+
+| Section | Additional V content |
+|---|---|
+| 1 | Explicit comparison request/profile, actual processing status, source/evidence and permitted claim scope. |
+| 2 | Existing calls, actual observations, planned positions and source associations; no new observations are invented. |
+| 3 | The two accepted M views and their five coverage ratios remain authoritative. |
+| 4 | Original per-cell M distributions and estimators, separately scoped by population. |
+| 5 | Original fixed prefixes, missing slots, group dependencies and registry limits. |
+| 6 | A primary-outcome table; full P1 and both P5 decisions; study binding facts; exact gates; block contrasts; equal-block and secondary summaries; sensitivity intervals and replay references. |
+| 7 | Actual per-view text eligibility, hashes, lexical counts, common subsets, pair records, class-specific diagnostics and pair-weighted means. |
+| 8 | Existing five EC conditions and ten disclosures, plus comparison evidence/revision references and affected V dependencies. |
+
+Every contrast links its two operands through `operand_records`. An operand's
+`population_context_ref` resolves inside the same report to its cell/view,
+selected/counting identities and revision pins. This normalized encoding avoids
+repeating the same 20 sample IDs and pin lists in every auxiliary contrast; it
+does not remove the operands, change their scope or require fetching another file.
+The G identity remains explicit in linked P1 component results and summaries.
+
+Both formats render the same redacted tree. Schema 0.2 JSON is compact canonical
+UTF-8; Markdown puts primary outcomes before the full operand registry and keeps
+complete records accessible. Numeric units, exact ratios, statuses, thresholds,
+required/advisory gate flags, missing blocks, reasons and qualifications are shared.
+A small signed value is not replaced by a displayed zero for outcome routing.
+D capabilities remain explicitly deferred with their prior prerequisites.
+
+### 13.3 Privacy and method identity
+
+Text records publish original/normalized/trigram fingerprints, sample identities,
+counts and pair arithmetic. They do not publish tokens, raw bodies or programs.
+Private actor mappings, serving identifiers, unrestricted provenance prose,
+locators and correction explanations remain hashed or otherwise redacted; scoped
+record references still permit local audit. Numeric control and ratio records
+remain readable. A digest establishes record identity, not independent truth.
+
+The software fingerprint inventory now includes all six new comparison runtime
+modules, including the file containing the pinned Unicode White_Space table.
+Method records retain the actual Unicode category/table versions, extraction
+identity, work limits, fixed resampling method and quantile convention. Unknown or
+incompatible method facts stay explicit. No automatic table/version fallback,
+model call, candidate execution or natural-language judgment is introduced.
+
+### 13.4 Complete replay in the existing run manifest
+
+`run_manifest.json` contains a `comparison_replay` object with exactly
+`schema_version: "0.1"` and `replays`. Each used ordered block set retains its
+complete 2,000-row index matrix and the existing method, seed, RNG, quantile,
+block-identity and checksum fields. Identical replay objects are stored once.
+`comparison_replay_sha256` hashes the canonical collection. The report carries
+replay references, interval operands, bounds and an exact replicate-statistic
+fingerprint rather than duplicating every index in the human-readable report.
+
+For replay, retain the old manifest as an explicitly declared local artifact and
+point `comparison.resampling.replay_ref` to it. The consumer accepts either the
+original standalone replay collection or the versioned `structdet_comparison_v1`
+run-manifest envelope. It validates the envelope's collection hash and then uses
+the original strict collection/index checks. It ignores unrelated old software or
+output-location fields; none becomes an instruction or a source of computed
+statistics. The recorded indices are replayed without requesting a new RNG draw.
+
+A malformed, modified or wrongly profiled replay is a contract error. An absent
+or inaccessible replay is a visible evidence limitation. Neither condition invokes
+a fresh random fallback. Corrected observations require newly computed diagnostics,
+block values, means and intervals. The index matrix can be reused only for the
+identical ordered block set. A new input/configuration fingerprint and new output
+directory preserve the historical result rather than overwriting it.
+
+### 13.5 Fixture and independent expectations
+
+`examples/hero_abc` contains 18 cells, 72 stipulated call records and 360 distinct
+stipulated output positions, with eight permitted passive text files. The short
+texts are **illustrative strings with stipulated mechanism and validity labels**.
+They are not independently checked sorting programs, actual model generations,
+completed expert judgments or evidence about the truth of P1/P5.
+
+The source prompt assemblies are retained in the declared `prompts.json`
+artifact. Per-cell byte attestations are explicitly mock records tied to those
+assemblies. No message was actually sent. Repeated text bytes retain their
+separate stipulated occurrence IDs while sharing one current mechanism label.
+
+The base fixture's A cells repeat `text_01`; B cells contain ten `text_01` and ten
+`text_02` occurrences in one structural class; C cells contain ten `text_01` and
+ten `text_03` occurrences in two classes. Hand-specified boundary trigrams yield
+distance 4/5 between the first two text types. Thus B's all-pair lexical mean is
+8/19, Q is zero, and its P1 gain contrast is 8/19. Both valid distinct-20 C
+comparisons are +1. These are fixture expectations, not empirical findings.
+
+`expected.json` records independently enumerated fractions. The trusted test
+oracle constructs the small explicit trigram sets and pair counts without calling
+production diagnostics, contrasts, quantiles or prediction functions. A separate
+reference getrandbits/rejection path checks the full index hash and computes
+fractional percentile expectations. It does not reuse the production `randrange`
+wrapper. `comparison_variants.json` pins the original bytes and registered
+adverse, mixed, heterogeneous, missing-text, missing-control, missing-block,
+quality-confounded, label-revision, text-revision and evidence-withdrawal cases.
+Temporary variant materialization belongs exclusively to trusted tests.
+
+The heterogeneous fixture uses two negative and four positive P1 block values.
+Its positive mean and nondegenerate interval spanning zero must produce
+`inconclusive`. Single-cell evidence failures remain separate from changes to the
+whole taxonomy or model capability. All earlier M-only fixtures remain unchanged.
+
+### 13.6 Delivery boundary
+
+Step 6 delivered the fixture-to-report workflow. Step 7 completed integrated M/V
+software conformance. The Step 8 final audit is recorded in
+`PHASE_2_COMPLETION.md`, with separate local, remote and owner-acceptance states.
+UD-006 and substantive independent-evidence duties remain outstanding. A software
+gate, a fixture outcome and verified GitHub delivery retain separate evidence.
+Local tests are not GitHub Actions or package publication.
+
+
+## 14. Integrated verification and final closeout
+
+Version 0.6 updates documentation only. Scientific formulas, thresholds, budgets,
+result vocabulary, example bytes and method identities are unchanged.
+
+Step 7 added three demonstrated safeguards. Text diagnostics carry an
+`input_context_sha256` derived from the consumed record/artifact identities and
+held snapshot bytes; changed text cannot reuse an old diagnostic. Comparison
+components check the complete current inventory before using supplied population
+contexts; changed candidate positions or attempt states cannot hide behind equal
+sample IDs. Well-formed declared `assessed_at` and `current_until` values remain
+visible with scope and reviewer links, while malformed/private prose stays
+protected. Declared dates are not certification or a default validity period.
+
+These repairs operate on already loaded snapshots. They neither reopen files nor
+infer labels, invent outputs, enlarge sample budgets or force a common result for
+text-dependent P1 and text-independent P5. Their original failure reproductions,
+patches and passing regressions remain in the preceding Step 7 verification files.
+
+Step 8 rechecks the unchanged implementation and all 1,018 method identities,
+including complete M/V bindings, correction propagation, strict signs, fixed block
+replay, privacy, safe output publication and the supplied-file identities. No
+runtime/test/oracle repair is included. The matrix intentionally remains the
+verified Step 7 implementation snapshot; `PHASE_2_COMPLETION.md` owns the Step 8
+administrative handoff and its authorization. An unchanged stage number in a
+software journal does not assert that this final audit is a new implementation.
+
+The three source PDFs remain citation-only in the public project, with their
+original fingerprints and licenses. Software tests establish the tested record
+and calculation behavior. Actual independent annotation, executable-domain
+validation, model experiments and live/deployment evidence have not been supplied.
+No recursive-support estimator, model runner, hosted service or Phase 3 work is
+introduced. Local completion and the still-pending repository synchronization are
+reported separately in the final receipt.

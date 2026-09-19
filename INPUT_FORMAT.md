@@ -1,9 +1,9 @@
 # Input and Evidence Format
 
-Version: 0.4. Input schema: `0.1`. Record envelope: `0.1`. Evidence payload: `0.1`.
+Version: 0.5. Input schema: `0.1`. Record envelope: `0.1`. Evidence payload: `0.1`.
 
 This document describes the current passive input, evidence, inventory, metric and
-report interfaces through Phase 1 Step 7. Read it with `PHASE_1_PLAN.md`, the frozen
+report interfaces through Phase 2 Step 6. Read it with `PHASE_1_PLAN.md`, the frozen
 Phase 0 contracts, and `EVALUATION_CLOSURE_ADDENDUM.md`. Those contracts retain their
 approved bytes. Physical support extensions below encode already approved
 requirements; they do not certify an imported assertion or add a new estimator.
@@ -845,3 +845,16 @@ means that the applicable software/record-handling checks passed. All substantiv
 E duties remain unperformed, and Step 8 final audit/owner approval remains pending.
 Historical Step 2 through Step 6 deliveries and earlier failed executions remain
 part of the record. No old test identity or arithmetic oracle is removed.
+
+
+## 14. Phase 2 Step 6 current CLI and report integration
+
+The current executable includes the optional offline comparison workflow described
+in COMPARISON_FORMAT.md section 13. Earlier step-specific paragraphs above retain
+their historical scope. Supply analysis_config.extensions.comparison to request
+the schema-0.2 structdet_comparison_v1 report; omit it for the explicit schema-0.1
+M-only profile. validate checks records and replay shapes without numerical
+comparison. analyze writes the same three fixed output files, including the full
+used resampling indices inside run_manifest.json. Source bodies and private actor
+mappings remain withheld. No generation, execution, remote retrieval or independent
+scientific verification is added. Existing input and record schemas remain 0.1.
