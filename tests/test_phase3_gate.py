@@ -97,7 +97,9 @@ class MatrixTests(unittest.TestCase):
         self.assertIn('P3-L01:source_row_changed',h.validate_matrix(m))
 
     def test_empty_bindings_cannot_implement_requirement(self):
-        m=h.load_matrix();m['longitudinal'][0]['implementation_status']='implemented'
+        m=h.load_matrix()
+        self.assertEqual(h.validate_matrix(m), [])
+        m['longitudinal'][0].update(implementation_status='implemented', test_bindings=[])
         self.assertIn('P3-L01:empty_bindings',h.validate_matrix(m))
 
     def test_invalid_duplicate_and_nonlist_bindings_are_rejected(self):

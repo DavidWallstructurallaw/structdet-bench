@@ -1,6 +1,1 @@
-{
-  "schema_version": "0.1",
-  "phase": 3,
-  "entries": [],
-  "note": "No predecessor file, assertion, matrix, runtime, fixture, oracle or scientific contract was changed."
-}
+{"schema_version":"0.1","phase":3,"entries":[{"id":"P3S1-F01","authority":"PHASE_3_PLAN.md sections 9.2 and 9.4: Step 1 gate tests and bounded progression maintenance","path":"tests/test_phase3_gate.py","test_id":"tests.test_phase3_gate.MatrixTests.test_empty_bindings_cannot_implement_requirement","failure":"Test set implementation_status=implemented but inherited real P3-L01 bindings after successful synchronization, so its supposedly empty-binding input was no longer empty.","fix":"Construct the negative fixture by explicitly setting test_bindings=[]; preserve the validator and exact rejection assertion. Also verify the current matrix is initially valid.","before_sha256":"b0a86cca8785075effad640ed5437a5254b20a21d11414189a9a00d673fb2e43","after_sha256":"f94a70cc5a3f478f4d55bef05a01288572ee62d5cd84e818e7de7eb91fdfbf23","failure_log":"verification/receipt_transition_gate_tests.txt","patch":"verification/P3S1-F01.patch","test_identity_preserved":true,"scientific_contracts_changed":false}],"note":"P3S1-F01 repairs one new scaffold negative-test fixture after verified remote reconciliation. All 1,018 predecessor test identities, both old matrices, science and runtime sources remain unchanged."}

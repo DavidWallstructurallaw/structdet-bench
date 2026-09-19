@@ -1,5 +1,36 @@
 # StructDet-Bench
 
+## Current handoff: Phase 3 Step 1
+
+The exact 114-file Phase 2 final baseline is now available on
+`phase2-step7-sync` at `43278ae3b42ceb43859259a1dfc93513919c3903`.
+The user's upload is preserved in history. Its flattened directory entries were
+restored by original blob identity. The 133-file Phase 3 scaffold was restored on
+`main` at `d6cef064e129155bf18630a3a325cb8fd318d10b` without code changes.
+
+The separate Phase 3 harness checks the approved plan, all inherited M/V checks,
+original method identities, new L requirements and the baseline receipt. The
+current stage is Step 1 only; no longitudinal runtime has been implemented.
+Fresh run results and current publication state are recorded in
+`artifacts/phase3/verification_manifest.json` and the companion delivery archive.
+Historical pending-publication and failed-run records remain unchanged.
+
+```bash
+python -B -S tools/run_phase3_checks.py --scope current
+python -B -S tools/run_phase3_checks.py --scope phase3
+```
+
+The current-stage gate requires exact baseline reconciliation. The full Phase 3
+gate remains incomplete until the later authorized L implementation and audit.
+Neither gate performs live GitHub queries or establishes independent scientific
+validation. No model calls, candidate execution, hosted CI or package release is
+part of this handoff. Stop before Phase 3 Step 2.
+
+The following is the preserved Phase 2 handoff text. Its statements about remote
+synchronization describe that earlier delivery, superseded by the baseline
+reconciliation above; its software capabilities and restrictions remain applicable.
+
+
 An offline toolkit for task-relative structural measurement of recorded LLM outputs.
 
 ## Current delivery
