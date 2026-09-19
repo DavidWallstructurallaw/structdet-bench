@@ -17,10 +17,11 @@ from .comparison_records import (BLOCKS, ComparisonReview, CellBinding, Fact,
 from .contracts import CLASS_IDS, InputError, freeze, knowledge
 from .evidence import EvidenceIndex
 from .local_io import LoadedBundle
+from .inventory import build_inventory
 from .metrics import CORE_NAMES, cell_metrics
 from .populations import CellPopulations, PopulationCollection, Prefix, Ratio, prefix
 from .text_diagnostics import (SURFACE, STRUCTURAL, WITHIN, DiagnosticValue,
-                               TextDiagnostics, limits_from_record, method_from_record)
+                               TextDiagnostics, limits_from_record, method_from_record, text_input_fingerprint)
 
 P1_NAMES = ('surface_gain', 'structural_gain', 'p1_proxy_gain_contrast')
 VIEWS = ('classified_all', 'classified_valid')
@@ -257,10 +258,12 @@ def _from_metric(m):
     return number(m.metric_name, m.unit, val, status=m.result_status, reasons=m.reasons)
 
 
-def _text_context(diag, cell, method, limits) -> tuple[str, ...]:
+def _text_context(diag, cell, method, limits, bundle) -> tuple[str, ...]:
     if diag is None: return ('text_diagnostic_not_supplied',)
     if cell is None or diag.source_cell != cell or diag.population_sample_ids != cell.populations[diag.analysis_population].sample_ids:
         return ('text_population_or_revision_mismatch',)
+    if diag.input_context_sha256 != text_input_fingerprint(bundle, cell, diag.analysis_population):
+        return ('text_input_snapshot_mismatch',)
     if method is None or diag.method != method: return ('registered_text_method_mismatch',)
     if diag.limits != limits: return ('registered_text_limits_mismatch',)
     if diag.eligible_count is not None and (diag.eligible_count != len(diag.eligible_sample_ids)
@@ -520,7 +523,12 @@ def compare_study(bundle: LoadedBundle, populations: PopulationCollection,
         if key in diagnostic_map: raise InputError('duplicate_text_diagnostic')
         diagnostic_map[key]=d
     binding_map={(b.block_id,b.condition_id):b for b in review.bindings}
-    context_ok={cid:_context_matches(bundle,c,index) for cid,c in cells.items()}
+    # Recheck inventories against the current held records, including attempt
+    # history, planned slots, ordinals and extraction associations. A previously
+    # accepted population cannot certify a changed invocation/position history.
+    current_inventory = {c.cell_id: c for c in build_inventory(bundle).cells}
+    context_ok={cid: c.inventory == current_inventory.get(cid) and _context_matches(bundle,c,index)
+                for cid,c in cells.items()}
     metrics={cid:cell_metrics(c,min_empirical_frequency='0.10') for cid,c in cells.items()}
     results=[]; issues=[]
     for pair in review.pairs:
@@ -570,7 +578,7 @@ def compare_study(bundle: LoadedBundle, populations: PopulationCollection,
             gates.append(ratio_gate('quality_band',Ratio(gap.numerator,gap.denominator,'available') if gap is not None else Ratio(None,None,'unavailable'),Fraction(1,10),required=question=='P5',maximum=True))
             gates.append(_evidence_gate(review,(a,b),index,bindings))
             dg=[diagnostic_map.get((bd.cell_id,view)) for bd in bindings]
-            errs=[_text_context(d,c,method,limits) for d,c in zip(dg,(a,b))]
+            errs=[_text_context(d,c,method,limits,bundle) for d,c in zip(dg,(a,b))]
             for bd,error in zip(bindings,errs): issues.extend(bd.cell_id+':'+view+':'+e for e in error)
             if question=='P1':
                 for d,error,bd in zip(dg,errs,bindings):

@@ -493,3 +493,137 @@ def add_fixture_dependence(observations, supports, manifest):
             'unit':'paired_prompt_block','target':'fixed_wording_suite',
             'cross_block_shared_history':tagged(False),'condition_pairs':['B-A','C-A','C-B']}}))
     cfg['resampling']['dependence_assessment_ref']=tagged(record_ref('independence_assessment','paired-dependence'))
+
+
+# Step 6 fixture helpers are trusted test utilities; the runtime never imports them.
+ABC_WORDS = ('a b c','a b d','e f g','h i j','k l m','n o p','q r s','t u v')
+ABC_CLASSES = ('SORT-ADJ','SORT-ADJ','SORT-INS','SORT-SEL','SORT-MERGE','SORT-PIVOT','SORT-HEAP','SORT-COUNT')
+
+
+def materialize_abc(root: Path, variant='ABC-00'):
+    """Copy a pinned fixture, apply only a registered test variant, then rehash.
+
+    No model data are collected. Identity is per stipulated occurrence, while
+    repeated exact text always has one current deterministic mechanism label.
+    """
+    import copy, shutil
+    from tests.helpers import tagged, record_ref, support_record
+    catalogue=read_json(ROOT/'tests/fixtures/comparison_variants.json')
+    choices={r['id']:r for r in catalogue['variants']}
+    if variant not in choices: raise ValueError('unregistered_abc_variant')
+    source=ROOT/'examples/hero_abc'
+    for name,sha in catalogue['base_sha256'].items():
+        if sha256_bytes((source/name).read_bytes())!=sha: raise ValueError('abc_fixture_hash_mismatch')
+    if root.exists(): raise ValueError('fixture_destination_exists')
+    shutil.copytree(source,root)
+    m=read_json(root/'bundle.json')
+    obs=[json.loads(x) for x in (root/'records.jsonl').read_text().splitlines()]
+    sup=[json.loads(x) for x in (root/'evidence.jsonl').read_text().splitlines()]
+    cfg=m['analysis_config'];cmp=cfg['extensions']['comparison']
+    byid={x['record_id']:x for x in obs};proof={x['record_id']:x for x in sup}
+    def set_text(cid,indices):
+        for i,n in enumerate(indices,1):
+            sid=f'{cid}-s{i}';a=byid[f'{cid}-a{i}'];sample=byid[sid]
+            artifact=byid['text-'+sid];body=(root/f'text_{n:02}.txt').read_bytes()
+            artifact['content_ref']=tagged({'kind':'local','path':f'text_{n:02}.txt'})
+            artifact['expected_sha256']=tagged(sha256_bytes(body));sample['output_content_hash']=tagged(sha256_bytes(body))
+            a['structural_class_id']=ABC_CLASSES[n-1]
+            proof['e-'+a['record_id']]['payload']['assertion']=tagged(ABC_CLASSES[n-1])
+    blocks=[f'P{i:02}' for i in range(1,7)]
+    if variant=='ABC-CONTRARY':
+        for b in blocks:set_text(b+'-A',[1,2]*10);set_text(b+'-B',[1]*20)
+    elif variant=='ABC-MIXED':
+        for b in blocks:set_text(b+'-B',[1]*7+[3]*7+[4]*6)
+    elif variant=='ABC-HETEROGENEOUS':
+        for b in blocks[:2]:set_text(b+'-A',[1,2]*10);set_text(b+'-B',[1]*20)
+    elif variant=='ABC-NO-TEXT':
+        for row in obs:
+            if row['record_type']=='realization':row['output_ref']=tagged(state='unavailable',reason='Stipulated unavailable proxy text')
+    elif variant=='ABC-NO-B-CONTROL':
+        for b in blocks:
+            c=proof['study-'+b+'-B']['payload']['extensions']['study_binding']['controls']['temperature']
+            c['actual']=tagged(state='unknown');c['enforcement']='hidden'
+            proof['controls-'+b+'-B']['payload']['extensions']['recorded_controls']['temperature']={k:c[k] for k in ('requested','actual','enforcement')}
+    elif variant=='ABC-MISSING-BLOCK':
+        obs[:]=[r for r in obs if not(r['record_type']=='realization' and r['analysis_cell_id'].startswith('P06'))]
+        for sel in cfg['selection']:
+            if sel['analysis_cell_id'].startswith('P06'):
+                sel['selected_sample_ids']=tagged([]);sel['sample_order']=tagged([])
+    elif variant=='ABC-CORRECTED':
+        for b in blocks:
+            for i in range(11,21):
+                old=byid[f'{b}-C-a{i}'];new=copy.deepcopy(old);new.update(record_id=old['record_id']+'-r2',assignment_id=old['record_id']+'-r2',assignment_version='0.2',structural_class_id='SORT-ADJ',supersedes_assignment_id=tagged(old['record_id']))
+                eid='e-'+new['record_id'];new['evidence_refs']=[record_ref('evidence',eid)]
+                e=copy.deepcopy(proof['e-'+old['record_id']]);e['record_id']=eid;e['payload'].update(target_ref=record_ref('assignment',new['record_id']),assertion=tagged('SORT-ADJ'))
+                obs.append(new);sup.append(e)
+                pin=next(p for p in cfg['assignment_pins'] if p['sample_id']==old['sample_id']);pin.update(assignment_id=new['record_id'],assignment_version='0.2')
+        cmp['revision'].update(prior_comparison_ids=['prior-fixture-comparison'],prior_run_ids=['prior-fixture-run'],reason=tagged('Stipulated correction: all current text_03 occurrences reclassified; no new observations.'),changes=['membership_revision'])
+    elif variant=='ABC-QUALITY':
+        for b in blocks:
+            set_text(b+'-C',[3]*5+[4]*5+[5]*5+[6]*5)
+            for i in range(16,21):
+                row=byid[f'{b}-C-v{i}'];row['validity_status']='invalid';proof['e-'+row['record_id']]['payload']['assertion']=tagged('invalid')
+    elif variant=='ABC-INDEPENDENCE-WITHDRAWN':
+        sup.append(support_record('correction','withdrawn-independence',effect='independence',action='withdraw',stage='applied',target_refs=[record_ref('frame','frame1')],reason=tagged('Stipulated evidence withdrawal'),evidence_refs=[record_ref('evidence','resampling-assumption')],reviewer_refs=[record_ref('role','binding-reviewer')]))
+    elif variant=='ABC-TEXT-CHANGED':
+        (root/'text_02.txt').write_bytes(b'a b c')
+        for row in obs:
+            if row['record_type']=='artifact' and row['content_ref']['value'].get('path')=='text_02.txt':row['expected_sha256']=tagged(sha256_bytes(b'a b c'))
+            if row['record_type']=='realization' and row['analysis_cell_id'].endswith('-B') and int(row['sample_id'].rsplit('s',1)[1])%2==0:row['output_content_hash']=tagged(sha256_bytes(b'a b c'))
+    elif variant=='ABC-P5-ONLY':cmp['questions']=['P5']
+    elif variant!='ABC-00':raise ValueError('unsupported_registered_variant')
+    # The original source and previous variant are never mutated.
+    if variant!='ABC-00':
+        m['extensions']['fixture_id']=variant
+        write_abc(root,obs,sup,m)
+    return root/'bundle.json',choices[variant]
+
+
+def write_abc(root, obs, sup, m):
+    """Trusted test serialization; no implicit modification by runtime."""
+    from tests.helpers import tagged
+    for name,records in (('records.jsonl',obs),('evidence.jsonl',sup)):
+        data=b''.join(canonical_bytes(row) for row in records);(root/name).write_bytes(data)
+    for f in m['record_files']:f['expected_sha256']=tagged(sha256_bytes((root/f['path']).read_bytes()))
+    (root/'bundle.json').write_text(json.dumps(m,indent=2,sort_keys=True)+'\n')
+    return root/'bundle.json'
+
+
+def independent_abc_expected(variant='ABC-00'):
+    """Independent finite enumeration using hand-specified three-word sets.
+
+    Does not import production tokenization, metrics, comparisons, quantiles or
+    outcome functions. Random reference uses getrandbits rejection, not randrange.
+    """
+    from fractions import Fraction as F
+    from itertools import combinations
+    import random
+    indices=[];rng=random.Random(20260917)
+    for _ in range(2000):
+        row=[]
+        while len(row)<6:
+            draw=rng.getrandbits(3)
+            if draw<6:row.append(draw)
+        indices.append(row)
+    expected={};p1=[]
+    sets=[{('<B>',*s.split()[:2]),tuple(s.split()),(*s.split()[1:],'<E>')} for s in ABC_WORDS]
+    for b in range(1,7):
+        a=[1]*20;bb=[1,2]*10;c=[1]*10+[3]*10
+        if variant=='ABC-CONTRARY' or (variant=='ABC-HETEROGENEOUS' and b<=2):a,bb=bb,a
+        if variant=='ABC-MIXED':bb=[1]*7+[3]*7+[4]*6
+        values={}
+        for cond,seq in [('A',a),('B',bb),('C',c)]:
+            pairs=list(combinations(seq,2));n=len(pairs)
+            ds=[F(len(sets[x-1]|sets[y-1])-len(sets[x-1]&sets[y-1]),len(sets[x-1]|sets[y-1])) for x,y in pairs]
+            q=F(sum(ABC_CLASSES[x-1]!=ABC_CLASSES[y-1] for x,y in pairs),n)
+            within=[d for d,(x,y) in zip(ds,pairs) if ABC_CLASSES[x-1]==ABC_CLASSES[y-1]]
+            values[cond]={'L':sum(ds,F())/n,'Q':q,'within':sum(within,F())/len(within),'support':len(set(ABC_CLASSES[x-1] for x in seq)), 'pairs':n}
+            expected[f'P{b:02}-{cond}']=values[cond]
+        p1.append(values['B']['L']-values['A']['L']-(values['B']['Q']-values['A']['Q']))
+    sampled=sorted(sum((p1[i] for i in row),F())/6 for row in indices)
+    def quant(q):
+        rank=q*1999;i=rank.numerator//rank.denominator;t=rank-i
+        return sampled[i]+t*(sampled[i+1]-sampled[i])
+    return {'cells':expected,'p1_mean':sum(p1,F())/6,'p1_lower':quant(F(1,40)),'p1_upper':quant(F(39,40)),
+            'indices_sha256':sha256_bytes(canonical_bytes(indices)), 'data_role':'fixture',
+            'oracle_method':'hand_specified_sets_and_independent_fraction_enumeration'}

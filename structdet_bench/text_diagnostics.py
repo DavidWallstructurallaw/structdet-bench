@@ -298,6 +298,7 @@ class TextDiagnostics:
     independent_draw_count: None = None
     independent_validation_performed: bool = False
     qualification: str = "Descriptive proxy; zero distance does not establish structural equivalence."
+    input_context_sha256: str | None = None
 
 
 def _known(value: Any) -> Any:
@@ -317,6 +318,45 @@ def _records(bundle: LoadedBundle) -> dict[tuple[str, str], list[Any]]:
 def _one(rows: dict, key: tuple[str, str]) -> Any:
     found = rows.get(key, ())
     return found[0] if len(found) == 1 else None
+
+
+def text_input_fingerprint(bundle: LoadedBundle, cell: CellPopulations, view: str) -> str:
+    """Pin just this view's consumed records and original artifact snapshots.
+
+    This includes missing/ambiguous references, so becoming readable also changes
+    the context. Unrelated cells/evidence do not invalidate a reusable diagnostic.
+    Bytes are hashed from the held snapshot; this function performs no new I/O,
+    tokenization, label admission, or choice of a replacement output.
+    """
+    from .comparison_records import configuration_fingerprint
+    if not isinstance(bundle, LoadedBundle) or not isinstance(cell, CellPopulations):
+        raise InputError("invalid_text_diagnostic_component")
+    if view not in cell.populations:
+        raise InputError("invalid_text_population")
+    rows = _records(bundle)
+    samples = []
+    artifact_keys = set()
+    for sid in cell.populations[view].sample_ids:
+        entries = rows.get(("realization", sid), ())
+        samples.append((sid, [r.data if r is not None else None for r in entries]))
+        r = _one(rows, ("realization", sid))
+        if r is not None:
+            ref = _known(r.data["output_ref"])
+            if isinstance(ref, Mapping) and "record_type" in ref and "record_id" in ref:
+                artifact_keys.add((ref["record_type"], ref["record_id"]))
+    artifacts = []
+    for kind, ident in sorted(artifact_keys):
+        entries = rows.get((kind, ident), ())
+        inspections = [a for a in bundle.artifacts if a.record_key == kind + ":" + ident]
+        snapshots = []
+        for a in inspections:
+            snap = bundle.snapshots.get(a.snapshot_path)
+            snapshots.append(None if snap is None else
+                (snap.path, snap.sha256, snap.size_bytes, _hash(snap.content), len(snap.content)))
+        artifacts.append((kind, ident, [r.data if r is not None else None for r in entries],
+                          [vars(a) for a in inspections], snapshots))
+    return configuration_fingerprint({"version": "text_input_context_v1", "view": view,
+                                      "samples": samples, "artifacts": artifacts})
 
 
 def _sample_text(bundle, rows, cell, sid, decision, method, limits, cache):
@@ -510,7 +550,8 @@ def diagnose_population(bundle: LoadedBundle, cell: CellPopulations, view: str,
         "visits_this_diagnostic": work.visits-start_visits, "enumerated_pairs": enumerated,
         "pair_table_complete": len(pair_rows) == p if p is not None else False,
         "unique_snapshot_tokenizations": len(cache),
-        "text_sci_status": "available" if sci is not None else "undefined" if m == 0 else "unavailable"}), cell)
+        "text_sci_status": "available" if sci is not None else "undefined" if m == 0 else "unavailable"}), cell,
+        input_context_sha256=text_input_fingerprint(bundle, cell, view))
 
 
 def diagnose_cells(bundle: LoadedBundle, cells: tuple[CellPopulations, ...], method: TextMethod,

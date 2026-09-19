@@ -96,6 +96,8 @@ def assess_gate(matrix: dict[str, Any], discovered: list[str], records: list[dic
         "phase2_step": step, "harness_checks_passed": harness_passed,
         "phase1_m_complete": m_ok, "phase2_v_complete": final_v_complete and not remote_errors,
         "repository_delivery_complete": not remote_errors,
+        "repository_delivery_scope": "historical_phase1_baseline_only",
+        "current_implementation_publication": "separate_readback_receipt_required",
         "reasons": sorted(set(reasons)), "discovered_count": len(discovered),
         "outcome_counts": dict(sorted(Counter(row["outcome"] for row in records).items())),
         "missing_or_nonpassing_predecessor_tests": missing_prior,
@@ -207,7 +209,7 @@ def main(argv: list[str] | None = None) -> int:
         summary = (f"\nRequested Phase 2 scope: {args.scope}\n"
                    f"Harness checks passed: {result['harness_checks_passed']}\n"
                    f"Predecessor M gate passed: {result['phase1_m_complete']}\n"
-                   f"Repository delivery complete: {result['repository_delivery_complete']}\n"
+                   f"Historical Phase 1 baseline delivery complete: {result['repository_delivery_complete']}\n"
                    f"Full V complete: {result['phase2_v_complete']}\n"
                    f"Unimplemented V obligations: {len(result['unresolved_v_ids'])}\n"
                    f"Gate reasons: {', '.join(result['reasons']) or 'none'}\nRunner exit code: {exit_code}\n")

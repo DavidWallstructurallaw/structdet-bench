@@ -180,7 +180,13 @@ class Step5MatrixTests(unittest.TestCase):
         m=read_matrix();vt={x['id']:x for x in m['vt_obligations']}
         self.assertEqual(vt['VT-39']['implementation_status'],'implemented')
         for i in ('VT-40','VT-41','VT-42','VT-43','VT-44','VT-45','VT-50'):
-            self.assertEqual(vt[i]['implementation_status'],'partial')
+            if m['delivery']['step'] < 7:
+                self.assertEqual(vt[i]['implementation_status'],'partial')
+            else:
+                self.assertEqual(m['delivery']['step7_audit']['pre_audit_v_states'][i],'partial')
+                self.assertEqual(vt[i]['implementation_status'],'implemented')
+                self.assertTrue(vt[i]['test_bindings'])
+        self.assertEqual(len([x for x in m['delivery']['history'] if x['step']==5]),1)
         self.assertEqual((ROOT/'structdet_bench/comparison_pipeline.py').exists(),m['delivery']['step']>=6)
     def test_scope_keeps_real_evidence_unperformed(self):
         m=read_matrix();self.assertEqual(m['evidence_status'],'not_supplied');self.assertEqual(m['deferred_status'],'deferred')

@@ -94,15 +94,21 @@ def diagnostic_records(diagnostics: Any) -> list[dict[str, Any]]:
 
 def _check_tree(report: Any) -> dict[str, Any]:
     obj = plain(report)
-    if (not isinstance(obj, dict) or obj.get("report_schema_version") != REPORT_VERSION
+    if (not isinstance(obj, dict) or obj.get("report_schema_version") not in {REPORT_VERSION, "0.2"}
             or not isinstance(obj.get("sections"), list)
             or [s.get("title") for s in obj["sections"]] != list(SECTION_TITLES)):
         raise InputError("invalid_report_structure")
+    if obj["report_schema_version"] == "0.2" and obj.get("report_profile") != "structdet_comparison_v1":
+        raise InputError("invalid_comparison_report_profile")
     return obj
 
 
 def render_json(report: Any) -> bytes:
     obj = _check_tree(report)
+    if obj['report_schema_version'] == '0.2':
+        # Complete machine-readable tree, with shared operand/context records.
+        # Compact encoding avoids multiplying the size of large paired studies.
+        return canonical_bytes(obj)
     return (json.dumps(obj, ensure_ascii=True, sort_keys=True, indent=2,
                        allow_nan=False) + "\n").encode("utf-8")
 
@@ -124,13 +130,13 @@ def render_markdown(report: Any) -> bytes:
     lines += [f"| {_cell(k)} | {_cell(v)} |" for k, v in sorted(meta.items())]
     for section in obj["sections"]:
         lines += ["", f"## {section['number']}. {section['title']}", ""]
-        for key, value in sorted(section["content"].items(), key=lambda kv: (kv[0] != "scope", kv[0])):
+        for key, value in sorted(section["content"].items(), key=lambda kv: ({"scope":0,"primary_results":1,"predictions":2,"sensitivity":3,"equal_block_means":4}.get(kv[0],5), kv[0])):
             lines += ["### " + html.escape(key).replace("_", " "), ""]
             if isinstance(value, list) and value and all(isinstance(x, dict) for x in value):
                 columns = sorted({k for row in value for k in row})
                 short = columns
                 if len(columns) > 8:
-                    priority = ("analysis_cell_id", "analysis_population", "metric_name", "sample_id", "axis", "k", "value", "unit", "result_status", "status", "reasons", "population_size")
+                    priority = ("question", "condition_pair", "view", "outcome", "block_id", "analysis_cell_id", "analysis_population", "metric_name", "sample_id", "axis", "k", "value", "unit", "result_status", "status", "reasons", "population_size")
                     short = [k for k in priority if k in columns][:8]
                     if not short:
                         short = columns[:5]

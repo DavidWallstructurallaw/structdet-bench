@@ -26,6 +26,33 @@ from .reporting import (REPORT_VERSION, SECTION_TITLES, canonical_bytes, diagnos
 # Missing linked evidence is an evidential limitation. Invalid encodings, duplicate
 # identities, version conflicts, resource failures and malformed records remain
 # processing failures even when supported subpopulations can still be reported.
+def _declared_date(value):
+    """Disclose a supplied ISO date/time without inferring current validity.
+
+    Other prose stays protected; the original knowledge state and byte identity
+    are retained. This is a display projection, never a new evidence admission,
+    automatic expiry policy, or replacement of an absent review date.
+    """
+    from datetime import date
+    import re
+    result = protected(value)
+    raw = plain(value)
+    if isinstance(raw, dict) and raw.get("state") == "known":
+        v = raw.get("value")
+        if isinstance(v, str):
+            try:
+                if re.fullmatch(r"[0-9]{4}-[0-9]{2}-[0-9]{2}", v):
+                    date.fromisoformat(v)
+                elif re.fullmatch(r"[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(?:\.[0-9]{1,6})?(?:Z|[+-][0-9]{2}:[0-9]{2})", v):
+                    datetime.fromisoformat(v)
+                else:
+                    return {**result, "date_format": "unrecognized_declared_value"}
+            except ValueError:
+                return {**result, "date_format": "invalid_declared_date"}
+            result.update(value=v, disclosure="typed_date_declared_not_certified")
+    return result
+
+
 EVIDENTIAL_DIAGNOSTICS = frozenset({"missing_reference", "invalid_reference_target"})
 V_FIELDS = ("surface_lexical_trigram_distance", "within_class_realization_diversity_proxy",
             "structural_pair_non_equivalence", "p1_proxy_gain_contrast",
@@ -117,7 +144,9 @@ def _software() -> dict[str, Any]:
     root = Path(__file__).parent
     names = ("__init__.py", "__main__.py", "cli.py", "contracts.py", "records.py",
              "local_io.py", "evidence.py", "inventory.py", "populations.py",
-             "metrics.py", "pipeline.py", "reporting.py")
+             "metrics.py", "pipeline.py", "reporting.py", "comparison_records.py",
+             "text_diagnostics.py", "comparisons.py", "uncertainty.py", "predictions.py",
+             "comparison_pipeline.py")
     hashes = {n: hashlib.sha256((root / n).read_bytes()).hexdigest() for n in names}
     return {"version": __version__, "implementation_sha256": digest(hashes), "files": hashes}
 
@@ -170,7 +199,10 @@ def validate_bundle(path: str | Path, *, limits: ReadLimits | None = None) -> tu
     _, extra = _mode(bundle)
     code, failures = _processing(bundle, review, extra)
     inventory = build_inventory(bundle)
-    return {"validation_schema_version": "0.1", "exit_code": code,
+    from .comparison_pipeline import comparison_validation
+    comparison, comparison_errors = comparison_validation(bundle)
+    code, failures = _processing(bundle, review, extra + comparison_errors)
+    result = {"validation_schema_version": "0.1", "exit_code": code,
             "validation_scope": "record_consistency_only", "input_refs": _input_refs(bundle),
             "contract_failures": failures, "diagnostics": diagnostic_records(bundle.diagnostics),
             "input_acquisition_complete": bundle.acquisition_complete,
@@ -179,7 +211,11 @@ def validate_bundle(path: str | Path, *, limits: ReadLimits | None = None) -> tu
             "evidence_status": "supplied_record_checks_only",
             "support_checks": [{"record_id": c.record_id, "status": c.status,
                                 "reasons": c.reasons, "mock": c.mock} for c in review.support_checks],
-            "independent_validation_performed": False}, code
+            "independent_validation_performed": False}
+    if comparison is not None:
+        result["comparison"] = comparison
+        result["validation_profile"] = "structdet_comparison_records_v1"
+    return result, code
 
 
 def _unimplemented(name: str, scope: str) -> dict[str, Any]:
@@ -345,8 +381,11 @@ def analyze_bundle(path: str | Path, *, limits: ReadLimits | None = None,
         claim_rows.append({"record_id": check.record_id, "status": check.status, "reasons": check.reasons,
             "declared_disposition": p["declared_disposition"] if p else None, "mock": check.mock,
             "requirement_record_outcomes": {k: outcomes.get(k, "unresolved") for k in INTEGRITY_CONDITIONS},
-            "current_until": protected(p["current_until"]) if p else {"state": "unknown"},
-            "assessed_at": protected(p["assessed_at"]) if p else {"state": "unknown"},
+            "current_until": _declared_date(p["current_until"]) if p else {"state": "unknown"},
+            "assessed_at": _declared_date(p["assessed_at"]) if p else {"state": "unknown"},
+            "scope_refs": p["scope_refs"] if p else (),
+            "reviewer_refs": p["reviewer_refs"] if p else (),
+            "reconsideration_triggers": [protected(x) for x in p["reconsideration_triggers"]] if p else [],
             "substantive_claim": "not_certified_by_software"})
     integrity_states = [{"condition": name, "outcome": "unresolved",
                          "reason": "no_substantive_independent_validation_performed_by_toolkit",
@@ -409,7 +448,9 @@ def analyze_bundle(path: str | Path, *, limits: ReadLimits | None = None,
              "evaluator_identity": "record_ids_only_private_mappings_omitted", "class_and_tail_outcomes": "sections_4_and_5",
              "horizon_recovery_override": "not_evaluated", "live_field_evidence": "not_established_by_toolkit",
              "correction_path": "new_pinned_input_and_new_output_directory_prior_results_preserved",
-             "current_until": {"state": "unknown", "reason": "No toolkit-established expiry; supplied declarations remain scoped."}},
+             "current_until": {"state": "unknown", "reason": "No toolkit-established expiry; supplied declarations remain scoped.",
+                 "scoped_declarations": [{"record_id": c["record_id"], "scope_refs": c["scope_refs"],
+                     "current_until": c["current_until"]} for c in claim_rows]}},
          "deferred": [_unimplemented(n, "D") for n in D_FIELDS],
          "release_restrictions": ["No empirical validation or deployment certification.", "No package publication or hosted CI performed by this command.",
                                   "Software acceptance is recorded separately from this analysis; final Phase 1 audit is not a result of this command."],
@@ -417,7 +458,25 @@ def analyze_bundle(path: str | Path, *, limits: ReadLimits | None = None,
                        "unrestricted_evidence_prose": "hashed", "source_bytes_modified": False,
                        "limitation": "Hashes and supplied record IDs permit local audit; a public report alone cannot reproduce withheld evidence."}},
     ]
-    report = {"report_schema_version": REPORT_VERSION, "run_id": rid,
+    from .comparison_pipeline import analyze_comparison, PROFILE, LEGACY_PROFILE, VERSION
+    attachment = analyze_comparison(bundle, collection)
+    if attachment is not None:
+        code, failures = _processing(bundle, review, extra + attachment.failures)
+        sections[0]["processing"].update(exit_code=code, contract_failures=failures)
+        sections[0]["scope"]["comparison_requested"] = True
+        sections[5] = plain(attachment.sections["comparison"])
+        sections[6] = plain(attachment.sections["text"])
+        sections[7]["comparison_integrity"] = plain(attachment.sections["integrity"])
+        for row in sections[7]["dependencies"]:
+            row["v_dependents"] = ["text_subset", "pair_diagnostics", "block_contrasts", "equal_block_means", "sensitivity", "P1_P5_outcomes"]
+        for row in sections[7]["corrections"]:
+            row["v_dependents"] = "recomputed_from_current_pinned_input"
+    else:
+        sections[5]["claim_boundary"] = "M-only profile: No P1/P5 support, contradiction or interval is computed because comparison was not requested. Legacy unavailable records describe this profile, not the executable's comparison capability."
+        sections[6]["source_text_status"] = "M-only profile: no text diagnostic requested. HF-00 contains no program bodies."
+    report = {"report_schema_version": VERSION if attachment is not None else REPORT_VERSION,
+              "report_profile": PROFILE if attachment is not None else LEGACY_PROFILE,
+              "capabilities": {"measurement": "implemented", "comparison": "implemented_optional", "empirical_validation": "not_performed"}, "run_id": rid,
               "study_id": manifest.data["study_id"] if manifest else None,
               "bundle_id": manifest.data["bundle_id"] if manifest else None,
               "input_schema_version": manifest.data["input_schema_version"] if manifest else None,
@@ -447,6 +506,11 @@ def analyze_bundle(path: str | Path, *, limits: ReadLimits | None = None,
         "source_pins": dict(SOURCE_PINS), "ec_001_sha256": ADDENDUM_PIN,
         "independent_validation_performed": False, "model_calls": 0, "candidate_programs_executed": 0,
         "output_publication": "complete_directory_atomic_noreplace"}
+    run_manifest["report_profile"] = report["report_profile"]
+    if attachment is not None:
+        run_manifest["comparison_replay"] = plain(attachment.replay_collection)
+        run_manifest["comparison_methods"] = plain(attachment.methods)
+        run_manifest["comparison_replay_sha256"] = digest(attachment.replay_collection)
     return Analysis(freeze(report), freeze(run_manifest), out_json, out_md, canonical_bytes(run_manifest), code)
 
 

@@ -134,8 +134,11 @@ class GateTests(unittest.TestCase):
         def incomplete(m, ids, records, previous, remote):
             m['vt_obligations'][-1].update(implementation_status='not_implemented',test_bindings=[])
         current = gate(edit=incomplete); full = gate("phase2", incomplete)
-        self.assertTrue(current["requested_gate_passed"])
-        self.assertTrue(current["harness_checks_passed"])
+        # At the integration step every V duty is due, so the deliberate gap
+        # blocks both gates. Before Step 7 it blocks only whole-phase acceptance.
+        before_integration = h.read_matrix()["delivery"]["step"] < 7
+        self.assertEqual(current["requested_gate_passed"], before_integration)
+        self.assertEqual(current["harness_checks_passed"], before_integration)
         self.assertFalse(current["phase2_v_complete"])
         self.assertFalse(full["requested_gate_passed"])
         expected=[r['id'] for r in h.read_matrix()['vt_obligations'] if r['implementation_status']!='implemented']
@@ -354,3 +357,68 @@ class RecorderTests(unittest.TestCase):
         for p in (h.ROOT / "structdet_bench").glob("*.py"):
             self.assertNotIn("phase2_helpers", p.read_text())
             self.assertNotIn("run_phase2_checks", p.read_text())
+
+
+class Step7IntegratedGateAudit(unittest.TestCase):
+    def test_all_26_V_families_require_their_actual_binding_records(self):
+        for id_ in h.V_IDS:
+            def missing(m,ids,records,previous,remote):
+                row=next(x for x in m['vt_obligations'] if x['id']==id_)
+                row.update(implementation_status='partial',test_bindings=[])
+            with self.subTest(requirement=id_):
+                out=gate('phase2',missing)
+                self.assertFalse(out['requested_gate_passed']);self.assertIn(id_,out['unresolved_v_ids'])
+    def test_each_trace_report_EC_requirement_is_mandatory(self):
+        m=h.read_matrix()
+        for group in ('trace_requirements','report_groups','ec_requirements'):
+            for id_ in [x['id'] for x in m[group]]:
+                def missing(mat,ids,rows,previous,remote):
+                    entry=next(x for x in mat[group] if x['id']==id_);entry['test_bindings']=[]
+                with self.subTest(group=group,id=id_):
+                    out=gate('phase2',missing)
+                    self.assertFalse(out['requested_gate_passed']);self.assertIn(id_,out['unresolved_full_ids'])
+    def test_complete_synthetic_gate_is_software_only_and_not_owner_acceptance(self):
+        out=gate('phase2')
+        self.assertTrue(out['requested_gate_passed']);self.assertTrue(out['phase2_v_complete']);self.assertTrue(out['phase1_m_complete'])
+        self.assertEqual(out['unresolved_full_ids'],[])
+        self.assertFalse(out['empirical_validation_performed'])
+        self.assertEqual(out['final_owner_acceptance'],'not_established_by_software_tests')
+    def test_current_publication_is_not_certified_by_historical_baseline(self):
+        out=gate('phase2')
+        self.assertTrue(out['repository_delivery_complete'])
+        self.assertEqual(out['repository_delivery_scope'],'historical_phase1_baseline_only')
+        self.assertEqual(out['current_implementation_publication'],'separate_readback_receipt_required')
+    def test_964_predecessor_method_ids_and_step6_history_are_retained(self):
+        import ast
+        m=h.read_matrix();audit=m['delivery']['step7_audit']
+        actual=set()
+        for p in (h.ROOT/'tests').glob('test_*.py'):
+            for cls in ast.parse(p.read_text()).body:
+                if isinstance(cls,ast.ClassDef):
+                    actual.update(f'tests.{p.stem}.{cls.name}.{n.name}' for n in cls.body if isinstance(n,ast.FunctionDef) and n.name.startswith('test_'))
+        old=audit['predecessor_test_ids']
+        self.assertEqual(len(old),964);self.assertEqual(len(old),len(set(old)));self.assertTrue(set(old)<=actual)
+        self.assertEqual(len([x for x in m['delivery']['history'] if x['step']==6]),1)
+        self.assertEqual(m['delivery']['step'],7)
+    def test_step7_bindings_equal_all_actual_new_audit_methods(self):
+        import ast
+        m=h.read_matrix();actual=set()
+        for name in ('test_phase2_pipeline','test_phase2_reporting','test_phase2_security','test_phase2_gate'):
+            for cls in ast.parse((h.ROOT/'tests'/f'{name}.py').read_text()).body:
+                if isinstance(cls,ast.ClassDef) and cls.name.startswith('Step7'):
+                    actual.update(f'tests.{name}.{cls.name}.{n.name}' for n in cls.body if isinstance(n,ast.FunctionDef) and n.name.startswith('test_'))
+        self.assertEqual(actual,set(m['stage_bindings']['7']['test_bindings']))
+        self.assertGreater(len(actual),40)
+    def test_all_formal_requirements_have_specific_non_gate_behavior_tests(self):
+        m=h.read_matrix()
+        for group in ('vt_obligations','trace_requirements','report_groups','ec_requirements'):
+            for row in m[group]:
+                self.assertEqual(row['implementation_status'],'implemented')
+                self.assertEqual(row['evidence_status'],'not_supplied')
+                self.assertTrue(row['reason'].strip());self.assertTrue(row['test_bindings'])
+                self.assertTrue(any('test_phase2_gate.' not in s and 'test_scaffold.' not in s for s in row['test_bindings']),row['id'])
+    def test_missing_integrated_engineering_binding_blocks_stage7(self):
+        for id_ in ('P2-ENG-07','P2-ENG-08'):
+            def missing(m,ids,rows,p,r):
+                x=next(x for x in m['engineering_requirements'] if x['id']==id_);x['test_bindings']=[]
+            out=gate('phase2',missing);self.assertFalse(out['requested_gate_passed']);self.assertIn(id_,out['unresolved_full_ids'])

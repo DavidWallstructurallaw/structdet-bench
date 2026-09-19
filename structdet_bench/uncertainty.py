@@ -339,8 +339,9 @@ def check_dependence(bundle: LoadedBundle, comparisons: Comparisons,
                            tuple(ids),tuple(sorted(set(errors))),tuple(freeze(r) for r in refs),fixture)
 
 
-def _imported_replays(bundle, comparisons):
-    value=knowledge(comparisons.review.configuration['resampling']['replay_ref'])
+def read_replays(bundle, configuration):
+    """Passive replay transport: collection or the prior three-file run manifest."""
+    value=knowledge(configuration['resampling']['replay_ref'])
     if value.state!='known': raise InputError('replay_choice_unresolved')
     if value.value is None: return None
     ref=value.value;key=ref['record_type']+':'+ref['record_id']
@@ -349,6 +350,13 @@ def _imported_replays(bundle, comparisons):
     snap=bundle.snapshots.get(artifacts[0].snapshot_path)
     if snap is None: raise InputError('replay_snapshot_missing')
     raw=parse_json_bytes(snap.content)
+    if isinstance(raw, Mapping) and 'run_manifest_version' in raw:
+        if (raw.get('run_manifest_version') != '0.1'
+                or raw.get('report_profile') != 'structdet_comparison_v1'
+                or not isinstance(raw.get('comparison_replay'), Mapping)
+                or raw.get('comparison_replay_sha256') != _hash(raw['comparison_replay'])):
+            raise InputError('invalid_run_manifest_replay_envelope')
+        raw = raw['comparison_replay']
     if (not isinstance(raw,Mapping) or set(raw)!={'schema_version','replays'} or raw['schema_version']!='0.1'
             or not isinstance(raw['replays'],(list,tuple)) or not 1<=len(raw['replays'])<=12):
         raise InputError('invalid_replay_collection')
@@ -359,6 +367,10 @@ def _imported_replays(bundle, comparisons):
         if ids in result: raise InputError('duplicate_replay_block_set')
         result[ids]=validate_replay(item,ids)
     return result
+
+
+def _imported_replays(bundle, comparisons):
+    return read_replays(bundle, comparisons.review.configuration)
 
 
 def resample_study(bundle: LoadedBundle, comparisons: Comparisons) -> StudySensitivity:

@@ -18,7 +18,7 @@ class Parser(argparse.ArgumentParser):
 def build_parser() -> argparse.ArgumentParser:
     parser = Parser(prog="python -m structdet_bench", allow_abbrev=False,
         description="StructDet-Bench: offline record validation and structural measurement.",
-        epilog="Phase 1 Step 6. No model calls, code execution or independent scientific certification.")
+        epilog="Optional Phase 2 comparisons use the declared bundle extension. No model calls, code execution or independent scientific certification.")
     parser.add_argument("--version", action="version", version=f"StructDet-Bench {__version__}")
     commands = parser.add_subparsers(dest="command", parser_class=Parser)
     validate = commands.add_parser("validate", allow_abbrev=False, help="Check local records without writing reports")
