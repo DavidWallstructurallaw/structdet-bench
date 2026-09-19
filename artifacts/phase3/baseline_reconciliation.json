@@ -1,0 +1,72 @@
+{
+  "schema_version": "0.1",
+  "subject": "phase2_final_114_v1",
+  "repository": "DavidWallstructurallaw/structdet-bench",
+  "archive_sha256": "c641744502bdf18bed73758e1e14d923179289fbc2a9283c71b9ed94e8a903ac",
+  "inventory_sha256": "d51a7af01df864c5e2a9c3b812d084a43c75711a9e0ea739b10b21b9b090eba5",
+  "status": "pending",
+  "fixture_only": false,
+  "branch": "phase2-step7-sync",
+  "readback_complete": false,
+  "verified_files": [],
+  "verified_tree": null,
+  "verified_commit": null,
+  "expected_tree": "a89d81f134964843e6a10e86d7539670d7d37273",
+  "live_ref_reads": [
+    {
+      "ref": "refs/heads/main",
+      "sha": "74544e9cc486dd7e457211734bb20f4e928a7223",
+      "evidence_ref": "connector response turn365"
+    },
+    {
+      "ref": "refs/heads/phase2-step7-sync",
+      "sha": "74544e9cc486dd7e457211734bb20f4e928a7223",
+      "evidence_ref": "connector response turn366"
+    }
+  ],
+  "readbacks": {
+    "ref": {
+      "ref": "refs/heads/phase2-step7-sync",
+      "object": {
+        "type": "commit",
+        "sha": "74544e9cc486dd7e457211734bb20f4e928a7223"
+      }
+    },
+    "commit": null
+  },
+  "readback_evidence_refs": [],
+  "attempts": [
+    {
+      "action": "GitHub.fetch_blob",
+      "sha": "5cc705b141f15316e974c1f5a19ac398f8129404",
+      "http_status": 404
+    },
+    {
+      "action": "GitHub.create_tree",
+      "base_tree": "1c2c1f8724dbf39e942a057911ca90ed5116aa2c",
+      "exact_delta_paths": 37,
+      "http_status": 422,
+      "message": "tree.sha 582bcf0f4185fd375053493c81eb4eab824a9336 is not a valid blob"
+    },
+    {
+      "action": "git ls-remote",
+      "outcome": "failed",
+      "message": "Could not resolve host: github.com"
+    }
+  ],
+  "current_repository_delivery": "not_completed",
+  "next_step_blocked": 2,
+  "note": "No reference advanced. Small-text GitHub write tools exist; no supported local-file upload action was exposed. Existing large exact file objects remain missing. The isolated framework does not waive the baseline requirement.",
+  "closing_ref_reads": [
+    {
+      "ref": "refs/heads/main",
+      "sha": "74544e9cc486dd7e457211734bb20f4e928a7223",
+      "evidence_ref": "connector response turn368"
+    },
+    {
+      "ref": "refs/heads/phase2-step7-sync",
+      "sha": "74544e9cc486dd7e457211734bb20f4e928a7223",
+      "evidence_ref": "connector response turn369"
+    }
+  ]
+}
