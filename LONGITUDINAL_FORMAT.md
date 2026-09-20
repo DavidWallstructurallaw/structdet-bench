@@ -1,15 +1,15 @@
 # Longitudinal record format
 
-## Phase 3 Steps 2-6: records, observed trajectories, null models, empirical SHL and support assays
+## Phase 3 Steps 2-7: records, observed trajectories, null models, empirical SHL, support assays and recovery
 
 | Field | Value |
 |---|---|
-| Format document | 0.5 |
+| Format document | 0.6 |
 | Profile | `structdet_longitudinal_v1` |
 | Extension version | `0.1` |
-| Component methods | `longitudinal_records_v1`; `observed_longitudinal_v1`; `categorical_null_v1`; `categorical_mixture_selection_v1`; `anchored_log_decay_v1`; `endpoint_log_decay_v1`; `longitudinal_trajectory_sensitivity_v1`; `finite_family_binomial_threshold_v1` |
-| Governing approval | `PHASE_3_PLAN.md`, especially sections 3-6, 8, 9 and Steps 2-6 |
-| Implementation scope | Passive records, observed trajectories, categorical arithmetic, registered empirical/local SHL with complete-unit sensitivity, and finite-family support assays. Sections 1-9 retain the Step 2 API; sections 10-13 document Steps 3-6. |
+| Component methods | `longitudinal_records_v1`; `observed_longitudinal_v1`; `categorical_null_v1`; `categorical_mixture_selection_v1`; `anchored_log_decay_v1`; `endpoint_log_decay_v1`; `longitudinal_trajectory_sensitivity_v1`; `finite_family_binomial_threshold_v1`; `finite_family_evidence_qualified_recovery_v1` |
+| Governing approval | `PHASE_3_PLAN.md`, especially sections 3-8, 9 and Steps 2-7 |
+| Implementation scope | Passive records, observed trajectories, categorical arithmetic, registered empirical/local SHL with complete-unit sensitivity, finite-family support assays, and evidence-qualified recovery with correction dependencies. Sections 1-9 retain the Step 2 API; sections 10-14 document Steps 3-7. |
 | Scientific evidence | Supplied assertions and their dependencies; substantive independent validation is not performed |
 | License | CC BY 4.0 under `LICENSING_NOTES.md` |
 
@@ -356,7 +356,7 @@ The primary matched profile requires full accepted hard-class coverage at the fi
 
 Preregistration checks resolve the supplied active record and compare its declared offset-aware date with state observation times. A late or unknown declaration cannot satisfy this check. Successful chronology checking remains `declared_chronology_only`; software cannot establish that registration actually occurred or results were unseen.
 
-An applied schema/membership/validity revision explicitly targeting a selected old state, measurement or panel flags the matched use as requiring a newly pinned reanalysis. It does not edit historical counts, infer a replacement label, or manufacture an increase in model ability. Full intervention/recut/correction interpretation remains Step 7 work.
+An applied schema/membership/validity revision explicitly targeting a selected old state, measurement or panel flags the matched use as requiring a newly pinned reanalysis. It does not edit historical counts, infer a replacement label, or manufacture an increase in model ability. Section 14 documents the Step 7 intervention, recut and correction consumer.
 
 ### 10.4 Missingness, clocks and recurrence
 
@@ -678,7 +678,7 @@ Existing loader limits apply to the already acquired plan artifact. Unit/state c
 
 Near-one diversity ratios use an exact rational difference before `log1p`. Extreme positive ratios use bounded integer logarithms when necessary. Underflow of a nonzero log difference, nonfinite slope, or unrepresentable positive fitted diversity is an explicit numerical failure; none becomes scientific zero or a plateau. All actual round indices are retained. Interval endpoints remain exact fractions even though the logarithmic rate is numerical.
 
-`tests/fixtures/half_life_oracles.json` stores exact input curves, separately computed 95-digit Decimal expected slopes/timescales, deterministic index identity fixtures and independent small-percentile values. Record-driven tests also enter through genuine safe-loaded mock candidate/assignment/validity records and fixed budgets. These are software fixtures, never a model-training experiment or independent validation. P3-L17 through P3-L22 are the Step 5 software requirements. Section 13 adds Step 6 support assays. ERR, automatic P10 decisions, longitudinal CLI and public reports remain later steps.
+`tests/fixtures/half_life_oracles.json` stores exact input curves, separately computed 95-digit Decimal expected slopes/timescales, deterministic index identity fixtures and independent small-percentile values. Record-driven tests also enter through genuine safe-loaded mock candidate/assignment/validity records and fixed budgets. These are software fixtures, never a model-training experiment or independent validation. P3-L17 through P3-L22 are the Step 5 software requirements. Section 13 adds Step 6 support assays; section 14 adds Step 7 recovery. Automatic P10 decisions, longitudinal CLI and public reports remain outside these component implementations.
 
 
 ## 13. Finite-family support assays (Step 6)
@@ -691,7 +691,7 @@ The `finite_family_binomial_threshold_v1` method evaluates probability-threshold
 
 All support sets carry `finite_family_scope`, a versioned family identity, `class_universe_ref`, and `coverage_scope: registered_reference_classes`. An exact finite-family support count requires all registered reference-class statuses to be resolved under the registered method and supplied evidence. Otherwise the component retains known-present, known-below and unresolved/unavailable classes with integer set-size bounds. Empty-reference normalization is mathematically undefined. The inherited production registry still requires the supported eight-class frame. An empty declared reference universe cannot bypass that parser: its normalization is undefined and an invalid/missing registry does not receive a validated exact support count.
 
-The component performs no model calls, generated-code execution, training, network activity, external evidence acquisition or independent substantive validation. Fixture declarations remain stipulated software material. Imported conclusions remain conditional on supplied qualified evidence. The public longitudinal CLI/report integration belongs to Step 8; ERR belongs to Step 7.
+The component performs no model calls, generated-code execution, training, network activity, external evidence acquisition or independent substantive validation. Fixture declarations remain stipulated software material. Imported conclusions remain conditional on supplied qualified evidence. The public longitudinal CLI/report integration belongs to Step 8; section 14 documents the Step 7 ERR consumer.
 
 ### 13.2 Fixed trial design and success events
 
@@ -764,3 +764,115 @@ The existing assay `iid_evidence_ref` supplies a qualified `independence_assessm
 Qualified supporting records use the existing evidence access, role, version, fixture, conflict, correction and decisive-dependency policies. The assay additionally checks declared `artifact_refs` and `material_refs` against actual acquired snapshot content, size and digest; a retained status label alone does not prove readable material. Missing/contradictory supporting evidence withholds probability claims. Registration chronology is checked against declared state times and any recorded call times. Complete record-shaped claims remain conditional evidence, and mock children retain their fixture limitations.
 
 Determinate refusal/no-output failures additionally require an acquired original call response and a qualified validation evidence record with `support_assay_failure_v1`. Its bound fields are `assay_ref`, `trial_id`, `attempt_ref`, `success_event`, and actual Boolean `determinate_nonexpression: true`. A bare trial status or unsupported prose cannot establish a negative event. Accepted positive expression cannot be overwritten by a conflicting nonexpression declaration. Ordinary completed outputs with unresolved classification remain possible successes even when such a declaration is supplied; qualifying nonexpression is restricted to recorded refusal or a documented completed no-output call.
+
+
+## 14. External recovery and correction dependencies (Step 7)
+
+### 14.1 Source quantity, scope and claim boundary
+
+SI section 8.4, page 19 defines External Recovery Rate over the pre-intervention missing expressible-reference set. Sections 3.4, 6, 11.1 and 11.7 distinguish independent structural contribution, effective exposure, selection and later expression. EC sections 4.4-4.5 and 7.1 distinguish fresh cases within a cut from changes to the cut and require original anomaly material to remain reviewable. The fixed finite-family assay, evidence-witness serialization and correction graph below are engineering realizations of `PHASE_3_PLAN.md` sections 7 and 8.3.
+
+The implemented recovery quantity is unweighted and conditional on the registered finite family, success event, threshold and supplied evidence. Its pre missing set is the complement of qualified pre expressibility within the registered reference classes. It cannot be constructed from finite nonappearance, the descriptive observed intervention union, arbitrary `expressible` labels, or a proposed ontology expansion.
+
+For a known nonempty missing set M under a compatible comparison, the retained `confirmed_recovered` field is the assay-level intersection of M with the threshold-qualified post-present set. It becomes evidence-qualified recovery only when the episode's evidence gates also pass. Exact ERR is `Fraction(len(confirmed_recovered), len(M))` when every member of M has a resolved post status and those gates pass. Post uncertainty among classes already present pre does not change this denominator or withhold an otherwise qualified fraction. The evidence states remain distinct:
+
+| Evidence state | Main ERR and retained information |
+|---|---|
+| Complete pre partition, nonempty M, all M-members resolved post, gates passed | Exact available numerator, denominator and fraction. |
+| Complete pre partition with empty M | Undefined, `empty_missing_reference_set`; no numerical 0 or 1. |
+| Any pre class unresolved or unavailable | Unavailable; retain the known-present, known-below and unresolved portions without an invented denominator. |
+| Known M with unresolved post members | Point ERR unavailable; separately named deterministic partial-information bounds may be retained. |
+| Grounding, non-injection or validation restricted | Qualified ERR unavailable; separately supported descriptive assay facts remain visible. |
+| Incompatible state/criterion meaning or applied incompatible recut | Affected comparison unavailable; separately scoped assay records remain visible. |
+| Recovery capability not requested | Not requested. |
+
+For known M of size three with one member present post, one below threshold and one unresolved post, the deterministic partial-information bounds are `[1/3, 2/3]`. These are descriptive set-information bounds, not a point estimate or confidence interval. Their retention does not override grounding, non-injection, validation or other episode restrictions. A pre class with unresolved expressibility cannot enter M as a missing class. Below-threshold status continues to allow positive generation probability and establishes no latent extinction.
+
+Tools and grounded retrieval can change the system configuration while keeping the registered evaluation task family fixed. Their qualified claim concerns expression by the assisted system under those conditions. A training intervention identifies its post-intervention model state. Neither can be described as recovery solely from the previous model's latent representation. Direct target-answer substitution is excluded; worked solutions in permitted training material require the registered exposure and non-injection review rather than an automatic copying verdict.
+
+The component consumes already acquired local records. It performs no model call, training, external acquisition, candidate execution, automatic taxonomy change or independent substantive validation. Fixture-qualified arithmetic stays explicitly fixture-only. No causal superiority claim over self-resampling follows from a before/after recovery fraction. Longitudinal CLI/report integration remains Step 8 work.
+
+### 14.2 Registration and paired evaluation identity
+
+The longitudinal physical records in section 6 keep their exact existing field sets. Step 7 uses the permitted core support-payload `extensions` for versioned review witnesses. It does not add arbitrary fields to a longitudinal state, intervention or recovery episode.
+
+The global `registered_design_ref` identifies the supplied `preregistration` record. Its `recovery_registration_v1` extension contains exactly `method`, `inspection_status` and `episodes`. Method is `finite_family_evidence_qualified_recovery_v1`; inspection status is `registered_before_inspection`. Each requested episode resolves one unambiguous entry with these fields:
+
+| Field | Meaning |
+|---|---|
+| `episode_ref` | Exact kind, stable ID and version of the recovery episode. |
+| `context_sha256` | Binding of the episode's declared evaluation meaning to the acquired input context. |
+| `material_sha256` | Identity of the explicitly permitted exposure and evaluation artifacts, using their acquired material and source ancestry. |
+| `hypothesis` | Nonblank registered hypothesis. |
+| `permitted_exposure_refs` | Nonempty list of acquired intervention/training/retrieval artifact references. |
+| `evaluation_material_refs` | Nonempty list of acquired evaluation artifact references. |
+| `member_pairs` | Complete one-to-one mapping between pre and post finite-family members; each pair contains exactly `pre` and `post` intervention references. |
+| `changes_tools` | Actual Boolean declaration of the tool-identity change. |
+| `changes_retrieval` | Actual Boolean declaration of the retrieval-identity change. |
+| `changes_conditioning` | Actual Boolean declaration of the system-conditioning identity change. |
+
+`registration_witness(episode, *, bundle, hypothesis, permitted_exposure_refs, evaluation_material_refs, member_pairs, changes_tools=False, changes_retrieval=False, changes_conditioning=False)` constructs this entry. `context_fingerprint(episode, bundle)` binds episode/intervention identities, pre/post states, fixed assay declarations and family members, measurement frame/protocol/registry content, and declared intervention material. The static registration context excludes observed trial outcomes and does not require hashing future post-intervention expression. Its separate `material_sha256` pins the designated exposure and evaluation materials as acquired for that design. Neither helper creates, dates or validates preregistration.
+
+Both exposure and evaluation material must resolve to acquired artifacts with coherent content hashes. Identical acquired content across the exposure and evaluation inventories restricts this profile. This deterministic overlap check does not establish general semantic non-injection; the scoped review remains mandatory. The registration chronology and prior-inspection declaration remain conditional on the supplied records.
+
+The pre/post assays retain the same registry meaning, family identity/version, success event, tau, alpha, allocation and assay interpretation. The episode's `criterion_version` is `finite_family_binomial_threshold_v1` for this supported estimator. Family member IDs may differ because each member is tied to its stage state, but their complete registered pairing and scientific task/protocol meanings must agree. Missing members cannot be dropped. A changed task, horizon, resolution or success definition requires a new paired design.
+
+`changes_model_parameters` comes from the intervention's tagged `parameters_changed`. It is checked against the pre/post parameter/checkpoint identities. Tool, retrieval and conditioning flags are checked against their separate declared state identities. Unknown or contradictory dimensions restrict recovery. Recovery eligibility requires an identified system change and distinct state references. A documented update with unchanged bytes can still be an inherited lineage event; that event alone establishes neither changed ability nor qualified recovery.
+
+### 14.3 Scoped evidence and separate exogamy stages
+
+Each decisive review record carries a `recovery_evidence_v1` payload extension with exactly `episode_ref`, `context_sha256`, `subject_sha256`, `role` and `outcome`. `evidence_witness(episode, role, *, bundle, outcome="supported")` constructs those identity fields. The role is one of `grounding`, `non_injection`, `external_validation`, `entry`, `preprocessing`, `selection`, `exposure` or `expression`. A witness is a scoped supplied assertion; its presence supplies no independent validation by itself.
+
+`subject_sha256` is a retrospective review binding produced by `evidence_subject_fingerprint(episode, bundle)`. It binds the actual pre/post trial records, selected sample records and assignments/validity, supporting records and indispensable acquired bytes. It also binds the complete matching registered episode scope, including hypothesis, member pairing, permitted exposure, evaluation material identities/digest and configuration-change flags. Widening permitted exposure or changing the registered hypothesis cannot reuse an old favorable non-injection or validation review.
+
+The subject token is absent from the before-inspection registration. Recovery evidence witness extensions are excluded from the subject calculation to avoid self-referential hashes; the matching registration scope is included explicitly. After the supplied registration has been loaded, the later review binds its then-current observations and scope. Changing reviewed output, supporting material or recorded evidence requires a newly bound review. The full `input_context_sha256` separately identifies the complete consumed snapshot, including current witnesses and limits, for stale-component rejection.
+
+Grounding uses an `independence_assessment` for `structural_grounding`, with a supported scoped outcome, recorded criterion and qualified review. The intervention's source origin, knowledge type, transformations and material remain inspectable. Different vendor names or source counts cannot replace that evidence path.
+
+For evidence-record reviews, non-injection uses purpose `independence` and assertion `no_direct_answer_substitution`; external validation uses purpose `validity` and assertion `post_intervention_expression_validated`. Stage reviews use purpose `observation` and assertion `stage_supported`, or the explicitly permitted `stage_not_applicable` state. Each retains review method/detail, artifact material and reviewer references. Unknown, adverse or conflicting outcomes withhold the affected qualified claim. Non-injection, external-validation and expression evidence must target a post-assay sample or measurement cell. External validation can also use a passed `domain_result` tied to an actual post sample and matching output hash, or a performed audit whose reviewed subjects belong to the post sample/cell scope, with the existing review and coverage requirements.
+
+The five exogamy stages are `entry`, `preprocessing`, `selection`, `exposure` and `expression`. Their own status, evidence gate and original records remain separate. A stage is never inferred from a before/after score. Storage does not establish exposure, selection survival does not establish an actual update, and expression by an assisted system does not establish parameter learning. Only `preprocessing` and `selection` accept an explicit scoped `not_applicable` review for an omitted stage. Entry, actual exposure and subsequent expression remain indispensable.
+
+Decisive dependencies retain fixture/mock state through nested evidence, reviewer, transformation, artifact/material, exposure, adjudication and validation paths, including evidence references inside knowledge tags. Acquired artifacts are checked against their actual snapshot bytes. Active/readable state, conflict disposition, correction state, reviewer qualification, independence outcomes, validation outcomes and completed audit coverage remain distinct checks. An explicit `exposed=False` record cannot establish the exposure stage. Traversal and incremental graph construction use the effective declared link limit, including a caller's lower bound; cycles and excessive work produce scoped restrictions. A nonmock parent cannot remove a decisive child's fixture status. The evaluator does not decide independence or answer leakage from free-text prose alone.
+
+### 14.4 Reopening records and scoped correction dependencies
+
+`RevisionRecord` retains the exact revision reference, kind, event type and disposition; old/new identity tags; affected object references; original artifact references and their acquired availability; role-specific evidence and restriction reasons. `distributional_reopening_event` and `structural_reopening_event` retain their distinct wire tokens. A timestamp, version change or new file name cannot independently establish either event.
+
+An original anomaly can remain unresolved without receiving class mass. Split, merge and recut declarations do not remap old counts automatically. Direct pre/post arithmetic across an incompatible cut remains unavailable until both endpoints have appropriately qualified assignments under a supported common schema. The eight-class production classifier is unchanged. Reannotation and revision contribute `new_model_samples=0`, `new_recursive_rounds=0` and `model_recovery_established=False`.
+
+`DependencyLink(source, target)` identifies a consumed relationship. Core nodes are named `core:<record_type>:<record_id>`; longitudinal nodes are `object:<kind>:<id>@<version>`; sample population nodes are `population:<sample_id>`; result nodes use `result:<quantity>:<id>@<version>`. Component result kinds include distributions, observed support, retention, curves, fits, sensitivity, assays, missing sets, ERR and allowed claims. The graph records how an input correction can reach these components; it does not create a public report or reexecute a model. Bookkeeping backlinks from states to measurements are excluded from causal dependency traversal; an observed class-count correction cannot redefine parameter identity or create a new child observation.
+
+`CorrectionImpact` retains the correction ID, effect, status, source and dependent nodes, `invalidated_result_refs`, `restricted_claim_refs`, `preserved_result_refs` and `claim_only`. Core corrections and longitudinal revisions keep their supplied states. Rejected corrections and annotation-only core actions do not silently erase valid results. Received/provisional challenges remain reviewable restrictions; applied changes require the affected evidence and assignments to be repinned and reanalyzed.
+
+Independence and metadata corrections are recorded as claim-only restrictions while preserving separately supported descriptive counts. A metadata correction does not authorize reuse of a stale context; any actual change to measured content still requires fresh acquisition and component evaluation. Membership, validity, schema or lineage changes invalidate their actually dependent interpretation and results. Unrelated results retain their own support. A changed current snapshot always receives a new consumed-input identity, even when an unaffected numerical value happens to remain equal. Old results are not overwritten; `old_results_overwritten`, `new_model_samples` and `new_recursive_rounds` remain false/zero in the correction ledger.
+
+This component covers the Step 7 portion of P3-L34. Public report/manifests and complete integrated propagation remain later Phase 3 work. The dependency ledger must not be interpreted as proof that Step 8 report integration or the final Phase 3 conformance review has already occurred.
+
+### 14.5 Component API, retained results and validation boundary
+
+```python
+from structdet_bench.local_io import load_bundle
+from structdet_bench.recovery import evaluate_recovery, assert_current
+
+bundle = load_bundle("path/to/bundle.json")
+study = evaluate_recovery(bundle)
+assert_current(study, bundle)
+for episode in study.episodes:
+    print(episode.external_recovery_rate)
+    print(episode.missing_classes, episode.confirmed_recovered)
+    print(episode.unresolved_post, episode.partial_information_bounds)
+    print(episode.evidence_status, episode.expression_scope)
+```
+
+`evaluate_recovery(bundle, *, review=None, assays=None, observed=None, fits=None)` accepts only a `LoadedBundle` and optional previously computed typed components. Supplied components must match the current consumed snapshot and a fresh calculation under the applicable request; altered result fields cannot be accepted merely because their display IDs or digest field match. Current assays are derived from the actual loaded records. Optional observed and half-life objects are also checked against fresh component calculations when supplied. No optional object can inject a final recovery score.
+
+`RecoveryStudy` contains requestedness, aggregate status, consumed-input digest, source `LongitudinalReview`, typed episodes, revision records, dependency links, correction impacts, reasons and retained current component objects. Study-level `available_with_limitations` preserves a mixture of qualified, partial, undefined and unavailable episodes. `assert_current(study, bundle)` rejects a different acquired input context.
+
+Each `RecoveryEpisode` retains its exact reference and `external_recovery_rate` as a `Quantity`; pre/post `AssayResult` objects; `pre_present`, `pre_below`, `pre_unresolved`; `missing_classes`; `confirmed_recovered`, `post_below`, `unresolved_post`; optional exact `partial_information_bounds`; compatibility/evidence gates; five exogamy stages; explicit change flags and pre/post/intervention refs; configuration identities, source records and registration. `missing_classes=None` means unresolved M; `missing_classes=()` means known empty M. The retained sets preserve the original numerator and denominator counts even when the `Fraction` representation is reduced. Under a compatible comparison, `confirmed_recovered` remains an assay intersection when an evidence gate fails; its field name alone establishes no qualified recovery claim. The same restriction applies to retained partial-information bounds. An incompatible comparison retains the separate pre/post assays while leaving `confirmed_recovered` and `post_below` empty; those empty fields are not a zero-recovery result.
+
+`evidence_status` distinguishes `fixture_only`, `supplied_evidence_conditional` and unavailable result material. `expression_scope` distinguishes `new_model_state_expression` from `assisted_system_expression` when the necessary state declarations resolve. A scope label does not override a failed gate. The method retains `finite_family_threshold_support`, `unweighted_reference_classes`, `conditional_on_supplied_evidence`, `not_latent_repertoire` and `no_causal_superiority_verdict` qualifiers. `partial_bounds_are_confidence_interval`, `substantive_validation_performed`, `model_recovery_established` and `structural_exogamy_certified` remain false.
+
+These immutable objects are internal audit results. They retain private evidence and original declarations for local inspection. Direct unrestricted serialization is not the public redacted renderer. Existing safe-reader, exact arithmetic and declared workload limits remain in force; Step 7 introduces no alternate file reader, hidden sampling, approximation fallback or automatic action.
+
+`tests/fixtures/recovery_cases.json` supplies stipulated set-oracle cases whose actual candidate, call, assignment and validity records are materialized through the normal loader by the tests. Those cases exercise exact, empty, unresolved and partial recovery states without supplying final assay decisions as input evidence. P3-L29 through P3-L33 are the Step 7 acceptance targets. P3-L34 remains a cross-step requirement, and Step 8 begins the integrated longitudinal CLI and public report work.

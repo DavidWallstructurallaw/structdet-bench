@@ -1,33 +1,33 @@
 {
   "authorization": {
-    "owner_instruction": "可以继续 Phase 3 Step 6  吗",
+    "owner_instruction": "Phase 3 Step 7 继续",
     "plan_sha256": "1ca74fbba06bea44f2b656b3f4e6b46b0c6747cf13640c3f1ea29c69ef3d6352",
-    "stop_before_step": 7
+    "stop_before_step": 8
   },
   "baseline": {
-    "local_step": 5,
-    "project_file_count": 147,
-    "test_count": 1614
+    "local_step": 6,
+    "project_file_count": 150,
+    "test_count": 1676
   },
   "boundaries": {
     "UD006": "outstanding",
     "candidate_execution": false,
+    "full_report_invalidation": "L34 final integration remains Step 9",
     "hosted_CI": false,
     "latent_support": "deferred_UD007",
-    "longitudinal_CLI": "Step 8",
+    "longitudinal_CLI": "Step 8 not begun",
     "model_calls": false,
-    "recovery": "Step 7 not begun",
     "substantive_validation_performed": false
   },
-  "companion_archive": "StructDet-Bench_Phase3_Step6_Local.zip",
+  "companion_archive": "StructDet-Bench_Phase3_Step7_Local.zip",
   "counts": {
     "errors": 0,
     "failed": 0,
-    "inherited": 1614,
-    "new": 62,
-    "passed": 1676,
+    "inherited": 1676,
+    "new": 69,
+    "passed": 1745,
     "skipped": 0,
-    "total": 1676
+    "total": 1745
   },
   "gates": {
     "current_exit": 0,
@@ -37,82 +37,127 @@
     "inherited_M": true,
     "inherited_V": true,
     "newly_implemented": [
-      "P3-L23",
-      "P3-L24",
-      "P3-L25",
-      "P3-L26",
-      "P3-L27",
-      "P3-L28"
+      "P3-L29",
+      "P3-L30",
+      "P3-L31",
+      "P3-L32",
+      "P3-L33"
     ],
-    "unfinished_L_requirements": 12
+    "unfinished_L_requirements": 7
   },
-  "historical_journals": "Repository history bytes unchanged; full actual baseline/source/archive runs and independent-review failures retained in companion verification directories.",
-  "metadata_refresh": "This administrative receipt alone is refreshed after source and archive-extracted full tests. All code, tests, bindings, fixtures and documentation remain byte-identical to both tested subjects.",
+  "historical_journals": "Repository historical journal bytes retained; companion archive contains both actual Step 7 runs and the complete Step 6 predecessor archive.",
+  "metadata_refresh": "Only this administrative receipt is refreshed after both full tests. Code, tests, fixtures, bindings and documentation remain identical to the two tested subjects.",
   "phase": 3,
   "project": "StructDet-Bench",
   "repository_delivery": {
     "current_source_is_not_certified_published_by_this_receipt": true,
-    "last_observed_main": "9ea6fef61fb68cf8a9b0d07987080e37a6fb5850",
     "status": "verified_separately_in_companion_publication_status"
   },
   "runs": {
     "baseline": {
-      "console": {
-        "path": "verification/baseline_supported_runs/history/8debbcb6119147f1a8a219475698dd0e/console.txt",
-        "sha256": "09da833cb2023c3a3e5756f7cdc91a1728e0b04370c1135cbc0397990ce97ebc",
-        "size_bytes": 239044
+      "archive": "history/StructDet-Bench_Phase3_Step6_Local.zip",
+      "archive_sha256": "29d7613d50eecffbdf99dd1205e98a1e97cdb0ede9d074168b85d0f0dbf35bfd",
+      "clean_run": {
+        "console": {
+          "path": "verification/clean_runs/history/5a4b4426a7934a4c87c1e439bef3acfe/console.txt",
+          "sha256": "34b58e423c5b5d4f6fd520fc603b1c05e5e528dd784d0fa21d940c53043d72c7",
+          "size_bytes": 249960
+        },
+        "environment": {
+          "bytecode_disabled": true,
+          "no_site": true,
+          "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+          "python": "3.13.5 (main, Jul 23 2025, 00:37:22) [Clang 20.1.4 ]"
+        },
+        "exit_code": 0,
+        "full_run": {
+          "path": "verification/clean_runs/history/5a4b4426a7934a4c87c1e439bef3acfe/run.json",
+          "sha256": "ed47d4f24c4872b3aec9017a8a8ebf283e98f4429ac265863a553f9a2a3d971d",
+          "size_bytes": 3156359
+        },
+        "gates": {
+          "phase1_m_complete": true,
+          "phase2_v_complete": true,
+          "phase3_l_software_complete": false,
+          "requested_gate_passed": true,
+          "unresolved_current_ids": [],
+          "unresolved_l_ids": [
+            "P3-L29",
+            "P3-L30",
+            "P3-L31",
+            "P3-L32",
+            "P3-L33",
+            "P3-L34",
+            "P3-L35",
+            "P3-L36",
+            "P3-L37",
+            "P3-L38",
+            "P3-L39",
+            "P3-L40"
+          ]
+        },
+        "implementation_step": 6,
+        "outcomes": {
+          "passed": 1676
+        },
+        "run_id": "5a4b4426a7934a4c87c1e439bef3acfe",
+        "test_count": 1676
       },
-      "environment": {
-        "bytecode_disabled": true,
-        "no_site": true,
-        "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
-        "python": "3.13.5 (main, Jul 23 2025, 00:37:22) [Clang 20.1.4 ]"
+      "execution": "previous Step 6 source and extracted runs, reused after exact source identity verification",
+      "new_baseline_execution_claimed": false,
+      "source_run": {
+        "console": {
+          "path": "verification/current_runs/history/bec64baedbd54884a9eaa08d27e96f43/console.txt",
+          "sha256": "aa4cd0a905a36a946c0f86f73ffc2d1fe886d7a9769db0013b121c5b17a3819e",
+          "size_bytes": 249960
+        },
+        "environment": {
+          "bytecode_disabled": true,
+          "no_site": true,
+          "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+          "python": "3.13.5 (main, Jul 23 2025, 00:37:22) [Clang 20.1.4 ]"
+        },
+        "exit_code": 0,
+        "full_run": {
+          "path": "verification/current_runs/history/bec64baedbd54884a9eaa08d27e96f43/run.json",
+          "sha256": "0fab45cff2d85228f6635c8f9e5c771b29abcd390ed6d20f885658d164d187a8",
+          "size_bytes": 3156380
+        },
+        "gates": {
+          "phase1_m_complete": true,
+          "phase2_v_complete": true,
+          "phase3_l_software_complete": false,
+          "requested_gate_passed": true,
+          "unresolved_current_ids": [],
+          "unresolved_l_ids": [
+            "P3-L29",
+            "P3-L30",
+            "P3-L31",
+            "P3-L32",
+            "P3-L33",
+            "P3-L34",
+            "P3-L35",
+            "P3-L36",
+            "P3-L37",
+            "P3-L38",
+            "P3-L39",
+            "P3-L40"
+          ]
+        },
+        "implementation_step": 6,
+        "outcomes": {
+          "passed": 1676
+        },
+        "run_id": "bec64baedbd54884a9eaa08d27e96f43",
+        "test_count": 1676
       },
-      "exit_code": 0,
-      "full_run": {
-        "path": "verification/baseline_supported_runs/history/8debbcb6119147f1a8a219475698dd0e/run.json",
-        "sha256": "3889ef72455e3730b89ac1e2d4e2a640275937f8df800484dcbf681ad9d3de61",
-        "size_bytes": 3057323
-      },
-      "gates": {
-        "phase1_m_complete": true,
-        "phase2_v_complete": true,
-        "phase3_l_software_complete": false,
-        "requested_gate_passed": true,
-        "unresolved_current_ids": [],
-        "unresolved_l_ids": [
-          "P3-L23",
-          "P3-L24",
-          "P3-L25",
-          "P3-L26",
-          "P3-L27",
-          "P3-L28",
-          "P3-L29",
-          "P3-L30",
-          "P3-L31",
-          "P3-L32",
-          "P3-L33",
-          "P3-L34",
-          "P3-L35",
-          "P3-L36",
-          "P3-L37",
-          "P3-L38",
-          "P3-L39",
-          "P3-L40"
-        ]
-      },
-      "implementation_step": 5,
-      "outcomes": {
-        "passed": 1614
-      },
-      "run_id": "8debbcb6119147f1a8a219475698dd0e",
-      "test_count": 1614
+      "test_count": 1676
     },
     "clean": {
       "console": {
-        "path": "verification/clean_runs/history/5a4b4426a7934a4c87c1e439bef3acfe/console.txt",
-        "sha256": "34b58e423c5b5d4f6fd520fc603b1c05e5e528dd784d0fa21d940c53043d72c7",
-        "size_bytes": 249960
+        "path": "verification/clean_runs/history/c12354b4a6c748b3a0573af1a5a7d03a/console.txt",
+        "sha256": "f544ecd57fefba7a8712727ce26f7b12dc52be6742413243b29f1cbb9b21515f",
+        "size_bytes": 262010
       },
       "environment": {
         "bytecode_disabled": true,
@@ -122,9 +167,9 @@
       },
       "exit_code": 0,
       "full_run": {
-        "path": "verification/clean_runs/history/5a4b4426a7934a4c87c1e439bef3acfe/run.json",
-        "sha256": "ed47d4f24c4872b3aec9017a8a8ebf283e98f4429ac265863a553f9a2a3d971d",
-        "size_bytes": 3156359
+        "path": "verification/clean_runs/history/c12354b4a6c748b3a0573af1a5a7d03a/run.json",
+        "sha256": "8a491458129c1b7f0ae3d3f4f3e1f32c5f1362d51d0eaddff2a58daa55b952bb",
+        "size_bytes": 3269861
       },
       "gates": {
         "phase1_m_complete": true,
@@ -133,11 +178,6 @@
         "requested_gate_passed": true,
         "unresolved_current_ids": [],
         "unresolved_l_ids": [
-          "P3-L29",
-          "P3-L30",
-          "P3-L31",
-          "P3-L32",
-          "P3-L33",
           "P3-L34",
           "P3-L35",
           "P3-L36",
@@ -147,18 +187,18 @@
           "P3-L40"
         ]
       },
-      "implementation_step": 6,
+      "implementation_step": 7,
       "outcomes": {
-        "passed": 1676
+        "passed": 1745
       },
-      "run_id": "5a4b4426a7934a4c87c1e439bef3acfe",
-      "test_count": 1676
+      "run_id": "c12354b4a6c748b3a0573af1a5a7d03a",
+      "test_count": 1745
     },
     "current": {
       "console": {
-        "path": "verification/current_runs/history/bec64baedbd54884a9eaa08d27e96f43/console.txt",
-        "sha256": "aa4cd0a905a36a946c0f86f73ffc2d1fe886d7a9769db0013b121c5b17a3819e",
-        "size_bytes": 249960
+        "path": "verification/current_runs/history/0a7809f52fbe499b89d5658ae6acbfc2/console.txt",
+        "sha256": "573f4ee7f806e2fbaf72b0dbbd2d2b4a5448be78548a4db995a31e59547cbaa3",
+        "size_bytes": 262010
       },
       "environment": {
         "bytecode_disabled": true,
@@ -168,9 +208,9 @@
       },
       "exit_code": 0,
       "full_run": {
-        "path": "verification/current_runs/history/bec64baedbd54884a9eaa08d27e96f43/run.json",
-        "sha256": "0fab45cff2d85228f6635c8f9e5c771b29abcd390ed6d20f885658d164d187a8",
-        "size_bytes": 3156380
+        "path": "verification/current_runs/history/0a7809f52fbe499b89d5658ae6acbfc2/run.json",
+        "sha256": "0a375cb03b9b445e69a295674e532fe24994560067ba3d734ab49bb035cc96ef",
+        "size_bytes": 3269855
       },
       "gates": {
         "phase1_m_complete": true,
@@ -179,11 +219,6 @@
         "requested_gate_passed": true,
         "unresolved_current_ids": [],
         "unresolved_l_ids": [
-          "P3-L29",
-          "P3-L30",
-          "P3-L31",
-          "P3-L32",
-          "P3-L33",
           "P3-L34",
           "P3-L35",
           "P3-L36",
@@ -193,15 +228,15 @@
           "P3-L40"
         ]
       },
-      "implementation_step": 6,
+      "implementation_step": 7,
       "outcomes": {
-        "passed": 1676
+        "passed": 1745
       },
-      "run_id": "bec64baedbd54884a9eaa08d27e96f43",
-      "test_count": 1676
+      "run_id": "0a7809f52fbe499b89d5658ae6acbfc2",
+      "test_count": 1745
     }
   },
   "schema_version": "0.1",
-  "scope": "finite intervention support assays with exact probability threshold decisions",
-  "step": 6
+  "scope": "Evidence-qualified finite-family external recovery, separate exogamy stages, reopening and correction dependencies",
+  "step": 7
 }

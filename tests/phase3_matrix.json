@@ -5,8 +5,8 @@
   },
   "delivery": {
     "authorization": {
-      "owner_instruction": "可以继续 Phase 3 Step 6  吗",
-      "scope": "Phase 3 Step 6 under the approved plan: finite intervention support assays and verification; stop before Step 7 recovery, Step 8 CLI/report integration or substantive empirical validation."
+      "owner_instruction": "Phase 3 Step 7 继续",
+      "scope": "Phase 3 Step 7 under the approved plan: evidence-qualified recovery, separate exogamy stages, reopening and correction dependencies; stop before Step 8 CLI/report integration or substantive empirical validation."
     },
     "final_owner_acceptance": "not_established_by_software_tests",
     "history": [
@@ -743,6 +743,27 @@
         "runtime_started": true,
         "status": "empirical_half_life_and_complete_unit_sensitivity_software_verified",
         "step": 5
+      },
+      {
+        "authorization": {
+          "owner_instruction": "可以继续 Phase 3 Step 6  吗",
+          "scope": "Phase 3 Step 6 under the approved plan: finite intervention support assays and verification; stop before Step 7 recovery, Step 8 CLI/report integration or substantive empirical validation."
+        },
+        "final_owner_acceptance": "not_established_by_software_tests",
+        "initialization": {
+          "counts": {
+            "longitudinal": 40,
+            "oracles": 24,
+            "reports": 16
+          },
+          "implementation_status": "not_implemented",
+          "step": 1,
+          "test_bindings": []
+        },
+        "phase": 3,
+        "runtime_started": true,
+        "status": "support_assay_implementation_complete_verification_recorded_separately",
+        "step": 6
       }
     ],
     "initialization": {
@@ -757,8 +778,8 @@
     },
     "phase": 3,
     "runtime_started": true,
-    "status": "support_assay_implementation_complete_verification_recorded_separately",
-    "step": 6
+    "status": "recovery_implementation_complete_verification_recorded_separately",
+    "step": 7
   },
   "evidence_status": "not_supplied",
   "legacy_catalogue_identity": {
@@ -2434,74 +2455,175 @@
     {
       "anchor": "SI 8.4; MET 13.3",
       "evidence_status": "not_supplied",
-      "fixture_refs": [],
+      "fixture_refs": [
+        "tests/fixtures/recovery_cases.json"
+      ],
       "id": "P3-L29",
-      "implementation_status": "not_implemented",
+      "implementation_status": "implemented",
       "primary_steps": "7",
       "required_by_step": 7,
       "requirement": "A known pre missing expressible set is required; pre uncertainty cannot supply a missing denominator.",
       "scope": "L_software",
-      "test_bindings": []
+      "test_bindings": [
+        "tests.test_recovery.MissingSetTests.test_eight_classes_six_pre_one_of_two_missing_recovered",
+        "tests.test_recovery.MissingSetTests.test_pre_uncertainty_never_creates_a_missing_denominator",
+        "tests.test_recovery.MissingSetTests.test_unavailable_pre_iid_cannot_be_treated_as_all_missing",
+        "tests.test_recovery.FixtureOracleTests.test_fixture_registry_is_the_original_eight_classes",
+        "tests.test_recovery.FixtureOracleTests.test_half_oracle_uses_real_loader_and_exact_threshold_trials",
+        "tests.test_recovery.FixtureOracleTests.test_catalogue_arithmetic_is_independent_set_intersection"
+      ]
     },
     {
       "anchor": "SI 8.4",
       "evidence_status": "not_supplied",
-      "fixture_refs": [],
+      "fixture_refs": [
+        "tests/fixtures/recovery_cases.json"
+      ],
       "id": "P3-L30",
-      "implementation_status": "not_implemented",
+      "implementation_status": "implemented",
       "primary_steps": "7",
       "required_by_step": 7,
       "requirement": "Exact ERR, empty M, partial post sets and incompatible criteria retain their distinct statuses and values.",
       "scope": "L_software",
-      "test_bindings": []
+      "test_bindings": [
+        "tests.test_recovery.MissingSetTests.test_eight_classes_six_pre_one_of_two_missing_recovered",
+        "tests.test_recovery.MissingSetTests.test_known_empty_missing_set_is_undefined_not_zero_or_one",
+        "tests.test_recovery.MissingSetTests.test_pre_uncertainty_never_creates_a_missing_denominator",
+        "tests.test_recovery.MissingSetTests.test_partial_post_is_separate_deterministic_information_bounds",
+        "tests.test_recovery.MissingSetTests.test_resolved_no_recovery_is_exact_zero",
+        "tests.test_recovery.MissingSetTests.test_resolved_full_recovery_is_exact_one",
+        "tests.test_recovery.MissingSetTests.test_unresolved_post_class_outside_missing_set_does_not_block_err",
+        "tests.test_recovery.MissingSetTests.test_unavailable_pre_iid_cannot_be_treated_as_all_missing",
+        "tests.test_recovery.MissingSetTests.test_missing_post_artifact_is_unknown_not_negative",
+        "tests.test_recovery.CompatibilityTests.test_unknown_resealed_criterion_version_cannot_select_another_estimator",
+        "tests.test_recovery.CompatibilityTests.test_changed_success_event_blocks_cross_stage_rate",
+        "tests.test_recovery.CompatibilityTests.test_changed_probability_threshold_is_a_different_missing_set_criterion",
+        "tests.test_recovery.CompatibilityTests.test_changed_family_cannot_be_selected_after_post_results",
+        "tests.test_recovery.CompatibilityTests.test_wrong_checkpoint_cannot_attribute_another_models_recovery",
+        "tests.test_recovery.CompatibilityTests.test_training_intervention_requires_changed_parameter_or_checkpoint_identity",
+        "tests.test_recovery.CompatibilityTests.test_training_intervention_cannot_claim_fixed_old_parameters",
+        "tests.test_recovery.CompatibilityTests.test_inference_tools_support_explicit_assisted_system_scope",
+        "tests.test_recovery.CompatibilityTests.test_changed_tool_identity_without_declaration_is_not_silent_recovery"
+      ]
     },
     {
       "anchor": "SI 3.4, 8.4; EI",
       "evidence_status": "not_supplied",
-      "fixture_refs": [],
+      "fixture_refs": [
+        "tests/fixtures/recovery_cases.json"
+      ],
       "id": "P3-L31",
-      "implementation_status": "not_implemented",
+      "implementation_status": "implemented",
       "primary_steps": "7",
       "required_by_step": 7,
       "requirement": "Grounding, validation, state change and non-injection evidence are scoped; mock children cannot become substantive recovery evidence.",
       "scope": "L_software",
-      "test_bindings": []
+      "test_bindings": [
+        "tests.test_recovery.RecoveryEvidenceTests.test_nominal_different_source_name_without_grounding_is_unavailable",
+        "tests.test_recovery.RecoveryEvidenceTests.test_derivative_source_independence_outcome_withholds_qualified_rate",
+        "tests.test_recovery.RecoveryEvidenceTests.test_unknown_grounding_criterion_withholds_qualified_rate",
+        "tests.test_recovery.RecoveryEvidenceTests.test_direct_answer_copying_withholds_qualified_rate",
+        "tests.test_recovery.RecoveryEvidenceTests.test_unknown_noninjection_is_not_permission_to_assume_no_injection",
+        "tests.test_recovery.RecoveryEvidenceTests.test_noninjection_review_conflict_is_retained",
+        "tests.test_recovery.RecoveryEvidenceTests.test_external_validation_withdrawal_preserves_assay_sets",
+        "tests.test_recovery.RecoveryEvidenceTests.test_unqualified_reviewer_cannot_support_intervention_gate",
+        "tests.test_recovery.RecoveryEvidenceTests.test_unavailable_indispensable_evidence_artifact_blocks_qualified_rate",
+        "tests.test_recovery.RecoveryEvidenceTests.test_exposure_identical_to_scored_material_cannot_qualify",
+        "tests.test_recovery.RecoveryEvidenceTests.test_malformed_recovery_registration_preserves_separately_valid_assay_facts",
+        "tests.test_recovery.RecoveryEvidenceTests.test_posthoc_registration_cannot_supply_qualified_missing_set_episode",
+        "tests.test_recovery.RecoveryEvidenceTests.test_nonmock_parent_cannot_promote_mock_indispensable_child",
+        "tests.test_recovery.RecoveryEvidenceTests.test_withdrawn_evidence_inside_tagged_origin_cannot_be_ignored",
+        "tests.test_recovery.RecoveryEvidenceTests.test_grounding_source_knowledge_type_remains_required",
+        "tests.test_recovery.RecoveryEvidenceTests.test_forged_external_expressibility_labels_do_not_replace_builtin_assays",
+        "tests.test_recovery.CompatibilityTests.test_unknown_resealed_criterion_version_cannot_select_another_estimator",
+        "tests.test_recovery.CompatibilityTests.test_changed_success_event_blocks_cross_stage_rate",
+        "tests.test_recovery.CompatibilityTests.test_changed_probability_threshold_is_a_different_missing_set_criterion",
+        "tests.test_recovery.CompatibilityTests.test_changed_family_cannot_be_selected_after_post_results",
+        "tests.test_recovery.CompatibilityTests.test_wrong_checkpoint_cannot_attribute_another_models_recovery",
+        "tests.test_recovery.CompatibilityTests.test_training_intervention_requires_changed_parameter_or_checkpoint_identity",
+        "tests.test_recovery.CompatibilityTests.test_training_intervention_cannot_claim_fixed_old_parameters",
+        "tests.test_recovery.CompatibilityTests.test_inference_tools_support_explicit_assisted_system_scope",
+        "tests.test_recovery.CompatibilityTests.test_changed_tool_identity_without_declaration_is_not_silent_recovery"
+      ]
     },
     {
       "anchor": "SI 6, 11.1, 11.7",
       "evidence_status": "not_supplied",
-      "fixture_refs": [],
+      "fixture_refs": [
+        "tests/fixtures/recovery_cases.json"
+      ],
       "id": "P3-L32",
-      "implementation_status": "not_implemented",
+      "implementation_status": "implemented",
       "primary_steps": "7",
       "required_by_step": 7,
       "requirement": "Entry, preprocessing, selection, exposure/update and subsequent expression remain separate records; no aggregate exogamy certificate.",
       "scope": "L_software",
-      "test_bindings": []
+      "test_bindings": [
+        "tests.test_recovery.StageAndCorrectionTests.test_five_exogamy_stages_are_retained_separately",
+        "tests.test_recovery.StageAndCorrectionTests.test_selection_survival_cannot_be_inferred_from_before_after_score",
+        "tests.test_recovery.StageAndCorrectionTests.test_explicit_false_exposure_descendant_overrules_stage_support_assertion",
+        "tests.test_recovery.StageAndCorrectionTests.test_explicit_no_selection_stage_keeps_its_own_not_applicable_status",
+        "tests.test_recovery.StageAndCorrectionTests.test_indispensable_exposure_stage_cannot_be_declared_not_applicable",
+        "tests.test_recovery.StageAndCorrectionTests.test_failed_entry_evidence_does_not_erase_valid_expression_evidence"
+      ]
     },
     {
       "anchor": "EC 4.4-4.5, 7.1",
       "evidence_status": "not_supplied",
-      "fixture_refs": [],
+      "fixture_refs": [
+        "tests/fixtures/recovery_cases.json"
+      ],
       "id": "P3-L33",
-      "implementation_status": "not_implemented",
+      "implementation_status": "implemented",
       "primary_steps": "7",
       "required_by_step": 7,
       "requirement": "Original anomalies and recuts remain reviewable; taxonomy change cannot count as model recovery or automatic comparable new support.",
       "scope": "L_software",
-      "test_bindings": []
+      "test_bindings": [
+        "tests.test_recovery.StageAndCorrectionTests.test_schema_recut_cannot_turn_old_samples_into_recovery",
+        "tests.test_recovery.StageAndCorrectionTests.test_original_anomaly_and_both_cut_identities_remain_reviewable",
+        "tests.test_recovery.StageAndCorrectionTests.test_distributional_reopening_record_does_not_create_new_samples",
+        "tests.test_recovery.StageAndCorrectionTests.test_rejected_schema_proposal_does_not_invalidate_unchanged_cut",
+        "tests.test_recovery.StageAndCorrectionTests.test_unrelated_revision_leaves_episode_available",
+        "tests.test_recovery.StageAndCorrectionTests.test_reanalysis_creates_no_new_trials_samples_or_recursive_rounds"
+      ]
     },
     {
       "anchor": "MET 14; EI 10",
       "evidence_status": "not_supplied",
-      "fixture_refs": [],
+      "fixture_refs": [
+        "tests/fixtures/recovery_cases.json"
+      ],
       "id": "P3-L34",
-      "implementation_status": "not_implemented",
+      "implementation_status": "partial",
       "primary_steps": "7-9",
       "required_by_step": 9,
       "requirement": "Snapshot mutations invalidate all actually dependent curves, fits, assays, missing sets and reports; unrelated results survive.",
       "scope": "L_software",
-      "test_bindings": []
+      "test_bindings": [
+        "tests.test_recovery.SnapshotAndScopeTests.test_absent_profile_is_not_requested",
+        "tests.test_recovery.SnapshotAndScopeTests.test_recovery_capability_not_requested_has_no_numeric_rate",
+        "tests.test_recovery.SnapshotAndScopeTests.test_wrong_bundle_type_is_rejected",
+        "tests.test_recovery.SnapshotAndScopeTests.test_malformed_profile_is_controlled_error",
+        "tests.test_recovery.SnapshotAndScopeTests.test_stale_assays_cannot_be_reused_after_underlying_assignment_changes",
+        "tests.test_recovery.SnapshotAndScopeTests.test_forged_cached_assay_sets_are_rejected_even_with_original_fingerprint",
+        "tests.test_recovery.SnapshotAndScopeTests.test_fresh_evaluation_rejects_changed_training_bytes_under_old_witnesses",
+        "tests.test_recovery.SnapshotAndScopeTests.test_fresh_evaluation_rejects_changed_evaluation_bytes_under_old_witnesses",
+        "tests.test_recovery.SnapshotAndScopeTests.test_fresh_evaluation_rejects_changed_review_bytes_under_old_witnesses",
+        "tests.test_recovery.SnapshotAndScopeTests.test_classification_revision_requires_renewed_recovery_review",
+        "tests.test_recovery.SnapshotAndScopeTests.test_widened_registered_exposure_requires_renewed_noninjection_and_validation_review",
+        "tests.test_recovery.SnapshotAndScopeTests.test_stale_recovery_result_rejects_same_display_id_changed_material",
+        "tests.test_recovery.SnapshotAndScopeTests.test_postload_evaluation_performs_no_file_network_or_process_operations",
+        "tests.test_recovery.SuppliedComponentTests.test_supplied_current_review_observed_and_nonempty_fit_roundtrip",
+        "tests.test_recovery.SuppliedComponentTests.test_forged_review_with_current_snapshot_is_rejected",
+        "tests.test_recovery.SuppliedComponentTests.test_forged_observed_value_with_original_context_is_rejected",
+        "tests.test_recovery.SuppliedComponentTests.test_forged_empirical_fit_with_original_context_is_rejected",
+        "tests.test_recovery.SuppliedComponentTests.test_old_observed_and_fit_are_rejected_after_actual_classification_change",
+        "tests.test_recovery.StageAndCorrectionTests.test_unrelated_revision_leaves_episode_available",
+        "tests.test_recovery.StageAndCorrectionTests.test_claim_only_independence_correction_preserves_descriptive_sets",
+        "tests.test_recovery.StageAndCorrectionTests.test_membership_correction_reaches_dependent_results_and_preserves_unrelated_panels",
+        "tests.test_recovery.StageAndCorrectionTests.test_reanalysis_creates_no_new_trials_samples_or_recursive_rounds"
+      ]
     },
     {
       "anchor": "Plan 8.4-8.5",
@@ -3722,8 +3844,78 @@
       ]
     },
     "7": {
-      "implementation_status": "not_implemented",
-      "test_bindings": []
+      "implementation_status": "implemented",
+      "test_bindings": [
+        "tests.test_recovery.CompatibilityTests.test_changed_family_cannot_be_selected_after_post_results",
+        "tests.test_recovery.CompatibilityTests.test_changed_probability_threshold_is_a_different_missing_set_criterion",
+        "tests.test_recovery.CompatibilityTests.test_changed_success_event_blocks_cross_stage_rate",
+        "tests.test_recovery.CompatibilityTests.test_changed_tool_identity_without_declaration_is_not_silent_recovery",
+        "tests.test_recovery.CompatibilityTests.test_inference_tools_support_explicit_assisted_system_scope",
+        "tests.test_recovery.CompatibilityTests.test_training_intervention_cannot_claim_fixed_old_parameters",
+        "tests.test_recovery.CompatibilityTests.test_training_intervention_requires_changed_parameter_or_checkpoint_identity",
+        "tests.test_recovery.CompatibilityTests.test_unknown_resealed_criterion_version_cannot_select_another_estimator",
+        "tests.test_recovery.CompatibilityTests.test_wrong_checkpoint_cannot_attribute_another_models_recovery",
+        "tests.test_recovery.FixtureOracleTests.test_catalogue_arithmetic_is_independent_set_intersection",
+        "tests.test_recovery.FixtureOracleTests.test_fixture_registry_is_the_original_eight_classes",
+        "tests.test_recovery.FixtureOracleTests.test_half_oracle_uses_real_loader_and_exact_threshold_trials",
+        "tests.test_recovery.MissingSetTests.test_eight_classes_six_pre_one_of_two_missing_recovered",
+        "tests.test_recovery.MissingSetTests.test_known_empty_missing_set_is_undefined_not_zero_or_one",
+        "tests.test_recovery.MissingSetTests.test_missing_post_artifact_is_unknown_not_negative",
+        "tests.test_recovery.MissingSetTests.test_partial_post_is_separate_deterministic_information_bounds",
+        "tests.test_recovery.MissingSetTests.test_pre_uncertainty_never_creates_a_missing_denominator",
+        "tests.test_recovery.MissingSetTests.test_resolved_full_recovery_is_exact_one",
+        "tests.test_recovery.MissingSetTests.test_resolved_no_recovery_is_exact_zero",
+        "tests.test_recovery.MissingSetTests.test_unavailable_pre_iid_cannot_be_treated_as_all_missing",
+        "tests.test_recovery.MissingSetTests.test_unresolved_post_class_outside_missing_set_does_not_block_err",
+        "tests.test_recovery.RecoveryEvidenceTests.test_derivative_source_independence_outcome_withholds_qualified_rate",
+        "tests.test_recovery.RecoveryEvidenceTests.test_direct_answer_copying_withholds_qualified_rate",
+        "tests.test_recovery.RecoveryEvidenceTests.test_exposure_identical_to_scored_material_cannot_qualify",
+        "tests.test_recovery.RecoveryEvidenceTests.test_external_validation_withdrawal_preserves_assay_sets",
+        "tests.test_recovery.RecoveryEvidenceTests.test_forged_external_expressibility_labels_do_not_replace_builtin_assays",
+        "tests.test_recovery.RecoveryEvidenceTests.test_grounding_source_knowledge_type_remains_required",
+        "tests.test_recovery.RecoveryEvidenceTests.test_malformed_recovery_registration_preserves_separately_valid_assay_facts",
+        "tests.test_recovery.RecoveryEvidenceTests.test_nominal_different_source_name_without_grounding_is_unavailable",
+        "tests.test_recovery.RecoveryEvidenceTests.test_noninjection_review_conflict_is_retained",
+        "tests.test_recovery.RecoveryEvidenceTests.test_nonmock_parent_cannot_promote_mock_indispensable_child",
+        "tests.test_recovery.RecoveryEvidenceTests.test_posthoc_registration_cannot_supply_qualified_missing_set_episode",
+        "tests.test_recovery.RecoveryEvidenceTests.test_unavailable_indispensable_evidence_artifact_blocks_qualified_rate",
+        "tests.test_recovery.RecoveryEvidenceTests.test_unknown_grounding_criterion_withholds_qualified_rate",
+        "tests.test_recovery.RecoveryEvidenceTests.test_unknown_noninjection_is_not_permission_to_assume_no_injection",
+        "tests.test_recovery.RecoveryEvidenceTests.test_unqualified_reviewer_cannot_support_intervention_gate",
+        "tests.test_recovery.RecoveryEvidenceTests.test_withdrawn_evidence_inside_tagged_origin_cannot_be_ignored",
+        "tests.test_recovery.SnapshotAndScopeTests.test_absent_profile_is_not_requested",
+        "tests.test_recovery.SnapshotAndScopeTests.test_classification_revision_requires_renewed_recovery_review",
+        "tests.test_recovery.SnapshotAndScopeTests.test_forged_cached_assay_sets_are_rejected_even_with_original_fingerprint",
+        "tests.test_recovery.SnapshotAndScopeTests.test_fresh_evaluation_rejects_changed_evaluation_bytes_under_old_witnesses",
+        "tests.test_recovery.SnapshotAndScopeTests.test_fresh_evaluation_rejects_changed_review_bytes_under_old_witnesses",
+        "tests.test_recovery.SnapshotAndScopeTests.test_fresh_evaluation_rejects_changed_training_bytes_under_old_witnesses",
+        "tests.test_recovery.SnapshotAndScopeTests.test_malformed_profile_is_controlled_error",
+        "tests.test_recovery.SnapshotAndScopeTests.test_postload_evaluation_performs_no_file_network_or_process_operations",
+        "tests.test_recovery.SnapshotAndScopeTests.test_recovery_capability_not_requested_has_no_numeric_rate",
+        "tests.test_recovery.SnapshotAndScopeTests.test_stale_assays_cannot_be_reused_after_underlying_assignment_changes",
+        "tests.test_recovery.SnapshotAndScopeTests.test_stale_recovery_result_rejects_same_display_id_changed_material",
+        "tests.test_recovery.SnapshotAndScopeTests.test_widened_registered_exposure_requires_renewed_noninjection_and_validation_review",
+        "tests.test_recovery.SnapshotAndScopeTests.test_wrong_bundle_type_is_rejected",
+        "tests.test_recovery.StageAndCorrectionTests.test_claim_only_independence_correction_preserves_descriptive_sets",
+        "tests.test_recovery.StageAndCorrectionTests.test_distributional_reopening_record_does_not_create_new_samples",
+        "tests.test_recovery.StageAndCorrectionTests.test_explicit_false_exposure_descendant_overrules_stage_support_assertion",
+        "tests.test_recovery.StageAndCorrectionTests.test_explicit_no_selection_stage_keeps_its_own_not_applicable_status",
+        "tests.test_recovery.StageAndCorrectionTests.test_failed_entry_evidence_does_not_erase_valid_expression_evidence",
+        "tests.test_recovery.StageAndCorrectionTests.test_five_exogamy_stages_are_retained_separately",
+        "tests.test_recovery.StageAndCorrectionTests.test_indispensable_exposure_stage_cannot_be_declared_not_applicable",
+        "tests.test_recovery.StageAndCorrectionTests.test_membership_correction_reaches_dependent_results_and_preserves_unrelated_panels",
+        "tests.test_recovery.StageAndCorrectionTests.test_original_anomaly_and_both_cut_identities_remain_reviewable",
+        "tests.test_recovery.StageAndCorrectionTests.test_reanalysis_creates_no_new_trials_samples_or_recursive_rounds",
+        "tests.test_recovery.StageAndCorrectionTests.test_rejected_schema_proposal_does_not_invalidate_unchanged_cut",
+        "tests.test_recovery.StageAndCorrectionTests.test_schema_recut_cannot_turn_old_samples_into_recovery",
+        "tests.test_recovery.StageAndCorrectionTests.test_selection_survival_cannot_be_inferred_from_before_after_score",
+        "tests.test_recovery.StageAndCorrectionTests.test_unrelated_revision_leaves_episode_available",
+        "tests.test_recovery.SuppliedComponentTests.test_forged_empirical_fit_with_original_context_is_rejected",
+        "tests.test_recovery.SuppliedComponentTests.test_forged_observed_value_with_original_context_is_rejected",
+        "tests.test_recovery.SuppliedComponentTests.test_forged_review_with_current_snapshot_is_rejected",
+        "tests.test_recovery.SuppliedComponentTests.test_old_observed_and_fit_are_rejected_after_actual_classification_change",
+        "tests.test_recovery.SuppliedComponentTests.test_supplied_current_review_observed_and_nonempty_fit_roundtrip"
+      ]
     },
     "8": {
       "implementation_status": "not_implemented",
