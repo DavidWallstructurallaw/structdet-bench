@@ -1,0 +1,344 @@
+{
+  "schema_version": "0.1",
+  "plan_sha256": "1ca74fbba06bea44f2b656b3f4e6b46b0c6747cf13640c3f1ea29c69ef3d6352",
+  "scope": "stipulated_exact_software_oracles_only",
+  "derivation": "Each probability is the independently enumerated sum of weights of all binary trial sequences; no production calls or production snapshots.",
+  "cases": [
+    {
+      "id": "positive_equality",
+      "N": 4,
+      "k_confirmed": 4,
+      "k_possible": 4,
+      "tau": [
+        1,
+        2
+      ],
+      "alpha": [
+        1,
+        8
+      ],
+      "J": 1,
+      "delta": [
+        1,
+        16
+      ],
+      "upper_tail": [
+        1,
+        16
+      ],
+      "lower_tail": [
+        1,
+        1
+      ],
+      "status": "threshold_present"
+    },
+    {
+      "id": "negative_equality",
+      "N": 4,
+      "k_confirmed": 0,
+      "k_possible": 0,
+      "tau": [
+        1,
+        2
+      ],
+      "alpha": [
+        1,
+        8
+      ],
+      "J": 1,
+      "delta": [
+        1,
+        16
+      ],
+      "upper_tail": [
+        1,
+        1
+      ],
+      "lower_tail": [
+        1,
+        16
+      ],
+      "status": "unresolved"
+    },
+    {
+      "id": "strict_negative",
+      "N": 4,
+      "k_confirmed": 0,
+      "k_possible": 0,
+      "tau": [
+        3,
+        4
+      ],
+      "alpha": [
+        1,
+        8
+      ],
+      "J": 1,
+      "delta": [
+        1,
+        16
+      ],
+      "upper_tail": [
+        1,
+        1
+      ],
+      "lower_tail": [
+        1,
+        256
+      ],
+      "status": "threshold_below"
+    },
+    {
+      "id": "unknown_can_still_be_below",
+      "N": 4,
+      "k_confirmed": 0,
+      "k_possible": 1,
+      "tau": [
+        3,
+        4
+      ],
+      "alpha": [
+        1,
+        8
+      ],
+      "J": 1,
+      "delta": [
+        1,
+        16
+      ],
+      "upper_tail": [
+        1,
+        1
+      ],
+      "lower_tail": [
+        13,
+        256
+      ],
+      "status": "threshold_below"
+    },
+    {
+      "id": "unknown_prevents_negative",
+      "N": 4,
+      "k_confirmed": 0,
+      "k_possible": 2,
+      "tau": [
+        3,
+        4
+      ],
+      "alpha": [
+        1,
+        8
+      ],
+      "J": 1,
+      "delta": [
+        1,
+        16
+      ],
+      "upper_tail": [
+        1,
+        1
+      ],
+      "lower_tail": [
+        67,
+        256
+      ],
+      "status": "unresolved"
+    },
+    {
+      "id": "planned_J_changes_result",
+      "N": 4,
+      "k_confirmed": 4,
+      "k_possible": 4,
+      "tau": [
+        1,
+        2
+      ],
+      "alpha": [
+        1,
+        8
+      ],
+      "J": 2,
+      "delta": [
+        1,
+        32
+      ],
+      "upper_tail": [
+        1,
+        16
+      ],
+      "lower_tail": [
+        1,
+        1
+      ],
+      "status": "unresolved"
+    },
+    {
+      "id": "unit_tau_all_successes",
+      "N": 4,
+      "k_confirmed": 4,
+      "k_possible": 4,
+      "tau": [
+        1,
+        1
+      ],
+      "alpha": [
+        1,
+        8
+      ],
+      "J": 1,
+      "delta": [
+        1,
+        16
+      ],
+      "upper_tail": [
+        1,
+        1
+      ],
+      "lower_tail": [
+        1,
+        1
+      ],
+      "status": "unresolved"
+    },
+    {
+      "id": "unit_tau_one_known_failure",
+      "N": 4,
+      "k_confirmed": 3,
+      "k_possible": 3,
+      "tau": [
+        1,
+        1
+      ],
+      "alpha": [
+        1,
+        8
+      ],
+      "J": 1,
+      "delta": [
+        1,
+        16
+      ],
+      "upper_tail": [
+        1,
+        1
+      ],
+      "lower_tail": [
+        0,
+        1
+      ],
+      "status": "threshold_below"
+    },
+    {
+      "id": "unit_tau_uncertainty",
+      "N": 4,
+      "k_confirmed": 3,
+      "k_possible": 4,
+      "tau": [
+        1,
+        1
+      ],
+      "alpha": [
+        1,
+        8
+      ],
+      "J": 1,
+      "delta": [
+        1,
+        16
+      ],
+      "upper_tail": [
+        1,
+        1
+      ],
+      "lower_tail": [
+        1,
+        1
+      ],
+      "status": "unresolved"
+    },
+    {
+      "id": "one_observation",
+      "N": 1,
+      "k_confirmed": 1,
+      "k_possible": 1,
+      "tau": [
+        1,
+        2
+      ],
+      "alpha": [
+        1,
+        20
+      ],
+      "J": 1,
+      "delta": [
+        1,
+        40
+      ],
+      "upper_tail": [
+        1,
+        2
+      ],
+      "lower_tail": [
+        1,
+        1
+      ],
+      "status": "unresolved"
+    },
+    {
+      "id": "positive_with_unknowns",
+      "N": 8,
+      "k_confirmed": 7,
+      "k_possible": 8,
+      "tau": [
+        1,
+        2
+      ],
+      "alpha": [
+        1,
+        8
+      ],
+      "J": 1,
+      "delta": [
+        1,
+        16
+      ],
+      "upper_tail": [
+        9,
+        256
+      ],
+      "lower_tail": [
+        1,
+        1
+      ],
+      "status": "threshold_present"
+    },
+    {
+      "id": "nontrivial_rational_negative",
+      "N": 8,
+      "k_confirmed": 0,
+      "k_possible": 0,
+      "tau": [
+        1,
+        3
+      ],
+      "alpha": [
+        1,
+        8
+      ],
+      "J": 1,
+      "delta": [
+        1,
+        16
+      ],
+      "upper_tail": [
+        1,
+        1
+      ],
+      "lower_tail": [
+        256,
+        6561
+      ],
+      "status": "threshold_below"
+    }
+  ]
+}

@@ -1,98 +1,207 @@
 {
-  "schema_version": "0.1",
-  "project": "StructDet-Bench",
-  "phase": 3,
-  "step": 2,
-  "scope": "longitudinal_record_components_with_inherited_M_V_regression",
   "authorization": {
-    "owner_instruction": "Phase 3 Step 2",
+    "owner_instruction": "可以继续 Phase 3 Step 6  吗",
     "plan_sha256": "1ca74fbba06bea44f2b656b3f4e6b46b0c6747cf13640c3f1ea29c69ef3d6352",
-    "stop_before_step": 3
+    "stop_before_step": 7
   },
-  "base_commit": "a694c843fa4709391c2daed20b05584271bd7f08",
-  "base_tree": "c0b3d008be5bf0076206a0b048bc8e3a869646b9",
+  "baseline": {
+    "local_step": 5,
+    "project_file_count": 147,
+    "test_count": 1614
+  },
+  "boundaries": {
+    "UD006": "outstanding",
+    "candidate_execution": false,
+    "hosted_CI": false,
+    "latent_support": "deferred_UD007",
+    "longitudinal_CLI": "Step 8",
+    "model_calls": false,
+    "recovery": "Step 7 not begun",
+    "substantive_validation_performed": false
+  },
+  "companion_archive": "StructDet-Bench_Phase3_Step6_Local.zip",
   "counts": {
-    "inherited": 1077,
-    "new": 120,
-    "total": 1197,
-    "passed": 1197,
-    "failed": 0,
     "errors": 0,
-    "skipped": 0
+    "failed": 0,
+    "inherited": 1614,
+    "new": 62,
+    "passed": 1676,
+    "skipped": 0,
+    "total": 1676
   },
   "gates": {
     "current_exit": 0,
+    "full_L_complete": false,
+    "future_oracles": 24,
+    "future_reports": 16,
     "inherited_M": true,
     "inherited_V": true,
-    "full_L_complete": false,
-    "unfinished_L_requirements": 35,
     "newly_implemented": [
-      "P3-L02",
-      "P3-L03",
-      "P3-L04",
-      "P3-L05"
+      "P3-L23",
+      "P3-L24",
+      "P3-L25",
+      "P3-L26",
+      "P3-L27",
+      "P3-L28"
     ],
-    "future_reports": 16,
-    "future_oracles": 24,
-    "full_L_scope_assessment_exit": 1,
-    "full_L_assessment_basis": "Alternate scope assessed from the same actually executed 1197 methods; no second execution is claimed."
+    "unfinished_L_requirements": 12
   },
-  "remote_publication": {
-    "status": "implementation_published_and_read_back",
-    "base_verified": true,
-    "repository": "DavidWallstructurallaw/structdet-bench",
-    "branch": "main",
-    "implementation_commit": "443331b53d1f2699144cd3893a6641d7d0b57721",
-    "implementation_tree": "cbe55fed808dd4713f62346e986657f921d0da06",
-    "project_file_count": 137,
-    "changed_paths": 6,
-    "method": "Every uploaded blob matched local bytes. Independent tree serialization and git write-tree matched the created and read-back remote commit tree. Branch advanced without force and was read back.",
-    "final_receipt_scope": "This file records the verified implementation commit. The subsequent receipt-only commit and archive identity are recorded in companion verification/publication_manifest.json."
+  "historical_journals": "Repository history bytes unchanged; full actual baseline/source/archive runs and independent-review failures retained in companion verification directories.",
+  "metadata_refresh": "This administrative receipt alone is refreshed after source and archive-extracted full tests. All code, tests, bindings, fixtures and documentation remain byte-identical to both tested subjects.",
+  "phase": 3,
+  "project": "StructDet-Bench",
+  "repository_delivery": {
+    "current_source_is_not_certified_published_by_this_receipt": true,
+    "last_observed_main": "9ea6fef61fb68cf8a9b0d07987080e37a6fb5850",
+    "status": "verified_separately_in_companion_publication_status"
   },
-  "companion_archive": "StructDet-Bench_Phase3_Step2_Accepted.zip",
-  "previous_records": "Original Step 1 repository journal bytes are preserved. Complete new source, isolated baseline and clean-replay journals are in the companion verification directory.",
-  "execution_refs": [
-    {
-      "path": "verification/current_console.txt",
-      "size_bytes": 177631,
-      "sha256": "7c3369fc44e56e94cbc288ce3fd47082aad88aee3570a31897790ac3cbd60f6e"
+  "runs": {
+    "baseline": {
+      "console": {
+        "path": "verification/baseline_supported_runs/history/8debbcb6119147f1a8a219475698dd0e/console.txt",
+        "sha256": "09da833cb2023c3a3e5756f7cdc91a1728e0b04370c1135cbc0397990ce97ebc",
+        "size_bytes": 239044
+      },
+      "environment": {
+        "bytecode_disabled": true,
+        "no_site": true,
+        "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+        "python": "3.13.5 (main, Jul 23 2025, 00:37:22) [Clang 20.1.4 ]"
+      },
+      "exit_code": 0,
+      "full_run": {
+        "path": "verification/baseline_supported_runs/history/8debbcb6119147f1a8a219475698dd0e/run.json",
+        "sha256": "3889ef72455e3730b89ac1e2d4e2a640275937f8df800484dcbf681ad9d3de61",
+        "size_bytes": 3057323
+      },
+      "gates": {
+        "phase1_m_complete": true,
+        "phase2_v_complete": true,
+        "phase3_l_software_complete": false,
+        "requested_gate_passed": true,
+        "unresolved_current_ids": [],
+        "unresolved_l_ids": [
+          "P3-L23",
+          "P3-L24",
+          "P3-L25",
+          "P3-L26",
+          "P3-L27",
+          "P3-L28",
+          "P3-L29",
+          "P3-L30",
+          "P3-L31",
+          "P3-L32",
+          "P3-L33",
+          "P3-L34",
+          "P3-L35",
+          "P3-L36",
+          "P3-L37",
+          "P3-L38",
+          "P3-L39",
+          "P3-L40"
+        ]
+      },
+      "implementation_step": 5,
+      "outcomes": {
+        "passed": 1614
+      },
+      "run_id": "8debbcb6119147f1a8a219475698dd0e",
+      "test_count": 1614
     },
-    {
-      "path": "verification/clean_console.txt",
-      "size_bytes": 177631,
-      "sha256": "e93dc7e059f8540ef99ab575f374a75678a82e12246c1d3c227da5091d9bd899"
+    "clean": {
+      "console": {
+        "path": "verification/clean_runs/history/5a4b4426a7934a4c87c1e439bef3acfe/console.txt",
+        "sha256": "34b58e423c5b5d4f6fd520fc603b1c05e5e528dd784d0fa21d940c53043d72c7",
+        "size_bytes": 249960
+      },
+      "environment": {
+        "bytecode_disabled": true,
+        "no_site": true,
+        "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+        "python": "3.13.5 (main, Jul 23 2025, 00:37:22) [Clang 20.1.4 ]"
+      },
+      "exit_code": 0,
+      "full_run": {
+        "path": "verification/clean_runs/history/5a4b4426a7934a4c87c1e439bef3acfe/run.json",
+        "sha256": "ed47d4f24c4872b3aec9017a8a8ebf283e98f4429ac265863a553f9a2a3d971d",
+        "size_bytes": 3156359
+      },
+      "gates": {
+        "phase1_m_complete": true,
+        "phase2_v_complete": true,
+        "phase3_l_software_complete": false,
+        "requested_gate_passed": true,
+        "unresolved_current_ids": [],
+        "unresolved_l_ids": [
+          "P3-L29",
+          "P3-L30",
+          "P3-L31",
+          "P3-L32",
+          "P3-L33",
+          "P3-L34",
+          "P3-L35",
+          "P3-L36",
+          "P3-L37",
+          "P3-L38",
+          "P3-L39",
+          "P3-L40"
+        ]
+      },
+      "implementation_step": 6,
+      "outcomes": {
+        "passed": 1676
+      },
+      "run_id": "5a4b4426a7934a4c87c1e439bef3acfe",
+      "test_count": 1676
     },
-    {
-      "path": "verification/isolated_baseline_console.txt",
-      "size_bytes": 158164,
-      "sha256": "4b746a651c1d096db0316cc2235099d21ae4ec43856c0a80eb4d5f87f3aa31c9"
-    },
-    {
-      "path": "verification/final_payload_console.txt",
-      "size_bytes": 177631,
-      "sha256": "295f75c9ee4d902c353b7a9140453300aef7f5c1bfb9127bd33b5659dd30eeef"
-    },
-    {
-      "path": "verification/final_payload_runs/history/d640d6592e914ab1bd1f28c5ec8e2382/run.json",
-      "size_bytes": 2311530,
-      "sha256": "c39fe8f34d281bef5e1322fd6d1ce148fee695c6875ed3768e6b4de728532b4d"
+    "current": {
+      "console": {
+        "path": "verification/current_runs/history/bec64baedbd54884a9eaa08d27e96f43/console.txt",
+        "sha256": "aa4cd0a905a36a946c0f86f73ffc2d1fe886d7a9769db0013b121c5b17a3819e",
+        "size_bytes": 249960
+      },
+      "environment": {
+        "bytecode_disabled": true,
+        "no_site": true,
+        "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+        "python": "3.13.5 (main, Jul 23 2025, 00:37:22) [Clang 20.1.4 ]"
+      },
+      "exit_code": 0,
+      "full_run": {
+        "path": "verification/current_runs/history/bec64baedbd54884a9eaa08d27e96f43/run.json",
+        "sha256": "0fab45cff2d85228f6635c8f9e5c771b29abcd390ed6d20f885658d164d187a8",
+        "size_bytes": 3156380
+      },
+      "gates": {
+        "phase1_m_complete": true,
+        "phase2_v_complete": true,
+        "phase3_l_software_complete": false,
+        "requested_gate_passed": true,
+        "unresolved_current_ids": [],
+        "unresolved_l_ids": [
+          "P3-L29",
+          "P3-L30",
+          "P3-L31",
+          "P3-L32",
+          "P3-L33",
+          "P3-L34",
+          "P3-L35",
+          "P3-L36",
+          "P3-L37",
+          "P3-L38",
+          "P3-L39",
+          "P3-L40"
+        ]
+      },
+      "implementation_step": 6,
+      "outcomes": {
+        "passed": 1676
+      },
+      "run_id": "bec64baedbd54884a9eaa08d27e96f43",
+      "test_count": 1676
     }
-  ],
-  "immutable_scope": "No prior production source, test, reader, metric, earlier matrix, plan, scientific contract, example or history edited. Phase 3 matrix advances authorized Step 2 only.",
-  "boundaries": {
-    "statistics_computed": false,
-    "substantive_validation_performed": false,
-    "UD006": "outstanding",
-    "CLI_longitudinal_dispatch": "Step 8",
-    "hosted_CI": false,
-    "model_calls": false,
-    "candidate_execution": false
   },
-  "environment": {
-    "bytecode_disabled": true,
-    "no_site": true,
-    "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
-    "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]"
-  },
-  "preflight_note": "An early nonisolated preflight overlapped new-file creation and failed a stage-absence assertion; retained as failed history and excluded from baseline evidence. An untouched isolated Step 1 replay subsequently passed all 1077 tests. No predecessor source or test was modified."
+  "schema_version": "0.1",
+  "scope": "finite intervention support assays with exact probability threshold decisions",
+  "step": 6
 }
