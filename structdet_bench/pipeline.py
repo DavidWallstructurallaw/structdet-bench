@@ -192,9 +192,15 @@ def _processing(bundle: LoadedBundle, review: Any, extra: tuple[str, ...] = ()) 
     return (2 if failures else 0), sorted(set(failures))
 
 
-def validate_bundle(path: str | Path, *, limits: ReadLimits | None = None) -> tuple[dict[str, Any], int]:
+def validate_bundle(path: str | Path, *, limits: ReadLimits | None = None,
+                    replay_manifest_path: str | Path | None = None) -> tuple[dict[str, Any], int]:
     """Passive validation. No distribution calculations or report files."""
     bundle = load_bundle(path, limits=limits)
+    from .longitudinal_pipeline import requested, validate_snapshot
+    if requested(bundle):
+        return validate_snapshot(bundle, replay_manifest_path=replay_manifest_path)
+    if replay_manifest_path is not None:
+        raise InputError("replay_requires_longitudinal_profile")
     review = review_evidence(bundle)
     _, extra = _mode(bundle)
     code, failures = _processing(bundle, review, extra)
@@ -227,11 +233,17 @@ def _unimplemented(name: str, scope: str) -> dict[str, Any]:
 
 
 def analyze_bundle(path: str | Path, *, limits: ReadLimits | None = None,
-                   run_id: str | None = None, recorded_at: str | None = None) -> Analysis:
+                   run_id: str | None = None, recorded_at: str | None = None,
+                   replay_manifest_path: str | Path | None = None) -> Analysis:
     """Compute a read-only snapshot. Output publication is a separate operation."""
     if run_id is not None and not is_id(run_id):
         raise InputError("invalid_run_id")
     bundle = load_bundle(path, limits=limits)
+    from .longitudinal_pipeline import requested, analyze_snapshot
+    if requested(bundle):
+        return analyze_snapshot(bundle, run_id=run_id, recorded_at=recorded_at, replay_manifest_path=replay_manifest_path)
+    if replay_manifest_path is not None:
+        raise InputError("replay_requires_longitudinal_profile")
     review = review_evidence(bundle)
     collection = build_populations(bundle)
     index = EvidenceIndex(bundle)

@@ -28,6 +28,10 @@ SHA256 = re.compile(r"[0-9a-f]{64}\Z")
 SHA1 = re.compile(r"[0-9a-f]{40}\Z")
 MAX_QA_BYTES = 32 * 1024 * 1024
 
+# Exact implementation identities for the approved Step 8 ordinary-write paths.
+# The historical 114-file inventory and all scientific pins retain their bytes.
+STEP8_IMPLEMENTATION_PINS = {'structdet_bench/cli.py': '5df07e8991c1af105877336c55b5a3a1f05db69945544654d8e664ec84814704', 'structdet_bench/pipeline.py': '9ded7c505ec4a9ad213ea4d3840066594dece5277cd21ac07315aea0a24c86f2', 'structdet_bench/reporting.py': '9e22bd778c92a5e55cee25522b5864bd428a1f33e40b703a3627f3d64f461587'}
+
 
 def digest(data: bytes) -> str:
     return hashlib.sha256(data).hexdigest()
@@ -197,6 +201,7 @@ def inventory_record(root: Path = ROOT) -> dict[str, Any]:
 
 def current_identity_checks(root: Path = ROOT) -> list[dict[str, Any]]:
     checks = []
+    step = read_json(root / "tests/phase3_matrix.json")["delivery"]["step"]
     for row in baseline_rows(root):
         if row["path"] == "README.md":
             continue  # Ordinary Step 1 factual update; original bytes remain pinned.
@@ -206,8 +211,12 @@ def current_identity_checks(root: Path = ROOT) -> list[dict[str, Any]]:
             actual = digest(path.read_bytes())
         except (OSError, ValueError):
             pass
-        checks.append({"path": row["path"], "expected_sha256": row["sha256"],
-                       "actual_sha256": actual, "status": "passed" if actual == row["sha256"] else "failed"})
+        expected = (STEP8_IMPLEMENTATION_PINS.get(row["path"], row["sha256"])
+                    if type(step) is int and step >= 8 else row["sha256"])
+        checks.append({"path": row["path"], "expected_sha256": expected,
+                       "baseline_sha256": row["sha256"],
+                       "identity_basis": "approved_step8_implementation_pin" if expected != row["sha256"] else "original_baseline_bytes",
+                       "actual_sha256": actual, "status": "passed" if actual == expected else "failed"})
     # The approved plan, exact baseline manifest and captured method IDs are also checked.
     inventory_record(root); predecessor_ids(root)
     return checks

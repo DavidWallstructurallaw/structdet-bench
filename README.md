@@ -1,35 +1,80 @@
 # StructDet-Bench
 
-## Current handoff: Phase 3 Step 1
+## Current handoff: Phase 3 Step 8
 
-The exact 114-file Phase 2 final baseline is now available on
-`phase2-step7-sync` at `43278ae3b42ceb43859259a1dfc93513919c3903`.
-The user's upload is preserved in history. Its flattened directory entries were
-restored by original blob identity. The 133-file Phase 3 scaffold was restored on
-`main` at `d6cef064e129155bf18630a3a325cb8fd318d10b` without code changes.
+The opt-in longitudinal profile now connects passive recorded inputs to observed
+trajectories, categorical scenarios, empirical/local structural half-life,
+complete-unit sensitivity, finite-family support assays and evidence-qualified
+external recovery. It produces report schema `0.3` /
+`structdet_longitudinal_v1` through the existing `validate` and `analyze` commands.
 
-The separate Phase 3 harness checks the approved plan, all inherited M/V checks,
-original method identities, new L requirements and the baseline receipt. The
-current stage is Step 1 only; no longitudinal runtime has been implemented.
-Fresh run results and current publication state are recorded in
-`artifacts/phase3/verification_manifest.json` and the companion delivery archive.
-Historical pending-publication and failed-run records remain unchanged.
+This step supplies working offline examples, public JSON/Markdown reports and
+complete saved-index replay. Phase 3 Step 9 conformance and Step 10 final closeout
+remain separate work. Software fixtures do not establish substantive independent
+validation, actual model recovery or deployment assurance. UD-006 remains open;
+latent-support diagnostics remain deferred under UD-007.
+
+### Run the longitudinal examples
+
+Use CPython 3.13 with Unicode 15.1.0 for the pinned inherited text methods. The
+verified environment and actual results are recorded in the delivery receipt.
+No model account, package installation, API key or candidate execution is needed.
 
 ```bash
-python -B -S tools/run_phase3_checks.py --scope current
-python -B -S tools/run_phase3_checks.py --scope phase3
+python3.13 -B -S -m structdet_bench validate --bundle examples/hero_recursive/bundle.json
+python3.13 -B -S -m structdet_bench analyze --bundle examples/hero_recursive/bundle.json --output-dir recursive-output
+python3.13 -B -S -m structdet_bench validate --bundle examples/hero_recursive/bundle.json --replay-manifest recursive-output/run_manifest.json
+python3.13 -B -S -m structdet_bench analyze --bundle examples/hero_recursive/bundle.json --replay-manifest recursive-output/run_manifest.json --output-dir recursive-replay
+python3.13 -B -S -m structdet_bench analyze --bundle examples/categorical_null/bundle.json --output-dir null-output
 ```
 
-The current-stage gate requires exact baseline reconciliation. The full Phase 3
-gate remains incomplete until the later authorized L implementation and audit.
-Neither gate performs live GitHub queries or establishes independent scientific
-validation. No model calls, candidate execution, hosted CI or package release is
-part of this handoff. Stop before Phase 3 Step 2.
+Each output parent must exist and each output directory must be new. Successful
+publication creates exactly `report.json`, `report.md` and `run_manifest.json`.
+An existing output directory is never replaced. `validate` checks declarations,
+record identities and replay structure without calculating SHL, probability
+membership or ERR. A well-formed but scientifically unavailable result can return
+0; malformed input returns 2 and unexpected I/O/publication failure returns 3.
+An existing output target is refused as `output_already_exists` with exit 2.
 
-The following is the preserved Phase 2 handoff text. Its statements about remote
-synchronization describe that earlier delivery, superseded by the baseline
-reconciliation above; its software capabilities and restrictions remain applicable.
+The `hero_recursive` example uses stipulated mock observations and passive texts.
+Its seven program texts are never run; `text_08.txt` is the passive registered
+sensitivity plan. `prompts.json` is a reference-registry record whose extensions
+retain the exact fixture prompts. `expected.json` holds independently derived
+count, fraction and high-precision fit expectations. The separate
+`categorical_null` example is assumption-bound categorical arithmetic with no
+claim of neural observations. Registered integration variants cover empty,
+unresolved and restricted recovery, gaps, recuts and inapplicable fits.
 
+The run manifest retains the complete 2,000-draw index matrix for each applicable
+registered sensitivity request. Explicit replay checks its input, request,
+method, software, unit order and digest bindings. Missing or corrupted replay
+data cannot silently trigger fresh sampling. Reports use one redacted tree for
+both formats, retaining exact operands, distinct absence states, evidence gates
+and correction dependencies. See `LONGITUDINAL_FORMAT.md` section 15.
+
+### Compatibility and verification
+
+Omitting the longitudinal extension retains the original M-only or A/B/C
+profile. Simultaneously declaring comparison and longitudinal profiles in one
+request is rejected. Historical scientific definitions, the two prior matrices,
+source editions and old execution journals remain pinned.
+
+```bash
+python3.13 -B -S tools/run_phase3_checks.py --scope current
+python3.13 -B -S tools/run_phase3_checks.py --scope phase3
+```
+
+The current-stage gate covers the authorized Step 8 implementation. Full Phase 3
+acceptance remains incomplete until the later conformance work. Actual counts,
+full run references and bounded maintenance are recorded in
+`artifacts/phase3/verification_manifest.json`,
+`artifacts/phase3/maintenance_ledger.json` and the companion delivery archive.
+Current repository delivery is verified separately from a local passing gate;
+no command certifies owner acceptance or substantive scientific evidence.
+
+The following preserved Phase 2 handoff describes that historical delivery.
+Its earlier synchronization statements do not describe the current repository;
+its M-only and A/B/C software semantics and restrictions continue to apply.
 
 An offline toolkit for task-relative structural measurement of recorded LLM outputs.
 

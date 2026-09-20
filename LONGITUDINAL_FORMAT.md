@@ -1,15 +1,15 @@
 # Longitudinal record format
 
-## Phase 3 Steps 2-7: records, observed trajectories, null models, empirical SHL, support assays and recovery
+## Phase 3 Steps 2-8: records, components, CLI, reports and replay
 
 | Field | Value |
 |---|---|
-| Format document | 0.6 |
+| Format document | 0.7 |
 | Profile | `structdet_longitudinal_v1` |
 | Extension version | `0.1` |
-| Component methods | `longitudinal_records_v1`; `observed_longitudinal_v1`; `categorical_null_v1`; `categorical_mixture_selection_v1`; `anchored_log_decay_v1`; `endpoint_log_decay_v1`; `longitudinal_trajectory_sensitivity_v1`; `finite_family_binomial_threshold_v1`; `finite_family_evidence_qualified_recovery_v1` |
-| Governing approval | `PHASE_3_PLAN.md`, especially sections 3-8, 9 and Steps 2-7 |
-| Implementation scope | Passive records, observed trajectories, categorical arithmetic, registered empirical/local SHL with complete-unit sensitivity, finite-family support assays, and evidence-qualified recovery with correction dependencies. Sections 1-9 retain the Step 2 API; sections 10-14 document Steps 3-7. |
+| Component methods | `longitudinal_records_v1`; `observed_longitudinal_v1`; `categorical_null_v1`; `categorical_mixture_selection_v1`; `anchored_log_decay_v1`; `endpoint_log_decay_v1`; `longitudinal_trajectory_sensitivity_v1`; `finite_family_binomial_threshold_v1`; `finite_family_evidence_qualified_recovery_v1`; `longitudinal_pipeline_v1` |
+| Governing approval | `PHASE_3_PLAN.md`, especially sections 3-8, 9 and Steps 2-8 |
+| Implementation scope | Passive records, observed trajectories, categorical arithmetic, registered empirical/local SHL with complete-unit sensitivity, finite-family support assays, and evidence-qualified recovery with correction dependencies. Sections 1-9 retain the Step 2 API; sections 10-14 document Steps 3-7; section 15 specifies the Step 8 opt-in CLI, redacted report and replay integration. |
 | Scientific evidence | Supplied assertions and their dependencies; substantive independent validation is not performed |
 | License | CC BY 4.0 under `LICENSING_NOTES.md` |
 
@@ -17,7 +17,7 @@
 
 `structdet_bench.longitudinal_records.review_longitudinal(bundle)` inspects an already loaded local bundle. It returns immutable records, scoped issues, retained declarations and an input-context fingerprint. It does not calculate distributions, retention, categorical expectations, half-lives, probability-threshold membership, recovery, or uncertainty. It makes no model, network, training, execution or external evidence-acquisition calls.
 
-The command-line longitudinal dispatch and report schema `0.3` belong to the approved Step 8. This step supplies the component API only. Existing M-only and A/B/C command-line paths retain their existing behavior; they are not claimed to validate a longitudinal request through this new component yet. Until Step 8, callers explicitly invoke the component below and do not interpret an older M report as longitudinal validation.
+Step 8 connects these components to the existing commands through the opt-in longitudinal profile and report schema `0.3`, as specified in section 15. Existing M-only and A/B/C command-line paths retain their meanings. A longitudinal declaration selects its own validation and analysis path; an older M report does not validate that declaration. The component API below remains available for controlled local inspection.
 
 ```python
 from structdet_bench.local_io import load_bundle
@@ -239,7 +239,7 @@ Statuses distinguish `not_requested`, `unavailable`, `contract_error`, `record_l
 
 The fingerprint covers actual loaded bytes as well as their declared identities, raw and typed records, full manifest, selected IDs, limits, artifact/access states, diagnostics and acquisition completeness. `assert_current` rejects a review belonging to a different snapshot. A matching display ID, stale declared content hash, unchanged label or changed workload limit cannot bypass it. No source file is reopened to obtain this fingerprint.
 
-Component results retain private evidence and original declarations for controlled local audit. They are not the public redacted JSON/Markdown renderer. That renderer is later Step 8 work and must apply the existing privacy rules. No raw source prose, personal mappings or unrestricted paths should be copied into a public report merely by serializing this internal dataclass.
+Component results retain private evidence and original declarations for controlled local audit. They are not the public redacted JSON/Markdown renderer. Section 15 defines the Step 8 renderer and its existing privacy rules. No raw source prose, personal mappings or unrestricted paths should be copied into a public report merely by serializing this internal dataclass.
 
 ## 8. Workload and safe-failure rules
 
@@ -430,7 +430,7 @@ All numeric counts continue to name classified realizations. A source declaratio
 
 The component uses the existing record/resource ceilings. A conservative bound on materialized measurement/slot/class records and repeated observed-request work is checked against `max_link_objects`. An excess returns explicit `observed_workload_limit` without truncating states, panels, tails or output observations. Exact fixed-unit mean calculations additionally check `max_exact_bits`; no floating approximation replaces an over-limit rational calculation. The existing exact-decimal threshold comparison avoids expanding a huge power-of-ten denominator.
 
-Results are immutable internal audit objects. They retain private declarations, source/evidence links and original populations. Do not dump an internal dataclass into a public report: the longitudinal redacted JSON/Markdown renderer and CLI dispatch remain Step 8 work. Ordinary M and A/B/C commands retain their prior meaning.
+Results are immutable internal audit objects. They retain private declarations, source/evidence links and original populations. Do not dump an internal dataclass into a public report: section 15 defines the longitudinal redacted JSON/Markdown renderer and CLI dispatch. Ordinary M and A/B/C commands retain their prior meaning.
 
 Step 3 closes P3-L06 through P3-L10 only after actual tests. P3-L01 through P3-L05 remain inherited. Null forecasts, SHL, trial-probability support, recovery and the final integrated report requirements remain future work. Independent structural validation, actual model experiments, candidate execution, hosted CI and UD-006 are not established by these software fixtures.
 
@@ -539,7 +539,7 @@ Nonnegative exact weights need not sum to one. Scaling all of them by the same p
 
 All-zero selected mass makes normalized selection undefined. This includes nonzero weights placed only on classes with zero candidate mass. The zero normalizing mass remains available; the selected distribution stays absent. A newly introduced class may therefore enter the mixture and be removed by selection. The module never fills `next_model_distribution` or certifies structural exogamy, recovery or learning from this arithmetic.
 
-Mixture/selection is a Python component in Step 4. No additional unapproved serialized mixture request, command, data-generating simulation or inference from generic contribution metadata is introduced. Complete longitudinal CLI/report integration remains Step 8.
+Mixture/selection is a Python component in Step 4. No additional unapproved serialized mixture request, command, data-generating simulation or inference from generic contribution metadata is introduced. Section 15 defines complete longitudinal CLI/report integration.
 
 ### 11.7 Results, limits and evidence scope
 
@@ -549,7 +549,7 @@ The inherited limits remain effective: at most 128 categorical classes, 10,000 f
 
 An over-limit forecast is unavailable as a whole; no shortened prefix is returned as the complete requested curve. Independently computable one-step, SHL or parent quantities can remain available when a separate endpoint exceeds its exact-work limit. There is no floating fallback for rational probabilities, no class pruning, no lower sample budget substitution, and no random approximation. Nonfinite logarithmic results are withheld with a numerical-failure reason.
 
-These internal objects retain audit declarations, which can be private. The public/redacted report renderer is still later work. No raw dataclass dump is advertised as a public reporting interface.
+These internal objects retain audit declarations, which can be private. Section 15 defines the public redacted report renderer. No raw dataclass dump is advertised as a public reporting interface.
 
 ### 11.8 Acceptance and stop
 
@@ -575,7 +575,7 @@ fits = fit_half_lives(bundle)
 sensitivity = evaluate_longitudinal_sensitivity(bundle, half_lives=fits)
 ```
 
-Both consume the safe reader's existing snapshots. The longitudinal extension requires `observed` and `half_life` capabilities and explicit `shl_requests`. No generation, training, source acquisition, candidate execution or automatic support assay occurs. CLI dispatch and public report rendering remain Step 8. Existing M-only and A/B/C behavior is unchanged.
+Both consume the safe reader's existing snapshots. The longitudinal extension requires `observed` and `half_life` capabilities and explicit `shl_requests`. No generation, training, source acquisition, candidate execution or automatic support assay occurs. Section 15 defines CLI dispatch and public report rendering. Existing M-only and A/B/C behavior is unchanged.
 
 ### 12.2 Registered fitting window and criterion
 
@@ -670,7 +670,7 @@ replayed = evaluate_longitudinal_sensitivity(
 )
 ```
 
-Explicit replay mode must supply every requested record. Missing, null, truncated, wrong-unit, wrong-context or corrupted manifests never trigger regeneration. Replay validates and uses the stored indices; it does not call the RNG or demand that the current Python patch version regenerate the same stream. Replacing plan/data/evidence in the scientific bundle changes consumed context and rejects a prior replay. `validate_replay` additionally accepts an externally retained expected manifest digest. Digests preserve identity and do not authenticate the truth or origin of supplied evidence. Loading a replay file and wiring it to the later CLI remains Step 8 work.
+Explicit replay mode must supply every requested record. Missing, null, truncated, wrong-unit, wrong-context or corrupted manifests never trigger regeneration. Replay validates and uses the stored indices; it does not call the RNG or demand that the current Python patch version regenerate the same stream. Replacing plan/data/evidence in the scientific bundle changes consumed context and rejects a prior replay. `validate_replay` additionally accepts an externally retained expected manifest digest. Digests preserve identity and do not authenticate the truth or origin of supplied evidence. Section 15 defines safe replay-file acquisition and CLI dispatch.
 
 ### 12.7 Limits, numerical treatment and current test scope
 
@@ -737,7 +737,7 @@ for assay in study.assays:
 
 `SupportAssayStudy` retains the source `LongitudinalReview`, consumed context digest, effective limits, episode J, total actual tail work, typed assay results, status and reasons. Each `AssayResult` retains its state, family/version, original and semantic success-event names, registry reference, class/member inventories, all class/member cells and trial outcomes, class statuses, observed union, conditional support size, normalization and set-size bounds. `substantive_validation_performed`, `latent_support_established` and `model_recovery_established` remain false.
 
-Each `AssayCell` retains a `CellDecision`, planned/attempted/completed/missing counts, the complete trial ledger and eligibility reasons. The decision holds exact `Fraction` operands and tails. Each trial retains the original references, candidate position, confirmed/uncertain outcome and reasons. These objects are internal audit components, with public redaction/serialization deferred to Step 8.
+Each `AssayCell` retains a `CellDecision`, planned/attempted/completed/missing counts, the complete trial ledger and eligibility reasons. The decision holds exact `Fraction` operands and tails. Each trial retains the original references, candidate position, confirmed/uncertain outcome and reasons. These objects are internal audit components, with public redaction/serialization defined in section 15.
 
 The separately callable arithmetic function is:
 
@@ -790,7 +790,7 @@ For known M of size three with one member present post, one below threshold and 
 
 Tools and grounded retrieval can change the system configuration while keeping the registered evaluation task family fixed. Their qualified claim concerns expression by the assisted system under those conditions. A training intervention identifies its post-intervention model state. Neither can be described as recovery solely from the previous model's latent representation. Direct target-answer substitution is excluded; worked solutions in permitted training material require the registered exposure and non-injection review rather than an automatic copying verdict.
 
-The component consumes already acquired local records. It performs no model call, training, external acquisition, candidate execution, automatic taxonomy change or independent substantive validation. Fixture-qualified arithmetic stays explicitly fixture-only. No causal superiority claim over self-resampling follows from a before/after recovery fraction. Longitudinal CLI/report integration remains Step 8 work.
+The component consumes already acquired local records. It performs no model call, training, external acquisition, candidate execution, automatic taxonomy change or independent substantive validation. Fixture-qualified arithmetic stays explicitly fixture-only. No causal superiority claim over self-resampling follows from a before/after recovery fraction. Section 15 defines longitudinal CLI/report integration.
 
 ### 14.2 Registration and paired evaluation identity
 
@@ -847,7 +847,7 @@ An original anomaly can remain unresolved without receiving class mass. Split, m
 
 Independence and metadata corrections are recorded as claim-only restrictions while preserving separately supported descriptive counts. A metadata correction does not authorize reuse of a stale context; any actual change to measured content still requires fresh acquisition and component evaluation. Membership, validity, schema or lineage changes invalidate their actually dependent interpretation and results. Unrelated results retain their own support. A changed current snapshot always receives a new consumed-input identity, even when an unaffected numerical value happens to remain equal. Old results are not overwritten; `old_results_overwritten`, `new_model_samples` and `new_recursive_rounds` remain false/zero in the correction ledger.
 
-This component covers the Step 7 portion of P3-L34. Public report/manifests and complete integrated propagation remain later Phase 3 work. The dependency ledger must not be interpreted as proof that Step 8 report integration or the final Phase 3 conformance review has already occurred.
+This component covers the Step 7 portion of P3-L34. Section 15 adds the Step 8 public report and manifest integration. The final cross-component mutation and conformance review remains Step 9; a dependency ledger or one successful fixture does not complete that review.
 
 ### 14.5 Component API, retained results and validation boundary
 
@@ -876,3 +876,180 @@ Each `RecoveryEpisode` retains its exact reference and `external_recovery_rate` 
 These immutable objects are internal audit results. They retain private evidence and original declarations for local inspection. Direct unrestricted serialization is not the public redacted renderer. Existing safe-reader, exact arithmetic and declared workload limits remain in force; Step 7 introduces no alternate file reader, hidden sampling, approximation fallback or automatic action.
 
 `tests/fixtures/recovery_cases.json` supplies stipulated set-oracle cases whose actual candidate, call, assignment and validity records are materialized through the normal loader by the tests. Those cases exercise exact, empty, unresolved and partial recovery states without supplying final assay decisions as input evidence. P3-L29 through P3-L33 are the Step 7 acceptance targets. P3-L34 remains a cross-step requirement, and Step 8 begins the integrated longitudinal CLI and public report work.
+
+
+## 15. CLI, redacted reports, examples and manifest replay (Step 8)
+
+### 15.1 Opt-in dispatch and public API
+
+The existing `pipeline.validate_bundle` and `pipeline.analyze_bundle` functions
+select this profile when the safely loaded analysis extension contains a
+`longitudinal` key. A malformed, null, unsupported-version or incompatible
+longitudinal declaration produces processing exit 2. It cannot silently select
+a successful M-only report. A simultaneous `comparison` declaration is rejected.
+Omitting longitudinal retains schema 0.1 M-only or schema 0.2 A/B/C behavior.
+
+```python
+from structdet_bench.pipeline import validate_bundle, analyze_bundle, write_analysis
+
+validation, code = validate_bundle("examples/hero_recursive/bundle.json")
+analysis = analyze_bundle("examples/hero_recursive/bundle.json")
+write_analysis(analysis, "recursive-output", bundle_path="examples/hero_recursive/bundle.json")
+replayed = analyze_bundle(
+    "examples/hero_recursive/bundle.json",
+    replay_manifest_path="recursive-output/run_manifest.json",
+)
+```
+
+Both public functions accept the optional `replay_manifest_path` keyword. Their
+existing `limits` parameter remains effective; `analyze_bundle` retains `run_id`
+and UTC `recorded_at` metadata parameters. Passing an external longitudinal
+replay to a legacy profile is an input error. `Analysis` retains the immutable
+public report/manifest and the complete serialized JSON, Markdown and manifest
+bytes. Publication remains a separate operation.
+
+`longitudinal_pipeline.longitudinal_validation` reviews declaration, source,
+preregistration, plan and replay structure. It does not construct numerical
+SHL fits, binomial decisions or ERR values. Analysis evaluates requested
+components and their declared prerequisites using the existing immutable
+`LoadedBundle`. It performs no input-selected imports, candidate execution,
+training, network requests or automatic evidence acquisition.
+
+### 15.2 Commands and processing states
+
+The two existing commands gain an optional `--replay-manifest` argument; no new
+active command is introduced.
+
+```bash
+python3.13 -B -S -m structdet_bench validate --bundle examples/hero_recursive/bundle.json
+python3.13 -B -S -m structdet_bench analyze --bundle examples/hero_recursive/bundle.json --output-dir recursive-output
+python3.13 -B -S -m structdet_bench validate --bundle examples/hero_recursive/bundle.json --replay-manifest recursive-output/run_manifest.json
+python3.13 -B -S -m structdet_bench analyze --bundle examples/hero_recursive/bundle.json --replay-manifest recursive-output/run_manifest.json --output-dir recursive-replay
+```
+
+Exit 0 means successful bounded software processing, including legitimate
+undefined, unavailable or non-applicable scientific results. Exit 2 identifies
+malformed or incompatible input/configuration/replay; exit 3 identifies unexpected
+I/O, internal or publication failure. CLI diagnostics retain fixed error codes
+without echoing private paths, arguments or source bodies.
+An already existing output target is a recognized invocation precondition error
+(`output_already_exists`, exit 2); its existing contents remain untouched.
+
+Each output parent must exist, the output directory must be new and outside the
+input bundle, and all three outputs are completely serialized before publication.
+The existing safe no-follow reader and atomic nonreplacement directory transaction
+remain in force. Existing output directories and prior reports are preserved.
+No weaker platform fallback is added.
+
+### 15.3 One public report tree
+
+The profile is `structdet_longitudinal_v1`; report and run-manifest versions are
+`0.3`. JSON and Markdown render the same eight-section tree, in the approved
+order. Numeric results retain exact rational operands, unreduced set/count
+cardinalities where relevant, original scientific status, methods, units,
+evidence restrictions and missingness.
+
+| Section | Principal populated fields |
+|---|---|
+| 1. Scope and methods | Requested capabilities, source and EC-001 pins, component methods, processing status, effective limits, historical frozen baseline and separate workflow statuses. |
+| 2. State and lineage | Typed states, panels, measurements, roots, transitions, trajectories, stage/clock identities, binding review, inventories, diagnostics and gaps. |
+| 3. Observed state profiles | Both classification views, coverage, class frequencies and support, protected-tail observations and registered curves. |
+| 4. Retention and categorical scenarios | Observed requests, recurrence/retention, stage transitions and separately labeled exact finite categorical scenarios. |
+| 5. Empirical SHL and sensitivity | Local/fitted results, endpoints, real round coordinates, residuals, crossing brackets, full draw outcomes and sensitivity limits. |
+| 6. Assays and recovery | Planned and consumed trials, finite-family decisions, present/below/unresolved classes, pre missing set, compatible descriptive intersections, ERR or separate partial bounds, gates and exogamy stages. |
+| 7. Corrections and reopening | Preserved anomaly links, distributional/structural revisions, dependency links, affected results and claims, zero newly created samples/rounds and preserved prior reports. |
+| 8. Integrity and currentness | Five conditions, supplied assessment outcomes, all ten EC disclosures, omitted conditions, declared expiry, actual input identity and release restrictions. |
+
+A known empty recovery denominator remains mathematically undefined. Unknown pre
+membership withholds the denominator; unknown post membership preserves separately
+named partial-information bounds where justified. A failed recovery-evidence gate
+can restrict ERR while preserving separately supported descriptive intersections.
+Assumption-bound categorical arithmetic remains separate from measured neural
+behavior. A lower diversity value supplies no automatic harm or causal verdict.
+
+Internal component objects remain richer than public outputs. The public
+projection protects subject identities, private mappings, unrestricted reasons
+and evidence prose, selection rationales, raw bodies and local paths. Internal
+source/stage records are reduced to explicit provenance references, hashes and
+states. Typed audit references, declared dates, class membership, exact operands
+and review scope remain available. Hashes provide identity links, without
+establishing evidence validity or anonymization. The JSON, Markdown, manifest
+and validation response all apply their scoped public projection.
+
+### 15.4 Complete replay carrier
+
+`run_manifest.json` retains canonical input/configuration identities, all consumed
+input references, expected record files, artifact acquisition states, effective
+limits, source/method identities and actual installed implementation file hashes.
+Its historical Step 7 baseline identity is explicitly distinct from any current
+repository-publication assertion. Local processing, repository delivery, owner
+acceptance and substantive evidence retain separate statuses.
+
+`longitudinal_replay` contains the input/configuration/implementation bindings,
+ordered per-request entries and a collection digest. Each applicable sensitivity
+entry includes the complete registered 2,000-row integer index matrix, unit order,
+plan/context identity and its own digest. Failed draw outcomes are retained;
+they cannot be removed to improve an interval. No manifest hashes itself or
+asserts a future commit.
+
+An external manifest is acquired through `LocalReader`, with combined input byte
+limits and the normal bounded JSON parser. Replay checks both carrier coherence
+and the actual loaded source, request, plan, method, implementation, unit order,
+index matrix and digest identities. Moving unchanged input bytes to another
+safe directory preserves their relative-input identity. Changed content,
+configuration, code, incomplete indices, wrong order or inconsistent metadata
+rejects the replay. Self-consistent digest edits do not excuse an invalid matrix.
+
+A null matrix can represent a genuine unavailable result only when current
+nonnumeric source/plan/dependency validation independently establishes that
+absence. A forged unavailable status or a replay-induced `explicit_null_replay`
+reason cannot remove the required matrix. Numerically unavailable draw outcomes
+still retain their full matrices. Explicit replay never regenerates missing
+indices or silently uses a new random stream.
+
+Replay transport status appears in validation output and manifest metadata.
+It does not alter the scientific report tree. Under the same inputs, software
+and saved indices, JSON and Markdown report bytes are identical. The manifest
+separately identifies recording time, runtime/platform metadata and replay-source
+identity as variable fields.
+
+### 15.5 Delivered passive examples and independent expectations
+
+`examples/hero_recursive` contains a complete fixture request, core observations,
+mock support records, a registered sensitivity plan and actual passive source
+texts. It supplies 472 stipulated realizations and 206 stipulated attempts,
+including 192 one-position assay attempts. These counts are fixture choices;
+no model was called and no program was executed.
+
+The two four-point observed panels use actual admitted class counts giving
+D = `(1/2, 135/512, 15/128, 31/512)`. Independently evaluated high-precision
+logarithms give a fitted half-life of approximately `0.9826758266296705`
+recursive rounds under the declared residual criterion. The example also
+contains a protected-tail gap and reappearance, a shared-ancestor fork, distinct
+selection/exposure stages and a fixture-qualified exact recovery fraction `1/2`.
+Neither its copied labels nor its mock review records establish independent E.
+
+The bounded file roles are explicit: `text_01.txt` through `text_07.txt` contain
+passive program demonstrations. `text_08.txt` is strict JSON for the passive
+sensitivity plan and is never a realization body. `prompts.json` is a valid
+reference-registry record with the exact fixture prompt texts in its extensions.
+`expected.json` contains independent counts, set/fraction calculations and
+high-precision fit expectations. This arrangement uses only the approved example
+paths and requires no new file role or loader exception.
+
+`examples/categorical_null` separately contains available closed arithmetic,
+refusal when the closed assumption is false and unavailability for unknown n.
+Its expectations retain the unknown operand and do not invent a next-step value.
+It makes no claim about an observed neural trajectory or an additional validated
+algorithm taxonomy.
+
+Registered integration variants use source-record changes through the normal
+loader. They cover empty/unresolved/partial recovery, failed evidence gates,
+stable/growing/zero/non-geometric paths, gaps, recuts and correction propagation.
+A record correction requires a newly bound analysis and a new output directory;
+it cannot overwrite the old report or create a new sample or recursive round.
+
+P3-L35 is the Step 8 acceptance target. P3-L34, P3-L36 and P3-L37 retain cross-step
+conformance work, and the final report/oracle inventory remains Step 9 work.
+Working examples and replay do not complete the full Phase 3 L gate, owner
+acceptance, UD-006 or deferred latent-support diagnostics.

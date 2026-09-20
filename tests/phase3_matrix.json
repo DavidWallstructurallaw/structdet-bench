@@ -5,8 +5,8 @@
   },
   "delivery": {
     "authorization": {
-      "owner_instruction": "Phase 3 Step 7 继续",
-      "scope": "Phase 3 Step 7 under the approved plan: evidence-qualified recovery, separate exogamy stages, reopening and correction dependencies; stop before Step 8 CLI/report integration or substantive empirical validation."
+      "owner_instruction": "Phase 3 Step 8 go",
+      "scope": "Approved Phase3Step8 examples, existing CLI integration, redacted reports and complete manifest replay; stop before Step9 final conformance and substantive empirical validation."
     },
     "final_owner_acceptance": "not_established_by_software_tests",
     "history": [
@@ -764,6 +764,27 @@
         "runtime_started": true,
         "status": "support_assay_implementation_complete_verification_recorded_separately",
         "step": 6
+      },
+      {
+        "authorization": {
+          "owner_instruction": "Phase 3 Step 7 继续",
+          "scope": "Phase 3 Step 7 under the approved plan: evidence-qualified recovery, separate exogamy stages, reopening and correction dependencies; stop before Step 8 CLI/report integration or substantive empirical validation."
+        },
+        "final_owner_acceptance": "not_established_by_software_tests",
+        "initialization": {
+          "counts": {
+            "longitudinal": 40,
+            "oracles": 24,
+            "reports": 16
+          },
+          "implementation_status": "not_implemented",
+          "step": 1,
+          "test_bindings": []
+        },
+        "phase": 3,
+        "runtime_started": true,
+        "status": "recovery_implementation_complete_verification_recorded_separately",
+        "step": 7
       }
     ],
     "initialization": {
@@ -778,8 +799,8 @@
     },
     "phase": 3,
     "runtime_started": true,
-    "status": "recovery_implementation_complete_verification_recorded_separately",
-    "step": 7
+    "status": "integration_complete_verification_recorded_separately",
+    "step": 8
   },
   "evidence_status": "not_supplied",
   "legacy_catalogue_identity": {
@@ -2592,6 +2613,11 @@
       "anchor": "MET 14; EI 10",
       "evidence_status": "not_supplied",
       "fixture_refs": [
+        "examples/categorical_null/bundle.json",
+        "examples/categorical_null/expected.json",
+        "examples/hero_recursive/bundle.json",
+        "examples/hero_recursive/expected.json",
+        "tests/fixtures/longitudinal_variants.json",
         "tests/fixtures/recovery_cases.json"
       ],
       "id": "P3-L34",
@@ -2601,65 +2627,148 @@
       "requirement": "Snapshot mutations invalidate all actually dependent curves, fits, assays, missing sets and reports; unrelated results survive.",
       "scope": "L_software",
       "test_bindings": [
+        "tests.test_phase3_pipeline.SourceRecordIntegration.test_membership_correction_invalidates_dependents_and_preserves_unrelated_panels",
+        "tests.test_phase3_pipeline.SourceRecordIntegration.test_schema_recut_preserves_original_anomaly_without_creating_recovery",
+        "tests.test_phase3_security.ReplayBoundary.test_old_report_survives_evidence_correction_and_same_old_manifest_replays",
+        "tests.test_phase3_security.ReplayBoundary.test_wrong_replay_profile_context_and_unit_order_are_rejected",
         "tests.test_recovery.SnapshotAndScopeTests.test_absent_profile_is_not_requested",
-        "tests.test_recovery.SnapshotAndScopeTests.test_recovery_capability_not_requested_has_no_numeric_rate",
-        "tests.test_recovery.SnapshotAndScopeTests.test_wrong_bundle_type_is_rejected",
-        "tests.test_recovery.SnapshotAndScopeTests.test_malformed_profile_is_controlled_error",
-        "tests.test_recovery.SnapshotAndScopeTests.test_stale_assays_cannot_be_reused_after_underlying_assignment_changes",
+        "tests.test_recovery.SnapshotAndScopeTests.test_classification_revision_requires_renewed_recovery_review",
         "tests.test_recovery.SnapshotAndScopeTests.test_forged_cached_assay_sets_are_rejected_even_with_original_fingerprint",
-        "tests.test_recovery.SnapshotAndScopeTests.test_fresh_evaluation_rejects_changed_training_bytes_under_old_witnesses",
         "tests.test_recovery.SnapshotAndScopeTests.test_fresh_evaluation_rejects_changed_evaluation_bytes_under_old_witnesses",
         "tests.test_recovery.SnapshotAndScopeTests.test_fresh_evaluation_rejects_changed_review_bytes_under_old_witnesses",
-        "tests.test_recovery.SnapshotAndScopeTests.test_classification_revision_requires_renewed_recovery_review",
-        "tests.test_recovery.SnapshotAndScopeTests.test_widened_registered_exposure_requires_renewed_noninjection_and_validation_review",
-        "tests.test_recovery.SnapshotAndScopeTests.test_stale_recovery_result_rejects_same_display_id_changed_material",
+        "tests.test_recovery.SnapshotAndScopeTests.test_fresh_evaluation_rejects_changed_training_bytes_under_old_witnesses",
+        "tests.test_recovery.SnapshotAndScopeTests.test_malformed_profile_is_controlled_error",
         "tests.test_recovery.SnapshotAndScopeTests.test_postload_evaluation_performs_no_file_network_or_process_operations",
-        "tests.test_recovery.SuppliedComponentTests.test_supplied_current_review_observed_and_nonempty_fit_roundtrip",
-        "tests.test_recovery.SuppliedComponentTests.test_forged_review_with_current_snapshot_is_rejected",
-        "tests.test_recovery.SuppliedComponentTests.test_forged_observed_value_with_original_context_is_rejected",
-        "tests.test_recovery.SuppliedComponentTests.test_forged_empirical_fit_with_original_context_is_rejected",
-        "tests.test_recovery.SuppliedComponentTests.test_old_observed_and_fit_are_rejected_after_actual_classification_change",
-        "tests.test_recovery.StageAndCorrectionTests.test_unrelated_revision_leaves_episode_available",
+        "tests.test_recovery.SnapshotAndScopeTests.test_recovery_capability_not_requested_has_no_numeric_rate",
+        "tests.test_recovery.SnapshotAndScopeTests.test_stale_assays_cannot_be_reused_after_underlying_assignment_changes",
+        "tests.test_recovery.SnapshotAndScopeTests.test_stale_recovery_result_rejects_same_display_id_changed_material",
+        "tests.test_recovery.SnapshotAndScopeTests.test_widened_registered_exposure_requires_renewed_noninjection_and_validation_review",
+        "tests.test_recovery.SnapshotAndScopeTests.test_wrong_bundle_type_is_rejected",
         "tests.test_recovery.StageAndCorrectionTests.test_claim_only_independence_correction_preserves_descriptive_sets",
         "tests.test_recovery.StageAndCorrectionTests.test_membership_correction_reaches_dependent_results_and_preserves_unrelated_panels",
-        "tests.test_recovery.StageAndCorrectionTests.test_reanalysis_creates_no_new_trials_samples_or_recursive_rounds"
+        "tests.test_recovery.StageAndCorrectionTests.test_reanalysis_creates_no_new_trials_samples_or_recursive_rounds",
+        "tests.test_recovery.StageAndCorrectionTests.test_unrelated_revision_leaves_episode_available",
+        "tests.test_recovery.SuppliedComponentTests.test_forged_empirical_fit_with_original_context_is_rejected",
+        "tests.test_recovery.SuppliedComponentTests.test_forged_observed_value_with_original_context_is_rejected",
+        "tests.test_recovery.SuppliedComponentTests.test_forged_review_with_current_snapshot_is_rejected",
+        "tests.test_recovery.SuppliedComponentTests.test_old_observed_and_fit_are_rejected_after_actual_classification_change",
+        "tests.test_recovery.SuppliedComponentTests.test_supplied_current_review_observed_and_nonempty_fit_roundtrip"
       ]
     },
     {
       "anchor": "Plan 8.4-8.5",
       "evidence_status": "not_supplied",
-      "fixture_refs": [],
+      "fixture_refs": [
+        "examples/categorical_null/bundle.json",
+        "examples/categorical_null/expected.json",
+        "examples/hero_recursive/bundle.json",
+        "examples/hero_recursive/expected.json",
+        "tests/fixtures/longitudinal_variants.json"
+      ],
       "id": "P3-L35",
-      "implementation_status": "not_implemented",
+      "implementation_status": "implemented",
       "primary_steps": "8",
       "required_by_step": 8,
       "requirement": "Complete source-record-to-report fixtures and CLI pass; final metrics cannot be injected as fake input evidence.",
       "scope": "L_software",
-      "test_bindings": []
+      "test_bindings": [
+        "tests.test_phase3_pipeline.ReplayAndCommands.test_cli_replay_manifest_is_accepted_by_existing_analyze_command",
+        "tests.test_phase3_pipeline.ReplayAndCommands.test_cli_validate_and_analyze_publish_complete_three_file_set",
+        "tests.test_phase3_pipeline.ReplayAndCommands.test_full_manifest_replay_uses_saved_indices_without_rng",
+        "tests.test_phase3_pipeline.ReplayAndCommands.test_malformed_declaration_is_error_not_absent_profile",
+        "tests.test_phase3_pipeline.ReplayAndCommands.test_manifest_preserves_all_2000_complete_indices_and_independent_hash",
+        "tests.test_phase3_pipeline.ReplayAndCommands.test_old_M_and_ABC_profiles_preserve_numerical_and_deferred_meanings",
+        "tests.test_phase3_pipeline.ReplayAndCommands.test_validate_does_not_compute_observed_null_fit_assay_or_recovery",
+        "tests.test_phase3_pipeline.SourceRecordIntegration.test_assay_exact_threshold_decisions_preserve_full_multiplicity",
+        "tests.test_phase3_pipeline.SourceRecordIntegration.test_count_derived_diversity_and_independent_log_fit",
+        "tests.test_phase3_pipeline.SourceRecordIntegration.test_derivative_grounding_and_direct_injection_withhold_qualified_recovery",
+        "tests.test_phase3_pipeline.SourceRecordIntegration.test_empty_missing_set_is_undefined_and_keeps_zero_denominator",
+        "tests.test_phase3_pipeline.SourceRecordIntegration.test_fixture_provenance_never_becomes_experiment_or_model_recovery",
+        "tests.test_phase3_pipeline.SourceRecordIntegration.test_half_ERR_uses_original_eight_class_missing_set",
+        "tests.test_phase3_pipeline.SourceRecordIntegration.test_hero_assay_source_has_192_single_position_calls",
+        "tests.test_phase3_pipeline.SourceRecordIntegration.test_injected_final_score_cannot_replace_missing_trial_evidence",
+        "tests.test_phase3_pipeline.SourceRecordIntegration.test_membership_correction_invalidates_dependents_and_preserves_unrelated_panels",
+        "tests.test_phase3_pipeline.SourceRecordIntegration.test_missing_expected_state_keeps_clock_gap_and_other_values",
+        "tests.test_phase3_pipeline.SourceRecordIntegration.test_partial_post_bounds_are_separate_exact_one_third_two_thirds",
+        "tests.test_phase3_pipeline.SourceRecordIntegration.test_registered_variants_have_independent_source_rules",
+        "tests.test_phase3_pipeline.SourceRecordIntegration.test_schema_profile_eight_sections_and_three_outputs",
+        "tests.test_phase3_pipeline.SourceRecordIntegration.test_schema_recut_preserves_original_anomaly_without_creating_recovery",
+        "tests.test_phase3_pipeline.SourceRecordIntegration.test_stable_growth_zero_and_nongeometric_have_distinct_reasons",
+        "tests.test_phase3_pipeline.SourceRecordIntegration.test_unknown_pre_has_no_exact_missing_denominator",
+        "tests.test_phase3_security.PassiveAndPublication.test_active_commands_remain_unavailable_and_errors_redact_arguments",
+        "tests.test_phase3_security.PassiveAndPublication.test_atomic_publication_race_keeps_concurrent_writer_and_cleans_staging",
+        "tests.test_phase3_security.PassiveAndPublication.test_existing_output_is_immutable_and_only_three_files_are_written",
+        "tests.test_phase3_security.PassiveAndPublication.test_hostile_evidence_private_actor_and_paths_never_enter_three_files",
+        "tests.test_phase3_security.PassiveAndPublication.test_internal_exception_reports_three_without_traceback_or_publication",
+        "tests.test_phase3_security.PassiveAndPublication.test_serialization_or_file_write_failure_publishes_no_partial_directory",
+        "tests.test_phase3_security.PassiveAndPublication.test_symlink_traversal_and_output_under_input_are_refused",
+        "tests.test_phase3_security.ReplayBoundary.test_duplicate_keys_and_missing_draws_are_input_errors_without_rng_fallback",
+        "tests.test_phase3_security.ReplayBoundary.test_forged_unavailable_null_matrix_cannot_replace_recorded_2000_draws",
+        "tests.test_phase3_security.ReplayBoundary.test_old_report_survives_evidence_correction_and_same_old_manifest_replays",
+        "tests.test_phase3_security.ReplayBoundary.test_remote_or_symlink_replay_never_fetches_or_leaks_locator",
+        "tests.test_phase3_security.ReplayBoundary.test_wrong_replay_profile_context_and_unit_order_are_rejected"
+      ]
     },
     {
       "anchor": "EC 7, 10",
       "evidence_status": "not_supplied",
-      "fixture_refs": [],
+      "fixture_refs": [
+        "examples/categorical_null/bundle.json",
+        "examples/categorical_null/expected.json",
+        "examples/hero_recursive/bundle.json",
+        "examples/hero_recursive/expected.json",
+        "tests/fixtures/longitudinal_variants.json"
+      ],
       "id": "P3-L36",
-      "implementation_status": "not_implemented",
+      "implementation_status": "partial",
       "primary_steps": "8-9",
       "required_by_step": 9,
       "requirement": "Both formats retain all scalar states, scopes, dates, denominators, omissions and redacted audit links.",
       "scope": "L_software",
-      "test_bindings": []
+      "test_bindings": [
+        "tests.test_phase3_reporting.LongitudinalReportGroups.test_RF01_profile_sources_methods_and_fixture_claim_scope",
+        "tests.test_phase3_reporting.LongitudinalReportGroups.test_RF02_states_stages_identities_measurement_refs_and_absent_neural_states",
+        "tests.test_phase3_reporting.LongitudinalReportGroups.test_RF03_lineage_paths_clocks_and_actual_missing_schedule",
+        "tests.test_phase3_reporting.LongitudinalReportGroups.test_RF04_population_denominators_budgets_and_absent_measurement",
+        "tests.test_phase3_reporting.LongitudinalReportGroups.test_RF05_observed_diversity_sets_tail_and_undefined_empty_population",
+        "tests.test_phase3_reporting.LongitudinalReportGroups.test_RF06_stage_records_do_not_turn_training_exposure_into_probe_samples",
+        "tests.test_phase3_reporting.LongitudinalReportGroups.test_RF07_categorical_exact_arithmetic_assumptions_and_missing_target",
+        "tests.test_phase3_reporting.LongitudinalReportGroups.test_RF08_fit_residuals_window_rounds_and_zero_crossing_absence",
+        "tests.test_phase3_reporting.LongitudinalReportGroups.test_RF09_sensitivity_complete_draw_statuses_grid_and_absent_interval",
+        "tests.test_phase3_reporting.LongitudinalReportGroups.test_RF10_assay_N_k_threshold_tails_and_absent_assays",
+        "tests.test_phase3_reporting.LongitudinalReportGroups.test_RF11_expressible_sets_reference_denominator_and_unresolved_state",
+        "tests.test_phase3_reporting.LongitudinalReportGroups.test_RF12_missing_recovered_sets_and_partial_unavailable_rate",
+        "tests.test_phase3_reporting.LongitudinalReportGroups.test_RF13_all_five_exogamy_stages_and_no_inferred_causal_claim",
+        "tests.test_phase3_reporting.LongitudinalReportGroups.test_RF14_recut_originals_dependencies_and_zero_new_observations",
+        "tests.test_phase3_reporting.LongitudinalReportGroups.test_RF15_five_conditions_ten_disclosures_and_no_invented_expiry",
+        "tests.test_phase3_reporting.LongitudinalReportGroups.test_RF16_processing_limits_redaction_and_separate_publication_scope",
+        "tests.test_phase3_reporting.RenderingAndCurrentness.test_complete_JSON_tree_and_eight_markdown_sections_have_same_values",
+        "tests.test_phase3_reporting.RenderingAndCurrentness.test_declared_scoped_dates_survive_both_formats_without_certification",
+        "tests.test_phase3_reporting.RenderingAndCurrentness.test_schema_profile_wrong_order_nonfinite_and_unknown_content_keys_fail",
+        "tests.test_phase3_security.PassiveAndPublication.test_hostile_evidence_private_actor_and_paths_never_enter_three_files"
+      ]
     },
     {
       "anchor": "Prior M/V contracts",
       "evidence_status": "not_supplied",
-      "fixture_refs": [],
+      "fixture_refs": [
+        "examples/categorical_null/bundle.json",
+        "examples/categorical_null/expected.json",
+        "examples/hero_recursive/bundle.json",
+        "examples/hero_recursive/expected.json",
+        "tests/fixtures/longitudinal_variants.json"
+      ],
       "id": "P3-L37",
-      "implementation_status": "not_implemented",
+      "implementation_status": "partial",
       "primary_steps": "8-9",
       "required_by_step": 9,
       "requirement": "Original semantic/numeric tests and historical matrices remain; new implementation fingerprints do not rewrite old reports.",
       "scope": "L_software",
-      "test_bindings": []
+      "test_bindings": [
+        "tests.test_phase3_pipeline.ReplayAndCommands.test_old_M_and_ABC_profiles_preserve_numerical_and_deferred_meanings",
+        "tests.test_phase3_security.FrozenIdentityBoundary.test_authorized_runtime_pins_still_reject_runtime_and_scientific_mutation",
+        "tests.test_phase3_security.ReplayBoundary.test_old_report_survives_evidence_correction_and_same_old_manifest_replays"
+      ]
     },
     {
       "anchor": "SD 12; SI 12; EC 12",
@@ -2978,179 +3087,307 @@
   "reports": [
     {
       "evidence_status": "not_supplied",
-      "fixture_refs": [],
+      "fixture_refs": [
+        "examples/hero_recursive/bundle.json",
+        "examples/hero_recursive/expected.json",
+        "examples/categorical_null/bundle.json",
+        "examples/categorical_null/expected.json",
+        "tests/fixtures/longitudinal_variants.json"
+      ],
       "id": "P3-RF01",
-      "implementation_status": "not_implemented",
+      "implementation_status": "partial",
       "l_anchors": "L01, L02, L38",
       "required_by_step": 9,
       "requirement": "New profile, source/method identity, local scope and permitted claim type.",
       "scope": "L_software",
-      "test_bindings": []
+      "test_bindings": [
+        "tests.test_phase3_reporting.LongitudinalReportGroups.test_RF01_profile_sources_methods_and_fixture_claim_scope"
+      ]
     },
     {
       "evidence_status": "not_supplied",
-      "fixture_refs": [],
+      "fixture_refs": [
+        "examples/hero_recursive/bundle.json",
+        "examples/hero_recursive/expected.json",
+        "examples/categorical_null/bundle.json",
+        "examples/categorical_null/expected.json",
+        "tests/fixtures/longitudinal_variants.json"
+      ],
       "id": "P3-RF02",
-      "implementation_status": "not_implemented",
+      "implementation_status": "partial",
       "l_anchors": "L03, L06",
       "required_by_step": 9,
       "requirement": "State/kind/stage, parameter/system identity and original measurement refs.",
       "scope": "L_software",
-      "test_bindings": []
+      "test_bindings": [
+        "tests.test_phase3_reporting.LongitudinalReportGroups.test_RF02_states_stages_identities_measurement_refs_and_absent_neural_states"
+      ]
     },
     {
       "evidence_status": "not_supplied",
-      "fixture_refs": [],
+      "fixture_refs": [
+        "examples/hero_recursive/bundle.json",
+        "examples/hero_recursive/expected.json",
+        "examples/categorical_null/bundle.json",
+        "examples/categorical_null/expected.json",
+        "tests/fixtures/longitudinal_variants.json"
+      ],
       "id": "P3-RF03",
-      "implementation_status": "not_implemented",
+      "implementation_status": "partial",
       "l_anchors": "L04, L05, L32",
       "required_by_step": 9,
       "requirement": "Typed lineage, chosen paths, roots, parent contributions, round distances and gaps.",
       "scope": "L_software",
-      "test_bindings": []
+      "test_bindings": [
+        "tests.test_phase3_reporting.LongitudinalReportGroups.test_RF03_lineage_paths_clocks_and_actual_missing_schedule"
+      ]
     },
     {
       "evidence_status": "not_supplied",
-      "fixture_refs": [],
+      "fixture_refs": [
+        "examples/hero_recursive/bundle.json",
+        "examples/hero_recursive/expected.json",
+        "examples/categorical_null/bundle.json",
+        "examples/categorical_null/expected.json",
+        "tests/fixtures/longitudinal_variants.json"
+      ],
       "id": "P3-RF04",
-      "implementation_status": "not_implemented",
+      "implementation_status": "partial",
       "l_anchors": "L06, L07, L25",
       "required_by_step": 9,
       "requirement": "Selected, classified and valid populations, budgets, coverage and conditionality.",
       "scope": "L_software",
-      "test_bindings": []
+      "test_bindings": [
+        "tests.test_phase3_reporting.LongitudinalReportGroups.test_RF04_population_denominators_budgets_and_absent_measurement"
+      ]
     },
     {
       "evidence_status": "not_supplied",
-      "fixture_refs": [],
+      "fixture_refs": [
+        "examples/hero_recursive/bundle.json",
+        "examples/hero_recursive/expected.json",
+        "examples/categorical_null/bundle.json",
+        "examples/categorical_null/expected.json",
+        "tests/fixtures/longitudinal_variants.json"
+      ],
       "id": "P3-RF05",
-      "implementation_status": "not_implemented",
+      "implementation_status": "partial",
       "l_anchors": "L08, L09",
       "required_by_step": 9,
       "requirement": "Per-state sets/frequencies, support type, diversity, retention/gain/recurrence and protected tails.",
       "scope": "L_software",
-      "test_bindings": []
+      "test_bindings": [
+        "tests.test_phase3_reporting.LongitudinalReportGroups.test_RF05_observed_diversity_sets_tail_and_undefined_empty_population"
+      ]
     },
     {
       "evidence_status": "not_supplied",
-      "fixture_refs": [],
+      "fixture_refs": [
+        "examples/hero_recursive/bundle.json",
+        "examples/hero_recursive/expected.json",
+        "examples/categorical_null/bundle.json",
+        "examples/categorical_null/expected.json",
+        "tests/fixtures/longitudinal_variants.json"
+      ],
       "id": "P3-RF06",
-      "implementation_status": "not_implemented",
+      "implementation_status": "partial",
       "l_anchors": "L10, L16, L32",
       "required_by_step": 9,
       "requirement": "Separate candidate/preprocessing/selection/exposure/probe distributions and known weight units.",
       "scope": "L_software",
-      "test_bindings": []
+      "test_bindings": [
+        "tests.test_phase3_reporting.LongitudinalReportGroups.test_RF06_stage_records_do_not_turn_training_exposure_into_probe_samples"
+      ]
     },
     {
       "evidence_status": "not_supplied",
-      "fixture_refs": [],
+      "fixture_refs": [
+        "examples/hero_recursive/bundle.json",
+        "examples/hero_recursive/expected.json",
+        "examples/categorical_null/bundle.json",
+        "examples/categorical_null/expected.json",
+        "tests/fixtures/longitudinal_variants.json"
+      ],
       "id": "P3-RF07",
-      "implementation_status": "not_implemented",
+      "implementation_status": "partial",
       "l_anchors": "L11-L16",
       "required_by_step": 9,
       "requirement": "Null assumptions, n/schedule, exact operands, expected values, optional external target and scope.",
       "scope": "L_software",
-      "test_bindings": []
+      "test_bindings": [
+        "tests.test_phase3_reporting.LongitudinalReportGroups.test_RF07_categorical_exact_arithmetic_assumptions_and_missing_target"
+      ]
     },
     {
       "evidence_status": "not_supplied",
-      "fixture_refs": [],
+      "fixture_refs": [
+        "examples/hero_recursive/bundle.json",
+        "examples/hero_recursive/expected.json",
+        "examples/categorical_null/bundle.json",
+        "examples/categorical_null/expected.json",
+        "tests/fixtures/longitudinal_variants.json"
+      ],
       "id": "P3-RF08",
-      "implementation_status": "not_implemented",
+      "implementation_status": "partial",
       "l_anchors": "L17-L20",
       "required_by_step": 9,
       "requirement": "Local/fitted SHL, start/stop, D values, real time coordinates, residuals, zero/growth/gap states and crossing brackets.",
       "scope": "L_software",
-      "test_bindings": []
+      "test_bindings": [
+        "tests.test_phase3_reporting.LongitudinalReportGroups.test_RF08_fit_residuals_window_rounds_and_zero_crossing_absence"
+      ]
     },
     {
       "evidence_status": "not_supplied",
-      "fixture_refs": [],
+      "fixture_refs": [
+        "examples/hero_recursive/bundle.json",
+        "examples/hero_recursive/expected.json",
+        "examples/categorical_null/bundle.json",
+        "examples/categorical_null/expected.json",
+        "tests/fixtures/longitudinal_variants.json"
+      ],
       "id": "P3-RF09",
-      "implementation_status": "not_implemented",
+      "implementation_status": "partial",
       "l_anchors": "L21, L22",
       "required_by_step": 9,
       "requirement": "Sensitivity unit/group, complete grid, indices/hash, every draw status, interval and uncertainty limitations.",
       "scope": "L_software",
-      "test_bindings": []
+      "test_bindings": [
+        "tests.test_phase3_reporting.LongitudinalReportGroups.test_RF09_sensitivity_complete_draw_statuses_grid_and_absent_interval"
+      ]
     },
     {
       "evidence_status": "not_supplied",
-      "fixture_refs": [],
+      "fixture_refs": [
+        "examples/hero_recursive/bundle.json",
+        "examples/hero_recursive/expected.json",
+        "examples/categorical_null/bundle.json",
+        "examples/categorical_null/expected.json",
+        "tests/fixtures/longitudinal_variants.json"
+      ],
       "id": "P3-RF10",
-      "implementation_status": "not_implemented",
+      "implementation_status": "partial",
       "l_anchors": "L23-L28",
       "required_by_step": 9,
       "requirement": "Finite assay family, model state, event, trial N, k bounds, tau/alpha/J/delta, tails and coverage.",
       "scope": "L_software",
-      "test_bindings": []
+      "test_bindings": [
+        "tests.test_phase3_reporting.LongitudinalReportGroups.test_RF10_assay_N_k_threshold_tails_and_absent_assays"
+      ]
     },
     {
       "evidence_status": "not_supplied",
-      "fixture_refs": [],
+      "fixture_refs": [
+        "examples/hero_recursive/bundle.json",
+        "examples/hero_recursive/expected.json",
+        "examples/categorical_null/bundle.json",
+        "examples/categorical_null/expected.json",
+        "tests/fixtures/longitudinal_variants.json"
+      ],
       "id": "P3-RF11",
-      "implementation_status": "not_implemented",
+      "implementation_status": "partial",
       "l_anchors": "L23, L28",
       "required_by_step": 9,
       "requirement": "Present/below/unresolved support sets, observed union and reference-normalized support with exact denominators.",
       "scope": "L_software",
-      "test_bindings": []
+      "test_bindings": [
+        "tests.test_phase3_reporting.LongitudinalReportGroups.test_RF11_expressible_sets_reference_denominator_and_unresolved_state"
+      ]
     },
     {
       "evidence_status": "not_supplied",
-      "fixture_refs": [],
+      "fixture_refs": [
+        "examples/hero_recursive/bundle.json",
+        "examples/hero_recursive/expected.json",
+        "examples/categorical_null/bundle.json",
+        "examples/categorical_null/expected.json",
+        "tests/fixtures/longitudinal_variants.json"
+      ],
       "id": "P3-RF12",
-      "implementation_status": "not_implemented",
+      "implementation_status": "partial",
       "l_anchors": "L29-L31",
       "required_by_step": 9,
       "requirement": "Pre missing set, confirmed recovery, unresolved post set, ERR or separate partial bounds and intervention gates.",
       "scope": "L_software",
-      "test_bindings": []
+      "test_bindings": [
+        "tests.test_phase3_reporting.LongitudinalReportGroups.test_RF12_missing_recovered_sets_and_partial_unavailable_rate"
+      ]
     },
     {
       "evidence_status": "not_supplied",
-      "fixture_refs": [],
+      "fixture_refs": [
+        "examples/hero_recursive/bundle.json",
+        "examples/hero_recursive/expected.json",
+        "examples/categorical_null/bundle.json",
+        "examples/categorical_null/expected.json",
+        "tests/fixtures/longitudinal_variants.json"
+      ],
       "id": "P3-RF13",
-      "implementation_status": "not_implemented",
+      "implementation_status": "partial",
       "l_anchors": "L31, L32, L38",
       "required_by_step": 9,
       "requirement": "Exogamy stage evidence, intervention/model-state change, non-injection and validation limitations.",
       "scope": "L_software",
-      "test_bindings": []
+      "test_bindings": [
+        "tests.test_phase3_reporting.LongitudinalReportGroups.test_RF13_all_five_exogamy_stages_and_no_inferred_causal_claim"
+      ]
     },
     {
       "evidence_status": "not_supplied",
-      "fixture_refs": [],
+      "fixture_refs": [
+        "examples/hero_recursive/bundle.json",
+        "examples/hero_recursive/expected.json",
+        "examples/categorical_null/bundle.json",
+        "examples/categorical_null/expected.json",
+        "tests/fixtures/longitudinal_variants.json"
+      ],
       "id": "P3-RF14",
-      "implementation_status": "not_implemented",
+      "implementation_status": "partial",
       "l_anchors": "L33, L34",
       "required_by_step": 9,
       "requirement": "Preserved anomalies, recut identity, correction dependencies, old/current results and no new sample claim.",
       "scope": "L_software",
-      "test_bindings": []
+      "test_bindings": [
+        "tests.test_phase3_reporting.LongitudinalReportGroups.test_RF14_recut_originals_dependencies_and_zero_new_observations"
+      ]
     },
     {
       "evidence_status": "not_supplied",
-      "fixture_refs": [],
+      "fixture_refs": [
+        "examples/hero_recursive/bundle.json",
+        "examples/hero_recursive/expected.json",
+        "examples/categorical_null/bundle.json",
+        "examples/categorical_null/expected.json",
+        "tests/fixtures/longitudinal_variants.json"
+      ],
       "id": "P3-RF15",
-      "implementation_status": "not_implemented",
+      "implementation_status": "partial",
       "l_anchors": "L36, L38",
       "required_by_step": 9,
       "requirement": "Five conjunctive conditions, all ten EC disclosures, actual versus declared currentness, omitted deployment evidence.",
       "scope": "L_software",
-      "test_bindings": []
+      "test_bindings": [
+        "tests.test_phase3_reporting.LongitudinalReportGroups.test_RF15_five_conditions_ten_disclosures_and_no_invented_expiry"
+      ]
     },
     {
       "evidence_status": "not_supplied",
-      "fixture_refs": [],
+      "fixture_refs": [
+        "examples/hero_recursive/bundle.json",
+        "examples/hero_recursive/expected.json",
+        "examples/categorical_null/bundle.json",
+        "examples/categorical_null/expected.json",
+        "tests/fixtures/longitudinal_variants.json"
+      ],
       "id": "P3-RF16",
-      "implementation_status": "not_implemented",
+      "implementation_status": "partial",
       "l_anchors": "L35-L40",
       "required_by_step": 9,
       "requirement": "Processing status, redaction/access limits, resource/numeric restrictions, frozen baseline and separate publication/acceptance.",
       "scope": "L_software",
-      "test_bindings": []
+      "test_bindings": [
+        "tests.test_phase3_reporting.LongitudinalReportGroups.test_RF16_processing_limits_redaction_and_separate_publication_scope"
+      ]
     }
   ],
   "schema_version": "0.1",
@@ -3918,8 +4155,64 @@
       ]
     },
     "8": {
-      "implementation_status": "not_implemented",
-      "test_bindings": []
+      "implementation_status": "implemented",
+      "test_bindings": [
+        "tests.test_phase3_pipeline.ReplayAndCommands.test_cli_replay_manifest_is_accepted_by_existing_analyze_command",
+        "tests.test_phase3_pipeline.ReplayAndCommands.test_cli_validate_and_analyze_publish_complete_three_file_set",
+        "tests.test_phase3_pipeline.ReplayAndCommands.test_full_manifest_replay_uses_saved_indices_without_rng",
+        "tests.test_phase3_pipeline.ReplayAndCommands.test_malformed_declaration_is_error_not_absent_profile",
+        "tests.test_phase3_pipeline.ReplayAndCommands.test_manifest_preserves_all_2000_complete_indices_and_independent_hash",
+        "tests.test_phase3_pipeline.ReplayAndCommands.test_old_M_and_ABC_profiles_preserve_numerical_and_deferred_meanings",
+        "tests.test_phase3_pipeline.ReplayAndCommands.test_validate_does_not_compute_observed_null_fit_assay_or_recovery",
+        "tests.test_phase3_pipeline.SourceRecordIntegration.test_assay_exact_threshold_decisions_preserve_full_multiplicity",
+        "tests.test_phase3_pipeline.SourceRecordIntegration.test_count_derived_diversity_and_independent_log_fit",
+        "tests.test_phase3_pipeline.SourceRecordIntegration.test_derivative_grounding_and_direct_injection_withhold_qualified_recovery",
+        "tests.test_phase3_pipeline.SourceRecordIntegration.test_empty_missing_set_is_undefined_and_keeps_zero_denominator",
+        "tests.test_phase3_pipeline.SourceRecordIntegration.test_fixture_provenance_never_becomes_experiment_or_model_recovery",
+        "tests.test_phase3_pipeline.SourceRecordIntegration.test_half_ERR_uses_original_eight_class_missing_set",
+        "tests.test_phase3_pipeline.SourceRecordIntegration.test_hero_assay_source_has_192_single_position_calls",
+        "tests.test_phase3_pipeline.SourceRecordIntegration.test_injected_final_score_cannot_replace_missing_trial_evidence",
+        "tests.test_phase3_pipeline.SourceRecordIntegration.test_membership_correction_invalidates_dependents_and_preserves_unrelated_panels",
+        "tests.test_phase3_pipeline.SourceRecordIntegration.test_missing_expected_state_keeps_clock_gap_and_other_values",
+        "tests.test_phase3_pipeline.SourceRecordIntegration.test_partial_post_bounds_are_separate_exact_one_third_two_thirds",
+        "tests.test_phase3_pipeline.SourceRecordIntegration.test_registered_variants_have_independent_source_rules",
+        "tests.test_phase3_pipeline.SourceRecordIntegration.test_schema_profile_eight_sections_and_three_outputs",
+        "tests.test_phase3_pipeline.SourceRecordIntegration.test_schema_recut_preserves_original_anomaly_without_creating_recovery",
+        "tests.test_phase3_pipeline.SourceRecordIntegration.test_stable_growth_zero_and_nongeometric_have_distinct_reasons",
+        "tests.test_phase3_pipeline.SourceRecordIntegration.test_unknown_pre_has_no_exact_missing_denominator",
+        "tests.test_phase3_reporting.LongitudinalReportGroups.test_RF01_profile_sources_methods_and_fixture_claim_scope",
+        "tests.test_phase3_reporting.LongitudinalReportGroups.test_RF02_states_stages_identities_measurement_refs_and_absent_neural_states",
+        "tests.test_phase3_reporting.LongitudinalReportGroups.test_RF03_lineage_paths_clocks_and_actual_missing_schedule",
+        "tests.test_phase3_reporting.LongitudinalReportGroups.test_RF04_population_denominators_budgets_and_absent_measurement",
+        "tests.test_phase3_reporting.LongitudinalReportGroups.test_RF05_observed_diversity_sets_tail_and_undefined_empty_population",
+        "tests.test_phase3_reporting.LongitudinalReportGroups.test_RF06_stage_records_do_not_turn_training_exposure_into_probe_samples",
+        "tests.test_phase3_reporting.LongitudinalReportGroups.test_RF07_categorical_exact_arithmetic_assumptions_and_missing_target",
+        "tests.test_phase3_reporting.LongitudinalReportGroups.test_RF08_fit_residuals_window_rounds_and_zero_crossing_absence",
+        "tests.test_phase3_reporting.LongitudinalReportGroups.test_RF09_sensitivity_complete_draw_statuses_grid_and_absent_interval",
+        "tests.test_phase3_reporting.LongitudinalReportGroups.test_RF10_assay_N_k_threshold_tails_and_absent_assays",
+        "tests.test_phase3_reporting.LongitudinalReportGroups.test_RF11_expressible_sets_reference_denominator_and_unresolved_state",
+        "tests.test_phase3_reporting.LongitudinalReportGroups.test_RF12_missing_recovered_sets_and_partial_unavailable_rate",
+        "tests.test_phase3_reporting.LongitudinalReportGroups.test_RF13_all_five_exogamy_stages_and_no_inferred_causal_claim",
+        "tests.test_phase3_reporting.LongitudinalReportGroups.test_RF14_recut_originals_dependencies_and_zero_new_observations",
+        "tests.test_phase3_reporting.LongitudinalReportGroups.test_RF15_five_conditions_ten_disclosures_and_no_invented_expiry",
+        "tests.test_phase3_reporting.LongitudinalReportGroups.test_RF16_processing_limits_redaction_and_separate_publication_scope",
+        "tests.test_phase3_reporting.RenderingAndCurrentness.test_complete_JSON_tree_and_eight_markdown_sections_have_same_values",
+        "tests.test_phase3_reporting.RenderingAndCurrentness.test_declared_scoped_dates_survive_both_formats_without_certification",
+        "tests.test_phase3_reporting.RenderingAndCurrentness.test_schema_profile_wrong_order_nonfinite_and_unknown_content_keys_fail",
+        "tests.test_phase3_security.FrozenIdentityBoundary.test_authorized_runtime_pins_still_reject_runtime_and_scientific_mutation",
+        "tests.test_phase3_security.PassiveAndPublication.test_active_commands_remain_unavailable_and_errors_redact_arguments",
+        "tests.test_phase3_security.PassiveAndPublication.test_atomic_publication_race_keeps_concurrent_writer_and_cleans_staging",
+        "tests.test_phase3_security.PassiveAndPublication.test_existing_output_is_immutable_and_only_three_files_are_written",
+        "tests.test_phase3_security.PassiveAndPublication.test_hostile_evidence_private_actor_and_paths_never_enter_three_files",
+        "tests.test_phase3_security.PassiveAndPublication.test_internal_exception_reports_three_without_traceback_or_publication",
+        "tests.test_phase3_security.PassiveAndPublication.test_serialization_or_file_write_failure_publishes_no_partial_directory",
+        "tests.test_phase3_security.PassiveAndPublication.test_symlink_traversal_and_output_under_input_are_refused",
+        "tests.test_phase3_security.ReplayBoundary.test_duplicate_keys_and_missing_draws_are_input_errors_without_rng_fallback",
+        "tests.test_phase3_security.ReplayBoundary.test_forged_unavailable_null_matrix_cannot_replace_recorded_2000_draws",
+        "tests.test_phase3_security.ReplayBoundary.test_old_report_survives_evidence_correction_and_same_old_manifest_replays",
+        "tests.test_phase3_security.ReplayBoundary.test_remote_or_symlink_replay_never_fetches_or_leaks_locator",
+        "tests.test_phase3_security.ReplayBoundary.test_wrong_replay_profile_context_and_unit_order_are_rejected"
+      ]
     },
     "9": {
       "implementation_status": "not_implemented",

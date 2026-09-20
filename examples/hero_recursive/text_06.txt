@@ -1,0 +1,26 @@
+# FIXTURE ONLY. Passive maintained-heap illustration.
+def sort_values(values):
+    heap = []
+    for value in values:
+        heap.append(value)
+        j = len(heap)-1
+        while j and heap[(j-1)//2] > heap[j]:
+            p = (j-1)//2
+            heap[p], heap[j] = heap[j], heap[p]
+            j = p
+    result = []
+    while heap:
+        result.append(heap[0])
+        tail = heap.pop()
+        if heap:
+            heap[0] = tail
+            j = 0
+            while 2*j+1 < len(heap):
+                child = 2*j+1
+                if child+1 < len(heap) and heap[child+1] < heap[child]:
+                    child += 1
+                if heap[j] <= heap[child]:
+                    break
+                heap[j], heap[child] = heap[child], heap[j]
+                j = child
+    return result
