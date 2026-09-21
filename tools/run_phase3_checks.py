@@ -79,7 +79,7 @@ def assess_gate(matrix, discovered, records, *, scope, predecessor_ids, inherite
            if r["required_by_step"] <= step and r["execution_status"] != "passed"]
     all_missing = [r["id"] for rows in groups.values() for r in rows if r["execution_status"] != "passed"]
     saved = h.inspect_reconciliation(reconciliation, inventory)
-    l_ok = scaffold_ok and not all_missing and step >= 9
+    l_ok = scaffold_ok and not all_missing and step >= 9 and saved["record_consistent"]
     if due: errors.append("current_L_requirements_incomplete")
     if scope == "phase3":
         if all_missing: errors.append("full_L_requirements_incomplete")

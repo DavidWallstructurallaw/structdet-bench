@@ -304,3 +304,63 @@ class RenderingAndCurrentness(unittest.TestCase):
         self.assertEqual(rows[0]['scope_refs'][0]['record_id'], 'c0p0')
         self.assertEqual(rows[0]['substantive_claim'], 'not_certified_by_software')
         parity(self, r, rows)
+
+
+class FinalReportConformance(unittest.TestCase):
+    def test_all_ten_named_EC_disclosures_and_five_conditions_survive_absent_capabilities(self):
+        expected = {'capability_and_scope', 'structural_cut_and_known_omissions',
+            'source_and_transformation_lineage', 'exposure_and_bias_controls', 'evaluator_identity',
+            'class_and_tail_outcomes', 'horizon_recovery_override', 'live_field_evidence',
+            'correction_path', 'current_until'}
+        for result in (hero_result(), null_result()):
+            row = content(result, 8)
+            self.assertEqual(set(row['ec_reporting_disclosures']), expected)
+            self.assertEqual({x['condition'] for x in row['five_conditions']}, set(INTEGRITY_CONDITIONS))
+            self.assertEqual(len(row['five_conditions']), 5)
+            self.assertTrue(all(x['outcome'] == 'unresolved' for x in row['five_conditions']))
+            self.assertFalse(row['currentness']['declared_expiry_is_certification'])
+            self.assertIn('complete_expressible_or_latent_repertoire', row['omitted_conditions'])
+            parity(self, result, [row['ec_reporting_disclosures'], row['currentness'], row['workflow_status']])
+
+    def test_distinct_ERR_absence_states_keep_exact_sets_and_denominators_in_both_formats(self):
+        cases = ((hero_result(), 'available'), (recovery_case('empty'), 'undefined'),
+            (recovery_case('pre_unknown'), 'unavailable'), (recovery_case('partial'), 'unavailable'))
+        for result, status in cases:
+            with self.subTest(status=status, input=result.manifest['input_fingerprint']):
+                row = episode(result)
+                self.assertEqual(row['external_recovery_rate']['status'], status)
+                if status != 'available': self.assertIsNone(row['external_recovery_rate']['value'])
+                parity(self, result, [{k: row[k] for k in ('missing_classes', 'confirmed_recovered',
+                    'unresolved_post', 'external_recovery_rate', 'partial_information_bounds')}])
+        self.assertEqual(content(null_result(), 6)['recovery_status'], 'not_requested')
+        self.assertEqual(content(null_result(), 6)['recovery'], [])
+        parity(self, null_result(), [{'recovery_status': 'not_requested', 'recovery': []}])
+
+    def test_correction_and_recut_reports_preserve_audit_refs_without_new_observation_claims(self):
+        for name in ('membership', 'recut', 'derivative', 'injection'):
+            with self.subTest(variant=name):
+                result = recovery_case(name); changes = content(result, 7)
+                self.assertEqual(episode(result)['external_recovery_rate']['status'], 'unavailable')
+                self.assertFalse(changes['prior_results_overwritten'])
+                self.assertEqual(changes['new_samples_created_by_reclassification'], 0)
+                self.assertEqual(changes['new_recursive_rounds_created_by_reclassification'], 0)
+                parity(self, result, [episode(result)['external_recovery_rate']])
+                # Top-level record lists render as individual tables. Check every
+                # dependency, revision and impact record in its actual table form.
+                for key in ('dependencies', 'revisions', 'correction_impacts'):
+                    if changes[key]: parity(self, result, changes[key])
+                parity(self, result, [{key: value for key, value in changes.items()
+                    if key not in {'dependencies', 'revisions', 'correction_impacts'}}])
+                self.assertEqual(json.loads(result.report_json), plain(result.report))
+
+    def test_sanitized_processing_failure_retains_eight_sections_and_disclosures(self):
+        with TemporaryDirectory() as tmp:
+            p = copy_hero(Path(tmp) / 'input'); observations, evidence, manifest = source_rows(p)
+            manifest['analysis_config']['extensions']['longitudinal'] = False
+            result = analyze_bundle(write_source(p.parent, observations, evidence, manifest), recorded_at=STAMP)
+        self.assertEqual(result.exit_code, 2)
+        self.assertEqual(len(result.report['sections']), 8)
+        self.assertEqual(content(result, 1)['processing']['exit_code'], 2)
+        self.assertEqual(len(content(result, 8)['ec_reporting_disclosures']), 10)
+        self.assertFalse(content(result, 1)['scope']['phase3_complete'])
+        parity(self, result, [content(result, 1)['processing'], content(result, 8)['workflow_status']])

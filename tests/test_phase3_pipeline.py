@@ -390,3 +390,41 @@ class ReplayAndCommands(unittest.TestCase):
         deferred = {x['metric_name']: x for x in old_content(abc, 8)['deferred']}
         self.assertEqual(deferred['external_recovery_rate']['result_status'], 'deferred')
         self.assertIsNone(deferred['structural_half_life_empirical']['value'])
+
+
+class FinalWorkflowConformance(unittest.TestCase):
+    def test_full_canonical_reports_and_manifest_replay_without_any_new_randomness(self):
+        variable = {'recorded_at_utc', 'python_version', 'python_implementation', 'platform', 'replay_source'}
+        with TemporaryDirectory() as tmp:
+            saved = Path(tmp) / 'replay.json'
+            for path, original in ((HERO, hero_result()), (NULL, null_result())):
+                with self.subTest(profile=path.parent.name):
+                    saved.write_bytes(original.manifest_json)
+                    with patch('structdet_bench.longitudinal_uncertainty.make_replay', side_effect=AssertionError('random fallback')):
+                        replayed = analyze_bundle(path, replay_manifest_path=saved, recorded_at=STAMP)
+                    self.assertEqual(replayed.exit_code, 0)
+                    self.assertEqual(replayed.report_json, original.report_json)
+                    self.assertEqual(replayed.report_markdown, original.report_markdown)
+                    before, after = plain(original.manifest), plain(replayed.manifest)
+                    self.assertEqual(set(before['replay_variable_fields']), variable)
+                    self.assertEqual({k:v for k,v in before.items() if k not in variable},
+                                     {k:v for k,v in after.items() if k not in variable})
+                    self.assertIsNotNone(after['replay_source'])
+
+    def test_confirmatory_header_cannot_promote_mock_descendants_to_independent_evidence(self):
+        with TemporaryDirectory() as tmp:
+            p = copy_hero(Path(tmp) / 'input'); observations, evidence, manifest = source_rows(p)
+            manifest['data_role'] = 'confirmatory'
+            r = analyze_bundle(write_source(p.parent, observations, evidence, manifest), recorded_at=STAMP)
+        scope = content(r, 1)['scope']; last = content(r, 8)
+        self.assertEqual(scope['data_role'], 'confirmatory')
+        self.assertFalse(scope['independent_validation_performed'])
+        self.assertFalse(scope['phase3_complete'])
+        self.assertEqual(scope['permitted_claim_scope'], 'supplied_record_finite_scope')
+        self.assertTrue(any(row['mock'] for row in last['support_checks']))
+        self.assertTrue(all(row['outcome'] == 'unresolved' for row in last['five_conditions']))
+        self.assertEqual(last['workflow_status']['repository_delivery'], 'not_assessed_by_command')
+        self.assertEqual(last['ec_reporting_disclosures']['live_field_evidence'], 'not_established_by_toolkit')
+        self.assertIn('latent_support', content(r, 1)['quantities_not_activated'])
+        self.assertEqual(r.manifest['model_calls'], 0)
+        self.assertEqual(r.manifest['candidate_programs_executed'], 0)

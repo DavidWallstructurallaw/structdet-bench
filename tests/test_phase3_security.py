@@ -212,3 +212,63 @@ class FrozenIdentityBoundary(unittest.TestCase):
             self.assertEqual({path for path, row in changed.items() if row['status'] == 'failed'}, {runtime, scientific})
             self.assertEqual(changed[runtime]['baseline_sha256'], baseline[runtime]['baseline_sha256'])
             self.assertEqual(changed[scientific]['expected_sha256'], baseline[scientific]['baseline_sha256'])
+
+
+class FinalResourceAndReplayBoundary(unittest.TestCase):
+    def test_replay_bytes_share_the_original_bundle_budget(self):
+        from structdet_bench.local_io import load_bundle, ReadLimits
+        original = hero_result(); total = load_bundle(HERO).total_read_bytes
+        limits = ReadLimits(max_bundle_bytes=total + len(original.manifest_json) - 1)
+        with TemporaryDirectory() as tmp:
+            saved = Path(tmp) / 'replay.json'; saved.write_bytes(original.manifest_json)
+            _, code = validate_bundle(HERO, limits=limits)
+            self.assertEqual(code, 0)
+            validation, code = validate_bundle(HERO, limits=limits, replay_manifest_path=saved)
+        self.assertEqual(code, 2)
+        self.assertIn('bundle_size_exceeded', json.dumps(validation))
+
+    def test_hostile_json_depth_numbers_nonfinite_and_duplicate_keys_fail_before_evaluation(self):
+        bodies = [b'{"x":1,"x":2}', b'{"x":NaN}', b'{"x":Infinity}',
+            b'[' * 65 + b'0' + b']' * 65, b'{"x":1e' + b'9' * 1025 + b'}']
+        with TemporaryDirectory() as tmp:
+            saved = Path(tmp) / 'PRIVATE_HOSTILE.json'
+            for body in bodies:
+                with self.subTest(sha256=hashlib.sha256(body).hexdigest()):
+                    saved.write_bytes(body)
+                    with patch('structdet_bench.longitudinal_uncertainty.make_replay', side_effect=AssertionError('fallback')):
+                        validation, code = validate_bundle(NULL, replay_manifest_path=saved)
+                    self.assertEqual(code, 2)
+                    self.assertNotIn('PRIVATE_HOSTILE', json.dumps(validation))
+
+    def test_lower_physical_limits_fail_closed_without_successful_report(self):
+        from structdet_bench.local_io import ReadLimits
+        for limits in (ReadLimits(max_file_bytes=1), ReadLimits(max_bundle_bytes=1),
+                       ReadLimits(max_records=1), ReadLimits(max_line_bytes=1)):
+            with self.subTest(limits=limits):
+                validation, code = validate_bundle(HERO, limits=limits)
+                self.assertEqual(code, 2)
+                self.assertEqual(validation['exit_code'], 2)
+
+    def test_recomputed_outer_digests_do_not_authorize_changed_replay_semantics(self):
+        def digest(value):
+            return hashlib.sha256((json.dumps(value, sort_keys=True, separators=(',', ':'), ensure_ascii=True) + '\n').encode()).hexdigest()
+        with TemporaryDirectory() as tmp:
+            path = Path(tmp) / 'replay.json'
+            for mutation in ('method', 'boolean_index', 'short_matrix', 'request_swap', 'threshold_context'):
+                with self.subTest(mutation=mutation):
+                    body = plain(hero_result().manifest); carrier = body['longitudinal_replay']
+                    entries = [x for x in carrier['entries'] if x['replay']]
+                    self.assertTrue(entries)
+                    replay = entries[0]['replay']
+                    if mutation == 'method': replay['method'] = 'paired_prompt_block_bootstrap_v1'
+                    elif mutation == 'boolean_index': replay['indices'][0][0] = True
+                    elif mutation == 'short_matrix': replay['indices'].pop()
+                    elif mutation == 'request_swap': entries[0]['request_ref']['object_id'] = 'different-request'
+                    else: replay['context_sha256'] = '0' * 64
+                    replay['sha256'] = digest({k:v for k,v in replay.items() if k != 'sha256'})
+                    carrier['sha256'] = digest({k:v for k,v in carrier.items() if k != 'sha256'})
+                    body['longitudinal_replay_sha256'] = digest(carrier)
+                    path.write_text(json.dumps(body))
+                    with patch('structdet_bench.longitudinal_uncertainty.make_replay', side_effect=AssertionError('fallback')):
+                        _, code = validate_bundle(HERO, replay_manifest_path=path)
+                    self.assertEqual(code, 2)

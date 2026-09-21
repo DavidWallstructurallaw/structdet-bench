@@ -51,6 +51,101 @@ def synthetic_gate():
                 reconciliation=synthetic_receipt(), inventory=h.inventory_record())
 
 
+def synthetic_final_gate():
+    """Distinct stipulated bindings exercise the final gate, never real coverage."""
+    data = synthetic_gate()
+    data['scope'] = 'phase3'
+    data['matrix']['delivery']['step'] = 9
+    for group in ('longitudinal', 'reports', 'oracles'):
+        for row in data['matrix'][group]:
+            name = 'tests.test_stipulated.Final.test_' + row['id'].replace('-', '_')
+            row.update(implementation_status='implemented', test_bindings=[name])
+            data['discovered'].append(name)
+            data['records'].append({'test_id': name, 'outcome': 'passed'})
+    for row in data['matrix']['stage_bindings'].values():
+        row.update(implementation_status='implemented', test_bindings=[data['discovered'][0]])
+    return data
+
+
+class FinalGateTests(unittest.TestCase):
+    def test_complete_unit_gate_separates_software_live_delivery_owner_and_E(self):
+        result = runner.assess_gate(**synthetic_final_gate())
+        self.assertTrue(result['requested_gate_passed'])
+        self.assertTrue(result['phase3_l_software_complete'])
+        self.assertEqual(result['unresolved_full_ids'], [])
+        self.assertEqual(result['current_repository_delivery'], 'separate_live_audit_required')
+        self.assertFalse(result['saved_baseline_receipt']['current_branch_verified'])
+        self.assertFalse(result['substantive_validation_performed'])
+        self.assertEqual(result['final_owner_acceptance'], 'not_established_by_software_tests')
+
+    def test_missing_or_inconsistent_historical_baseline_prevents_full_L_flag(self):
+        for change in ('missing', 'pending', 'wrong_tree', 'fixture_only'):
+            with self.subTest(change=change):
+                data = synthetic_final_gate()
+                if change == 'missing': data['reconciliation'] = None
+                elif change == 'pending': data['reconciliation']['status'] = 'pending'
+                elif change == 'wrong_tree': data['reconciliation']['verified_tree'] = '0' * 40
+                else: data['reconciliation']['fixture_only'] = True
+                result = runner.assess_gate(**data)
+                self.assertFalse(result['requested_gate_passed'])
+                self.assertFalse(result['phase3_l_software_complete'])
+                self.assertIn('exact_phase2_baseline_sync_unverified', result['reasons'])
+
+    def test_each_of_all_80_obligations_requires_nonempty_executed_binding(self):
+        for group, count in (('longitudinal', 40), ('reports', 16), ('oracles', 24)):
+            self.assertEqual(len(synthetic_final_gate()['matrix'][group]), count)
+            for index in range(count):
+                for mutation in ('empty', 'unexecuted', 'partial'):
+                    data = synthetic_final_gate(); row = data['matrix'][group][index]
+                    if mutation == 'empty': row['test_bindings'] = []
+                    elif mutation == 'unexecuted': row['test_bindings'] = ['tests.test_missing.C.test_missing']
+                    else: row['implementation_status'] = 'partial'
+                    with self.subTest(requirement=row['id'], mutation=mutation):
+                        result = runner.assess_gate(**data)
+                        self.assertFalse(result['requested_gate_passed'])
+                        self.assertFalse(result['phase3_l_software_complete'])
+                        self.assertIn(row['id'], result['unresolved_full_ids'])
+
+    def test_nonpassing_final_binding_cannot_hide_behind_successful_inherited_gates(self):
+        for outcome in ('failed', 'error', 'skipped', 'expected_failure', 'unexpected_success', 'not_completed'):
+            data = synthetic_final_gate(); data['records'][-1]['outcome'] = outcome
+            result = runner.assess_gate(**data)
+            self.assertFalse(result['requested_gate_passed'], outcome)
+            self.assertFalse(result['phase3_l_software_complete'], outcome)
+
+    def test_final_gate_requires_every_stage_and_both_inherited_gates(self):
+        for stage in range(1, 10):
+            data = synthetic_final_gate(); data['matrix']['stage_bindings'][str(stage)]['test_bindings'] = []
+            result = runner.assess_gate(**data)
+            self.assertFalse(result['phase3_l_software_complete'])
+            self.assertIn(f'stage_{stage}_not_verified', result['reasons'])
+        for key in ('inherited_m', 'inherited_v'):
+            data = synthetic_final_gate(); data[key]['requested_gate_passed'] = False
+            self.assertFalse(runner.assess_gate(**data)['phase3_l_software_complete'])
+
+    def test_matrix_and_identity_errors_prevent_both_final_scopes(self):
+        for scope in ('current', 'phase3'):
+            for key in ('matrix_errors', 'pin_errors'):
+                data = synthetic_final_gate(); data['scope'] = scope; data[key] = ['deliberate_identity_failure']
+                result = runner.assess_gate(**data)
+                self.assertFalse(result['requested_gate_passed'])
+                self.assertFalse(result['phase3_l_software_complete'])
+
+    def test_actual_final_matrix_resolves_all_bindings_to_unique_methods(self):
+        matrix = h.load_matrix()
+        self.assertGreaterEqual(matrix['delivery']['step'], 9)
+        self.assertEqual(h.validate_matrix(matrix), [])
+        for group in ('longitudinal', 'reports', 'oracles'):
+            for row in matrix[group]:
+                self.assertEqual(row['implementation_status'], 'implemented', row['id'])
+                self.assertTrue(row['test_bindings'], row['id'])
+                for name in row['test_bindings']:
+                    suite = unittest.defaultTestLoader.loadTestsFromName(name)
+                    cases = list(suite)
+                    while len(cases) == 1 and isinstance(cases[0], unittest.TestSuite): cases = list(cases[0])
+                    self.assertEqual([case.id() for case in cases], [name], row['id'])
+
+
 class MatrixTests(unittest.TestCase):
     def test_actual_catalogues_preserve_40_16_24_plan_rows(self):
         m = h.load_matrix(); self.assertEqual(h.validate_matrix(m), [])

@@ -1,79 +1,78 @@
 {
   "archive_cli_replay": {
     "path": "verification/clean_cli_replay_summary.json",
-    "sha256": "14a319f37cf17871ed416edf9caf5347cb84ff3df2a11e3e4ee3878074564b53",
-    "size_bytes": 12823
+    "sha256": "d4cd144695933004ba0fa30a909aca2d2842a9289a33939e0c266ea0ded919fc",
+    "size_bytes": 12824
   },
   "authorization": {
-    "owner_instruction": "Phase 3 Step 8 go",
+    "owner_instruction": "Phase 3 Step 9 开始。",
     "plan_sha256": "1ca74fbba06bea44f2b656b3f4e6b46b0c6747cf13640c3f1ea29c69ef3d6352",
-    "stop_before_step": 9
+    "stop_before_step": 10
   },
   "baseline": {
-    "local_step": 7,
-    "project_file_count": 153,
-    "test_count": 1745
+    "local_step": 8,
+    "project_file_count": 179,
+    "test_count": 1800
   },
   "boundaries": {
     "UD006": "outstanding",
     "candidate_execution": false,
     "final_owner_acceptance": "separate_from_software_tests",
-    "full_phase3_conformance": "Step 9 not begun",
+    "full_phase3_conformance": "L_software_gate_passed",
     "hosted_CI": false,
     "latent_support": "deferred_UD007",
-    "longitudinal_CLI": "implemented_offline_fixture_scope",
     "model_calls": false,
+    "step10_started": false,
     "substantive_validation_performed": false
   },
-  "companion_archive": "StructDet-Bench_Phase3_Step8_Local.zip",
+  "companion_archive": "StructDet-Bench_Phase3_Step9_Local.zip",
+  "conformance_bindings": {
+    "path": "artifacts/phase3/conformance_matrix.json",
+    "sha256": "dc44e99e80cee4e8b78193161efe78c7dd949e1119832b848a3fe1c7dcc0e9fe"
+  },
   "counts": {
     "errors": 0,
     "failed": 0,
-    "inherited": 1745,
-    "new": 55,
-    "passed": 1800,
+    "inherited": 1800,
+    "new": 17,
+    "original_phase2": 1018,
+    "passed": 1817,
     "skipped": 0,
-    "total": 1800
-  },
-  "example_execution": {
-    "path": "verification/example_execution_summary.json",
-    "sha256": "1a63b7df22af04d6a2ee05ebfb008eb79103bdc2bd9d5856a123271e77cda367",
-    "size_bytes": 10822
+    "total": 1817
   },
   "gates": {
     "current_exit": 0,
-    "final_integrated_oracles_pending": 24,
-    "full_L_complete": false,
+    "full_L_complete": true,
+    "independent_oracle_groups": 24,
     "inherited_M": true,
     "inherited_V": true,
-    "newly_implemented": [
-      "P3-L35"
-    ],
-    "partial_L_requirements": [
-      "P3-L34",
-      "P3-L36",
-      "P3-L37"
-    ],
-    "partial_report_groups": 16,
-    "unfinished_L_requirements": 6
+    "longitudinal_requirements": 40,
+    "phase3_exit": 0,
+    "report_groups": 16,
+    "unresolved_requirements": []
   },
-  "historical_journals": "Repository historical journal bytes retained; companion archive contains every actual Step 8 full run and the complete Step 7 predecessor archive.",
-  "metadata_refresh": "Only this administrative receipt is refreshed after both full tests. Code, tests, fixtures, bindings, example outputs and documentation remain identical to the tested subjects.",
+  "historical_journals": "Repository historical journal bytes retained; companion archive preserves every actual Step9 run/finding and the complete Step8 predecessor archive.",
+  "legacy_cli_comparison": {
+    "path": "verification/legacy_cli_comparison.json",
+    "sha256": "7758526dd42e4ecf694f8f7c0fe27d06d1c7268cf0d714699ed6c6aeea0f4020",
+    "size_bytes": 7965
+  },
+  "metadata_refresh": "Only this administrative receipt is refreshed after both full tests. Code, tests, fixtures, matrices, example outputs and documentation remain identical to both tested subjects.",
   "phase": 3,
   "project": "StructDet-Bench",
   "repository_delivery": {
     "current_source_is_not_certified_published_by_this_receipt": true,
-    "status": "verified_separately_in_companion_publication_status"
+    "status": "separate_live_audit_in_companion_publication_status"
   },
   "runs": {
     "baseline": {
-      "archive": "history/StructDet-Bench_Phase3_Step7_Local.zip",
-      "archive_sha256": "b25d9f63f81bc70b265d2e82182f1e4800a0ae500abe29d1e36d642c6f1e5ab0",
+      "archive": "history/StructDet-Bench_Phase3_Step8_Local.zip",
+      "archive_sha256": "b597d83b36dcbc647c5808c745ff863b4fe618e3f733725c4051ce3069c263c3",
       "clean_run": {
         "console": {
-          "path": "verification/clean_runs/history/c12354b4a6c748b3a0573af1a5a7d03a/console.txt",
-          "sha256": "f544ecd57fefba7a8712727ce26f7b12dc52be6742413243b29f1cbb9b21515f",
-          "size_bytes": 262010
+          "path": "verification/clean_runs/history/e632d6551fb747ab926ec368df2e7ea7/console.txt",
+          "sha256": "a2cf854a5ce0d292957270859f44e93afb3797b8018994ccd3ca8067630471e6",
+          "size_bytes": 272439
         },
         "environment": {
           "bytecode_disabled": true,
@@ -83,9 +82,14 @@
         },
         "exit_code": 0,
         "full_run": {
-          "path": "verification/clean_runs/history/c12354b4a6c748b3a0573af1a5a7d03a/run.json",
-          "sha256": "8a491458129c1b7f0ae3d3f4f3e1f32c5f1362d51d0eaddff2a58daa55b952bb",
-          "size_bytes": 3269861
+          "path": "verification/clean_runs/history/e632d6551fb747ab926ec368df2e7ea7/run.json",
+          "sha256": "354376635061023e6c49356ac284b75eb8b08ddb5948962731ad00f386944267",
+          "size_bytes": 3383454
+        },
+        "full_subject_receipt": {
+          "path": "verification/clean_runs/execution_receipts/e632d6551fb747ab926ec368df2e7ea7.json",
+          "sha256": "afdb6c8c9dd7b92ae9aa0f7e50816f7bad08750133dc9bb92e6bc6647956a702",
+          "size_bytes": 61878
         },
         "gates": {
           "phase1_m_complete": true,
@@ -95,7 +99,6 @@
           "unresolved_current_ids": [],
           "unresolved_l_ids": [
             "P3-L34",
-            "P3-L35",
             "P3-L36",
             "P3-L37",
             "P3-L38",
@@ -103,20 +106,21 @@
             "P3-L40"
           ]
         },
-        "implementation_step": 7,
+        "implementation_step": 8,
         "outcomes": {
-          "passed": 1745
+          "passed": 1800
         },
-        "run_id": "c12354b4a6c748b3a0573af1a5a7d03a",
-        "test_count": 1745
+        "prior_step8_runs": [],
+        "run_id": "e632d6551fb747ab926ec368df2e7ea7",
+        "test_count": 1800
       },
-      "execution": "Previous Step 7 source and extracted runs, reused after exact baseline identity verification",
+      "execution": "Previous Step8 source and extracted full runs reused only after exact 179-file baseline identity and fresh remote verification.",
       "new_baseline_execution_claimed": false,
       "source_run": {
         "console": {
-          "path": "verification/current_runs/history/0a7809f52fbe499b89d5658ae6acbfc2/console.txt",
-          "sha256": "573f4ee7f806e2fbaf72b0dbbd2d2b4a5448be78548a4db995a31e59547cbaa3",
-          "size_bytes": 262010
+          "path": "verification/current_runs/history/c6002aac71ae4b55acb7ce7dc46f0151/console.txt",
+          "sha256": "e14b939fbb7808502215c9363323de2e2a31c6d8414ec89eb085d31f618b3c61",
+          "size_bytes": 272439
         },
         "environment": {
           "bytecode_disabled": true,
@@ -126,9 +130,14 @@
         },
         "exit_code": 0,
         "full_run": {
-          "path": "verification/current_runs/history/0a7809f52fbe499b89d5658ae6acbfc2/run.json",
-          "sha256": "0a375cb03b9b445e69a295674e532fe24994560067ba3d734ab49bb035cc96ef",
-          "size_bytes": 3269855
+          "path": "verification/current_runs/history/c6002aac71ae4b55acb7ce7dc46f0151/run.json",
+          "sha256": "f0b80f85ea9d620dc66a3c2d517fea58f8c18771668e660e75b7c0b96b8568cd",
+          "size_bytes": 3383472
+        },
+        "full_subject_receipt": {
+          "path": "verification/current_runs/execution_receipts/c6002aac71ae4b55acb7ce7dc46f0151.json",
+          "sha256": "a978bbea7b7a98a7391c1391d6186575c73f16f54f148044eb48e9ce453fa3ac",
+          "size_bytes": 61866
         },
         "gates": {
           "phase1_m_complete": true,
@@ -138,7 +147,6 @@
           "unresolved_current_ids": [],
           "unresolved_l_ids": [
             "P3-L34",
-            "P3-L35",
             "P3-L36",
             "P3-L37",
             "P3-L38",
@@ -146,20 +154,21 @@
             "P3-L40"
           ]
         },
-        "implementation_step": 7,
+        "implementation_step": 8,
         "outcomes": {
-          "passed": 1745
+          "passed": 1800
         },
-        "run_id": "0a7809f52fbe499b89d5658ae6acbfc2",
-        "test_count": 1745
+        "prior_step8_runs": [],
+        "run_id": "c6002aac71ae4b55acb7ce7dc46f0151",
+        "test_count": 1800
       },
-      "test_count": 1745
+      "test_count": 1800
     },
     "clean": {
       "console": {
-        "path": "verification/clean_runs/history/e632d6551fb747ab926ec368df2e7ea7/console.txt",
-        "sha256": "a2cf854a5ce0d292957270859f44e93afb3797b8018994ccd3ca8067630471e6",
-        "size_bytes": 272439
+        "path": "verification/clean_runs/history/db21f21f97ba4fc6ad342ea24a59149d/console.txt",
+        "sha256": "71ef2dbe810320ed21832ead5ce0cee76f68cdcb20442d701b429e894abd8101",
+        "size_bytes": 275831
       },
       "environment": {
         "bytecode_disabled": true,
@@ -169,43 +178,36 @@
       },
       "exit_code": 0,
       "full_run": {
-        "path": "verification/clean_runs/history/e632d6551fb747ab926ec368df2e7ea7/run.json",
-        "sha256": "354376635061023e6c49356ac284b75eb8b08ddb5948962731ad00f386944267",
-        "size_bytes": 3383454
+        "path": "verification/clean_runs/history/db21f21f97ba4fc6ad342ea24a59149d/run.json",
+        "sha256": "011906212a22f068132e5309d86ad227e71ab8cfc7d22d88b66c1845acd333c3",
+        "size_bytes": 3688792
       },
       "full_subject_receipt": {
-        "path": "verification/clean_runs/execution_receipts/e632d6551fb747ab926ec368df2e7ea7.json",
-        "sha256": "afdb6c8c9dd7b92ae9aa0f7e50816f7bad08750133dc9bb92e6bc6647956a702",
-        "size_bytes": 61878
+        "path": "verification/clean_runs/execution_receipts/db21f21f97ba4fc6ad342ea24a59149d.json",
+        "sha256": "5d24c9fc6ae05f650f7fc38368f313aa64c5bbad48e91cddb067aa6ac79ed4dd",
+        "size_bytes": 61882
       },
       "gates": {
         "phase1_m_complete": true,
         "phase2_v_complete": true,
-        "phase3_l_software_complete": false,
+        "phase3_l_software_complete": true,
         "requested_gate_passed": true,
         "unresolved_current_ids": [],
-        "unresolved_l_ids": [
-          "P3-L34",
-          "P3-L36",
-          "P3-L37",
-          "P3-L38",
-          "P3-L39",
-          "P3-L40"
-        ]
+        "unresolved_l_ids": []
       },
-      "implementation_step": 8,
+      "implementation_step": 9,
       "outcomes": {
-        "passed": 1800
+        "passed": 1817
       },
-      "prior_step8_runs": [],
-      "run_id": "e632d6551fb747ab926ec368df2e7ea7",
-      "test_count": 1800
+      "prior_step9_runs": [],
+      "run_id": "db21f21f97ba4fc6ad342ea24a59149d",
+      "test_count": 1817
     },
     "current": {
       "console": {
-        "path": "verification/current_runs/history/c6002aac71ae4b55acb7ce7dc46f0151/console.txt",
-        "sha256": "e14b939fbb7808502215c9363323de2e2a31c6d8414ec89eb085d31f618b3c61",
-        "size_bytes": 272439
+        "path": "verification/current_runs/history/a5fa01ee08344e7e909dece490b05fc3/console.txt",
+        "sha256": "cf825bf3c222eac34d8658b9f59e1f083e2bb41ab9cb4430d65190d7fa7174d1",
+        "size_bytes": 275831
       },
       "environment": {
         "bytecode_disabled": true,
@@ -215,40 +217,43 @@
       },
       "exit_code": 0,
       "full_run": {
-        "path": "verification/current_runs/history/c6002aac71ae4b55acb7ce7dc46f0151/run.json",
-        "sha256": "f0b80f85ea9d620dc66a3c2d517fea58f8c18771668e660e75b7c0b96b8568cd",
-        "size_bytes": 3383472
+        "path": "verification/current_runs/history/a5fa01ee08344e7e909dece490b05fc3/run.json",
+        "sha256": "b49e8ddd167ac3ef1b83242480827f5759d4f01ed2ed2f928854218f86830886",
+        "size_bytes": 3688887
       },
       "full_subject_receipt": {
-        "path": "verification/current_runs/execution_receipts/c6002aac71ae4b55acb7ce7dc46f0151.json",
-        "sha256": "a978bbea7b7a98a7391c1391d6186575c73f16f54f148044eb48e9ce453fa3ac",
-        "size_bytes": 61866
+        "path": "verification/current_runs/execution_receipts/a5fa01ee08344e7e909dece490b05fc3.json",
+        "sha256": "163bfafb02d96143656375a6ed72b3b9b2c10a7443fd933d802853e6fabdbc29",
+        "size_bytes": 61870
       },
       "gates": {
         "phase1_m_complete": true,
         "phase2_v_complete": true,
-        "phase3_l_software_complete": false,
+        "phase3_l_software_complete": true,
         "requested_gate_passed": true,
         "unresolved_current_ids": [],
-        "unresolved_l_ids": [
-          "P3-L34",
-          "P3-L36",
-          "P3-L37",
-          "P3-L38",
-          "P3-L39",
-          "P3-L40"
-        ]
+        "unresolved_l_ids": []
       },
-      "implementation_step": 8,
+      "implementation_step": 9,
       "outcomes": {
-        "passed": 1800
+        "passed": 1817
       },
-      "prior_step8_runs": [],
-      "run_id": "c6002aac71ae4b55acb7ce7dc46f0151",
-      "test_count": 1800
+      "prior_step9_runs": [],
+      "run_id": "a5fa01ee08344e7e909dece490b05fc3",
+      "test_count": 1817
     }
   },
   "schema_version": "0.1",
-  "scope": "Offline longitudinal source-record examples, CLI dispatch, redacted schema-0.3 reports and verified sensitivity replay",
-  "step": 8
+  "scope": "Complete L software conformance, inherited M/V, independent numerical oracles, bounded passive I/O, redacted report semantics and complete replay. No empirical validation or Step10 closeout.",
+  "snapshot_dependency_challenges": {
+    "path": "verification/snapshot_dependency_challenges.json",
+    "sha256": "3a6507fdc707954e4ace3078a5d2e34efb8136afecf42c3ad03512a146f17d2f",
+    "size_bytes": 22201
+  },
+  "step": 9,
+  "variant_cli_execution": {
+    "path": "verification/variant_cli_summary.json",
+    "sha256": "0252e7da1a62b8eae81b3a3bb1ad9432f9b9917d1e702c478cd95cd47109f5db",
+    "size_bytes": 27842
+  }
 }
