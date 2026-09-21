@@ -1,17 +1,24 @@
 # Longitudinal record format
 
-## Phase 3 Steps 2-8: records, components, CLI, reports and replay
+## Phase 3: implemented format and final audit
 
 | Field | Value |
 |---|---|
-| Format document | 0.7 |
+| Format document | 0.8, factual administrative closeout |
 | Profile | `structdet_longitudinal_v1` |
 | Extension version | `0.1` |
 | Component methods | `longitudinal_records_v1`; `observed_longitudinal_v1`; `categorical_null_v1`; `categorical_mixture_selection_v1`; `anchored_log_decay_v1`; `endpoint_log_decay_v1`; `longitudinal_trajectory_sensitivity_v1`; `finite_family_binomial_threshold_v1`; `finite_family_evidence_qualified_recovery_v1`; `longitudinal_pipeline_v1` |
-| Governing approval | `PHASE_3_PLAN.md`, especially sections 3-8, 9 and Steps 2-8 |
+| Governing approval | `PHASE_3_PLAN.md`, especially sections 3-8, 9 and Steps 2-10 |
 | Implementation scope | Passive records, observed trajectories, categorical arithmetic, registered empirical/local SHL with complete-unit sensitivity, finite-family support assays, and evidence-qualified recovery with correction dependencies. Sections 1-9 retain the Step 2 API; sections 10-14 document Steps 3-7; section 15 specifies the Step 8 opt-in CLI, redacted report and replay integration. |
+| Software conformance | Step 9 full L and inherited M/V passed in both recorded 1,817-method runs. Step 10 repeated both full audits with the same 1,817 methods passing; see `PHASE_3_COMPLETION.md`. |
 | Scientific evidence | Supplied assertions and their dependencies; substantive independent validation is not performed |
 | License | CC BY 4.0 under `LICENSING_NOTES.md` |
+
+The numbered component sections retain their historical step boundaries,
+including statements about work that was still pending at that step. Current
+full-conformance and administrative audit status appears in the header above
+and `PHASE_3_COMPLETION.md`. Those historical notes do not change the implemented
+schemas, component methods or current requirement bindings.
 
 ## 1. Current capability and its boundary
 
@@ -1049,7 +1056,17 @@ stable/growing/zero/non-geometric paths, gaps, recuts and correction propagation
 A record correction requires a newly bound analysis and a new output directory;
 it cannot overwrite the old report or create a new sample or recursive round.
 
-P3-L35 is the Step 8 acceptance target. P3-L34, P3-L36 and P3-L37 retain cross-step
-conformance work, and the final report/oracle inventory remains Step 9 work.
-Working examples and replay do not complete the full Phase 3 L gate, owner
-acceptance, UD-006 or deferred latent-support diagnostics.
+Step 9 completed the bindings for all 40 L requirements, 16 report-field groups
+and 24 independent-oracle groups, including the cross-step integration duties.
+Both recorded full runs passed 1,817 unique methods with inherited M/V and the
+full L gate. Exact bindings remain in `artifacts/phase3/conformance_matrix.json`;
+full run locations and digests are recorded in the verification summary.
+
+Step 10 completed the administrative audit of the frozen Step 9 implementation.
+Both fresh full runs passed the same 1,817 methods; completion documentation
+records their actual identities and evidence.
+The format, runtime schema, component methods, scientific definitions and test
+matrices are unchanged by this document update. Local software completion,
+current remote delivery and final owner review are recorded separately in
+`PHASE_3_COMPLETION.md` and the companion verification receipts. UD-006 remains
+outstanding and latent-support diagnostics remain deferred under UD-007.

@@ -1,6 +1,6 @@
 # StructDet-Bench
 
-## Current handoff: Phase 3 Step 8
+## Current handoff: Phase 3 Step 10 final audit
 
 The opt-in longitudinal profile now connects passive recorded inputs to observed
 trajectories, categorical scenarios, empirical/local structural half-life,
@@ -8,11 +8,15 @@ complete-unit sensitivity, finite-family support assays and evidence-qualified
 external recovery. It produces report schema `0.3` /
 `structdet_longitudinal_v1` through the existing `validate` and `analyze` commands.
 
-This step supplies working offline examples, public JSON/Markdown reports and
-complete saved-index replay. Phase 3 Step 9 conformance and Step 10 final closeout
-remain separate work. Software fixtures do not establish substantive independent
-validation, actual model recovery or deployment assurance. UD-006 remains open;
-latent-support diagnostics remain deferred under UD-007.
+The Step 9 implementation supplies working offline examples, public
+JSON/Markdown reports and complete saved-index replay. Both recorded Step 9 full
+suites passed 1,817 unique methods, including all inherited M/V obligations and
+the complete L gate. Step 10 has now repeated the full audit on source and clean
+archive subjects: both fresh runs passed the same 1,817 methods. See
+`PHASE_3_COMPLETION.md` for the identified subject and separate audit, publication
+and owner-review states. Software fixtures do not establish substantive
+independent validation, actual model recovery or deployment assurance. UD-006
+remains open; latent-support diagnostics remain deferred under UD-007.
 
 ### Run the longitudinal examples
 
@@ -64,9 +68,10 @@ python3.13 -B -S tools/run_phase3_checks.py --scope current
 python3.13 -B -S tools/run_phase3_checks.py --scope phase3
 ```
 
-The current-stage gate covers the authorized Step 8 implementation. Full Phase 3
-acceptance remains incomplete until the later conformance work. Actual counts,
-full run references and bounded maintenance are recorded in
+The runner and matrix retain implementation Step 9. Step 10 completed its
+administrative audit with full Phase 3 and inherited M/V software gates passing
+in both fresh executions; the current-stage assessment also passed. Actual
+counts, full run references and bounded maintenance are recorded in
 `artifacts/phase3/verification_manifest.json`,
 `artifacts/phase3/maintenance_ledger.json` and the companion delivery archive.
 Current repository delivery is verified separately from a local passing gate;
@@ -78,7 +83,7 @@ its M-only and A/B/C software semantics and restrictions continue to apply.
 
 An offline toolkit for task-relative structural measurement of recorded LLM outputs.
 
-## Current delivery
+## Preserved Phase 2 delivery record
 
 Phase 2's offline comparison instrument has completed its local Step 8 final
 audit. All 1,018 discovered tests pass, including the inherited M requirements,

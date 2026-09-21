@@ -1,31 +1,42 @@
 {
+  "actual_supported_runtime": {
+    "path": "verification/runtime_identity.json",
+    "sha256": "188ef8f67baf989b48866a4c878910d0f9270851c6a235771fb8906d58a18a15",
+    "size_bytes": 669
+  },
   "archive_cli_replay": {
     "path": "verification/clean_cli_replay_summary.json",
-    "sha256": "d4cd144695933004ba0fa30a909aca2d2842a9289a33939e0c266ea0ded919fc",
-    "size_bytes": 12824
+    "sha256": "68fedddff64b564eed5214cf2a8f240531ea10afae6d95f2fd6e2f2fbc533dd8",
+    "size_bytes": 12834
   },
   "authorization": {
-    "owner_instruction": "Phase 3 Step 9 开始。",
+    "owner_instruction": "Phase 3 Step 10 开始",
     "plan_sha256": "1ca74fbba06bea44f2b656b3f4e6b46b0c6747cf13640c3f1ea29c69ef3d6352",
-    "stop_before_step": 10
+    "stop_boundary": "End of Phase3; no automatic Phase4, model experiment, annotation, hosted CI or deployment"
   },
   "baseline": {
-    "local_step": 8,
+    "archive": "history/StructDet-Bench_Phase3_Step9_Local.zip",
+    "archive_sha256": "58ab189f015c0ac678b5961bf116f9793480c045a1d09c448322afaa9ea3b467",
     "project_file_count": 179,
-    "test_count": 1800
+    "step": 9,
+    "test_count": 1817
+  },
+  "baseline_remote_audit": {
+    "path": "verification/remote_baseline/audit.json",
+    "sha256": "486cd1541ba843699c1a504c94b03d1a04eb9161b72a128f43e385dc027e21b4",
+    "size_bytes": 47837
   },
   "boundaries": {
     "UD006": "outstanding",
     "candidate_execution": false,
-    "final_owner_acceptance": "separate_from_software_tests",
-    "full_phase3_conformance": "L_software_gate_passed",
+    "final_owner_acceptance": "pending_separate_review",
     "hosted_CI": false,
     "latent_support": "deferred_UD007",
-    "model_calls": false,
-    "step10_started": false,
+    "model_calls": 0,
+    "phase4_started": false,
     "substantive_validation_performed": false
   },
-  "companion_archive": "StructDet-Bench_Phase3_Step9_Local.zip",
+  "companion_archive": "StructDet-Bench_Phase3_Step10_Local.zip",
   "conformance_bindings": {
     "path": "artifacts/phase3/conformance_matrix.json",
     "sha256": "dc44e99e80cee4e8b78193161efe78c7dd949e1119832b848a3fe1c7dcc0e9fe"
@@ -33,12 +44,18 @@
   "counts": {
     "errors": 0,
     "failed": 0,
-    "inherited": 1800,
-    "new": 17,
+    "inherited": 1817,
+    "new": 0,
     "original_phase2": 1018,
     "passed": 1817,
     "skipped": 0,
     "total": 1817
+  },
+  "final_archive_proof": "External StructDet-Bench_Phase3_Step10_Archive_Verification.json alongside ZIP, including actual final-ZIP CLI replay",
+  "frozen_implementation_identity": {
+    "path": "verification/implementation_identity.json",
+    "sha256": "7c03d4130ea20fb1b98b84793f41520259695a2ad14760c1306f839a0e31cab4",
+    "size_bytes": 30557
   },
   "gates": {
     "current_exit": 0,
@@ -51,28 +68,32 @@
     "report_groups": 16,
     "unresolved_requirements": []
   },
-  "historical_journals": "Repository historical journal bytes retained; companion archive preserves every actual Step9 run/finding and the complete Step8 predecessor archive.",
+  "historical_journals": "All historical repository bytes retained; unchanged full Step9 ZIP preserves every preceding run/finding and predecessor archive.",
+  "implementation_step": 9,
   "legacy_cli_comparison": {
     "path": "verification/legacy_cli_comparison.json",
-    "sha256": "7758526dd42e4ecf694f8f7c0fe27d06d1c7268cf0d714699ed6c6aeea0f4020",
-    "size_bytes": 7965
+    "sha256": "ed3702b8c77d052d5d994b8ba57884695554139e851f24d3f39d071f10b4d67f",
+    "size_bytes": 7995
   },
-  "metadata_refresh": "Only this administrative receipt is refreshed after both full tests. Code, tests, fixtures, matrices, example outputs and documentation remain identical to both tested subjects.",
+  "metadata_refresh": "Both full runs used all180 candidate files unchanged. Only completion/README/format/this receipt finalized after actual runs. All other176 files remain exact; explicit full before/after delta is in companion post_run_metadata_changes.json.",
   "phase": 3,
   "project": "StructDet-Bench",
+  "record_kind": "Administrative summary with full retained execution evidence",
   "repository_delivery": {
     "current_source_is_not_certified_published_by_this_receipt": true,
-    "status": "separate_live_audit_in_companion_publication_status"
+    "status": "Separate fresh publication_status.json in companion archive"
   },
   "runs": {
+    "administrative_step": 10,
+    "all_80_obligations_passed": true,
     "baseline": {
-      "archive": "history/StructDet-Bench_Phase3_Step8_Local.zip",
-      "archive_sha256": "b597d83b36dcbc647c5808c745ff863b4fe618e3f733725c4051ce3069c263c3",
+      "archive": "history/StructDet-Bench_Phase3_Step9_Local.zip",
+      "archive_sha256": "58ab189f015c0ac678b5961bf116f9793480c045a1d09c448322afaa9ea3b467",
       "clean_run": {
         "console": {
-          "path": "verification/clean_runs/history/e632d6551fb747ab926ec368df2e7ea7/console.txt",
-          "sha256": "a2cf854a5ce0d292957270859f44e93afb3797b8018994ccd3ca8067630471e6",
-          "size_bytes": 272439
+          "path": "verification/clean_runs/history/db21f21f97ba4fc6ad342ea24a59149d/console.txt",
+          "sha256": "71ef2dbe810320ed21832ead5ce0cee76f68cdcb20442d701b429e894abd8101",
+          "size_bytes": 275831
         },
         "environment": {
           "bytecode_disabled": true,
@@ -82,45 +103,37 @@
         },
         "exit_code": 0,
         "full_run": {
-          "path": "verification/clean_runs/history/e632d6551fb747ab926ec368df2e7ea7/run.json",
-          "sha256": "354376635061023e6c49356ac284b75eb8b08ddb5948962731ad00f386944267",
-          "size_bytes": 3383454
+          "path": "verification/clean_runs/history/db21f21f97ba4fc6ad342ea24a59149d/run.json",
+          "sha256": "011906212a22f068132e5309d86ad227e71ab8cfc7d22d88b66c1845acd333c3",
+          "size_bytes": 3688792
         },
         "full_subject_receipt": {
-          "path": "verification/clean_runs/execution_receipts/e632d6551fb747ab926ec368df2e7ea7.json",
-          "sha256": "afdb6c8c9dd7b92ae9aa0f7e50816f7bad08750133dc9bb92e6bc6647956a702",
-          "size_bytes": 61878
+          "path": "verification/clean_runs/execution_receipts/db21f21f97ba4fc6ad342ea24a59149d.json",
+          "sha256": "5d24c9fc6ae05f650f7fc38368f313aa64c5bbad48e91cddb067aa6ac79ed4dd",
+          "size_bytes": 61882
         },
         "gates": {
           "phase1_m_complete": true,
           "phase2_v_complete": true,
-          "phase3_l_software_complete": false,
+          "phase3_l_software_complete": true,
           "requested_gate_passed": true,
           "unresolved_current_ids": [],
-          "unresolved_l_ids": [
-            "P3-L34",
-            "P3-L36",
-            "P3-L37",
-            "P3-L38",
-            "P3-L39",
-            "P3-L40"
-          ]
+          "unresolved_l_ids": []
         },
-        "implementation_step": 8,
+        "implementation_step": 9,
         "outcomes": {
-          "passed": 1800
+          "passed": 1817
         },
-        "prior_step8_runs": [],
-        "run_id": "e632d6551fb747ab926ec368df2e7ea7",
-        "test_count": 1800
+        "prior_step9_runs": [],
+        "run_id": "db21f21f97ba4fc6ad342ea24a59149d",
+        "test_count": 1817
       },
-      "execution": "Previous Step8 source and extracted full runs reused only after exact 179-file baseline identity and fresh remote verification.",
       "new_baseline_execution_claimed": false,
       "source_run": {
         "console": {
-          "path": "verification/current_runs/history/c6002aac71ae4b55acb7ce7dc46f0151/console.txt",
-          "sha256": "e14b939fbb7808502215c9363323de2e2a31c6d8414ec89eb085d31f618b3c61",
-          "size_bytes": 272439
+          "path": "verification/current_runs/history/a5fa01ee08344e7e909dece490b05fc3/console.txt",
+          "sha256": "cf825bf3c222eac34d8658b9f59e1f083e2bb41ab9cb4430d65190d7fa7174d1",
+          "size_bytes": 275831
         },
         "environment": {
           "bytecode_disabled": true,
@@ -130,44 +143,36 @@
         },
         "exit_code": 0,
         "full_run": {
-          "path": "verification/current_runs/history/c6002aac71ae4b55acb7ce7dc46f0151/run.json",
-          "sha256": "f0b80f85ea9d620dc66a3c2d517fea58f8c18771668e660e75b7c0b96b8568cd",
-          "size_bytes": 3383472
+          "path": "verification/current_runs/history/a5fa01ee08344e7e909dece490b05fc3/run.json",
+          "sha256": "b49e8ddd167ac3ef1b83242480827f5759d4f01ed2ed2f928854218f86830886",
+          "size_bytes": 3688887
         },
         "full_subject_receipt": {
-          "path": "verification/current_runs/execution_receipts/c6002aac71ae4b55acb7ce7dc46f0151.json",
-          "sha256": "a978bbea7b7a98a7391c1391d6186575c73f16f54f148044eb48e9ce453fa3ac",
-          "size_bytes": 61866
+          "path": "verification/current_runs/execution_receipts/a5fa01ee08344e7e909dece490b05fc3.json",
+          "sha256": "163bfafb02d96143656375a6ed72b3b9b2c10a7443fd933d802853e6fabdbc29",
+          "size_bytes": 61870
         },
         "gates": {
           "phase1_m_complete": true,
           "phase2_v_complete": true,
-          "phase3_l_software_complete": false,
+          "phase3_l_software_complete": true,
           "requested_gate_passed": true,
           "unresolved_current_ids": [],
-          "unresolved_l_ids": [
-            "P3-L34",
-            "P3-L36",
-            "P3-L37",
-            "P3-L38",
-            "P3-L39",
-            "P3-L40"
-          ]
+          "unresolved_l_ids": []
         },
-        "implementation_step": 8,
+        "implementation_step": 9,
         "outcomes": {
-          "passed": 1800
+          "passed": 1817
         },
-        "prior_step8_runs": [],
-        "run_id": "c6002aac71ae4b55acb7ce7dc46f0151",
-        "test_count": 1800
-      },
-      "test_count": 1800
+        "prior_step9_runs": [],
+        "run_id": "a5fa01ee08344e7e909dece490b05fc3",
+        "test_count": 1817
+      }
     },
     "clean": {
       "console": {
-        "path": "verification/clean_runs/history/db21f21f97ba4fc6ad342ea24a59149d/console.txt",
-        "sha256": "71ef2dbe810320ed21832ead5ce0cee76f68cdcb20442d701b429e894abd8101",
+        "path": "verification/clean_runs/history/bf8d609c243f49ebab1507ca236e2889/console.txt",
+        "sha256": "ca24e62268126e65f562f5f23584d0157e5013470aba4d44ba7f699e35d8dcd7",
         "size_bytes": 275831
       },
       "environment": {
@@ -178,14 +183,14 @@
       },
       "exit_code": 0,
       "full_run": {
-        "path": "verification/clean_runs/history/db21f21f97ba4fc6ad342ea24a59149d/run.json",
-        "sha256": "011906212a22f068132e5309d86ad227e71ab8cfc7d22d88b66c1845acd333c3",
-        "size_bytes": 3688792
+        "path": "verification/clean_runs/history/bf8d609c243f49ebab1507ca236e2889/run.json",
+        "sha256": "ba8323367afb45585ad10051553fce3ccdb09c4b6d39da94a19e8f9187de823a",
+        "size_bytes": 3688826
       },
       "full_subject_receipt": {
-        "path": "verification/clean_runs/execution_receipts/db21f21f97ba4fc6ad342ea24a59149d.json",
-        "sha256": "5d24c9fc6ae05f650f7fc38368f313aa64c5bbad48e91cddb067aa6ac79ed4dd",
-        "size_bytes": 61882
+        "path": "verification/clean_runs/execution_receipts/bf8d609c243f49ebab1507ca236e2889.json",
+        "sha256": "3e0716579d4aef1ffbde992fdb2bed1a3e9ed807e36ce10c719c39829702b166",
+        "size_bytes": 62205
       },
       "gates": {
         "phase1_m_complete": true,
@@ -200,13 +205,13 @@
         "passed": 1817
       },
       "prior_step9_runs": [],
-      "run_id": "db21f21f97ba4fc6ad342ea24a59149d",
+      "run_id": "bf8d609c243f49ebab1507ca236e2889",
       "test_count": 1817
     },
     "current": {
       "console": {
-        "path": "verification/current_runs/history/a5fa01ee08344e7e909dece490b05fc3/console.txt",
-        "sha256": "cf825bf3c222eac34d8658b9f59e1f083e2bb41ab9cb4430d65190d7fa7174d1",
+        "path": "verification/current_runs/history/9c20c5d7beec4311a981d1e149663f58/console.txt",
+        "sha256": "3b36bca13269fa96531c7ebf87f13b2a583e0c688043314f50316ee3d958cd40",
         "size_bytes": 275831
       },
       "environment": {
@@ -217,14 +222,14 @@
       },
       "exit_code": 0,
       "full_run": {
-        "path": "verification/current_runs/history/a5fa01ee08344e7e909dece490b05fc3/run.json",
-        "sha256": "b49e8ddd167ac3ef1b83242480827f5759d4f01ed2ed2f928854218f86830886",
-        "size_bytes": 3688887
+        "path": "verification/current_runs/history/9c20c5d7beec4311a981d1e149663f58/run.json",
+        "sha256": "65981402bc9b101bd96335181614cede689fa903cffd2af4fd77c801b0707451",
+        "size_bytes": 3688940
       },
       "full_subject_receipt": {
-        "path": "verification/current_runs/execution_receipts/a5fa01ee08344e7e909dece490b05fc3.json",
-        "sha256": "163bfafb02d96143656375a6ed72b3b9b2c10a7443fd933d802853e6fabdbc29",
-        "size_bytes": 61870
+        "path": "verification/current_runs/execution_receipts/9c20c5d7beec4311a981d1e149663f58.json",
+        "sha256": "d8bfdac6f9630e9336676b9cdeab387f70dbb2069532d49d8c189da261ec5d0a",
+        "size_bytes": 62192
       },
       "gates": {
         "phase1_m_complete": true,
@@ -239,21 +244,20 @@
         "passed": 1817
       },
       "prior_step9_runs": [],
-      "run_id": "a5fa01ee08344e7e909dece490b05fc3",
+      "run_id": "9c20c5d7beec4311a981d1e149663f58",
       "test_count": 1817
-    }
+    },
+    "identical_1817_method_ids": true,
+    "implementation_step": 9,
+    "new_methods": 0,
+    "scope": "Two actual Step10 administrative full reruns of immutable Step9 implementation, no added methods"
   },
   "schema_version": "0.1",
-  "scope": "Complete L software conformance, inherited M/V, independent numerical oracles, bounded passive I/O, redacted report semantics and complete replay. No empirical validation or Step10 closeout.",
-  "snapshot_dependency_challenges": {
-    "path": "verification/snapshot_dependency_challenges.json",
-    "sha256": "3a6507fdc707954e4ace3078a5d2e34efb8136afecf42c3ad03512a146f17d2f",
-    "size_bytes": 22201
+  "scope": "Phase3 final bounded software audit and factual closeout; frozen Step9 runtime/test/matrix/fixture/oracle bytes.",
+  "source_and_baseline_audit": {
+    "path": "verification/contract_audit/baseline_source_scope_audit.json",
+    "sha256": "2bc6b359c2716419c713dee2a58beba06e3f69fd579d79909851d78061271855",
+    "size_bytes": 9178
   },
-  "step": 9,
-  "variant_cli_execution": {
-    "path": "verification/variant_cli_summary.json",
-    "sha256": "0252e7da1a62b8eae81b3a3bb1ad9432f9b9917d1e702c478cd95cd47109f5db",
-    "size_bytes": 27842
-  }
+  "step": 10
 }
