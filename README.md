@@ -1,25 +1,142 @@
 # StructDet-Bench
 
-StructDet-Bench measures task-relative structural properties of recorded LLM
-outputs. It runs offline from supplied files. Its M, V and L profiles cover
-measurement, registered comparisons and longitudinal analysis.
+**Measure which solution structures appear, how concentrated they are, and how
+they change across recorded LLM outputs.**
 
-The study workflow now includes passive evidence inspection, blind review
-exports, exact compilation, correction tracking and readiness disclosures.
-These capabilities are available through the CLI. Activity-readiness packet
-inspection also exposes concrete prerequisites for later external work. Actual model
-collection, candidate validation, independent human review and empirical study
-work remain separate activities.
+Different wording is easy to notice. How many different solution mechanisms are
+actually represented? StructDet-Bench analyzes supplied structural assignments
+under an explicit task and evaluation frame. It reports observed support,
+concentration, compatible comparisons and qualified longitudinal results, with
+inspectable JSON and Markdown reports and strict replay.
 
-## Start with a complete example
+The current reference workflow uses **sorting-mechanism records**. You supply the
+structural classes, assignments and supporting evidence; unresolved cases remain
+visible. The toolkit runs offline. Model collection, candidate execution and
+independent human review take place outside it. Applying structural measurement
+to other tasks requires admissible task definitions, assignment evidence and any
+necessary implementation work.
 
-Run from this directory using CPython 3.13 with Unicode 15.1.0. The verified
-reference environment is CPython 3.13.5 on Linux; each verification receipt
-records its actual environment. No model account, API key or package installation
-is needed for these examples.
+| Your question | Supported profile |
+|---|---|
+| Which admitted mechanisms appear, and how concentrated are they? | **M:** measurement, observed support, SCI and related diversity measures. |
+| How do registered conditions differ under a compatible frame? | **V:** registered comparisons, sensitivity and retained sampling identities. |
+| How do recorded states change over time? | **L:** trajectories, finite-family support assays, local structural half-life and qualified recovery. |
 
-**Example material role: `fixture`; evidence policy: `fixture_only`.** All
-observations and reviewers below are stipulated software inputs.
+These workflows can support research on LLM output diversity, repetitive solution
+strategies and synthetic-data diversity when the required structural records are
+available. Recorded repeated generation, rewriting and recursive training retain
+their actual process identities.
+
+## Install and run the smallest example
+
+Use **Linux with CPython 3.13 and Unicode 15.1.0**. The verified reference runtime
+is **CPython 3.13.5**. The commands below use `python3.13`, its standard `venv`/`pip`
+modules and `unzip`; the toolkit has no third-party runtime dependencies. No model
+account or API key is needed.
+
+From the [v0.1.0 release](https://github.com/DavidWallstructurallaw/structdet-bench/releases/tag/v0.1.0),
+download these two attachments into the same new working directory:
+
+- `structdet_bench-0.1.0-py3-none-any.whl`: the installable package.
+- `structdet-bench-v0.1.0-source.zip`: the complete source, examples and documentation.
+
+The wheel does not contain the examples. Open a terminal in the directory
+containing both downloads and run:
+
+```bash
+python3.13 -m venv .venv
+.venv/bin/python -m pip install --no-index --no-deps ./structdet_bench-0.1.0-py3-none-any.whl
+unzip structdet-bench-v0.1.0-source.zip
+.venv/bin/python -m structdet_bench validate --bundle structdet-bench/examples/hero_hf00/bundle.json
+.venv/bin/python -m structdet_bench analyze --bundle structdet-bench/examples/hero_hf00/bundle.json --output-dir hf00-output
+```
+
+Both toolkit commands should exit `0`. Open `hf00-output/report.md` for the
+readable result; `report.json` holds the structured result and `run_manifest.json`
+records run identity. Analysis creates exactly these three files. Use a fresh
+output directory each time, with an existing parent: an existing destination is
+refused to protect previous results.
+
+**HF-00 is a software fixture with `data_role: fixture` and evidence policy
+`fixture_only`.** It stipulates twenty classified, valid observations, supplies
+no source programs and makes zero model calls. Its assignments contain eight
+MERGE, six PIVOT, three HEAP, two COUNT and one RADIX observation. For both the
+`classified_all` and `classified_valid` populations, the report gives:
+
+| Result | Value | Meaning within this fixture |
+|---|---|---|
+| Classified population | `20` | Twenty admitted fixture observations contribute to the distribution. |
+| Observed support | `5` | Five mechanism classes are represented. |
+| Structural Concentration Index (SCI) | `57/200 = 0.285` | Sum of squared class shares: `(8² + 6² + 3² + 2² + 1²) / 20²`. Higher values mean greater concentration under the same measurement frame. |
+| Support at threshold `0.10` | `4` | Four classes have a share of at least 10%; the single RADIX observation has a 5% share. |
+
+The independent arithmetic is retained in
+[expected.json](examples/hero_hf00/expected.json). These results demonstrate the
+software's calculation on stipulated input; they establish no empirical model
+comparison or independently validated mechanism classification.
+
+### Run directly from source
+
+For source work, extract the same complete source archive. No package
+installation is required. Starting in the parent of the extracted
+`structdet-bench` directory, run:
+
+```bash
+cd structdet-bench
+python3.13 -B -S -m structdet_bench validate --bundle examples/hero_hf00/bundle.json
+python3.13 -B -S -m structdet_bench analyze --bundle examples/hero_hf00/bundle.json --output-dir ../hf00-source-output
+```
+
+The remaining command examples below run **from this source directory**.
+`-S` is for direct source execution; omit it when using an installed package.
+
+## Prepare your own input
+
+For an M measurement, copy the existing
+[HF-00 directory](examples/hero_hf00) as a format template. Its three input files
+are `bundle.json`, `records.jsonl` and `evidence.jsonl`; `expected.json` is only an
+example oracle. Replace the fixture identities, observations and evidence with
+your own records. Preserve the declared task meaning and record links.
+
+| Where to edit | What you must supply |
+|---|---|
+| `bundle.json`: identity and frame | `input_schema_version`, `bundle_id`, `study_id`, `data_role`, and `frames` describing the task, mechanism classes and evaluation scope. The currently supported frame is HERO bounded integer sorting. |
+| `bundle.json`: protocol and cells | `protocols` and `cells` link the prompt, condition, model metadata and generation protocol to each analysis cell. Keep unknown or unavailable metadata explicit. |
+| `bundle.json`: analysis and file inventory | `analysis_config` selects samples, registered positions, ordering, assignment/validity revisions and the evidence policy. `record_files` lists local payload paths and their hash states. Update declared hashes after editing payloads. |
+| `records.jsonl` | Actual attempt and realization records, supplied structural assignments, separate validity decisions and artifact references. An unresolved assignment contributes no guessed class. |
+| `evidence.jsonl` | The supporting records required by your declared policy: review/adjudication, domain results, audits and other evidence as applicable. Labels or a successful CLI exit do not supply independent evidence. |
+
+Real material uses its appropriate `pilot`, `descriptive` or `confirmatory` role
+and the `adjudicated_import` evidence policy. Changing a fixture's role or setting
+an assignment to `adjudicated` does not create the required evidence. Keep
+provisional review and undetermined validity states when that is what the record
+supports. `extensions` and theory `source_pins` are optional; core required fields
+remain present even when their permitted values encode unknown information.
+
+[INPUT_FORMAT.md](INPUT_FORMAT.md) lists the exact required fields, optional
+fields, state wrappers, file rules and evidence contracts.
+[STRUCTURAL_CLASS_CONTRACT.md](STRUCTURAL_CLASS_CONTRACT.md) explains the
+classification duties. For compatible registered comparisons or longitudinal
+records, use [hero_abc](examples/hero_abc) with
+[COMPARISON_FORMAT.md](COMPARISON_FORMAT.md), or
+[hero_recursive](examples/hero_recursive) with
+[LONGITUDINAL_FORMAT.md](LONGITUDINAL_FORMAT.md).
+
+Validate your edited bundle, then analyze it into a fresh destination using the
+same commands as HF-00 with your bundle and output paths. A valid partial input
+can retain unresolved cases and unavailable metrics. Read the population and
+evidence qualifiers before interpreting a value: `support: 0` for an empty
+admitted classified population does not mean the submitted outputs contain no
+structure. [LIMITED_TRIAL.md](LIMITED_TRIAL.md) records this distinction on actual
+supplied material.
+
+## Use the complete study workflow
+
+A study envelope adds a finite local file inventory, evidence inspection, blind
+review exports, exact compilation, correction tracking and readiness disclosures.
+The following existing example covers inspection, preparation and analysis.
+Its material role is `fixture` and evidence policy is `fixture_only`; observations
+and reviewers are stipulated software inputs.
 
 ```bash
 python3.13 -B -S -m structdet_bench study inspect --study examples/phase4/offline/qualified_synthetic/study.json --qualification-packet-id submission-qualification --mapping-receipt-id bridge-map
@@ -39,7 +156,7 @@ fixture arithmetic. It supplies no empirical P1/P5 finding or complete study.
 Its validity remains `not_assessed`; outstanding study and audit obligations stay
 visible.
 
-## Choose the input route
+### Choose the input route
 
 | Input you have | Command and meaning |
 |---|---|
@@ -63,7 +180,7 @@ not call providers, execute submitted candidates, assign reviewers or fetch
 remote attachments. [EMPIRICAL_PROTOCOL.md](EMPIRICAL_PROTOCOL.md) describes the
 roles, actual evidence and activity readiness needed for external work.
 
-## Export review material
+### Export review material
 
 This runnable example selects one synthetic candidate. Both destination parents
 must exist, and both destinations must be fresh and separate.
@@ -88,7 +205,7 @@ states; an already committed restricted map can remain. Inspect those states
 and destinations before retrying with new paths. Keep the restricted mapping under
 appropriate access control and send material only through an authorized channel.
 
-## Interpret results and replay
+## Read report states, handle errors and replay
 
 | Result | Interpretation |
 |---|---|
@@ -155,7 +272,7 @@ owner acceptance. Historical results and handoff identities are retained in
 [PHASE_2_COMPLETION.md](PHASE_2_COMPLETION.md),
 [PHASE_3_COMPLETION.md](PHASE_3_COMPLETION.md) and [history/README.md](history/README.md).
 
-This software release candidate uses version `0.1.0`. M/V/L analysis and the
+This software release uses version `0.1.0`. M/V/L analysis and the
 offline study workflow are implemented. Six concrete activity-readiness packets
 and a resource-gap register prepare later external work. Packet completeness
 means ready for review and grants no operational permission. See the
@@ -171,7 +288,8 @@ Full registered model comparisons, independent review and scientific validation
 remain pending. No further sample collection is required for this software
 release. [PHASE_4_COMPLETION.md](PHASE_4_COMPLETION.md) records the software
 handoff and subsequent trial; [RELEASE_NOTES.md](RELEASE_NOTES.md) describes
-the release scope. This candidate does not itself establish a published tag.
+the release scope. The [Releases page](https://github.com/DavidWallstructurallaw/structdet-bench/releases)
+provides publication status and downloadable artifacts.
 
 Replay checks software identity strictly. A manifest produced with an earlier
 software version must be replayed with its exact recorded software; retain that

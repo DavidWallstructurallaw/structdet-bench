@@ -1,12 +1,15 @@
-# StructDet-Bench 0.1.0 release candidate
+# StructDet-Bench 0.1.0
 
-Prepared 2026-09-23. A public Git tag, GitHub release or package-registry
-publication is a separate action; these notes describe the prepared software.
+Prepared 2026-09-23. These notes describe the software scope and distribution.
+See the [Releases page](https://github.com/DavidWallstructurallaw/structdet-bench/releases)
+for publication status and downloadable artifacts.
 
 StructDet-Bench is an offline toolkit for task-relative structural measurement
 of recorded LLM outputs. Supply local files, validate or inspect them, then run
-the documented analysis command. Start with the complete example in
-[README.md](README.md); it requires no model account or API key.
+the documented analysis command. Start with the twenty-observation HF-00 measurement example in
+[README.md](README.md); it requires no model account or API key. The current
+reference task uses sorting mechanisms, with assignments and supporting evidence
+supplied by the user.
 
 ## Included capabilities
 
@@ -43,6 +46,25 @@ Building requires `setuptools>=77`. Software and tooling use Apache-2.0;
 project specifications and benchmark documentation use CC BY 4.0. License
 texts, notices and attribution records are included. Original theory PDFs and
 the private trial material are excluded from the software distribution.
+
+## First-run and discovery improvements
+
+The README opens with the measurement question, required input and current
+sorting-task scope. It gives a complete wheel-installation route using local
+release attachments, a direct-source route, the existing HF-00 result and a map
+of input files and responsibilities. The complete study, review and replay
+workflows remain available after the first-run example.
+
+HF-00's expected result is an admitted fixture population of 20, observed support
+of 5, SCI of `57/200` (`0.285`) and support of 4 at the inclusive `0.10` threshold.
+This is stipulated software input, not an empirical model result. Package
+keywords and project links describe the existing measurement scope.
+
+The complete `structdet-bench-v0.1.0-source.zip` includes runnable examples and
+documentation. The `structdet_bench-0.1.0-py3-none-any.whl` installs the package;
+examples are supplied separately in that complete source ZIP. Source and build
+artifacts are accompanied by checksums. No package-registry installation is
+required by the documented release route.
 
 ## Verification and trial scope
 
