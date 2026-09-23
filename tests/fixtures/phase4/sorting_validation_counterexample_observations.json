@@ -1,0 +1,98 @@
+{
+  "artifact_ref": {
+    "record_id": "artifact-source",
+    "record_type": "artifact",
+    "record_version": "0.1"
+  },
+  "artifact_sha256": "4287a619084c4d4f34ba4f5443eb941dfe848c0dbd664104a10e467c1b4a7838",
+  "environment_check": {
+    "accommodated_class_ids": [
+      "SORT-ADJ",
+      "SORT-INS",
+      "SORT-SEL",
+      "SORT-MERGE",
+      "SORT-PIVOT",
+      "SORT-HEAP",
+      "SORT-COUNT",
+      "SORT-RADIX"
+    ],
+    "containment_status": "passed",
+    "isolation_review_ref": {
+      "record_id": "review-draft",
+      "record_type": "human_review",
+      "record_version": "0.1"
+    },
+    "oracle_review_ref": {
+      "record_id": "review-draft",
+      "record_type": "human_review",
+      "record_version": "0.1"
+    }
+  },
+  "environment_configuration_sha256": "3333333333333333333333333333333333333333333333333333333333333333",
+  "environment_id": "fixture-external-environment",
+  "environment_image_sha256": "2222222222222222222222222222222222222222222222222222222222222222",
+  "observations": [
+    {
+      "property_checks": {
+        "fresh_plain_list": {
+          "state": "known",
+          "value": false
+        },
+        "input_unchanged": {
+          "state": "known",
+          "value": true
+        },
+        "length_preserved": {
+          "state": "known",
+          "value": true
+        },
+        "multiplicity_preserved": {
+          "state": "known",
+          "value": true
+        },
+        "nondecreasing": {
+          "state": "known",
+          "value": true
+        },
+        "plain_integers": {
+          "state": "known",
+          "value": true
+        }
+      },
+      "runtime_status": "completed",
+      "test_id": "V-SMALL-0001",
+      "violation": {
+        "state": "known",
+        "value": {
+          "evidence_refs": [
+            {
+              "record_id": "artifact-source",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            }
+          ],
+          "observed_violation": true,
+          "property": "fresh_plain_list"
+        }
+      }
+    }
+  ],
+  "oracle_id": "fixture-oracle",
+  "oracle_source_sha256": "4444444444444444444444444444444444444444444444444444444444444444",
+  "packet_id": "observations",
+  "receipt_ref": {
+    "record_id": "validation",
+    "record_type": "validation_receipt",
+    "record_version": "0.1"
+  },
+  "rubric_id": "bounded_integer_sort_validity_v1",
+  "scope": {
+    "claim_id": "fixture-format",
+    "task_id": "bounded_integer_sort",
+    "task_version": "0.1"
+  },
+  "study_id": "fixture-study",
+  "study_version": "v1",
+  "suite_sha256": "4b8dce8c2523bc953286bf853a0e17764e8fbaa6c71cc024b4e60d39feb17c11",
+  "validation_packet_version": "0.1"
+}

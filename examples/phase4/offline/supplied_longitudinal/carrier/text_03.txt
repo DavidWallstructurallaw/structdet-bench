@@ -1,0 +1,11 @@
+# FIXTURE ONLY. Passive rescanning-selection illustration.
+def sort_values(values):
+    pending = list(values)
+    result = []
+    while pending:
+        best = 0
+        for j in range(1, len(pending)):
+            if pending[j] < pending[best]:
+                best = j
+        result.append(pending.pop(best))
+    return result

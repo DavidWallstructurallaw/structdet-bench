@@ -1,0 +1,222 @@
+{
+  "activities": {
+    "main_collection": {
+      "activation_status": "not_activated",
+      "design": {
+        "calls": 72,
+        "maximum_output_allowance_proposed": 589824,
+        "positions": 360
+      },
+      "execution_dependencies": [
+        "qualified_core",
+        "external_validation_feasibility",
+        "qualified_independent_human_core_review",
+        "prospective_main_freeze"
+      ],
+      "pilot_required": false,
+      "preparation_requires_external_execution": false
+    },
+    "pilot_collection": {
+      "activation_status": "not_activated",
+      "design": {
+        "calls": 6,
+        "maximum_output_allowance_proposed": 49152,
+        "positions": 30
+      },
+      "execution_dependencies": [
+        "qualified_core",
+        "external_validation_feasibility",
+        "qualified_independent_human_core_review"
+      ],
+      "optional": true,
+      "pilot_omission_permitted": true,
+      "preparation_requires_external_execution": false
+    }
+  },
+  "actual_automatic_retry_history": {
+    "reason": "No call has been made; runtime and provider retry behavior has not been observed.",
+    "state": "unknown"
+  },
+  "actual_cap_semantics": {
+    "reason": "Unit, tokenizer, visible versus reasoning convention and enforcement are not known.",
+    "state": "unknown"
+  },
+  "actual_raw_export_capability": {
+    "reason": "No provider interface or original export capability has been tested.",
+    "state": "unknown"
+  },
+  "actual_supported_controls": {
+    "reason": "Proposed controls in the plans and forms have not been verified against a deployment.",
+    "state": "unknown"
+  },
+  "analysis": {
+    "main_prefix_grid": [
+      5,
+      10,
+      20
+    ],
+    "missing_positions": "Retain their original planned indices; never compress a prefix.",
+    "observed_results": "none",
+    "planned_groups_per_main_cell": 4,
+    "planned_positions_per_main_cell": 20,
+    "planned_systematic_main_positions": 72,
+    "primary_p5_prefix": 20,
+    "resampling_sensitivity_proposed": {
+      "draws": 2000,
+      "nominal_percent": 95,
+      "scope": "fixed_prompt_suite_only",
+      "seed": 20260917
+    },
+    "targeted_audit_distinct_artifact_cap": 360
+  },
+  "authorization_reference": {
+    "reason": "No collection or monetary authorization has been supplied.",
+    "state": "unknown"
+  },
+  "collection_window": {
+    "reason": "No external deployment window or start/end schedule has been supplied.",
+    "state": "unknown"
+  },
+  "deployment_identifier": {
+    "reason": "No actual deployment has been selected.",
+    "state": "unknown"
+  },
+  "document_kind": "unexecuted_collection_run_binding_draft",
+  "empirical_validation_performed": false,
+  "execution_status": "not_performed",
+  "external_execution_authorized": false,
+  "material_policy": {
+    "evidence_policy": "adjudicated_import",
+    "fixture": false,
+    "main": "descriptive",
+    "meaning": "Admission policy for later actual evidence. This preparation contains no admitted observations and establishes no adjudication.",
+    "pilot": "pilot"
+  },
+  "maximum_expenditure": {
+    "reason": "No price, currency or authorized ceiling has been supplied. Token allowances do not establish maximum money or paid-resource use.",
+    "state": "unknown"
+  },
+  "model_identifier": {
+    "reason": "No actual model or checkpoint has been selected.",
+    "state": "unknown"
+  },
+  "planned_retry_policy": "One operator attempt per slot. Do not refill, rerank, choose best, repair or replace failed, refused, truncated or inconvenient results. Disable provider/wrapper automatic retries where possible; retain observable retry history and unknown states.",
+  "preparation_authorized": true,
+  "preparation_basis": "User requested Phase 4 Step 10 and subsequently recovery of its incomplete delivery. This covers local preparation.",
+  "price_quote": {
+    "reason": "No provider-specific price quote exists for this unselected deployment.",
+    "state": "unknown"
+  },
+  "proposed_visible_messages": {
+    "additional_visible_system_instruction": "None proposed. Any local addition must be identical across conditions, frozen and disclosed.",
+    "unavoidable_platform_context": {
+      "reason": "No deployment has been selected; hidden or platform-provided instructions are unknown.",
+      "state": "unknown"
+    },
+    "user": "Exact prompt files linked by planned_slot_map.tsv."
+  },
+  "protocol_id": "hero_sort_abc_v1",
+  "provenance_responsibility": {
+    "reason": "An actual operator must own original export capture, source association and amendment chronology.",
+    "state": "unknown"
+  },
+  "provider": {
+    "reason": "No provider has been selected.",
+    "state": "unknown"
+  },
+  "provider_primary_documentation": {
+    "reason": "Provider choice is outstanding. Verify current primary documentation before selecting actual controls or prices.",
+    "state": "unknown"
+  },
+  "qualified_claims": [],
+  "raw_export_requirements": [
+    "original request/messages and exact sent prompt bytes",
+    "request and attempt IDs with chronological timestamps",
+    "all original response bytes and unselected extras",
+    "failure/refusal/truncation and missing positions",
+    "actual usage, enforced controls, deployment identity and cap semantics where exposed",
+    "observable retry history or explicit unknown states",
+    "immutable export hashes and original source associations"
+  ],
+  "recovery_note": "Reconstructed from the verified Step 9 implementation and adopted specifications after prior scratch loss; no claim of exact recovery of lost Step 10 bytes.",
+  "responsible_operator": {
+    "reason": "No actual collection operator has been supplied.",
+    "state": "unknown"
+  },
+  "science_source_pins": {
+    "EC": "002d2393d05cb2c8b1db0a70e844e3d775e2be2155db7b2ffaadaa8080c8b950",
+    "SD": "357c0c3994e34fc1831ce91bf1c7e579925d64827579f80eb0a8708e85c93f32",
+    "SI": "80c193231af343d383544cee924a11fbb063a5c4ccee02d996ea4f904979565a"
+  },
+  "scientific_pins": {
+    "analytic_resolution_id": "sorting_mechanism_family",
+    "analytic_resolution_version": "0.1",
+    "reference_registry_id": "sorting_reference_eight",
+    "reference_registry_version": "0.1",
+    "structural_schema_id": "sorting_mechanism_partition",
+    "structural_schema_version": "0.1",
+    "task_id": "bounded_integer_sort",
+    "task_version": "0.1",
+    "validity_rubric_ref": "bounded_integer_sort_validity_v1"
+  },
+  "scope": {
+    "claim_id": "hero-fixed-suite",
+    "task_id": "bounded_integer_sort",
+    "task_version": "0.1"
+  },
+  "source_materials": [
+    {
+      "path_from_project_root": "HERO_BENCHMARK_SPEC.md",
+      "sha256": "d1a0849d888a35ae3c9bd552bb920ee46417b7eeb4f8b687f8b5825e6fb851b2",
+      "size_bytes": 76545
+    },
+    {
+      "path_from_project_root": "PHASE_4_PLAN.md",
+      "sha256": "161a6ce2b99ae3f26caab26bb03f77434b45f9df69845827c09c23c1e5dc2faf",
+      "size_bytes": 91135
+    },
+    {
+      "path_from_project_root": "VERIFICATION_POLICY.md",
+      "sha256": "3090b505a93b6bdf97a0b0c302bceff7791aaf7601be288e39e9ccc1d7ca69a8",
+      "size_bytes": 11297
+    },
+    {
+      "path_from_project_root": "STRUCTURAL_CLASS_CONTRACT.md",
+      "sha256": "00ba09dd879f5fe02a3302a6f1ad36bda1c6b7e2723562f5f62ec85fed125328",
+      "size_bytes": 44228
+    },
+    {
+      "path_from_project_root": "METRICS_SPEC.md",
+      "sha256": "23b45934e87767ca87e56b97aa4e1d1abdd49e27187d0b9c5a336ca516a96edb",
+      "size_bytes": 66345
+    },
+    {
+      "path_from_project_root": "structdet_bench/study_collection.py",
+      "sha256": "e3928815023bce8c288d6d75205fbb224a9bad88d780cab374fa289de43d5094",
+      "size_bytes": 40501
+    },
+    {
+      "path_from_project_root": "structdet_bench/study_extraction.py",
+      "sha256": "9555f34feee6fe883ea89d1cfbcdf63c3189d8235724d2e905d53f9492ddf8f4",
+      "size_bytes": 14642
+    }
+  ],
+  "status": "readiness_gaps_recorded",
+  "stop_policy": "Keep the activity unactivated while operator, qualified prerequisites, actual control/cap semantics, raw exports, schedule or maximum spend authorization are missing. After activation, stop at registered resources, deployment/control drift or concrete safety/authorization failure. Preserve partial material.",
+  "storage_access": {
+    "reason": "No external study storage location, access roster or retention operator has been established.",
+    "state": "unknown"
+  },
+  "study_id": "hero-operational-preparation",
+  "study_version": "prep-v1",
+  "version": "0.1",
+  "withheld_claims": [
+    "empirical P1 temperature comparison",
+    "empirical P5 mechanism-prompt comparison",
+    "independent human validation",
+    "qualified operational containment",
+    "prospective empirical registration",
+    "support beyond observed finite-family design",
+    "any longitudinal or latent-support conclusion"
+  ]
+}

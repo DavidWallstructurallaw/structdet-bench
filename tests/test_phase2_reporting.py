@@ -120,14 +120,13 @@ def audit_paths(test,value,path):
 
 
 class Step7ReportAudit(unittest.TestCase):
-    def test_all_36_source_report_groups_have_a_current_location(self):
-        from tests.phase2_helpers import read_matrix
-        m=read_matrix();r=plain(base_result().report)
-        self.assertEqual(set(AUDIT_RF_PATHS),{x['id'] for x in m['catalogues']['rf']})
+    def test_all_source_report_groups_have_a_current_location(self):
+        from tests.helpers import source_table
+        r=plain(base_result().report)
+        self.assertEqual(set(AUDIT_RF_PATHS),{row[0] for row in source_table('THEORY_TO_CODE_TRACEABILITY.md','RF')})
         for rid,paths in AUDIT_RF_PATHS.items():
             for path in paths:
                 with self.subTest(group=rid,path=path):audit_paths(self,r,path)
-        self.assertEqual(m['delivery']['step7_audit']['report_paths'],AUDIT_RF_PATHS)
     def test_RF21_RF23_have_real_same_subset_pair_values_not_null_slots(self):
         from tests.test_phase2_pipeline import ratio
         from fractions import Fraction

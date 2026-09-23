@@ -1,0 +1,14 @@
+{
+  "approval_basis": "Explicit instruction to begin the plan's next named step adopts its implementation scope; plan bytes retained unchanged.",
+  "empirical_execution_authorized": false,
+  "final_owner_acceptance": "not_established",
+  "implementation_step_authorized": 1,
+  "owner_instruction": "Phase 4 Step 1 \u5f00\u59cb",
+  "phase": 4,
+  "plan_adopted_for_step1": true,
+  "plan_sha256": "41efc2076e6c44dd4e1f14bf1501ff2593b9d8e80a9150835f4ada0873c9538d",
+  "plan_text_status": "Original planning-time Proposed wording retained as immutable history; this separate decision records subsequent adoption.",
+  "remote_delivery_authorized_by_this_record": false,
+  "schema_version": "0.1",
+  "scientific_scope_amendment": false
+}

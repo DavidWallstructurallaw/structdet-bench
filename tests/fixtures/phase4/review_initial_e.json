@@ -1,0 +1,127 @@
+{
+  "version": "0.1",
+  "kind": "review_submission",
+  "study_id": "fixture-study",
+  "study_version": "v1",
+  "fixture": true,
+  "rubric_id": "bounded_integer_sort_validity_v1",
+  "record": {
+    "record_type": "human_review",
+    "record_id": "review-initial-e",
+    "record_version": "0.1",
+    "study_id": "fixture-study",
+    "study_version": "v1",
+    "revision": 1,
+    "scope": {
+      "claim_id": "fixture-format",
+      "task_id": "bounded_integer_sort",
+      "task_version": "0.1"
+    },
+    "depends_on": [],
+    "lineage_refs": [],
+    "supersedes": {
+      "state": "not_applicable",
+      "reason": "Initial fixture record has no superseded predecessor."
+    },
+    "artifact_ref": {
+      "record_type": "artifact",
+      "record_id": "review-artifact-c",
+      "record_version": "0.1"
+    },
+    "artifact_sha256": "4287a619084c4d4f34ba4f5443eb941dfe848c0dbd664104a10e467c1b4a7838",
+    "reviewer": {
+      "reviewer_id": "fixture-reviewer-1",
+      "entity_kind": "human",
+      "qualifications": {
+        "state": "known",
+        "value": "Stipulated sorting-domain qualification; no actual credential."
+      },
+      "relationships": {
+        "state": "known",
+        "value": "Stipulated no relationship to candidate source."
+      },
+      "exposure": {
+        "state": "known",
+        "value": "Synthetic first-pass exposure record."
+      },
+      "machine_assistance": {
+        "state": "known",
+        "value": "All fixture contents were authored with AI; no actual human review."
+      },
+      "roster_packet_id": {
+        "state": "known",
+        "value": "review-roster"
+      }
+    },
+    "submission_stage": "initial",
+    "submitted_at": {
+      "state": "known",
+      "value": "2026-09-22T00:00:00Z"
+    },
+    "initial_submission_ref": {
+      "state": "not_applicable",
+      "reason": "Synthetic software example; no actual people or reviews."
+    },
+    "independence": {
+      "declared_independent": {
+        "state": "known",
+        "value": true
+      },
+      "evidence_refs": [
+        {
+          "record_type": "study_registration",
+          "record_id": "registration",
+          "record_version": "0.1"
+        }
+      ],
+      "limitations": []
+    },
+    "blinding": {
+      "pack_id": {
+        "state": "known",
+        "value": "fixture-blind-pack"
+      },
+      "withheld_fields": [
+        "model",
+        "condition",
+        "proposed_role",
+        "other_judgments"
+      ],
+      "limitations": [
+        "Artifact contents may reveal a mechanism; fixture only."
+      ]
+    },
+    "judgment": {
+      "assignment_status": "unresolved",
+      "structural_class_id": {
+        "state": "unknown",
+        "reason": "Synthetic software example; no actual people or reviews."
+      },
+      "validity_status": "not_assessed",
+      "rationale": {
+        "state": "known",
+        "value": "PRIVATE_JUDGMENT_SENTINEL: stipulated fixture decision."
+      },
+      "evidence_refs": [
+        {
+          "record_type": "artifact",
+          "record_id": "review-artifact-c",
+          "record_version": "0.1"
+        }
+      ]
+    },
+    "original_submission_packet": {
+      "state": "known",
+      "value": "review-submission-e"
+    }
+  },
+  "prior_label_exposure": {
+    "state": "known",
+    "value": false
+  },
+  "copied_from": {
+    "state": "not_applicable",
+    "reason": "Synthetic software example; no actual people or reviews."
+  },
+  "schema_issues": []
+}

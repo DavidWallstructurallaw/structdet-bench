@@ -1,0 +1,59 @@
+{
+  "provenance": "Independently hand-authored expected semantic facts. No result was obtained from study_records implementation.",
+  "complete": {
+    "study_id": "fixture-study",
+    "study_version": "v1",
+    "record_count": 12,
+    "record_types": [
+      "study_registration",
+      "activity_readiness",
+      "core_catalog",
+      "artifact",
+      "validation_receipt",
+      "human_review",
+      "adjudication",
+      "collection_ledger",
+      "extraction",
+      "audit_selection",
+      "correction_incident",
+      "compilation_receipt"
+    ],
+    "evidence_policy": "fixture_only",
+    "material_role": "fixture",
+    "packet_count": 1,
+    "payload_sha256": "4287a619084c4d4f34ba4f5443eb941dfe848c0dbd664104a10e467c1b4a7838",
+    "payload_size_bytes": 103,
+    "planned_positions": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "missing_positions": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "substantive_validation_performed": false,
+    "analysis_bundle_created": false
+  },
+  "partial": {
+    "record_count": 2,
+    "packet_count": 0,
+    "content_state": "unknown",
+    "substantive_validation_performed": false
+  },
+  "malformed": {
+    "diagnostic_code": "unsupported_study_schema_version",
+    "exit_code": 2
+  },
+  "canonical": {
+    "encoding": "UTF-8",
+    "sorted_object_keys": true,
+    "array_order_preserved": true,
+    "final_newline": "LF"
+  }
+}

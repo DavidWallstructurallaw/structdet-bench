@@ -1,0 +1,2 @@
+# fixture_only: passive source bytes, no candidate execution.
+raise RuntimeError("must never execute")

@@ -1,0 +1,391 @@
+{
+  "common_assignment_rule": "Assign only when a uniquely applicable descriptor organizes all relevant reachable branches; names, comments, output agreement and hypothetical repaired programs cannot select a family.",
+  "common_permitted_operations": "Empty/singleton handling, direct size-two comparison, copying, and a verified already-ordered fast path are permitted only without a second general sorting strategy.",
+  "counterfactual_requirements": [
+    {
+      "artifact_refs": [],
+      "evidence_refs": [],
+      "kind": "same_class_renaming_and_helper_layout",
+      "status": "missing"
+    },
+    {
+      "artifact_refs": [],
+      "evidence_refs": [],
+      "kind": "mechanism_changing_substitution",
+      "status": "missing"
+    }
+  ],
+  "descriptor_pairs": [
+    {
+      "distinguishing_argument": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "evidence_refs": [],
+      "left_class_id": "SORT-ADJ",
+      "mandatory_distinction": true,
+      "review_status": "missing",
+      "right_class_id": "SORT-INS"
+    },
+    {
+      "distinguishing_argument": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "evidence_refs": [],
+      "left_class_id": "SORT-ADJ",
+      "mandatory_distinction": false,
+      "review_status": "missing",
+      "right_class_id": "SORT-SEL"
+    },
+    {
+      "distinguishing_argument": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "evidence_refs": [],
+      "left_class_id": "SORT-ADJ",
+      "mandatory_distinction": false,
+      "review_status": "missing",
+      "right_class_id": "SORT-MERGE"
+    },
+    {
+      "distinguishing_argument": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "evidence_refs": [],
+      "left_class_id": "SORT-ADJ",
+      "mandatory_distinction": false,
+      "review_status": "missing",
+      "right_class_id": "SORT-PIVOT"
+    },
+    {
+      "distinguishing_argument": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "evidence_refs": [],
+      "left_class_id": "SORT-ADJ",
+      "mandatory_distinction": false,
+      "review_status": "missing",
+      "right_class_id": "SORT-HEAP"
+    },
+    {
+      "distinguishing_argument": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "evidence_refs": [],
+      "left_class_id": "SORT-ADJ",
+      "mandatory_distinction": false,
+      "review_status": "missing",
+      "right_class_id": "SORT-COUNT"
+    },
+    {
+      "distinguishing_argument": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "evidence_refs": [],
+      "left_class_id": "SORT-ADJ",
+      "mandatory_distinction": false,
+      "review_status": "missing",
+      "right_class_id": "SORT-RADIX"
+    },
+    {
+      "distinguishing_argument": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "evidence_refs": [],
+      "left_class_id": "SORT-INS",
+      "mandatory_distinction": false,
+      "review_status": "missing",
+      "right_class_id": "SORT-SEL"
+    },
+    {
+      "distinguishing_argument": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "evidence_refs": [],
+      "left_class_id": "SORT-INS",
+      "mandatory_distinction": false,
+      "review_status": "missing",
+      "right_class_id": "SORT-MERGE"
+    },
+    {
+      "distinguishing_argument": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "evidence_refs": [],
+      "left_class_id": "SORT-INS",
+      "mandatory_distinction": false,
+      "review_status": "missing",
+      "right_class_id": "SORT-PIVOT"
+    },
+    {
+      "distinguishing_argument": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "evidence_refs": [],
+      "left_class_id": "SORT-INS",
+      "mandatory_distinction": false,
+      "review_status": "missing",
+      "right_class_id": "SORT-HEAP"
+    },
+    {
+      "distinguishing_argument": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "evidence_refs": [],
+      "left_class_id": "SORT-INS",
+      "mandatory_distinction": false,
+      "review_status": "missing",
+      "right_class_id": "SORT-COUNT"
+    },
+    {
+      "distinguishing_argument": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "evidence_refs": [],
+      "left_class_id": "SORT-INS",
+      "mandatory_distinction": false,
+      "review_status": "missing",
+      "right_class_id": "SORT-RADIX"
+    },
+    {
+      "distinguishing_argument": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "evidence_refs": [],
+      "left_class_id": "SORT-SEL",
+      "mandatory_distinction": false,
+      "review_status": "missing",
+      "right_class_id": "SORT-MERGE"
+    },
+    {
+      "distinguishing_argument": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "evidence_refs": [],
+      "left_class_id": "SORT-SEL",
+      "mandatory_distinction": false,
+      "review_status": "missing",
+      "right_class_id": "SORT-PIVOT"
+    },
+    {
+      "distinguishing_argument": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "evidence_refs": [],
+      "left_class_id": "SORT-SEL",
+      "mandatory_distinction": true,
+      "review_status": "missing",
+      "right_class_id": "SORT-HEAP"
+    },
+    {
+      "distinguishing_argument": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "evidence_refs": [],
+      "left_class_id": "SORT-SEL",
+      "mandatory_distinction": false,
+      "review_status": "missing",
+      "right_class_id": "SORT-COUNT"
+    },
+    {
+      "distinguishing_argument": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "evidence_refs": [],
+      "left_class_id": "SORT-SEL",
+      "mandatory_distinction": false,
+      "review_status": "missing",
+      "right_class_id": "SORT-RADIX"
+    },
+    {
+      "distinguishing_argument": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "evidence_refs": [],
+      "left_class_id": "SORT-MERGE",
+      "mandatory_distinction": true,
+      "review_status": "missing",
+      "right_class_id": "SORT-PIVOT"
+    },
+    {
+      "distinguishing_argument": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "evidence_refs": [],
+      "left_class_id": "SORT-MERGE",
+      "mandatory_distinction": false,
+      "review_status": "missing",
+      "right_class_id": "SORT-HEAP"
+    },
+    {
+      "distinguishing_argument": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "evidence_refs": [],
+      "left_class_id": "SORT-MERGE",
+      "mandatory_distinction": false,
+      "review_status": "missing",
+      "right_class_id": "SORT-COUNT"
+    },
+    {
+      "distinguishing_argument": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "evidence_refs": [],
+      "left_class_id": "SORT-MERGE",
+      "mandatory_distinction": false,
+      "review_status": "missing",
+      "right_class_id": "SORT-RADIX"
+    },
+    {
+      "distinguishing_argument": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "evidence_refs": [],
+      "left_class_id": "SORT-PIVOT",
+      "mandatory_distinction": false,
+      "review_status": "missing",
+      "right_class_id": "SORT-HEAP"
+    },
+    {
+      "distinguishing_argument": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "evidence_refs": [],
+      "left_class_id": "SORT-PIVOT",
+      "mandatory_distinction": false,
+      "review_status": "missing",
+      "right_class_id": "SORT-COUNT"
+    },
+    {
+      "distinguishing_argument": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "evidence_refs": [],
+      "left_class_id": "SORT-PIVOT",
+      "mandatory_distinction": false,
+      "review_status": "missing",
+      "right_class_id": "SORT-RADIX"
+    },
+    {
+      "distinguishing_argument": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "evidence_refs": [],
+      "left_class_id": "SORT-HEAP",
+      "mandatory_distinction": false,
+      "review_status": "missing",
+      "right_class_id": "SORT-COUNT"
+    },
+    {
+      "distinguishing_argument": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "evidence_refs": [],
+      "left_class_id": "SORT-HEAP",
+      "mandatory_distinction": false,
+      "review_status": "missing",
+      "right_class_id": "SORT-RADIX"
+    },
+    {
+      "distinguishing_argument": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "evidence_refs": [],
+      "left_class_id": "SORT-COUNT",
+      "mandatory_distinction": true,
+      "review_status": "missing",
+      "right_class_id": "SORT-RADIX"
+    }
+  ],
+  "descriptors": [
+    {
+      "class_id": "SORT-ADJ",
+      "constitutive_rule": "Repeated traversals compare adjacent positions and move local inversions across an active interval until the interval is ordered or a no-change condition is reached. The sweep/active-interval organization determines progress.",
+      "discriminating_evidence": "Inspect sweep-level progress and adjacent inversion handling. Adjacent swaps inside placement of one incoming value into a growing sorted prefix are evaluated under `SORT-INS`, rather than labeled by the swap instruction alone.",
+      "family": "adjacent sweep",
+      "permitted_variation": "Left/right direction, alternating directions, shrinking boundaries, and an early no-change exit."
+    },
+    {
+      "class_id": "SORT-INS",
+      "constitutive_rule": "A contiguous ordered prefix grows by selecting the next not-yet-inserted value and locating/inserting it within that prefix, preserving prefix order before the next value is admitted.",
+      "discriminating_evidence": "Establish the outer prefix-growth invariant and placement dependency. Gap-scheduled passes over interleaved subsequences are outside this descriptor. An insertion helper inside another full-size strategy does not create a second observation.",
+      "family": "sorted-prefix insertion",
+      "permitted_variation": "Shifts versus adjacent moves; linear versus binary search for the insertion location; equivalent list representations."
+    },
+    {
+      "class_id": "SORT-SEL",
+      "constitutive_rule": "Each output/frontier step obtains the next minimum or maximum by examining the current unsorted region afresh, then removes or places that value and advances the ordered region.",
+      "discriminating_evidence": "Trace or inspect a fresh extremum selection from the remaining region. A maintained heap/tournament used to obtain the next extremum belongs to `SORT-HEAP` when its descriptor holds.",
+      "family": "rescanning extremum selection",
+      "permitted_variation": "Minimum/maximum direction; swapping into a boundary or removing into a fresh output list."
+    },
+    {
+      "class_id": "SORT-MERGE",
+      "constitutive_rule": "Subsets/runs are ordered and then combined by choosing among run frontiers while preserving each run's internal order. Progressive ordered merging performs the general recombination.",
+      "discriminating_evidence": "Establish ordered runs, their formation, and frontier-based merge decisions. Natural-run discovery may reverse a monotone descending run; using another general sorter on runs larger than two is a hybrid under this schema.",
+      "family": "ordered-run merge",
+      "permitted_variation": "Top-down or bottom-up organization, explicit stack, natural-run discovery, and equivalent merge storage."
+    },
+    {
+      "class_id": "SORT-PIVOT",
+      "constitutive_rule": "A key-selected pivot partitions a nontrivial region by comparisons to that pivot; recursively or iteratively sorting the resulting regions and placing/combining them establishes order.",
+      "discriminating_evidence": "Establish pivot-dependent partition predicates, subproblem boundaries, and recombination. Position-based splitting followed by ordered merging is `SORT-MERGE`. Bit/digit-defined decomposition without a key-selected pivot is considered under `SORT-RADIX`.",
+      "family": "pivot partition",
+      "permitted_variation": "Pivot selection; two-way/three-way partition; in-place/copying; recursion/explicit stack."
+    },
+    {
+      "class_id": "SORT-HEAP",
+      "constitutive_rule": "A heap-order relation is established and maintained while successive root extrema are extracted or placed to build the sorted result.",
+      "discriminating_evidence": "Establish heap-order maintenance and its role in each extraction. A fresh full-region extremum scan with no maintained heap is `SORT-SEL`. External heap libraries are prohibited by the task.",
+      "family": "maintained heap extraction",
+      "permitted_variation": "Min/max heap, bottom-up/incremental heap construction, local array/tree representation, and output direction."
+    },
+    {
+      "class_id": "SORT-COUNT",
+      "constitutive_rule": "Full key values address frequency/position information; scanning the full-key order, with multiplicity expansion or cumulative positions, determines the result.",
+      "discriminating_evidence": "Establish whole-key addressing and numeric-order traversal. Sorting a dictionary's distinct keys with another general sorting mechanism is a hybrid. A single distribution over the complete key is counting at this resolution, even when described as one-pass radix.",
+      "family": "full-key frequency ordering",
+      "permitted_variation": "Fixed 4096-key or observed-range table, ascending key-range scan, frequency expansion or cumulative placement."
+    },
+    {
+      "class_id": "SORT-RADIX",
+      "constitutive_rule": "Proper parts of the key drive multiple reachable refinement stages or digit-recursive subdivisions; significance/order-preservation relations combine them into full-key order. Full ordering is not decided by one complete-key table.",
+      "discriminating_evidence": "Verify at least one permitted nontrivial input exercises multiple proper-digit stages and the significance/ordering dependencies. Whole-key counting in one stage is `SORT-COUNT`. A counting operation used only inside proper-digit refinement is a component of this family, not a separate full-key mechanism.",
+      "family": "multi-stage digit refinement",
+      "permitted_variation": "Least-significant-first passes with required order preservation; most-significant-first subdivision; explicit bit/digit widths; equivalent bucket/count storage."
+    }
+  ],
+  "empirical_validation_performed": false,
+  "material_role": "reference_specification",
+  "schema_id": "sorting_mechanism_partition",
+  "schema_version": "0.1",
+  "version": "0.1"
+}

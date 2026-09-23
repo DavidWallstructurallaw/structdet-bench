@@ -1,0 +1,9 @@
+# FIXTURE ONLY. Passive pivot-partition illustration.
+def sort_values(values):
+    if len(values) < 2:
+        return list(values)
+    pivot = values[len(values)//2]
+    lower = [x for x in values if x < pivot]
+    equal = [x for x in values if x == pivot]
+    upper = [x for x in values if x > pivot]
+    return sort_values(lower) + equal + sort_values(upper)

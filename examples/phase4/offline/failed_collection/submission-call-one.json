@@ -1,0 +1,333 @@
+{
+  "kind": "collection_submission",
+  "version": "0.1",
+  "study_id": "fixture-study",
+  "study_version": "v1",
+  "fixture": true,
+  "record": {
+    "record_type": "collection_ledger",
+    "record_id": "call-one",
+    "record_version": "0.1",
+    "study_id": "fixture-study",
+    "study_version": "v1",
+    "revision": 1,
+    "scope": {
+      "claim_id": "fixture-format",
+      "task_id": "bounded_integer_sort",
+      "task_version": "0.1"
+    },
+    "depends_on": [],
+    "lineage_refs": [],
+    "supersedes": {
+      "state": "not_applicable",
+      "reason": "Initial fixture record has no superseded predecessor."
+    },
+    "phase": "main",
+    "block_id": "P01",
+    "condition": "A",
+    "group_index": 1,
+    "registered_call_order": 1,
+    "planned_positions": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "controls": {
+      "temperature": {
+        "state": "known",
+        "value": "0.4"
+      },
+      "top_p": {
+        "state": "known",
+        "value": "1.0"
+      },
+      "presence_penalty": {
+        "state": "known",
+        "value": "0"
+      },
+      "frequency_penalty": {
+        "state": "known",
+        "value": "0"
+      },
+      "seed": {
+        "state": "known",
+        "value": null
+      },
+      "output_allowance": {
+        "state": "known",
+        "value": 8192
+      },
+      "cap_semantics": {
+        "state": "known",
+        "value": "visible_output_tokens"
+      },
+      "fresh_context": {
+        "state": "known",
+        "value": true
+      },
+      "tools_requested": {
+        "state": "known",
+        "value": false
+      },
+      "hidden_controls": {
+        "state": "unknown",
+        "reason": "Synthetic unknown; no external operation is authenticated."
+      },
+      "wrapper_knowledge": {
+        "state": "unknown",
+        "reason": "Synthetic unknown; no external operation is authenticated."
+      }
+    },
+    "prompt_ref": {
+      "state": "known",
+      "value": {
+        "record_type": "artifact",
+        "record_id": "prompt-call-one",
+        "record_version": "0.1"
+      }
+    },
+    "sent_prompt_sha256": {
+      "state": "known",
+      "value": "005ad5a432d4e0867b60c43d4bd73279fe2c9e13aa441d82a7100036074ef081"
+    },
+    "deployment": {
+      "model_identifier": {
+        "state": "known",
+        "value": "fixture-model"
+      },
+      "model_family": {
+        "state": "known",
+        "value": "fixture-family"
+      },
+      "checkpoint_identifier": {
+        "state": "unknown",
+        "reason": "Synthetic unknown; no external operation is authenticated."
+      },
+      "deployment_identifier": {
+        "state": "known",
+        "value": "fixture-deployment"
+      },
+      "drift": {
+        "state": "known",
+        "value": "No drift reported in synthetic record."
+      }
+    },
+    "attempt_status": "failed",
+    "attempt_id": {
+      "state": "known",
+      "value": "failed-original"
+    },
+    "request_id": {
+      "state": "known",
+      "value": "request-call-one"
+    },
+    "attempted_at": {
+      "state": "known",
+      "value": "2026-09-23T00:00:00Z"
+    },
+    "raw_response_ref": {
+      "state": "unknown",
+      "reason": "Synthetic unknown; no external operation is authenticated."
+    },
+    "termination_reason": {
+      "state": "unknown",
+      "reason": "Stipulated software fixture; no empirical evidence supplied."
+    },
+    "retry_of": {
+      "state": "not_applicable",
+      "reason": "No call or retry has occurred."
+    },
+    "retry_evidence_refs": [],
+    "usage": {
+      "input_tokens": {
+        "state": "unknown",
+        "reason": "Stipulated software fixture; no empirical evidence supplied."
+      },
+      "output_tokens": {
+        "state": "known",
+        "value": 0
+      },
+      "hidden_reasoning_tokens": {
+        "state": "unknown",
+        "reason": "Stipulated software fixture; no empirical evidence supplied."
+      },
+      "compute": {
+        "state": "unknown",
+        "reason": "Stipulated software fixture; no empirical evidence supplied."
+      },
+      "monetary_cost": {
+        "state": "unknown",
+        "reason": "Stipulated software fixture; no empirical evidence supplied."
+      },
+      "currency": {
+        "state": "unknown",
+        "reason": "Stipulated software fixture; no empirical evidence supplied."
+      }
+    },
+    "authorization_ref": {
+      "state": "unknown",
+      "reason": "Stipulated software fixture; no empirical evidence supplied."
+    }
+  },
+  "requested_controls": {
+    "temperature": {
+      "state": "known",
+      "value": "0.4"
+    },
+    "top_p": {
+      "state": "known",
+      "value": "1.0"
+    },
+    "presence_penalty": {
+      "state": "known",
+      "value": "0"
+    },
+    "frequency_penalty": {
+      "state": "known",
+      "value": "0"
+    },
+    "seed": {
+      "state": "known",
+      "value": null
+    },
+    "output_allowance": {
+      "state": "known",
+      "value": 8192
+    },
+    "cap_semantics": {
+      "state": "known",
+      "value": "visible_output_tokens"
+    },
+    "fresh_context": {
+      "state": "known",
+      "value": true
+    },
+    "tools_requested": {
+      "state": "known",
+      "value": false
+    },
+    "hidden_controls": {
+      "state": "unknown",
+      "reason": "Synthetic unknown; no external operation is authenticated."
+    },
+    "wrapper_knowledge": {
+      "state": "unknown",
+      "reason": "Synthetic unknown; no external operation is authenticated."
+    }
+  },
+  "enforced_controls": {
+    "temperature": {
+      "state": "known",
+      "value": true
+    },
+    "top_p": {
+      "state": "known",
+      "value": true
+    },
+    "presence_penalty": {
+      "state": "known",
+      "value": true
+    },
+    "frequency_penalty": {
+      "state": "known",
+      "value": true
+    },
+    "seed": {
+      "state": "known",
+      "value": true
+    },
+    "output_allowance": {
+      "state": "known",
+      "value": true
+    },
+    "cap_semantics": {
+      "state": "known",
+      "value": true
+    },
+    "fresh_context": {
+      "state": "known",
+      "value": true
+    },
+    "tools_requested": {
+      "state": "known",
+      "value": true
+    },
+    "hidden_controls": {
+      "state": "known",
+      "value": true
+    },
+    "wrapper_knowledge": {
+      "state": "known",
+      "value": true
+    }
+  },
+  "cap": {
+    "unit": {
+      "state": "known",
+      "value": "model_token"
+    },
+    "tokenizer": {
+      "state": "known",
+      "value": "fixture-tokenizer"
+    },
+    "convention": {
+      "state": "known",
+      "value": "visible_output_tokens"
+    },
+    "includes_reasoning": {
+      "state": "known",
+      "value": false
+    },
+    "enforced": {
+      "state": "known",
+      "value": true
+    }
+  },
+  "context": {
+    "visible_system_instruction_ref": {
+      "state": "not_applicable",
+      "reason": "Synthetic unknown; no external operation is authenticated."
+    },
+    "platform_context": {
+      "state": "unknown",
+      "reason": "Synthetic unknown; no external operation is authenticated."
+    },
+    "reasoning_configuration": {
+      "state": "unknown",
+      "reason": "Synthetic unknown; no external operation is authenticated."
+    },
+    "previous_outputs_supplied": {
+      "state": "known",
+      "value": false
+    },
+    "reference_material_supplied": {
+      "state": "known",
+      "value": false
+    },
+    "output_selection": {
+      "state": "known",
+      "value": "none"
+    },
+    "automatic_retries": {
+      "state": "known",
+      "value": 0
+    },
+    "duration_ms": {
+      "state": "known",
+      "value": "0"
+    }
+  },
+  "deployment_window": {
+    "start": {
+      "state": "known",
+      "value": "2026-09-22T00:00:00Z"
+    },
+    "end": {
+      "state": "known",
+      "value": "2026-09-24T00:00:00Z"
+    }
+  },
+  "evidence_refs": []
+}

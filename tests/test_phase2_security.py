@@ -95,13 +95,7 @@ class ComparisonBoundaryTests(unittest.TestCase):
         study['execute']='PRIVATE_COMMAND';r=review_comparison(self.loaded())
         self.assertEqual(next(x for x in r.bindings if x.cell_id=='P01-A').status,'contract_error')
         self.assertNotIn('PRIVATE_COMMAND',repr(r))
-    def test_future_components_and_output_example_are_not_implemented(self):
-        step=h.read_matrix()['delivery']['step']
-        for name,first_step in (('text_diagnostics',3),('comparisons',4),('uncertainty',5),('predictions',5),('comparison_pipeline',6)):
-            path=h.ROOT/'structdet_bench'/f'{name}.py'
-            if step < first_step:self.assertFalse(path.exists())
-            else:self.assertTrue(path.is_file())
-        if step < 6:self.assertFalse((h.ROOT/'examples/hero_abc').exists())
+    def test_record_review_does_not_perform_prediction_or_resampling(self):
         r=review_comparison(self.loaded())
         self.assertFalse(hasattr(r,'prediction'));self.assertFalse(hasattr(r,'resample_indices'))
     def test_declared_replay_is_retained_without_generating_indices(self):

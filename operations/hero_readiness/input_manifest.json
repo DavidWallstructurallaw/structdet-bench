@@ -1,0 +1,181 @@
+{
+  "empirical_evidence": false,
+  "inputs": [
+    {
+      "artifact_id": "source-01",
+      "empirical_evidence": false,
+      "packet_id": "input-01",
+      "role": "preparatory_specification",
+      "sha256": "d1a0849d888a35ae3c9bd552bb920ee46417b7eeb4f8b687f8b5825e6fb851b2",
+      "size_bytes": 76545,
+      "snapshot_path": "inputs/HERO_BENCHMARK_SPEC.md",
+      "source_path": "HERO_BENCHMARK_SPEC.md"
+    },
+    {
+      "artifact_id": "source-02",
+      "empirical_evidence": false,
+      "packet_id": "input-02",
+      "role": "preparatory_specification",
+      "sha256": "161a6ce2b99ae3f26caab26bb03f77434b45f9df69845827c09c23c1e5dc2faf",
+      "size_bytes": 91135,
+      "snapshot_path": "inputs/PHASE_4_PLAN.md",
+      "source_path": "PHASE_4_PLAN.md"
+    },
+    {
+      "artifact_id": "source-03",
+      "empirical_evidence": false,
+      "packet_id": "input-03",
+      "role": "preparatory_specification",
+      "sha256": "31d2387ff2867e67e07adf60bca723b6783d0c3155b905d5477d2f844e1d9ce8",
+      "size_bytes": 19228,
+      "snapshot_path": "inputs/EVALUATION_CLOSURE_ADDENDUM.md",
+      "source_path": "EVALUATION_CLOSURE_ADDENDUM.md"
+    },
+    {
+      "artifact_id": "source-04",
+      "empirical_evidence": false,
+      "packet_id": "input-04",
+      "role": "preparatory_specification",
+      "sha256": "3090b505a93b6bdf97a0b0c302bceff7791aaf7601be288e39e9ccc1d7ca69a8",
+      "size_bytes": 11297,
+      "snapshot_path": "inputs/VERIFICATION_POLICY.md",
+      "source_path": "VERIFICATION_POLICY.md"
+    },
+    {
+      "artifact_id": "source-05",
+      "empirical_evidence": false,
+      "packet_id": "input-05",
+      "role": "preparatory_specification",
+      "sha256": "dec9912f3e1f33dfc8b8347a188baf176b5811751d244ab07d7010108ff9d39e",
+      "size_bytes": 35073,
+      "snapshot_path": "inputs/examples/phase4/reference_spec/core_catalog.json",
+      "source_path": "examples/phase4/reference_spec/core_catalog.json"
+    },
+    {
+      "artifact_id": "source-06",
+      "empirical_evidence": false,
+      "packet_id": "input-06",
+      "role": "preparatory_specification",
+      "sha256": "9066cfcf0829ec9e128c6bcf94fe5240c13beb430d7cc95bf0db45d2b6c736e6",
+      "size_bytes": 16793,
+      "snapshot_path": "inputs/examples/phase4/reference_spec/descriptor_reviews.json",
+      "source_path": "examples/phase4/reference_spec/descriptor_reviews.json"
+    },
+    {
+      "artifact_id": "source-07",
+      "empirical_evidence": false,
+      "packet_id": "input-07",
+      "role": "preparatory_specification",
+      "sha256": "d45583739513c1803819028b656e2d920d0c50a8860ad78830b0aa4abe34137a",
+      "size_bytes": 1473,
+      "snapshot_path": "inputs/examples/phase4/reference_spec/witnesses.json",
+      "source_path": "examples/phase4/reference_spec/witnesses.json"
+    },
+    {
+      "artifact_id": "source-08",
+      "empirical_evidence": false,
+      "packet_id": "input-08",
+      "role": "preparatory_specification",
+      "sha256": "a87a7ade8e5930ece5cf583e67224d9b646a4d4ca5f178a5a1193433c2b7d9bb",
+      "size_bytes": 3637,
+      "snapshot_path": "inputs/examples/phase4/reference_spec/preservation_quotas.json",
+      "source_path": "examples/phase4/reference_spec/preservation_quotas.json"
+    },
+    {
+      "artifact_id": "source-09",
+      "empirical_evidence": false,
+      "packet_id": "input-09",
+      "role": "preparatory_specification",
+      "sha256": "4b8dce8c2523bc953286bf853a0e17764e8fbaa6c71cc024b4e60d39feb17c11",
+      "size_bytes": 555455,
+      "snapshot_path": "inputs/examples/phase4/reference_spec/sorting_inputs.json",
+      "source_path": "examples/phase4/reference_spec/sorting_inputs.json"
+    },
+    {
+      "artifact_id": "source-10",
+      "empirical_evidence": false,
+      "packet_id": "input-10",
+      "role": "preparatory_specification",
+      "sha256": "88c4bf2e590772b37962f2ba583e5d75ceafdcfd06cd79b0f9dbfc91240fa4e8",
+      "size_bytes": 279,
+      "snapshot_path": "inputs/examples/phase4/reference_spec/sorting_manifest.json",
+      "source_path": "examples/phase4/reference_spec/sorting_manifest.json"
+    },
+    {
+      "artifact_id": "source-11",
+      "empirical_evidence": false,
+      "packet_id": "input-11",
+      "role": "preparatory_specification",
+      "sha256": "96e9a42d01eca87edb6d5daee8051c97d385c791fb29a064055ad9cf83310571",
+      "size_bytes": 11184,
+      "snapshot_path": "inputs/examples/phase4/reference_spec/VALIDATION_RECEIPTS.md",
+      "source_path": "examples/phase4/reference_spec/VALIDATION_RECEIPTS.md"
+    },
+    {
+      "artifact_id": "source-12",
+      "empirical_evidence": false,
+      "packet_id": "input-12",
+      "role": "preparatory_specification",
+      "sha256": "959a956370425052ce467eaed6d305945306ccb6bb8a743f8a808f8cf79cd17b",
+      "size_bytes": 1290,
+      "snapshot_path": "inputs/examples/phase4/review/core_review_form.json",
+      "source_path": "examples/phase4/review/core_review_form.json"
+    },
+    {
+      "artifact_id": "source-13",
+      "empirical_evidence": false,
+      "packet_id": "input-13",
+      "role": "preparatory_specification",
+      "sha256": "7a16d739b7fb130079da14a5629209665d0ec60bed9052ddb866bd6fe90f2228",
+      "size_bytes": 1300,
+      "snapshot_path": "inputs/examples/phase4/review/sampled_output_review_form.json",
+      "source_path": "examples/phase4/review/sampled_output_review_form.json"
+    },
+    {
+      "artifact_id": "source-14",
+      "empirical_evidence": false,
+      "packet_id": "input-14",
+      "role": "preparatory_specification",
+      "sha256": "e5ea222ac65a042fcf2eca575f0ce2bcd397969187b71538acc7464074ed84cf",
+      "size_bytes": 1298,
+      "snapshot_path": "inputs/examples/phase4/review/adjudication_form.json",
+      "source_path": "examples/phase4/review/adjudication_form.json"
+    },
+    {
+      "artifact_id": "source-15",
+      "empirical_evidence": false,
+      "packet_id": "input-15",
+      "role": "preparatory_specification",
+      "sha256": "4469e2400f4f2cf940072bc4c6627ee74c7538b7b89eb0c85241bcd34206bc85",
+      "size_bytes": 12083,
+      "snapshot_path": "inputs/examples/phase4/review/REVIEW_FORMAT.md",
+      "source_path": "examples/phase4/review/REVIEW_FORMAT.md"
+    },
+    {
+      "artifact_id": "source-16",
+      "empirical_evidence": false,
+      "packet_id": "input-16",
+      "role": "preparatory_specification",
+      "sha256": "0104de55e96a9f977975a3e50e81ec07aa1d3add41b35a647f872c5c07ccf4cf",
+      "size_bytes": 120371,
+      "snapshot_path": "collection/main/collection_plan.json",
+      "source_path": "operations/hero_readiness/collection/main/collection_plan.json"
+    },
+    {
+      "artifact_id": "source-17",
+      "empirical_evidence": false,
+      "packet_id": "input-17",
+      "role": "preparatory_specification",
+      "sha256": "c5a6a21af2b9aba30c7c9ff66b35a4b13a7e65b75f0c8ac361186482604e315e",
+      "size_bytes": 10167,
+      "snapshot_path": "collection/pilot/collection_plan.json",
+      "source_path": "operations/hero_readiness/collection/pilot/collection_plan.json"
+    }
+  ],
+  "kind": "preparation_input_manifest",
+  "lost_step10_byte_identity_claimed": false,
+  "reconstruction_status": "reconstructed_from_verified_step9_and_adopted_specs",
+  "study_id": "hero-operational-preparation",
+  "study_version": "prep-v1",
+  "version": "0.1"
+}

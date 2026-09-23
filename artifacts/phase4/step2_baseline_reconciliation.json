@@ -1,0 +1,23 @@
+{
+  "schema_version": "0.1",
+  "source_step": 1,
+  "local_archive": {
+    "name": "StructDet-Bench_Phase4_Step1_Local.zip",
+    "library_file_id": "libfile_ec30611240d08191be58eedcf01cf764",
+    "size_bytes": 72282952,
+    "sha256": "0b2d654f55e9ff9646268d09ab11363c6c155a2e1ddf1c5302ac0b1716cdb69b"
+  },
+  "archive_proof_sha256": "a5c1ef4616cd595e2e59989e3f4dd31ee21fb006a1c0e930b6afb9f32aa4f1b1",
+  "accepted_run_ids": [
+    "7c931a1a0968415a8548bda7a7541b09",
+    "283fcba333f340a8acb9d0488fce93a3"
+  ],
+  "source_files": 190,
+  "predecessor_methods": 1866,
+  "original_phase3_files": 180,
+  "original_phase3_methods": 1817,
+  "source_inventory_sha256": "90c1252839d61c9461139c7469300cc0f0cff7f064b29e9ce75f8835a38720a0",
+  "plan_sha256": "41efc2076e6c44dd4e1f14bf1501ff2593b9d8e80a9150835f4ada0873c9538d",
+  "remote_phase4_delivery": "not_performed",
+  "earlier_incomplete_journal_excluded": true
+}

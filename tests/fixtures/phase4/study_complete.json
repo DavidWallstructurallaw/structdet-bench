@@ -1,0 +1,1126 @@
+{
+  "study_schema_version": "0.1",
+  "study_id": "fixture-study",
+  "study_version": "v1",
+  "prior_study_versions": [],
+  "evidence_policy": "fixture_only",
+  "material_role": "fixture",
+  "packet_inventory": [
+    {
+      "packet_id": "payload",
+      "purpose": "artifact",
+      "location": {
+        "state": "known",
+        "value": {
+          "kind": "local",
+          "path": "study_payload.txt"
+        }
+      },
+      "sha256": {
+        "state": "known",
+        "value": "4287a619084c4d4f34ba4f5443eb941dfe848c0dbd664104a10e467c1b4a7838"
+      },
+      "size_bytes": {
+        "state": "known",
+        "value": 103
+      },
+      "record_count": {
+        "state": "known",
+        "value": 0
+      },
+      "format": "bytes",
+      "verification": "unchecked",
+      "verification_ref": {
+        "state": "unknown",
+        "reason": "Stipulated software fixture; no empirical evidence supplied."
+      }
+    }
+  ],
+  "import_budget": {
+    "max_packets": 8,
+    "max_total_bytes": 1048576,
+    "max_total_records": 1000
+  },
+  "records": [
+    {
+      "record_type": "study_registration",
+      "record_id": "registration",
+      "record_version": "0.1",
+      "study_id": "fixture-study",
+      "study_version": "v1",
+      "revision": 1,
+      "scope": {
+        "claim_id": "fixture-format",
+        "task_id": "bounded_integer_sort",
+        "task_version": "0.1"
+      },
+      "depends_on": [],
+      "lineage_refs": [],
+      "supersedes": {
+        "state": "not_applicable",
+        "reason": "Initial fixture record has no superseded predecessor."
+      },
+      "claim_scope": "Software format fixture only. No sorting, review, collection, or empirical result is claimed.",
+      "source_pins": {
+        "SD": "357c0c3994e34fc1831ce91bf1c7e579925d64827579f80eb0a8708e85c93f32",
+        "SI": "80c193231af343d383544cee924a11fbb063a5c4ccee02d996ea4f904979565a",
+        "EC": "002d2393d05cb2c8b1db0a70e844e3d775e2be2155db7b2ffaadaa8080c8b950"
+      },
+      "pins": {
+        "task_id": "bounded_integer_sort",
+        "task_version": "0.1",
+        "analytic_resolution_id": "sorting_mechanism_family",
+        "analytic_resolution_version": "0.1",
+        "structural_schema_id": "sorting_mechanism_partition",
+        "structural_schema_version": "0.1",
+        "reference_registry_id": "sorting_reference_eight",
+        "reference_registry_version": "0.1",
+        "validity_rubric_ref": "bounded_integer_sort_validity_v1"
+      },
+      "requested_profile": "m_only",
+      "frame_definition": {
+        "task_context": {
+          "state": "known",
+          "value": "Passive format example."
+        },
+        "consequence_horizon": {
+          "state": "unknown",
+          "reason": "Stipulated software fixture; no empirical evidence supplied."
+        },
+        "load_bearing_invariants": [
+          "Preserve supplied byte identity."
+        ],
+        "consequence_signature_spec": {
+          "state": "unknown",
+          "reason": "Stipulated software fixture; no empirical evidence supplied."
+        },
+        "equivalence_rule_ref": {
+          "state": "unknown",
+          "reason": "Stipulated software fixture; no empirical evidence supplied."
+        },
+        "admissible_substitutions": {
+          "state": "unknown",
+          "reason": "Stipulated software fixture; no empirical evidence supplied."
+        },
+        "evidence_requirement": {
+          "state": "unknown",
+          "reason": "Stipulated software fixture; no empirical evidence supplied."
+        },
+        "exceptional_case_rules": {
+          "state": "unknown",
+          "reason": "Stipulated software fixture; no empirical evidence supplied."
+        }
+      },
+      "protocol": {
+        "protocol_id": "fixture-protocol",
+        "protocol_version": "0.1",
+        "design": "descriptive",
+        "prompt_refs": [],
+        "controls": {
+          "temperature": {
+            "state": "unknown",
+            "reason": "Stipulated software fixture; no empirical evidence supplied."
+          },
+          "top_p": {
+            "state": "known",
+            "value": 1
+          },
+          "presence_penalty": {
+            "state": "known",
+            "value": 0
+          },
+          "frequency_penalty": {
+            "state": "known",
+            "value": 0
+          },
+          "seed": {
+            "state": "known",
+            "value": null
+          },
+          "output_allowance": {
+            "state": "known",
+            "value": 8192
+          },
+          "cap_semantics": {
+            "state": "unknown",
+            "reason": "Stipulated software fixture; no empirical evidence supplied."
+          },
+          "fresh_context": {
+            "state": "known",
+            "value": false
+          },
+          "tools_requested": {
+            "state": "known",
+            "value": false
+          },
+          "hidden_controls": {
+            "state": "unknown",
+            "reason": "Stipulated software fixture; no empirical evidence supplied."
+          },
+          "wrapper_knowledge": {
+            "state": "unknown",
+            "reason": "Stipulated software fixture; no empirical evidence supplied."
+          }
+        },
+        "budget": {
+          "max_calls": {
+            "state": "known",
+            "value": 0
+          },
+          "max_positions": {
+            "state": "known",
+            "value": 0
+          },
+          "max_output_tokens": {
+            "state": "known",
+            "value": 0
+          },
+          "monetary_ceiling": {
+            "state": "unknown",
+            "reason": "Stipulated software fixture; no empirical evidence supplied."
+          },
+          "currency": {
+            "state": "unknown",
+            "reason": "Stipulated software fixture; no empirical evidence supplied."
+          }
+        },
+        "longitudinal_input": {
+          "state": "not_applicable",
+          "reason": "The fixture requests no longitudinal claim."
+        },
+        "legacy_profile_input": {
+          "state": "unknown",
+          "reason": "No original legacy profile bundle is supplied in this passive software fixture."
+        }
+      },
+      "preregistration": {
+        "status": "not_registered",
+        "registered_at": {
+          "state": "unknown",
+          "reason": "Stipulated software fixture; no empirical evidence supplied."
+        },
+        "evidence_refs": [],
+        "exposure_at_registration": {
+          "state": "known",
+          "value": "Hand-authored software fixture, not a prospective registration."
+        }
+      },
+      "exposure": {
+        "state": "known",
+        "value": "Public fixture."
+      },
+      "currentness": {
+        "state": "unresolved",
+        "assessed_at": {
+          "state": "unknown",
+          "reason": "Stipulated software fixture; no empirical evidence supplied."
+        },
+        "expires_at": {
+          "state": "unknown",
+          "reason": "Stipulated software fixture; no empirical evidence supplied."
+        },
+        "basis": {
+          "state": "unknown",
+          "reason": "Stipulated software fixture; no empirical evidence supplied."
+        }
+      }
+    },
+    {
+      "record_type": "activity_readiness",
+      "record_id": "readiness",
+      "record_version": "0.1",
+      "study_id": "fixture-study",
+      "study_version": "v1",
+      "revision": 1,
+      "scope": {
+        "claim_id": "fixture-format",
+        "task_id": "bounded_integer_sort",
+        "task_version": "0.1"
+      },
+      "depends_on": [],
+      "lineage_refs": [],
+      "supersedes": {
+        "state": "not_applicable",
+        "reason": "Initial fixture record has no superseded predecessor."
+      },
+      "activity": "analysis",
+      "state": "blocked",
+      "prerequisites": [
+        {
+          "requirement_id": "real-domain-evidence",
+          "mandatory": true,
+          "outcome": "unresolved",
+          "evidence_refs": [],
+          "basis": {
+            "state": "unknown",
+            "reason": "Stipulated software fixture; no empirical evidence supplied."
+          }
+        }
+      ],
+      "outstanding_requirements": [
+        "real-domain-evidence"
+      ],
+      "responsible_operator": {
+        "state": "unknown",
+        "reason": "Stipulated software fixture; no empirical evidence supplied."
+      },
+      "authorization_ref": {
+        "state": "unknown",
+        "reason": "Stipulated software fixture; no empirical evidence supplied."
+      }
+    },
+    {
+      "record_type": "core_catalog",
+      "record_id": "core-slot",
+      "record_version": "0.1",
+      "study_id": "fixture-study",
+      "study_version": "v1",
+      "revision": 1,
+      "scope": {
+        "claim_id": "fixture-format",
+        "task_id": "bounded_integer_sort",
+        "task_version": "0.1"
+      },
+      "depends_on": [],
+      "lineage_refs": [],
+      "supersedes": {
+        "state": "not_applicable",
+        "reason": "Initial fixture record has no superseded predecessor."
+      },
+      "role_id": "CORE-ADJ-A",
+      "proposed_family": {
+        "state": "known",
+        "value": "SORT-ADJ"
+      },
+      "desired_contrast": "Illustrative catalog association; mechanism unreviewed.",
+      "artifact_ref": {
+        "state": "known",
+        "value": {
+          "record_type": "artifact",
+          "record_id": "artifact-source",
+          "record_version": "0.1"
+        }
+      },
+      "source": {
+        "state": "known",
+        "value": "Stipulated fixture author."
+      },
+      "ai_assistance": {
+        "state": "known",
+        "value": "Software fixture only."
+      },
+      "exposure": {
+        "state": "known",
+        "value": "Public fixture."
+      },
+      "role_status": "draft",
+      "evidence_refs": []
+    },
+    {
+      "record_type": "artifact",
+      "record_id": "artifact-source",
+      "record_version": "0.1",
+      "study_id": "fixture-study",
+      "study_version": "v1",
+      "revision": 1,
+      "scope": {
+        "claim_id": "fixture-format",
+        "task_id": "bounded_integer_sort",
+        "task_version": "0.1"
+      },
+      "depends_on": [],
+      "lineage_refs": [],
+      "supersedes": {
+        "state": "not_applicable",
+        "reason": "Initial fixture record has no superseded predecessor."
+      },
+      "content": {
+        "state": "known",
+        "value": {
+          "packet_id": "payload"
+        }
+      },
+      "sha256": {
+        "state": "known",
+        "value": "4287a619084c4d4f34ba4f5443eb941dfe848c0dbd664104a10e467c1b4a7838"
+      },
+      "size_bytes": {
+        "state": "known",
+        "value": 103
+      },
+      "artifact_role": "source",
+      "original_source": {
+        "state": "known",
+        "value": "Hand-authored inert text fixture."
+      },
+      "transformations": [],
+      "ai_assistance": {
+        "state": "known",
+        "value": "Software fixture construction."
+      },
+      "exposure": {
+        "state": "known",
+        "value": "Public fixture."
+      },
+      "evidence_refs": []
+    },
+    {
+      "record_type": "validation_receipt",
+      "record_id": "validation",
+      "record_version": "0.1",
+      "study_id": "fixture-study",
+      "study_version": "v1",
+      "revision": 1,
+      "scope": {
+        "claim_id": "fixture-format",
+        "task_id": "bounded_integer_sort",
+        "task_version": "0.1"
+      },
+      "depends_on": [],
+      "lineage_refs": [],
+      "supersedes": {
+        "state": "not_applicable",
+        "reason": "Initial fixture record has no superseded predecessor."
+      },
+      "artifact_ref": {
+        "record_type": "artifact",
+        "record_id": "artifact-source",
+        "record_version": "0.1"
+      },
+      "artifact_sha256": "4287a619084c4d4f34ba4f5443eb941dfe848c0dbd664104a10e467c1b4a7838",
+      "suite": {
+        "suite_id": "fixture-suite",
+        "suite_version": "0.1",
+        "manifest_sha256": "1111111111111111111111111111111111111111111111111111111111111111",
+        "expected_test_count": 2
+      },
+      "coverage": {
+        "representation": "ordered_test_ids_v1",
+        "segments": [
+          {
+            "segment_id": "fixture-segment",
+            "expected_count": 2,
+            "observed_ids": [],
+            "full_log_packets": []
+          }
+        ],
+        "declared_status": "not_performed",
+        "log_provenance": "unavailable_attachment"
+      },
+      "trusted_observations": [],
+      "counterexamples": [],
+      "conformance_review": {
+        "outcome": "unresolved",
+        "reviewer_ref": {
+          "state": "unknown",
+          "reason": "Stipulated software fixture; no empirical evidence supplied."
+        },
+        "evidence_refs": [],
+        "basis": {
+          "state": "unknown",
+          "reason": "Stipulated software fixture; no empirical evidence supplied."
+        }
+      },
+      "environment": {
+        "environment_id": {
+          "state": "unknown",
+          "reason": "Stipulated software fixture; no empirical evidence supplied."
+        },
+        "image_sha256": {
+          "state": "unknown",
+          "reason": "Stipulated software fixture; no empirical evidence supplied."
+        },
+        "configuration_sha256": {
+          "state": "unknown",
+          "reason": "Stipulated software fixture; no empirical evidence supplied."
+        },
+        "isolation_review_ref": {
+          "state": "unknown",
+          "reason": "Stipulated software fixture; no empirical evidence supplied."
+        }
+      },
+      "oracle": {
+        "oracle_id": {
+          "state": "unknown",
+          "reason": "Stipulated software fixture; no empirical evidence supplied."
+        },
+        "source_sha256": {
+          "state": "unknown",
+          "reason": "Stipulated software fixture; no empirical evidence supplied."
+        },
+        "review_ref": {
+          "state": "unknown",
+          "reason": "Stipulated software fixture; no empirical evidence supplied."
+        }
+      },
+      "limits": {
+        "cpu_seconds": {
+          "state": "unknown",
+          "reason": "Stipulated software fixture; no empirical evidence supplied."
+        },
+        "elapsed_seconds": {
+          "state": "unknown",
+          "reason": "Stipulated software fixture; no empirical evidence supplied."
+        },
+        "memory_bytes": {
+          "state": "unknown",
+          "reason": "Stipulated software fixture; no empirical evidence supplied."
+        },
+        "output_bytes": {
+          "state": "unknown",
+          "reason": "Stipulated software fixture; no empirical evidence supplied."
+        }
+      },
+      "termination": "not_started",
+      "harness_status": "not_assessed",
+      "validity_status": "not_assessed",
+      "mechanism_observations": [],
+      "provenance": {
+        "operator": {
+          "state": "unknown",
+          "reason": "Stipulated software fixture; no empirical evidence supplied."
+        },
+        "performed_at": {
+          "state": "unknown",
+          "reason": "Stipulated software fixture; no empirical evidence supplied."
+        },
+        "original_receipt_packet": {
+          "state": "unknown",
+          "reason": "Stipulated software fixture; no empirical evidence supplied."
+        },
+        "authenticity": "stipulated_fixture",
+        "attestation_ref": {
+          "state": "unknown",
+          "reason": "Stipulated software fixture; no empirical evidence supplied."
+        }
+      }
+    },
+    {
+      "record_type": "human_review",
+      "record_id": "review-draft",
+      "record_version": "0.1",
+      "study_id": "fixture-study",
+      "study_version": "v1",
+      "revision": 1,
+      "scope": {
+        "claim_id": "fixture-format",
+        "task_id": "bounded_integer_sort",
+        "task_version": "0.1"
+      },
+      "depends_on": [],
+      "lineage_refs": [],
+      "supersedes": {
+        "state": "not_applicable",
+        "reason": "Initial fixture record has no superseded predecessor."
+      },
+      "artifact_ref": {
+        "record_type": "artifact",
+        "record_id": "artifact-source",
+        "record_version": "0.1"
+      },
+      "artifact_sha256": "4287a619084c4d4f34ba4f5443eb941dfe848c0dbd664104a10e467c1b4a7838",
+      "reviewer": {
+        "reviewer_id": "fixture-person-no-real-identity",
+        "roster_packet_id": {
+          "state": "unknown",
+          "reason": "Stipulated software fixture; no empirical evidence supplied."
+        },
+        "entity_kind": "unknown",
+        "qualifications": {
+          "state": "unknown",
+          "reason": "Stipulated software fixture; no empirical evidence supplied."
+        },
+        "relationships": {
+          "state": "unknown",
+          "reason": "Stipulated software fixture; no empirical evidence supplied."
+        },
+        "exposure": {
+          "state": "unknown",
+          "reason": "Stipulated software fixture; no empirical evidence supplied."
+        },
+        "machine_assistance": {
+          "state": "known",
+          "value": "All identities and judgments here are stipulated fixtures."
+        }
+      },
+      "submission_stage": "draft",
+      "submitted_at": {
+        "state": "unknown",
+        "reason": "Stipulated software fixture; no empirical evidence supplied."
+      },
+      "initial_submission_ref": {
+        "state": "not_applicable",
+        "reason": "This is a draft with no earlier submission."
+      },
+      "independence": {
+        "declared_independent": {
+          "state": "unknown",
+          "reason": "Stipulated software fixture; no empirical evidence supplied."
+        },
+        "evidence_refs": [],
+        "limitations": [
+          "No real reviewer or independent review is claimed."
+        ]
+      },
+      "blinding": {
+        "pack_id": {
+          "state": "unknown",
+          "reason": "Stipulated software fixture; no empirical evidence supplied."
+        },
+        "withheld_fields": [],
+        "limitations": [
+          "No blind review was performed."
+        ]
+      },
+      "judgment": {
+        "assignment_status": "unresolved",
+        "structural_class_id": {
+          "state": "unknown",
+          "reason": "Stipulated software fixture; no empirical evidence supplied."
+        },
+        "validity_status": "not_assessed",
+        "rationale": {
+          "state": "unknown",
+          "reason": "Stipulated software fixture; no empirical evidence supplied."
+        },
+        "evidence_refs": []
+      },
+      "original_submission_packet": {
+        "state": "unknown",
+        "reason": "Stipulated software fixture; no empirical evidence supplied."
+      }
+    },
+    {
+      "record_type": "adjudication",
+      "record_id": "adjudication-unresolved",
+      "record_version": "0.1",
+      "study_id": "fixture-study",
+      "study_version": "v1",
+      "revision": 1,
+      "scope": {
+        "claim_id": "fixture-format",
+        "task_id": "bounded_integer_sort",
+        "task_version": "0.1"
+      },
+      "depends_on": [],
+      "lineage_refs": [],
+      "supersedes": {
+        "state": "not_applicable",
+        "reason": "Initial fixture record has no superseded predecessor."
+      },
+      "artifact_ref": {
+        "record_type": "artifact",
+        "record_id": "artifact-source",
+        "record_version": "0.1"
+      },
+      "artifact_sha256": "4287a619084c4d4f34ba4f5443eb941dfe848c0dbd664104a10e467c1b4a7838",
+      "initial_review_refs": [],
+      "adjudicator": {
+        "reviewer_id": "fixture-person-no-real-identity",
+        "roster_packet_id": {
+          "state": "unknown",
+          "reason": "Stipulated software fixture; no empirical evidence supplied."
+        },
+        "entity_kind": "unknown",
+        "qualifications": {
+          "state": "unknown",
+          "reason": "Stipulated software fixture; no empirical evidence supplied."
+        },
+        "relationships": {
+          "state": "unknown",
+          "reason": "Stipulated software fixture; no empirical evidence supplied."
+        },
+        "exposure": {
+          "state": "unknown",
+          "reason": "Stipulated software fixture; no empirical evidence supplied."
+        },
+        "machine_assistance": {
+          "state": "known",
+          "value": "All identities and judgments here are stipulated fixtures."
+        }
+      },
+      "independence": {
+        "declared_independent": {
+          "state": "unknown",
+          "reason": "Stipulated software fixture; no empirical evidence supplied."
+        },
+        "evidence_refs": [],
+        "limitations": [
+          "No real reviewer or independent review is claimed."
+        ]
+      },
+      "disagreement": "No genuine initial reviews have been supplied.",
+      "basis": {
+        "state": "unknown",
+        "reason": "Stipulated software fixture; no empirical evidence supplied."
+      },
+      "judgment": {
+        "assignment_status": "unresolved",
+        "structural_class_id": {
+          "state": "unknown",
+          "reason": "Stipulated software fixture; no empirical evidence supplied."
+        },
+        "validity_status": "not_assessed",
+        "rationale": {
+          "state": "unknown",
+          "reason": "Stipulated software fixture; no empirical evidence supplied."
+        },
+        "evidence_refs": []
+      },
+      "unresolved_issues": [
+        "Missing actual first-pass reviews and expert."
+      ],
+      "submitted_at": {
+        "state": "unknown",
+        "reason": "Stipulated software fixture; no empirical evidence supplied."
+      },
+      "original_submission_packet": {
+        "state": "unknown",
+        "reason": "Stipulated software fixture; no empirical evidence supplied."
+      }
+    },
+    {
+      "record_type": "collection_ledger",
+      "record_id": "call-planned",
+      "record_version": "0.1",
+      "study_id": "fixture-study",
+      "study_version": "v1",
+      "revision": 1,
+      "scope": {
+        "claim_id": "fixture-format",
+        "task_id": "bounded_integer_sort",
+        "task_version": "0.1"
+      },
+      "depends_on": [],
+      "lineage_refs": [],
+      "supersedes": {
+        "state": "not_applicable",
+        "reason": "Initial fixture record has no superseded predecessor."
+      },
+      "phase": "main",
+      "block_id": "P01",
+      "condition": "A",
+      "group_index": 1,
+      "registered_call_order": 1,
+      "planned_positions": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "controls": {
+        "temperature": {
+          "state": "unknown",
+          "reason": "Stipulated software fixture; no empirical evidence supplied."
+        },
+        "top_p": {
+          "state": "known",
+          "value": 1
+        },
+        "presence_penalty": {
+          "state": "known",
+          "value": 0
+        },
+        "frequency_penalty": {
+          "state": "known",
+          "value": 0
+        },
+        "seed": {
+          "state": "known",
+          "value": null
+        },
+        "output_allowance": {
+          "state": "known",
+          "value": 8192
+        },
+        "cap_semantics": {
+          "state": "unknown",
+          "reason": "Stipulated software fixture; no empirical evidence supplied."
+        },
+        "fresh_context": {
+          "state": "known",
+          "value": false
+        },
+        "tools_requested": {
+          "state": "known",
+          "value": false
+        },
+        "hidden_controls": {
+          "state": "unknown",
+          "reason": "Stipulated software fixture; no empirical evidence supplied."
+        },
+        "wrapper_knowledge": {
+          "state": "unknown",
+          "reason": "Stipulated software fixture; no empirical evidence supplied."
+        }
+      },
+      "prompt_ref": {
+        "state": "unknown",
+        "reason": "Stipulated software fixture; no empirical evidence supplied."
+      },
+      "sent_prompt_sha256": {
+        "state": "unknown",
+        "reason": "Stipulated software fixture; no empirical evidence supplied."
+      },
+      "deployment": {
+        "model_identifier": {
+          "state": "unknown",
+          "reason": "Stipulated software fixture; no empirical evidence supplied."
+        },
+        "model_family": {
+          "state": "unknown",
+          "reason": "Stipulated software fixture; no empirical evidence supplied."
+        },
+        "checkpoint_identifier": {
+          "state": "unknown",
+          "reason": "Stipulated software fixture; no empirical evidence supplied."
+        },
+        "deployment_identifier": {
+          "state": "unknown",
+          "reason": "Stipulated software fixture; no empirical evidence supplied."
+        },
+        "drift": {
+          "state": "unknown",
+          "reason": "Stipulated software fixture; no empirical evidence supplied."
+        }
+      },
+      "attempt_status": "not_attempted",
+      "attempt_id": {
+        "state": "unknown",
+        "reason": "Stipulated software fixture; no empirical evidence supplied."
+      },
+      "request_id": {
+        "state": "unknown",
+        "reason": "Stipulated software fixture; no empirical evidence supplied."
+      },
+      "attempted_at": {
+        "state": "unknown",
+        "reason": "Stipulated software fixture; no empirical evidence supplied."
+      },
+      "raw_response_ref": {
+        "state": "unknown",
+        "reason": "Stipulated software fixture; no empirical evidence supplied."
+      },
+      "termination_reason": {
+        "state": "unknown",
+        "reason": "Stipulated software fixture; no empirical evidence supplied."
+      },
+      "retry_of": {
+        "state": "not_applicable",
+        "reason": "No call or retry has occurred."
+      },
+      "retry_evidence_refs": [],
+      "usage": {
+        "input_tokens": {
+          "state": "unknown",
+          "reason": "Stipulated software fixture; no empirical evidence supplied."
+        },
+        "output_tokens": {
+          "state": "known",
+          "value": 0
+        },
+        "hidden_reasoning_tokens": {
+          "state": "unknown",
+          "reason": "Stipulated software fixture; no empirical evidence supplied."
+        },
+        "compute": {
+          "state": "unknown",
+          "reason": "Stipulated software fixture; no empirical evidence supplied."
+        },
+        "monetary_cost": {
+          "state": "unknown",
+          "reason": "Stipulated software fixture; no empirical evidence supplied."
+        },
+        "currency": {
+          "state": "unknown",
+          "reason": "Stipulated software fixture; no empirical evidence supplied."
+        }
+      },
+      "authorization_ref": {
+        "state": "unknown",
+        "reason": "Stipulated software fixture; no empirical evidence supplied."
+      }
+    },
+    {
+      "record_type": "extraction",
+      "record_id": "extraction-missing",
+      "record_version": "0.1",
+      "study_id": "fixture-study",
+      "study_version": "v1",
+      "revision": 1,
+      "scope": {
+        "claim_id": "fixture-format",
+        "task_id": "bounded_integer_sort",
+        "task_version": "0.1"
+      },
+      "depends_on": [],
+      "lineage_refs": [],
+      "supersedes": {
+        "state": "not_applicable",
+        "reason": "Initial fixture record has no superseded predecessor."
+      },
+      "collection_ref": {
+        "record_type": "collection_ledger",
+        "record_id": "call-planned",
+        "record_version": "0.1"
+      },
+      "raw_response_ref": {
+        "state": "unknown",
+        "reason": "Stipulated software fixture; no empirical evidence supplied."
+      },
+      "raw_response_sha256": {
+        "state": "unknown",
+        "reason": "Stipulated software fixture; no empirical evidence supplied."
+      },
+      "rule_version": "hero_candidates_v1",
+      "positions": [
+        {
+          "within_group_index": 1,
+          "selection": "missing",
+          "artifact_ref": {
+            "state": "unknown",
+            "reason": "Stipulated software fixture; no empirical evidence supplied."
+          },
+          "heading": {
+            "state": "unknown",
+            "reason": "Stipulated software fixture; no empirical evidence supplied."
+          },
+          "fence": {
+            "state": "unknown",
+            "reason": "Stipulated software fixture; no empirical evidence supplied."
+          },
+          "byte_range": {
+            "state": "unknown",
+            "reason": "Stipulated software fixture; no empirical evidence supplied."
+          },
+          "completion_status": "unknown",
+          "limitations": [
+            "No source response supplied."
+          ]
+        },
+        {
+          "within_group_index": 2,
+          "selection": "missing",
+          "artifact_ref": {
+            "state": "unknown",
+            "reason": "Stipulated software fixture; no empirical evidence supplied."
+          },
+          "heading": {
+            "state": "unknown",
+            "reason": "Stipulated software fixture; no empirical evidence supplied."
+          },
+          "fence": {
+            "state": "unknown",
+            "reason": "Stipulated software fixture; no empirical evidence supplied."
+          },
+          "byte_range": {
+            "state": "unknown",
+            "reason": "Stipulated software fixture; no empirical evidence supplied."
+          },
+          "completion_status": "unknown",
+          "limitations": [
+            "No source response supplied."
+          ]
+        },
+        {
+          "within_group_index": 3,
+          "selection": "missing",
+          "artifact_ref": {
+            "state": "unknown",
+            "reason": "Stipulated software fixture; no empirical evidence supplied."
+          },
+          "heading": {
+            "state": "unknown",
+            "reason": "Stipulated software fixture; no empirical evidence supplied."
+          },
+          "fence": {
+            "state": "unknown",
+            "reason": "Stipulated software fixture; no empirical evidence supplied."
+          },
+          "byte_range": {
+            "state": "unknown",
+            "reason": "Stipulated software fixture; no empirical evidence supplied."
+          },
+          "completion_status": "unknown",
+          "limitations": [
+            "No source response supplied."
+          ]
+        },
+        {
+          "within_group_index": 4,
+          "selection": "missing",
+          "artifact_ref": {
+            "state": "unknown",
+            "reason": "Stipulated software fixture; no empirical evidence supplied."
+          },
+          "heading": {
+            "state": "unknown",
+            "reason": "Stipulated software fixture; no empirical evidence supplied."
+          },
+          "fence": {
+            "state": "unknown",
+            "reason": "Stipulated software fixture; no empirical evidence supplied."
+          },
+          "byte_range": {
+            "state": "unknown",
+            "reason": "Stipulated software fixture; no empirical evidence supplied."
+          },
+          "completion_status": "unknown",
+          "limitations": [
+            "No source response supplied."
+          ]
+        },
+        {
+          "within_group_index": 5,
+          "selection": "missing",
+          "artifact_ref": {
+            "state": "unknown",
+            "reason": "Stipulated software fixture; no empirical evidence supplied."
+          },
+          "heading": {
+            "state": "unknown",
+            "reason": "Stipulated software fixture; no empirical evidence supplied."
+          },
+          "fence": {
+            "state": "unknown",
+            "reason": "Stipulated software fixture; no empirical evidence supplied."
+          },
+          "byte_range": {
+            "state": "unknown",
+            "reason": "Stipulated software fixture; no empirical evidence supplied."
+          },
+          "completion_status": "unknown",
+          "limitations": [
+            "No source response supplied."
+          ]
+        }
+      ],
+      "extras": [],
+      "limitations": [
+        "No response exists; missing positions remain missing."
+      ]
+    },
+    {
+      "record_type": "audit_selection",
+      "record_id": "audit-missing",
+      "record_version": "0.1",
+      "study_id": "fixture-study",
+      "study_version": "v1",
+      "revision": 1,
+      "scope": {
+        "claim_id": "fixture-format",
+        "task_id": "bounded_integer_sort",
+        "task_version": "0.1"
+      },
+      "depends_on": [],
+      "lineage_refs": [],
+      "supersedes": {
+        "state": "not_applicable",
+        "reason": "Initial fixture record has no superseded predecessor."
+      },
+      "formula_id": "hero_systematic_positions_v1",
+      "position": {
+        "block_id": "P01",
+        "condition": "A",
+        "group_index": 1,
+        "within_group_index": 1
+      },
+      "reasons": [
+        "systematic"
+      ],
+      "artifact_ref": {
+        "state": "unknown",
+        "reason": "Stipulated software fixture; no empirical evidence supplied."
+      },
+      "opportunity": "missing",
+      "review_refs": [],
+      "distinct_artifact_count": 0,
+      "basis": {
+        "state": "known",
+        "value": "Missing planned position is retained as an audit opportunity."
+      }
+    },
+    {
+      "record_type": "correction_incident",
+      "record_id": "correction-proposed",
+      "record_version": "0.1",
+      "study_id": "fixture-study",
+      "study_version": "v1",
+      "revision": 1,
+      "scope": {
+        "claim_id": "fixture-format",
+        "task_id": "bounded_integer_sort",
+        "task_version": "0.1"
+      },
+      "depends_on": [],
+      "lineage_refs": [],
+      "supersedes": {
+        "state": "not_applicable",
+        "reason": "Initial fixture record has no superseded predecessor."
+      },
+      "kind": "challenge",
+      "challenge": "Fixture records require actual evidence before stronger claims.",
+      "provenance": {
+        "state": "known",
+        "value": "Stipulated software example."
+      },
+      "affected_refs": [
+        {
+          "record_type": "artifact",
+          "record_id": "artifact-source",
+          "record_version": "0.1"
+        }
+      ],
+      "reviewer_authority": {
+        "state": "unknown",
+        "reason": "Stipulated software fixture; no empirical evidence supplied."
+      },
+      "action_status": "proposed",
+      "action": {
+        "state": "known",
+        "value": "Request appropriate evidence in a separately authorized future activity."
+      },
+      "replacement_refs": [],
+      "rollback_refs": [],
+      "reanalysis_refs": [],
+      "performed_at": {
+        "state": "unknown",
+        "reason": "Stipulated software fixture; no empirical evidence supplied."
+      },
+      "evidence_refs": []
+    },
+    {
+      "record_type": "compilation_receipt",
+      "record_id": "compilation-withheld",
+      "record_version": "0.1",
+      "study_id": "fixture-study",
+      "study_version": "v1",
+      "revision": 1,
+      "scope": {
+        "claim_id": "fixture-format",
+        "task_id": "bounded_integer_sort",
+        "task_version": "0.1"
+      },
+      "depends_on": [],
+      "lineage_refs": [],
+      "supersedes": {
+        "state": "not_applicable",
+        "reason": "Initial fixture record has no superseded predecessor."
+      },
+      "input_snapshots": [],
+      "target_profile": "m_only",
+      "target_input_schema_version": "0.1",
+      "disposition": "readiness_only",
+      "claim_disposition": "restricted",
+      "analysis_bundle_created": false,
+      "id_map": [],
+      "outputs": [],
+      "unresolved_restrictions": [
+        "Missing actual evidence; fixture provenance remains fixture_only."
+      ],
+      "mapping_errors": [],
+      "evidence_refs": []
+    }
+  ]
+}

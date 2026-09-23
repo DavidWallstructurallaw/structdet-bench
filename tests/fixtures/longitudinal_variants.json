@@ -1,0 +1,92 @@
+{
+  "schema_version": "0.1",
+  "scope": "stipulated_software_fixtures_only",
+  "plan_sha256": "1ca74fbba06bea44f2b656b3f4e6b46b0c6747cf13640c3f1ea29c69ef3d6352",
+  "variants": [
+    {
+      "id": "decline",
+      "source_edit": "Actual label counts (16,16), (27,5), (30,2), (31,1) at rounds 0,1,2,3.",
+      "independent_expected": "D=(1/2,135/512,15/128,31/512); anchored fit independently derived with Decimal logarithms."
+    },
+    {
+      "id": "stable",
+      "source_edit": "Repeat actual 16/16 label counts at four states.",
+      "independent_expected": "Empirical SHL unavailable; interval undefined for no decay."
+    },
+    {
+      "id": "growth",
+      "source_edit": "Reverse the declared declining count sequence.",
+      "independent_expected": "Growth remains visible; no negative positive-decay SHL."
+    },
+    {
+      "id": "zero",
+      "source_edit": "Final actual class counts become (32,0).",
+      "independent_expected": "Final D exactly zero; first-zero bracket S2..S3; no pseudocount."
+    },
+    {
+      "id": "nongeometric",
+      "source_edit": "Repeat first 16/16 counts three times then final31/1.",
+      "independent_expected": "Registered residual limit fails; endpoint interval remains separate."
+    },
+    {
+      "id": "gap",
+      "source_edit": "Mark registered S1 measurement missing, retaining rounds0..3.",
+      "independent_expected": "S1 diversity unavailable, no zero fill or compressed clock; full fit withheld."
+    },
+    {
+      "id": "empty",
+      "source_edit": "Eight pre classes each have a 12-success targeted intervention.",
+      "independent_expected": "Known missing set empty; ERR undefined, not zero."
+    },
+    {
+      "id": "pre_unknown",
+      "source_edit": "One pre target receives six successes out of12; six-family rejection facts not promoted.",
+      "independent_expected": "No exact missing denominator; ERR unavailable."
+    },
+    {
+      "id": "partial",
+      "source_edit": "Five pre classes present; post one missing class present, one below, one unresolved via6/12.",
+      "independent_expected": "Known M size3, confirmed1, unresolved1: exact bounds1/3..2/3, no point ERR."
+    },
+    {
+      "id": "external_validation_withdrawn",
+      "source_edit": "Withdraw external-validation evidence in an exact copied hero bundle.",
+      "independent_expected": "ERR unavailable, descriptive pre missing and confirmed intersection retained; historical report unchanged."
+    },
+    {
+      "id": "malformed",
+      "source_edit": "Replace the opt-in longitudinal extension with boolean false.",
+      "independent_expected": "Processing exit2 with longitudinal profile retained, never silently absent."
+    },
+    {
+      "id": "derivative",
+      "source_edit": "Recorded grounding outcome explicitly not_supported_for_scope.",
+      "independent_expected": "Qualified ERR unavailable while separately supported missing set remains."
+    },
+    {
+      "id": "injection",
+      "source_edit": "Intervention direct_answer_injection set true and original scoped evidence resealed.",
+      "independent_expected": "Qualified ERR unavailable; exposure is not new model ability."
+    },
+    {
+      "id": "recut",
+      "source_edit": "Applied schema revision of post assay retains original anomaly artifact and old/new cut identities.",
+      "independent_expected": "No qualified ERR gain, no new trials or recursive rounds."
+    },
+    {
+      "id": "membership",
+      "source_edit": "Withdraw exact assignment a169 through normal applied membership correction.",
+      "independent_expected": "M1p6 and dependent ERR invalidated, M0p0 remains separately supported."
+    },
+    {
+      "id": "injected_score",
+      "source_edit": "Add claimed final support/ERR to an ordinary evidence extension while withdrawing required pre trial-independence evidence.",
+      "independent_expected": "Builtin assays retain unknown pre status; no exact missing denominator or ERR despite injected value1."
+    },
+    {
+      "id": "null_optional_target",
+      "source_edit": "Use explicit known-null q or unknown q on the supplied balanced categorical source scenario.",
+      "independent_expected": "Target vector absent in both cases; target status respectively not_requested or unavailable, with no invented target-error number."
+    }
+  ]
+}

@@ -1,0 +1,283 @@
+{
+  "analysis_config": {
+    "analysis_config_id": "categorical-null-config",
+    "assignment_evidence_policy_id": "fixture_only",
+    "assignment_evidence_policy_version": "0.1",
+    "assignment_pins": [],
+    "extensions": {
+      "longitudinal": {
+        "assays": [],
+        "capabilities": [
+          "categorical_null"
+        ],
+        "data_role": "fixture",
+        "interventions": [],
+        "limits": {},
+        "measurements": [],
+        "method_id": "longitudinal_records_v1",
+        "null_scenarios": [
+          {
+            "assumptions": {
+              "closed": {
+                "evidence_refs": [],
+                "state": "known",
+                "value": true
+              },
+              "empirical_reconstruction": {
+                "evidence_refs": [],
+                "state": "known",
+                "value": true
+              },
+              "exogenous_schedule": {
+                "evidence_refs": [],
+                "state": "known",
+                "value": true
+              },
+              "finite_multinomial": {
+                "evidence_refs": [],
+                "state": "known",
+                "value": true
+              },
+              "fixed_classes": {
+                "evidence_refs": [],
+                "state": "known",
+                "value": true
+              }
+            },
+            "child_counts": [
+              [
+                1,
+                1
+              ],
+              [
+                2,
+                0
+              ],
+              [
+                2,
+                0
+              ]
+            ],
+            "classes": [
+              "abstract-a",
+              "abstract-b"
+            ],
+            "evidence": {
+              "correction": [],
+              "independence": [],
+              "origin": [],
+              "process": [],
+              "review": [],
+              "validation": []
+            },
+            "n": {
+              "evidence_refs": [],
+              "state": "known",
+              "value": 2
+            },
+            "object_id": "balanced-two",
+            "object_kind": "null_scenario",
+            "object_version": "0.1",
+            "p": [
+              "0.5",
+              "0.5"
+            ],
+            "q": {
+              "evidence_refs": [],
+              "state": "known",
+              "value": [
+                "0.5",
+                "0.5"
+              ]
+            },
+            "schedule": {
+              "evidence_refs": [],
+              "state": "known",
+              "value": null
+            },
+            "steps": 3
+          },
+          {
+            "assumptions": {
+              "closed": {
+                "evidence_refs": [],
+                "state": "known",
+                "value": false
+              },
+              "empirical_reconstruction": {
+                "evidence_refs": [],
+                "state": "known",
+                "value": true
+              },
+              "exogenous_schedule": {
+                "evidence_refs": [],
+                "state": "known",
+                "value": true
+              },
+              "finite_multinomial": {
+                "evidence_refs": [],
+                "state": "known",
+                "value": true
+              },
+              "fixed_classes": {
+                "evidence_refs": [],
+                "state": "known",
+                "value": true
+              }
+            },
+            "child_counts": [],
+            "classes": [
+              "abstract-a",
+              "abstract-b"
+            ],
+            "evidence": {
+              "correction": [],
+              "independence": [],
+              "origin": [],
+              "process": [],
+              "review": [],
+              "validation": []
+            },
+            "n": {
+              "evidence_refs": [],
+              "state": "known",
+              "value": 2
+            },
+            "object_id": "open-refusal",
+            "object_kind": "null_scenario",
+            "object_version": "0.1",
+            "p": [
+              "0.5",
+              "0.5"
+            ],
+            "q": {
+              "evidence_refs": [],
+              "state": "known",
+              "value": [
+                "0.5",
+                "0.5"
+              ]
+            },
+            "schedule": {
+              "evidence_refs": [],
+              "state": "known",
+              "value": null
+            },
+            "steps": 3
+          },
+          {
+            "assumptions": {
+              "closed": {
+                "evidence_refs": [],
+                "state": "known",
+                "value": true
+              },
+              "empirical_reconstruction": {
+                "evidence_refs": [],
+                "state": "known",
+                "value": true
+              },
+              "exogenous_schedule": {
+                "evidence_refs": [],
+                "state": "known",
+                "value": true
+              },
+              "finite_multinomial": {
+                "evidence_refs": [],
+                "state": "known",
+                "value": true
+              },
+              "fixed_classes": {
+                "evidence_refs": [],
+                "state": "known",
+                "value": true
+              }
+            },
+            "child_counts": [],
+            "classes": [
+              "abstract-a",
+              "abstract-b"
+            ],
+            "evidence": {
+              "correction": [],
+              "independence": [],
+              "origin": [],
+              "process": [],
+              "review": [],
+              "validation": []
+            },
+            "n": {
+              "evidence_refs": [],
+              "state": "unknown"
+            },
+            "object_id": "unknown-n",
+            "object_kind": "null_scenario",
+            "object_version": "0.1",
+            "p": [
+              "0.5",
+              "0.5"
+            ],
+            "q": {
+              "evidence_refs": [],
+              "state": "known",
+              "value": [
+                "0.5",
+                "0.5"
+              ]
+            },
+            "schedule": {
+              "evidence_refs": [],
+              "state": "known",
+              "value": null
+            },
+            "steps": 3
+          }
+        ],
+        "observed_requests": [],
+        "panels": [],
+        "profile": "structdet_longitudinal_v1",
+        "recovery_episodes": [],
+        "registered_design_ref": {
+          "evidence_refs": [],
+          "reason": "Assumption-bound deterministic mathematics; no empirical registration or scientific estimator is claimed.",
+          "state": "not_applicable"
+        },
+        "replays": [],
+        "revisions": [],
+        "roots": [],
+        "shl_requests": [],
+        "source_pins": {
+          "EC": "002d2393d05cb2c8b1db0a70e844e3d775e2be2155db7b2ffaadaa8080c8b950",
+          "SD": "357c0c3994e34fc1831ce91bf1c7e579925d64827579f80eb0a8708e85c93f32",
+          "SI": "80c193231af343d383544cee924a11fbb063a5c4ccee02d996ea4f904979565a"
+        },
+        "states": [],
+        "study_id": "categorical-null-math-only",
+        "study_version": "0.1",
+        "trajectories": [],
+        "transitions": [],
+        "version": "0.1"
+      }
+    },
+    "requested_k": [],
+    "selection": [],
+    "validity_pins": []
+  },
+  "bundle_id": "CATEGORICAL-NULL-01",
+  "cells": [],
+  "data_role": "fixture",
+  "extensions": {
+    "actual_model_calls": 0,
+    "data_role": "fixture",
+    "fixture_id": "CATEGORICAL-NULL-01",
+    "mathematical_scenario_only": true,
+    "mock": true,
+    "neural_observations": 0,
+    "scope": "Explicit finite categorical arithmetic and supplied count path; abstract IDs have no claimed algorithm or model semantics."
+  },
+  "frames": [],
+  "input_schema_version": "0.1",
+  "protocols": [],
+  "record_files": [],
+  "study_id": "categorical-null-math-only"
+}

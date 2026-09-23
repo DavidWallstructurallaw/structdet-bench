@@ -73,7 +73,7 @@ class Step7SafetyTests(unittest.TestCase):
                 if isinstance(node,ast.Import):names=[x.name for x in node.names]
                 elif isinstance(node,ast.ImportFrom):names=[node.module or '']
                 else:continue
-                self.assertTrue(all(not n.startswith(('tests','tools.run_phase1_checks','subprocess')) for n in names),path.name)
+                self.assertTrue(all(not n.startswith(('tests','tools','subprocess')) for n in names),path.name)
     def test_cli_errors_do_not_echo_credentials_or_paths(self):
         from structdet_bench.cli import main
         from contextlib import redirect_stdout,redirect_stderr

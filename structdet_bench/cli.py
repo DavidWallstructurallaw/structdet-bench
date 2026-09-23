@@ -18,14 +18,18 @@ class Parser(argparse.ArgumentParser):
 def build_parser() -> argparse.ArgumentParser:
     parser = Parser(prog="python -m structdet_bench", allow_abbrev=False,
         description="StructDet-Bench: offline record validation and structural measurement.",
-        epilog="Optional Phase 2 comparisons use the declared bundle extension. No model calls, code execution or independent scientific certification.")
+        epilog="Optional comparison and longitudinal analyses use declared bundle extensions. Longitudinal sensitivity replay verifies a retained run manifest. No model calls, code execution or independent scientific certification.")
     parser.add_argument("--version", action="version", version=f"StructDet-Bench {__version__}")
     commands = parser.add_subparsers(dest="command", parser_class=Parser)
     validate = commands.add_parser("validate", allow_abbrev=False, help="Check local records without writing reports")
     validate.add_argument("--bundle", required=True, help="Local bundle.json")
+    validate.add_argument("--replay-manifest", help="Retained local longitudinal run_manifest.json; verify replay structure and context without computing results")
     analyze = commands.add_parser("analyze", allow_abbrev=False, help="Write a new JSON/Markdown report set")
     analyze.add_argument("--bundle", required=True, help="Local bundle.json")
     analyze.add_argument("--output-dir", required=True, help="New directory in an existing parent, outside the input bundle")
+    analyze.add_argument("--replay-manifest", help="Retained local longitudinal run_manifest.json; reuse complete verified sensitivity indices")
+    from .study_cli import add_parser
+    add_parser(commands, Parser)
     return parser
 
 
@@ -35,15 +39,20 @@ def main(argv: Sequence[str] | None = None) -> int:
     if args.command is None:
         parser.print_help()
         return 0
+    if args.command == "study":
+        from .study_cli import run_command
+        return run_command(args)
     from .pipeline import analyze_bundle, validate_bundle, write_analysis
     from .reporting import canonical_bytes
     from .local_io import PublicationError
     try:
+        replay = ({"replay_manifest_path": args.replay_manifest}
+                  if args.replay_manifest is not None else {})
         if args.command == "validate":
-            report, code = validate_bundle(args.bundle)
+            report, code = validate_bundle(args.bundle, **replay)
             sys.stdout.write(canonical_bytes(report).decode("utf-8"))
             return code
-        result = analyze_bundle(args.bundle)
+        result = analyze_bundle(args.bundle, **replay)
         write_analysis(result, args.output_dir, bundle_path=args.bundle)
         sys.stdout.write(canonical_bytes({"run_id": result.report["run_id"],
             "processing_exit_code": result.exit_code, "report_set_published": True,

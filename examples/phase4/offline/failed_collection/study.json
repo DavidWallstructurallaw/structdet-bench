@@ -1,0 +1,831 @@
+{
+  "study_schema_version": "0.1",
+  "study_id": "fixture-study",
+  "study_version": "v1",
+  "prior_study_versions": [],
+  "evidence_policy": "fixture_only",
+  "material_role": "fixture",
+  "packet_inventory": [
+    {
+      "packet_id": "evidence-notes",
+      "purpose": "artifact",
+      "location": {
+        "state": "known",
+        "value": {
+          "kind": "local",
+          "path": "evidence-notes.txt"
+        }
+      },
+      "sha256": {
+        "state": "known",
+        "value": "a70a5c08dd5db92b23853d00b96d508f74a37207d75a177b606b7eb9ed4473d2"
+      },
+      "size_bytes": {
+        "state": "known",
+        "value": 51
+      },
+      "record_count": {
+        "state": "known",
+        "value": 0
+      },
+      "format": "bytes",
+      "verification": "unchecked",
+      "verification_ref": {
+        "state": "unknown",
+        "reason": "Synthetic unknown; no external operation is authenticated."
+      }
+    },
+    {
+      "packet_id": "prompt-call-one",
+      "purpose": "artifact",
+      "location": {
+        "state": "known",
+        "value": {
+          "kind": "local",
+          "path": "prompt-call-one.txt"
+        }
+      },
+      "sha256": {
+        "state": "known",
+        "value": "005ad5a432d4e0867b60c43d4bd73279fe2c9e13aa441d82a7100036074ef081"
+      },
+      "size_bytes": {
+        "state": "known",
+        "value": 1668
+      },
+      "record_count": {
+        "state": "known",
+        "value": 0
+      },
+      "format": "bytes",
+      "verification": "unchecked",
+      "verification_ref": {
+        "state": "unknown",
+        "reason": "Synthetic unknown; no external operation is authenticated."
+      }
+    },
+    {
+      "packet_id": "submission-roster",
+      "purpose": "evidence",
+      "location": {
+        "state": "known",
+        "value": {
+          "kind": "local",
+          "path": "submission-roster.json"
+        }
+      },
+      "sha256": {
+        "state": "known",
+        "value": "7f7bae1287cf0e50b8543e0d0dc188baf318b5e3731319714d32647b3ae7fdd6"
+      },
+      "size_bytes": {
+        "state": "known",
+        "value": 2938
+      },
+      "record_count": {
+        "state": "known",
+        "value": 1
+      },
+      "format": "json",
+      "verification": "unchecked",
+      "verification_ref": {
+        "state": "unknown",
+        "reason": "Synthetic unknown; no external operation is authenticated."
+      }
+    },
+    {
+      "packet_id": "submission-qualification",
+      "purpose": "evidence",
+      "location": {
+        "state": "known",
+        "value": {
+          "kind": "local",
+          "path": "submission-qualification.json"
+        }
+      },
+      "sha256": {
+        "state": "known",
+        "value": "25bcd6b197f790b3db2067687881642f6a045e1a907bea1a08eb62da2044ca38"
+      },
+      "size_bytes": {
+        "state": "known",
+        "value": 719
+      },
+      "record_count": {
+        "state": "known",
+        "value": 1
+      },
+      "format": "json",
+      "verification": "unchecked",
+      "verification_ref": {
+        "state": "unknown",
+        "reason": "Synthetic unknown; no external operation is authenticated."
+      }
+    },
+    {
+      "packet_id": "submission-call-one",
+      "purpose": "evidence",
+      "location": {
+        "state": "known",
+        "value": {
+          "kind": "local",
+          "path": "submission-call-one.json"
+        }
+      },
+      "sha256": {
+        "state": "known",
+        "value": "e1e3a4bf55616b53a5fd494044911246e90b57f47362802e03486a7e91fba919"
+      },
+      "size_bytes": {
+        "state": "known",
+        "value": 7766
+      },
+      "record_count": {
+        "state": "known",
+        "value": 1
+      },
+      "format": "json",
+      "verification": "unchecked",
+      "verification_ref": {
+        "state": "unknown",
+        "reason": "Synthetic unknown; no external operation is authenticated."
+      }
+    },
+    {
+      "packet_id": "legacy-0",
+      "purpose": "artifact",
+      "format": "bytes",
+      "location": {
+        "state": "known",
+        "value": {
+          "kind": "local",
+          "path": "carrier/bundle.json"
+        }
+      },
+      "sha256": {
+        "state": "known",
+        "value": "7e8ad46a8def9769c62ab83a549f24541d5526ac6f251f0d8f44959fb0198c35"
+      },
+      "size_bytes": {
+        "state": "known",
+        "value": 4587
+      },
+      "record_count": {
+        "state": "known",
+        "value": 0
+      },
+      "verification": "unchecked",
+      "verification_ref": {
+        "state": "unknown",
+        "reason": "Synthetic unknown; no external operation is authenticated."
+      }
+    },
+    {
+      "packet_id": "legacy-1",
+      "purpose": "artifact",
+      "format": "bytes",
+      "location": {
+        "state": "known",
+        "value": {
+          "kind": "local",
+          "path": "carrier/evidence.jsonl"
+        }
+      },
+      "sha256": {
+        "state": "known",
+        "value": "3b339251660c3db777cff80510f81ecf31fc4c44b49aee9d47f0267e8717006a"
+      },
+      "size_bytes": {
+        "state": "known",
+        "value": 795
+      },
+      "record_count": {
+        "state": "known",
+        "value": 0
+      },
+      "verification": "unchecked",
+      "verification_ref": {
+        "state": "unknown",
+        "reason": "Synthetic unknown; no external operation is authenticated."
+      }
+    },
+    {
+      "packet_id": "legacy-2",
+      "purpose": "artifact",
+      "format": "bytes",
+      "location": {
+        "state": "known",
+        "value": {
+          "kind": "local",
+          "path": "carrier/prompt.txt"
+        }
+      },
+      "sha256": {
+        "state": "known",
+        "value": "005ad5a432d4e0867b60c43d4bd73279fe2c9e13aa441d82a7100036074ef081"
+      },
+      "size_bytes": {
+        "state": "known",
+        "value": 1668
+      },
+      "record_count": {
+        "state": "known",
+        "value": 0
+      },
+      "verification": "unchecked",
+      "verification_ref": {
+        "state": "unknown",
+        "reason": "Synthetic unknown; no external operation is authenticated."
+      }
+    },
+    {
+      "packet_id": "legacy-3",
+      "purpose": "artifact",
+      "format": "bytes",
+      "location": {
+        "state": "known",
+        "value": {
+          "kind": "local",
+          "path": "carrier/records.jsonl"
+        }
+      },
+      "sha256": {
+        "state": "known",
+        "value": "cdf5a521564993972886bf21617bdae5e48d0657fdd8f80efb93a0670872f5e7"
+      },
+      "size_bytes": {
+        "state": "known",
+        "value": 900
+      },
+      "record_count": {
+        "state": "known",
+        "value": 0
+      },
+      "verification": "unchecked",
+      "verification_ref": {
+        "state": "unknown",
+        "reason": "Synthetic unknown; no external operation is authenticated."
+      }
+    }
+  ],
+  "import_budget": {
+    "max_packets": 4096,
+    "max_total_bytes": 67108864,
+    "max_total_records": 100000
+  },
+  "records": [
+    {
+      "record_type": "study_registration",
+      "record_id": "registration",
+      "record_version": "0.1",
+      "study_id": "fixture-study",
+      "study_version": "v1",
+      "revision": 1,
+      "scope": {
+        "claim_id": "fixture-format",
+        "task_id": "bounded_integer_sort",
+        "task_version": "0.1"
+      },
+      "depends_on": [],
+      "lineage_refs": [],
+      "supersedes": {
+        "state": "not_applicable",
+        "reason": "Initial fixture record has no superseded predecessor."
+      },
+      "claim_scope": "Software format fixture only. No sorting, review, collection, or empirical result is claimed.",
+      "source_pins": {
+        "SD": "357c0c3994e34fc1831ce91bf1c7e579925d64827579f80eb0a8708e85c93f32",
+        "SI": "80c193231af343d383544cee924a11fbb063a5c4ccee02d996ea4f904979565a",
+        "EC": "002d2393d05cb2c8b1db0a70e844e3d775e2be2155db7b2ffaadaa8080c8b950"
+      },
+      "pins": {
+        "task_id": "bounded_integer_sort",
+        "task_version": "0.1",
+        "analytic_resolution_id": "sorting_mechanism_family",
+        "analytic_resolution_version": "0.1",
+        "structural_schema_id": "sorting_mechanism_partition",
+        "structural_schema_version": "0.1",
+        "reference_registry_id": "sorting_reference_eight",
+        "reference_registry_version": "0.1",
+        "validity_rubric_ref": "bounded_integer_sort_validity_v1"
+      },
+      "requested_profile": "m_only",
+      "frame_definition": {
+        "task_context": {
+          "state": "known",
+          "value": "Stipulated input-shape fixture for the adopted sorting task."
+        },
+        "consequence_horizon": {
+          "state": "known",
+          "value": "One complete invocation across the declared input domain."
+        },
+        "load_bearing_invariants": [
+          "Role of ordering mechanism."
+        ],
+        "consequence_signature_spec": {
+          "state": "known",
+          "value": "Inspect mechanism, not just returned values."
+        },
+        "equivalence_rule_ref": {
+          "state": "known",
+          "value": "HERO_BENCHMARK_SPEC.md section 4"
+        },
+        "admissible_substitutions": {
+          "state": "known",
+          "value": "Registered mechanism-preserving variations."
+        },
+        "evidence_requirement": {
+          "state": "known",
+          "value": "This fixture supplies no independent mechanism evidence."
+        },
+        "exceptional_case_rules": {
+          "state": "known",
+          "value": "Preserve unresolved and unknown mechanisms."
+        }
+      },
+      "protocol": {
+        "protocol_id": "fixture-protocol",
+        "protocol_version": "0.1",
+        "design": "descriptive",
+        "prompt_refs": [],
+        "controls": {
+          "temperature": {
+            "state": "unknown",
+            "reason": "Stipulated software fixture; no empirical evidence supplied."
+          },
+          "top_p": {
+            "state": "known",
+            "value": 1
+          },
+          "presence_penalty": {
+            "state": "known",
+            "value": 0
+          },
+          "frequency_penalty": {
+            "state": "known",
+            "value": 0
+          },
+          "seed": {
+            "state": "known",
+            "value": null
+          },
+          "output_allowance": {
+            "state": "known",
+            "value": 8192
+          },
+          "cap_semantics": {
+            "state": "unknown",
+            "reason": "Stipulated software fixture; no empirical evidence supplied."
+          },
+          "fresh_context": {
+            "state": "known",
+            "value": false
+          },
+          "tools_requested": {
+            "state": "known",
+            "value": false
+          },
+          "hidden_controls": {
+            "state": "unknown",
+            "reason": "Stipulated software fixture; no empirical evidence supplied."
+          },
+          "wrapper_knowledge": {
+            "state": "unknown",
+            "reason": "Stipulated software fixture; no empirical evidence supplied."
+          }
+        },
+        "budget": {
+          "max_calls": {
+            "state": "known",
+            "value": 1
+          },
+          "max_positions": {
+            "state": "known",
+            "value": 5
+          },
+          "max_output_tokens": {
+            "state": "known",
+            "value": 8192
+          },
+          "monetary_ceiling": {
+            "state": "unknown",
+            "reason": "Stipulated software fixture; no empirical evidence supplied."
+          },
+          "currency": {
+            "state": "unknown",
+            "reason": "Stipulated software fixture; no empirical evidence supplied."
+          }
+        },
+        "longitudinal_input": {
+          "state": "not_applicable",
+          "reason": "The fixture requests no longitudinal claim."
+        },
+        "legacy_profile_input": {
+          "state": "known",
+          "value": {
+            "artifact_ref": {
+              "record_type": "artifact",
+              "record_id": "legacy-carrier",
+              "record_version": "0.1"
+            },
+            "input_schema_version": "0.1",
+            "profile": "m_only"
+          }
+        }
+      },
+      "preregistration": {
+        "status": "not_registered",
+        "registered_at": {
+          "state": "unknown",
+          "reason": "Stipulated software fixture; no empirical evidence supplied."
+        },
+        "evidence_refs": [],
+        "exposure_at_registration": {
+          "state": "known",
+          "value": "Hand-authored software fixture, not a prospective registration."
+        }
+      },
+      "exposure": {
+        "state": "known",
+        "value": "Public fixture."
+      },
+      "currentness": {
+        "state": "unresolved",
+        "assessed_at": {
+          "state": "unknown",
+          "reason": "Stipulated software fixture; no empirical evidence supplied."
+        },
+        "expires_at": {
+          "state": "unknown",
+          "reason": "Stipulated software fixture; no empirical evidence supplied."
+        },
+        "basis": {
+          "state": "unknown",
+          "reason": "Stipulated software fixture; no empirical evidence supplied."
+        }
+      }
+    },
+    {
+      "record_type": "artifact",
+      "record_id": "evidence-notes",
+      "record_version": "0.1",
+      "study_id": "fixture-study",
+      "study_version": "v1",
+      "revision": 1,
+      "scope": {
+        "claim_id": "fixture-format",
+        "task_id": "bounded_integer_sort",
+        "task_version": "0.1"
+      },
+      "depends_on": [],
+      "lineage_refs": [],
+      "supersedes": {
+        "state": "not_applicable",
+        "reason": "Initial fixture record has no superseded predecessor."
+      },
+      "content": {
+        "state": "known",
+        "value": {
+          "packet_id": "evidence-notes"
+        }
+      },
+      "sha256": {
+        "state": "known",
+        "value": "a70a5c08dd5db92b23853d00b96d508f74a37207d75a177b606b7eb9ed4473d2"
+      },
+      "size_bytes": {
+        "state": "known",
+        "value": 51
+      },
+      "artifact_role": "evidence",
+      "original_source": {
+        "state": "known",
+        "value": "Stipulated provenance, never authenticated."
+      },
+      "transformations": [],
+      "ai_assistance": {
+        "state": "known",
+        "value": "Stipulated provenance, never authenticated."
+      },
+      "exposure": {
+        "state": "known",
+        "value": "Stipulated provenance, never authenticated."
+      },
+      "evidence_refs": []
+    },
+    {
+      "record_type": "artifact",
+      "record_id": "prompt-call-one",
+      "record_version": "0.1",
+      "study_id": "fixture-study",
+      "study_version": "v1",
+      "revision": 1,
+      "scope": {
+        "claim_id": "fixture-format",
+        "task_id": "bounded_integer_sort",
+        "task_version": "0.1"
+      },
+      "depends_on": [],
+      "lineage_refs": [],
+      "supersedes": {
+        "state": "not_applicable",
+        "reason": "Initial fixture record has no superseded predecessor."
+      },
+      "content": {
+        "state": "known",
+        "value": {
+          "packet_id": "prompt-call-one"
+        }
+      },
+      "sha256": {
+        "state": "known",
+        "value": "005ad5a432d4e0867b60c43d4bd73279fe2c9e13aa441d82a7100036074ef081"
+      },
+      "size_bytes": {
+        "state": "known",
+        "value": 1668
+      },
+      "artifact_role": "prompt",
+      "original_source": {
+        "state": "known",
+        "value": "Hand-authored inert text fixture."
+      },
+      "transformations": [],
+      "ai_assistance": {
+        "state": "known",
+        "value": "Software fixture construction."
+      },
+      "exposure": {
+        "state": "known",
+        "value": "Public fixture."
+      },
+      "evidence_refs": []
+    },
+    {
+      "record_type": "collection_ledger",
+      "record_id": "call-one",
+      "record_version": "0.1",
+      "study_id": "fixture-study",
+      "study_version": "v1",
+      "revision": 1,
+      "scope": {
+        "claim_id": "fixture-format",
+        "task_id": "bounded_integer_sort",
+        "task_version": "0.1"
+      },
+      "depends_on": [],
+      "lineage_refs": [],
+      "supersedes": {
+        "state": "not_applicable",
+        "reason": "Initial fixture record has no superseded predecessor."
+      },
+      "phase": "main",
+      "block_id": "P01",
+      "condition": "A",
+      "group_index": 1,
+      "registered_call_order": 1,
+      "planned_positions": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "controls": {
+        "temperature": {
+          "state": "known",
+          "value": "0.4"
+        },
+        "top_p": {
+          "state": "known",
+          "value": "1.0"
+        },
+        "presence_penalty": {
+          "state": "known",
+          "value": "0"
+        },
+        "frequency_penalty": {
+          "state": "known",
+          "value": "0"
+        },
+        "seed": {
+          "state": "known",
+          "value": null
+        },
+        "output_allowance": {
+          "state": "known",
+          "value": 8192
+        },
+        "cap_semantics": {
+          "state": "known",
+          "value": "visible_output_tokens"
+        },
+        "fresh_context": {
+          "state": "known",
+          "value": true
+        },
+        "tools_requested": {
+          "state": "known",
+          "value": false
+        },
+        "hidden_controls": {
+          "state": "unknown",
+          "reason": "Synthetic unknown; no external operation is authenticated."
+        },
+        "wrapper_knowledge": {
+          "state": "unknown",
+          "reason": "Synthetic unknown; no external operation is authenticated."
+        }
+      },
+      "prompt_ref": {
+        "state": "known",
+        "value": {
+          "record_type": "artifact",
+          "record_id": "prompt-call-one",
+          "record_version": "0.1"
+        }
+      },
+      "sent_prompt_sha256": {
+        "state": "known",
+        "value": "005ad5a432d4e0867b60c43d4bd73279fe2c9e13aa441d82a7100036074ef081"
+      },
+      "deployment": {
+        "model_identifier": {
+          "state": "known",
+          "value": "fixture-model"
+        },
+        "model_family": {
+          "state": "known",
+          "value": "fixture-family"
+        },
+        "checkpoint_identifier": {
+          "state": "unknown",
+          "reason": "Synthetic unknown; no external operation is authenticated."
+        },
+        "deployment_identifier": {
+          "state": "known",
+          "value": "fixture-deployment"
+        },
+        "drift": {
+          "state": "known",
+          "value": "No drift reported in synthetic record."
+        }
+      },
+      "attempt_status": "failed",
+      "attempt_id": {
+        "state": "known",
+        "value": "failed-original"
+      },
+      "request_id": {
+        "state": "known",
+        "value": "request-call-one"
+      },
+      "attempted_at": {
+        "state": "known",
+        "value": "2026-09-23T00:00:00Z"
+      },
+      "raw_response_ref": {
+        "state": "unknown",
+        "reason": "Synthetic unknown; no external operation is authenticated."
+      },
+      "termination_reason": {
+        "state": "unknown",
+        "reason": "Stipulated software fixture; no empirical evidence supplied."
+      },
+      "retry_of": {
+        "state": "not_applicable",
+        "reason": "No call or retry has occurred."
+      },
+      "retry_evidence_refs": [],
+      "usage": {
+        "input_tokens": {
+          "state": "unknown",
+          "reason": "Stipulated software fixture; no empirical evidence supplied."
+        },
+        "output_tokens": {
+          "state": "known",
+          "value": 0
+        },
+        "hidden_reasoning_tokens": {
+          "state": "unknown",
+          "reason": "Stipulated software fixture; no empirical evidence supplied."
+        },
+        "compute": {
+          "state": "unknown",
+          "reason": "Stipulated software fixture; no empirical evidence supplied."
+        },
+        "monetary_cost": {
+          "state": "unknown",
+          "reason": "Stipulated software fixture; no empirical evidence supplied."
+        },
+        "currency": {
+          "state": "unknown",
+          "reason": "Stipulated software fixture; no empirical evidence supplied."
+        }
+      },
+      "authorization_ref": {
+        "state": "unknown",
+        "reason": "Stipulated software fixture; no empirical evidence supplied."
+      }
+    },
+    {
+      "record_type": "compilation_receipt",
+      "record_id": "bridge-map",
+      "record_version": "0.1",
+      "study_id": "fixture-study",
+      "study_version": "v1",
+      "revision": 1,
+      "scope": {
+        "claim_id": "fixture-format",
+        "task_id": "bounded_integer_sort",
+        "task_version": "0.1"
+      },
+      "depends_on": [],
+      "lineage_refs": [],
+      "supersedes": {
+        "state": "not_applicable",
+        "reason": "Initial fixture record has no superseded predecessor."
+      },
+      "input_snapshots": [],
+      "target_profile": "m_only",
+      "target_input_schema_version": "0.1",
+      "disposition": "readiness_only",
+      "claim_disposition": "restricted",
+      "analysis_bundle_created": false,
+      "id_map": [
+        {
+          "source_ref": {
+            "record_type": "collection_ledger",
+            "record_id": "call-one",
+            "record_version": "0.1"
+          },
+          "target_record_type": "attempt",
+          "target_record_id": "failed-original"
+        },
+        {
+          "source_ref": {
+            "record_type": "artifact",
+            "record_id": "prompt-call-one",
+            "record_version": "0.1"
+          },
+          "target_record_type": "artifact",
+          "target_record_id": "sent-prompt"
+        }
+      ],
+      "outputs": [],
+      "unresolved_restrictions": [
+        "Missing actual evidence; fixture provenance remains fixture_only."
+      ],
+      "mapping_errors": [],
+      "evidence_refs": []
+    },
+    {
+      "record_type": "artifact",
+      "record_id": "legacy-carrier",
+      "record_version": "0.1",
+      "study_id": "fixture-study",
+      "study_version": "v1",
+      "revision": 1,
+      "scope": {
+        "claim_id": "fixture-format",
+        "task_id": "bounded_integer_sort",
+        "task_version": "0.1"
+      },
+      "depends_on": [],
+      "lineage_refs": [],
+      "supersedes": {
+        "state": "not_applicable",
+        "reason": "Initial fixture record has no superseded predecessor."
+      },
+      "content": {
+        "state": "known",
+        "value": {
+          "packet_id": "legacy-0"
+        }
+      },
+      "sha256": {
+        "state": "known",
+        "value": "7e8ad46a8def9769c62ab83a549f24541d5526ac6f251f0d8f44959fb0198c35"
+      },
+      "size_bytes": {
+        "state": "known",
+        "value": 4587
+      },
+      "artifact_role": "source",
+      "original_source": {
+        "state": "known",
+        "value": "Hand-authored inert text fixture."
+      },
+      "transformations": [],
+      "ai_assistance": {
+        "state": "known",
+        "value": "Software fixture construction."
+      },
+      "exposure": {
+        "state": "known",
+        "value": "Public fixture."
+      },
+      "evidence_refs": []
+    }
+  ]
+}

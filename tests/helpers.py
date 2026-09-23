@@ -26,7 +26,7 @@ _TRUSTED_CASES: dict[str, tuple[str, ...]] = {
     "unknown_option": ("-m", "structdet_bench", "--not-a-real-option"),
     "validate_no_input": ("-m", "structdet_bench", "validate"),
     "analyze_no_input": ("-m", "structdet_bench", "analyze"),
-    "runner_help": ("tools/run_phase1_checks.py", "--help"),
+    "runner_help": ("tools/check.py", "--help"),
 }
 for _name in ("generate", "train", "execute", "judge", "compare", "recover"):
     _TRUSTED_CASES[_name] = ("-m", "structdet_bench", _name)

@@ -1,0 +1,380 @@
+{
+  "kind": "phase4_handoff_verification_index",
+  "version": "0.1",
+  "record_date": "2026-09-22",
+  "status": "software_qualified_empirical_pending",
+  "purpose": "Factual delivery index. Not an executable test gate or approval chain.",
+  "software_version": "0.1.0",
+  "supported_python": "==3.13.*",
+  "supported_unicode": "15.1.0",
+  "reference_interpreter": "CPython 3.13.5",
+  "governing_policy": "VERIFICATION_POLICY.md",
+  "verification_architecture": [
+    "canonical_regression",
+    "release_qualification",
+    "inactive_historical_archive"
+  ],
+  "completion": {
+    "implementation": "software_qualified",
+    "step10": "reconstructed_and_verified_delivery",
+    "step11": "not_performed",
+    "step12_local_handoff": "software_qualified_archive_status_in_external_delivery_receipt",
+    "empirical_evidence": "pending",
+    "scientific_release": "not_performed",
+    "remote_publication": "not_performed",
+    "owner_acceptance": "not_recorded"
+  },
+  "recovery": {
+    "mode": "reconstructed_after_loss_of_unsaved_step10_files",
+    "baseline_archive": "StructDet-Bench_Phase4_Step9_Local.zip",
+    "baseline_sha256": "f0186ac10b9bc358dabc8f290b3c8360cc2924f01cefa82949f650d9c0453bb7",
+    "baseline_size_bytes": 7297459,
+    "baseline_source_file_count": 417,
+    "baseline_complete_inventory_sha256": "5660707c8fc5619a809fa5857cd406103fd27a0c3afdacabbc5b64479e176436",
+    "earlier_conversational_step10_counts_used_as_receipts": false
+  },
+  "retained_step11": {
+    "path": "artifacts/phase4/StructDet-Bench_Phase4_Step11_Disposition.md",
+    "sha256": "5f9e7030c5580464619a8fcf973a9107ec557b91639a3d57c76ed1a996204e08",
+    "preserved_exactly": true,
+    "interpretation": "The original Step10-outstanding statement is historical; reconstructed Step10 delivery is now verified. Step12 software qualification is recorded here and actual archive delivery in the external companion. Empirical not_performed remains current; original bytes are unchanged."
+  },
+  "retained_verification": {
+    "reuse_recorded_date": "2026-09-22",
+    "original_execution_wall_clock": "not_recorded_in_retained_receipts",
+    "subject": "exact_Step9_software_and_environment",
+    "checker_source_sha256": "e38f17a6883db8dded025d0dffc04a38de4cdb95ac77bae02a659dd2a56ea263",
+    "current_canonical": {
+      "path": "verification/baseline/source_canonical/result.json",
+      "sha256": "f8eecbc320ef2f0ef3c1942866b02bc6b5b6dde132c6dbae41cd6a311874e5cf",
+      "actual_passed_methods": 2004,
+      "new_execution": false
+    },
+    "clean_canonical": {
+      "path": "verification/baseline/qualification/canonical/result.json",
+      "sha256": "f4fd5dc2ea3c263346a002966655ceb214cd350fd79fedf4b49c7a5540cdcb08",
+      "actual_passed_methods": 2004,
+      "new_execution": false
+    },
+    "release": {
+      "path": "verification/baseline/qualification/result.json",
+      "sha256": "698a3f3789028166a29364b556521ad3aa0e5aad780cd3c517aff17f9610ae53",
+      "actual_passed_release_checks": 17,
+      "new_execution": false
+    },
+    "reuse_limit": "Historical coverage for matching unchanged implementation. Does not constitute fresh execution of final version0.1.0, changed metadata or new environment."
+  },
+  "fresh_verification": {
+    "step10_scoped_regression": {
+      "status": "passed",
+      "receipt": "verification/step10/scoped_canonical/result.json",
+      "receipt_sha256": "1fbf6cd7e257d849bd8f0cfcd07a775cbfe8db745170efda9a972720ae7888c6",
+      "actual_passed_count": 54,
+      "new_execution": true,
+      "evidence_category": "software_verification",
+      "scope_note": "Executed against the recorded pre-delivery source. One subsequent template_index.json metadata refresh is disclosed in verification/step10/scoped_receipt_binding.json; fresh material checks cover the delivered index. Product implementation and tests did not change for that refresh."
+    },
+    "step10_material_checks": {
+      "status": "passed",
+      "receipt": "verification/step10/material_checks/result.json",
+      "receipt_sha256": "edf4a39b7246d8d9692e39c0d5d0489da4fe0bd8afc2b6282696293af7c5c33d",
+      "actual_passed_count": 26,
+      "new_execution": true,
+      "evidence_category": "software_verification"
+    },
+    "final_clean_canonical": {
+      "status": "passed",
+      "receipt": "verification/release/canonical/result.json",
+      "receipt_sha256": "fb5a5baad8e31a42eabdf4aa1229b57cc852760d495bdd45fbcb6851e280294a",
+      "actual_passed_count": 2004,
+      "new_execution": true,
+      "evidence_category": "software_verification"
+    },
+    "final_release_qualification": {
+      "status": "passed",
+      "receipt": "verification/release/result.json",
+      "receipt_sha256": "026d3f941c256050889d46b8f67c2fd5385bc37e997ad573def845cdcef33535",
+      "actual_passed_count": 17,
+      "new_execution": true,
+      "evidence_category": "software_verification"
+    },
+    "package_build_install": {
+      "status": "passed",
+      "receipt": "verification/build/result.json",
+      "receipt_sha256": "b682c76afe34727e39781bbcaea053e1668e436c59ea23dc49cd1a4611149387",
+      "actual_passed_count": 53,
+      "new_execution": true,
+      "evidence_category": "software_verification"
+    },
+    "final_archive_integrity": {
+      "status": "recorded_in_external_delivery_receipt",
+      "receipt": "StructDet-Bench_Phase4_Final_Archive_Verification.json",
+      "actual_passed_count": null,
+      "scope_note": "This source index does not predict the external final-delivery check outcome or count."
+    },
+    "packaged_cli_routes": {
+      "status": "recorded_in_external_delivery_receipt",
+      "receipt": "StructDet-Bench_Phase4_Final_Archive_Verification.json",
+      "actual_passed_count": null,
+      "scope_note": "This source index does not predict the external final-delivery check outcome or count."
+    },
+    "update_patch_reconstruction": {
+      "status": "recorded_in_external_delivery_receipt",
+      "receipt": "StructDet-Bench_Phase4_Final_Archive_Verification.json",
+      "actual_passed_count": null,
+      "scope_note": "This source index does not predict the external final-delivery check outcome or count."
+    }
+  },
+  "source_identity_policy": "For these delivered subjects, both inventories cover the same files. The stable checker hashes indented JSON and the delivery helper hashes compact JSON; verify each digest using its own serialization convention. Final archive identities are recorded outside the archive; no self-hash is asserted here.",
+  "replay_policy": "Exact software identity required. Earlier manifests retain original software/version; no migration or fresh-resampling fallback.",
+  "empirical_requirements": [
+    {
+      "id": "P4-E01",
+      "status": "pending_for_applicable_claim",
+      "missing_evidence": "Prospective registration, actual controls and exposure chronology",
+      "affected_claim": "prospectively_registered_real_study",
+      "responsible_reviewer": {
+        "state": "unknown",
+        "reason": "No qualified actual reviewer supplied"
+      },
+      "evidence_refs": [],
+      "limitation": "No substantive empirical evidence supplied by software tests."
+    },
+    {
+      "id": "P4-E02",
+      "status": "pending_for_applicable_claim",
+      "missing_evidence": "Actual 32-artifact core, lineage, mechanisms and functional/boundary evidence",
+      "affected_claim": "qualified_reference_core",
+      "responsible_reviewer": {
+        "state": "unknown",
+        "reason": "No qualified actual reviewer supplied"
+      },
+      "evidence_refs": [],
+      "limitation": "No substantive empirical evidence supplied by software tests."
+    },
+    {
+      "id": "P4-E03",
+      "status": "pending_for_applicable_claim",
+      "missing_evidence": "Two distinct qualified independent human first passes per core item",
+      "affected_claim": "real_reviewer_independence",
+      "responsible_reviewer": {
+        "state": "unknown",
+        "reason": "No qualified actual reviewer supplied"
+      },
+      "evidence_refs": [],
+      "limitation": "No substantive empirical evidence supplied by software tests."
+    },
+    {
+      "id": "P4-E04",
+      "status": "pending_for_applicable_claim",
+      "missing_evidence": "Independent adjudication, descriptor pairs and counterfactual checks",
+      "affected_claim": "resolved_empirical_classification",
+      "responsible_reviewer": {
+        "state": "unknown",
+        "reason": "No qualified actual reviewer supplied"
+      },
+      "evidence_refs": [],
+      "limitation": "No substantive empirical evidence supplied by software tests."
+    },
+    {
+      "id": "P4-E05",
+      "status": "pending_for_applicable_claim",
+      "missing_evidence": "Reviewed oracle/isolation, exact environment and authentic execution receipts",
+      "affected_claim": "candidate_validity_and_containment",
+      "responsible_reviewer": {
+        "state": "unknown",
+        "reason": "No qualified actual reviewer supplied"
+      },
+      "evidence_refs": [],
+      "limitation": "No substantive empirical evidence supplied by software tests."
+    },
+    {
+      "id": "P4-E06",
+      "status": "pending_for_applicable_claim",
+      "missing_evidence": "Actual original authorized collection with controls, order, failures and usage",
+      "affected_claim": "completed_real_collection",
+      "responsible_reviewer": {
+        "state": "unknown",
+        "reason": "No qualified actual reviewer supplied"
+      },
+      "evidence_refs": [],
+      "limitation": "No substantive empirical evidence supplied by software tests."
+    },
+    {
+      "id": "P4-E07",
+      "status": "pending_for_applicable_claim",
+      "missing_evidence": "Actual systematic and targeted human audits with accepted judgments",
+      "affected_claim": "completed_output_audit",
+      "responsible_reviewer": {
+        "state": "unknown",
+        "reason": "No qualified actual reviewer supplied"
+      },
+      "evidence_refs": [],
+      "limitation": "No substantive empirical evidence supplied by software tests."
+    },
+    {
+      "id": "P4-E08",
+      "status": "pending_for_applicable_claim",
+      "missing_evidence": "Actual original-output extraction, selection, provenance and compiled study",
+      "affected_claim": "empirical_operands",
+      "responsible_reviewer": {
+        "state": "unknown",
+        "reason": "No qualified actual reviewer supplied"
+      },
+      "evidence_refs": [],
+      "limitation": "No substantive empirical evidence supplied by software tests."
+    },
+    {
+      "id": "P4-E09",
+      "status": "pending_for_applicable_claim",
+      "missing_evidence": "All registered empirical outcomes and applicable quality/sensitivity gates",
+      "affected_claim": "empirical_P1_P5",
+      "responsible_reviewer": {
+        "state": "unknown",
+        "reason": "No qualified actual reviewer supplied"
+      },
+      "evidence_refs": [],
+      "limitation": "No substantive empirical evidence supplied by software tests."
+    },
+    {
+      "id": "P4-E10",
+      "status": "pending_for_applicable_claim",
+      "missing_evidence": "Independently grounded contributions, source/exposure integrity and protected references",
+      "affected_claim": "ongoing_external_contact_or_operational_openness",
+      "responsible_reviewer": {
+        "state": "unknown",
+        "reason": "No qualified actual reviewer supplied"
+      },
+      "evidence_refs": [],
+      "limitation": "No substantive empirical evidence supplied by software tests."
+    },
+    {
+      "id": "P4-E11",
+      "status": "pending_for_applicable_claim",
+      "missing_evidence": "Scoped five-condition evidence, actual corrections and ten disclosures",
+      "affected_claim": "performed_correction_or_operational_openness",
+      "responsible_reviewer": {
+        "state": "unknown",
+        "reason": "No qualified actual reviewer supplied"
+      },
+      "evidence_refs": [],
+      "limitation": "No substantive empirical evidence supplied by software tests."
+    },
+    {
+      "id": "P4-E12",
+      "status": "pending_for_applicable_claim",
+      "missing_evidence": "Responsible claim review, currentness and actual correction/release authorities",
+      "affected_claim": "scientific_release",
+      "responsible_reviewer": {
+        "state": "unknown",
+        "reason": "No qualified actual reviewer supplied"
+      },
+      "evidence_refs": [],
+      "limitation": "No substantive empirical evidence supplied by software tests."
+    }
+  ],
+  "empirical_scope_note": "E10/E11 ongoing operational openness requirements apply only to a proposed broader claim. No pending item is marked satisfied or inapplicable solely because this is software delivery.",
+  "unresolved_decisions": {
+    "UD-006": "approved_protocol_actual_scoped_independent_evidence_outstanding",
+    "UD-007": "latent_support_diagnostic_deferred"
+  },
+  "runtime_invocation": {
+    "source_qualification": [
+      "-B",
+      "-S"
+    ],
+    "installed_package_checks": [
+      "-I",
+      "-B"
+    ],
+    "installed_scope_note": "Installed checks retain site-package availability in isolated execution; source qualification disables site loading."
+  },
+  "local_delivery_status": {
+    "status": "recorded_in_external_delivery_receipt",
+    "receipt": "StructDet-Bench_Phase4_Final_Archive_Verification.json",
+    "meaning": "Actual archive, packaged-route and update-patch outcomes are asserted only by the completed external companion."
+  },
+  "qualified_subject": {
+    "checker_source_sha256": "24408ef7d8e8d7aff009b7c4a0d3f911decc29cee5725468fe8d5741081b18ad",
+    "source_file_count": 555,
+    "source_archive_sha256": "23f3ae07a8d3e982a53e919283fedc1e4df1bc3fefcecc8cd2cc3f12327bcde3",
+    "environment": {
+      "bytecode_disabled": true,
+      "executable": "/workspace/scratch/8edb29ece2eb/runtime/cpython-3.13.5-linux-x86_64-gnu/bin/python3.13",
+      "executable_sha256": "0eba26d5f04a3673ee264ca406ef286d5025da098c1a24987a8118c23d69153c",
+      "implementation": "CPython",
+      "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+      "python": "3.13.5",
+      "site_disabled": true,
+      "unicode": "15.1.0"
+    },
+    "administrative_changes_after_qualification": [
+      "PHASE_4_COMPLETION.md",
+      "artifacts/phase4/verification_manifest.json"
+    ],
+    "qualification_limit": "These two factual completion documents are updated after qualification. The external delivery receipt reconciles this delta and confirms all other tested files unchanged."
+  },
+  "package_qualification": {
+    "build_backend_requirement": "setuptools>=77",
+    "runtime_dependencies": [],
+    "license_material_verified": [
+      {
+        "sdist_path": "structdet_bench-0.1.0/LICENSE",
+        "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+        "source_path": "LICENSE",
+        "wheel_path": "structdet_bench-0.1.0.dist-info/licenses/LICENSE"
+      },
+      {
+        "sdist_path": "structdet_bench-0.1.0/NOTICE",
+        "sha256": "2c081bbc0c7d18ec8d7865bd679a2a55aebd7b578ad9cfe1aec23b3a703d6743",
+        "source_path": "NOTICE",
+        "wheel_path": "structdet_bench-0.1.0.dist-info/licenses/NOTICE"
+      },
+      {
+        "sdist_path": "structdet_bench-0.1.0/LICENSES/Apache-2.0.txt",
+        "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+        "source_path": "LICENSES/Apache-2.0.txt",
+        "wheel_path": "structdet_bench-0.1.0.dist-info/licenses/LICENSES/Apache-2.0.txt"
+      },
+      {
+        "sdist_path": "structdet_bench-0.1.0/LICENSES/CC-BY-4.0.txt",
+        "sha256": "d2c7c5d4b9d5ef1b3a2fa90426df628fb5075c5b077954387df56d94562a6031",
+        "source_path": "LICENSES/CC-BY-4.0.txt",
+        "wheel_path": "structdet_bench-0.1.0.dist-info/licenses/LICENSES/CC-BY-4.0.txt"
+      },
+      {
+        "sdist_path": "structdet_bench-0.1.0/LICENSING_NOTES.md",
+        "sha256": "343487308d9f27f9b1869edadf1810a9f143a27d0a01277f00e2802d7a847bae",
+        "source_path": "LICENSING_NOTES.md",
+        "wheel_path": "structdet_bench-0.1.0.dist-info/licenses/LICENSING_NOTES.md"
+      },
+      {
+        "sdist_path": "structdet_bench-0.1.0/THIRD_PARTY_NOTICES.md",
+        "sha256": "4863c5c796e81a07b944ba7725e0ebca0769a94a0f4add6fed38f4a71a48a1a7",
+        "source_path": "THIRD_PARTY_NOTICES.md",
+        "wheel_path": "structdet_bench-0.1.0.dist-info/licenses/THIRD_PARTY_NOTICES.md"
+      },
+      {
+        "sdist_path": "structdet_bench-0.1.0/THEORY_SOURCES.md",
+        "sha256": "33554654857da067870221d5d882fb5ef06cf005b8624079dda986085068d83e",
+        "source_path": "THEORY_SOURCES.md",
+        "wheel_path": "structdet_bench-0.1.0.dist-info/licenses/THEORY_SOURCES.md"
+      }
+    ],
+    "artifacts": [
+      {
+        "filename": "structdet_bench-0.1.0.tar.gz",
+        "sha256": "6d280b22e3973403f46f0171403c92cce13e2250010db17d42a70511f05d5290",
+        "size_bytes": 529905
+      },
+      {
+        "filename": "structdet_bench-0.1.0-py3-none-any.whl",
+        "sha256": "a23007e19d7611595ea53a84a763ac5fce4277f485e7747f33d0e38329dcfaca",
+        "size_bytes": 321559
+      }
+    ],
+    "source_build_checker_result": "not_requested_source_delivery",
+    "separate_build_receipt": "verification/build/result.json",
+    "scope": "Bounded local build/install and packaged licenses; no registry publication, scientific validation or remote CI."
+  }
+}

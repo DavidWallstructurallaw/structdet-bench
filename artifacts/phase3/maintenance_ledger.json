@@ -1,1 +1,144 @@
-{"schema_version":"0.1","phase":3,"entries":[{"id":"P3S1-F01","authority":"PHASE_3_PLAN.md sections 9.2 and 9.4: Step 1 gate tests and bounded progression maintenance","path":"tests/test_phase3_gate.py","test_id":"tests.test_phase3_gate.MatrixTests.test_empty_bindings_cannot_implement_requirement","failure":"Test set implementation_status=implemented but inherited real P3-L01 bindings after successful synchronization, so its supposedly empty-binding input was no longer empty.","fix":"Construct the negative fixture by explicitly setting test_bindings=[]; preserve the validator and exact rejection assertion. Also verify the current matrix is initially valid.","before_sha256":"b0a86cca8785075effad640ed5437a5254b20a21d11414189a9a00d673fb2e43","after_sha256":"f94a70cc5a3f478f4d55bef05a01288572ee62d5cd84e818e7de7eb91fdfbf23","failure_log":"verification/receipt_transition_gate_tests.txt","patch":"verification/P3S1-F01.patch","test_identity_preserved":true,"scientific_contracts_changed":false}],"note":"P3S1-F01 repairs one new scaffold negative-test fixture after verified remote reconciliation. All 1,018 predecessor test identities, both old matrices, science and runtime sources remain unchanged."}
+{
+  "entries": [
+    {
+      "authorization": "PHASE_3_PLAN sections9.2,9.4 and user instruction Phase3Step8go",
+      "category": "authorized_implementation_fingerprint_progression",
+      "cause": "The original Phase3 identity helper checked every non-README predecessor file against the pre-integration bytes, including the three explicitly authorized Step8 runtime integration files.",
+      "changes": [
+        {
+          "after_sha256": "5df07e8991c1af105877336c55b5a3a1f05db69945544654d8e664ec84814704",
+          "before_sha256": "ded8205b8f3ce3cc2ae636ff1dc587c0b5557c57d2a1d5bd2f5d4874e36cc3b0",
+          "path": "structdet_bench/cli.py"
+        },
+        {
+          "after_sha256": "9ded7c505ec4a9ad213ea4d3840066594dece5277cd21ac07315aea0a24c86f2",
+          "before_sha256": "0156f368062367cb662a634bf7ab70d0c7ade77d71ba3e676b75b4bdee9d76d8",
+          "path": "structdet_bench/pipeline.py"
+        },
+        {
+          "after_sha256": "9e22bd778c92a5e55cee25522b5864bd428a1f33e40b703a3627f3d64f461587",
+          "before_sha256": "c701acebab0161fa35c49560d013daebc9ef679a1e2f5bdc97501b3e50e7b716",
+          "path": "structdet_bench/reporting.py"
+        },
+        {
+          "after_sha256": "9c50815ff3afa46230eb4dfc78eb3ffe5cf70a38a1d4cf72da9f3c5460426329",
+          "before_sha256": "a883c422639747919cb28d21ec0f3de588a9ecbc1d4c9c41d22aa803d788c463",
+          "path": "tests/phase3_helpers.py"
+        }
+      ],
+      "finding_id": "P3-S8-QA-001",
+      "full_regression_receipt": "artifacts/phase3/verification_manifest.json",
+      "historical_matrices_changed": false,
+      "historical_runs_rewritten": false,
+      "initial_failure": {
+        "actual_exit_code": 1,
+        "companion_path": "verification/pre_overlay_identity_failure.txt",
+        "sha256": "3e3ad8c68bf40e2de71e1608c21260818c238d4c4da8e08f47de988e2187fc59"
+      },
+      "minimal_fix": "Preserve original inventory and scientific digests, retain baseline_sha256 on every check and use fixed exact current implementation pins for only cli.py,pipeline.py,reporting.py from Step8. All unexpected hashes still fail. No legacy assertion or test ID changed.",
+      "original_test_file_sha256": "f94a70cc5a3f478f4d55bef05a01288572ee62d5cd84e818e7de7eb91fdfbf23",
+      "original_test_file_unchanged": true,
+      "patch": {
+        "companion_path": "verification/maintenance/step8_dispatch_and_identity.patch",
+        "sha256": "e9d3eb86d102bc3e05374bca9e39e09dd2ff477202bce7b0d7efc86920b27cec"
+      },
+      "regression_scope": "All inherited M/V methods, current Step8 gate, explicit runtime/scientific-mutation negative check and independent clean-archive full regression",
+      "scientific_definitions_changed": false,
+      "targeted_recheck": {
+        "actual_exit_code": 0,
+        "companion_path": "verification/post_overlay_identity_check.txt",
+        "methods_executed": 1,
+        "sha256": "8a3404d52a7825be65a91d8e11e8693c4a4d2fdde656787eb56a1e69ad6a3f82"
+      },
+      "violated_check": "tests.test_phase3_gate.IdentityTests.test_current_readonly_predecessor_files_are_exact"
+    },
+    {
+      "authorization": "PHASE_3_PLAN sections9.2 and9.4; owner Step9 instruction",
+      "category": "final_gate_status_correctness",
+      "changes": [
+        {
+          "after_sha256": "6fa9bb0f34ef842d7c6cb9bf800a16f33e5741c629313a7d1a1e37269667ff25",
+          "before_sha256": "0f11df0d301bceab8f323526d83ddacbf7f5fedb7456efcf99260fe6af0720f4",
+          "path": "tools/run_phase3_checks.py"
+        }
+      ],
+      "finding_id": "P3-S9-QA-001",
+      "full_regression_receipt": "artifacts/phase3/verification_manifest.json",
+      "historical_matrices_changed": false,
+      "historical_runs_rewritten": false,
+      "initial_failure": {
+        "actual_exit_code": 1,
+        "companion_path": "verification/gate_finding_initial.txt",
+        "sha256": "e68dc0e1ac662e282efe7cc90ed370e7a2e581fce00594cf5a203b9ce8d5e384"
+      },
+      "minimal_fix": "Full L completeness also requires the mandatory saved Phase2 reconciliation to be consistent. Current live delivery remains a separate audit.",
+      "patch": {
+        "companion_path": "verification/maintenance/gate_history_completeness.patch",
+        "sha256": "823c29fb9d639b6749859ae68cc3db747205b9d8a23fc05e029d6002cc998aa0"
+      },
+      "regression_scope": "All 80 obligation omissions, inherited M/V failures, stage failures, invalid baseline receipts; actual full source and clean archive runs recorded separately.",
+      "scientific_definitions_changed": false,
+      "targeted_recheck": {
+        "actual_exit_code": 0,
+        "companion_path": "verification/maintenance/gate_fix_recheck.txt",
+        "methods_executed": 6,
+        "sha256": "dda4492e2b487896c1d1cd304868a8974b4b4784f0bf0ce894becba16912ccf0"
+      },
+      "violated_requirements": [
+        "P3-L01",
+        "P3-L40"
+      ]
+    },
+    {
+      "authorization": "Step9 ordinary report-test writes",
+      "category": "new_test_assertion_shape_correction",
+      "cause": "The new parity assertion expected a top-level list of records as one JSON token. The established Markdown contract renders each record as a separate field table.",
+      "changes": [
+        {
+          "after_sha256": "dc717107ce7c98b5a36a623631ca4ddcaf29af7113eabb7a0f0d4ecbd2772003",
+          "before_sha256": "9553f73348cca8cbc67533d21499a14133a606a85acc6dde82fe4595d9a09a4f",
+          "path": "tests/test_phase3_reporting.py"
+        }
+      ],
+      "finding_id": "P3-S9-QA-002",
+      "historical_tests_modified": false,
+      "initial_failure": {
+        "actual_exit_code": 1,
+        "actual_methods": 10,
+        "failed_methods": 1,
+        "failed_subcases": 4,
+        "path": "verification/new_integration_initial.txt",
+        "sha256": "7e3726140a58eb98d746214028e02109eb093248e894e78479317f8d144a7bb2",
+        "size_bytes": 19362751
+      },
+      "minimal_fix": "Inspect every dependency, revision and impact record in its actual table representation; retain all scope, no-new-samples and immutable-history assertions. Production rendering is unchanged.",
+      "patch": {
+        "path": "verification/maintenance/report_table_assertion.patch",
+        "sha256": "9909ef80ec5a4946b3129fab102e658b910ddf2700d42b3e28c25886e5ff0473",
+        "size_bytes": 1226
+      },
+      "regression_scope": "Full source and clean archive conformance suites follow this focused recheck.",
+      "scientific_definitions_changed": false,
+      "targeted_recheck": {
+        "actual_exit_code": 0,
+        "actual_methods": 1,
+        "path": "verification/report_table_recheck.txt",
+        "sha256": "c8c4a9fae36c0967a469139a9940140ba23e93829ace1c1f5924ac327c628258",
+        "size_bytes": 328
+      },
+      "violated_requirements": [
+        "P3-L36",
+        "P3-RF14"
+      ]
+    }
+  ],
+  "phase": 3,
+  "plan_sha256": "1ca74fbba06bea44f2b656b3f4e6b46b0c6747cf13640c3f1ea29c69ef3d6352",
+  "runtime_review_repairs": {
+    "companion_path": "verification/contract_review/INDEPENDENT_REVIEW_RECEIPT.json",
+    "scope": "New Step8 longitudinal_pipeline.py only; original failures and exact versions retained",
+    "sha256": "79632cb4b9c67b8cd8c8a1c1c6626eea1b36153e2343ee43805d62357748be20"
+  },
+  "schema_version": "0.1",
+  "step": 9
+}

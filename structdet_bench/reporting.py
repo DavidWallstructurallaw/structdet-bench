@@ -12,6 +12,7 @@ import hashlib
 import html
 import json
 import math
+import re
 from typing import Any, Mapping
 from .contracts import ExactNumber, InputError, Knowledge, ThresholdToken
 
@@ -25,6 +26,18 @@ SECTION_TITLES = (
     "Study comparisons and uncertainty",
     "Surface and within-class diagnostics",
     "Integrity, corrections and release restrictions",
+)
+LONGITUDINAL_REPORT_VERSION = "0.3"
+LONGITUDINAL_REPORT_PROFILE = "structdet_longitudinal_v1"
+LONGITUDINAL_SECTION_TITLES = (
+    "Scope, source/method identities, requested quantities and evidence limitations",
+    "States, stages, lineage/path, clocks, probe/trial inventories, budgets and gaps",
+    "Per-state structural distributions, both views, coverage and protected-tail records",
+    "Observed retention/recurrence, stage accounting and separately labeled categorical scenarios",
+    "Empirical/local SHL, geometric-fit diagnostics, sensitivity, non-applicability and crossing brackets",
+    "Finite-family assays, pre/post missing sets, recovery gates, ERR and partial-information states",
+    "Anomalies, distributional/structural reopening, corrections and affected-result dependencies",
+    "Five-condition integrity, ten EC disclosures, omitted conditions, currentness and release restrictions",
 )
 
 
@@ -94,18 +107,37 @@ def diagnostic_records(diagnostics: Any) -> list[dict[str, Any]]:
 
 def _check_tree(report: Any) -> dict[str, Any]:
     obj = plain(report)
-    if (not isinstance(obj, dict) or obj.get("report_schema_version") not in {REPORT_VERSION, "0.2"}
-            or not isinstance(obj.get("sections"), list)
-            or [s.get("title") for s in obj["sections"]] != list(SECTION_TITLES)):
+    if not isinstance(obj, dict):
         raise InputError("invalid_report_structure")
-    if obj["report_schema_version"] == "0.2" and obj.get("report_profile") != "structdet_comparison_v1":
+    version = obj.get("report_schema_version")
+    if type(version) is not str or version not in {REPORT_VERSION, "0.2", LONGITUDINAL_REPORT_VERSION}:
+        raise InputError("invalid_report_structure")
+    longitudinal = version == LONGITUDINAL_REPORT_VERSION
+    titles = LONGITUDINAL_SECTION_TITLES if longitudinal else SECTION_TITLES
+    sections = obj.get("sections")
+    if (not isinstance(sections, list) or len(sections) != len(titles)
+            or any(not isinstance(s, dict) for s in sections)
+            or [s.get("title") for s in sections] != list(titles)):
+        raise InputError("invalid_report_structure")
+    if version == "0.2" and obj.get("report_profile") != "structdet_comparison_v1":
         raise InputError("invalid_comparison_report_profile")
+    if longitudinal:
+        if obj.get("report_profile") != LONGITUDINAL_REPORT_PROFILE:
+            raise InputError("invalid_longitudinal_report_profile")
+        if any(type(s.get("number")) is not int or s["number"] != i
+               or not isinstance(s.get("content"), dict)
+               or any(re.fullmatch(r"[a-z][a-z0-9_]*", key) is None for key in s["content"])
+               for i, s in enumerate(sections, 1)):
+            raise InputError("invalid_report_structure")
+    elif obj.get("report_profile") == LONGITUDINAL_REPORT_PROFILE:
+        # A longitudinal tree cannot acquire the earlier profile's meaning.
+        raise InputError("invalid_longitudinal_report_profile")
     return obj
 
 
 def render_json(report: Any) -> bytes:
     obj = _check_tree(report)
-    if obj['report_schema_version'] == '0.2':
+    if obj['report_schema_version'] in {'0.2', LONGITUDINAL_REPORT_VERSION}:
         # Complete machine-readable tree, with shared operand/context records.
         # Compact encoding avoids multiplying the size of large paired studies.
         return canonical_bytes(obj)

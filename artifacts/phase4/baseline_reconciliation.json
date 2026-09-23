@@ -1,0 +1,91 @@
+{
+  "archive_sha256": "9edbad00cc363daff5a94119072203e894075e76ce9a5f9e6a166d7e9f4d9423",
+  "assurance": "immutable_predecessor_consistency_only",
+  "commit": "8988b3ca41ee9e62f98d80309bee7f4d8d794fe6",
+  "file_count": 180,
+  "fresh_phase4_repository_delivery": false,
+  "inherited_actual_runs": [
+    {
+      "gates": {
+        "phase1_m_complete": true,
+        "phase2_v_complete": true,
+        "phase3_l_software_complete": true,
+        "requested_gate_passed": true,
+        "unresolved_current_ids": [],
+        "unresolved_l_ids": []
+      },
+      "kind": "current",
+      "new_execution_in_this_planning_turn": false,
+      "outcomes": {
+        "passed": 1817
+      },
+      "run_id": "9c20c5d7beec4311a981d1e149663f58",
+      "unique_methods": 1817,
+      "verified_inherited_evidence": {
+        "console": {
+          "path": "verification/current_runs/history/9c20c5d7beec4311a981d1e149663f58/console.txt",
+          "sha256": "3b36bca13269fa96531c7ebf87f13b2a583e0c688043314f50316ee3d958cd40",
+          "size_bytes": 275831
+        },
+        "full_run": {
+          "path": "verification/current_runs/history/9c20c5d7beec4311a981d1e149663f58/run.json",
+          "sha256": "65981402bc9b101bd96335181614cede689fa903cffd2af4fd77c801b0707451",
+          "size_bytes": 3688940
+        },
+        "full_subject_receipt": {
+          "path": "verification/current_runs/execution_receipts/9c20c5d7beec4311a981d1e149663f58.json",
+          "sha256": "d8bfdac6f9630e9336676b9cdeab387f70dbb2069532d49d8c189da261ec5d0a",
+          "size_bytes": 62192
+        }
+      }
+    },
+    {
+      "gates": {
+        "phase1_m_complete": true,
+        "phase2_v_complete": true,
+        "phase3_l_software_complete": true,
+        "requested_gate_passed": true,
+        "unresolved_current_ids": [],
+        "unresolved_l_ids": []
+      },
+      "kind": "clean",
+      "new_execution_in_this_planning_turn": false,
+      "outcomes": {
+        "passed": 1817
+      },
+      "run_id": "bf8d609c243f49ebab1507ca236e2889",
+      "unique_methods": 1817,
+      "verified_inherited_evidence": {
+        "console": {
+          "path": "verification/clean_runs/history/bf8d609c243f49ebab1507ca236e2889/console.txt",
+          "sha256": "ca24e62268126e65f562f5f23584d0157e5013470aba4d44ba7f699e35d8dcd7",
+          "size_bytes": 275831
+        },
+        "full_run": {
+          "path": "verification/clean_runs/history/bf8d609c243f49ebab1507ca236e2889/run.json",
+          "sha256": "ba8323367afb45585ad10051553fce3ccdb09c4b6d39da94a19e8f9187de823a",
+          "size_bytes": 3688826
+        },
+        "full_subject_receipt": {
+          "path": "verification/clean_runs/execution_receipts/bf8d609c243f49ebab1507ca236e2889.json",
+          "sha256": "3e0716579d4aef1ffbde992fdb2bed1a3e9ed807e36ce10c719c39829702b166",
+          "size_bytes": 62205
+        }
+      }
+    }
+  ],
+  "inventory_sha256": "153de535257bdb67202264b5d1f2b61f708b13bc0841e35ed0993dace4b281f3",
+  "local_exact_180_reconciliation_performed": true,
+  "new_regression_execution_claimed": false,
+  "predecessor_ids_match_fresh_discovery": true,
+  "schema_version": "0.1",
+  "source_pdf_sha256": {
+    "EC": "002d2393d05cb2c8b1db0a70e844e3d775e2be2155db7b2ffaadaa8080c8b950",
+    "SD": "357c0c3994e34fc1831ce91bf1c7e579925d64827579f80eb0a8708e85c93f32",
+    "SI": "80c193231af343d383544cee924a11fbb063a5c4ccee02d996ea4f904979565a"
+  },
+  "source_record": "Phase4 planning verification baseline_audit.json",
+  "source_record_sha256": "240f2efb8fd1a6650fba4f1c31dbbf3eafe326a3fefee29427d4aefe4d74ec7e",
+  "subject": "phase3_step10_final_180",
+  "tree": "170f0e7905da47562b5811487a42736d2db586c4"
+}

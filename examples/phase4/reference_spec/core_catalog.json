@@ -1,0 +1,980 @@
+{
+  "actual_artifact_count": 0,
+  "actual_human_review_count": 0,
+  "catalog_id": "sorting_core_32",
+  "catalog_version": "0.1",
+  "empirical_validation_performed": false,
+  "material_role": "reference_specification",
+  "required_initial_item_reviews": 64,
+  "roles": [
+    {
+      "accepted_assignment": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "accepted_validity": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "artifact_ref": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "desired_contrast": "sweep direction",
+      "evidence_refs": [],
+      "proposed_family": {
+        "state": "known",
+        "value": "SORT-ADJ"
+      },
+      "requirements": [
+        "two_distinct_human_initial_judgments",
+        "origin_and_exposure",
+        "mechanism_membership_argument",
+        "constitutive_relation_review",
+        "complete_validity_evidence",
+        "two_nontrivial_witness_shapes"
+      ],
+      "role_id": "CORE-ADJ-A",
+      "role_kind": "positive_variant",
+      "role_status": "missing"
+    },
+    {
+      "accepted_assignment": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "accepted_validity": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "artifact_ref": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "desired_contrast": "sweep direction",
+      "evidence_refs": [],
+      "proposed_family": {
+        "state": "known",
+        "value": "SORT-ADJ"
+      },
+      "requirements": [
+        "two_distinct_human_initial_judgments",
+        "origin_and_exposure",
+        "mechanism_membership_argument",
+        "constitutive_relation_review",
+        "complete_validity_evidence",
+        "two_nontrivial_witness_shapes"
+      ],
+      "role_id": "CORE-ADJ-B",
+      "role_kind": "positive_variant",
+      "role_status": "missing"
+    },
+    {
+      "accepted_assignment": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "accepted_validity": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "artifact_ref": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "desired_contrast": "Concrete interface, boundary, copy or transport defect; inspect whether the defining mechanism remains identifiable.",
+      "evidence_refs": [],
+      "proposed_family": {
+        "state": "known",
+        "value": "SORT-ADJ"
+      },
+      "requirements": [
+        "two_distinct_human_initial_judgments",
+        "origin_and_exposure",
+        "decisive_counterexample",
+        "constitutive_relation_review",
+        "preserved_mechanism_or_case_revision"
+      ],
+      "role_id": "CORE-ADJ-D",
+      "role_kind": "identifiable_defect",
+      "role_status": "missing"
+    },
+    {
+      "accepted_assignment": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "accepted_validity": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "artifact_ref": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "desired_contrast": "linear/binary insertion search",
+      "evidence_refs": [],
+      "proposed_family": {
+        "state": "known",
+        "value": "SORT-INS"
+      },
+      "requirements": [
+        "two_distinct_human_initial_judgments",
+        "origin_and_exposure",
+        "mechanism_membership_argument",
+        "constitutive_relation_review",
+        "complete_validity_evidence",
+        "two_nontrivial_witness_shapes"
+      ],
+      "role_id": "CORE-INS-A",
+      "role_kind": "positive_variant",
+      "role_status": "missing"
+    },
+    {
+      "accepted_assignment": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "accepted_validity": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "artifact_ref": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "desired_contrast": "linear/binary insertion search",
+      "evidence_refs": [],
+      "proposed_family": {
+        "state": "known",
+        "value": "SORT-INS"
+      },
+      "requirements": [
+        "two_distinct_human_initial_judgments",
+        "origin_and_exposure",
+        "mechanism_membership_argument",
+        "constitutive_relation_review",
+        "complete_validity_evidence",
+        "two_nontrivial_witness_shapes"
+      ],
+      "role_id": "CORE-INS-B",
+      "role_kind": "positive_variant",
+      "role_status": "missing"
+    },
+    {
+      "accepted_assignment": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "accepted_validity": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "artifact_ref": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "desired_contrast": "Concrete interface, boundary, copy or transport defect; inspect whether the defining mechanism remains identifiable.",
+      "evidence_refs": [],
+      "proposed_family": {
+        "state": "known",
+        "value": "SORT-INS"
+      },
+      "requirements": [
+        "two_distinct_human_initial_judgments",
+        "origin_and_exposure",
+        "decisive_counterexample",
+        "constitutive_relation_review",
+        "preserved_mechanism_or_case_revision"
+      ],
+      "role_id": "CORE-INS-D",
+      "role_kind": "identifiable_defect",
+      "role_status": "missing"
+    },
+    {
+      "accepted_assignment": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "accepted_validity": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "artifact_ref": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "desired_contrast": "min/max selection",
+      "evidence_refs": [],
+      "proposed_family": {
+        "state": "known",
+        "value": "SORT-SEL"
+      },
+      "requirements": [
+        "two_distinct_human_initial_judgments",
+        "origin_and_exposure",
+        "mechanism_membership_argument",
+        "constitutive_relation_review",
+        "complete_validity_evidence",
+        "two_nontrivial_witness_shapes"
+      ],
+      "role_id": "CORE-SEL-A",
+      "role_kind": "positive_variant",
+      "role_status": "missing"
+    },
+    {
+      "accepted_assignment": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "accepted_validity": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "artifact_ref": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "desired_contrast": "min/max selection",
+      "evidence_refs": [],
+      "proposed_family": {
+        "state": "known",
+        "value": "SORT-SEL"
+      },
+      "requirements": [
+        "two_distinct_human_initial_judgments",
+        "origin_and_exposure",
+        "mechanism_membership_argument",
+        "constitutive_relation_review",
+        "complete_validity_evidence",
+        "two_nontrivial_witness_shapes"
+      ],
+      "role_id": "CORE-SEL-B",
+      "role_kind": "positive_variant",
+      "role_status": "missing"
+    },
+    {
+      "accepted_assignment": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "accepted_validity": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "artifact_ref": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "desired_contrast": "Concrete interface, boundary, copy or transport defect; inspect whether the defining mechanism remains identifiable.",
+      "evidence_refs": [],
+      "proposed_family": {
+        "state": "known",
+        "value": "SORT-SEL"
+      },
+      "requirements": [
+        "two_distinct_human_initial_judgments",
+        "origin_and_exposure",
+        "decisive_counterexample",
+        "constitutive_relation_review",
+        "preserved_mechanism_or_case_revision"
+      ],
+      "role_id": "CORE-SEL-D",
+      "role_kind": "identifiable_defect",
+      "role_status": "missing"
+    },
+    {
+      "accepted_assignment": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "accepted_validity": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "artifact_ref": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "desired_contrast": "top-down/bottom-up merge",
+      "evidence_refs": [],
+      "proposed_family": {
+        "state": "known",
+        "value": "SORT-MERGE"
+      },
+      "requirements": [
+        "two_distinct_human_initial_judgments",
+        "origin_and_exposure",
+        "mechanism_membership_argument",
+        "constitutive_relation_review",
+        "complete_validity_evidence",
+        "two_nontrivial_witness_shapes"
+      ],
+      "role_id": "CORE-MERGE-A",
+      "role_kind": "positive_variant",
+      "role_status": "missing"
+    },
+    {
+      "accepted_assignment": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "accepted_validity": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "artifact_ref": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "desired_contrast": "top-down/bottom-up merge",
+      "evidence_refs": [],
+      "proposed_family": {
+        "state": "known",
+        "value": "SORT-MERGE"
+      },
+      "requirements": [
+        "two_distinct_human_initial_judgments",
+        "origin_and_exposure",
+        "mechanism_membership_argument",
+        "constitutive_relation_review",
+        "complete_validity_evidence",
+        "two_nontrivial_witness_shapes"
+      ],
+      "role_id": "CORE-MERGE-B",
+      "role_kind": "positive_variant",
+      "role_status": "missing"
+    },
+    {
+      "accepted_assignment": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "accepted_validity": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "artifact_ref": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "desired_contrast": "Concrete interface, boundary, copy or transport defect; inspect whether the defining mechanism remains identifiable.",
+      "evidence_refs": [],
+      "proposed_family": {
+        "state": "known",
+        "value": "SORT-MERGE"
+      },
+      "requirements": [
+        "two_distinct_human_initial_judgments",
+        "origin_and_exposure",
+        "decisive_counterexample",
+        "constitutive_relation_review",
+        "preserved_mechanism_or_case_revision"
+      ],
+      "role_id": "CORE-MERGE-D",
+      "role_kind": "identifiable_defect",
+      "role_status": "missing"
+    },
+    {
+      "accepted_assignment": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "accepted_validity": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "artifact_ref": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "desired_contrast": "two-/three-way pivot",
+      "evidence_refs": [],
+      "proposed_family": {
+        "state": "known",
+        "value": "SORT-PIVOT"
+      },
+      "requirements": [
+        "two_distinct_human_initial_judgments",
+        "origin_and_exposure",
+        "mechanism_membership_argument",
+        "constitutive_relation_review",
+        "complete_validity_evidence",
+        "two_nontrivial_witness_shapes"
+      ],
+      "role_id": "CORE-PIVOT-A",
+      "role_kind": "positive_variant",
+      "role_status": "missing"
+    },
+    {
+      "accepted_assignment": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "accepted_validity": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "artifact_ref": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "desired_contrast": "two-/three-way pivot",
+      "evidence_refs": [],
+      "proposed_family": {
+        "state": "known",
+        "value": "SORT-PIVOT"
+      },
+      "requirements": [
+        "two_distinct_human_initial_judgments",
+        "origin_and_exposure",
+        "mechanism_membership_argument",
+        "constitutive_relation_review",
+        "complete_validity_evidence",
+        "two_nontrivial_witness_shapes"
+      ],
+      "role_id": "CORE-PIVOT-B",
+      "role_kind": "positive_variant",
+      "role_status": "missing"
+    },
+    {
+      "accepted_assignment": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "accepted_validity": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "artifact_ref": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "desired_contrast": "Concrete interface, boundary, copy or transport defect; inspect whether the defining mechanism remains identifiable.",
+      "evidence_refs": [],
+      "proposed_family": {
+        "state": "known",
+        "value": "SORT-PIVOT"
+      },
+      "requirements": [
+        "two_distinct_human_initial_judgments",
+        "origin_and_exposure",
+        "decisive_counterexample",
+        "constitutive_relation_review",
+        "preserved_mechanism_or_case_revision"
+      ],
+      "role_id": "CORE-PIVOT-D",
+      "role_kind": "identifiable_defect",
+      "role_status": "missing"
+    },
+    {
+      "accepted_assignment": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "accepted_validity": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "artifact_ref": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "desired_contrast": "min/max heap",
+      "evidence_refs": [],
+      "proposed_family": {
+        "state": "known",
+        "value": "SORT-HEAP"
+      },
+      "requirements": [
+        "two_distinct_human_initial_judgments",
+        "origin_and_exposure",
+        "mechanism_membership_argument",
+        "constitutive_relation_review",
+        "complete_validity_evidence",
+        "two_nontrivial_witness_shapes"
+      ],
+      "role_id": "CORE-HEAP-A",
+      "role_kind": "positive_variant",
+      "role_status": "missing"
+    },
+    {
+      "accepted_assignment": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "accepted_validity": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "artifact_ref": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "desired_contrast": "min/max heap",
+      "evidence_refs": [],
+      "proposed_family": {
+        "state": "known",
+        "value": "SORT-HEAP"
+      },
+      "requirements": [
+        "two_distinct_human_initial_judgments",
+        "origin_and_exposure",
+        "mechanism_membership_argument",
+        "constitutive_relation_review",
+        "complete_validity_evidence",
+        "two_nontrivial_witness_shapes"
+      ],
+      "role_id": "CORE-HEAP-B",
+      "role_kind": "positive_variant",
+      "role_status": "missing"
+    },
+    {
+      "accepted_assignment": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "accepted_validity": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "artifact_ref": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "desired_contrast": "Concrete interface, boundary, copy or transport defect; inspect whether the defining mechanism remains identifiable.",
+      "evidence_refs": [],
+      "proposed_family": {
+        "state": "known",
+        "value": "SORT-HEAP"
+      },
+      "requirements": [
+        "two_distinct_human_initial_judgments",
+        "origin_and_exposure",
+        "decisive_counterexample",
+        "constitutive_relation_review",
+        "preserved_mechanism_or_case_revision"
+      ],
+      "role_id": "CORE-HEAP-D",
+      "role_kind": "identifiable_defect",
+      "role_status": "missing"
+    },
+    {
+      "accepted_assignment": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "accepted_validity": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "artifact_ref": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "desired_contrast": "count expansion/cumulative placement",
+      "evidence_refs": [],
+      "proposed_family": {
+        "state": "known",
+        "value": "SORT-COUNT"
+      },
+      "requirements": [
+        "two_distinct_human_initial_judgments",
+        "origin_and_exposure",
+        "mechanism_membership_argument",
+        "constitutive_relation_review",
+        "complete_validity_evidence",
+        "two_nontrivial_witness_shapes"
+      ],
+      "role_id": "CORE-COUNT-A",
+      "role_kind": "positive_variant",
+      "role_status": "missing"
+    },
+    {
+      "accepted_assignment": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "accepted_validity": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "artifact_ref": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "desired_contrast": "count expansion/cumulative placement",
+      "evidence_refs": [],
+      "proposed_family": {
+        "state": "known",
+        "value": "SORT-COUNT"
+      },
+      "requirements": [
+        "two_distinct_human_initial_judgments",
+        "origin_and_exposure",
+        "mechanism_membership_argument",
+        "constitutive_relation_review",
+        "complete_validity_evidence",
+        "two_nontrivial_witness_shapes"
+      ],
+      "role_id": "CORE-COUNT-B",
+      "role_kind": "positive_variant",
+      "role_status": "missing"
+    },
+    {
+      "accepted_assignment": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "accepted_validity": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "artifact_ref": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "desired_contrast": "Concrete interface, boundary, copy or transport defect; inspect whether the defining mechanism remains identifiable.",
+      "evidence_refs": [],
+      "proposed_family": {
+        "state": "known",
+        "value": "SORT-COUNT"
+      },
+      "requirements": [
+        "two_distinct_human_initial_judgments",
+        "origin_and_exposure",
+        "decisive_counterexample",
+        "constitutive_relation_review",
+        "preserved_mechanism_or_case_revision"
+      ],
+      "role_id": "CORE-COUNT-D",
+      "role_kind": "identifiable_defect",
+      "role_status": "missing"
+    },
+    {
+      "accepted_assignment": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "accepted_validity": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "artifact_ref": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "desired_contrast": "least-/most-significant-digit refinement",
+      "evidence_refs": [],
+      "proposed_family": {
+        "state": "known",
+        "value": "SORT-RADIX"
+      },
+      "requirements": [
+        "two_distinct_human_initial_judgments",
+        "origin_and_exposure",
+        "mechanism_membership_argument",
+        "constitutive_relation_review",
+        "complete_validity_evidence",
+        "two_nontrivial_witness_shapes"
+      ],
+      "role_id": "CORE-RADIX-A",
+      "role_kind": "positive_variant",
+      "role_status": "missing"
+    },
+    {
+      "accepted_assignment": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "accepted_validity": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "artifact_ref": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "desired_contrast": "least-/most-significant-digit refinement",
+      "evidence_refs": [],
+      "proposed_family": {
+        "state": "known",
+        "value": "SORT-RADIX"
+      },
+      "requirements": [
+        "two_distinct_human_initial_judgments",
+        "origin_and_exposure",
+        "mechanism_membership_argument",
+        "constitutive_relation_review",
+        "complete_validity_evidence",
+        "two_nontrivial_witness_shapes"
+      ],
+      "role_id": "CORE-RADIX-B",
+      "role_kind": "positive_variant",
+      "role_status": "missing"
+    },
+    {
+      "accepted_assignment": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "accepted_validity": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "artifact_ref": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "desired_contrast": "Concrete interface, boundary, copy or transport defect; inspect whether the defining mechanism remains identifiable.",
+      "evidence_refs": [],
+      "proposed_family": {
+        "state": "known",
+        "value": "SORT-RADIX"
+      },
+      "requirements": [
+        "two_distinct_human_initial_judgments",
+        "origin_and_exposure",
+        "decisive_counterexample",
+        "constitutive_relation_review",
+        "preserved_mechanism_or_case_revision"
+      ],
+      "role_id": "CORE-RADIX-D",
+      "role_kind": "identifiable_defect",
+      "role_status": "missing"
+    },
+    {
+      "accepted_assignment": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "accepted_validity": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "artifact_ref": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "desired_contrast": "Insertion implemented by adjacent swaps versus sweep organization.",
+      "evidence_refs": [],
+      "proposed_family": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "requirements": [
+        "two_distinct_human_initial_judgments",
+        "origin_and_exposure",
+        "actual_boundary_evidence",
+        "legitimate_unresolved_outcomes_preserved"
+      ],
+      "role_id": "CORE-X01",
+      "role_kind": "boundary_negative",
+      "role_status": "missing"
+    },
+    {
+      "accepted_assignment": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "accepted_validity": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "artifact_ref": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "desired_contrast": "Fresh selection versus a maintained heap.",
+      "evidence_refs": [],
+      "proposed_family": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "requirements": [
+        "two_distinct_human_initial_judgments",
+        "origin_and_exposure",
+        "actual_boundary_evidence",
+        "legitimate_unresolved_outcomes_preserved"
+      ],
+      "role_id": "CORE-X02",
+      "role_kind": "boundary_negative",
+      "role_status": "missing"
+    },
+    {
+      "accepted_assignment": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "accepted_validity": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "artifact_ref": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "desired_contrast": "Positional merge versus pivot partition.",
+      "evidence_refs": [],
+      "proposed_family": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "requirements": [
+        "two_distinct_human_initial_judgments",
+        "origin_and_exposure",
+        "actual_boundary_evidence",
+        "legitimate_unresolved_outcomes_preserved"
+      ],
+      "role_id": "CORE-X03",
+      "role_kind": "boundary_negative",
+      "role_status": "missing"
+    },
+    {
+      "accepted_assignment": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "accepted_validity": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "artifact_ref": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "desired_contrast": "Full-key counting advertised as one-pass radix.",
+      "evidence_refs": [],
+      "proposed_family": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "requirements": [
+        "two_distinct_human_initial_judgments",
+        "origin_and_exposure",
+        "actual_boundary_evidence",
+        "legitimate_unresolved_outcomes_preserved"
+      ],
+      "role_id": "CORE-X04",
+      "role_kind": "boundary_negative",
+      "role_status": "missing"
+    },
+    {
+      "accepted_assignment": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "accepted_validity": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "artifact_ref": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "desired_contrast": "An unregistered general hybrid.",
+      "evidence_refs": [],
+      "proposed_family": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "requirements": [
+        "two_distinct_human_initial_judgments",
+        "origin_and_exposure",
+        "actual_boundary_evidence",
+        "legitimate_unresolved_outcomes_preserved"
+      ],
+      "role_id": "CORE-X05",
+      "role_kind": "boundary_negative",
+      "role_status": "missing"
+    },
+    {
+      "accepted_assignment": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "accepted_validity": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "artifact_ref": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "desired_contrast": "An eligible gap-scheduled strategy outside this registry.",
+      "evidence_refs": [],
+      "proposed_family": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "requirements": [
+        "two_distinct_human_initial_judgments",
+        "origin_and_exposure",
+        "actual_boundary_evidence",
+        "legitimate_unresolved_outcomes_preserved"
+      ],
+      "role_id": "CORE-X06",
+      "role_kind": "boundary_negative",
+      "role_status": "missing"
+    },
+    {
+      "accepted_assignment": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "accepted_validity": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "artifact_ref": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "desired_contrast": "Opaque built-in sorting delegation.",
+      "evidence_refs": [],
+      "proposed_family": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "requirements": [
+        "two_distinct_human_initial_judgments",
+        "origin_and_exposure",
+        "actual_boundary_evidence",
+        "legitimate_unresolved_outcomes_preserved"
+      ],
+      "role_id": "CORE-X07",
+      "role_kind": "boundary_negative",
+      "role_status": "missing"
+    },
+    {
+      "accepted_assignment": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "accepted_validity": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "artifact_ref": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "desired_contrast": "A misleading or unused algorithm fragment with an incomplete decisive path.",
+      "evidence_refs": [],
+      "proposed_family": {
+        "reason": "Planned reference specification. Actual artifact or evidence has not been supplied.",
+        "state": "unknown"
+      },
+      "requirements": [
+        "two_distinct_human_initial_judgments",
+        "origin_and_exposure",
+        "actual_boundary_evidence",
+        "legitimate_unresolved_outcomes_preserved"
+      ],
+      "role_id": "CORE-X08",
+      "role_kind": "boundary_negative",
+      "role_status": "missing"
+    }
+  ],
+  "version": "0.1"
+}

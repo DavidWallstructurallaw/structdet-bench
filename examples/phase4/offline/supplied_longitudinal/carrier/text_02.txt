@@ -1,0 +1,13 @@
+# FIXTURE ONLY. Passive sorted-prefix illustration; validity is a stipulated label.
+# Mock review declaration: source descriptions are distinct from held-out inputs.
+# No real reviewer, generation, intervention, or external validation was performed.
+def sort_values(values):
+    result = list(values)
+    for i in range(1, len(result)):
+        value = result[i]
+        j = i
+        while j and result[j-1] > value:
+            result[j] = result[j-1]
+            j -= 1
+        result[j] = value
+    return result

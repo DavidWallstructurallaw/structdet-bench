@@ -1,0 +1,13 @@
+{
+  "basis": "Hand-enumerated HERO 6.2 main systematic positions. Stipulated test oracle.",
+  "by_block_condition_group": {
+    "P01": {"A": [1, 2, 3, 4], "B": [2, 3, 4, 5], "C": [3, 4, 5, 1]},
+    "P02": {"A": [2, 3, 4, 5], "B": [3, 4, 5, 1], "C": [4, 5, 1, 2]},
+    "P03": {"A": [3, 4, 5, 1], "B": [4, 5, 1, 2], "C": [5, 1, 2, 3]},
+    "P04": {"A": [4, 5, 1, 2], "B": [5, 1, 2, 3], "C": [1, 2, 3, 4]},
+    "P05": {"A": [5, 1, 2, 3], "B": [1, 2, 3, 4], "C": [2, 3, 4, 5]},
+    "P06": {"A": [1, 2, 3, 4], "B": [2, 3, 4, 5], "C": [3, 4, 5, 1]}
+  },
+  "planned_audit_positions": 72,
+  "maximum_distinct_main_artifacts": 360
+}

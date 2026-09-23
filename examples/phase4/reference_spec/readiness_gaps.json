@@ -1,0 +1,81 @@
+{
+  "actual_initial_item_reviews": 0,
+  "actual_input_count": 8995,
+  "candidate_execution_performed": false,
+  "core_construction": "not_started",
+  "empirical_validation_performed": false,
+  "external_validation": "not_started",
+  "gaps": [
+    {
+      "evidence_refs": [],
+      "outcome": "unresolved",
+      "requirement_id": "actual_core_material"
+    },
+    {
+      "evidence_refs": [],
+      "outcome": "unresolved",
+      "requirement_id": "origin_and_exposure"
+    },
+    {
+      "evidence_refs": [],
+      "outcome": "unresolved",
+      "requirement_id": "independent_human_initial_reviews"
+    },
+    {
+      "evidence_refs": [],
+      "outcome": "unresolved",
+      "requirement_id": "descriptor_pair_reviews"
+    },
+    {
+      "evidence_refs": [],
+      "outcome": "unresolved",
+      "requirement_id": "witness_observations"
+    },
+    {
+      "evidence_refs": [],
+      "outcome": "unresolved",
+      "requirement_id": "same_class_counterfactuals"
+    },
+    {
+      "evidence_refs": [],
+      "outcome": "unresolved",
+      "requirement_id": "mechanism_changing_substitutions"
+    },
+    {
+      "evidence_refs": [],
+      "outcome": "unresolved",
+      "requirement_id": "oracle_implementation_review"
+    },
+    {
+      "evidence_refs": [],
+      "outcome": "unresolved",
+      "requirement_id": "artifact_input_association_review"
+    },
+    {
+      "evidence_refs": [],
+      "outcome": "unresolved",
+      "requirement_id": "containment_review"
+    },
+    {
+      "evidence_refs": [],
+      "outcome": "unresolved",
+      "requirement_id": "all_eight_families_accommodated"
+    },
+    {
+      "evidence_refs": [],
+      "outcome": "unresolved",
+      "requirement_id": "execution_authorization"
+    },
+    {
+      "evidence_refs": [],
+      "outcome": "unresolved",
+      "requirement_id": "full_external_validation_logs"
+    }
+  ],
+  "human_review": "not_started",
+  "material_role": "reference_specification",
+  "missing_core_role_count": 32,
+  "required_initial_item_reviews": 64,
+  "scope": "Specifications and passive import checks only. No 32-program validation, empirical taxonomy qualification or external conduct is claimed.",
+  "version": "0.1"
+}

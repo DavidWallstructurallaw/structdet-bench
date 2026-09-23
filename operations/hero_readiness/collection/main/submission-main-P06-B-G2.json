@@ -1,0 +1,329 @@
+{
+  "cap": {
+    "convention": {
+      "reason": "Not supplied; preparation does not observe an external operation.",
+      "state": "unknown"
+    },
+    "enforced": {
+      "reason": "Not supplied; preparation does not observe an external operation.",
+      "state": "unknown"
+    },
+    "includes_reasoning": {
+      "reason": "Not supplied; preparation does not observe an external operation.",
+      "state": "unknown"
+    },
+    "tokenizer": {
+      "reason": "Not supplied; preparation does not observe an external operation.",
+      "state": "unknown"
+    },
+    "unit": {
+      "reason": "Not supplied; preparation does not observe an external operation.",
+      "state": "unknown"
+    }
+  },
+  "context": {
+    "automatic_retries": {
+      "reason": "Not supplied; preparation does not observe an external operation.",
+      "state": "unknown"
+    },
+    "duration_ms": {
+      "reason": "Not supplied; preparation does not observe an external operation.",
+      "state": "unknown"
+    },
+    "output_selection": {
+      "reason": "Not supplied; preparation does not observe an external operation.",
+      "state": "unknown"
+    },
+    "platform_context": {
+      "reason": "Not supplied; preparation does not observe an external operation.",
+      "state": "unknown"
+    },
+    "previous_outputs_supplied": {
+      "reason": "Not supplied; preparation does not observe an external operation.",
+      "state": "unknown"
+    },
+    "reasoning_configuration": {
+      "reason": "Not supplied; preparation does not observe an external operation.",
+      "state": "unknown"
+    },
+    "reference_material_supplied": {
+      "reason": "Not supplied; preparation does not observe an external operation.",
+      "state": "unknown"
+    },
+    "visible_system_instruction_ref": {
+      "reason": "Not supplied; preparation does not observe an external operation.",
+      "state": "unknown"
+    }
+  },
+  "deployment_window": {
+    "end": {
+      "reason": "Not supplied; preparation does not observe an external operation.",
+      "state": "unknown"
+    },
+    "start": {
+      "reason": "Not supplied; preparation does not observe an external operation.",
+      "state": "unknown"
+    }
+  },
+  "enforced_controls": {
+    "cap_semantics": {
+      "reason": "Not supplied; preparation does not observe an external operation.",
+      "state": "unknown"
+    },
+    "frequency_penalty": {
+      "reason": "Not supplied; preparation does not observe an external operation.",
+      "state": "unknown"
+    },
+    "fresh_context": {
+      "reason": "Not supplied; preparation does not observe an external operation.",
+      "state": "unknown"
+    },
+    "hidden_controls": {
+      "reason": "Not supplied; preparation does not observe an external operation.",
+      "state": "unknown"
+    },
+    "output_allowance": {
+      "reason": "Not supplied; preparation does not observe an external operation.",
+      "state": "unknown"
+    },
+    "presence_penalty": {
+      "reason": "Not supplied; preparation does not observe an external operation.",
+      "state": "unknown"
+    },
+    "seed": {
+      "reason": "Not supplied; preparation does not observe an external operation.",
+      "state": "unknown"
+    },
+    "temperature": {
+      "reason": "Not supplied; preparation does not observe an external operation.",
+      "state": "unknown"
+    },
+    "tools_requested": {
+      "reason": "Not supplied; preparation does not observe an external operation.",
+      "state": "unknown"
+    },
+    "top_p": {
+      "reason": "Not supplied; preparation does not observe an external operation.",
+      "state": "unknown"
+    },
+    "wrapper_knowledge": {
+      "reason": "Not supplied; preparation does not observe an external operation.",
+      "state": "unknown"
+    }
+  },
+  "evidence_refs": [],
+  "fixture": false,
+  "kind": "collection_submission",
+  "record": {
+    "attempt_id": {
+      "reason": "Not supplied; preparation does not observe an external operation.",
+      "state": "unknown"
+    },
+    "attempt_status": "not_attempted",
+    "attempted_at": {
+      "reason": "Not supplied; preparation does not observe an external operation.",
+      "state": "unknown"
+    },
+    "authorization_ref": {
+      "reason": "Not supplied; preparation does not observe an external operation.",
+      "state": "unknown"
+    },
+    "block_id": "P06",
+    "condition": "B",
+    "controls": {
+      "cap_semantics": {
+        "reason": "Not supplied; preparation does not observe an external operation.",
+        "state": "unknown"
+      },
+      "frequency_penalty": {
+        "reason": "Not supplied; preparation does not observe an external operation.",
+        "state": "unknown"
+      },
+      "fresh_context": {
+        "reason": "Not supplied; preparation does not observe an external operation.",
+        "state": "unknown"
+      },
+      "hidden_controls": {
+        "reason": "Not supplied; preparation does not observe an external operation.",
+        "state": "unknown"
+      },
+      "output_allowance": {
+        "reason": "Not supplied; preparation does not observe an external operation.",
+        "state": "unknown"
+      },
+      "presence_penalty": {
+        "reason": "Not supplied; preparation does not observe an external operation.",
+        "state": "unknown"
+      },
+      "seed": {
+        "reason": "Not supplied; preparation does not observe an external operation.",
+        "state": "unknown"
+      },
+      "temperature": {
+        "reason": "Not supplied; preparation does not observe an external operation.",
+        "state": "unknown"
+      },
+      "tools_requested": {
+        "reason": "Not supplied; preparation does not observe an external operation.",
+        "state": "unknown"
+      },
+      "top_p": {
+        "reason": "Not supplied; preparation does not observe an external operation.",
+        "state": "unknown"
+      },
+      "wrapper_knowledge": {
+        "reason": "Not supplied; preparation does not observe an external operation.",
+        "state": "unknown"
+      }
+    },
+    "depends_on": [],
+    "deployment": {
+      "checkpoint_identifier": {
+        "reason": "Not supplied; preparation does not observe an external operation.",
+        "state": "unknown"
+      },
+      "deployment_identifier": {
+        "reason": "Not supplied; preparation does not observe an external operation.",
+        "state": "unknown"
+      },
+      "drift": {
+        "reason": "Not supplied; preparation does not observe an external operation.",
+        "state": "unknown"
+      },
+      "model_family": {
+        "reason": "Not supplied; preparation does not observe an external operation.",
+        "state": "unknown"
+      },
+      "model_identifier": {
+        "reason": "Not supplied; preparation does not observe an external operation.",
+        "state": "unknown"
+      }
+    },
+    "group_index": 2,
+    "lineage_refs": [],
+    "phase": "main",
+    "planned_positions": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "prompt_ref": {
+      "reason": "Not supplied; preparation does not observe an external operation.",
+      "state": "unknown"
+    },
+    "raw_response_ref": {
+      "reason": "Not supplied; preparation does not observe an external operation.",
+      "state": "unknown"
+    },
+    "record_id": "main-P06-B-G2",
+    "record_type": "collection_ledger",
+    "record_version": "0.1",
+    "registered_call_order": 35,
+    "request_id": {
+      "reason": "Not supplied; preparation does not observe an external operation.",
+      "state": "unknown"
+    },
+    "retry_evidence_refs": [],
+    "retry_of": {
+      "reason": "Not supplied; preparation does not observe an external operation.",
+      "state": "unknown"
+    },
+    "revision": 1,
+    "scope": {
+      "claim_id": "hero-fixed-suite",
+      "task_id": "bounded_integer_sort",
+      "task_version": "0.1"
+    },
+    "sent_prompt_sha256": {
+      "reason": "Not supplied; preparation does not observe an external operation.",
+      "state": "unknown"
+    },
+    "study_id": "hero-operational-preparation",
+    "study_version": "prep-v1",
+    "supersedes": {
+      "reason": "New unexecuted preparation record.",
+      "state": "not_applicable"
+    },
+    "termination_reason": {
+      "reason": "Not supplied; preparation does not observe an external operation.",
+      "state": "unknown"
+    },
+    "usage": {
+      "compute": {
+        "reason": "Not supplied; preparation does not observe an external operation.",
+        "state": "unknown"
+      },
+      "currency": {
+        "reason": "Not supplied; preparation does not observe an external operation.",
+        "state": "unknown"
+      },
+      "hidden_reasoning_tokens": {
+        "reason": "Not supplied; preparation does not observe an external operation.",
+        "state": "unknown"
+      },
+      "input_tokens": {
+        "reason": "Not supplied; preparation does not observe an external operation.",
+        "state": "unknown"
+      },
+      "monetary_cost": {
+        "reason": "Not supplied; preparation does not observe an external operation.",
+        "state": "unknown"
+      },
+      "output_tokens": {
+        "reason": "Not supplied; preparation does not observe an external operation.",
+        "state": "unknown"
+      }
+    }
+  },
+  "requested_controls": {
+    "cap_semantics": {
+      "reason": "The operator must specify one actual token-cap convention.",
+      "state": "unknown"
+    },
+    "frequency_penalty": {
+      "state": "known",
+      "value": "0"
+    },
+    "fresh_context": {
+      "state": "known",
+      "value": true
+    },
+    "hidden_controls": {
+      "reason": "Not supplied; preparation does not observe an external operation.",
+      "state": "unknown"
+    },
+    "output_allowance": {
+      "state": "known",
+      "value": 8192
+    },
+    "presence_penalty": {
+      "state": "known",
+      "value": "0"
+    },
+    "seed": {
+      "state": "known",
+      "value": null
+    },
+    "temperature": {
+      "state": "known",
+      "value": "1.0"
+    },
+    "tools_requested": {
+      "state": "known",
+      "value": false
+    },
+    "top_p": {
+      "state": "known",
+      "value": "1.0"
+    },
+    "wrapper_knowledge": {
+      "reason": "Not supplied; preparation does not observe an external operation.",
+      "state": "unknown"
+    }
+  },
+  "study_id": "hero-operational-preparation",
+  "study_version": "prep-v1",
+  "version": "0.1"
+}

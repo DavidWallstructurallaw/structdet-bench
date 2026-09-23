@@ -1,0 +1,105 @@
+{
+  "canonical_input_bytes": 555455,
+  "families": [
+    "SORT-ADJ",
+    "SORT-INS",
+    "SORT-SEL",
+    "SORT-MERGE",
+    "SORT-PIVOT",
+    "SORT-HEAP",
+    "SORT-COUNT",
+    "SORT-RADIX"
+  ],
+  "fixture_notice": "All observations and human identities are stipulated software examples. No program was executed and no empirical evidence exists.",
+  "segment_counts": {
+    "V-KEY": 8192,
+    "V-SHAPE": 18,
+    "V-SMALL": 781,
+    "V-STAGE": 4
+  },
+  "suite_sha256": "4b8dce8c2523bc953286bf853a0e17764e8fbaa6c71cc024b4e60d39feb17c11",
+  "variants": {
+    "complete": {
+      "coverage_status": "complete",
+      "evidence_policy": "fixture_only",
+      "expected_count": 8995,
+      "material_role": "fixture",
+      "mechanism_status": "unresolved",
+      "observed_count": 8995,
+      "substantive_validation_performed": false,
+      "validity_status": "valid"
+    },
+    "counterexample": {
+      "coverage_status": "partial",
+      "evidence_policy": "fixture_only",
+      "expected_count": 8995,
+      "material_role": "fixture",
+      "mechanism_status": "unresolved",
+      "observed_count": 1,
+      "substantive_validation_performed": false,
+      "validity_status": "invalid"
+    },
+    "harness_failure": {
+      "coverage_status": "partial",
+      "evidence_policy": "fixture_only",
+      "expected_count": 8995,
+      "material_role": "fixture",
+      "mechanism_status": "unresolved",
+      "observed_count": 1,
+      "substantive_validation_performed": false,
+      "validity_status": "undetermined"
+    },
+    "partial": {
+      "coverage_status": "partial",
+      "evidence_policy": "fixture_only",
+      "expected_count": 8995,
+      "material_role": "fixture",
+      "mechanism_status": "unresolved",
+      "observed_count": 1,
+      "substantive_validation_performed": false,
+      "validity_status": "undetermined"
+    }
+  },
+  "witnesses": {
+    "W-01": [
+      7,
+      1,
+      6,
+      2,
+      5,
+      3,
+      4,
+      0
+    ],
+    "W-02": [
+      3,
+      1,
+      3,
+      0,
+      2,
+      0,
+      2,
+      1
+    ],
+    "W-03": [
+      256,
+      1,
+      4095,
+      255,
+      16,
+      0,
+      257,
+      4094
+    ],
+    "W-04": [
+      0,
+      1,
+      2,
+      3,
+      7,
+      6,
+      5,
+      4
+    ]
+  }
+}

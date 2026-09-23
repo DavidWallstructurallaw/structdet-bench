@@ -1,0 +1,21 @@
+{
+  "fixture_only": true,
+  "mixed_population": {
+    "labels": ["SORT-ADJ", null, "SORT-INS", "SORT-ADJ", null],
+    "validity": ["invalid", "valid", "valid", "undetermined", "not_assessed"],
+    "selected_ids": ["s1", "s2", "s3", "s4", "s5"],
+    "all_classified_count": 3,
+    "valid_classified_count": 1,
+    "planned_positions": 5
+  },
+  "correction": {
+    "candidate_only_cells": [{"block_id": "P01", "condition": "A"}],
+    "candidate_only_comparisons": ["P1-B-vs-A", "P5-C-vs-A"],
+    "schema_cells": 18,
+    "proposed_action_counts_as_performed": false
+  },
+  "mapping_fields": {
+    "attempt": ["attempt_id", "generation_group_id", "planned_candidate_count", "registered_call_order"],
+    "realization": ["sample_id", "within_group_index", "output_content_hash", "extraction_rule_version"]
+  }
+}

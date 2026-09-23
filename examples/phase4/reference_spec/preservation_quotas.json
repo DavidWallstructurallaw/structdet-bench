@@ -1,0 +1,128 @@
+{
+  "empirical_validation_performed": false,
+  "interpretation": "Reference-design protection does not establish empirical rarity or superiority.",
+  "material_role": "reference_specification",
+  "quotas": [
+    {
+      "class_id": "SORT-ADJ",
+      "planned_defect_role": "CORE-ADJ-D",
+      "positive_variant_minimum": 2,
+      "protect_version_history": true,
+      "protected_boundary_role_ids": [],
+      "protected_witness_ids": [],
+      "required_positive_roles": [
+        "CORE-ADJ-A",
+        "CORE-ADJ-B"
+      ],
+      "retention_status": "missing",
+      "reviewed_defect_or_boundary_minimum": 1
+    },
+    {
+      "class_id": "SORT-INS",
+      "planned_defect_role": "CORE-INS-D",
+      "positive_variant_minimum": 2,
+      "protect_version_history": true,
+      "protected_boundary_role_ids": [],
+      "protected_witness_ids": [],
+      "required_positive_roles": [
+        "CORE-INS-A",
+        "CORE-INS-B"
+      ],
+      "retention_status": "missing",
+      "reviewed_defect_or_boundary_minimum": 1
+    },
+    {
+      "class_id": "SORT-SEL",
+      "planned_defect_role": "CORE-SEL-D",
+      "positive_variant_minimum": 2,
+      "protect_version_history": true,
+      "protected_boundary_role_ids": [],
+      "protected_witness_ids": [],
+      "required_positive_roles": [
+        "CORE-SEL-A",
+        "CORE-SEL-B"
+      ],
+      "retention_status": "missing",
+      "reviewed_defect_or_boundary_minimum": 1
+    },
+    {
+      "class_id": "SORT-MERGE",
+      "planned_defect_role": "CORE-MERGE-D",
+      "positive_variant_minimum": 2,
+      "protect_version_history": true,
+      "protected_boundary_role_ids": [],
+      "protected_witness_ids": [],
+      "required_positive_roles": [
+        "CORE-MERGE-A",
+        "CORE-MERGE-B"
+      ],
+      "retention_status": "missing",
+      "reviewed_defect_or_boundary_minimum": 1
+    },
+    {
+      "class_id": "SORT-PIVOT",
+      "planned_defect_role": "CORE-PIVOT-D",
+      "positive_variant_minimum": 2,
+      "protect_version_history": true,
+      "protected_boundary_role_ids": [],
+      "protected_witness_ids": [],
+      "required_positive_roles": [
+        "CORE-PIVOT-A",
+        "CORE-PIVOT-B"
+      ],
+      "retention_status": "missing",
+      "reviewed_defect_or_boundary_minimum": 1
+    },
+    {
+      "class_id": "SORT-HEAP",
+      "planned_defect_role": "CORE-HEAP-D",
+      "positive_variant_minimum": 2,
+      "protect_version_history": true,
+      "protected_boundary_role_ids": [],
+      "protected_witness_ids": [],
+      "required_positive_roles": [
+        "CORE-HEAP-A",
+        "CORE-HEAP-B"
+      ],
+      "retention_status": "missing",
+      "reviewed_defect_or_boundary_minimum": 1
+    },
+    {
+      "class_id": "SORT-COUNT",
+      "planned_defect_role": "CORE-COUNT-D",
+      "positive_variant_minimum": 2,
+      "protect_version_history": true,
+      "protected_boundary_role_ids": [
+        "CORE-X04"
+      ],
+      "protected_witness_ids": [
+        "W-03"
+      ],
+      "required_positive_roles": [
+        "CORE-COUNT-A",
+        "CORE-COUNT-B"
+      ],
+      "retention_status": "missing",
+      "reviewed_defect_or_boundary_minimum": 1
+    },
+    {
+      "class_id": "SORT-RADIX",
+      "planned_defect_role": "CORE-RADIX-D",
+      "positive_variant_minimum": 2,
+      "protect_version_history": true,
+      "protected_boundary_role_ids": [
+        "CORE-X04"
+      ],
+      "protected_witness_ids": [
+        "W-03"
+      ],
+      "required_positive_roles": [
+        "CORE-RADIX-A",
+        "CORE-RADIX-B"
+      ],
+      "retention_status": "missing",
+      "reviewed_defect_or_boundary_minimum": 1
+    }
+  ],
+  "version": "0.1"
+}

@@ -1,0 +1,35 @@
+{
+  "fixture_only": true,
+  "positions": [
+    {
+      "within_group_index": 1,
+      "start": 26,
+      "end": 84,
+      "content": "def sort_values(values):\n    # café 🌱\n    return []  \n"
+    },
+    {
+      "within_group_index": 2,
+      "start": 116,
+      "end": 177,
+      "content": "\t# raw CRLF\r\ndef sort_values(values):\r\n    return values[:]\r\n"
+    },
+    {
+      "within_group_index": 3,
+      "start": 208,
+      "end": 208,
+      "content": ""
+    },
+    {
+      "within_group_index": 4,
+      "start": 238,
+      "end": 242,
+      "content": " \n\t\n"
+    },
+    {
+      "within_group_index": 5,
+      "start": 272,
+      "end": 326,
+      "content": "def sort_values(values):\n    return \"### Candidate 7\"\n"
+    }
+  ]
+}

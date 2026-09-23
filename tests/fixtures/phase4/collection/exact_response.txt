@@ -1,0 +1,25 @@
+### Candidate 1
+```python
+def sort_values(values):
+    # café 🌱
+    return []  
+```
+### Candidate 2
+```python
+	# raw CRLF
+def sort_values(values):
+    return values[:]
+```
+### Candidate 3
+```python
+```
+### Candidate 4
+```python
+ 
+	
+```
+### Candidate 5
+```python
+def sort_values(values):
+    return "### Candidate 7"
+```

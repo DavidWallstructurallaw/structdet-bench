@@ -1,0 +1,423 @@
+{
+  "calls": [
+    {
+      "block_id": "P00",
+      "condition": "C",
+      "group_index": 1,
+      "phase": "pilot",
+      "planned_positions": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "prompt_sha256": "08e6538ff633d38022c5073eb58162c0477256cf8cb84c8f066df1b9fc876f88",
+      "registered_call_order": 1,
+      "requested_controls": {
+        "cap_semantics": {
+          "reason": "The operator must specify one actual token-cap convention.",
+          "state": "unknown"
+        },
+        "frequency_penalty": {
+          "state": "known",
+          "value": "0"
+        },
+        "fresh_context": {
+          "state": "known",
+          "value": true
+        },
+        "hidden_controls": {
+          "reason": "Not supplied; preparation does not observe an external operation.",
+          "state": "unknown"
+        },
+        "output_allowance": {
+          "state": "known",
+          "value": 8192
+        },
+        "presence_penalty": {
+          "state": "known",
+          "value": "0"
+        },
+        "seed": {
+          "state": "known",
+          "value": null
+        },
+        "temperature": {
+          "state": "known",
+          "value": "0.4"
+        },
+        "tools_requested": {
+          "state": "known",
+          "value": false
+        },
+        "top_p": {
+          "state": "known",
+          "value": "1.0"
+        },
+        "wrapper_knowledge": {
+          "reason": "Not supplied; preparation does not observe an external operation.",
+          "state": "unknown"
+        }
+      },
+      "sample_orders": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "slot_id": "pilot-P00-C-G1"
+    },
+    {
+      "block_id": "P00",
+      "condition": "B",
+      "group_index": 1,
+      "phase": "pilot",
+      "planned_positions": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "prompt_sha256": "aae9846e9b3cb1ee77d36a39a70705a6e9c20d5f40d097952f09e347286c42e3",
+      "registered_call_order": 2,
+      "requested_controls": {
+        "cap_semantics": {
+          "reason": "The operator must specify one actual token-cap convention.",
+          "state": "unknown"
+        },
+        "frequency_penalty": {
+          "state": "known",
+          "value": "0"
+        },
+        "fresh_context": {
+          "state": "known",
+          "value": true
+        },
+        "hidden_controls": {
+          "reason": "Not supplied; preparation does not observe an external operation.",
+          "state": "unknown"
+        },
+        "output_allowance": {
+          "state": "known",
+          "value": 8192
+        },
+        "presence_penalty": {
+          "state": "known",
+          "value": "0"
+        },
+        "seed": {
+          "state": "known",
+          "value": null
+        },
+        "temperature": {
+          "state": "known",
+          "value": "1.0"
+        },
+        "tools_requested": {
+          "state": "known",
+          "value": false
+        },
+        "top_p": {
+          "state": "known",
+          "value": "1.0"
+        },
+        "wrapper_knowledge": {
+          "reason": "Not supplied; preparation does not observe an external operation.",
+          "state": "unknown"
+        }
+      },
+      "sample_orders": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "slot_id": "pilot-P00-B-G1"
+    },
+    {
+      "block_id": "P00",
+      "condition": "A",
+      "group_index": 1,
+      "phase": "pilot",
+      "planned_positions": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "prompt_sha256": "aae9846e9b3cb1ee77d36a39a70705a6e9c20d5f40d097952f09e347286c42e3",
+      "registered_call_order": 3,
+      "requested_controls": {
+        "cap_semantics": {
+          "reason": "The operator must specify one actual token-cap convention.",
+          "state": "unknown"
+        },
+        "frequency_penalty": {
+          "state": "known",
+          "value": "0"
+        },
+        "fresh_context": {
+          "state": "known",
+          "value": true
+        },
+        "hidden_controls": {
+          "reason": "Not supplied; preparation does not observe an external operation.",
+          "state": "unknown"
+        },
+        "output_allowance": {
+          "state": "known",
+          "value": 8192
+        },
+        "presence_penalty": {
+          "state": "known",
+          "value": "0"
+        },
+        "seed": {
+          "state": "known",
+          "value": null
+        },
+        "temperature": {
+          "state": "known",
+          "value": "0.4"
+        },
+        "tools_requested": {
+          "state": "known",
+          "value": false
+        },
+        "top_p": {
+          "state": "known",
+          "value": "1.0"
+        },
+        "wrapper_knowledge": {
+          "reason": "Not supplied; preparation does not observe an external operation.",
+          "state": "unknown"
+        }
+      },
+      "sample_orders": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "slot_id": "pilot-P00-A-G1"
+    },
+    {
+      "block_id": "P00",
+      "condition": "A",
+      "group_index": 2,
+      "phase": "pilot",
+      "planned_positions": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "prompt_sha256": "aae9846e9b3cb1ee77d36a39a70705a6e9c20d5f40d097952f09e347286c42e3",
+      "registered_call_order": 4,
+      "requested_controls": {
+        "cap_semantics": {
+          "reason": "The operator must specify one actual token-cap convention.",
+          "state": "unknown"
+        },
+        "frequency_penalty": {
+          "state": "known",
+          "value": "0"
+        },
+        "fresh_context": {
+          "state": "known",
+          "value": true
+        },
+        "hidden_controls": {
+          "reason": "Not supplied; preparation does not observe an external operation.",
+          "state": "unknown"
+        },
+        "output_allowance": {
+          "state": "known",
+          "value": 8192
+        },
+        "presence_penalty": {
+          "state": "known",
+          "value": "0"
+        },
+        "seed": {
+          "state": "known",
+          "value": null
+        },
+        "temperature": {
+          "state": "known",
+          "value": "0.4"
+        },
+        "tools_requested": {
+          "state": "known",
+          "value": false
+        },
+        "top_p": {
+          "state": "known",
+          "value": "1.0"
+        },
+        "wrapper_knowledge": {
+          "reason": "Not supplied; preparation does not observe an external operation.",
+          "state": "unknown"
+        }
+      },
+      "sample_orders": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "slot_id": "pilot-P00-A-G2"
+    },
+    {
+      "block_id": "P00",
+      "condition": "B",
+      "group_index": 2,
+      "phase": "pilot",
+      "planned_positions": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "prompt_sha256": "aae9846e9b3cb1ee77d36a39a70705a6e9c20d5f40d097952f09e347286c42e3",
+      "registered_call_order": 5,
+      "requested_controls": {
+        "cap_semantics": {
+          "reason": "The operator must specify one actual token-cap convention.",
+          "state": "unknown"
+        },
+        "frequency_penalty": {
+          "state": "known",
+          "value": "0"
+        },
+        "fresh_context": {
+          "state": "known",
+          "value": true
+        },
+        "hidden_controls": {
+          "reason": "Not supplied; preparation does not observe an external operation.",
+          "state": "unknown"
+        },
+        "output_allowance": {
+          "state": "known",
+          "value": 8192
+        },
+        "presence_penalty": {
+          "state": "known",
+          "value": "0"
+        },
+        "seed": {
+          "state": "known",
+          "value": null
+        },
+        "temperature": {
+          "state": "known",
+          "value": "1.0"
+        },
+        "tools_requested": {
+          "state": "known",
+          "value": false
+        },
+        "top_p": {
+          "state": "known",
+          "value": "1.0"
+        },
+        "wrapper_knowledge": {
+          "reason": "Not supplied; preparation does not observe an external operation.",
+          "state": "unknown"
+        }
+      },
+      "sample_orders": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "slot_id": "pilot-P00-B-G2"
+    },
+    {
+      "block_id": "P00",
+      "condition": "C",
+      "group_index": 2,
+      "phase": "pilot",
+      "planned_positions": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "prompt_sha256": "08e6538ff633d38022c5073eb58162c0477256cf8cb84c8f066df1b9fc876f88",
+      "registered_call_order": 6,
+      "requested_controls": {
+        "cap_semantics": {
+          "reason": "The operator must specify one actual token-cap convention.",
+          "state": "unknown"
+        },
+        "frequency_penalty": {
+          "state": "known",
+          "value": "0"
+        },
+        "fresh_context": {
+          "state": "known",
+          "value": true
+        },
+        "hidden_controls": {
+          "reason": "Not supplied; preparation does not observe an external operation.",
+          "state": "unknown"
+        },
+        "output_allowance": {
+          "state": "known",
+          "value": 8192
+        },
+        "presence_penalty": {
+          "state": "known",
+          "value": "0"
+        },
+        "seed": {
+          "state": "known",
+          "value": null
+        },
+        "temperature": {
+          "state": "known",
+          "value": "0.4"
+        },
+        "tools_requested": {
+          "state": "known",
+          "value": false
+        },
+        "top_p": {
+          "state": "known",
+          "value": "1.0"
+        },
+        "wrapper_knowledge": {
+          "reason": "Not supplied; preparation does not observe an external operation.",
+          "state": "unknown"
+        }
+      },
+      "sample_orders": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "slot_id": "pilot-P00-C-G2"
+    }
+  ],
+  "max_output_tokens": 49152,
+  "phase": "pilot",
+  "planned_calls": 6,
+  "planned_positions": 30,
+  "software_preparation_only": true
+}

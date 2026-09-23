@@ -1,0 +1,11 @@
+{
+  "schema_version": "0.1",
+  "phase": 4,
+  "step": 2,
+  "owner_instruction": "Phase 4 Step 2启动",
+  "plan_sha256": "41efc2076e6c44dd4e1f14bf1501ff2593b9d8e80a9150835f4ada0873c9538d",
+  "scope": "Phase 4 plan Step 2 local implementation and ordinary verification",
+  "model_calls_authorized_by_this_step": false,
+  "candidate_execution_authorized_by_this_step": false,
+  "remote_write_authorized_by_this_step": false
+}

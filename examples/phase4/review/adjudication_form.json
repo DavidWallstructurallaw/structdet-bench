@@ -1,0 +1,41 @@
+{
+  "completion_status": "blank_form",
+  "fields_to_complete": [
+    "pseudonymous_item_id",
+    "reviewer_id",
+    "submitted_at",
+    "qualifications",
+    "relationships",
+    "exposure",
+    "machine_assistance",
+    "independence_evidence",
+    "membership_status_and_class_if_assigned",
+    "validity_status",
+    "rationale_and_exact_evidence_references",
+    "schema_boundary_issues"
+  ],
+  "instructions": [
+    "Return an original independent first pass before discussion.",
+    "Record membership and validity separately; unresolved answers are legitimate.",
+    "Record prior label or other-review exposure and machine assistance accurately.",
+    "Submit real identity evidence through the separately controlled roster channel.",
+    "A later amendment receives a new identity and retains the original submission.",
+    "For adjudication, identify the preserved first passes, expert basis, and remaining issues."
+  ],
+  "membership_categories": [
+    "assigned",
+    "unresolved",
+    "unclassified"
+  ],
+  "review_kind": "adjudication",
+  "rubric_id": "bounded_integer_sort_validity_v1",
+  "submission_stage": "draft",
+  "substantive_validation_performed": false,
+  "validity_categories": [
+    "valid",
+    "invalid",
+    "undetermined",
+    "not_assessed"
+  ],
+  "version": "0.1"
+}
