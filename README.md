@@ -84,7 +84,7 @@ installation is required. Starting in the parent of the extracted
 ```bash
 cd structdet-bench
 python3.13 -B -S -m structdet_bench validate --bundle examples/hero_hf00/bundle.json
-python3.13 -B -S -m structdet_bench analyze --bundle examples/hero_hf00/bundle.json --output-dir ../hf00-source-output
+python3.13 -B -S -m structdet_bench analyze --bundle examples/hero_hf00/bundle.json --output-dir hf00-source-output
 ```
 
 The remaining command examples below run **from this source directory**.
