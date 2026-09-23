@@ -1,14 +1,15 @@
 [build-system]
-requires = ["setuptools"]
+requires = ["setuptools>=77"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "structdet-bench"
-version = "0.1.0.dev0"
-description = "StructDet-Bench offline measurement toolkit: Phase 1 scaffold"
+version = "0.1.0"
+description = "Offline structural measurement, comparison, longitudinal analysis and passive study toolkit"
 readme = "README.md"
-requires-python = ">=3.11"
+requires-python = "==3.13.*"
 dependencies = []
+license-files = ["LICENSE", "NOTICE", "LICENSES/*.txt", "LICENSING_NOTES.md", "THIRD_PARTY_NOTICES.md", "THEORY_SOURCES.md"]
 
 [tool.setuptools]
 packages = ["structdet_bench"]

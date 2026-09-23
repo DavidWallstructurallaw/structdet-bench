@@ -1,0 +1,192 @@
+{
+  "schema_version": "0.1",
+  "scope": "stipulated_software_fixtures_only",
+  "plan_sha256": "1ca74fbba06bea44f2b656b3f4e6b46b0c6747cf13640c3f1ea29c69ef3d6352",
+  "classes": [
+    "SORT-ADJ",
+    "SORT-INS",
+    "SORT-SEL",
+    "SORT-MERGE",
+    "SORT-PIVOT",
+    "SORT-HEAP",
+    "SORT-COUNT",
+    "SORT-RADIX"
+  ],
+  "generation": "Each of eight fixed family members has twelve independently registered passive calls per stage. Present emits its class twelve times; below emits first class; unresolved emits six first-class and six target-class records. These synthetic labels are fixture inputs, never supplied final assay decisions.",
+  "cases": [
+    {
+      "id": "half",
+      "pre": [
+        "present",
+        "present",
+        "present",
+        "present",
+        "present",
+        "present",
+        "below",
+        "below"
+      ],
+      "post": [
+        "present",
+        "present",
+        "present",
+        "present",
+        "present",
+        "present",
+        "present",
+        "below"
+      ],
+      "denominator": 2,
+      "err": [
+        1,
+        2
+      ],
+      "bounds": null
+    },
+    {
+      "id": "empty",
+      "pre": [
+        "present",
+        "present",
+        "present",
+        "present",
+        "present",
+        "present",
+        "present",
+        "present"
+      ],
+      "post": [
+        "present",
+        "present",
+        "present",
+        "present",
+        "present",
+        "present",
+        "present",
+        "present"
+      ],
+      "denominator": 0,
+      "err": null,
+      "bounds": null
+    },
+    {
+      "id": "pre_unknown",
+      "pre": [
+        "present",
+        "present",
+        "present",
+        "present",
+        "present",
+        "unresolved",
+        "below",
+        "below"
+      ],
+      "post": [
+        "present",
+        "present",
+        "present",
+        "present",
+        "present",
+        "present",
+        "present",
+        "below"
+      ],
+      "denominator": null,
+      "err": null,
+      "bounds": null
+    },
+    {
+      "id": "partial",
+      "pre": [
+        "present",
+        "present",
+        "present",
+        "present",
+        "present",
+        "below",
+        "below",
+        "below"
+      ],
+      "post": [
+        "present",
+        "present",
+        "present",
+        "present",
+        "present",
+        "present",
+        "unresolved",
+        "below"
+      ],
+      "denominator": 3,
+      "err": null,
+      "bounds": [
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ]
+    },
+    {
+      "id": "none_recovered",
+      "pre": [
+        "present",
+        "present",
+        "present",
+        "present",
+        "present",
+        "present",
+        "below",
+        "below"
+      ],
+      "post": [
+        "present",
+        "present",
+        "present",
+        "present",
+        "present",
+        "present",
+        "below",
+        "below"
+      ],
+      "denominator": 2,
+      "err": [
+        0,
+        1
+      ],
+      "bounds": null
+    },
+    {
+      "id": "all_recovered",
+      "pre": [
+        "present",
+        "present",
+        "present",
+        "present",
+        "present",
+        "present",
+        "below",
+        "below"
+      ],
+      "post": [
+        "present",
+        "present",
+        "present",
+        "present",
+        "present",
+        "present",
+        "present",
+        "present"
+      ],
+      "denominator": 2,
+      "err": [
+        1,
+        1
+      ],
+      "bounds": null
+    }
+  ]
+}

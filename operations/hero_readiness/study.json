@@ -1,0 +1,2922 @@
+{
+  "evidence_policy": "adjudicated_import",
+  "import_budget": {
+    "max_packets": 17,
+    "max_total_bytes": 8388608,
+    "max_total_records": 100000
+  },
+  "material_role": "descriptive",
+  "packet_inventory": [
+    {
+      "format": "bytes",
+      "location": {
+        "state": "known",
+        "value": {
+          "kind": "local",
+          "path": "inputs/HERO_BENCHMARK_SPEC.md"
+        }
+      },
+      "packet_id": "input-01",
+      "purpose": "evidence",
+      "record_count": {
+        "state": "known",
+        "value": 0
+      },
+      "sha256": {
+        "state": "known",
+        "value": "d1a0849d888a35ae3c9bd552bb920ee46417b7eeb4f8b687f8b5825e6fb851b2"
+      },
+      "size_bytes": {
+        "state": "known",
+        "value": 76545
+      },
+      "verification": "unchecked",
+      "verification_ref": {
+        "reason": "The loader checks local bytes; no authenticated external verification receipt exists.",
+        "state": "not_applicable"
+      }
+    },
+    {
+      "format": "bytes",
+      "location": {
+        "state": "known",
+        "value": {
+          "kind": "local",
+          "path": "inputs/PHASE_4_PLAN.md"
+        }
+      },
+      "packet_id": "input-02",
+      "purpose": "evidence",
+      "record_count": {
+        "state": "known",
+        "value": 0
+      },
+      "sha256": {
+        "state": "known",
+        "value": "161a6ce2b99ae3f26caab26bb03f77434b45f9df69845827c09c23c1e5dc2faf"
+      },
+      "size_bytes": {
+        "state": "known",
+        "value": 91135
+      },
+      "verification": "unchecked",
+      "verification_ref": {
+        "reason": "The loader checks local bytes; no authenticated external verification receipt exists.",
+        "state": "not_applicable"
+      }
+    },
+    {
+      "format": "bytes",
+      "location": {
+        "state": "known",
+        "value": {
+          "kind": "local",
+          "path": "inputs/EVALUATION_CLOSURE_ADDENDUM.md"
+        }
+      },
+      "packet_id": "input-03",
+      "purpose": "evidence",
+      "record_count": {
+        "state": "known",
+        "value": 0
+      },
+      "sha256": {
+        "state": "known",
+        "value": "31d2387ff2867e67e07adf60bca723b6783d0c3155b905d5477d2f844e1d9ce8"
+      },
+      "size_bytes": {
+        "state": "known",
+        "value": 19228
+      },
+      "verification": "unchecked",
+      "verification_ref": {
+        "reason": "The loader checks local bytes; no authenticated external verification receipt exists.",
+        "state": "not_applicable"
+      }
+    },
+    {
+      "format": "bytes",
+      "location": {
+        "state": "known",
+        "value": {
+          "kind": "local",
+          "path": "inputs/VERIFICATION_POLICY.md"
+        }
+      },
+      "packet_id": "input-04",
+      "purpose": "evidence",
+      "record_count": {
+        "state": "known",
+        "value": 0
+      },
+      "sha256": {
+        "state": "known",
+        "value": "3090b505a93b6bdf97a0b0c302bceff7791aaf7601be288e39e9ccc1d7ca69a8"
+      },
+      "size_bytes": {
+        "state": "known",
+        "value": 11297
+      },
+      "verification": "unchecked",
+      "verification_ref": {
+        "reason": "The loader checks local bytes; no authenticated external verification receipt exists.",
+        "state": "not_applicable"
+      }
+    },
+    {
+      "format": "bytes",
+      "location": {
+        "state": "known",
+        "value": {
+          "kind": "local",
+          "path": "inputs/examples/phase4/reference_spec/core_catalog.json"
+        }
+      },
+      "packet_id": "input-05",
+      "purpose": "evidence",
+      "record_count": {
+        "state": "known",
+        "value": 0
+      },
+      "sha256": {
+        "state": "known",
+        "value": "dec9912f3e1f33dfc8b8347a188baf176b5811751d244ab07d7010108ff9d39e"
+      },
+      "size_bytes": {
+        "state": "known",
+        "value": 35073
+      },
+      "verification": "unchecked",
+      "verification_ref": {
+        "reason": "The loader checks local bytes; no authenticated external verification receipt exists.",
+        "state": "not_applicable"
+      }
+    },
+    {
+      "format": "bytes",
+      "location": {
+        "state": "known",
+        "value": {
+          "kind": "local",
+          "path": "inputs/examples/phase4/reference_spec/descriptor_reviews.json"
+        }
+      },
+      "packet_id": "input-06",
+      "purpose": "evidence",
+      "record_count": {
+        "state": "known",
+        "value": 0
+      },
+      "sha256": {
+        "state": "known",
+        "value": "9066cfcf0829ec9e128c6bcf94fe5240c13beb430d7cc95bf0db45d2b6c736e6"
+      },
+      "size_bytes": {
+        "state": "known",
+        "value": 16793
+      },
+      "verification": "unchecked",
+      "verification_ref": {
+        "reason": "The loader checks local bytes; no authenticated external verification receipt exists.",
+        "state": "not_applicable"
+      }
+    },
+    {
+      "format": "bytes",
+      "location": {
+        "state": "known",
+        "value": {
+          "kind": "local",
+          "path": "inputs/examples/phase4/reference_spec/witnesses.json"
+        }
+      },
+      "packet_id": "input-07",
+      "purpose": "evidence",
+      "record_count": {
+        "state": "known",
+        "value": 0
+      },
+      "sha256": {
+        "state": "known",
+        "value": "d45583739513c1803819028b656e2d920d0c50a8860ad78830b0aa4abe34137a"
+      },
+      "size_bytes": {
+        "state": "known",
+        "value": 1473
+      },
+      "verification": "unchecked",
+      "verification_ref": {
+        "reason": "The loader checks local bytes; no authenticated external verification receipt exists.",
+        "state": "not_applicable"
+      }
+    },
+    {
+      "format": "bytes",
+      "location": {
+        "state": "known",
+        "value": {
+          "kind": "local",
+          "path": "inputs/examples/phase4/reference_spec/preservation_quotas.json"
+        }
+      },
+      "packet_id": "input-08",
+      "purpose": "evidence",
+      "record_count": {
+        "state": "known",
+        "value": 0
+      },
+      "sha256": {
+        "state": "known",
+        "value": "a87a7ade8e5930ece5cf583e67224d9b646a4d4ca5f178a5a1193433c2b7d9bb"
+      },
+      "size_bytes": {
+        "state": "known",
+        "value": 3637
+      },
+      "verification": "unchecked",
+      "verification_ref": {
+        "reason": "The loader checks local bytes; no authenticated external verification receipt exists.",
+        "state": "not_applicable"
+      }
+    },
+    {
+      "format": "bytes",
+      "location": {
+        "state": "known",
+        "value": {
+          "kind": "local",
+          "path": "inputs/examples/phase4/reference_spec/sorting_inputs.json"
+        }
+      },
+      "packet_id": "input-09",
+      "purpose": "evidence",
+      "record_count": {
+        "state": "known",
+        "value": 0
+      },
+      "sha256": {
+        "state": "known",
+        "value": "4b8dce8c2523bc953286bf853a0e17764e8fbaa6c71cc024b4e60d39feb17c11"
+      },
+      "size_bytes": {
+        "state": "known",
+        "value": 555455
+      },
+      "verification": "unchecked",
+      "verification_ref": {
+        "reason": "The loader checks local bytes; no authenticated external verification receipt exists.",
+        "state": "not_applicable"
+      }
+    },
+    {
+      "format": "bytes",
+      "location": {
+        "state": "known",
+        "value": {
+          "kind": "local",
+          "path": "inputs/examples/phase4/reference_spec/sorting_manifest.json"
+        }
+      },
+      "packet_id": "input-10",
+      "purpose": "evidence",
+      "record_count": {
+        "state": "known",
+        "value": 0
+      },
+      "sha256": {
+        "state": "known",
+        "value": "88c4bf2e590772b37962f2ba583e5d75ceafdcfd06cd79b0f9dbfc91240fa4e8"
+      },
+      "size_bytes": {
+        "state": "known",
+        "value": 279
+      },
+      "verification": "unchecked",
+      "verification_ref": {
+        "reason": "The loader checks local bytes; no authenticated external verification receipt exists.",
+        "state": "not_applicable"
+      }
+    },
+    {
+      "format": "bytes",
+      "location": {
+        "state": "known",
+        "value": {
+          "kind": "local",
+          "path": "inputs/examples/phase4/reference_spec/VALIDATION_RECEIPTS.md"
+        }
+      },
+      "packet_id": "input-11",
+      "purpose": "evidence",
+      "record_count": {
+        "state": "known",
+        "value": 0
+      },
+      "sha256": {
+        "state": "known",
+        "value": "96e9a42d01eca87edb6d5daee8051c97d385c791fb29a064055ad9cf83310571"
+      },
+      "size_bytes": {
+        "state": "known",
+        "value": 11184
+      },
+      "verification": "unchecked",
+      "verification_ref": {
+        "reason": "The loader checks local bytes; no authenticated external verification receipt exists.",
+        "state": "not_applicable"
+      }
+    },
+    {
+      "format": "bytes",
+      "location": {
+        "state": "known",
+        "value": {
+          "kind": "local",
+          "path": "inputs/examples/phase4/review/core_review_form.json"
+        }
+      },
+      "packet_id": "input-12",
+      "purpose": "evidence",
+      "record_count": {
+        "state": "known",
+        "value": 0
+      },
+      "sha256": {
+        "state": "known",
+        "value": "959a956370425052ce467eaed6d305945306ccb6bb8a743f8a808f8cf79cd17b"
+      },
+      "size_bytes": {
+        "state": "known",
+        "value": 1290
+      },
+      "verification": "unchecked",
+      "verification_ref": {
+        "reason": "The loader checks local bytes; no authenticated external verification receipt exists.",
+        "state": "not_applicable"
+      }
+    },
+    {
+      "format": "bytes",
+      "location": {
+        "state": "known",
+        "value": {
+          "kind": "local",
+          "path": "inputs/examples/phase4/review/sampled_output_review_form.json"
+        }
+      },
+      "packet_id": "input-13",
+      "purpose": "evidence",
+      "record_count": {
+        "state": "known",
+        "value": 0
+      },
+      "sha256": {
+        "state": "known",
+        "value": "7a16d739b7fb130079da14a5629209665d0ec60bed9052ddb866bd6fe90f2228"
+      },
+      "size_bytes": {
+        "state": "known",
+        "value": 1300
+      },
+      "verification": "unchecked",
+      "verification_ref": {
+        "reason": "The loader checks local bytes; no authenticated external verification receipt exists.",
+        "state": "not_applicable"
+      }
+    },
+    {
+      "format": "bytes",
+      "location": {
+        "state": "known",
+        "value": {
+          "kind": "local",
+          "path": "inputs/examples/phase4/review/adjudication_form.json"
+        }
+      },
+      "packet_id": "input-14",
+      "purpose": "evidence",
+      "record_count": {
+        "state": "known",
+        "value": 0
+      },
+      "sha256": {
+        "state": "known",
+        "value": "e5ea222ac65a042fcf2eca575f0ce2bcd397969187b71538acc7464074ed84cf"
+      },
+      "size_bytes": {
+        "state": "known",
+        "value": 1298
+      },
+      "verification": "unchecked",
+      "verification_ref": {
+        "reason": "The loader checks local bytes; no authenticated external verification receipt exists.",
+        "state": "not_applicable"
+      }
+    },
+    {
+      "format": "bytes",
+      "location": {
+        "state": "known",
+        "value": {
+          "kind": "local",
+          "path": "inputs/examples/phase4/review/REVIEW_FORMAT.md"
+        }
+      },
+      "packet_id": "input-15",
+      "purpose": "evidence",
+      "record_count": {
+        "state": "known",
+        "value": 0
+      },
+      "sha256": {
+        "state": "known",
+        "value": "4469e2400f4f2cf940072bc4c6627ee74c7538b7b89eb0c85241bcd34206bc85"
+      },
+      "size_bytes": {
+        "state": "known",
+        "value": 12083
+      },
+      "verification": "unchecked",
+      "verification_ref": {
+        "reason": "The loader checks local bytes; no authenticated external verification receipt exists.",
+        "state": "not_applicable"
+      }
+    },
+    {
+      "format": "bytes",
+      "location": {
+        "state": "known",
+        "value": {
+          "kind": "local",
+          "path": "collection/main/collection_plan.json"
+        }
+      },
+      "packet_id": "input-16",
+      "purpose": "registration",
+      "record_count": {
+        "state": "known",
+        "value": 0
+      },
+      "sha256": {
+        "state": "known",
+        "value": "0104de55e96a9f977975a3e50e81ec07aa1d3add41b35a647f872c5c07ccf4cf"
+      },
+      "size_bytes": {
+        "state": "known",
+        "value": 120371
+      },
+      "verification": "unchecked",
+      "verification_ref": {
+        "reason": "The loader checks local bytes; no authenticated external verification receipt exists.",
+        "state": "not_applicable"
+      }
+    },
+    {
+      "format": "bytes",
+      "location": {
+        "state": "known",
+        "value": {
+          "kind": "local",
+          "path": "collection/pilot/collection_plan.json"
+        }
+      },
+      "packet_id": "input-17",
+      "purpose": "registration",
+      "record_count": {
+        "state": "known",
+        "value": 0
+      },
+      "sha256": {
+        "state": "known",
+        "value": "c5a6a21af2b9aba30c7c9ff66b35a4b13a7e65b75f0c8ac361186482604e315e"
+      },
+      "size_bytes": {
+        "state": "known",
+        "value": 10167
+      },
+      "verification": "unchecked",
+      "verification_ref": {
+        "reason": "The loader checks local bytes; no authenticated external verification receipt exists.",
+        "state": "not_applicable"
+      }
+    }
+  ],
+  "prior_study_versions": [],
+  "records": [
+    {
+      "claim_scope": "Unexecuted preparation for the fixed HERO P1/P5 sorting study. This descriptive envelope accounts for specifications and missing resources; it contains no observed sample or accepted labels.",
+      "currentness": {
+        "assessed_at": {
+          "reason": "Not supplied; preparation does not observe an external operation.",
+          "state": "unknown"
+        },
+        "basis": {
+          "reason": "Not supplied; preparation does not observe an external operation.",
+          "state": "unknown"
+        },
+        "expires_at": {
+          "reason": "Not supplied; preparation does not observe an external operation.",
+          "state": "unknown"
+        },
+        "state": "unresolved"
+      },
+      "depends_on": [],
+      "exposure": {
+        "state": "known",
+        "value": "Preparation material is public. Actual constructor/reviewer/model exposures remain unprovided."
+      },
+      "frame_definition": {
+        "admissible_substitutions": {
+          "reason": "Not supplied; preparation does not observe an external operation.",
+          "state": "unknown"
+        },
+        "consequence_horizon": {
+          "reason": "Not supplied; preparation does not observe an external operation.",
+          "state": "unknown"
+        },
+        "consequence_signature_spec": {
+          "reason": "Not supplied; preparation does not observe an external operation.",
+          "state": "unknown"
+        },
+        "equivalence_rule_ref": {
+          "reason": "Not supplied; preparation does not observe an external operation.",
+          "state": "unknown"
+        },
+        "evidence_requirement": {
+          "reason": "Not supplied; preparation does not observe an external operation.",
+          "state": "unknown"
+        },
+        "exceptional_case_rules": {
+          "reason": "Not supplied; preparation does not observe an external operation.",
+          "state": "unknown"
+        },
+        "load_bearing_invariants": [
+          "Exactly 32 core role specifications remain unfilled.",
+          "Missing observations, unknown costs, and unavailable evidence never become zero, false, or completed work.",
+          "Keep intended calls and positions fixed, including missing slots; preserve exact raw exports and failure history.",
+          "Scientific membership requires mechanism evidence, distinct from functional correctness."
+        ],
+        "task_context": {
+          "state": "known",
+          "value": "Bounded integer sorting; adopted task, mechanism partition, registry and validity rubric remain fixed."
+        }
+      },
+      "lineage_refs": [],
+      "pins": {
+        "analytic_resolution_id": "sorting_mechanism_family",
+        "analytic_resolution_version": "0.1",
+        "reference_registry_id": "sorting_reference_eight",
+        "reference_registry_version": "0.1",
+        "structural_schema_id": "sorting_mechanism_partition",
+        "structural_schema_version": "0.1",
+        "task_id": "bounded_integer_sort",
+        "task_version": "0.1",
+        "validity_rubric_ref": "bounded_integer_sort_validity_v1"
+      },
+      "preregistration": {
+        "evidence_refs": [],
+        "exposure_at_registration": {
+          "state": "known",
+          "value": "No prospective registration has occurred. Local files and hashes do not establish one."
+        },
+        "registered_at": {
+          "reason": "Not supplied; preparation does not observe an external operation.",
+          "state": "unknown"
+        },
+        "status": "not_registered"
+      },
+      "protocol": {
+        "budget": {
+          "currency": {
+            "reason": "Not supplied; preparation does not observe an external operation.",
+            "state": "unknown"
+          },
+          "max_calls": {
+            "state": "known",
+            "value": 72
+          },
+          "max_output_tokens": {
+            "state": "known",
+            "value": 589824
+          },
+          "max_positions": {
+            "state": "known",
+            "value": 360
+          },
+          "monetary_ceiling": {
+            "reason": "Not supplied; preparation does not observe an external operation.",
+            "state": "unknown"
+          }
+        },
+        "controls": {
+          "cap_semantics": {
+            "reason": "Not supplied; preparation does not observe an external operation.",
+            "state": "unknown"
+          },
+          "frequency_penalty": {
+            "reason": "Not supplied; preparation does not observe an external operation.",
+            "state": "unknown"
+          },
+          "fresh_context": {
+            "reason": "Not supplied; preparation does not observe an external operation.",
+            "state": "unknown"
+          },
+          "hidden_controls": {
+            "reason": "Not supplied; preparation does not observe an external operation.",
+            "state": "unknown"
+          },
+          "output_allowance": {
+            "reason": "Not supplied; preparation does not observe an external operation.",
+            "state": "unknown"
+          },
+          "presence_penalty": {
+            "reason": "Not supplied; preparation does not observe an external operation.",
+            "state": "unknown"
+          },
+          "seed": {
+            "reason": "Not supplied; preparation does not observe an external operation.",
+            "state": "unknown"
+          },
+          "temperature": {
+            "reason": "Not supplied; preparation does not observe an external operation.",
+            "state": "unknown"
+          },
+          "tools_requested": {
+            "reason": "Not supplied; preparation does not observe an external operation.",
+            "state": "unknown"
+          },
+          "top_p": {
+            "reason": "Not supplied; preparation does not observe an external operation.",
+            "state": "unknown"
+          },
+          "wrapper_knowledge": {
+            "reason": "Not supplied; preparation does not observe an external operation.",
+            "state": "unknown"
+          }
+        },
+        "design": "sorting_abc",
+        "legacy_profile_input": {
+          "reason": "No empirical numerical carrier has been supplied.",
+          "state": "unknown"
+        },
+        "longitudinal_input": {
+          "reason": "This preparation requests no longitudinal claim.",
+          "state": "not_applicable"
+        },
+        "prompt_refs": [],
+        "protocol_id": "hero_sort_abc_v1",
+        "protocol_version": "0.1"
+      },
+      "record_id": "registration-preparation",
+      "record_type": "study_registration",
+      "record_version": "0.1",
+      "requested_profile": "hero_sort_abc_v1",
+      "revision": 1,
+      "scope": {
+        "claim_id": "hero-fixed-suite",
+        "task_id": "bounded_integer_sort",
+        "task_version": "0.1"
+      },
+      "source_pins": {
+        "EC": "002d2393d05cb2c8b1db0a70e844e3d775e2be2155db7b2ffaadaa8080c8b950",
+        "SD": "357c0c3994e34fc1831ce91bf1c7e579925d64827579f80eb0a8708e85c93f32",
+        "SI": "80c193231af343d383544cee924a11fbb063a5c4ccee02d996ea4f904979565a"
+      },
+      "study_id": "hero-operational-preparation",
+      "study_version": "prep-v1",
+      "supersedes": {
+        "reason": "Initial reconstructed preparation record; no prior empirical record exists.",
+        "state": "not_applicable"
+      }
+    },
+    {
+      "ai_assistance": {
+        "state": "known",
+        "value": "Existing software specifications or deterministic software-generated collection plan; reconstruction and packet assembly by Codex."
+      },
+      "artifact_role": "source",
+      "content": {
+        "state": "known",
+        "value": {
+          "packet_id": "input-01"
+        }
+      },
+      "depends_on": [],
+      "evidence_refs": [],
+      "exposure": {
+        "state": "known",
+        "value": "Public preparatory specification. No candidate source, reviewer identity, response, or independent observation."
+      },
+      "lineage_refs": [],
+      "original_source": {
+        "state": "known",
+        "value": "HERO_BENCHMARK_SPEC.md"
+      },
+      "record_id": "source-01",
+      "record_type": "artifact",
+      "record_version": "0.1",
+      "revision": 1,
+      "scope": {
+        "claim_id": "hero-fixed-suite",
+        "task_id": "bounded_integer_sort",
+        "task_version": "0.1"
+      },
+      "sha256": {
+        "state": "known",
+        "value": "d1a0849d888a35ae3c9bd552bb920ee46417b7eeb4f8b687f8b5825e6fb851b2"
+      },
+      "size_bytes": {
+        "state": "known",
+        "value": 76545
+      },
+      "study_id": "hero-operational-preparation",
+      "study_version": "prep-v1",
+      "supersedes": {
+        "reason": "Initial reconstructed preparation record; no prior empirical record exists.",
+        "state": "not_applicable"
+      },
+      "transformations": []
+    },
+    {
+      "ai_assistance": {
+        "state": "known",
+        "value": "Existing software specifications or deterministic software-generated collection plan; reconstruction and packet assembly by Codex."
+      },
+      "artifact_role": "source",
+      "content": {
+        "state": "known",
+        "value": {
+          "packet_id": "input-02"
+        }
+      },
+      "depends_on": [],
+      "evidence_refs": [],
+      "exposure": {
+        "state": "known",
+        "value": "Public preparatory specification. No candidate source, reviewer identity, response, or independent observation."
+      },
+      "lineage_refs": [],
+      "original_source": {
+        "state": "known",
+        "value": "PHASE_4_PLAN.md"
+      },
+      "record_id": "source-02",
+      "record_type": "artifact",
+      "record_version": "0.1",
+      "revision": 1,
+      "scope": {
+        "claim_id": "hero-fixed-suite",
+        "task_id": "bounded_integer_sort",
+        "task_version": "0.1"
+      },
+      "sha256": {
+        "state": "known",
+        "value": "161a6ce2b99ae3f26caab26bb03f77434b45f9df69845827c09c23c1e5dc2faf"
+      },
+      "size_bytes": {
+        "state": "known",
+        "value": 91135
+      },
+      "study_id": "hero-operational-preparation",
+      "study_version": "prep-v1",
+      "supersedes": {
+        "reason": "Initial reconstructed preparation record; no prior empirical record exists.",
+        "state": "not_applicable"
+      },
+      "transformations": []
+    },
+    {
+      "ai_assistance": {
+        "state": "known",
+        "value": "Existing software specifications or deterministic software-generated collection plan; reconstruction and packet assembly by Codex."
+      },
+      "artifact_role": "source",
+      "content": {
+        "state": "known",
+        "value": {
+          "packet_id": "input-03"
+        }
+      },
+      "depends_on": [],
+      "evidence_refs": [],
+      "exposure": {
+        "state": "known",
+        "value": "Public preparatory specification. No candidate source, reviewer identity, response, or independent observation."
+      },
+      "lineage_refs": [],
+      "original_source": {
+        "state": "known",
+        "value": "EVALUATION_CLOSURE_ADDENDUM.md"
+      },
+      "record_id": "source-03",
+      "record_type": "artifact",
+      "record_version": "0.1",
+      "revision": 1,
+      "scope": {
+        "claim_id": "hero-fixed-suite",
+        "task_id": "bounded_integer_sort",
+        "task_version": "0.1"
+      },
+      "sha256": {
+        "state": "known",
+        "value": "31d2387ff2867e67e07adf60bca723b6783d0c3155b905d5477d2f844e1d9ce8"
+      },
+      "size_bytes": {
+        "state": "known",
+        "value": 19228
+      },
+      "study_id": "hero-operational-preparation",
+      "study_version": "prep-v1",
+      "supersedes": {
+        "reason": "Initial reconstructed preparation record; no prior empirical record exists.",
+        "state": "not_applicable"
+      },
+      "transformations": []
+    },
+    {
+      "ai_assistance": {
+        "state": "known",
+        "value": "Existing software specifications or deterministic software-generated collection plan; reconstruction and packet assembly by Codex."
+      },
+      "artifact_role": "source",
+      "content": {
+        "state": "known",
+        "value": {
+          "packet_id": "input-04"
+        }
+      },
+      "depends_on": [],
+      "evidence_refs": [],
+      "exposure": {
+        "state": "known",
+        "value": "Public preparatory specification. No candidate source, reviewer identity, response, or independent observation."
+      },
+      "lineage_refs": [],
+      "original_source": {
+        "state": "known",
+        "value": "VERIFICATION_POLICY.md"
+      },
+      "record_id": "source-04",
+      "record_type": "artifact",
+      "record_version": "0.1",
+      "revision": 1,
+      "scope": {
+        "claim_id": "hero-fixed-suite",
+        "task_id": "bounded_integer_sort",
+        "task_version": "0.1"
+      },
+      "sha256": {
+        "state": "known",
+        "value": "3090b505a93b6bdf97a0b0c302bceff7791aaf7601be288e39e9ccc1d7ca69a8"
+      },
+      "size_bytes": {
+        "state": "known",
+        "value": 11297
+      },
+      "study_id": "hero-operational-preparation",
+      "study_version": "prep-v1",
+      "supersedes": {
+        "reason": "Initial reconstructed preparation record; no prior empirical record exists.",
+        "state": "not_applicable"
+      },
+      "transformations": []
+    },
+    {
+      "ai_assistance": {
+        "state": "known",
+        "value": "Existing software specifications or deterministic software-generated collection plan; reconstruction and packet assembly by Codex."
+      },
+      "artifact_role": "source",
+      "content": {
+        "state": "known",
+        "value": {
+          "packet_id": "input-05"
+        }
+      },
+      "depends_on": [],
+      "evidence_refs": [],
+      "exposure": {
+        "state": "known",
+        "value": "Public preparatory specification. No candidate source, reviewer identity, response, or independent observation."
+      },
+      "lineage_refs": [],
+      "original_source": {
+        "state": "known",
+        "value": "examples/phase4/reference_spec/core_catalog.json"
+      },
+      "record_id": "source-05",
+      "record_type": "artifact",
+      "record_version": "0.1",
+      "revision": 1,
+      "scope": {
+        "claim_id": "hero-fixed-suite",
+        "task_id": "bounded_integer_sort",
+        "task_version": "0.1"
+      },
+      "sha256": {
+        "state": "known",
+        "value": "dec9912f3e1f33dfc8b8347a188baf176b5811751d244ab07d7010108ff9d39e"
+      },
+      "size_bytes": {
+        "state": "known",
+        "value": 35073
+      },
+      "study_id": "hero-operational-preparation",
+      "study_version": "prep-v1",
+      "supersedes": {
+        "reason": "Initial reconstructed preparation record; no prior empirical record exists.",
+        "state": "not_applicable"
+      },
+      "transformations": []
+    },
+    {
+      "ai_assistance": {
+        "state": "known",
+        "value": "Existing software specifications or deterministic software-generated collection plan; reconstruction and packet assembly by Codex."
+      },
+      "artifact_role": "source",
+      "content": {
+        "state": "known",
+        "value": {
+          "packet_id": "input-06"
+        }
+      },
+      "depends_on": [],
+      "evidence_refs": [],
+      "exposure": {
+        "state": "known",
+        "value": "Public preparatory specification. No candidate source, reviewer identity, response, or independent observation."
+      },
+      "lineage_refs": [],
+      "original_source": {
+        "state": "known",
+        "value": "examples/phase4/reference_spec/descriptor_reviews.json"
+      },
+      "record_id": "source-06",
+      "record_type": "artifact",
+      "record_version": "0.1",
+      "revision": 1,
+      "scope": {
+        "claim_id": "hero-fixed-suite",
+        "task_id": "bounded_integer_sort",
+        "task_version": "0.1"
+      },
+      "sha256": {
+        "state": "known",
+        "value": "9066cfcf0829ec9e128c6bcf94fe5240c13beb430d7cc95bf0db45d2b6c736e6"
+      },
+      "size_bytes": {
+        "state": "known",
+        "value": 16793
+      },
+      "study_id": "hero-operational-preparation",
+      "study_version": "prep-v1",
+      "supersedes": {
+        "reason": "Initial reconstructed preparation record; no prior empirical record exists.",
+        "state": "not_applicable"
+      },
+      "transformations": []
+    },
+    {
+      "ai_assistance": {
+        "state": "known",
+        "value": "Existing software specifications or deterministic software-generated collection plan; reconstruction and packet assembly by Codex."
+      },
+      "artifact_role": "source",
+      "content": {
+        "state": "known",
+        "value": {
+          "packet_id": "input-07"
+        }
+      },
+      "depends_on": [],
+      "evidence_refs": [],
+      "exposure": {
+        "state": "known",
+        "value": "Public preparatory specification. No candidate source, reviewer identity, response, or independent observation."
+      },
+      "lineage_refs": [],
+      "original_source": {
+        "state": "known",
+        "value": "examples/phase4/reference_spec/witnesses.json"
+      },
+      "record_id": "source-07",
+      "record_type": "artifact",
+      "record_version": "0.1",
+      "revision": 1,
+      "scope": {
+        "claim_id": "hero-fixed-suite",
+        "task_id": "bounded_integer_sort",
+        "task_version": "0.1"
+      },
+      "sha256": {
+        "state": "known",
+        "value": "d45583739513c1803819028b656e2d920d0c50a8860ad78830b0aa4abe34137a"
+      },
+      "size_bytes": {
+        "state": "known",
+        "value": 1473
+      },
+      "study_id": "hero-operational-preparation",
+      "study_version": "prep-v1",
+      "supersedes": {
+        "reason": "Initial reconstructed preparation record; no prior empirical record exists.",
+        "state": "not_applicable"
+      },
+      "transformations": []
+    },
+    {
+      "ai_assistance": {
+        "state": "known",
+        "value": "Existing software specifications or deterministic software-generated collection plan; reconstruction and packet assembly by Codex."
+      },
+      "artifact_role": "source",
+      "content": {
+        "state": "known",
+        "value": {
+          "packet_id": "input-08"
+        }
+      },
+      "depends_on": [],
+      "evidence_refs": [],
+      "exposure": {
+        "state": "known",
+        "value": "Public preparatory specification. No candidate source, reviewer identity, response, or independent observation."
+      },
+      "lineage_refs": [],
+      "original_source": {
+        "state": "known",
+        "value": "examples/phase4/reference_spec/preservation_quotas.json"
+      },
+      "record_id": "source-08",
+      "record_type": "artifact",
+      "record_version": "0.1",
+      "revision": 1,
+      "scope": {
+        "claim_id": "hero-fixed-suite",
+        "task_id": "bounded_integer_sort",
+        "task_version": "0.1"
+      },
+      "sha256": {
+        "state": "known",
+        "value": "a87a7ade8e5930ece5cf583e67224d9b646a4d4ca5f178a5a1193433c2b7d9bb"
+      },
+      "size_bytes": {
+        "state": "known",
+        "value": 3637
+      },
+      "study_id": "hero-operational-preparation",
+      "study_version": "prep-v1",
+      "supersedes": {
+        "reason": "Initial reconstructed preparation record; no prior empirical record exists.",
+        "state": "not_applicable"
+      },
+      "transformations": []
+    },
+    {
+      "ai_assistance": {
+        "state": "known",
+        "value": "Existing software specifications or deterministic software-generated collection plan; reconstruction and packet assembly by Codex."
+      },
+      "artifact_role": "source",
+      "content": {
+        "state": "known",
+        "value": {
+          "packet_id": "input-09"
+        }
+      },
+      "depends_on": [],
+      "evidence_refs": [],
+      "exposure": {
+        "state": "known",
+        "value": "Public preparatory specification. No candidate source, reviewer identity, response, or independent observation."
+      },
+      "lineage_refs": [],
+      "original_source": {
+        "state": "known",
+        "value": "examples/phase4/reference_spec/sorting_inputs.json"
+      },
+      "record_id": "source-09",
+      "record_type": "artifact",
+      "record_version": "0.1",
+      "revision": 1,
+      "scope": {
+        "claim_id": "hero-fixed-suite",
+        "task_id": "bounded_integer_sort",
+        "task_version": "0.1"
+      },
+      "sha256": {
+        "state": "known",
+        "value": "4b8dce8c2523bc953286bf853a0e17764e8fbaa6c71cc024b4e60d39feb17c11"
+      },
+      "size_bytes": {
+        "state": "known",
+        "value": 555455
+      },
+      "study_id": "hero-operational-preparation",
+      "study_version": "prep-v1",
+      "supersedes": {
+        "reason": "Initial reconstructed preparation record; no prior empirical record exists.",
+        "state": "not_applicable"
+      },
+      "transformations": []
+    },
+    {
+      "ai_assistance": {
+        "state": "known",
+        "value": "Existing software specifications or deterministic software-generated collection plan; reconstruction and packet assembly by Codex."
+      },
+      "artifact_role": "source",
+      "content": {
+        "state": "known",
+        "value": {
+          "packet_id": "input-10"
+        }
+      },
+      "depends_on": [],
+      "evidence_refs": [],
+      "exposure": {
+        "state": "known",
+        "value": "Public preparatory specification. No candidate source, reviewer identity, response, or independent observation."
+      },
+      "lineage_refs": [],
+      "original_source": {
+        "state": "known",
+        "value": "examples/phase4/reference_spec/sorting_manifest.json"
+      },
+      "record_id": "source-10",
+      "record_type": "artifact",
+      "record_version": "0.1",
+      "revision": 1,
+      "scope": {
+        "claim_id": "hero-fixed-suite",
+        "task_id": "bounded_integer_sort",
+        "task_version": "0.1"
+      },
+      "sha256": {
+        "state": "known",
+        "value": "88c4bf2e590772b37962f2ba583e5d75ceafdcfd06cd79b0f9dbfc91240fa4e8"
+      },
+      "size_bytes": {
+        "state": "known",
+        "value": 279
+      },
+      "study_id": "hero-operational-preparation",
+      "study_version": "prep-v1",
+      "supersedes": {
+        "reason": "Initial reconstructed preparation record; no prior empirical record exists.",
+        "state": "not_applicable"
+      },
+      "transformations": []
+    },
+    {
+      "ai_assistance": {
+        "state": "known",
+        "value": "Existing software specifications or deterministic software-generated collection plan; reconstruction and packet assembly by Codex."
+      },
+      "artifact_role": "source",
+      "content": {
+        "state": "known",
+        "value": {
+          "packet_id": "input-11"
+        }
+      },
+      "depends_on": [],
+      "evidence_refs": [],
+      "exposure": {
+        "state": "known",
+        "value": "Public preparatory specification. No candidate source, reviewer identity, response, or independent observation."
+      },
+      "lineage_refs": [],
+      "original_source": {
+        "state": "known",
+        "value": "examples/phase4/reference_spec/VALIDATION_RECEIPTS.md"
+      },
+      "record_id": "source-11",
+      "record_type": "artifact",
+      "record_version": "0.1",
+      "revision": 1,
+      "scope": {
+        "claim_id": "hero-fixed-suite",
+        "task_id": "bounded_integer_sort",
+        "task_version": "0.1"
+      },
+      "sha256": {
+        "state": "known",
+        "value": "96e9a42d01eca87edb6d5daee8051c97d385c791fb29a064055ad9cf83310571"
+      },
+      "size_bytes": {
+        "state": "known",
+        "value": 11184
+      },
+      "study_id": "hero-operational-preparation",
+      "study_version": "prep-v1",
+      "supersedes": {
+        "reason": "Initial reconstructed preparation record; no prior empirical record exists.",
+        "state": "not_applicable"
+      },
+      "transformations": []
+    },
+    {
+      "ai_assistance": {
+        "state": "known",
+        "value": "Existing software specifications or deterministic software-generated collection plan; reconstruction and packet assembly by Codex."
+      },
+      "artifact_role": "source",
+      "content": {
+        "state": "known",
+        "value": {
+          "packet_id": "input-12"
+        }
+      },
+      "depends_on": [],
+      "evidence_refs": [],
+      "exposure": {
+        "state": "known",
+        "value": "Public preparatory specification. No candidate source, reviewer identity, response, or independent observation."
+      },
+      "lineage_refs": [],
+      "original_source": {
+        "state": "known",
+        "value": "examples/phase4/review/core_review_form.json"
+      },
+      "record_id": "source-12",
+      "record_type": "artifact",
+      "record_version": "0.1",
+      "revision": 1,
+      "scope": {
+        "claim_id": "hero-fixed-suite",
+        "task_id": "bounded_integer_sort",
+        "task_version": "0.1"
+      },
+      "sha256": {
+        "state": "known",
+        "value": "959a956370425052ce467eaed6d305945306ccb6bb8a743f8a808f8cf79cd17b"
+      },
+      "size_bytes": {
+        "state": "known",
+        "value": 1290
+      },
+      "study_id": "hero-operational-preparation",
+      "study_version": "prep-v1",
+      "supersedes": {
+        "reason": "Initial reconstructed preparation record; no prior empirical record exists.",
+        "state": "not_applicable"
+      },
+      "transformations": []
+    },
+    {
+      "ai_assistance": {
+        "state": "known",
+        "value": "Existing software specifications or deterministic software-generated collection plan; reconstruction and packet assembly by Codex."
+      },
+      "artifact_role": "source",
+      "content": {
+        "state": "known",
+        "value": {
+          "packet_id": "input-13"
+        }
+      },
+      "depends_on": [],
+      "evidence_refs": [],
+      "exposure": {
+        "state": "known",
+        "value": "Public preparatory specification. No candidate source, reviewer identity, response, or independent observation."
+      },
+      "lineage_refs": [],
+      "original_source": {
+        "state": "known",
+        "value": "examples/phase4/review/sampled_output_review_form.json"
+      },
+      "record_id": "source-13",
+      "record_type": "artifact",
+      "record_version": "0.1",
+      "revision": 1,
+      "scope": {
+        "claim_id": "hero-fixed-suite",
+        "task_id": "bounded_integer_sort",
+        "task_version": "0.1"
+      },
+      "sha256": {
+        "state": "known",
+        "value": "7a16d739b7fb130079da14a5629209665d0ec60bed9052ddb866bd6fe90f2228"
+      },
+      "size_bytes": {
+        "state": "known",
+        "value": 1300
+      },
+      "study_id": "hero-operational-preparation",
+      "study_version": "prep-v1",
+      "supersedes": {
+        "reason": "Initial reconstructed preparation record; no prior empirical record exists.",
+        "state": "not_applicable"
+      },
+      "transformations": []
+    },
+    {
+      "ai_assistance": {
+        "state": "known",
+        "value": "Existing software specifications or deterministic software-generated collection plan; reconstruction and packet assembly by Codex."
+      },
+      "artifact_role": "source",
+      "content": {
+        "state": "known",
+        "value": {
+          "packet_id": "input-14"
+        }
+      },
+      "depends_on": [],
+      "evidence_refs": [],
+      "exposure": {
+        "state": "known",
+        "value": "Public preparatory specification. No candidate source, reviewer identity, response, or independent observation."
+      },
+      "lineage_refs": [],
+      "original_source": {
+        "state": "known",
+        "value": "examples/phase4/review/adjudication_form.json"
+      },
+      "record_id": "source-14",
+      "record_type": "artifact",
+      "record_version": "0.1",
+      "revision": 1,
+      "scope": {
+        "claim_id": "hero-fixed-suite",
+        "task_id": "bounded_integer_sort",
+        "task_version": "0.1"
+      },
+      "sha256": {
+        "state": "known",
+        "value": "e5ea222ac65a042fcf2eca575f0ce2bcd397969187b71538acc7464074ed84cf"
+      },
+      "size_bytes": {
+        "state": "known",
+        "value": 1298
+      },
+      "study_id": "hero-operational-preparation",
+      "study_version": "prep-v1",
+      "supersedes": {
+        "reason": "Initial reconstructed preparation record; no prior empirical record exists.",
+        "state": "not_applicable"
+      },
+      "transformations": []
+    },
+    {
+      "ai_assistance": {
+        "state": "known",
+        "value": "Existing software specifications or deterministic software-generated collection plan; reconstruction and packet assembly by Codex."
+      },
+      "artifact_role": "source",
+      "content": {
+        "state": "known",
+        "value": {
+          "packet_id": "input-15"
+        }
+      },
+      "depends_on": [],
+      "evidence_refs": [],
+      "exposure": {
+        "state": "known",
+        "value": "Public preparatory specification. No candidate source, reviewer identity, response, or independent observation."
+      },
+      "lineage_refs": [],
+      "original_source": {
+        "state": "known",
+        "value": "examples/phase4/review/REVIEW_FORMAT.md"
+      },
+      "record_id": "source-15",
+      "record_type": "artifact",
+      "record_version": "0.1",
+      "revision": 1,
+      "scope": {
+        "claim_id": "hero-fixed-suite",
+        "task_id": "bounded_integer_sort",
+        "task_version": "0.1"
+      },
+      "sha256": {
+        "state": "known",
+        "value": "4469e2400f4f2cf940072bc4c6627ee74c7538b7b89eb0c85241bcd34206bc85"
+      },
+      "size_bytes": {
+        "state": "known",
+        "value": 12083
+      },
+      "study_id": "hero-operational-preparation",
+      "study_version": "prep-v1",
+      "supersedes": {
+        "reason": "Initial reconstructed preparation record; no prior empirical record exists.",
+        "state": "not_applicable"
+      },
+      "transformations": []
+    },
+    {
+      "ai_assistance": {
+        "state": "known",
+        "value": "Existing software specifications or deterministic software-generated collection plan; reconstruction and packet assembly by Codex."
+      },
+      "artifact_role": "source",
+      "content": {
+        "state": "known",
+        "value": {
+          "packet_id": "input-16"
+        }
+      },
+      "depends_on": [],
+      "evidence_refs": [],
+      "exposure": {
+        "state": "known",
+        "value": "Public preparatory specification. No candidate source, reviewer identity, response, or independent observation."
+      },
+      "lineage_refs": [],
+      "original_source": {
+        "state": "known",
+        "value": "operations/hero_readiness/collection/main/collection_plan.json"
+      },
+      "record_id": "source-16",
+      "record_type": "artifact",
+      "record_version": "0.1",
+      "revision": 1,
+      "scope": {
+        "claim_id": "hero-fixed-suite",
+        "task_id": "bounded_integer_sort",
+        "task_version": "0.1"
+      },
+      "sha256": {
+        "state": "known",
+        "value": "0104de55e96a9f977975a3e50e81ec07aa1d3add41b35a647f872c5c07ccf4cf"
+      },
+      "size_bytes": {
+        "state": "known",
+        "value": 120371
+      },
+      "study_id": "hero-operational-preparation",
+      "study_version": "prep-v1",
+      "supersedes": {
+        "reason": "Initial reconstructed preparation record; no prior empirical record exists.",
+        "state": "not_applicable"
+      },
+      "transformations": []
+    },
+    {
+      "ai_assistance": {
+        "state": "known",
+        "value": "Existing software specifications or deterministic software-generated collection plan; reconstruction and packet assembly by Codex."
+      },
+      "artifact_role": "source",
+      "content": {
+        "state": "known",
+        "value": {
+          "packet_id": "input-17"
+        }
+      },
+      "depends_on": [],
+      "evidence_refs": [],
+      "exposure": {
+        "state": "known",
+        "value": "Public preparatory specification. No candidate source, reviewer identity, response, or independent observation."
+      },
+      "lineage_refs": [],
+      "original_source": {
+        "state": "known",
+        "value": "operations/hero_readiness/collection/pilot/collection_plan.json"
+      },
+      "record_id": "source-17",
+      "record_type": "artifact",
+      "record_version": "0.1",
+      "revision": 1,
+      "scope": {
+        "claim_id": "hero-fixed-suite",
+        "task_id": "bounded_integer_sort",
+        "task_version": "0.1"
+      },
+      "sha256": {
+        "state": "known",
+        "value": "c5a6a21af2b9aba30c7c9ff66b35a4b13a7e65b75f0c8ac361186482604e315e"
+      },
+      "size_bytes": {
+        "state": "known",
+        "value": 10167
+      },
+      "study_id": "hero-operational-preparation",
+      "study_version": "prep-v1",
+      "supersedes": {
+        "reason": "Initial reconstructed preparation record; no prior empirical record exists.",
+        "state": "not_applicable"
+      },
+      "transformations": []
+    },
+    {
+      "activity": "core_construction",
+      "authorization_ref": {
+        "reason": "The user authorized local Step 10 preparation only. The concrete external action still needs a scoped authorization record.",
+        "state": "unknown"
+      },
+      "depends_on": [],
+      "lineage_refs": [],
+      "outstanding_requirements": [
+        "source_versions",
+        "scope_restrictions",
+        "storage_access",
+        "provenance_responsibility",
+        "core_role_specifications",
+        "constructor_lineage",
+        "review_route",
+        "responsible_operator",
+        "authorization_ref",
+        "time_window"
+      ],
+      "prerequisites": [
+        {
+          "basis": {
+            "state": "known",
+            "value": "The 17 acquired preparatory inputs are pinned in input_manifest.json; theory source pins and five scientific identifiers are preserved by registration-preparation."
+          },
+          "evidence_refs": [
+            {
+              "record_id": "source-01",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            },
+            {
+              "record_id": "source-02",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            }
+          ],
+          "mandatory": true,
+          "outcome": "unresolved",
+          "requirement_id": "source_versions"
+        },
+        {
+          "basis": {
+            "state": "known",
+            "value": "All external activities are not_performed. Preparation grants no external execution, contact, spend, publication or empirical claim. Missing resources remain explicit."
+          },
+          "evidence_refs": [
+            {
+              "record_id": "source-02",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            },
+            {
+              "record_id": "source-04",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            }
+          ],
+          "mandatory": true,
+          "outcome": "unresolved",
+          "requirement_id": "scope_restrictions"
+        },
+        {
+          "basis": {
+            "reason": "No operational controlled storage location, access roster, retention owner, or original-export custody process has been supplied.",
+            "state": "unknown"
+          },
+          "evidence_refs": [],
+          "mandatory": true,
+          "outcome": "unresolved",
+          "requirement_id": "storage_access"
+        },
+        {
+          "basis": {
+            "reason": "No responsible external operator or evidence custodian has accepted provenance duties; Codex prepared files only.",
+            "state": "unknown"
+          },
+          "evidence_refs": [],
+          "mandatory": true,
+          "outcome": "unresolved",
+          "requirement_id": "provenance_responsibility"
+        },
+        {
+          "basis": {
+            "state": "known",
+            "value": "The complete 32 role specifications, eight descriptors, 28 descriptor pairs, witnesses, and preservation quotas are supplied as plans. Actual core artifacts remain missing."
+          },
+          "evidence_refs": [
+            {
+              "record_id": "source-05",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            },
+            {
+              "record_id": "source-06",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            },
+            {
+              "record_id": "source-07",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            },
+            {
+              "record_id": "source-08",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            }
+          ],
+          "mandatory": true,
+          "outcome": "unresolved",
+          "requirement_id": "core_role_specifications"
+        },
+        {
+          "basis": {
+            "reason": "No actual constructor, artifact rights, source lineage, AI-assistance history or artifact bytes have been supplied.",
+            "state": "unknown"
+          },
+          "evidence_refs": [],
+          "mandatory": true,
+          "outcome": "unresolved",
+          "requirement_id": "constructor_lineage"
+        },
+        {
+          "basis": {
+            "state": "known",
+            "value": "Use two distinct qualified humans for every actual core artifact with original first passes and separately retained adjudication; the supplied blank forms do not fill reviewer positions."
+          },
+          "evidence_refs": [
+            {
+              "record_id": "source-12",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            },
+            {
+              "record_id": "source-14",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            },
+            {
+              "record_id": "source-15",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            }
+          ],
+          "mandatory": true,
+          "outcome": "unresolved",
+          "requirement_id": "review_route"
+        },
+        {
+          "basis": {
+            "reason": "No named external operator has been supplied or appointed.",
+            "state": "unknown"
+          },
+          "evidence_refs": [],
+          "mandatory": true,
+          "outcome": "unresolved",
+          "requirement_id": "responsible_operator"
+        },
+        {
+          "basis": {
+            "reason": "The user authorized local Step 10 preparation only. The concrete external action still needs a scoped authorization record.",
+            "state": "unknown"
+          },
+          "evidence_refs": [],
+          "mandatory": true,
+          "outcome": "unresolved",
+          "requirement_id": "authorization_ref"
+        },
+        {
+          "basis": {
+            "reason": "No operational start/end window has been supplied; ordering requirements are documented separately.",
+            "state": "unknown"
+          },
+          "evidence_refs": [],
+          "mandatory": true,
+          "outcome": "unresolved",
+          "requirement_id": "time_window"
+        }
+      ],
+      "record_id": "readiness-core_construction",
+      "record_type": "activity_readiness",
+      "record_version": "0.1",
+      "responsible_operator": {
+        "reason": "No named external operator has been supplied or appointed.",
+        "state": "unknown"
+      },
+      "revision": 1,
+      "scope": {
+        "claim_id": "hero-fixed-suite",
+        "task_id": "bounded_integer_sort",
+        "task_version": "0.1"
+      },
+      "state": "blocked",
+      "study_id": "hero-operational-preparation",
+      "study_version": "prep-v1",
+      "supersedes": {
+        "reason": "Initial reconstructed preparation record; no prior empirical record exists.",
+        "state": "not_applicable"
+      }
+    },
+    {
+      "activity": "external_validation",
+      "authorization_ref": {
+        "reason": "The user authorized local Step 10 preparation only. The concrete external action still needs a scoped authorization record.",
+        "state": "unknown"
+      },
+      "depends_on": [
+        {
+          "record_id": "readiness-core_construction",
+          "record_type": "activity_readiness",
+          "record_version": "0.1"
+        }
+      ],
+      "lineage_refs": [],
+      "outstanding_requirements": [
+        "source_versions",
+        "scope_restrictions",
+        "storage_access",
+        "provenance_responsibility",
+        "candidate_suite_identity",
+        "environment_containment",
+        "trusted_oracle",
+        "resource_limits",
+        "calibration_route",
+        "original_receipts",
+        "responsible_operator",
+        "authorization_ref",
+        "time_window"
+      ],
+      "prerequisites": [
+        {
+          "basis": {
+            "state": "known",
+            "value": "The 17 acquired preparatory inputs are pinned in input_manifest.json; theory source pins and five scientific identifiers are preserved by registration-preparation."
+          },
+          "evidence_refs": [
+            {
+              "record_id": "source-01",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            },
+            {
+              "record_id": "source-02",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            }
+          ],
+          "mandatory": true,
+          "outcome": "unresolved",
+          "requirement_id": "source_versions"
+        },
+        {
+          "basis": {
+            "state": "known",
+            "value": "All external activities are not_performed. Preparation grants no external execution, contact, spend, publication or empirical claim. Missing resources remain explicit."
+          },
+          "evidence_refs": [
+            {
+              "record_id": "source-02",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            },
+            {
+              "record_id": "source-04",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            }
+          ],
+          "mandatory": true,
+          "outcome": "unresolved",
+          "requirement_id": "scope_restrictions"
+        },
+        {
+          "basis": {
+            "reason": "No operational controlled storage location, access roster, retention owner, or original-export custody process has been supplied.",
+            "state": "unknown"
+          },
+          "evidence_refs": [],
+          "mandatory": true,
+          "outcome": "unresolved",
+          "requirement_id": "storage_access"
+        },
+        {
+          "basis": {
+            "reason": "No responsible external operator or evidence custodian has accepted provenance duties; Codex prepared files only.",
+            "state": "unknown"
+          },
+          "evidence_refs": [],
+          "mandatory": true,
+          "outcome": "unresolved",
+          "requirement_id": "provenance_responsibility"
+        },
+        {
+          "basis": {
+            "reason": "The full ordered 8995-test suite is supplied and pinned; actual candidate source hashes, interfaces and accepted source-to-suite associations remain missing.",
+            "state": "unknown"
+          },
+          "evidence_refs": [
+            {
+              "record_id": "source-10",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            },
+            {
+              "record_id": "source-09",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            },
+            {
+              "record_id": "source-07",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            }
+          ],
+          "mandatory": true,
+          "outcome": "unresolved",
+          "requirement_id": "candidate_suite_identity"
+        },
+        {
+          "basis": {
+            "reason": "No reviewed hostile-code execution environment, immutable image/dependencies, isolation assessment, or authorized environment operator is supplied.",
+            "state": "unknown"
+          },
+          "evidence_refs": [
+            {
+              "record_id": "source-02",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            }
+          ],
+          "mandatory": true,
+          "outcome": "unresolved",
+          "requirement_id": "environment_containment"
+        },
+        {
+          "basis": {
+            "reason": "No independently reviewed oracle implementation or oracle environment has been supplied. The adopted checks alone do not establish a trusted execution.",
+            "state": "unknown"
+          },
+          "evidence_refs": [
+            {
+              "record_id": "source-01",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            }
+          ],
+          "mandatory": true,
+          "outcome": "unresolved",
+          "requirement_id": "trusted_oracle"
+        },
+        {
+          "basis": {
+            "reason": "Proposed limits are documented but no measured, reviewed and enforced environment exists; feasibility for all eight correct families is untested.",
+            "state": "unknown"
+          },
+          "evidence_refs": [
+            {
+              "record_id": "source-02",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            }
+          ],
+          "mandatory": true,
+          "outcome": "unresolved",
+          "requirement_id": "resource_limits"
+        },
+        {
+          "basis": {
+            "state": "known",
+            "value": "Before accepting the validation envelope, establish actual full-suite feasibility for all eight correct families and separately scope trace resources; retain harness failures separately from decisive violations."
+          },
+          "evidence_refs": [
+            {
+              "record_id": "source-02",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            },
+            {
+              "record_id": "source-11",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            }
+          ],
+          "mandatory": true,
+          "outcome": "unresolved",
+          "requirement_id": "calibration_route"
+        },
+        {
+          "basis": {
+            "reason": "The passive validation-receipt specification is supplied, but no original external execution log, resource observations or termination receipt exists.",
+            "state": "unknown"
+          },
+          "evidence_refs": [
+            {
+              "record_id": "source-11",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            }
+          ],
+          "mandatory": true,
+          "outcome": "unresolved",
+          "requirement_id": "original_receipts"
+        },
+        {
+          "basis": {
+            "reason": "No named external operator has been supplied or appointed.",
+            "state": "unknown"
+          },
+          "evidence_refs": [],
+          "mandatory": true,
+          "outcome": "unresolved",
+          "requirement_id": "responsible_operator"
+        },
+        {
+          "basis": {
+            "reason": "The user authorized local Step 10 preparation only. The concrete external action still needs a scoped authorization record.",
+            "state": "unknown"
+          },
+          "evidence_refs": [],
+          "mandatory": true,
+          "outcome": "unresolved",
+          "requirement_id": "authorization_ref"
+        },
+        {
+          "basis": {
+            "reason": "No operational start/end window has been supplied; ordering requirements are documented separately.",
+            "state": "unknown"
+          },
+          "evidence_refs": [],
+          "mandatory": true,
+          "outcome": "unresolved",
+          "requirement_id": "time_window"
+        }
+      ],
+      "record_id": "readiness-external_validation",
+      "record_type": "activity_readiness",
+      "record_version": "0.1",
+      "responsible_operator": {
+        "reason": "No named external operator has been supplied or appointed.",
+        "state": "unknown"
+      },
+      "revision": 1,
+      "scope": {
+        "claim_id": "hero-fixed-suite",
+        "task_id": "bounded_integer_sort",
+        "task_version": "0.1"
+      },
+      "state": "blocked",
+      "study_id": "hero-operational-preparation",
+      "study_version": "prep-v1",
+      "supersedes": {
+        "reason": "Initial reconstructed preparation record; no prior empirical record exists.",
+        "state": "not_applicable"
+      }
+    },
+    {
+      "activity": "human_review",
+      "authorization_ref": {
+        "reason": "The user authorized local Step 10 preparation only. The concrete external action still needs a scoped authorization record.",
+        "state": "unknown"
+      },
+      "depends_on": [
+        {
+          "record_id": "readiness-core_construction",
+          "record_type": "activity_readiness",
+          "record_version": "0.1"
+        }
+      ],
+      "lineage_refs": [],
+      "outstanding_requirements": [
+        "source_versions",
+        "scope_restrictions",
+        "storage_access",
+        "provenance_responsibility",
+        "human_qualifications",
+        "identity_relationships",
+        "original_first_passes",
+        "exposure",
+        "communication_route",
+        "responsible_operator",
+        "authorization_ref",
+        "time_window"
+      ],
+      "prerequisites": [
+        {
+          "basis": {
+            "state": "known",
+            "value": "The 17 acquired preparatory inputs are pinned in input_manifest.json; theory source pins and five scientific identifiers are preserved by registration-preparation."
+          },
+          "evidence_refs": [
+            {
+              "record_id": "source-01",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            },
+            {
+              "record_id": "source-02",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            }
+          ],
+          "mandatory": true,
+          "outcome": "unresolved",
+          "requirement_id": "source_versions"
+        },
+        {
+          "basis": {
+            "state": "known",
+            "value": "All external activities are not_performed. Preparation grants no external execution, contact, spend, publication or empirical claim. Missing resources remain explicit."
+          },
+          "evidence_refs": [
+            {
+              "record_id": "source-02",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            },
+            {
+              "record_id": "source-04",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            }
+          ],
+          "mandatory": true,
+          "outcome": "unresolved",
+          "requirement_id": "scope_restrictions"
+        },
+        {
+          "basis": {
+            "reason": "No operational controlled storage location, access roster, retention owner, or original-export custody process has been supplied.",
+            "state": "unknown"
+          },
+          "evidence_refs": [],
+          "mandatory": true,
+          "outcome": "unresolved",
+          "requirement_id": "storage_access"
+        },
+        {
+          "basis": {
+            "reason": "No responsible external operator or evidence custodian has accepted provenance duties; Codex prepared files only.",
+            "state": "unknown"
+          },
+          "evidence_refs": [],
+          "mandatory": true,
+          "outcome": "unresolved",
+          "requirement_id": "provenance_responsibility"
+        },
+        {
+          "basis": {
+            "reason": "No real reviewers with relevant qualifications have been identified. Codex and other model agents do not satisfy human review.",
+            "state": "unknown"
+          },
+          "evidence_refs": [
+            {
+              "record_id": "source-15",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            }
+          ],
+          "mandatory": true,
+          "outcome": "unresolved",
+          "requirement_id": "human_qualifications"
+        },
+        {
+          "basis": {
+            "reason": "No qualified human identities, actual relationships, institutional/source connections or independence evidence have been supplied.",
+            "state": "unknown"
+          },
+          "evidence_refs": [],
+          "mandatory": true,
+          "outcome": "unresolved",
+          "requirement_id": "identity_relationships"
+        },
+        {
+          "basis": {
+            "reason": "No original human first passes exist. All 32 core artifacts require two distinct humans, at least 64 item-level initial records; blank forms are preparatory only.",
+            "state": "unknown"
+          },
+          "evidence_refs": [
+            {
+              "record_id": "source-12",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            },
+            {
+              "record_id": "source-14",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            }
+          ],
+          "mandatory": true,
+          "outcome": "unresolved",
+          "requirement_id": "original_first_passes"
+        },
+        {
+          "basis": {
+            "reason": "Actual human exposure, prior model/source familiarity and feasible blinding cannot be assessed before real people and artifacts are supplied.",
+            "state": "unknown"
+          },
+          "evidence_refs": [
+            {
+              "record_id": "source-15",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            }
+          ],
+          "mandatory": true,
+          "outcome": "unresolved",
+          "requirement_id": "exposure"
+        },
+        {
+          "basis": {
+            "reason": "No recipients, contact channel, consent/scope or authorization to contact anyone has been provided. Local export does not send material.",
+            "state": "unknown"
+          },
+          "evidence_refs": [],
+          "mandatory": true,
+          "outcome": "unresolved",
+          "requirement_id": "communication_route"
+        },
+        {
+          "basis": {
+            "reason": "No named external operator has been supplied or appointed.",
+            "state": "unknown"
+          },
+          "evidence_refs": [],
+          "mandatory": true,
+          "outcome": "unresolved",
+          "requirement_id": "responsible_operator"
+        },
+        {
+          "basis": {
+            "reason": "The user authorized local Step 10 preparation only. The concrete external action still needs a scoped authorization record.",
+            "state": "unknown"
+          },
+          "evidence_refs": [],
+          "mandatory": true,
+          "outcome": "unresolved",
+          "requirement_id": "authorization_ref"
+        },
+        {
+          "basis": {
+            "reason": "No operational start/end window has been supplied; ordering requirements are documented separately.",
+            "state": "unknown"
+          },
+          "evidence_refs": [],
+          "mandatory": true,
+          "outcome": "unresolved",
+          "requirement_id": "time_window"
+        }
+      ],
+      "record_id": "readiness-human_review",
+      "record_type": "activity_readiness",
+      "record_version": "0.1",
+      "responsible_operator": {
+        "reason": "No named external operator has been supplied or appointed.",
+        "state": "unknown"
+      },
+      "revision": 1,
+      "scope": {
+        "claim_id": "hero-fixed-suite",
+        "task_id": "bounded_integer_sort",
+        "task_version": "0.1"
+      },
+      "state": "blocked",
+      "study_id": "hero-operational-preparation",
+      "study_version": "prep-v1",
+      "supersedes": {
+        "reason": "Initial reconstructed preparation record; no prior empirical record exists.",
+        "state": "not_applicable"
+      }
+    },
+    {
+      "activity": "pilot_collection",
+      "authorization_ref": {
+        "reason": "The user authorized local Step 10 preparation only. The concrete external action still needs a scoped authorization record.",
+        "state": "unknown"
+      },
+      "depends_on": [
+        {
+          "record_id": "readiness-core_construction",
+          "record_type": "activity_readiness",
+          "record_version": "0.1"
+        },
+        {
+          "record_id": "readiness-external_validation",
+          "record_type": "activity_readiness",
+          "record_version": "0.1"
+        },
+        {
+          "record_id": "readiness-human_review",
+          "record_type": "activity_readiness",
+          "record_version": "0.1"
+        }
+      ],
+      "lineage_refs": [],
+      "outstanding_requirements": [
+        "source_versions",
+        "scope_restrictions",
+        "storage_access",
+        "provenance_responsibility",
+        "deployment_identity",
+        "control_cap_semantics",
+        "exact_messages_slots",
+        "retry_failure_stop_policy",
+        "original_exports",
+        "responsible_operator",
+        "authorization_ref",
+        "time_window",
+        "collection_limits"
+      ],
+      "prerequisites": [
+        {
+          "basis": {
+            "state": "known",
+            "value": "The 17 acquired preparatory inputs are pinned in input_manifest.json; theory source pins and five scientific identifiers are preserved by registration-preparation."
+          },
+          "evidence_refs": [
+            {
+              "record_id": "source-01",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            },
+            {
+              "record_id": "source-02",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            }
+          ],
+          "mandatory": true,
+          "outcome": "unresolved",
+          "requirement_id": "source_versions"
+        },
+        {
+          "basis": {
+            "state": "known",
+            "value": "All external activities are not_performed. Preparation grants no external execution, contact, spend, publication or empirical claim. Missing resources remain explicit."
+          },
+          "evidence_refs": [
+            {
+              "record_id": "source-02",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            },
+            {
+              "record_id": "source-04",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            }
+          ],
+          "mandatory": true,
+          "outcome": "unresolved",
+          "requirement_id": "scope_restrictions"
+        },
+        {
+          "basis": {
+            "reason": "No operational controlled storage location, access roster, retention owner, or original-export custody process has been supplied.",
+            "state": "unknown"
+          },
+          "evidence_refs": [],
+          "mandatory": true,
+          "outcome": "unresolved",
+          "requirement_id": "storage_access"
+        },
+        {
+          "basis": {
+            "reason": "No responsible external operator or evidence custodian has accepted provenance duties; Codex prepared files only.",
+            "state": "unknown"
+          },
+          "evidence_refs": [],
+          "mandatory": true,
+          "outcome": "unresolved",
+          "requirement_id": "provenance_responsibility"
+        },
+        {
+          "basis": {
+            "reason": "No provider, model/deployment version, access account or actual service environment has been selected or supplied.",
+            "state": "unknown"
+          },
+          "evidence_refs": [],
+          "mandatory": true,
+          "outcome": "unresolved",
+          "requirement_id": "deployment_identity"
+        },
+        {
+          "basis": {
+            "reason": "Requested A/B/C controls are specified, but provider support, effective temperature, cap units/reasoning treatment, wrapper knowledge and hidden controls remain unknown.",
+            "state": "unknown"
+          },
+          "evidence_refs": [
+            {
+              "record_id": "source-01",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            }
+          ],
+          "mandatory": true,
+          "outcome": "unresolved",
+          "requirement_id": "control_cap_semantics"
+        },
+        {
+          "basis": {
+            "state": "known",
+            "value": "Both materialized plans pin exact message files, request order and intended slots. A/B visible messages match within a block; C adds the approved variation clause. No messages were sent."
+          },
+          "evidence_refs": [
+            {
+              "record_id": "source-16",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            },
+            {
+              "record_id": "source-17",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            }
+          ],
+          "mandatory": true,
+          "outcome": "unresolved",
+          "requirement_id": "exact_messages_slots"
+        },
+        {
+          "basis": {
+            "state": "known",
+            "value": "One registered attempt per slot; disable automatic retries where possible, disclose hidden retry uncertainty, preserve every attempt and stop on unapproved costs, control drift or containment/export failures. Refusals, poor outputs and failures never authorize replacement samples."
+          },
+          "evidence_refs": [
+            {
+              "record_id": "source-01",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            },
+            {
+              "record_id": "source-02",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            }
+          ],
+          "mandatory": true,
+          "outcome": "unresolved",
+          "requirement_id": "retry_failure_stop_policy"
+        },
+        {
+          "basis": {
+            "reason": "No actual deployment has demonstrated exact sent-message and raw-response export with request/time/usage/control/failure identities. Original exports do not yet exist.",
+            "state": "unknown"
+          },
+          "evidence_refs": [],
+          "mandatory": true,
+          "outcome": "unresolved",
+          "requirement_id": "original_exports"
+        },
+        {
+          "basis": {
+            "reason": "No named external operator has been supplied or appointed.",
+            "state": "unknown"
+          },
+          "evidence_refs": [],
+          "mandatory": true,
+          "outcome": "unresolved",
+          "requirement_id": "responsible_operator"
+        },
+        {
+          "basis": {
+            "reason": "The user authorized local Step 10 preparation only. The concrete external action still needs a scoped authorization record.",
+            "state": "unknown"
+          },
+          "evidence_refs": [],
+          "mandatory": true,
+          "outcome": "unresolved",
+          "requirement_id": "authorization_ref"
+        },
+        {
+          "basis": {
+            "reason": "No operational start/end window has been supplied; ordering requirements are documented separately.",
+            "state": "unknown"
+          },
+          "evidence_refs": [],
+          "mandatory": true,
+          "outcome": "unresolved",
+          "requirement_id": "time_window"
+        },
+        {
+          "basis": {
+            "reason": "Provider, prices, currency and maximum expenditure are not supplied. Known design caps are recorded separately; unknown spending is not zero.",
+            "state": "unknown"
+          },
+          "evidence_refs": [],
+          "mandatory": true,
+          "outcome": "unresolved",
+          "requirement_id": "collection_limits"
+        }
+      ],
+      "record_id": "readiness-pilot_collection",
+      "record_type": "activity_readiness",
+      "record_version": "0.1",
+      "responsible_operator": {
+        "reason": "No named external operator has been supplied or appointed.",
+        "state": "unknown"
+      },
+      "revision": 1,
+      "scope": {
+        "claim_id": "hero-fixed-suite",
+        "task_id": "bounded_integer_sort",
+        "task_version": "0.1"
+      },
+      "state": "blocked",
+      "study_id": "hero-operational-preparation",
+      "study_version": "prep-v1",
+      "supersedes": {
+        "reason": "Initial reconstructed preparation record; no prior empirical record exists.",
+        "state": "not_applicable"
+      }
+    },
+    {
+      "activity": "main_collection",
+      "authorization_ref": {
+        "reason": "The user authorized local Step 10 preparation only. The concrete external action still needs a scoped authorization record.",
+        "state": "unknown"
+      },
+      "depends_on": [
+        {
+          "record_id": "readiness-core_construction",
+          "record_type": "activity_readiness",
+          "record_version": "0.1"
+        },
+        {
+          "record_id": "readiness-external_validation",
+          "record_type": "activity_readiness",
+          "record_version": "0.1"
+        },
+        {
+          "record_id": "readiness-human_review",
+          "record_type": "activity_readiness",
+          "record_version": "0.1"
+        }
+      ],
+      "lineage_refs": [],
+      "outstanding_requirements": [
+        "source_versions",
+        "scope_restrictions",
+        "storage_access",
+        "provenance_responsibility",
+        "deployment_identity",
+        "control_cap_semantics",
+        "exact_messages_slots",
+        "retry_failure_stop_policy",
+        "original_exports",
+        "registration_freeze",
+        "core_qualification",
+        "responsible_operator",
+        "authorization_ref",
+        "time_window",
+        "collection_limits"
+      ],
+      "prerequisites": [
+        {
+          "basis": {
+            "state": "known",
+            "value": "The 17 acquired preparatory inputs are pinned in input_manifest.json; theory source pins and five scientific identifiers are preserved by registration-preparation."
+          },
+          "evidence_refs": [
+            {
+              "record_id": "source-01",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            },
+            {
+              "record_id": "source-02",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            }
+          ],
+          "mandatory": true,
+          "outcome": "unresolved",
+          "requirement_id": "source_versions"
+        },
+        {
+          "basis": {
+            "state": "known",
+            "value": "All external activities are not_performed. Preparation grants no external execution, contact, spend, publication or empirical claim. Missing resources remain explicit."
+          },
+          "evidence_refs": [
+            {
+              "record_id": "source-02",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            },
+            {
+              "record_id": "source-04",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            }
+          ],
+          "mandatory": true,
+          "outcome": "unresolved",
+          "requirement_id": "scope_restrictions"
+        },
+        {
+          "basis": {
+            "reason": "No operational controlled storage location, access roster, retention owner, or original-export custody process has been supplied.",
+            "state": "unknown"
+          },
+          "evidence_refs": [],
+          "mandatory": true,
+          "outcome": "unresolved",
+          "requirement_id": "storage_access"
+        },
+        {
+          "basis": {
+            "reason": "No responsible external operator or evidence custodian has accepted provenance duties; Codex prepared files only.",
+            "state": "unknown"
+          },
+          "evidence_refs": [],
+          "mandatory": true,
+          "outcome": "unresolved",
+          "requirement_id": "provenance_responsibility"
+        },
+        {
+          "basis": {
+            "reason": "No provider, model/deployment version, access account or actual service environment has been selected or supplied.",
+            "state": "unknown"
+          },
+          "evidence_refs": [],
+          "mandatory": true,
+          "outcome": "unresolved",
+          "requirement_id": "deployment_identity"
+        },
+        {
+          "basis": {
+            "reason": "Requested A/B/C controls are specified, but provider support, effective temperature, cap units/reasoning treatment, wrapper knowledge and hidden controls remain unknown.",
+            "state": "unknown"
+          },
+          "evidence_refs": [
+            {
+              "record_id": "source-01",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            }
+          ],
+          "mandatory": true,
+          "outcome": "unresolved",
+          "requirement_id": "control_cap_semantics"
+        },
+        {
+          "basis": {
+            "state": "known",
+            "value": "Both materialized plans pin exact message files, request order and intended slots. A/B visible messages match within a block; C adds the approved variation clause. No messages were sent."
+          },
+          "evidence_refs": [
+            {
+              "record_id": "source-16",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            },
+            {
+              "record_id": "source-17",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            }
+          ],
+          "mandatory": true,
+          "outcome": "unresolved",
+          "requirement_id": "exact_messages_slots"
+        },
+        {
+          "basis": {
+            "state": "known",
+            "value": "One registered attempt per slot; disable automatic retries where possible, disclose hidden retry uncertainty, preserve every attempt and stop on unapproved costs, control drift or containment/export failures. Refusals, poor outputs and failures never authorize replacement samples."
+          },
+          "evidence_refs": [
+            {
+              "record_id": "source-01",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            },
+            {
+              "record_id": "source-02",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            }
+          ],
+          "mandatory": true,
+          "outcome": "unresolved",
+          "requirement_id": "retry_failure_stop_policy"
+        },
+        {
+          "basis": {
+            "reason": "No actual deployment has demonstrated exact sent-message and raw-response export with request/time/usage/control/failure identities. Original exports do not yet exist.",
+            "state": "unknown"
+          },
+          "evidence_refs": [],
+          "mandatory": true,
+          "outcome": "unresolved",
+          "requirement_id": "original_exports"
+        },
+        {
+          "basis": {
+            "reason": "No external prospective freeze or registration evidence exists. The preparation date and local hashes do not prove preregistration.",
+            "state": "unknown"
+          },
+          "evidence_refs": [],
+          "mandatory": true,
+          "outcome": "unresolved",
+          "requirement_id": "registration_freeze"
+        },
+        {
+          "basis": {
+            "reason": "No actual core artifact, independent first pass, functional execution, mechanism evidence, descriptor-pair finding or accepted qualification is supplied.",
+            "state": "unknown"
+          },
+          "evidence_refs": [
+            {
+              "record_id": "source-05",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            },
+            {
+              "record_id": "source-06",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            }
+          ],
+          "mandatory": true,
+          "outcome": "unresolved",
+          "requirement_id": "core_qualification"
+        },
+        {
+          "basis": {
+            "reason": "No named external operator has been supplied or appointed.",
+            "state": "unknown"
+          },
+          "evidence_refs": [],
+          "mandatory": true,
+          "outcome": "unresolved",
+          "requirement_id": "responsible_operator"
+        },
+        {
+          "basis": {
+            "reason": "The user authorized local Step 10 preparation only. The concrete external action still needs a scoped authorization record.",
+            "state": "unknown"
+          },
+          "evidence_refs": [],
+          "mandatory": true,
+          "outcome": "unresolved",
+          "requirement_id": "authorization_ref"
+        },
+        {
+          "basis": {
+            "reason": "No operational start/end window has been supplied; ordering requirements are documented separately.",
+            "state": "unknown"
+          },
+          "evidence_refs": [],
+          "mandatory": true,
+          "outcome": "unresolved",
+          "requirement_id": "time_window"
+        },
+        {
+          "basis": {
+            "reason": "Provider, prices, currency and maximum expenditure are not supplied. Known design caps are recorded separately; unknown spending is not zero.",
+            "state": "unknown"
+          },
+          "evidence_refs": [],
+          "mandatory": true,
+          "outcome": "unresolved",
+          "requirement_id": "collection_limits"
+        }
+      ],
+      "record_id": "readiness-main_collection",
+      "record_type": "activity_readiness",
+      "record_version": "0.1",
+      "responsible_operator": {
+        "reason": "No named external operator has been supplied or appointed.",
+        "state": "unknown"
+      },
+      "revision": 1,
+      "scope": {
+        "claim_id": "hero-fixed-suite",
+        "task_id": "bounded_integer_sort",
+        "task_version": "0.1"
+      },
+      "state": "blocked",
+      "study_id": "hero-operational-preparation",
+      "study_version": "prep-v1",
+      "supersedes": {
+        "reason": "Initial reconstructed preparation record; no prior empirical record exists.",
+        "state": "not_applicable"
+      }
+    },
+    {
+      "activity": "scientific_release",
+      "authorization_ref": {
+        "reason": "The user authorized local Step 10 preparation only. The concrete external action still needs a scoped authorization record.",
+        "state": "unknown"
+      },
+      "depends_on": [
+        {
+          "record_id": "readiness-core_construction",
+          "record_type": "activity_readiness",
+          "record_version": "0.1"
+        },
+        {
+          "record_id": "readiness-external_validation",
+          "record_type": "activity_readiness",
+          "record_version": "0.1"
+        },
+        {
+          "record_id": "readiness-human_review",
+          "record_type": "activity_readiness",
+          "record_version": "0.1"
+        },
+        {
+          "record_id": "readiness-main_collection",
+          "record_type": "activity_readiness",
+          "record_version": "0.1"
+        }
+      ],
+      "lineage_refs": [],
+      "outstanding_requirements": [
+        "source_versions",
+        "scope_restrictions",
+        "storage_access",
+        "provenance_responsibility",
+        "claim_evidence",
+        "ec_disclosures_currentness",
+        "correction_route",
+        "claim_reviewer",
+        "destination_scope",
+        "responsible_operator",
+        "authorization_ref",
+        "time_window"
+      ],
+      "prerequisites": [
+        {
+          "basis": {
+            "state": "known",
+            "value": "The 17 acquired preparatory inputs are pinned in input_manifest.json; theory source pins and five scientific identifiers are preserved by registration-preparation."
+          },
+          "evidence_refs": [
+            {
+              "record_id": "source-01",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            },
+            {
+              "record_id": "source-02",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            }
+          ],
+          "mandatory": true,
+          "outcome": "unresolved",
+          "requirement_id": "source_versions"
+        },
+        {
+          "basis": {
+            "state": "known",
+            "value": "All external activities are not_performed. Preparation grants no external execution, contact, spend, publication or empirical claim. Missing resources remain explicit."
+          },
+          "evidence_refs": [
+            {
+              "record_id": "source-02",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            },
+            {
+              "record_id": "source-04",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            }
+          ],
+          "mandatory": true,
+          "outcome": "unresolved",
+          "requirement_id": "scope_restrictions"
+        },
+        {
+          "basis": {
+            "reason": "No operational controlled storage location, access roster, retention owner, or original-export custody process has been supplied.",
+            "state": "unknown"
+          },
+          "evidence_refs": [],
+          "mandatory": true,
+          "outcome": "unresolved",
+          "requirement_id": "storage_access"
+        },
+        {
+          "basis": {
+            "reason": "No responsible external operator or evidence custodian has accepted provenance duties; Codex prepared files only.",
+            "state": "unknown"
+          },
+          "evidence_refs": [],
+          "mandatory": true,
+          "outcome": "unresolved",
+          "requirement_id": "provenance_responsibility"
+        },
+        {
+          "basis": {
+            "reason": "No qualified empirical main data or actual independent observations support P1/P5; software fixture correctness cannot supply these claims.",
+            "state": "unknown"
+          },
+          "evidence_refs": [],
+          "mandatory": true,
+          "outcome": "unresolved",
+          "requirement_id": "claim_evidence"
+        },
+        {
+          "basis": {
+            "reason": "All five EC conditions and ten reporting disclosures need scope-specific actual evidence; operational currentness, incidents and correction effectiveness remain unresolved.",
+            "state": "unknown"
+          },
+          "evidence_refs": [
+            {
+              "record_id": "source-03",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            }
+          ],
+          "mandatory": true,
+          "outcome": "unresolved",
+          "requirement_id": "ec_disclosures_currentness"
+        },
+        {
+          "basis": {
+            "state": "known",
+            "value": "Retain original inputs and review records; record corrections as new versions, invalidate affected dependent outputs, rerun affected qualification and review before any corrected claim."
+          },
+          "evidence_refs": [
+            {
+              "record_id": "source-02",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            }
+          ],
+          "mandatory": true,
+          "outcome": "unresolved",
+          "requirement_id": "correction_route"
+        },
+        {
+          "basis": {
+            "reason": "No qualified real claim reviewer or relationship/independence record is supplied.",
+            "state": "unknown"
+          },
+          "evidence_refs": [],
+          "mandatory": true,
+          "outcome": "unresolved",
+          "requirement_id": "claim_reviewer"
+        },
+        {
+          "basis": {
+            "reason": "No scientific publication destination, publishing account, time window or external publication authorization is supplied.",
+            "state": "unknown"
+          },
+          "evidence_refs": [],
+          "mandatory": true,
+          "outcome": "unresolved",
+          "requirement_id": "destination_scope"
+        },
+        {
+          "basis": {
+            "reason": "No named external operator has been supplied or appointed.",
+            "state": "unknown"
+          },
+          "evidence_refs": [],
+          "mandatory": true,
+          "outcome": "unresolved",
+          "requirement_id": "responsible_operator"
+        },
+        {
+          "basis": {
+            "reason": "The user authorized local Step 10 preparation only. The concrete external action still needs a scoped authorization record.",
+            "state": "unknown"
+          },
+          "evidence_refs": [],
+          "mandatory": true,
+          "outcome": "unresolved",
+          "requirement_id": "authorization_ref"
+        },
+        {
+          "basis": {
+            "reason": "No operational start/end window has been supplied; ordering requirements are documented separately.",
+            "state": "unknown"
+          },
+          "evidence_refs": [],
+          "mandatory": true,
+          "outcome": "unresolved",
+          "requirement_id": "time_window"
+        }
+      ],
+      "record_id": "readiness-scientific_release",
+      "record_type": "activity_readiness",
+      "record_version": "0.1",
+      "responsible_operator": {
+        "reason": "No named external operator has been supplied or appointed.",
+        "state": "unknown"
+      },
+      "revision": 1,
+      "scope": {
+        "claim_id": "hero-fixed-suite",
+        "task_id": "bounded_integer_sort",
+        "task_version": "0.1"
+      },
+      "state": "blocked",
+      "study_id": "hero-operational-preparation",
+      "study_version": "prep-v1",
+      "supersedes": {
+        "reason": "Initial reconstructed preparation record; no prior empirical record exists.",
+        "state": "not_applicable"
+      }
+    }
+  ],
+  "study_id": "hero-operational-preparation",
+  "study_schema_version": "0.1",
+  "study_version": "prep-v1"
+}

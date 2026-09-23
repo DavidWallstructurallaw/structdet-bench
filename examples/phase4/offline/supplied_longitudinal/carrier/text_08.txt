@@ -1,0 +1,44 @@
+{
+  "dependence_ref": {
+    "record_id": "panel-independence",
+    "record_type": "independence_assessment",
+    "record_version": "0.1"
+  },
+  "method": "longitudinal_trajectory_sensitivity_v1",
+  "panel_refs": [
+    {
+      "object_id": "D-P0",
+      "object_kind": "panel",
+      "object_version": "0.1"
+    },
+    {
+      "object_id": "D-P1",
+      "object_kind": "panel",
+      "object_version": "0.1"
+    }
+  ],
+  "plan_id": "hero-panel-sensitivity",
+  "plan_version": "0.1",
+  "registration_ref": {
+    "record_id": "decline-fit-reg",
+    "record_type": "preregistration",
+    "record_version": "0.1"
+  },
+  "replicates": 2000,
+  "request_ref": {
+    "object_id": "decline-fit",
+    "object_kind": "shl_request",
+    "object_version": "0.1"
+  },
+  "request_sha256": "95fe74bb87ea9e9b1ccbc2cdd950f584b32a27df9407e95c03ab96d9417d9591",
+  "schema_version": "0.1",
+  "seed": 20260919,
+  "trajectory_refs": [
+    {
+      "object_id": "D-path",
+      "object_kind": "trajectory",
+      "object_version": "0.1"
+    }
+  ],
+  "unit": "probe_panel"
+}

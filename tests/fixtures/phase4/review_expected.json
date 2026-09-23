@@ -1,0 +1,27 @@
+{
+  "fixture_only": true,
+  "derivation": "Three supplied roles; two paired roles and one singleton. One of two pairs agrees in mechanism and validity. All 32 planned roles and 64 initial slots remain denominators.",
+  "initial_agreement": {
+    "expected_core_items": 32,
+    "expected_initial_slots": 64,
+    "supplied_core_items": 3,
+    "missing_core_items": 29,
+    "initial_records": 5,
+    "occupied_initial_slots": 5,
+    "missing_initial_slots": 59,
+    "paired_items": 2,
+    "unpaired_items": 30,
+    "record_consistent_pairs": 2,
+    "mechanism_agreements": 1,
+    "mechanism_disagreements": 1,
+    "resolved_class_agreements": 1,
+    "unresolved_category_agreements": 0,
+    "unclassified_category_agreements": 0,
+    "validity_agreements": 1,
+    "validity_disagreements": 1,
+    "joint_agreements": 1,
+    "pair_denominator": 2,
+    "planned_pair_denominator": 32,
+    "agreement_estimated": false
+  }
+}

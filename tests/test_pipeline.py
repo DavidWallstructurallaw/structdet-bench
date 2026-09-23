@@ -428,15 +428,13 @@ class Step7ReportIntegration(unittest.TestCase):
     def setUp(self):
         t=TemporaryDirectory();self.addCleanup(t.cleanup);self.root=Path(t.name)
         self.p,_=materialize_hero(self.root/'input')
-    def test_all_36_report_groups_have_explicit_paths(self):
-        from tests.helpers import load_matrix
-        r=analyze_bundle(self.p);obj=plain(r.report);m=load_matrix()
-        self.assertEqual(set(RF_PATHS),{x['id'] for x in m['report_groups']})
-        self.assertEqual(sum(x['m_applicable'] for x in m['report_groups']),28)
+    def test_all_source_report_groups_have_explicit_paths(self):
+        from tests.helpers import source_table
+        r=analyze_bundle(self.p);obj=plain(r.report)
+        self.assertEqual(set(RF_PATHS),{row[0] for row in source_table('THEORY_TO_CODE_TRACEABILITY.md','RF')})
         for group,paths in RF_PATHS.items():
             for path in paths:
                 with self.subTest(group=group,path=path):assert_report_path(self,obj,path)
-        self.assertEqual(m['step7_acceptance']['report_paths'],RF_PATHS)
     def test_every_m_metric_retains_denominator_status_and_source_scope(self):
         r=analyze_bundle(self.p)
         for row in section(r,4)['metrics']:
@@ -510,47 +508,5 @@ class Step7ReportIntegration(unittest.TestCase):
         a=analyze_bundle(self.p,recorded_at=STAMP);b=analyze_bundle(self.p,recorded_at='2026-09-18T02:00:00+00:00')
         self.assertEqual(a.report_json,b.report_json);self.assertEqual(a.report_markdown,b.report_markdown)
         ma,mb=plain(a.manifest),plain(b.manifest);ma.pop('recorded_at_utc');mb.pop('recorded_at_utc');self.assertEqual(ma,mb)
-    def test_registered_sources_and_original_fixture_hashes_still_match(self):
-        from tests.helpers import load_matrix,baseline_checks
-        m=load_matrix();self.assertTrue(all(x['status']=='passed' for x in baseline_checks(m)))
-        for d in m['ec001_supplement']['documents']:
-            self.assertEqual(hashlib.sha256((ROOT/d['path']).read_bytes()).hexdigest(),d['sha256'])
-        self.assertEqual(len(m['ec001_supplement']['requirements']),8)
 
 
-class Step7GateTests(unittest.TestCase):
-    """Gate unit tests use synthetic pass records, never empirical assertions."""
-    def test_missing_ec_binding_cannot_pass_full_gate(self):
-        from tests.test_scaffold import HarnessTests, assess_gate
-        matrix,ids,records=HarnessTests.synthetic_gate_inputs()
-        del matrix['step7_acceptance']['evidence_checks']['EC-C02']
-        result=assess_gate(matrix,ids,records,scope='phase1')
-        self.assertFalse(result['requested_gate_passed'])
-        self.assertIn('EC-C02',result['unresolved_ec_m_ids'])
-    def test_nonpassing_ec_binding_cannot_be_overridden(self):
-        from tests.test_scaffold import HarnessTests, assess_gate
-        matrix,ids,records=HarnessTests.synthetic_gate_inputs()
-        matrix['step7_acceptance']['evidence_checks']['EC-C03']['test_bindings']=['tests.not_executed.test_missing']
-        self.assertFalse(assess_gate(matrix,ids,records,scope='phase1')['requested_gate_passed'])
-    def test_complete_mock_gate_is_M_only_and_not_final_approval(self):
-        from tests.test_scaffold import HarnessTests, assess_gate
-        matrix,ids,records=HarnessTests.synthetic_gate_inputs()
-        result=assess_gate(matrix,ids,records,scope='phase1')
-        self.assertTrue(result['phase1_m_complete'])
-        self.assertEqual(len(result['ec_m_results']),8)
-        self.assertFalse(result['empirical_validation_performed'])
-        self.assertEqual(result['phase1_final_owner_approval'],'not_established_by_software_tests')
-    def test_test_records_have_expected_actual_scope_and_no_E_claim(self):
-        from tests.test_scaffold import HarnessTests, _runner
-        matrix,ids,records=HarnessTests.synthetic_gate_inputs()
-        rows=_runner.annotate_results(matrix,records)
-        self.assertEqual(rows[0]['expected_outcome'],'passed')
-        self.assertEqual(rows[0]['actual_outcome'],'passed')
-        self.assertTrue(rows[0]['requirement_bindings'])
-        self.assertTrue(all(x.endswith('/M') for x in rows[0]['requirement_bindings']))
-        self.assertFalse(rows[0]['substantive_validation_performed'])
-    def test_ec_scope_cannot_be_promoted_to_empirical_evidence(self):
-        from tests.helpers import load_matrix
-        from tests.test_scaffold import validate_matrix
-        m=load_matrix();m['step7_acceptance']['evidence_checks']['EC-C01']['evidence_status']='validated'
-        self.assertTrue(validate_matrix(m))

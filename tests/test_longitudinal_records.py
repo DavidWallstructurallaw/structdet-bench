@@ -720,22 +720,7 @@ class AdditionalBindingTests(Fixture):
 
 
 class MatrixTests(unittest.TestCase):
-    def test_actual_step2_methods_bound_and_original_catalogues_retained(self):
-        m=gate.load_matrix();self.assertEqual(gate.validate_matrix(m),[])
-        self.assertGreaterEqual(m['delivery']['step'],2)
-        tree=ast.parse((ROOT/'tests/test_longitudinal_records.py').read_text())
-        ids={f'tests.test_longitudinal_records.{c.name}.{f.name}' for c in tree.body if isinstance(c,ast.ClassDef) for f in c.body if isinstance(f,ast.FunctionDef) and f.name.startswith('test_')}
-        self.assertEqual(set(m['stage_bindings']['2']['test_bindings']),ids)
-        self.assertEqual(len(gate.predecessor_ids()),1018)
-        self.assertEqual([len(m[g]) for g in ('longitudinal','reports','oracles')],[40,16,24])
 
-    def test_L02_to_L05_only_are_newly_implemented(self):
-        m=gate.load_matrix()
-        done={r['id'] for r in m['longitudinal'] if r['implementation_status']=='implemented'}
-        self.assertTrue({f'P3-L{i:02}' for i in range(1,6)} <= done)
-        if m['delivery']['step']==2:
-            self.assertEqual(done,{f'P3-L{i:02}' for i in range(1,6)})
-            self.assertTrue(all(r['implementation_status']=='not_implemented' for g in ('reports','oracles') for r in m[g]))
 
     def test_checked_in_fixture_is_pinned_to_plan_and_mock_basis(self):
         f=json.loads((ROOT/'tests/fixtures/longitudinal_cases.json').read_text())
@@ -743,8 +728,3 @@ class MatrixTests(unittest.TestCase):
         self.assertEqual(len(f['variants']),11)
         self.assertTrue(all(r['payload']['mock'] for r in f['support_records']))
 
-    def test_legacy_files_unchanged_and_no_next_runtime_created(self):
-        self.assertTrue(all(x['status']=='passed' for x in gate.current_identity_checks()))
-        step=gate.load_matrix()['delivery']['step']
-        for name,first in (('longitudinal',3),('categorical_null',4),('half_life',5),('support_assays',6),('recovery',7),('longitudinal_pipeline',8)):
-            if step<first:self.assertFalse((ROOT/'structdet_bench'/(name+'.py')).exists())

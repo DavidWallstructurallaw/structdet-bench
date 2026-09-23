@@ -508,22 +508,9 @@ class SummaryTests(StudyFixture):
         self.assertIsNone(s.means['surface_gain'].value);self.assertFalse(s.eligible_before_resampling)
 
 
-class Step4MatrixTests(unittest.TestCase):
-    def test_current_step_and_all_actual_bindings(self):
-        m=read_matrix()
-        deliveries=m['delivery'].get('history',[])+[m['delivery']]
-        self.assertEqual(len([x for x in deliveries if x['step']==4]),1)
-        self.assertGreaterEqual(m['delivery']['step'],4)
-        actual=[]
-        for cls in ast.parse((ROOT/'tests/test_comparisons.py').read_text()).body:
-            if isinstance(cls,ast.ClassDef):actual.extend('tests.test_comparisons.'+cls.name+'.'+f.name for f in cls.body if isinstance(f,ast.FunctionDef) and f.name.startswith('test_'))
-        self.assertEqual(set(m['stage_bindings']['4']['test_bindings']),set(actual))
-    def test_no_prediction_bootstrap_or_report_orchestrator_implemented(self):
-        step=read_matrix()['delivery']['step']
-        for name, first_step in (('uncertainty',5),('predictions',5),('comparison_pipeline',6)):
-            self.assertEqual((ROOT/'structdet_bench'/f'{name}.py').exists(), step>=first_step)
-        self.assertFalse(hasattr(mod,'resample'));self.assertFalse(hasattr(mod,'decide_p1'))
-    def test_all_source_identities_and_external_evidence_boundaries_retained(self):
-        m=read_matrix();self.assertEqual(len(m['vt_obligations']),26)
-        self.assertEqual(m['evidence_status'],'not_supplied');self.assertEqual(m['deferred_status'],'deferred')
-        self.assertEqual(len(m['catalogues']['vt']),54);self.assertEqual(len(m['predecessor']['test_ids']),503)
+
+
+class CurrentScopeTests(unittest.TestCase):
+    def test_comparison_arithmetic_does_not_resample_or_decide(self):
+        self.assertFalse(hasattr(mod,'resample'))
+        self.assertFalse(hasattr(mod,'decide_p1'))

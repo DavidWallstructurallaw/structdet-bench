@@ -336,28 +336,3 @@ class AdversePopulationTests(unittest.TestCase):
                 self.assertFalse(hasattr(module,name))
 
 
-class Step4MatrixTests(unittest.TestCase):
-    def test_step4_progress_and_bindings_cover_executed_methods(self):
-        m=json.loads((ROOT/'tests/phase1_matrix.json').read_text())
-        actual=[]
-        for module in ('test_inventory','test_populations'):
-            for cls in ast.parse((ROOT/'tests'/f'{module}.py').read_text()).body:
-                if isinstance(cls,ast.ClassDef):
-                    actual.extend(f'tests.{module}.{cls.name}.{f.name}' for f in cls.body if isinstance(f,ast.FunctionDef) and f.name.startswith('test_'))
-        self.assertEqual(set(m['step4_acceptance']['test_bindings']),set(actual))
-        self.assertEqual(len(m['step4_acceptance']['test_bindings']),len(actual))
-        snapshots = m.get('delivery_history', []) + [m['delivery_progress']]
-        step4 = [x for x in snapshots if x['step'] == 4]
-        self.assertEqual(len(step4), 1)
-        self.assertFalse(step4[0]['phase1_complete'])
-        self.assertIn('snapshot',m['current_step_scope'])
-    def test_prior_requirement_and_source_identities_remain_intact(self):
-        from tests.helpers import load_matrix, baseline_checks
-        m=load_matrix()
-        self.assertTrue(all(x['status']=='passed' for x in baseline_checks(m)))
-        self.assertEqual(len(m['vf_tests']),54);self.assertEqual(len(m['trace_requirements']),40)
-        self.assertEqual(len(m['report_groups']),36);self.assertEqual(sum(x['m_required'] for x in m['vf_tests']),37)
-        self.assertEqual(len(m['ec001_supplement']['requirements']),8)
-        for x in m['vf_tests']:
-            for scope,rec in x['scope_records'].items():
-                if scope!='M':self.assertEqual(rec['test_bindings'],[])

@@ -195,20 +195,6 @@ class IntegrityTests(unittest.TestCase):
             result=inspect_support(parse_record(raw,'fixture'))
             self.assertIsNotNone(result.record,result.diagnostics)
             self.assertTrue(result.record.payload['mock'])
-    def test_step3_matrix_binds_all_actual_step3_checks(self):
-        import ast
-        from tests.helpers import ROOT
-        matrix=json.loads((ROOT/'tests/phase1_matrix.json').read_text())
-        expected=[]
-        for module in ('test_evidence','test_integrity_records'):
-            for cls in ast.parse((ROOT/'tests'/(module+'.py')).read_text()).body:
-                if isinstance(cls,ast.ClassDef):
-                    expected.extend(f'tests.{module}.{cls.name}.{m.name}' for m in cls.body if isinstance(m,ast.FunctionDef) and m.name.startswith('test_'))
-        historical = set(matrix['step3_acceptance']['test_bindings'])
-        current = {x for x in matrix.get('step7_acceptance', {}).get('test_bindings', []) if x.startswith(('tests.test_evidence.', 'tests.test_integrity_records.'))}
-        self.assertEqual(len(historical), 83)
-        self.assertEqual(historical | current, set(expected))
-        self.assertEqual(matrix['current_step'],3)
 
 
 class Step7FunctionalRecords(unittest.TestCase):

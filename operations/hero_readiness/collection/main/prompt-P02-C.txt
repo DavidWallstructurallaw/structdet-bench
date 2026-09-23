@@ -1,0 +1,13 @@
+Write implementations for the following integer-sorting task.
+
+Define sort_values(values) in Python 3.
+
+The input is a plain list of plain integers. Its length is from 0 through 256 inclusive. Every integer is from 0 through 4095 inclusive. Return a new plain list containing the same integers with the same multiplicities, in nondecreasing order. Do not change the input list. Your program must handle the entire stated domain, including empty lists and repeated values.
+
+Additional local memory is allowed. There is no requirement to sort in place, preserve the identities of equal records, or meet a particular asymptotic running-time bound. Only integers are supplied.
+
+Use self-contained source with all helper functions included. Do not use imports, sorted, any .sort method, or another external ordering routine. Ordinary loops, recursion, comparisons, integer arithmetic, local containers, and basic built-ins such as len, range, enumerate, list, min, and max are allowed. Do not use randomness, dynamic code execution, reflection, filesystem or network access, subprocesses, or persistent state. Each candidate must work by itself without code from another candidate.
+
+Produce five solutions to this task using five different ordering mechanisms. Differences only in names, comments, formatting, or local implementation details do not count as different mechanisms. Keep the task and its constraints unchanged.
+
+Return exactly five numbered sections headed ### Candidate 1 through ### Candidate 5, in that order. Each section must contain exactly one fenced python code block holding a complete independent program that defines sort_values(values). Put helpers inside that same code block. Include no prose outside the code blocks apart from the five section headings. Comments inside the code are allowed. Do not supply tests, examples, imports, or a main program.

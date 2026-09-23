@@ -1,0 +1,233 @@
+{
+  "all_actual_model_calls": 0,
+  "assay": {
+    "all_success_upper_tail": [
+      1,
+      4096
+    ],
+    "alpha": [
+      1,
+      8
+    ],
+    "assay_ids": [
+      "pre",
+      "post"
+    ],
+    "delta": [
+      1,
+      2048
+    ],
+    "joint_cells_J": 128,
+    "members_per_assay": 8,
+    "post_below": [
+      "SORT-RADIX"
+    ],
+    "post_present": [
+      "SORT-ADJ",
+      "SORT-INS",
+      "SORT-SEL",
+      "SORT-MERGE",
+      "SORT-PIVOT",
+      "SORT-HEAP",
+      "SORT-COUNT"
+    ],
+    "pre_below": [
+      "SORT-COUNT",
+      "SORT-RADIX"
+    ],
+    "pre_present": [
+      "SORT-ADJ",
+      "SORT-INS",
+      "SORT-SEL",
+      "SORT-MERGE",
+      "SORT-PIVOT",
+      "SORT-HEAP"
+    ],
+    "tau": [
+      1,
+      2
+    ],
+    "trials_per_member": 12,
+    "zero_success_lower_tail": [
+      1,
+      4096
+    ]
+  },
+  "class_ids": [
+    "SORT-ADJ",
+    "SORT-INS",
+    "SORT-SEL",
+    "SORT-MERGE",
+    "SORT-PIVOT",
+    "SORT-HEAP",
+    "SORT-COUNT",
+    "SORT-RADIX"
+  ],
+  "data_role": "fixture",
+  "decline": {
+    "D": [
+      [
+        1,
+        2
+      ],
+      [
+        135,
+        512
+      ],
+      [
+        15,
+        128
+      ],
+      [
+        31,
+        512
+      ]
+    ],
+    "anchored_slope_decimal": "-0.70536708218137894969944401330296470872556659060643963154488220411959762054699256",
+    "counts_per_panel": [
+      [
+        16,
+        16
+      ],
+      [
+        27,
+        5
+      ],
+      [
+        30,
+        2
+      ],
+      [
+        31,
+        1
+      ]
+    ],
+    "empirical_SHL_decimal": "0.98267582662967053527472315982008745828381272641425676429566051631389527457171916",
+    "local_SHL_decimal": "0.98496170657047738552562108201241637054277921777480726491107497217296092105882274",
+    "max_abs_log_residual_decimal": "0.06546441614024592314808208563131691758963854346116367569617302055911051215291948",
+    "panels": [
+      "D-P0",
+      "D-P1"
+    ],
+    "registered_residual_criterion": "0.15",
+    "request_id": "decline-fit",
+    "rounds": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "sensitivity_interval_decimal": [
+      "0.98267582662967053527472315982008745828381272641425676429566051631389527457171916",
+      "0.98267582662967053527472315982008745828381272641425676429566051631389527457171916"
+    ],
+    "sensitivity_replicates": 2000,
+    "state_ids": [
+      "D-S0",
+      "D-S1",
+      "D-S2",
+      "D-S3"
+    ],
+    "training_lineage_variability_estimated": false,
+    "trajectory_id": "D-path"
+  },
+  "derivation": "Integer count tables, exact set intersection, inclusive binomial upper tail and strict lower tail, and independent 80-digit Decimal anchored log regression. Never a production-report snapshot.",
+  "file_roles": {
+    "prompts.json": "Exact original registry definitions plus actual passive protocol prompt strings in extensions.protocol_prompts",
+    "text_01.txt through text_07.txt": "Seven fixed passive mechanism illustrations; all outputs and labels remain fixtures",
+    "text_08.txt": "Strict passive sensitivity-plan JSON; never a realization/program body"
+  },
+  "fixture_id": "HERO-RECURSIVE-01",
+  "mock": true,
+  "plan_sha256": "1ca74fbba06bea44f2b656b3f4e6b46b0c6747cf13640c3f1ea29c69ef3d6352",
+  "recovery": {
+    "actual_recovery_established": false,
+    "confirmed_recovered": [
+      "SORT-COUNT"
+    ],
+    "denominator": 2,
+    "episode_id": "recover",
+    "evidence_status": "fixture_only",
+    "exact_ERR": [
+      1,
+      2
+    ],
+    "missing_classes": [
+      "SORT-COUNT",
+      "SORT-RADIX"
+    ],
+    "numerator": 1,
+    "status": "available"
+  },
+  "schema_version": "0.1",
+  "stages": {
+    "exposure_retention": [
+      1,
+      1
+    ],
+    "model_expression_established": false,
+    "roles": [
+      "generated_candidates",
+      "post_selection",
+      "training_exposure"
+    ],
+    "selection_retention": [
+      2,
+      3
+    ],
+    "state_ids": [
+      "C-S0",
+      "C-S1",
+      "C-S2"
+    ],
+    "support_sizes": [
+      3,
+      2,
+      2
+    ]
+  },
+  "substantive_validation_performed": false,
+  "tail": {
+    "D": [
+      [
+        5,
+        8
+      ],
+      [
+        3,
+        8
+      ],
+      null,
+      [
+        5,
+        8
+      ]
+    ],
+    "class_id": "SORT-SEL",
+    "counts": [
+      1,
+      0,
+      null,
+      1
+    ],
+    "fork_child": "T-fork",
+    "loss_fraction": [
+      1,
+      3
+    ],
+    "loss_pair": [
+      "T-S0",
+      "T-S1"
+    ],
+    "missing_state": "T-S2",
+    "reappearance_state": "T-S3",
+    "request_id": "T-obs",
+    "shared_parent": "T-S1",
+    "state_ids": [
+      "T-S0",
+      "T-S1",
+      "T-S2",
+      "T-S3"
+    ]
+  }
+}

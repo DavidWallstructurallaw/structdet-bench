@@ -12,7 +12,7 @@ StructDet-Bench uses a mixed-license repository structure so that software can b
 | Theory publications | Retain the license stated in each publication |
 | Third-party material | Retains its original license |
 
-The software asset class is assigned Apache License 2.0. The corresponding root `LICENSE` and full license texts remain to be transferred in the initial repository synchronization; see `BASELINE_UPDATE_EC_001.md`. This assignment does not relicense specification documents, theory publications, or third-party material.
+The software asset class is assigned Apache License 2.0. The corresponding root `LICENSE` and full texts in `LICENSES/Apache-2.0.txt` and `LICENSES/CC-BY-4.0.txt` are included. This assignment does not relicense specification documents, theory publications, or third-party material.
 
 ## Specifications and documentation
 

@@ -1,0 +1,13 @@
+# FIXTURE ONLY. Passive adjacent-sweep illustration; never executed by the analyzer.
+# Mock held-out evaluation inputs include [], [4095, 0, 4095], and [3, 2, 1].
+def sort_values(values):
+    result = list(values)
+    for end in range(len(result)-1, 0, -1):
+        changed = False
+        for j in range(end):
+            if result[j] > result[j+1]:
+                result[j], result[j+1] = result[j+1], result[j]
+                changed = True
+        if not changed:
+            break
+    return result

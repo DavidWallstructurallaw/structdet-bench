@@ -1,0 +1,24 @@
+{
+  "kind": "evidence_qualification",
+  "version": "0.1",
+  "packet_id": "submission-qualification",
+  "study_id": "fixture-study",
+  "study_version": "v1",
+  "fixture": true,
+  "pins": {
+    "task_id": "bounded_integer_sort",
+    "task_version": "0.1",
+    "analytic_resolution_id": "sorting_mechanism_family",
+    "analytic_resolution_version": "0.1",
+    "structural_schema_id": "sorting_mechanism_partition",
+    "structural_schema_version": "0.1",
+    "reference_registry_id": "sorting_reference_eight",
+    "reference_registry_version": "0.1",
+    "validity_rubric_ref": "bounded_integer_sort_validity_v1"
+  },
+  "evidence": [],
+  "qualifications": [],
+  "independence": [],
+  "audit_flags": [],
+  "claims": []
+}

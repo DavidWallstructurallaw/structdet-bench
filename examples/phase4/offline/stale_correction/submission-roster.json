@@ -1,0 +1,99 @@
+{
+  "version": "0.1",
+  "kind": "reviewer_roster",
+  "study_id": "fixture-study",
+  "study_version": "v1",
+  "fixture": true,
+  "reviewers": [
+    {
+      "reviewer_id": "fixture-reviewer-1",
+      "person_key": {
+        "state": "known",
+        "value": "fixture-person-1"
+      },
+      "entity_kind": "human",
+      "identity_evidence": {
+        "state": "known",
+        "value": "Stipulated synthetic identity 1; no real person."
+      },
+      "qualifications": {
+        "state": "known",
+        "value": "Stipulated sorting-domain qualification; no actual credential."
+      },
+      "qualification_status": "qualified",
+      "relationships": {
+        "state": "known",
+        "value": "Stipulated no relationship to candidate source."
+      },
+      "relationship_status": "independent",
+      "exposure": {
+        "state": "known",
+        "value": "Synthetic first-pass exposure record."
+      },
+      "machine_assistance": {
+        "state": "known",
+        "value": "All fixture contents were authored with AI; no actual human review."
+      }
+    },
+    {
+      "reviewer_id": "fixture-reviewer-2",
+      "person_key": {
+        "state": "known",
+        "value": "fixture-person-2"
+      },
+      "entity_kind": "human",
+      "identity_evidence": {
+        "state": "known",
+        "value": "Stipulated synthetic identity 2; no real person."
+      },
+      "qualifications": {
+        "state": "known",
+        "value": "Stipulated sorting-domain qualification; no actual credential."
+      },
+      "qualification_status": "qualified",
+      "relationships": {
+        "state": "known",
+        "value": "Stipulated no relationship to candidate source."
+      },
+      "relationship_status": "independent",
+      "exposure": {
+        "state": "known",
+        "value": "Synthetic first-pass exposure record."
+      },
+      "machine_assistance": {
+        "state": "known",
+        "value": "All fixture contents were authored with AI; no actual human review."
+      }
+    },
+    {
+      "reviewer_id": "fixture-reviewer-3",
+      "person_key": {
+        "state": "known",
+        "value": "fixture-person-3"
+      },
+      "entity_kind": "human",
+      "identity_evidence": {
+        "state": "known",
+        "value": "Stipulated synthetic identity 3; no real person."
+      },
+      "qualifications": {
+        "state": "known",
+        "value": "Stipulated sorting-domain qualification; no actual credential."
+      },
+      "qualification_status": "expert",
+      "relationships": {
+        "state": "known",
+        "value": "Stipulated no relationship to candidate source."
+      },
+      "relationship_status": "independent",
+      "exposure": {
+        "state": "known",
+        "value": "Synthetic first-pass exposure record."
+      },
+      "machine_assistance": {
+        "state": "known",
+        "value": "All fixture contents were authored with AI; no actual human review."
+      }
+    }
+  ]
+}

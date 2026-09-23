@@ -1,0 +1,2694 @@
+{
+  "study_schema_version": "0.1",
+  "study_id": "fixture-study",
+  "study_version": "v1",
+  "prior_study_versions": [],
+  "evidence_policy": "fixture_only",
+  "material_role": "fixture",
+  "packet_inventory": [
+    {
+      "packet_id": "evidence-notes",
+      "purpose": "artifact",
+      "location": {
+        "state": "known",
+        "value": {
+          "kind": "local",
+          "path": "evidence-notes.txt"
+        }
+      },
+      "sha256": {
+        "state": "known",
+        "value": "a70a5c08dd5db92b23853d00b96d508f74a37207d75a177b606b7eb9ed4473d2"
+      },
+      "size_bytes": {
+        "state": "known",
+        "value": 51
+      },
+      "record_count": {
+        "state": "known",
+        "value": 0
+      },
+      "format": "bytes",
+      "verification": "unchecked",
+      "verification_ref": {
+        "state": "unknown",
+        "reason": "Synthetic unknown; no external operation is authenticated."
+      }
+    },
+    {
+      "packet_id": "prompt-call-P01-A-1",
+      "purpose": "artifact",
+      "location": {
+        "state": "known",
+        "value": {
+          "kind": "local",
+          "path": "prompt-call-P01-A-1.txt"
+        }
+      },
+      "sha256": {
+        "state": "known",
+        "value": "005ad5a432d4e0867b60c43d4bd73279fe2c9e13aa441d82a7100036074ef081"
+      },
+      "size_bytes": {
+        "state": "known",
+        "value": 1668
+      },
+      "record_count": {
+        "state": "known",
+        "value": 0
+      },
+      "format": "bytes",
+      "verification": "unchecked",
+      "verification_ref": {
+        "state": "unknown",
+        "reason": "Synthetic unknown; no external operation is authenticated."
+      }
+    },
+    {
+      "packet_id": "response-call-P01-A-1",
+      "purpose": "artifact",
+      "location": {
+        "state": "known",
+        "value": {
+          "kind": "local",
+          "path": "response-call-P01-A-1.txt"
+        }
+      },
+      "sha256": {
+        "state": "known",
+        "value": "9ebd19d0c8a5b335776d9f7dfcb0bffca081268118f4c27b1225e503978b6ce1"
+      },
+      "size_bytes": {
+        "state": "known",
+        "value": 315
+      },
+      "record_count": {
+        "state": "known",
+        "value": 0
+      },
+      "format": "bytes",
+      "verification": "unchecked",
+      "verification_ref": {
+        "state": "unknown",
+        "reason": "Synthetic unknown; no external operation is authenticated."
+      }
+    },
+    {
+      "packet_id": "candidate-P01-A-1-1",
+      "purpose": "artifact",
+      "location": {
+        "state": "known",
+        "value": {
+          "kind": "local",
+          "path": "candidate-P01-A-1-1.txt"
+        }
+      },
+      "sha256": {
+        "state": "known",
+        "value": "286ffcac37b5a41e7c3cb44142959c624b86f2cf7aafdd4aea337e9c8e559bbf"
+      },
+      "size_bytes": {
+        "state": "known",
+        "value": 33
+      },
+      "record_count": {
+        "state": "known",
+        "value": 0
+      },
+      "format": "bytes",
+      "verification": "unchecked",
+      "verification_ref": {
+        "state": "unknown",
+        "reason": "Synthetic unknown; no external operation is authenticated."
+      }
+    },
+    {
+      "packet_id": "candidate-P01-A-1-2",
+      "purpose": "artifact",
+      "location": {
+        "state": "known",
+        "value": {
+          "kind": "local",
+          "path": "candidate-P01-A-1-2.txt"
+        }
+      },
+      "sha256": {
+        "state": "known",
+        "value": "912a8ee8b9461d10c3586c30ad17d6f93d4c9e3074b850c664b3542989c38008"
+      },
+      "size_bytes": {
+        "state": "known",
+        "value": 33
+      },
+      "record_count": {
+        "state": "known",
+        "value": 0
+      },
+      "format": "bytes",
+      "verification": "unchecked",
+      "verification_ref": {
+        "state": "unknown",
+        "reason": "Synthetic unknown; no external operation is authenticated."
+      }
+    },
+    {
+      "packet_id": "candidate-P01-A-1-3",
+      "purpose": "artifact",
+      "location": {
+        "state": "known",
+        "value": {
+          "kind": "local",
+          "path": "candidate-P01-A-1-3.txt"
+        }
+      },
+      "sha256": {
+        "state": "known",
+        "value": "5213b7862afbdbe2ed927b03c056268ed9fb41aad08908130b370d730b2dd25a"
+      },
+      "size_bytes": {
+        "state": "known",
+        "value": 33
+      },
+      "record_count": {
+        "state": "known",
+        "value": 0
+      },
+      "format": "bytes",
+      "verification": "unchecked",
+      "verification_ref": {
+        "state": "unknown",
+        "reason": "Synthetic unknown; no external operation is authenticated."
+      }
+    },
+    {
+      "packet_id": "candidate-P01-A-1-4",
+      "purpose": "artifact",
+      "location": {
+        "state": "known",
+        "value": {
+          "kind": "local",
+          "path": "candidate-P01-A-1-4.txt"
+        }
+      },
+      "sha256": {
+        "state": "known",
+        "value": "12f77bd0e6c0efd415bf298b62ab37223e95b3690263b0e9583ddaf196ca3afc"
+      },
+      "size_bytes": {
+        "state": "known",
+        "value": 33
+      },
+      "record_count": {
+        "state": "known",
+        "value": 0
+      },
+      "format": "bytes",
+      "verification": "unchecked",
+      "verification_ref": {
+        "state": "unknown",
+        "reason": "Synthetic unknown; no external operation is authenticated."
+      }
+    },
+    {
+      "packet_id": "candidate-P01-A-1-5",
+      "purpose": "artifact",
+      "location": {
+        "state": "known",
+        "value": {
+          "kind": "local",
+          "path": "candidate-P01-A-1-5.txt"
+        }
+      },
+      "sha256": {
+        "state": "known",
+        "value": "5c4b585fea1fc7962fc215d0ec097027cee31fcc0267137588e7212394f4e5b8"
+      },
+      "size_bytes": {
+        "state": "known",
+        "value": 33
+      },
+      "record_count": {
+        "state": "known",
+        "value": 0
+      },
+      "format": "bytes",
+      "verification": "unchecked",
+      "verification_ref": {
+        "state": "unknown",
+        "reason": "Synthetic unknown; no external operation is authenticated."
+      }
+    },
+    {
+      "packet_id": "submission-roster",
+      "purpose": "evidence",
+      "location": {
+        "state": "known",
+        "value": {
+          "kind": "local",
+          "path": "submission-roster.json"
+        }
+      },
+      "sha256": {
+        "state": "known",
+        "value": "7f7bae1287cf0e50b8543e0d0dc188baf318b5e3731319714d32647b3ae7fdd6"
+      },
+      "size_bytes": {
+        "state": "known",
+        "value": 2938
+      },
+      "record_count": {
+        "state": "known",
+        "value": 1
+      },
+      "format": "json",
+      "verification": "unchecked",
+      "verification_ref": {
+        "state": "unknown",
+        "reason": "Synthetic unknown; no external operation is authenticated."
+      }
+    },
+    {
+      "packet_id": "submission-label-candidate-P01-A-1-1",
+      "purpose": "evidence",
+      "location": {
+        "state": "known",
+        "value": {
+          "kind": "local",
+          "path": "submission-label-candidate-P01-A-1-1.json"
+        }
+      },
+      "sha256": {
+        "state": "known",
+        "value": "9ce291ebe5dd478c0bacfd6a5cdce946ba03976c924381effc4dce468fea4738"
+      },
+      "size_bytes": {
+        "state": "known",
+        "value": 3431
+      },
+      "record_count": {
+        "state": "known",
+        "value": 1
+      },
+      "format": "json",
+      "verification": "unchecked",
+      "verification_ref": {
+        "state": "unknown",
+        "reason": "Synthetic unknown; no external operation is authenticated."
+      }
+    },
+    {
+      "packet_id": "submission-label-candidate-P01-A-1-2",
+      "purpose": "evidence",
+      "location": {
+        "state": "known",
+        "value": {
+          "kind": "local",
+          "path": "submission-label-candidate-P01-A-1-2.json"
+        }
+      },
+      "sha256": {
+        "state": "known",
+        "value": "aa7af397f6933b4621afee9c5f9c7541e7d2eb8d561472469f63760e6619e934"
+      },
+      "size_bytes": {
+        "state": "known",
+        "value": 3431
+      },
+      "record_count": {
+        "state": "known",
+        "value": 1
+      },
+      "format": "json",
+      "verification": "unchecked",
+      "verification_ref": {
+        "state": "unknown",
+        "reason": "Synthetic unknown; no external operation is authenticated."
+      }
+    },
+    {
+      "packet_id": "submission-label-candidate-P01-A-1-3",
+      "purpose": "evidence",
+      "location": {
+        "state": "known",
+        "value": {
+          "kind": "local",
+          "path": "submission-label-candidate-P01-A-1-3.json"
+        }
+      },
+      "sha256": {
+        "state": "known",
+        "value": "cb6ec61a6775e7122886dfec8ac7d4afefec2867a44b42a3f1a6f2852230601a"
+      },
+      "size_bytes": {
+        "state": "known",
+        "value": 3431
+      },
+      "record_count": {
+        "state": "known",
+        "value": 1
+      },
+      "format": "json",
+      "verification": "unchecked",
+      "verification_ref": {
+        "state": "unknown",
+        "reason": "Synthetic unknown; no external operation is authenticated."
+      }
+    },
+    {
+      "packet_id": "submission-label-candidate-P01-A-1-4",
+      "purpose": "evidence",
+      "location": {
+        "state": "known",
+        "value": {
+          "kind": "local",
+          "path": "submission-label-candidate-P01-A-1-4.json"
+        }
+      },
+      "sha256": {
+        "state": "known",
+        "value": "a2e06d2a6c83f63f0e3432634566ac35b5d1bc5ce3fb0b2a8faf9925f06a37d8"
+      },
+      "size_bytes": {
+        "state": "known",
+        "value": 3431
+      },
+      "record_count": {
+        "state": "known",
+        "value": 1
+      },
+      "format": "json",
+      "verification": "unchecked",
+      "verification_ref": {
+        "state": "unknown",
+        "reason": "Synthetic unknown; no external operation is authenticated."
+      }
+    },
+    {
+      "packet_id": "submission-label-candidate-P01-A-1-5",
+      "purpose": "evidence",
+      "location": {
+        "state": "known",
+        "value": {
+          "kind": "local",
+          "path": "submission-label-candidate-P01-A-1-5.json"
+        }
+      },
+      "sha256": {
+        "state": "known",
+        "value": "1e0971a9af90e84fe2f258bd6456bc03b7c3df171108eed656d9377eb3d90db8"
+      },
+      "size_bytes": {
+        "state": "known",
+        "value": 3431
+      },
+      "record_count": {
+        "state": "known",
+        "value": 1
+      },
+      "format": "json",
+      "verification": "unchecked",
+      "verification_ref": {
+        "state": "unknown",
+        "reason": "Synthetic unknown; no external operation is authenticated."
+      }
+    },
+    {
+      "packet_id": "submission-audit-candidate-P01-A-1-1",
+      "purpose": "evidence",
+      "location": {
+        "state": "known",
+        "value": {
+          "kind": "local",
+          "path": "submission-audit-candidate-P01-A-1-1.json"
+        }
+      },
+      "sha256": {
+        "state": "known",
+        "value": "3b61e18165f582e7c1d0b28162c4d67cf8dbe2a8423961818d3a457a6cfd28f9"
+      },
+      "size_bytes": {
+        "state": "known",
+        "value": 3431
+      },
+      "record_count": {
+        "state": "known",
+        "value": 1
+      },
+      "format": "json",
+      "verification": "unchecked",
+      "verification_ref": {
+        "state": "unknown",
+        "reason": "Synthetic unknown; no external operation is authenticated."
+      }
+    },
+    {
+      "packet_id": "submission-qualification",
+      "purpose": "evidence",
+      "location": {
+        "state": "known",
+        "value": {
+          "kind": "local",
+          "path": "submission-qualification.json"
+        }
+      },
+      "sha256": {
+        "state": "known",
+        "value": "109d273e257e40b0bb2c7f998b04ec63c9eac931b035269ce2b33a9d2f8ab015"
+      },
+      "size_bytes": {
+        "state": "known",
+        "value": 11528
+      },
+      "record_count": {
+        "state": "known",
+        "value": 1
+      },
+      "format": "json",
+      "verification": "unchecked",
+      "verification_ref": {
+        "state": "unknown",
+        "reason": "Synthetic unknown; no external operation is authenticated."
+      }
+    },
+    {
+      "packet_id": "submission-call-P01-A-1",
+      "purpose": "evidence",
+      "location": {
+        "state": "known",
+        "value": {
+          "kind": "local",
+          "path": "submission-call-P01-A-1.json"
+        }
+      },
+      "sha256": {
+        "state": "known",
+        "value": "edf37b8c54dc03db5c6ad4405334a5e3f28a93e7e2be98ca5504ad1130960af6"
+      },
+      "size_bytes": {
+        "state": "known",
+        "value": 7830
+      },
+      "record_count": {
+        "state": "known",
+        "value": 1
+      },
+      "format": "json",
+      "verification": "unchecked",
+      "verification_ref": {
+        "state": "unknown",
+        "reason": "Synthetic unknown; no external operation is authenticated."
+      }
+    },
+    {
+      "packet_id": "legacy-0",
+      "purpose": "artifact",
+      "format": "bytes",
+      "location": {
+        "state": "known",
+        "value": {
+          "kind": "local",
+          "path": "carrier/body1.txt"
+        }
+      },
+      "sha256": {
+        "state": "known",
+        "value": "286ffcac37b5a41e7c3cb44142959c624b86f2cf7aafdd4aea337e9c8e559bbf"
+      },
+      "size_bytes": {
+        "state": "known",
+        "value": 33
+      },
+      "record_count": {
+        "state": "known",
+        "value": 0
+      },
+      "verification": "unchecked",
+      "verification_ref": {
+        "state": "unknown",
+        "reason": "Synthetic unknown; no external operation is authenticated."
+      }
+    },
+    {
+      "packet_id": "legacy-1",
+      "purpose": "artifact",
+      "format": "bytes",
+      "location": {
+        "state": "known",
+        "value": {
+          "kind": "local",
+          "path": "carrier/body2.txt"
+        }
+      },
+      "sha256": {
+        "state": "known",
+        "value": "912a8ee8b9461d10c3586c30ad17d6f93d4c9e3074b850c664b3542989c38008"
+      },
+      "size_bytes": {
+        "state": "known",
+        "value": 33
+      },
+      "record_count": {
+        "state": "known",
+        "value": 0
+      },
+      "verification": "unchecked",
+      "verification_ref": {
+        "state": "unknown",
+        "reason": "Synthetic unknown; no external operation is authenticated."
+      }
+    },
+    {
+      "packet_id": "legacy-2",
+      "purpose": "artifact",
+      "format": "bytes",
+      "location": {
+        "state": "known",
+        "value": {
+          "kind": "local",
+          "path": "carrier/body3.txt"
+        }
+      },
+      "sha256": {
+        "state": "known",
+        "value": "5213b7862afbdbe2ed927b03c056268ed9fb41aad08908130b370d730b2dd25a"
+      },
+      "size_bytes": {
+        "state": "known",
+        "value": 33
+      },
+      "record_count": {
+        "state": "known",
+        "value": 0
+      },
+      "verification": "unchecked",
+      "verification_ref": {
+        "state": "unknown",
+        "reason": "Synthetic unknown; no external operation is authenticated."
+      }
+    },
+    {
+      "packet_id": "legacy-3",
+      "purpose": "artifact",
+      "format": "bytes",
+      "location": {
+        "state": "known",
+        "value": {
+          "kind": "local",
+          "path": "carrier/body4.txt"
+        }
+      },
+      "sha256": {
+        "state": "known",
+        "value": "12f77bd0e6c0efd415bf298b62ab37223e95b3690263b0e9583ddaf196ca3afc"
+      },
+      "size_bytes": {
+        "state": "known",
+        "value": 33
+      },
+      "record_count": {
+        "state": "known",
+        "value": 0
+      },
+      "verification": "unchecked",
+      "verification_ref": {
+        "state": "unknown",
+        "reason": "Synthetic unknown; no external operation is authenticated."
+      }
+    },
+    {
+      "packet_id": "legacy-4",
+      "purpose": "artifact",
+      "format": "bytes",
+      "location": {
+        "state": "known",
+        "value": {
+          "kind": "local",
+          "path": "carrier/body5.txt"
+        }
+      },
+      "sha256": {
+        "state": "known",
+        "value": "5c4b585fea1fc7962fc215d0ec097027cee31fcc0267137588e7212394f4e5b8"
+      },
+      "size_bytes": {
+        "state": "known",
+        "value": 33
+      },
+      "record_count": {
+        "state": "known",
+        "value": 0
+      },
+      "verification": "unchecked",
+      "verification_ref": {
+        "state": "unknown",
+        "reason": "Synthetic unknown; no external operation is authenticated."
+      }
+    },
+    {
+      "packet_id": "legacy-5",
+      "purpose": "artifact",
+      "format": "bytes",
+      "location": {
+        "state": "known",
+        "value": {
+          "kind": "local",
+          "path": "carrier/bundle.json"
+        }
+      },
+      "sha256": {
+        "state": "known",
+        "value": "dbc5e1673732718014210eb6928f759213e0299f1c7305b25879042fccfb8230"
+      },
+      "size_bytes": {
+        "state": "known",
+        "value": 5297
+      },
+      "record_count": {
+        "state": "known",
+        "value": 0
+      },
+      "verification": "unchecked",
+      "verification_ref": {
+        "state": "unknown",
+        "reason": "Synthetic unknown; no external operation is authenticated."
+      }
+    },
+    {
+      "packet_id": "legacy-6",
+      "purpose": "artifact",
+      "format": "bytes",
+      "location": {
+        "state": "known",
+        "value": {
+          "kind": "local",
+          "path": "carrier/evidence.jsonl"
+        }
+      },
+      "sha256": {
+        "state": "known",
+        "value": "87c9ddb4aaa50b9a14672f9b96c8f91803785d215e2a086e38a153fc25e1de94"
+      },
+      "size_bytes": {
+        "state": "known",
+        "value": 11955
+      },
+      "record_count": {
+        "state": "known",
+        "value": 0
+      },
+      "verification": "unchecked",
+      "verification_ref": {
+        "state": "unknown",
+        "reason": "Synthetic unknown; no external operation is authenticated."
+      }
+    },
+    {
+      "packet_id": "legacy-7",
+      "purpose": "artifact",
+      "format": "bytes",
+      "location": {
+        "state": "known",
+        "value": {
+          "kind": "local",
+          "path": "carrier/original-response.txt"
+        }
+      },
+      "sha256": {
+        "state": "known",
+        "value": "9ebd19d0c8a5b335776d9f7dfcb0bffca081268118f4c27b1225e503978b6ce1"
+      },
+      "size_bytes": {
+        "state": "known",
+        "value": 315
+      },
+      "record_count": {
+        "state": "known",
+        "value": 0
+      },
+      "verification": "unchecked",
+      "verification_ref": {
+        "state": "unknown",
+        "reason": "Synthetic unknown; no external operation is authenticated."
+      }
+    },
+    {
+      "packet_id": "legacy-8",
+      "purpose": "artifact",
+      "format": "bytes",
+      "location": {
+        "state": "known",
+        "value": {
+          "kind": "local",
+          "path": "carrier/records.jsonl"
+        }
+      },
+      "sha256": {
+        "state": "known",
+        "value": "ab3818b5cd90c5a92c1fe44a910a6ff1c0cec35f9bb184313b797f223aa5c9de"
+      },
+      "size_bytes": {
+        "state": "known",
+        "value": 15232
+      },
+      "record_count": {
+        "state": "known",
+        "value": 0
+      },
+      "verification": "unchecked",
+      "verification_ref": {
+        "state": "unknown",
+        "reason": "Synthetic unknown; no external operation is authenticated."
+      }
+    },
+    {
+      "packet_id": "legacy-9",
+      "purpose": "artifact",
+      "format": "bytes",
+      "location": {
+        "state": "known",
+        "value": {
+          "kind": "local",
+          "path": "carrier/sent-prompt.txt"
+        }
+      },
+      "sha256": {
+        "state": "known",
+        "value": "005ad5a432d4e0867b60c43d4bd73279fe2c9e13aa441d82a7100036074ef081"
+      },
+      "size_bytes": {
+        "state": "known",
+        "value": 1668
+      },
+      "record_count": {
+        "state": "known",
+        "value": 0
+      },
+      "verification": "unchecked",
+      "verification_ref": {
+        "state": "unknown",
+        "reason": "Synthetic unknown; no external operation is authenticated."
+      }
+    }
+  ],
+  "import_budget": {
+    "max_packets": 4096,
+    "max_total_bytes": 67108864,
+    "max_total_records": 100000
+  },
+  "records": [
+    {
+      "record_type": "study_registration",
+      "record_id": "registration",
+      "record_version": "0.1",
+      "study_id": "fixture-study",
+      "study_version": "v1",
+      "revision": 1,
+      "scope": {
+        "claim_id": "fixture-format",
+        "task_id": "bounded_integer_sort",
+        "task_version": "0.1"
+      },
+      "depends_on": [],
+      "lineage_refs": [],
+      "supersedes": {
+        "state": "not_applicable",
+        "reason": "Initial fixture record has no superseded predecessor."
+      },
+      "claim_scope": "Software format fixture only. No sorting, review, collection, or empirical result is claimed.",
+      "source_pins": {
+        "SD": "357c0c3994e34fc1831ce91bf1c7e579925d64827579f80eb0a8708e85c93f32",
+        "SI": "80c193231af343d383544cee924a11fbb063a5c4ccee02d996ea4f904979565a",
+        "EC": "002d2393d05cb2c8b1db0a70e844e3d775e2be2155db7b2ffaadaa8080c8b950"
+      },
+      "pins": {
+        "task_id": "bounded_integer_sort",
+        "task_version": "0.1",
+        "analytic_resolution_id": "sorting_mechanism_family",
+        "analytic_resolution_version": "0.1",
+        "structural_schema_id": "sorting_mechanism_partition",
+        "structural_schema_version": "0.1",
+        "reference_registry_id": "sorting_reference_eight",
+        "reference_registry_version": "0.1",
+        "validity_rubric_ref": "bounded_integer_sort_validity_v1"
+      },
+      "requested_profile": "m_only",
+      "frame_definition": {
+        "task_context": {
+          "state": "known",
+          "value": "Stipulated input-shape fixture for the adopted sorting task."
+        },
+        "consequence_horizon": {
+          "state": "known",
+          "value": "One complete invocation across the declared input domain."
+        },
+        "load_bearing_invariants": [
+          "Role of ordering mechanism."
+        ],
+        "consequence_signature_spec": {
+          "state": "known",
+          "value": "Inspect mechanism, not just returned values."
+        },
+        "equivalence_rule_ref": {
+          "state": "known",
+          "value": "HERO_BENCHMARK_SPEC.md section 4"
+        },
+        "admissible_substitutions": {
+          "state": "known",
+          "value": "Registered mechanism-preserving variations."
+        },
+        "evidence_requirement": {
+          "state": "known",
+          "value": "This fixture supplies no independent mechanism evidence."
+        },
+        "exceptional_case_rules": {
+          "state": "known",
+          "value": "Preserve unresolved and unknown mechanisms."
+        }
+      },
+      "protocol": {
+        "protocol_id": "fixture-protocol",
+        "protocol_version": "0.1",
+        "design": "descriptive",
+        "prompt_refs": [],
+        "controls": {
+          "temperature": {
+            "state": "unknown",
+            "reason": "Stipulated software fixture; no empirical evidence supplied."
+          },
+          "top_p": {
+            "state": "known",
+            "value": 1
+          },
+          "presence_penalty": {
+            "state": "known",
+            "value": 0
+          },
+          "frequency_penalty": {
+            "state": "known",
+            "value": 0
+          },
+          "seed": {
+            "state": "known",
+            "value": null
+          },
+          "output_allowance": {
+            "state": "known",
+            "value": 8192
+          },
+          "cap_semantics": {
+            "state": "unknown",
+            "reason": "Stipulated software fixture; no empirical evidence supplied."
+          },
+          "fresh_context": {
+            "state": "known",
+            "value": false
+          },
+          "tools_requested": {
+            "state": "known",
+            "value": false
+          },
+          "hidden_controls": {
+            "state": "unknown",
+            "reason": "Stipulated software fixture; no empirical evidence supplied."
+          },
+          "wrapper_knowledge": {
+            "state": "unknown",
+            "reason": "Stipulated software fixture; no empirical evidence supplied."
+          }
+        },
+        "budget": {
+          "max_calls": {
+            "state": "known",
+            "value": 1
+          },
+          "max_positions": {
+            "state": "known",
+            "value": 5
+          },
+          "max_output_tokens": {
+            "state": "known",
+            "value": 8192
+          },
+          "monetary_ceiling": {
+            "state": "unknown",
+            "reason": "Stipulated software fixture; no empirical evidence supplied."
+          },
+          "currency": {
+            "state": "unknown",
+            "reason": "Stipulated software fixture; no empirical evidence supplied."
+          }
+        },
+        "longitudinal_input": {
+          "state": "not_applicable",
+          "reason": "The fixture requests no longitudinal claim."
+        },
+        "legacy_profile_input": {
+          "state": "known",
+          "value": {
+            "artifact_ref": {
+              "record_type": "artifact",
+              "record_id": "legacy-carrier",
+              "record_version": "0.1"
+            },
+            "input_schema_version": "0.1",
+            "profile": "m_only"
+          }
+        }
+      },
+      "preregistration": {
+        "status": "not_registered",
+        "registered_at": {
+          "state": "unknown",
+          "reason": "Stipulated software fixture; no empirical evidence supplied."
+        },
+        "evidence_refs": [],
+        "exposure_at_registration": {
+          "state": "known",
+          "value": "Hand-authored software fixture, not a prospective registration."
+        }
+      },
+      "exposure": {
+        "state": "known",
+        "value": "Public fixture."
+      },
+      "currentness": {
+        "state": "unresolved",
+        "assessed_at": {
+          "state": "unknown",
+          "reason": "Stipulated software fixture; no empirical evidence supplied."
+        },
+        "expires_at": {
+          "state": "unknown",
+          "reason": "Stipulated software fixture; no empirical evidence supplied."
+        },
+        "basis": {
+          "state": "unknown",
+          "reason": "Stipulated software fixture; no empirical evidence supplied."
+        }
+      }
+    },
+    {
+      "record_type": "artifact",
+      "record_id": "evidence-notes",
+      "record_version": "0.1",
+      "study_id": "fixture-study",
+      "study_version": "v1",
+      "revision": 1,
+      "scope": {
+        "claim_id": "fixture-format",
+        "task_id": "bounded_integer_sort",
+        "task_version": "0.1"
+      },
+      "depends_on": [],
+      "lineage_refs": [],
+      "supersedes": {
+        "state": "not_applicable",
+        "reason": "Initial fixture record has no superseded predecessor."
+      },
+      "content": {
+        "state": "known",
+        "value": {
+          "packet_id": "evidence-notes"
+        }
+      },
+      "sha256": {
+        "state": "known",
+        "value": "a70a5c08dd5db92b23853d00b96d508f74a37207d75a177b606b7eb9ed4473d2"
+      },
+      "size_bytes": {
+        "state": "known",
+        "value": 51
+      },
+      "artifact_role": "evidence",
+      "original_source": {
+        "state": "known",
+        "value": "Stipulated provenance, never authenticated."
+      },
+      "transformations": [],
+      "ai_assistance": {
+        "state": "known",
+        "value": "Stipulated provenance, never authenticated."
+      },
+      "exposure": {
+        "state": "known",
+        "value": "Stipulated provenance, never authenticated."
+      },
+      "evidence_refs": []
+    },
+    {
+      "record_type": "artifact",
+      "record_id": "prompt-call-P01-A-1",
+      "record_version": "0.1",
+      "study_id": "fixture-study",
+      "study_version": "v1",
+      "revision": 1,
+      "scope": {
+        "claim_id": "fixture-format",
+        "task_id": "bounded_integer_sort",
+        "task_version": "0.1"
+      },
+      "depends_on": [],
+      "lineage_refs": [],
+      "supersedes": {
+        "state": "not_applicable",
+        "reason": "Initial fixture record has no superseded predecessor."
+      },
+      "content": {
+        "state": "known",
+        "value": {
+          "packet_id": "prompt-call-P01-A-1"
+        }
+      },
+      "sha256": {
+        "state": "known",
+        "value": "005ad5a432d4e0867b60c43d4bd73279fe2c9e13aa441d82a7100036074ef081"
+      },
+      "size_bytes": {
+        "state": "known",
+        "value": 1668
+      },
+      "artifact_role": "prompt",
+      "original_source": {
+        "state": "known",
+        "value": "Hand-authored inert text fixture."
+      },
+      "transformations": [],
+      "ai_assistance": {
+        "state": "known",
+        "value": "Software fixture construction."
+      },
+      "exposure": {
+        "state": "known",
+        "value": "Public fixture."
+      },
+      "evidence_refs": []
+    },
+    {
+      "record_type": "artifact",
+      "record_id": "response-call-P01-A-1",
+      "record_version": "0.1",
+      "study_id": "fixture-study",
+      "study_version": "v1",
+      "revision": 1,
+      "scope": {
+        "claim_id": "fixture-format",
+        "task_id": "bounded_integer_sort",
+        "task_version": "0.1"
+      },
+      "depends_on": [],
+      "lineage_refs": [],
+      "supersedes": {
+        "state": "not_applicable",
+        "reason": "Initial fixture record has no superseded predecessor."
+      },
+      "content": {
+        "state": "known",
+        "value": {
+          "packet_id": "response-call-P01-A-1"
+        }
+      },
+      "sha256": {
+        "state": "known",
+        "value": "9ebd19d0c8a5b335776d9f7dfcb0bffca081268118f4c27b1225e503978b6ce1"
+      },
+      "size_bytes": {
+        "state": "known",
+        "value": 315
+      },
+      "artifact_role": "raw_response",
+      "original_source": {
+        "state": "known",
+        "value": "Hand-authored inert text fixture."
+      },
+      "transformations": [],
+      "ai_assistance": {
+        "state": "known",
+        "value": "Software fixture construction."
+      },
+      "exposure": {
+        "state": "known",
+        "value": "Public fixture."
+      },
+      "evidence_refs": []
+    },
+    {
+      "record_type": "collection_ledger",
+      "record_id": "call-P01-A-1",
+      "record_version": "0.1",
+      "study_id": "fixture-study",
+      "study_version": "v1",
+      "revision": 1,
+      "scope": {
+        "claim_id": "fixture-format",
+        "task_id": "bounded_integer_sort",
+        "task_version": "0.1"
+      },
+      "depends_on": [],
+      "lineage_refs": [],
+      "supersedes": {
+        "state": "not_applicable",
+        "reason": "Initial fixture record has no superseded predecessor."
+      },
+      "phase": "main",
+      "block_id": "P01",
+      "condition": "A",
+      "group_index": 1,
+      "registered_call_order": 1,
+      "planned_positions": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "controls": {
+        "temperature": {
+          "state": "known",
+          "value": "0.4"
+        },
+        "top_p": {
+          "state": "known",
+          "value": "1.0"
+        },
+        "presence_penalty": {
+          "state": "known",
+          "value": "0"
+        },
+        "frequency_penalty": {
+          "state": "known",
+          "value": "0"
+        },
+        "seed": {
+          "state": "known",
+          "value": null
+        },
+        "output_allowance": {
+          "state": "known",
+          "value": 8192
+        },
+        "cap_semantics": {
+          "state": "known",
+          "value": "visible_output_tokens"
+        },
+        "fresh_context": {
+          "state": "known",
+          "value": true
+        },
+        "tools_requested": {
+          "state": "known",
+          "value": false
+        },
+        "hidden_controls": {
+          "state": "unknown",
+          "reason": "Synthetic unknown; no external operation is authenticated."
+        },
+        "wrapper_knowledge": {
+          "state": "unknown",
+          "reason": "Synthetic unknown; no external operation is authenticated."
+        }
+      },
+      "prompt_ref": {
+        "state": "known",
+        "value": {
+          "record_type": "artifact",
+          "record_id": "prompt-call-P01-A-1",
+          "record_version": "0.1"
+        }
+      },
+      "sent_prompt_sha256": {
+        "state": "known",
+        "value": "005ad5a432d4e0867b60c43d4bd73279fe2c9e13aa441d82a7100036074ef081"
+      },
+      "deployment": {
+        "model_identifier": {
+          "state": "known",
+          "value": "fixture-model"
+        },
+        "model_family": {
+          "state": "known",
+          "value": "fixture-family"
+        },
+        "checkpoint_identifier": {
+          "state": "unknown",
+          "reason": "Synthetic unknown; no external operation is authenticated."
+        },
+        "deployment_identifier": {
+          "state": "known",
+          "value": "fixture-deployment"
+        },
+        "drift": {
+          "state": "known",
+          "value": "No drift reported in synthetic record."
+        }
+      },
+      "attempt_status": "succeeded",
+      "attempt_id": {
+        "state": "known",
+        "value": "call1"
+      },
+      "request_id": {
+        "state": "known",
+        "value": "request-call-P01-A-1"
+      },
+      "attempted_at": {
+        "state": "known",
+        "value": "2026-09-23T00:00:00Z"
+      },
+      "raw_response_ref": {
+        "state": "known",
+        "value": {
+          "record_type": "artifact",
+          "record_id": "response-call-P01-A-1",
+          "record_version": "0.1"
+        }
+      },
+      "termination_reason": {
+        "state": "unknown",
+        "reason": "Stipulated software fixture; no empirical evidence supplied."
+      },
+      "retry_of": {
+        "state": "not_applicable",
+        "reason": "No call or retry has occurred."
+      },
+      "retry_evidence_refs": [],
+      "usage": {
+        "input_tokens": {
+          "state": "unknown",
+          "reason": "Stipulated software fixture; no empirical evidence supplied."
+        },
+        "output_tokens": {
+          "state": "known",
+          "value": 0
+        },
+        "hidden_reasoning_tokens": {
+          "state": "unknown",
+          "reason": "Stipulated software fixture; no empirical evidence supplied."
+        },
+        "compute": {
+          "state": "unknown",
+          "reason": "Stipulated software fixture; no empirical evidence supplied."
+        },
+        "monetary_cost": {
+          "state": "unknown",
+          "reason": "Stipulated software fixture; no empirical evidence supplied."
+        },
+        "currency": {
+          "state": "unknown",
+          "reason": "Stipulated software fixture; no empirical evidence supplied."
+        }
+      },
+      "authorization_ref": {
+        "state": "unknown",
+        "reason": "Stipulated software fixture; no empirical evidence supplied."
+      }
+    },
+    {
+      "record_type": "artifact",
+      "record_id": "candidate-P01-A-1-1",
+      "record_version": "0.1",
+      "study_id": "fixture-study",
+      "study_version": "v1",
+      "revision": 1,
+      "scope": {
+        "claim_id": "fixture-format",
+        "task_id": "bounded_integer_sort",
+        "task_version": "0.1"
+      },
+      "depends_on": [],
+      "lineage_refs": [],
+      "supersedes": {
+        "state": "not_applicable",
+        "reason": "Initial fixture record has no superseded predecessor."
+      },
+      "content": {
+        "state": "known",
+        "value": {
+          "packet_id": "candidate-P01-A-1-1"
+        }
+      },
+      "sha256": {
+        "state": "known",
+        "value": "286ffcac37b5a41e7c3cb44142959c624b86f2cf7aafdd4aea337e9c8e559bbf"
+      },
+      "size_bytes": {
+        "state": "known",
+        "value": 33
+      },
+      "artifact_role": "candidate",
+      "original_source": {
+        "state": "known",
+        "value": "Stipulated synthetic source."
+      },
+      "transformations": [],
+      "ai_assistance": {
+        "state": "known",
+        "value": "Stipulated synthetic source."
+      },
+      "exposure": {
+        "state": "known",
+        "value": "Stipulated synthetic source."
+      },
+      "evidence_refs": []
+    },
+    {
+      "record_type": "artifact",
+      "record_id": "candidate-P01-A-1-2",
+      "record_version": "0.1",
+      "study_id": "fixture-study",
+      "study_version": "v1",
+      "revision": 1,
+      "scope": {
+        "claim_id": "fixture-format",
+        "task_id": "bounded_integer_sort",
+        "task_version": "0.1"
+      },
+      "depends_on": [],
+      "lineage_refs": [],
+      "supersedes": {
+        "state": "not_applicable",
+        "reason": "Initial fixture record has no superseded predecessor."
+      },
+      "content": {
+        "state": "known",
+        "value": {
+          "packet_id": "candidate-P01-A-1-2"
+        }
+      },
+      "sha256": {
+        "state": "known",
+        "value": "912a8ee8b9461d10c3586c30ad17d6f93d4c9e3074b850c664b3542989c38008"
+      },
+      "size_bytes": {
+        "state": "known",
+        "value": 33
+      },
+      "artifact_role": "candidate",
+      "original_source": {
+        "state": "known",
+        "value": "Stipulated synthetic source."
+      },
+      "transformations": [],
+      "ai_assistance": {
+        "state": "known",
+        "value": "Stipulated synthetic source."
+      },
+      "exposure": {
+        "state": "known",
+        "value": "Stipulated synthetic source."
+      },
+      "evidence_refs": []
+    },
+    {
+      "record_type": "artifact",
+      "record_id": "candidate-P01-A-1-3",
+      "record_version": "0.1",
+      "study_id": "fixture-study",
+      "study_version": "v1",
+      "revision": 1,
+      "scope": {
+        "claim_id": "fixture-format",
+        "task_id": "bounded_integer_sort",
+        "task_version": "0.1"
+      },
+      "depends_on": [],
+      "lineage_refs": [],
+      "supersedes": {
+        "state": "not_applicable",
+        "reason": "Initial fixture record has no superseded predecessor."
+      },
+      "content": {
+        "state": "known",
+        "value": {
+          "packet_id": "candidate-P01-A-1-3"
+        }
+      },
+      "sha256": {
+        "state": "known",
+        "value": "5213b7862afbdbe2ed927b03c056268ed9fb41aad08908130b370d730b2dd25a"
+      },
+      "size_bytes": {
+        "state": "known",
+        "value": 33
+      },
+      "artifact_role": "candidate",
+      "original_source": {
+        "state": "known",
+        "value": "Stipulated synthetic source."
+      },
+      "transformations": [],
+      "ai_assistance": {
+        "state": "known",
+        "value": "Stipulated synthetic source."
+      },
+      "exposure": {
+        "state": "known",
+        "value": "Stipulated synthetic source."
+      },
+      "evidence_refs": []
+    },
+    {
+      "record_type": "artifact",
+      "record_id": "candidate-P01-A-1-4",
+      "record_version": "0.1",
+      "study_id": "fixture-study",
+      "study_version": "v1",
+      "revision": 1,
+      "scope": {
+        "claim_id": "fixture-format",
+        "task_id": "bounded_integer_sort",
+        "task_version": "0.1"
+      },
+      "depends_on": [],
+      "lineage_refs": [],
+      "supersedes": {
+        "state": "not_applicable",
+        "reason": "Initial fixture record has no superseded predecessor."
+      },
+      "content": {
+        "state": "known",
+        "value": {
+          "packet_id": "candidate-P01-A-1-4"
+        }
+      },
+      "sha256": {
+        "state": "known",
+        "value": "12f77bd0e6c0efd415bf298b62ab37223e95b3690263b0e9583ddaf196ca3afc"
+      },
+      "size_bytes": {
+        "state": "known",
+        "value": 33
+      },
+      "artifact_role": "candidate",
+      "original_source": {
+        "state": "known",
+        "value": "Stipulated synthetic source."
+      },
+      "transformations": [],
+      "ai_assistance": {
+        "state": "known",
+        "value": "Stipulated synthetic source."
+      },
+      "exposure": {
+        "state": "known",
+        "value": "Stipulated synthetic source."
+      },
+      "evidence_refs": []
+    },
+    {
+      "record_type": "artifact",
+      "record_id": "candidate-P01-A-1-5",
+      "record_version": "0.1",
+      "study_id": "fixture-study",
+      "study_version": "v1",
+      "revision": 1,
+      "scope": {
+        "claim_id": "fixture-format",
+        "task_id": "bounded_integer_sort",
+        "task_version": "0.1"
+      },
+      "depends_on": [],
+      "lineage_refs": [],
+      "supersedes": {
+        "state": "not_applicable",
+        "reason": "Initial fixture record has no superseded predecessor."
+      },
+      "content": {
+        "state": "known",
+        "value": {
+          "packet_id": "candidate-P01-A-1-5"
+        }
+      },
+      "sha256": {
+        "state": "known",
+        "value": "5c4b585fea1fc7962fc215d0ec097027cee31fcc0267137588e7212394f4e5b8"
+      },
+      "size_bytes": {
+        "state": "known",
+        "value": 33
+      },
+      "artifact_role": "candidate",
+      "original_source": {
+        "state": "known",
+        "value": "Stipulated synthetic source."
+      },
+      "transformations": [],
+      "ai_assistance": {
+        "state": "known",
+        "value": "Stipulated synthetic source."
+      },
+      "exposure": {
+        "state": "known",
+        "value": "Stipulated synthetic source."
+      },
+      "evidence_refs": []
+    },
+    {
+      "record_type": "extraction",
+      "record_id": "extract-call-P01-A-1",
+      "record_version": "0.1",
+      "study_id": "fixture-study",
+      "study_version": "v1",
+      "revision": 1,
+      "scope": {
+        "claim_id": "fixture-format",
+        "task_id": "bounded_integer_sort",
+        "task_version": "0.1"
+      },
+      "depends_on": [],
+      "lineage_refs": [],
+      "supersedes": {
+        "state": "not_applicable",
+        "reason": "Initial fixture record has no superseded predecessor."
+      },
+      "collection_ref": {
+        "record_type": "collection_ledger",
+        "record_id": "call-P01-A-1",
+        "record_version": "0.1"
+      },
+      "raw_response_ref": {
+        "state": "known",
+        "value": {
+          "record_type": "artifact",
+          "record_id": "response-call-P01-A-1",
+          "record_version": "0.1"
+        }
+      },
+      "raw_response_sha256": {
+        "state": "known",
+        "value": "9ebd19d0c8a5b335776d9f7dfcb0bffca081268118f4c27b1225e503978b6ce1"
+      },
+      "rule_version": "hero_candidates_v1",
+      "positions": [
+        {
+          "within_group_index": 1,
+          "selection": "selected",
+          "artifact_ref": {
+            "state": "known",
+            "value": {
+              "record_type": "artifact",
+              "record_id": "candidate-P01-A-1-1",
+              "record_version": "0.1"
+            }
+          },
+          "heading": {
+            "state": "known",
+            "value": "### Candidate 1"
+          },
+          "fence": {
+            "state": "known",
+            "value": "```python"
+          },
+          "byte_range": {
+            "state": "known",
+            "value": {
+              "start": 26,
+              "end": 59
+            }
+          },
+          "completion_status": "complete",
+          "limitations": []
+        },
+        {
+          "within_group_index": 2,
+          "selection": "selected",
+          "artifact_ref": {
+            "state": "known",
+            "value": {
+              "record_type": "artifact",
+              "record_id": "candidate-P01-A-1-2",
+              "record_version": "0.1"
+            }
+          },
+          "heading": {
+            "state": "known",
+            "value": "### Candidate 2"
+          },
+          "fence": {
+            "state": "known",
+            "value": "```python"
+          },
+          "byte_range": {
+            "state": "known",
+            "value": {
+              "start": 89,
+              "end": 122
+            }
+          },
+          "completion_status": "complete",
+          "limitations": []
+        },
+        {
+          "within_group_index": 3,
+          "selection": "selected",
+          "artifact_ref": {
+            "state": "known",
+            "value": {
+              "record_type": "artifact",
+              "record_id": "candidate-P01-A-1-3",
+              "record_version": "0.1"
+            }
+          },
+          "heading": {
+            "state": "known",
+            "value": "### Candidate 3"
+          },
+          "fence": {
+            "state": "known",
+            "value": "```python"
+          },
+          "byte_range": {
+            "state": "known",
+            "value": {
+              "start": 152,
+              "end": 185
+            }
+          },
+          "completion_status": "complete",
+          "limitations": []
+        },
+        {
+          "within_group_index": 4,
+          "selection": "selected",
+          "artifact_ref": {
+            "state": "known",
+            "value": {
+              "record_type": "artifact",
+              "record_id": "candidate-P01-A-1-4",
+              "record_version": "0.1"
+            }
+          },
+          "heading": {
+            "state": "known",
+            "value": "### Candidate 4"
+          },
+          "fence": {
+            "state": "known",
+            "value": "```python"
+          },
+          "byte_range": {
+            "state": "known",
+            "value": {
+              "start": 215,
+              "end": 248
+            }
+          },
+          "completion_status": "complete",
+          "limitations": []
+        },
+        {
+          "within_group_index": 5,
+          "selection": "selected",
+          "artifact_ref": {
+            "state": "known",
+            "value": {
+              "record_type": "artifact",
+              "record_id": "candidate-P01-A-1-5",
+              "record_version": "0.1"
+            }
+          },
+          "heading": {
+            "state": "known",
+            "value": "### Candidate 5"
+          },
+          "fence": {
+            "state": "known",
+            "value": "```python"
+          },
+          "byte_range": {
+            "state": "known",
+            "value": {
+              "start": 278,
+              "end": 311
+            }
+          },
+          "completion_status": "complete",
+          "limitations": []
+        }
+      ],
+      "extras": [],
+      "limitations": []
+    },
+    {
+      "record_type": "human_review",
+      "record_id": "label-candidate-P01-A-1-1",
+      "record_version": "0.1",
+      "study_id": "fixture-study",
+      "study_version": "v1",
+      "revision": 1,
+      "scope": {
+        "claim_id": "fixture-format",
+        "task_id": "bounded_integer_sort",
+        "task_version": "0.1"
+      },
+      "depends_on": [],
+      "lineage_refs": [],
+      "supersedes": {
+        "state": "not_applicable",
+        "reason": "Initial fixture record has no superseded predecessor."
+      },
+      "artifact_ref": {
+        "record_type": "artifact",
+        "record_id": "candidate-P01-A-1-1",
+        "record_version": "0.1"
+      },
+      "artifact_sha256": "286ffcac37b5a41e7c3cb44142959c624b86f2cf7aafdd4aea337e9c8e559bbf",
+      "reviewer": {
+        "reviewer_id": "fixture-reviewer-1",
+        "entity_kind": "human",
+        "qualifications": {
+          "state": "known",
+          "value": "Stipulated sorting-domain qualification; no actual credential."
+        },
+        "relationships": {
+          "state": "known",
+          "value": "Stipulated no relationship to candidate source."
+        },
+        "exposure": {
+          "state": "known",
+          "value": "Synthetic first-pass exposure record."
+        },
+        "machine_assistance": {
+          "state": "known",
+          "value": "All fixture contents were authored with AI; no actual human review."
+        },
+        "roster_packet_id": {
+          "state": "known",
+          "value": "submission-roster"
+        }
+      },
+      "submission_stage": "initial",
+      "submitted_at": {
+        "state": "known",
+        "value": "2026-09-22T00:00:00Z"
+      },
+      "initial_submission_ref": {
+        "state": "not_applicable",
+        "reason": "Synthetic software example; no actual people or reviews."
+      },
+      "independence": {
+        "declared_independent": {
+          "state": "known",
+          "value": true
+        },
+        "evidence_refs": [
+          {
+            "record_type": "artifact",
+            "record_id": "evidence-notes",
+            "record_version": "0.1"
+          }
+        ],
+        "limitations": []
+      },
+      "blinding": {
+        "pack_id": {
+          "state": "known",
+          "value": "fixture-blind-pack"
+        },
+        "withheld_fields": [
+          "model",
+          "condition",
+          "proposed_role",
+          "other_judgments"
+        ],
+        "limitations": [
+          "Artifact contents may reveal a mechanism; fixture only."
+        ]
+      },
+      "judgment": {
+        "assignment_status": "assigned",
+        "structural_class_id": {
+          "state": "known",
+          "value": "SORT-ADJ"
+        },
+        "validity_status": "not_assessed",
+        "rationale": {
+          "state": "known",
+          "value": "Stipulated inspection of all constitutive relations and reachable branches."
+        },
+        "evidence_refs": [
+          {
+            "record_type": "artifact",
+            "record_id": "evidence-notes",
+            "record_version": "0.1"
+          }
+        ]
+      },
+      "original_submission_packet": {
+        "state": "known",
+        "value": "submission-label-candidate-P01-A-1-1"
+      }
+    },
+    {
+      "record_type": "human_review",
+      "record_id": "label-candidate-P01-A-1-2",
+      "record_version": "0.1",
+      "study_id": "fixture-study",
+      "study_version": "v1",
+      "revision": 1,
+      "scope": {
+        "claim_id": "fixture-format",
+        "task_id": "bounded_integer_sort",
+        "task_version": "0.1"
+      },
+      "depends_on": [],
+      "lineage_refs": [],
+      "supersedes": {
+        "state": "not_applicable",
+        "reason": "Initial fixture record has no superseded predecessor."
+      },
+      "artifact_ref": {
+        "record_type": "artifact",
+        "record_id": "candidate-P01-A-1-2",
+        "record_version": "0.1"
+      },
+      "artifact_sha256": "912a8ee8b9461d10c3586c30ad17d6f93d4c9e3074b850c664b3542989c38008",
+      "reviewer": {
+        "reviewer_id": "fixture-reviewer-1",
+        "entity_kind": "human",
+        "qualifications": {
+          "state": "known",
+          "value": "Stipulated sorting-domain qualification; no actual credential."
+        },
+        "relationships": {
+          "state": "known",
+          "value": "Stipulated no relationship to candidate source."
+        },
+        "exposure": {
+          "state": "known",
+          "value": "Synthetic first-pass exposure record."
+        },
+        "machine_assistance": {
+          "state": "known",
+          "value": "All fixture contents were authored with AI; no actual human review."
+        },
+        "roster_packet_id": {
+          "state": "known",
+          "value": "submission-roster"
+        }
+      },
+      "submission_stage": "initial",
+      "submitted_at": {
+        "state": "known",
+        "value": "2026-09-22T00:00:00Z"
+      },
+      "initial_submission_ref": {
+        "state": "not_applicable",
+        "reason": "Synthetic software example; no actual people or reviews."
+      },
+      "independence": {
+        "declared_independent": {
+          "state": "known",
+          "value": true
+        },
+        "evidence_refs": [
+          {
+            "record_type": "artifact",
+            "record_id": "evidence-notes",
+            "record_version": "0.1"
+          }
+        ],
+        "limitations": []
+      },
+      "blinding": {
+        "pack_id": {
+          "state": "known",
+          "value": "fixture-blind-pack"
+        },
+        "withheld_fields": [
+          "model",
+          "condition",
+          "proposed_role",
+          "other_judgments"
+        ],
+        "limitations": [
+          "Artifact contents may reveal a mechanism; fixture only."
+        ]
+      },
+      "judgment": {
+        "assignment_status": "assigned",
+        "structural_class_id": {
+          "state": "known",
+          "value": "SORT-ADJ"
+        },
+        "validity_status": "not_assessed",
+        "rationale": {
+          "state": "known",
+          "value": "Stipulated inspection of all constitutive relations and reachable branches."
+        },
+        "evidence_refs": [
+          {
+            "record_type": "artifact",
+            "record_id": "evidence-notes",
+            "record_version": "0.1"
+          }
+        ]
+      },
+      "original_submission_packet": {
+        "state": "known",
+        "value": "submission-label-candidate-P01-A-1-2"
+      }
+    },
+    {
+      "record_type": "human_review",
+      "record_id": "label-candidate-P01-A-1-3",
+      "record_version": "0.1",
+      "study_id": "fixture-study",
+      "study_version": "v1",
+      "revision": 1,
+      "scope": {
+        "claim_id": "fixture-format",
+        "task_id": "bounded_integer_sort",
+        "task_version": "0.1"
+      },
+      "depends_on": [],
+      "lineage_refs": [],
+      "supersedes": {
+        "state": "not_applicable",
+        "reason": "Initial fixture record has no superseded predecessor."
+      },
+      "artifact_ref": {
+        "record_type": "artifact",
+        "record_id": "candidate-P01-A-1-3",
+        "record_version": "0.1"
+      },
+      "artifact_sha256": "5213b7862afbdbe2ed927b03c056268ed9fb41aad08908130b370d730b2dd25a",
+      "reviewer": {
+        "reviewer_id": "fixture-reviewer-1",
+        "entity_kind": "human",
+        "qualifications": {
+          "state": "known",
+          "value": "Stipulated sorting-domain qualification; no actual credential."
+        },
+        "relationships": {
+          "state": "known",
+          "value": "Stipulated no relationship to candidate source."
+        },
+        "exposure": {
+          "state": "known",
+          "value": "Synthetic first-pass exposure record."
+        },
+        "machine_assistance": {
+          "state": "known",
+          "value": "All fixture contents were authored with AI; no actual human review."
+        },
+        "roster_packet_id": {
+          "state": "known",
+          "value": "submission-roster"
+        }
+      },
+      "submission_stage": "initial",
+      "submitted_at": {
+        "state": "known",
+        "value": "2026-09-22T00:00:00Z"
+      },
+      "initial_submission_ref": {
+        "state": "not_applicable",
+        "reason": "Synthetic software example; no actual people or reviews."
+      },
+      "independence": {
+        "declared_independent": {
+          "state": "known",
+          "value": true
+        },
+        "evidence_refs": [
+          {
+            "record_type": "artifact",
+            "record_id": "evidence-notes",
+            "record_version": "0.1"
+          }
+        ],
+        "limitations": []
+      },
+      "blinding": {
+        "pack_id": {
+          "state": "known",
+          "value": "fixture-blind-pack"
+        },
+        "withheld_fields": [
+          "model",
+          "condition",
+          "proposed_role",
+          "other_judgments"
+        ],
+        "limitations": [
+          "Artifact contents may reveal a mechanism; fixture only."
+        ]
+      },
+      "judgment": {
+        "assignment_status": "assigned",
+        "structural_class_id": {
+          "state": "known",
+          "value": "SORT-ADJ"
+        },
+        "validity_status": "not_assessed",
+        "rationale": {
+          "state": "known",
+          "value": "Stipulated inspection of all constitutive relations and reachable branches."
+        },
+        "evidence_refs": [
+          {
+            "record_type": "artifact",
+            "record_id": "evidence-notes",
+            "record_version": "0.1"
+          }
+        ]
+      },
+      "original_submission_packet": {
+        "state": "known",
+        "value": "submission-label-candidate-P01-A-1-3"
+      }
+    },
+    {
+      "record_type": "human_review",
+      "record_id": "label-candidate-P01-A-1-4",
+      "record_version": "0.1",
+      "study_id": "fixture-study",
+      "study_version": "v1",
+      "revision": 1,
+      "scope": {
+        "claim_id": "fixture-format",
+        "task_id": "bounded_integer_sort",
+        "task_version": "0.1"
+      },
+      "depends_on": [],
+      "lineage_refs": [],
+      "supersedes": {
+        "state": "not_applicable",
+        "reason": "Initial fixture record has no superseded predecessor."
+      },
+      "artifact_ref": {
+        "record_type": "artifact",
+        "record_id": "candidate-P01-A-1-4",
+        "record_version": "0.1"
+      },
+      "artifact_sha256": "12f77bd0e6c0efd415bf298b62ab37223e95b3690263b0e9583ddaf196ca3afc",
+      "reviewer": {
+        "reviewer_id": "fixture-reviewer-1",
+        "entity_kind": "human",
+        "qualifications": {
+          "state": "known",
+          "value": "Stipulated sorting-domain qualification; no actual credential."
+        },
+        "relationships": {
+          "state": "known",
+          "value": "Stipulated no relationship to candidate source."
+        },
+        "exposure": {
+          "state": "known",
+          "value": "Synthetic first-pass exposure record."
+        },
+        "machine_assistance": {
+          "state": "known",
+          "value": "All fixture contents were authored with AI; no actual human review."
+        },
+        "roster_packet_id": {
+          "state": "known",
+          "value": "submission-roster"
+        }
+      },
+      "submission_stage": "initial",
+      "submitted_at": {
+        "state": "known",
+        "value": "2026-09-22T00:00:00Z"
+      },
+      "initial_submission_ref": {
+        "state": "not_applicable",
+        "reason": "Synthetic software example; no actual people or reviews."
+      },
+      "independence": {
+        "declared_independent": {
+          "state": "known",
+          "value": true
+        },
+        "evidence_refs": [
+          {
+            "record_type": "artifact",
+            "record_id": "evidence-notes",
+            "record_version": "0.1"
+          }
+        ],
+        "limitations": []
+      },
+      "blinding": {
+        "pack_id": {
+          "state": "known",
+          "value": "fixture-blind-pack"
+        },
+        "withheld_fields": [
+          "model",
+          "condition",
+          "proposed_role",
+          "other_judgments"
+        ],
+        "limitations": [
+          "Artifact contents may reveal a mechanism; fixture only."
+        ]
+      },
+      "judgment": {
+        "assignment_status": "assigned",
+        "structural_class_id": {
+          "state": "known",
+          "value": "SORT-ADJ"
+        },
+        "validity_status": "not_assessed",
+        "rationale": {
+          "state": "known",
+          "value": "Stipulated inspection of all constitutive relations and reachable branches."
+        },
+        "evidence_refs": [
+          {
+            "record_type": "artifact",
+            "record_id": "evidence-notes",
+            "record_version": "0.1"
+          }
+        ]
+      },
+      "original_submission_packet": {
+        "state": "known",
+        "value": "submission-label-candidate-P01-A-1-4"
+      }
+    },
+    {
+      "record_type": "human_review",
+      "record_id": "label-candidate-P01-A-1-5",
+      "record_version": "0.1",
+      "study_id": "fixture-study",
+      "study_version": "v1",
+      "revision": 1,
+      "scope": {
+        "claim_id": "fixture-format",
+        "task_id": "bounded_integer_sort",
+        "task_version": "0.1"
+      },
+      "depends_on": [],
+      "lineage_refs": [],
+      "supersedes": {
+        "state": "not_applicable",
+        "reason": "Initial fixture record has no superseded predecessor."
+      },
+      "artifact_ref": {
+        "record_type": "artifact",
+        "record_id": "candidate-P01-A-1-5",
+        "record_version": "0.1"
+      },
+      "artifact_sha256": "5c4b585fea1fc7962fc215d0ec097027cee31fcc0267137588e7212394f4e5b8",
+      "reviewer": {
+        "reviewer_id": "fixture-reviewer-1",
+        "entity_kind": "human",
+        "qualifications": {
+          "state": "known",
+          "value": "Stipulated sorting-domain qualification; no actual credential."
+        },
+        "relationships": {
+          "state": "known",
+          "value": "Stipulated no relationship to candidate source."
+        },
+        "exposure": {
+          "state": "known",
+          "value": "Synthetic first-pass exposure record."
+        },
+        "machine_assistance": {
+          "state": "known",
+          "value": "All fixture contents were authored with AI; no actual human review."
+        },
+        "roster_packet_id": {
+          "state": "known",
+          "value": "submission-roster"
+        }
+      },
+      "submission_stage": "initial",
+      "submitted_at": {
+        "state": "known",
+        "value": "2026-09-22T00:00:00Z"
+      },
+      "initial_submission_ref": {
+        "state": "not_applicable",
+        "reason": "Synthetic software example; no actual people or reviews."
+      },
+      "independence": {
+        "declared_independent": {
+          "state": "known",
+          "value": true
+        },
+        "evidence_refs": [
+          {
+            "record_type": "artifact",
+            "record_id": "evidence-notes",
+            "record_version": "0.1"
+          }
+        ],
+        "limitations": []
+      },
+      "blinding": {
+        "pack_id": {
+          "state": "known",
+          "value": "fixture-blind-pack"
+        },
+        "withheld_fields": [
+          "model",
+          "condition",
+          "proposed_role",
+          "other_judgments"
+        ],
+        "limitations": [
+          "Artifact contents may reveal a mechanism; fixture only."
+        ]
+      },
+      "judgment": {
+        "assignment_status": "assigned",
+        "structural_class_id": {
+          "state": "known",
+          "value": "SORT-ADJ"
+        },
+        "validity_status": "not_assessed",
+        "rationale": {
+          "state": "known",
+          "value": "Stipulated inspection of all constitutive relations and reachable branches."
+        },
+        "evidence_refs": [
+          {
+            "record_type": "artifact",
+            "record_id": "evidence-notes",
+            "record_version": "0.1"
+          }
+        ]
+      },
+      "original_submission_packet": {
+        "state": "known",
+        "value": "submission-label-candidate-P01-A-1-5"
+      }
+    },
+    {
+      "record_type": "compilation_receipt",
+      "record_id": "bridge-map",
+      "record_version": "0.1",
+      "study_id": "fixture-study",
+      "study_version": "v1",
+      "revision": 1,
+      "scope": {
+        "claim_id": "fixture-format",
+        "task_id": "bounded_integer_sort",
+        "task_version": "0.1"
+      },
+      "depends_on": [],
+      "lineage_refs": [],
+      "supersedes": {
+        "state": "not_applicable",
+        "reason": "Initial fixture record has no superseded predecessor."
+      },
+      "input_snapshots": [],
+      "target_profile": "m_only",
+      "target_input_schema_version": "0.1",
+      "disposition": "readiness_only",
+      "claim_disposition": "restricted",
+      "analysis_bundle_created": false,
+      "id_map": [
+        {
+          "source_ref": {
+            "record_type": "artifact",
+            "record_id": "prompt-call-P01-A-1",
+            "record_version": "0.1"
+          },
+          "target_record_type": "artifact",
+          "target_record_id": "sent-prompt"
+        },
+        {
+          "source_ref": {
+            "record_type": "artifact",
+            "record_id": "response-call-P01-A-1",
+            "record_version": "0.1"
+          },
+          "target_record_type": "raw_artifact",
+          "target_record_id": "original-response"
+        },
+        {
+          "source_ref": {
+            "record_type": "collection_ledger",
+            "record_id": "call-P01-A-1",
+            "record_version": "0.1"
+          },
+          "target_record_type": "attempt",
+          "target_record_id": "call1"
+        },
+        {
+          "source_ref": {
+            "record_type": "collection_ledger",
+            "record_id": "call-P01-A-1",
+            "record_version": "0.1"
+          },
+          "target_record_type": "cell",
+          "target_record_id": "cell1"
+        },
+        {
+          "source_ref": {
+            "record_type": "artifact",
+            "record_id": "candidate-P01-A-1-1",
+            "record_version": "0.1"
+          },
+          "target_record_type": "artifact",
+          "target_record_id": "body1"
+        },
+        {
+          "source_ref": {
+            "record_type": "extraction",
+            "record_id": "extract-call-P01-A-1",
+            "record_version": "0.1"
+          },
+          "target_record_type": "realization",
+          "target_record_id": "s1"
+        },
+        {
+          "source_ref": {
+            "record_type": "human_review",
+            "record_id": "label-candidate-P01-A-1-1",
+            "record_version": "0.1"
+          },
+          "target_record_type": "assignment",
+          "target_record_id": "a1"
+        },
+        {
+          "source_ref": {
+            "record_type": "artifact",
+            "record_id": "candidate-P01-A-1-2",
+            "record_version": "0.1"
+          },
+          "target_record_type": "artifact",
+          "target_record_id": "body2"
+        },
+        {
+          "source_ref": {
+            "record_type": "extraction",
+            "record_id": "extract-call-P01-A-1",
+            "record_version": "0.1"
+          },
+          "target_record_type": "realization",
+          "target_record_id": "s2"
+        },
+        {
+          "source_ref": {
+            "record_type": "human_review",
+            "record_id": "label-candidate-P01-A-1-2",
+            "record_version": "0.1"
+          },
+          "target_record_type": "assignment",
+          "target_record_id": "a2"
+        },
+        {
+          "source_ref": {
+            "record_type": "artifact",
+            "record_id": "candidate-P01-A-1-3",
+            "record_version": "0.1"
+          },
+          "target_record_type": "artifact",
+          "target_record_id": "body3"
+        },
+        {
+          "source_ref": {
+            "record_type": "extraction",
+            "record_id": "extract-call-P01-A-1",
+            "record_version": "0.1"
+          },
+          "target_record_type": "realization",
+          "target_record_id": "s3"
+        },
+        {
+          "source_ref": {
+            "record_type": "human_review",
+            "record_id": "label-candidate-P01-A-1-3",
+            "record_version": "0.1"
+          },
+          "target_record_type": "assignment",
+          "target_record_id": "a3"
+        },
+        {
+          "source_ref": {
+            "record_type": "artifact",
+            "record_id": "candidate-P01-A-1-4",
+            "record_version": "0.1"
+          },
+          "target_record_type": "artifact",
+          "target_record_id": "body4"
+        },
+        {
+          "source_ref": {
+            "record_type": "extraction",
+            "record_id": "extract-call-P01-A-1",
+            "record_version": "0.1"
+          },
+          "target_record_type": "realization",
+          "target_record_id": "s4"
+        },
+        {
+          "source_ref": {
+            "record_type": "human_review",
+            "record_id": "label-candidate-P01-A-1-4",
+            "record_version": "0.1"
+          },
+          "target_record_type": "assignment",
+          "target_record_id": "a4"
+        },
+        {
+          "source_ref": {
+            "record_type": "artifact",
+            "record_id": "candidate-P01-A-1-5",
+            "record_version": "0.1"
+          },
+          "target_record_type": "artifact",
+          "target_record_id": "body5"
+        },
+        {
+          "source_ref": {
+            "record_type": "extraction",
+            "record_id": "extract-call-P01-A-1",
+            "record_version": "0.1"
+          },
+          "target_record_type": "realization",
+          "target_record_id": "s5"
+        },
+        {
+          "source_ref": {
+            "record_type": "human_review",
+            "record_id": "label-candidate-P01-A-1-5",
+            "record_version": "0.1"
+          },
+          "target_record_type": "assignment",
+          "target_record_id": "a5"
+        }
+      ],
+      "outputs": [],
+      "unresolved_restrictions": [
+        "Missing actual evidence; fixture provenance remains fixture_only."
+      ],
+      "mapping_errors": [],
+      "evidence_refs": []
+    },
+    {
+      "record_type": "human_review",
+      "record_id": "audit-candidate-P01-A-1-1",
+      "record_version": "0.1",
+      "study_id": "fixture-study",
+      "study_version": "v1",
+      "revision": 1,
+      "scope": {
+        "claim_id": "fixture-format",
+        "task_id": "bounded_integer_sort",
+        "task_version": "0.1"
+      },
+      "depends_on": [],
+      "lineage_refs": [],
+      "supersedes": {
+        "state": "not_applicable",
+        "reason": "Initial fixture record has no superseded predecessor."
+      },
+      "artifact_ref": {
+        "record_type": "artifact",
+        "record_id": "candidate-P01-A-1-1",
+        "record_version": "0.1"
+      },
+      "artifact_sha256": "286ffcac37b5a41e7c3cb44142959c624b86f2cf7aafdd4aea337e9c8e559bbf",
+      "reviewer": {
+        "reviewer_id": "fixture-reviewer-2",
+        "entity_kind": "human",
+        "qualifications": {
+          "state": "known",
+          "value": "Stipulated sorting-domain qualification; no actual credential."
+        },
+        "relationships": {
+          "state": "known",
+          "value": "Stipulated no relationship to candidate source."
+        },
+        "exposure": {
+          "state": "known",
+          "value": "Synthetic first-pass exposure record."
+        },
+        "machine_assistance": {
+          "state": "known",
+          "value": "All fixture contents were authored with AI; no actual human review."
+        },
+        "roster_packet_id": {
+          "state": "known",
+          "value": "submission-roster"
+        }
+      },
+      "submission_stage": "initial",
+      "submitted_at": {
+        "state": "known",
+        "value": "2026-09-22T00:00:00Z"
+      },
+      "initial_submission_ref": {
+        "state": "not_applicable",
+        "reason": "Synthetic software example; no actual people or reviews."
+      },
+      "independence": {
+        "declared_independent": {
+          "state": "known",
+          "value": true
+        },
+        "evidence_refs": [
+          {
+            "record_type": "artifact",
+            "record_id": "evidence-notes",
+            "record_version": "0.1"
+          }
+        ],
+        "limitations": []
+      },
+      "blinding": {
+        "pack_id": {
+          "state": "known",
+          "value": "fixture-blind-pack"
+        },
+        "withheld_fields": [
+          "model",
+          "condition",
+          "proposed_role",
+          "other_judgments"
+        ],
+        "limitations": [
+          "Artifact contents may reveal a mechanism; fixture only."
+        ]
+      },
+      "judgment": {
+        "assignment_status": "assigned",
+        "structural_class_id": {
+          "state": "known",
+          "value": "SORT-ADJ"
+        },
+        "validity_status": "not_assessed",
+        "rationale": {
+          "state": "known",
+          "value": "Stipulated inspection of all constitutive relations and reachable branches."
+        },
+        "evidence_refs": [
+          {
+            "record_type": "artifact",
+            "record_id": "evidence-notes",
+            "record_version": "0.1"
+          }
+        ]
+      },
+      "original_submission_packet": {
+        "state": "known",
+        "value": "submission-audit-candidate-P01-A-1-1"
+      }
+    },
+    {
+      "record_type": "audit_selection",
+      "record_id": "audit-selection-candidate-P01-A-1-1",
+      "record_version": "0.1",
+      "study_id": "fixture-study",
+      "study_version": "v1",
+      "revision": 1,
+      "scope": {
+        "claim_id": "fixture-format",
+        "task_id": "bounded_integer_sort",
+        "task_version": "0.1"
+      },
+      "depends_on": [],
+      "lineage_refs": [],
+      "supersedes": {
+        "state": "not_applicable",
+        "reason": "Initial fixture record has no superseded predecessor."
+      },
+      "formula_id": "hero_systematic_positions_v1",
+      "position": {
+        "block_id": "P01",
+        "condition": "A",
+        "group_index": 1,
+        "within_group_index": 1
+      },
+      "reasons": [
+        "systematic"
+      ],
+      "artifact_ref": {
+        "state": "known",
+        "value": {
+          "record_type": "artifact",
+          "record_id": "candidate-P01-A-1-1",
+          "record_version": "0.1"
+        }
+      },
+      "opportunity": "present",
+      "review_refs": [
+        {
+          "record_type": "human_review",
+          "record_id": "audit-candidate-P01-A-1-1",
+          "record_version": "0.1"
+        }
+      ],
+      "distinct_artifact_count": 1,
+      "basis": {
+        "state": "known",
+        "value": "Missing planned position is retained as an audit opportunity."
+      }
+    },
+    {
+      "record_type": "artifact",
+      "record_id": "legacy-carrier",
+      "record_version": "0.1",
+      "study_id": "fixture-study",
+      "study_version": "v1",
+      "revision": 1,
+      "scope": {
+        "claim_id": "fixture-format",
+        "task_id": "bounded_integer_sort",
+        "task_version": "0.1"
+      },
+      "depends_on": [],
+      "lineage_refs": [],
+      "supersedes": {
+        "state": "not_applicable",
+        "reason": "Initial fixture record has no superseded predecessor."
+      },
+      "content": {
+        "state": "known",
+        "value": {
+          "packet_id": "legacy-5"
+        }
+      },
+      "sha256": {
+        "state": "known",
+        "value": "dbc5e1673732718014210eb6928f759213e0299f1c7305b25879042fccfb8230"
+      },
+      "size_bytes": {
+        "state": "known",
+        "value": 5297
+      },
+      "artifact_role": "source",
+      "original_source": {
+        "state": "known",
+        "value": "Hand-authored inert text fixture."
+      },
+      "transformations": [],
+      "ai_assistance": {
+        "state": "known",
+        "value": "Software fixture construction."
+      },
+      "exposure": {
+        "state": "known",
+        "value": "Public fixture."
+      },
+      "evidence_refs": []
+    }
+  ]
+}

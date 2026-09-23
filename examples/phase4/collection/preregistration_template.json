@@ -1,0 +1,181 @@
+{
+  "claim_scope": "Prepared HERO fixed-suite design; no external study has been registered or collected.",
+  "currentness": {
+    "assessed_at": {
+      "reason": "Not supplied; preparation does not observe an external operation.",
+      "state": "unknown"
+    },
+    "basis": {
+      "reason": "Not supplied; preparation does not observe an external operation.",
+      "state": "unknown"
+    },
+    "expires_at": {
+      "reason": "Not supplied; preparation does not observe an external operation.",
+      "state": "unknown"
+    },
+    "state": "unresolved"
+  },
+  "depends_on": [],
+  "exposure": {
+    "reason": "Not supplied; preparation does not observe an external operation.",
+    "state": "unknown"
+  },
+  "frame_definition": {
+    "admissible_substitutions": {
+      "reason": "Not supplied; preparation does not observe an external operation.",
+      "state": "unknown"
+    },
+    "consequence_horizon": {
+      "reason": "Not supplied; preparation does not observe an external operation.",
+      "state": "unknown"
+    },
+    "consequence_signature_spec": {
+      "reason": "Not supplied; preparation does not observe an external operation.",
+      "state": "unknown"
+    },
+    "equivalence_rule_ref": {
+      "reason": "Not supplied; preparation does not observe an external operation.",
+      "state": "unknown"
+    },
+    "evidence_requirement": {
+      "reason": "Not supplied; preparation does not observe an external operation.",
+      "state": "unknown"
+    },
+    "exceptional_case_rules": {
+      "reason": "Not supplied; preparation does not observe an external operation.",
+      "state": "unknown"
+    },
+    "load_bearing_invariants": [],
+    "task_context": {
+      "reason": "Not supplied; preparation does not observe an external operation.",
+      "state": "unknown"
+    }
+  },
+  "lineage_refs": [],
+  "pins": {
+    "analytic_resolution_id": "sorting_mechanism_family",
+    "analytic_resolution_version": "0.1",
+    "reference_registry_id": "sorting_reference_eight",
+    "reference_registry_version": "0.1",
+    "structural_schema_id": "sorting_mechanism_partition",
+    "structural_schema_version": "0.1",
+    "task_id": "bounded_integer_sort",
+    "task_version": "0.1",
+    "validity_rubric_ref": "bounded_integer_sort_validity_v1"
+  },
+  "preregistration": {
+    "evidence_refs": [],
+    "exposure_at_registration": {
+      "reason": "Not supplied; preparation does not observe an external operation.",
+      "state": "unknown"
+    },
+    "registered_at": {
+      "reason": "Not supplied; preparation does not observe an external operation.",
+      "state": "unknown"
+    },
+    "status": "not_registered"
+  },
+  "protocol": {
+    "budget": {
+      "currency": {
+        "reason": "Not supplied; preparation does not observe an external operation.",
+        "state": "unknown"
+      },
+      "max_calls": {
+        "state": "known",
+        "value": 72
+      },
+      "max_output_tokens": {
+        "state": "known",
+        "value": 589824
+      },
+      "max_positions": {
+        "state": "known",
+        "value": 360
+      },
+      "monetary_ceiling": {
+        "reason": "Not supplied; preparation does not observe an external operation.",
+        "state": "unknown"
+      }
+    },
+    "controls": {
+      "cap_semantics": {
+        "reason": "Not supplied; preparation does not observe an external operation.",
+        "state": "unknown"
+      },
+      "frequency_penalty": {
+        "reason": "Not supplied; preparation does not observe an external operation.",
+        "state": "unknown"
+      },
+      "fresh_context": {
+        "reason": "Not supplied; preparation does not observe an external operation.",
+        "state": "unknown"
+      },
+      "hidden_controls": {
+        "reason": "Not supplied; preparation does not observe an external operation.",
+        "state": "unknown"
+      },
+      "output_allowance": {
+        "reason": "Not supplied; preparation does not observe an external operation.",
+        "state": "unknown"
+      },
+      "presence_penalty": {
+        "reason": "Not supplied; preparation does not observe an external operation.",
+        "state": "unknown"
+      },
+      "seed": {
+        "reason": "Not supplied; preparation does not observe an external operation.",
+        "state": "unknown"
+      },
+      "temperature": {
+        "reason": "Not supplied; preparation does not observe an external operation.",
+        "state": "unknown"
+      },
+      "tools_requested": {
+        "reason": "Not supplied; preparation does not observe an external operation.",
+        "state": "unknown"
+      },
+      "top_p": {
+        "reason": "Not supplied; preparation does not observe an external operation.",
+        "state": "unknown"
+      },
+      "wrapper_knowledge": {
+        "reason": "Not supplied; preparation does not observe an external operation.",
+        "state": "unknown"
+      }
+    },
+    "design": "sorting_abc",
+    "legacy_profile_input": {
+      "reason": "Not supplied; preparation does not observe an external operation.",
+      "state": "unknown"
+    },
+    "longitudinal_input": {
+      "reason": "Not supplied; preparation does not observe an external operation.",
+      "state": "unknown"
+    },
+    "prompt_refs": [],
+    "protocol_id": "hero-main",
+    "protocol_version": "0.1"
+  },
+  "record_id": "registration-main",
+  "record_type": "study_registration",
+  "record_version": "0.1",
+  "requested_profile": "hero_sort_abc_v1",
+  "revision": 1,
+  "scope": {
+    "claim_id": "hero-fixed-suite",
+    "task_id": "bounded_integer_sort",
+    "task_version": "0.1"
+  },
+  "source_pins": {
+    "EC": "002d2393d05cb2c8b1db0a70e844e3d775e2be2155db7b2ffaadaa8080c8b950",
+    "SD": "357c0c3994e34fc1831ce91bf1c7e579925d64827579f80eb0a8708e85c93f32",
+    "SI": "80c193231af343d383544cee924a11fbb063a5c4ccee02d996ea4f904979565a"
+  },
+  "study_id": "prepared-study",
+  "study_version": "v1",
+  "supersedes": {
+    "reason": "New unexecuted preparation record.",
+    "state": "not_applicable"
+  }
+}

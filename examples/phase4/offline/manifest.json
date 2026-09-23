@@ -1,0 +1,1038 @@
+{
+  "version": "0.1",
+  "material_role": "fixture",
+  "evidence_policy": "fixture_only",
+  "purpose": "Expected offline CLI behavior; all cases are software fixtures.",
+  "cases": [
+    {
+      "case_id": "readiness_only",
+      "material_role": "fixture",
+      "evidence_policy": "fixture_only",
+      "study_path": "readiness_only/study.json",
+      "description": "A registered passive envelope with no supplied artifacts or evidence.",
+      "expected_meaning": "Inspection preserves missing evidence. Normal preparation cannot create a numerical bundle; explicit readiness-only preparation creates four companion files.",
+      "extra_options": [],
+      "input_inventory": [
+        {
+          "path": "study.json",
+          "size_bytes": 7806,
+          "sha256": "76ad699fcdb04aa8403f2db6948e2cb2b21612851b2a21c5eeefeef62fe69c4d"
+        }
+      ],
+      "operations": {
+        "inspect": {
+          "exit_code": 0,
+          "output_files": [],
+          "analysis_bundle_created": false
+        },
+        "prepare": {
+          "exit_code": 2,
+          "output_files": [],
+          "analysis_bundle_created": false
+        },
+        "prepare_readiness_only": {
+          "exit_code": 0,
+          "output_files": [
+            "compilation_manifest.json",
+            "provenance_map.json",
+            "study_readiness.json",
+            "study_readiness.md"
+          ],
+          "analysis_bundle_created": false
+        }
+      },
+      "analysis": {
+        "available": false,
+        "expected_exit_code": null,
+        "output_files": []
+      },
+      "empirical_evidence_established": false
+    },
+    {
+      "case_id": "qualified_synthetic",
+      "material_role": "fixture",
+      "evidence_policy": "fixture_only",
+      "study_path": "qualified_synthetic/study.json",
+      "description": "Five inert candidate texts have explicit original collection/extraction associations, stipulated mechanism evidence and current legacy assignment mappings. One fixed-position audit has a consistent second synthetic review.",
+      "expected_meaning": "All five labels qualify under fixture policy for M arithmetic. Validity remains not_assessed. The small supplied group does not complete the 72-call study or its human-audit obligations; scientific claims remain restricted.",
+      "extra_options": [
+        "--qualification-packet-id",
+        "submission-qualification",
+        "--mapping-receipt-id",
+        "bridge-map"
+      ],
+      "input_inventory": [
+        {
+          "path": "candidate-P01-A-1-1.txt",
+          "size_bytes": 33,
+          "sha256": "286ffcac37b5a41e7c3cb44142959c624b86f2cf7aafdd4aea337e9c8e559bbf"
+        },
+        {
+          "path": "candidate-P01-A-1-2.txt",
+          "size_bytes": 33,
+          "sha256": "912a8ee8b9461d10c3586c30ad17d6f93d4c9e3074b850c664b3542989c38008"
+        },
+        {
+          "path": "candidate-P01-A-1-3.txt",
+          "size_bytes": 33,
+          "sha256": "5213b7862afbdbe2ed927b03c056268ed9fb41aad08908130b370d730b2dd25a"
+        },
+        {
+          "path": "candidate-P01-A-1-4.txt",
+          "size_bytes": 33,
+          "sha256": "12f77bd0e6c0efd415bf298b62ab37223e95b3690263b0e9583ddaf196ca3afc"
+        },
+        {
+          "path": "candidate-P01-A-1-5.txt",
+          "size_bytes": 33,
+          "sha256": "5c4b585fea1fc7962fc215d0ec097027cee31fcc0267137588e7212394f4e5b8"
+        },
+        {
+          "path": "carrier/body1.txt",
+          "size_bytes": 33,
+          "sha256": "286ffcac37b5a41e7c3cb44142959c624b86f2cf7aafdd4aea337e9c8e559bbf"
+        },
+        {
+          "path": "carrier/body2.txt",
+          "size_bytes": 33,
+          "sha256": "912a8ee8b9461d10c3586c30ad17d6f93d4c9e3074b850c664b3542989c38008"
+        },
+        {
+          "path": "carrier/body3.txt",
+          "size_bytes": 33,
+          "sha256": "5213b7862afbdbe2ed927b03c056268ed9fb41aad08908130b370d730b2dd25a"
+        },
+        {
+          "path": "carrier/body4.txt",
+          "size_bytes": 33,
+          "sha256": "12f77bd0e6c0efd415bf298b62ab37223e95b3690263b0e9583ddaf196ca3afc"
+        },
+        {
+          "path": "carrier/body5.txt",
+          "size_bytes": 33,
+          "sha256": "5c4b585fea1fc7962fc215d0ec097027cee31fcc0267137588e7212394f4e5b8"
+        },
+        {
+          "path": "carrier/bundle.json",
+          "size_bytes": 5297,
+          "sha256": "dbc5e1673732718014210eb6928f759213e0299f1c7305b25879042fccfb8230"
+        },
+        {
+          "path": "carrier/evidence.jsonl",
+          "size_bytes": 11955,
+          "sha256": "87c9ddb4aaa50b9a14672f9b96c8f91803785d215e2a086e38a153fc25e1de94"
+        },
+        {
+          "path": "carrier/original-response.txt",
+          "size_bytes": 315,
+          "sha256": "9ebd19d0c8a5b335776d9f7dfcb0bffca081268118f4c27b1225e503978b6ce1"
+        },
+        {
+          "path": "carrier/records.jsonl",
+          "size_bytes": 15232,
+          "sha256": "ab3818b5cd90c5a92c1fe44a910a6ff1c0cec35f9bb184313b797f223aa5c9de"
+        },
+        {
+          "path": "carrier/sent-prompt.txt",
+          "size_bytes": 1668,
+          "sha256": "005ad5a432d4e0867b60c43d4bd73279fe2c9e13aa441d82a7100036074ef081"
+        },
+        {
+          "path": "evidence-notes.txt",
+          "size_bytes": 51,
+          "sha256": "a70a5c08dd5db92b23853d00b96d508f74a37207d75a177b606b7eb9ed4473d2"
+        },
+        {
+          "path": "prompt-call-P01-A-1.txt",
+          "size_bytes": 1668,
+          "sha256": "005ad5a432d4e0867b60c43d4bd73279fe2c9e13aa441d82a7100036074ef081"
+        },
+        {
+          "path": "response-call-P01-A-1.txt",
+          "size_bytes": 315,
+          "sha256": "9ebd19d0c8a5b335776d9f7dfcb0bffca081268118f4c27b1225e503978b6ce1"
+        },
+        {
+          "path": "study.json",
+          "size_bytes": 74627,
+          "sha256": "3a62e148705d89d29f0e493f8ee463be30e05386b1e8924bae4a0e5e896d3166"
+        },
+        {
+          "path": "submission-audit-candidate-P01-A-1-1.json",
+          "size_bytes": 3431,
+          "sha256": "3b61e18165f582e7c1d0b28162c4d67cf8dbe2a8423961818d3a457a6cfd28f9"
+        },
+        {
+          "path": "submission-call-P01-A-1.json",
+          "size_bytes": 7830,
+          "sha256": "edf37b8c54dc03db5c6ad4405334a5e3f28a93e7e2be98ca5504ad1130960af6"
+        },
+        {
+          "path": "submission-label-candidate-P01-A-1-1.json",
+          "size_bytes": 3431,
+          "sha256": "9ce291ebe5dd478c0bacfd6a5cdce946ba03976c924381effc4dce468fea4738"
+        },
+        {
+          "path": "submission-label-candidate-P01-A-1-2.json",
+          "size_bytes": 3431,
+          "sha256": "aa7af397f6933b4621afee9c5f9c7541e7d2eb8d561472469f63760e6619e934"
+        },
+        {
+          "path": "submission-label-candidate-P01-A-1-3.json",
+          "size_bytes": 3431,
+          "sha256": "cb6ec61a6775e7122886dfec8ac7d4afefec2867a44b42a3f1a6f2852230601a"
+        },
+        {
+          "path": "submission-label-candidate-P01-A-1-4.json",
+          "size_bytes": 3431,
+          "sha256": "a2e06d2a6c83f63f0e3432634566ac35b5d1bc5ce3fb0b2a8faf9925f06a37d8"
+        },
+        {
+          "path": "submission-label-candidate-P01-A-1-5.json",
+          "size_bytes": 3431,
+          "sha256": "1e0971a9af90e84fe2f258bd6456bc03b7c3df171108eed656d9377eb3d90db8"
+        },
+        {
+          "path": "submission-qualification.json",
+          "size_bytes": 11528,
+          "sha256": "109d273e257e40b0bb2c7f998b04ec63c9eac931b035269ce2b33a9d2f8ab015"
+        },
+        {
+          "path": "submission-roster.json",
+          "size_bytes": 2938,
+          "sha256": "7f7bae1287cf0e50b8543e0d0dc188baf318b5e3731319714d32647b3ae7fdd6"
+        }
+      ],
+      "operations": {
+        "inspect": {
+          "exit_code": 0,
+          "output_files": [],
+          "analysis_bundle_created": false
+        },
+        "prepare": {
+          "exit_code": 0,
+          "output_files": [
+            "body1.txt",
+            "body2.txt",
+            "body3.txt",
+            "body4.txt",
+            "body5.txt",
+            "bundle.json",
+            "compilation_manifest.json",
+            "evidence.jsonl",
+            "original-response.txt",
+            "provenance_map.json",
+            "records.jsonl",
+            "sent-prompt.txt",
+            "study_readiness.json",
+            "study_readiness.md"
+          ],
+          "analysis_bundle_created": true
+        },
+        "prepare_readiness_only": {
+          "exit_code": 0,
+          "output_files": [
+            "compilation_manifest.json",
+            "provenance_map.json",
+            "study_readiness.json",
+            "study_readiness.md"
+          ],
+          "analysis_bundle_created": false
+        }
+      },
+      "analysis": {
+        "available": true,
+        "expected_exit_code": 0,
+        "output_files": [
+          "report.json",
+          "report.md",
+          "run_manifest.json"
+        ]
+      },
+      "empirical_evidence_established": false
+    },
+    {
+      "case_id": "missing_audit",
+      "material_role": "fixture",
+      "evidence_policy": "fixture_only",
+      "study_path": "missing_audit/study.json",
+      "description": "Five original emitted candidates have stipulated source-bound membership evidence. The fixed audit selection has no supplied human audit.",
+      "expected_meaning": "Missing audit evidence remains visible and restricts stronger claims. Defensible fixture label-conditioned arithmetic remains available. The missing audit does not remove or replace an original realization.",
+      "extra_options": [
+        "--qualification-packet-id",
+        "submission-qualification",
+        "--mapping-receipt-id",
+        "bridge-map"
+      ],
+      "input_inventory": [
+        {
+          "path": "candidate-P01-A-1-1.txt",
+          "size_bytes": 33,
+          "sha256": "286ffcac37b5a41e7c3cb44142959c624b86f2cf7aafdd4aea337e9c8e559bbf"
+        },
+        {
+          "path": "candidate-P01-A-1-2.txt",
+          "size_bytes": 33,
+          "sha256": "912a8ee8b9461d10c3586c30ad17d6f93d4c9e3074b850c664b3542989c38008"
+        },
+        {
+          "path": "candidate-P01-A-1-3.txt",
+          "size_bytes": 33,
+          "sha256": "5213b7862afbdbe2ed927b03c056268ed9fb41aad08908130b370d730b2dd25a"
+        },
+        {
+          "path": "candidate-P01-A-1-4.txt",
+          "size_bytes": 33,
+          "sha256": "12f77bd0e6c0efd415bf298b62ab37223e95b3690263b0e9583ddaf196ca3afc"
+        },
+        {
+          "path": "candidate-P01-A-1-5.txt",
+          "size_bytes": 33,
+          "sha256": "5c4b585fea1fc7962fc215d0ec097027cee31fcc0267137588e7212394f4e5b8"
+        },
+        {
+          "path": "carrier/body1.txt",
+          "size_bytes": 33,
+          "sha256": "286ffcac37b5a41e7c3cb44142959c624b86f2cf7aafdd4aea337e9c8e559bbf"
+        },
+        {
+          "path": "carrier/body2.txt",
+          "size_bytes": 33,
+          "sha256": "912a8ee8b9461d10c3586c30ad17d6f93d4c9e3074b850c664b3542989c38008"
+        },
+        {
+          "path": "carrier/body3.txt",
+          "size_bytes": 33,
+          "sha256": "5213b7862afbdbe2ed927b03c056268ed9fb41aad08908130b370d730b2dd25a"
+        },
+        {
+          "path": "carrier/body4.txt",
+          "size_bytes": 33,
+          "sha256": "12f77bd0e6c0efd415bf298b62ab37223e95b3690263b0e9583ddaf196ca3afc"
+        },
+        {
+          "path": "carrier/body5.txt",
+          "size_bytes": 33,
+          "sha256": "5c4b585fea1fc7962fc215d0ec097027cee31fcc0267137588e7212394f4e5b8"
+        },
+        {
+          "path": "carrier/bundle.json",
+          "size_bytes": 5297,
+          "sha256": "dbc5e1673732718014210eb6928f759213e0299f1c7305b25879042fccfb8230"
+        },
+        {
+          "path": "carrier/evidence.jsonl",
+          "size_bytes": 11955,
+          "sha256": "87c9ddb4aaa50b9a14672f9b96c8f91803785d215e2a086e38a153fc25e1de94"
+        },
+        {
+          "path": "carrier/original-response.txt",
+          "size_bytes": 315,
+          "sha256": "9ebd19d0c8a5b335776d9f7dfcb0bffca081268118f4c27b1225e503978b6ce1"
+        },
+        {
+          "path": "carrier/records.jsonl",
+          "size_bytes": 15232,
+          "sha256": "ab3818b5cd90c5a92c1fe44a910a6ff1c0cec35f9bb184313b797f223aa5c9de"
+        },
+        {
+          "path": "carrier/sent-prompt.txt",
+          "size_bytes": 1668,
+          "sha256": "005ad5a432d4e0867b60c43d4bd73279fe2c9e13aa441d82a7100036074ef081"
+        },
+        {
+          "path": "evidence-notes.txt",
+          "size_bytes": 51,
+          "sha256": "a70a5c08dd5db92b23853d00b96d508f74a37207d75a177b606b7eb9ed4473d2"
+        },
+        {
+          "path": "prompt-call-P01-A-1.txt",
+          "size_bytes": 1668,
+          "sha256": "005ad5a432d4e0867b60c43d4bd73279fe2c9e13aa441d82a7100036074ef081"
+        },
+        {
+          "path": "response-call-P01-A-1.txt",
+          "size_bytes": 315,
+          "sha256": "9ebd19d0c8a5b335776d9f7dfcb0bffca081268118f4c27b1225e503978b6ce1"
+        },
+        {
+          "path": "study.json",
+          "size_bytes": 69244,
+          "sha256": "99cf9a1bf9def82e74c23bfe978e9ccc82f0c0547d7c8081b02e09495f5bbe11"
+        },
+        {
+          "path": "submission-call-P01-A-1.json",
+          "size_bytes": 7830,
+          "sha256": "edf37b8c54dc03db5c6ad4405334a5e3f28a93e7e2be98ca5504ad1130960af6"
+        },
+        {
+          "path": "submission-label-candidate-P01-A-1-1.json",
+          "size_bytes": 3431,
+          "sha256": "9ce291ebe5dd478c0bacfd6a5cdce946ba03976c924381effc4dce468fea4738"
+        },
+        {
+          "path": "submission-label-candidate-P01-A-1-2.json",
+          "size_bytes": 3431,
+          "sha256": "aa7af397f6933b4621afee9c5f9c7541e7d2eb8d561472469f63760e6619e934"
+        },
+        {
+          "path": "submission-label-candidate-P01-A-1-3.json",
+          "size_bytes": 3431,
+          "sha256": "cb6ec61a6775e7122886dfec8ac7d4afefec2867a44b42a3f1a6f2852230601a"
+        },
+        {
+          "path": "submission-label-candidate-P01-A-1-4.json",
+          "size_bytes": 3431,
+          "sha256": "a2e06d2a6c83f63f0e3432634566ac35b5d1bc5ce3fb0b2a8faf9925f06a37d8"
+        },
+        {
+          "path": "submission-label-candidate-P01-A-1-5.json",
+          "size_bytes": 3431,
+          "sha256": "1e0971a9af90e84fe2f258bd6456bc03b7c3df171108eed656d9377eb3d90db8"
+        },
+        {
+          "path": "submission-qualification.json",
+          "size_bytes": 11528,
+          "sha256": "109d273e257e40b0bb2c7f998b04ec63c9eac931b035269ce2b33a9d2f8ab015"
+        },
+        {
+          "path": "submission-roster.json",
+          "size_bytes": 2938,
+          "sha256": "7f7bae1287cf0e50b8543e0d0dc188baf318b5e3731319714d32647b3ae7fdd6"
+        }
+      ],
+      "operations": {
+        "inspect": {
+          "exit_code": 0,
+          "output_files": [],
+          "analysis_bundle_created": false
+        },
+        "prepare": {
+          "exit_code": 0,
+          "output_files": [
+            "body1.txt",
+            "body2.txt",
+            "body3.txt",
+            "body4.txt",
+            "body5.txt",
+            "bundle.json",
+            "compilation_manifest.json",
+            "evidence.jsonl",
+            "original-response.txt",
+            "provenance_map.json",
+            "records.jsonl",
+            "sent-prompt.txt",
+            "study_readiness.json",
+            "study_readiness.md"
+          ],
+          "analysis_bundle_created": true
+        },
+        "prepare_readiness_only": {
+          "exit_code": 0,
+          "output_files": [
+            "compilation_manifest.json",
+            "provenance_map.json",
+            "study_readiness.json",
+            "study_readiness.md"
+          ],
+          "analysis_bundle_created": false
+        }
+      },
+      "analysis": {
+        "available": true,
+        "expected_exit_code": 0,
+        "output_files": [
+          "report.json",
+          "report.md",
+          "run_manifest.json"
+        ]
+      },
+      "empirical_evidence_established": false
+    },
+    {
+      "case_id": "disputed_membership",
+      "material_role": "fixture",
+      "evidence_policy": "fixture_only",
+      "study_path": "disputed_membership/study.json",
+      "description": "The original fixture judgment assigns SORT-ADJ, while a separately retained synthetic audit assigns SORT-HEAP to the same first candidate bytes.",
+      "expected_meaning": "The unresolved disagreement withholds that membership. The explicitly supplied carrier still requests its old accepted assignment, so conversion fails as a known conflict. The original candidate, both reviews and fixed position remain available for inspection.",
+      "extra_options": [
+        "--qualification-packet-id",
+        "submission-qualification",
+        "--mapping-receipt-id",
+        "bridge-map"
+      ],
+      "input_inventory": [
+        {
+          "path": "candidate-P01-A-1-1.txt",
+          "size_bytes": 33,
+          "sha256": "286ffcac37b5a41e7c3cb44142959c624b86f2cf7aafdd4aea337e9c8e559bbf"
+        },
+        {
+          "path": "candidate-P01-A-1-2.txt",
+          "size_bytes": 33,
+          "sha256": "912a8ee8b9461d10c3586c30ad17d6f93d4c9e3074b850c664b3542989c38008"
+        },
+        {
+          "path": "candidate-P01-A-1-3.txt",
+          "size_bytes": 33,
+          "sha256": "5213b7862afbdbe2ed927b03c056268ed9fb41aad08908130b370d730b2dd25a"
+        },
+        {
+          "path": "candidate-P01-A-1-4.txt",
+          "size_bytes": 33,
+          "sha256": "12f77bd0e6c0efd415bf298b62ab37223e95b3690263b0e9583ddaf196ca3afc"
+        },
+        {
+          "path": "candidate-P01-A-1-5.txt",
+          "size_bytes": 33,
+          "sha256": "5c4b585fea1fc7962fc215d0ec097027cee31fcc0267137588e7212394f4e5b8"
+        },
+        {
+          "path": "carrier/body1.txt",
+          "size_bytes": 33,
+          "sha256": "286ffcac37b5a41e7c3cb44142959c624b86f2cf7aafdd4aea337e9c8e559bbf"
+        },
+        {
+          "path": "carrier/body2.txt",
+          "size_bytes": 33,
+          "sha256": "912a8ee8b9461d10c3586c30ad17d6f93d4c9e3074b850c664b3542989c38008"
+        },
+        {
+          "path": "carrier/body3.txt",
+          "size_bytes": 33,
+          "sha256": "5213b7862afbdbe2ed927b03c056268ed9fb41aad08908130b370d730b2dd25a"
+        },
+        {
+          "path": "carrier/body4.txt",
+          "size_bytes": 33,
+          "sha256": "12f77bd0e6c0efd415bf298b62ab37223e95b3690263b0e9583ddaf196ca3afc"
+        },
+        {
+          "path": "carrier/body5.txt",
+          "size_bytes": 33,
+          "sha256": "5c4b585fea1fc7962fc215d0ec097027cee31fcc0267137588e7212394f4e5b8"
+        },
+        {
+          "path": "carrier/bundle.json",
+          "size_bytes": 5297,
+          "sha256": "dbc5e1673732718014210eb6928f759213e0299f1c7305b25879042fccfb8230"
+        },
+        {
+          "path": "carrier/evidence.jsonl",
+          "size_bytes": 11955,
+          "sha256": "87c9ddb4aaa50b9a14672f9b96c8f91803785d215e2a086e38a153fc25e1de94"
+        },
+        {
+          "path": "carrier/original-response.txt",
+          "size_bytes": 315,
+          "sha256": "9ebd19d0c8a5b335776d9f7dfcb0bffca081268118f4c27b1225e503978b6ce1"
+        },
+        {
+          "path": "carrier/records.jsonl",
+          "size_bytes": 15232,
+          "sha256": "ab3818b5cd90c5a92c1fe44a910a6ff1c0cec35f9bb184313b797f223aa5c9de"
+        },
+        {
+          "path": "carrier/sent-prompt.txt",
+          "size_bytes": 1668,
+          "sha256": "005ad5a432d4e0867b60c43d4bd73279fe2c9e13aa441d82a7100036074ef081"
+        },
+        {
+          "path": "evidence-notes.txt",
+          "size_bytes": 51,
+          "sha256": "a70a5c08dd5db92b23853d00b96d508f74a37207d75a177b606b7eb9ed4473d2"
+        },
+        {
+          "path": "prompt-call-P01-A-1.txt",
+          "size_bytes": 1668,
+          "sha256": "005ad5a432d4e0867b60c43d4bd73279fe2c9e13aa441d82a7100036074ef081"
+        },
+        {
+          "path": "response-call-P01-A-1.txt",
+          "size_bytes": 315,
+          "sha256": "9ebd19d0c8a5b335776d9f7dfcb0bffca081268118f4c27b1225e503978b6ce1"
+        },
+        {
+          "path": "study.json",
+          "size_bytes": 74628,
+          "sha256": "98f6ccafea18f181cbbe7048d377e7e14e78ba295f503940ff42f3beff66879f"
+        },
+        {
+          "path": "submission-audit-candidate-P01-A-1-1.json",
+          "size_bytes": 3432,
+          "sha256": "d5f316b4893d7f7b7f2653da915fafae2f03a170ccca9d2fe762943947b53e27"
+        },
+        {
+          "path": "submission-call-P01-A-1.json",
+          "size_bytes": 7830,
+          "sha256": "edf37b8c54dc03db5c6ad4405334a5e3f28a93e7e2be98ca5504ad1130960af6"
+        },
+        {
+          "path": "submission-label-candidate-P01-A-1-1.json",
+          "size_bytes": 3431,
+          "sha256": "9ce291ebe5dd478c0bacfd6a5cdce946ba03976c924381effc4dce468fea4738"
+        },
+        {
+          "path": "submission-label-candidate-P01-A-1-2.json",
+          "size_bytes": 3431,
+          "sha256": "aa7af397f6933b4621afee9c5f9c7541e7d2eb8d561472469f63760e6619e934"
+        },
+        {
+          "path": "submission-label-candidate-P01-A-1-3.json",
+          "size_bytes": 3431,
+          "sha256": "cb6ec61a6775e7122886dfec8ac7d4afefec2867a44b42a3f1a6f2852230601a"
+        },
+        {
+          "path": "submission-label-candidate-P01-A-1-4.json",
+          "size_bytes": 3431,
+          "sha256": "a2e06d2a6c83f63f0e3432634566ac35b5d1bc5ce3fb0b2a8faf9925f06a37d8"
+        },
+        {
+          "path": "submission-label-candidate-P01-A-1-5.json",
+          "size_bytes": 3431,
+          "sha256": "1e0971a9af90e84fe2f258bd6456bc03b7c3df171108eed656d9377eb3d90db8"
+        },
+        {
+          "path": "submission-qualification.json",
+          "size_bytes": 11528,
+          "sha256": "109d273e257e40b0bb2c7f998b04ec63c9eac931b035269ce2b33a9d2f8ab015"
+        },
+        {
+          "path": "submission-roster.json",
+          "size_bytes": 2938,
+          "sha256": "7f7bae1287cf0e50b8543e0d0dc188baf318b5e3731319714d32647b3ae7fdd6"
+        }
+      ],
+      "operations": {
+        "inspect": {
+          "exit_code": 2,
+          "output_files": [],
+          "analysis_bundle_created": false
+        },
+        "prepare": {
+          "exit_code": 2,
+          "output_files": [],
+          "analysis_bundle_created": false
+        },
+        "prepare_readiness_only": {
+          "exit_code": 2,
+          "output_files": [],
+          "analysis_bundle_created": false
+        }
+      },
+      "analysis": {
+        "available": false,
+        "expected_exit_code": null,
+        "output_files": []
+      },
+      "empirical_evidence_established": false
+    },
+    {
+      "case_id": "stale_correction",
+      "material_role": "fixture",
+      "evidence_policy": "fixture_only",
+      "study_path": "stale_correction/study.json",
+      "description": "A current correction incident challenges the first candidate and its dependent evidence. The action is proposed; no performed correction or replacement evidence is supplied.",
+      "expected_meaning": "Dependency invalidation reaches the current assignment and affected comparison obligations. The old carrier is withheld. Proposed correction does not become performed correction or a successful reanalysis.",
+      "extra_options": [
+        "--qualification-packet-id",
+        "submission-qualification",
+        "--mapping-receipt-id",
+        "bridge-map"
+      ],
+      "input_inventory": [
+        {
+          "path": "candidate-P01-A-1-1.txt",
+          "size_bytes": 33,
+          "sha256": "286ffcac37b5a41e7c3cb44142959c624b86f2cf7aafdd4aea337e9c8e559bbf"
+        },
+        {
+          "path": "candidate-P01-A-1-2.txt",
+          "size_bytes": 33,
+          "sha256": "912a8ee8b9461d10c3586c30ad17d6f93d4c9e3074b850c664b3542989c38008"
+        },
+        {
+          "path": "candidate-P01-A-1-3.txt",
+          "size_bytes": 33,
+          "sha256": "5213b7862afbdbe2ed927b03c056268ed9fb41aad08908130b370d730b2dd25a"
+        },
+        {
+          "path": "candidate-P01-A-1-4.txt",
+          "size_bytes": 33,
+          "sha256": "12f77bd0e6c0efd415bf298b62ab37223e95b3690263b0e9583ddaf196ca3afc"
+        },
+        {
+          "path": "candidate-P01-A-1-5.txt",
+          "size_bytes": 33,
+          "sha256": "5c4b585fea1fc7962fc215d0ec097027cee31fcc0267137588e7212394f4e5b8"
+        },
+        {
+          "path": "carrier/body1.txt",
+          "size_bytes": 33,
+          "sha256": "286ffcac37b5a41e7c3cb44142959c624b86f2cf7aafdd4aea337e9c8e559bbf"
+        },
+        {
+          "path": "carrier/body2.txt",
+          "size_bytes": 33,
+          "sha256": "912a8ee8b9461d10c3586c30ad17d6f93d4c9e3074b850c664b3542989c38008"
+        },
+        {
+          "path": "carrier/body3.txt",
+          "size_bytes": 33,
+          "sha256": "5213b7862afbdbe2ed927b03c056268ed9fb41aad08908130b370d730b2dd25a"
+        },
+        {
+          "path": "carrier/body4.txt",
+          "size_bytes": 33,
+          "sha256": "12f77bd0e6c0efd415bf298b62ab37223e95b3690263b0e9583ddaf196ca3afc"
+        },
+        {
+          "path": "carrier/body5.txt",
+          "size_bytes": 33,
+          "sha256": "5c4b585fea1fc7962fc215d0ec097027cee31fcc0267137588e7212394f4e5b8"
+        },
+        {
+          "path": "carrier/bundle.json",
+          "size_bytes": 5297,
+          "sha256": "dbc5e1673732718014210eb6928f759213e0299f1c7305b25879042fccfb8230"
+        },
+        {
+          "path": "carrier/evidence.jsonl",
+          "size_bytes": 11955,
+          "sha256": "87c9ddb4aaa50b9a14672f9b96c8f91803785d215e2a086e38a153fc25e1de94"
+        },
+        {
+          "path": "carrier/original-response.txt",
+          "size_bytes": 315,
+          "sha256": "9ebd19d0c8a5b335776d9f7dfcb0bffca081268118f4c27b1225e503978b6ce1"
+        },
+        {
+          "path": "carrier/records.jsonl",
+          "size_bytes": 15232,
+          "sha256": "ab3818b5cd90c5a92c1fe44a910a6ff1c0cec35f9bb184313b797f223aa5c9de"
+        },
+        {
+          "path": "carrier/sent-prompt.txt",
+          "size_bytes": 1668,
+          "sha256": "005ad5a432d4e0867b60c43d4bd73279fe2c9e13aa441d82a7100036074ef081"
+        },
+        {
+          "path": "evidence-notes.txt",
+          "size_bytes": 51,
+          "sha256": "a70a5c08dd5db92b23853d00b96d508f74a37207d75a177b606b7eb9ed4473d2"
+        },
+        {
+          "path": "prompt-call-P01-A-1.txt",
+          "size_bytes": 1668,
+          "sha256": "005ad5a432d4e0867b60c43d4bd73279fe2c9e13aa441d82a7100036074ef081"
+        },
+        {
+          "path": "response-call-P01-A-1.txt",
+          "size_bytes": 315,
+          "sha256": "9ebd19d0c8a5b335776d9f7dfcb0bffca081268118f4c27b1225e503978b6ce1"
+        },
+        {
+          "path": "study.json",
+          "size_bytes": 70753,
+          "sha256": "83cd6c652128d0e99fadc71939db82a7268a21c6ad26cc2b82fab13f32da8700"
+        },
+        {
+          "path": "submission-call-P01-A-1.json",
+          "size_bytes": 7830,
+          "sha256": "edf37b8c54dc03db5c6ad4405334a5e3f28a93e7e2be98ca5504ad1130960af6"
+        },
+        {
+          "path": "submission-label-candidate-P01-A-1-1.json",
+          "size_bytes": 3431,
+          "sha256": "9ce291ebe5dd478c0bacfd6a5cdce946ba03976c924381effc4dce468fea4738"
+        },
+        {
+          "path": "submission-label-candidate-P01-A-1-2.json",
+          "size_bytes": 3431,
+          "sha256": "aa7af397f6933b4621afee9c5f9c7541e7d2eb8d561472469f63760e6619e934"
+        },
+        {
+          "path": "submission-label-candidate-P01-A-1-3.json",
+          "size_bytes": 3431,
+          "sha256": "cb6ec61a6775e7122886dfec8ac7d4afefec2867a44b42a3f1a6f2852230601a"
+        },
+        {
+          "path": "submission-label-candidate-P01-A-1-4.json",
+          "size_bytes": 3431,
+          "sha256": "a2e06d2a6c83f63f0e3432634566ac35b5d1bc5ce3fb0b2a8faf9925f06a37d8"
+        },
+        {
+          "path": "submission-label-candidate-P01-A-1-5.json",
+          "size_bytes": 3431,
+          "sha256": "1e0971a9af90e84fe2f258bd6456bc03b7c3df171108eed656d9377eb3d90db8"
+        },
+        {
+          "path": "submission-qualification.json",
+          "size_bytes": 11528,
+          "sha256": "109d273e257e40b0bb2c7f998b04ec63c9eac931b035269ce2b33a9d2f8ab015"
+        },
+        {
+          "path": "submission-roster.json",
+          "size_bytes": 2938,
+          "sha256": "7f7bae1287cf0e50b8543e0d0dc188baf318b5e3731319714d32647b3ae7fdd6"
+        }
+      ],
+      "operations": {
+        "inspect": {
+          "exit_code": 2,
+          "output_files": [],
+          "analysis_bundle_created": false
+        },
+        "prepare": {
+          "exit_code": 2,
+          "output_files": [],
+          "analysis_bundle_created": false
+        },
+        "prepare_readiness_only": {
+          "exit_code": 2,
+          "output_files": [],
+          "analysis_bundle_created": false
+        }
+      },
+      "analysis": {
+        "available": false,
+        "expected_exit_code": null,
+        "output_files": []
+      },
+      "empirical_evidence_established": false
+    },
+    {
+      "case_id": "failed_collection",
+      "material_role": "fixture",
+      "evidence_policy": "fixture_only",
+      "study_path": "failed_collection/study.json",
+      "description": "One original collection attempt failed with no raw response. Its five planned positions are retained.",
+      "expected_meaning": "The failed call creates zero emitted realizations. Empty observed populations remain distinct from five invalid candidates, and the fixed denominator is preserved. The eligible fixture bundle supports an explicitly unavailable/empty report.",
+      "extra_options": [
+        "--qualification-packet-id",
+        "submission-qualification",
+        "--mapping-receipt-id",
+        "bridge-map"
+      ],
+      "input_inventory": [
+        {
+          "path": "carrier/bundle.json",
+          "size_bytes": 4587,
+          "sha256": "7e8ad46a8def9769c62ab83a549f24541d5526ac6f251f0d8f44959fb0198c35"
+        },
+        {
+          "path": "carrier/evidence.jsonl",
+          "size_bytes": 795,
+          "sha256": "3b339251660c3db777cff80510f81ecf31fc4c44b49aee9d47f0267e8717006a"
+        },
+        {
+          "path": "carrier/prompt.txt",
+          "size_bytes": 1668,
+          "sha256": "005ad5a432d4e0867b60c43d4bd73279fe2c9e13aa441d82a7100036074ef081"
+        },
+        {
+          "path": "carrier/records.jsonl",
+          "size_bytes": 900,
+          "sha256": "cdf5a521564993972886bf21617bdae5e48d0657fdd8f80efb93a0670872f5e7"
+        },
+        {
+          "path": "evidence-notes.txt",
+          "size_bytes": 51,
+          "sha256": "a70a5c08dd5db92b23853d00b96d508f74a37207d75a177b606b7eb9ed4473d2"
+        },
+        {
+          "path": "prompt-call-one.txt",
+          "size_bytes": 1668,
+          "sha256": "005ad5a432d4e0867b60c43d4bd73279fe2c9e13aa441d82a7100036074ef081"
+        },
+        {
+          "path": "study.json",
+          "size_bytes": 23145,
+          "sha256": "fb83acc2f51ed94fdaa4ab0cd20c9af85eadb8133d1ad1bd9b1f0644b47ef498"
+        },
+        {
+          "path": "submission-call-one.json",
+          "size_bytes": 7766,
+          "sha256": "e1e3a4bf55616b53a5fd494044911246e90b57f47362802e03486a7e91fba919"
+        },
+        {
+          "path": "submission-qualification.json",
+          "size_bytes": 719,
+          "sha256": "25bcd6b197f790b3db2067687881642f6a045e1a907bea1a08eb62da2044ca38"
+        },
+        {
+          "path": "submission-roster.json",
+          "size_bytes": 2938,
+          "sha256": "7f7bae1287cf0e50b8543e0d0dc188baf318b5e3731319714d32647b3ae7fdd6"
+        }
+      ],
+      "operations": {
+        "inspect": {
+          "exit_code": 0,
+          "output_files": [],
+          "analysis_bundle_created": false
+        },
+        "prepare": {
+          "exit_code": 0,
+          "output_files": [
+            "bundle.json",
+            "compilation_manifest.json",
+            "evidence.jsonl",
+            "prompt.txt",
+            "provenance_map.json",
+            "records.jsonl",
+            "study_readiness.json",
+            "study_readiness.md"
+          ],
+          "analysis_bundle_created": true
+        },
+        "prepare_readiness_only": {
+          "exit_code": 0,
+          "output_files": [
+            "compilation_manifest.json",
+            "provenance_map.json",
+            "study_readiness.json",
+            "study_readiness.md"
+          ],
+          "analysis_bundle_created": false
+        }
+      },
+      "analysis": {
+        "available": true,
+        "expected_exit_code": 0,
+        "output_files": [
+          "report.json",
+          "report.md",
+          "run_manifest.json"
+        ]
+      },
+      "empirical_evidence_established": false
+    },
+    {
+      "case_id": "supplied_longitudinal",
+      "material_role": "fixture",
+      "evidence_policy": "fixture_only",
+      "study_path": "supplied_longitudinal/study.json",
+      "description": "An explicitly selected longitudinal carrier contains the existing hero_recursive stipulated states, transitions, evidence and complete-unit sensitivity plan.",
+      "expected_meaning": "The supplied L profile preserves its own registered units and replay identity. A/B/C conditions are never synthesized into longitudinal rounds. Computed trajectory, half-life and recovery outputs remain fixture demonstrations.",
+      "extra_options": [],
+      "input_inventory": [
+        {
+          "path": "carrier/bundle.json",
+          "size_bytes": 857748,
+          "sha256": "3a687580ac522942dc5e461fe57b84ecf17766b1dcc4f30ddbda1c3f942c1f0f"
+        },
+        {
+          "path": "carrier/evidence.jsonl",
+          "size_bytes": 1180457,
+          "sha256": "435c1d444a06bcf5b40d425d5df28d8dc5ba234daa1ccb40318ec14d8d636273"
+        },
+        {
+          "path": "carrier/prompts.json",
+          "size_bytes": 14168,
+          "sha256": "787628736ff9c57bd931f29925aba3a03b764f6ccf8d2c609a74259ceb6299e3"
+        },
+        {
+          "path": "carrier/records.jsonl",
+          "size_bytes": 1532478,
+          "sha256": "be7e8e3b89585d966cc06f7a326a49870683332cacf242ffe368954599538da4"
+        },
+        {
+          "path": "carrier/text_01.txt",
+          "size_bytes": 506,
+          "sha256": "907ee8bbc723fc1da811df425e4a95fb925a534e1c0fd0bd1610da04ac8adce4"
+        },
+        {
+          "path": "carrier/text_02.txt",
+          "size_bytes": 517,
+          "sha256": "e1a08e745d3cb4e84f0e4b345dd5af4a81047d93c2ccf94d81ab34431ec68d59"
+        },
+        {
+          "path": "carrier/text_03.txt",
+          "size_bytes": 331,
+          "sha256": "240c2becb16784fb6a7c34a01fa2b1043008b79c39398fb94db6ec9076374413"
+        },
+        {
+          "path": "carrier/text_04.txt",
+          "size_bytes": 465,
+          "sha256": "145eb006f212920b119be17d6c603259c433af6e1f2aa0bbaf633dcc813fcf51"
+        },
+        {
+          "path": "carrier/text_05.txt",
+          "size_bytes": 361,
+          "sha256": "430cc96f08f77b71831bef087e13e8a1f3f8abfa91ba0f8fbc65c6761a7a4e73"
+        },
+        {
+          "path": "carrier/text_06.txt",
+          "size_bytes": 800,
+          "sha256": "c2dfc27ca049faf8b4bcdbdcb7005e850b0bc8b79a9ee9ae73b5d1ee94feb3f6"
+        },
+        {
+          "path": "carrier/text_07.txt",
+          "size_bytes": 301,
+          "sha256": "aa62afa9b43948100f518c521c9f3500e669ac0068e9cd9027a6451a7fe218c7"
+        },
+        {
+          "path": "carrier/text_08.txt",
+          "size_bytes": 1048,
+          "sha256": "2b92c17f397000206d0a7577baa3000ba7356724582bf38d3cddffef525f0b87"
+        },
+        {
+          "path": "study.json",
+          "size_bytes": 17223,
+          "sha256": "20b631ddd4167ef0a9ed207d5db8bba7b544eb81e14688480e7eaed156e6576c"
+        }
+      ],
+      "operations": {
+        "inspect": {
+          "exit_code": 0,
+          "output_files": [],
+          "analysis_bundle_created": false
+        },
+        "prepare": {
+          "exit_code": 0,
+          "output_files": [
+            "bundle.json",
+            "compilation_manifest.json",
+            "evidence.jsonl",
+            "prompts.json",
+            "provenance_map.json",
+            "records.jsonl",
+            "study_readiness.json",
+            "study_readiness.md",
+            "text_01.txt",
+            "text_02.txt",
+            "text_03.txt",
+            "text_04.txt",
+            "text_05.txt",
+            "text_06.txt",
+            "text_07.txt",
+            "text_08.txt"
+          ],
+          "analysis_bundle_created": true
+        },
+        "prepare_readiness_only": {
+          "exit_code": 0,
+          "output_files": [
+            "compilation_manifest.json",
+            "provenance_map.json",
+            "study_readiness.json",
+            "study_readiness.md"
+          ],
+          "analysis_bundle_created": false
+        }
+      },
+      "analysis": {
+        "available": true,
+        "expected_exit_code": 0,
+        "output_files": [
+          "report.json",
+          "report.md",
+          "run_manifest.json"
+        ]
+      },
+      "empirical_evidence_established": false
+    }
+  ]
+}

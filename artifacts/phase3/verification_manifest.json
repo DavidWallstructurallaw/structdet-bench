@@ -1,98 +1,263 @@
 {
-  "schema_version": "0.1",
-  "project": "StructDet-Bench",
-  "phase": 3,
-  "step": 2,
-  "scope": "longitudinal_record_components_with_inherited_M_V_regression",
-  "authorization": {
-    "owner_instruction": "Phase 3 Step 2",
-    "plan_sha256": "1ca74fbba06bea44f2b656b3f4e6b46b0c6747cf13640c3f1ea29c69ef3d6352",
-    "stop_before_step": 3
+  "actual_supported_runtime": {
+    "path": "verification/runtime_identity.json",
+    "sha256": "188ef8f67baf989b48866a4c878910d0f9270851c6a235771fb8906d58a18a15",
+    "size_bytes": 669
   },
-  "base_commit": "a694c843fa4709391c2daed20b05584271bd7f08",
-  "base_tree": "c0b3d008be5bf0076206a0b048bc8e3a869646b9",
+  "archive_cli_replay": {
+    "path": "verification/clean_cli_replay_summary.json",
+    "sha256": "68fedddff64b564eed5214cf2a8f240531ea10afae6d95f2fd6e2f2fbc533dd8",
+    "size_bytes": 12834
+  },
+  "authorization": {
+    "owner_instruction": "Phase 3 Step 10 开始",
+    "plan_sha256": "1ca74fbba06bea44f2b656b3f4e6b46b0c6747cf13640c3f1ea29c69ef3d6352",
+    "stop_boundary": "End of Phase3; no automatic Phase4, model experiment, annotation, hosted CI or deployment"
+  },
+  "baseline": {
+    "archive": "history/StructDet-Bench_Phase3_Step9_Local.zip",
+    "archive_sha256": "58ab189f015c0ac678b5961bf116f9793480c045a1d09c448322afaa9ea3b467",
+    "project_file_count": 179,
+    "step": 9,
+    "test_count": 1817
+  },
+  "baseline_remote_audit": {
+    "path": "verification/remote_baseline/audit.json",
+    "sha256": "486cd1541ba843699c1a504c94b03d1a04eb9161b72a128f43e385dc027e21b4",
+    "size_bytes": 47837
+  },
+  "boundaries": {
+    "UD006": "outstanding",
+    "candidate_execution": false,
+    "final_owner_acceptance": "pending_separate_review",
+    "hosted_CI": false,
+    "latent_support": "deferred_UD007",
+    "model_calls": 0,
+    "phase4_started": false,
+    "substantive_validation_performed": false
+  },
+  "companion_archive": "StructDet-Bench_Phase3_Step10_Local.zip",
+  "conformance_bindings": {
+    "path": "artifacts/phase3/conformance_matrix.json",
+    "sha256": "dc44e99e80cee4e8b78193161efe78c7dd949e1119832b848a3fe1c7dcc0e9fe"
+  },
   "counts": {
-    "inherited": 1077,
-    "new": 120,
-    "total": 1197,
-    "passed": 1197,
-    "failed": 0,
     "errors": 0,
-    "skipped": 0
+    "failed": 0,
+    "inherited": 1817,
+    "new": 0,
+    "original_phase2": 1018,
+    "passed": 1817,
+    "skipped": 0,
+    "total": 1817
+  },
+  "final_archive_proof": "External StructDet-Bench_Phase3_Step10_Archive_Verification.json alongside ZIP, including actual final-ZIP CLI replay",
+  "frozen_implementation_identity": {
+    "path": "verification/implementation_identity.json",
+    "sha256": "7c03d4130ea20fb1b98b84793f41520259695a2ad14760c1306f839a0e31cab4",
+    "size_bytes": 30557
   },
   "gates": {
     "current_exit": 0,
+    "full_L_complete": true,
+    "independent_oracle_groups": 24,
     "inherited_M": true,
     "inherited_V": true,
-    "full_L_complete": false,
-    "unfinished_L_requirements": 35,
-    "newly_implemented": [
-      "P3-L02",
-      "P3-L03",
-      "P3-L04",
-      "P3-L05"
-    ],
-    "future_reports": 16,
-    "future_oracles": 24,
-    "full_L_scope_assessment_exit": 1,
-    "full_L_assessment_basis": "Alternate scope assessed from the same actually executed 1197 methods; no second execution is claimed."
+    "longitudinal_requirements": 40,
+    "phase3_exit": 0,
+    "report_groups": 16,
+    "unresolved_requirements": []
   },
-  "remote_publication": {
-    "status": "implementation_published_and_read_back",
-    "base_verified": true,
-    "repository": "DavidWallstructurallaw/structdet-bench",
-    "branch": "main",
-    "implementation_commit": "443331b53d1f2699144cd3893a6641d7d0b57721",
-    "implementation_tree": "cbe55fed808dd4713f62346e986657f921d0da06",
-    "project_file_count": 137,
-    "changed_paths": 6,
-    "method": "Every uploaded blob matched local bytes. Independent tree serialization and git write-tree matched the created and read-back remote commit tree. Branch advanced without force and was read back.",
-    "final_receipt_scope": "This file records the verified implementation commit. The subsequent receipt-only commit and archive identity are recorded in companion verification/publication_manifest.json."
+  "historical_journals": "All historical repository bytes retained; unchanged full Step9 ZIP preserves every preceding run/finding and predecessor archive.",
+  "implementation_step": 9,
+  "legacy_cli_comparison": {
+    "path": "verification/legacy_cli_comparison.json",
+    "sha256": "ed3702b8c77d052d5d994b8ba57884695554139e851f24d3f39d071f10b4d67f",
+    "size_bytes": 7995
   },
-  "companion_archive": "StructDet-Bench_Phase3_Step2_Accepted.zip",
-  "previous_records": "Original Step 1 repository journal bytes are preserved. Complete new source, isolated baseline and clean-replay journals are in the companion verification directory.",
-  "execution_refs": [
-    {
-      "path": "verification/current_console.txt",
-      "size_bytes": 177631,
-      "sha256": "7c3369fc44e56e94cbc288ce3fd47082aad88aee3570a31897790ac3cbd60f6e"
-    },
-    {
-      "path": "verification/clean_console.txt",
-      "size_bytes": 177631,
-      "sha256": "e93dc7e059f8540ef99ab575f374a75678a82e12246c1d3c227da5091d9bd899"
-    },
-    {
-      "path": "verification/isolated_baseline_console.txt",
-      "size_bytes": 158164,
-      "sha256": "4b746a651c1d096db0316cc2235099d21ae4ec43856c0a80eb4d5f87f3aa31c9"
-    },
-    {
-      "path": "verification/final_payload_console.txt",
-      "size_bytes": 177631,
-      "sha256": "295f75c9ee4d902c353b7a9140453300aef7f5c1bfb9127bd33b5659dd30eeef"
-    },
-    {
-      "path": "verification/final_payload_runs/history/d640d6592e914ab1bd1f28c5ec8e2382/run.json",
-      "size_bytes": 2311530,
-      "sha256": "c39fe8f34d281bef5e1322fd6d1ce148fee695c6875ed3768e6b4de728532b4d"
-    }
-  ],
-  "immutable_scope": "No prior production source, test, reader, metric, earlier matrix, plan, scientific contract, example or history edited. Phase 3 matrix advances authorized Step 2 only.",
-  "boundaries": {
-    "statistics_computed": false,
-    "substantive_validation_performed": false,
-    "UD006": "outstanding",
-    "CLI_longitudinal_dispatch": "Step 8",
-    "hosted_CI": false,
-    "model_calls": false,
-    "candidate_execution": false
+  "metadata_refresh": "Both full runs used all180 candidate files unchanged. Only completion/README/format/this receipt finalized after actual runs. All other176 files remain exact; explicit full before/after delta is in companion post_run_metadata_changes.json.",
+  "phase": 3,
+  "project": "StructDet-Bench",
+  "record_kind": "Administrative summary with full retained execution evidence",
+  "repository_delivery": {
+    "current_source_is_not_certified_published_by_this_receipt": true,
+    "status": "Separate fresh publication_status.json in companion archive"
   },
-  "environment": {
-    "bytecode_disabled": true,
-    "no_site": true,
-    "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
-    "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]"
+  "runs": {
+    "administrative_step": 10,
+    "all_80_obligations_passed": true,
+    "baseline": {
+      "archive": "history/StructDet-Bench_Phase3_Step9_Local.zip",
+      "archive_sha256": "58ab189f015c0ac678b5961bf116f9793480c045a1d09c448322afaa9ea3b467",
+      "clean_run": {
+        "console": {
+          "path": "verification/clean_runs/history/db21f21f97ba4fc6ad342ea24a59149d/console.txt",
+          "sha256": "71ef2dbe810320ed21832ead5ce0cee76f68cdcb20442d701b429e894abd8101",
+          "size_bytes": 275831
+        },
+        "environment": {
+          "bytecode_disabled": true,
+          "no_site": true,
+          "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+          "python": "3.13.5 (main, Jul 23 2025, 00:37:22) [Clang 20.1.4 ]"
+        },
+        "exit_code": 0,
+        "full_run": {
+          "path": "verification/clean_runs/history/db21f21f97ba4fc6ad342ea24a59149d/run.json",
+          "sha256": "011906212a22f068132e5309d86ad227e71ab8cfc7d22d88b66c1845acd333c3",
+          "size_bytes": 3688792
+        },
+        "full_subject_receipt": {
+          "path": "verification/clean_runs/execution_receipts/db21f21f97ba4fc6ad342ea24a59149d.json",
+          "sha256": "5d24c9fc6ae05f650f7fc38368f313aa64c5bbad48e91cddb067aa6ac79ed4dd",
+          "size_bytes": 61882
+        },
+        "gates": {
+          "phase1_m_complete": true,
+          "phase2_v_complete": true,
+          "phase3_l_software_complete": true,
+          "requested_gate_passed": true,
+          "unresolved_current_ids": [],
+          "unresolved_l_ids": []
+        },
+        "implementation_step": 9,
+        "outcomes": {
+          "passed": 1817
+        },
+        "prior_step9_runs": [],
+        "run_id": "db21f21f97ba4fc6ad342ea24a59149d",
+        "test_count": 1817
+      },
+      "new_baseline_execution_claimed": false,
+      "source_run": {
+        "console": {
+          "path": "verification/current_runs/history/a5fa01ee08344e7e909dece490b05fc3/console.txt",
+          "sha256": "cf825bf3c222eac34d8658b9f59e1f083e2bb41ab9cb4430d65190d7fa7174d1",
+          "size_bytes": 275831
+        },
+        "environment": {
+          "bytecode_disabled": true,
+          "no_site": true,
+          "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+          "python": "3.13.5 (main, Jul 23 2025, 00:37:22) [Clang 20.1.4 ]"
+        },
+        "exit_code": 0,
+        "full_run": {
+          "path": "verification/current_runs/history/a5fa01ee08344e7e909dece490b05fc3/run.json",
+          "sha256": "b49e8ddd167ac3ef1b83242480827f5759d4f01ed2ed2f928854218f86830886",
+          "size_bytes": 3688887
+        },
+        "full_subject_receipt": {
+          "path": "verification/current_runs/execution_receipts/a5fa01ee08344e7e909dece490b05fc3.json",
+          "sha256": "163bfafb02d96143656375a6ed72b3b9b2c10a7443fd933d802853e6fabdbc29",
+          "size_bytes": 61870
+        },
+        "gates": {
+          "phase1_m_complete": true,
+          "phase2_v_complete": true,
+          "phase3_l_software_complete": true,
+          "requested_gate_passed": true,
+          "unresolved_current_ids": [],
+          "unresolved_l_ids": []
+        },
+        "implementation_step": 9,
+        "outcomes": {
+          "passed": 1817
+        },
+        "prior_step9_runs": [],
+        "run_id": "a5fa01ee08344e7e909dece490b05fc3",
+        "test_count": 1817
+      }
+    },
+    "clean": {
+      "console": {
+        "path": "verification/clean_runs/history/bf8d609c243f49ebab1507ca236e2889/console.txt",
+        "sha256": "ca24e62268126e65f562f5f23584d0157e5013470aba4d44ba7f699e35d8dcd7",
+        "size_bytes": 275831
+      },
+      "environment": {
+        "bytecode_disabled": true,
+        "no_site": true,
+        "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+        "python": "3.13.5 (main, Jul 23 2025, 00:37:22) [Clang 20.1.4 ]"
+      },
+      "exit_code": 0,
+      "full_run": {
+        "path": "verification/clean_runs/history/bf8d609c243f49ebab1507ca236e2889/run.json",
+        "sha256": "ba8323367afb45585ad10051553fce3ccdb09c4b6d39da94a19e8f9187de823a",
+        "size_bytes": 3688826
+      },
+      "full_subject_receipt": {
+        "path": "verification/clean_runs/execution_receipts/bf8d609c243f49ebab1507ca236e2889.json",
+        "sha256": "3e0716579d4aef1ffbde992fdb2bed1a3e9ed807e36ce10c719c39829702b166",
+        "size_bytes": 62205
+      },
+      "gates": {
+        "phase1_m_complete": true,
+        "phase2_v_complete": true,
+        "phase3_l_software_complete": true,
+        "requested_gate_passed": true,
+        "unresolved_current_ids": [],
+        "unresolved_l_ids": []
+      },
+      "implementation_step": 9,
+      "outcomes": {
+        "passed": 1817
+      },
+      "prior_step9_runs": [],
+      "run_id": "bf8d609c243f49ebab1507ca236e2889",
+      "test_count": 1817
+    },
+    "current": {
+      "console": {
+        "path": "verification/current_runs/history/9c20c5d7beec4311a981d1e149663f58/console.txt",
+        "sha256": "3b36bca13269fa96531c7ebf87f13b2a583e0c688043314f50316ee3d958cd40",
+        "size_bytes": 275831
+      },
+      "environment": {
+        "bytecode_disabled": true,
+        "no_site": true,
+        "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+        "python": "3.13.5 (main, Jul 23 2025, 00:37:22) [Clang 20.1.4 ]"
+      },
+      "exit_code": 0,
+      "full_run": {
+        "path": "verification/current_runs/history/9c20c5d7beec4311a981d1e149663f58/run.json",
+        "sha256": "65981402bc9b101bd96335181614cede689fa903cffd2af4fd77c801b0707451",
+        "size_bytes": 3688940
+      },
+      "full_subject_receipt": {
+        "path": "verification/current_runs/execution_receipts/9c20c5d7beec4311a981d1e149663f58.json",
+        "sha256": "d8bfdac6f9630e9336676b9cdeab387f70dbb2069532d49d8c189da261ec5d0a",
+        "size_bytes": 62192
+      },
+      "gates": {
+        "phase1_m_complete": true,
+        "phase2_v_complete": true,
+        "phase3_l_software_complete": true,
+        "requested_gate_passed": true,
+        "unresolved_current_ids": [],
+        "unresolved_l_ids": []
+      },
+      "implementation_step": 9,
+      "outcomes": {
+        "passed": 1817
+      },
+      "prior_step9_runs": [],
+      "run_id": "9c20c5d7beec4311a981d1e149663f58",
+      "test_count": 1817
+    },
+    "identical_1817_method_ids": true,
+    "implementation_step": 9,
+    "new_methods": 0,
+    "scope": "Two actual Step10 administrative full reruns of immutable Step9 implementation, no added methods"
   },
-  "preflight_note": "An early nonisolated preflight overlapped new-file creation and failed a stage-absence assertion; retained as failed history and excluded from baseline evidence. An untouched isolated Step 1 replay subsequently passed all 1077 tests. No predecessor source or test was modified."
+  "schema_version": "0.1",
+  "scope": "Phase3 final bounded software audit and factual closeout; frozen Step9 runtime/test/matrix/fixture/oracle bytes.",
+  "source_and_baseline_audit": {
+    "path": "verification/contract_audit/baseline_source_scope_audit.json",
+    "sha256": "2bc6b359c2716419c713dee2a58beba06e3f69fd579d79909851d78061271855",
+    "size_bytes": 9178
+  },
+  "step": 10
 }

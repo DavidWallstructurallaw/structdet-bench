@@ -1,0 +1,10 @@
+# FIXTURE ONLY. Passive full-key frequency illustration.
+def sort_values(values):
+    counts = [0]*4096
+    for value in values:
+        counts[value] += 1
+    result = []
+    for value in range(4096):
+        for repetition in range(counts[value]):
+            result.append(value)
+    return result

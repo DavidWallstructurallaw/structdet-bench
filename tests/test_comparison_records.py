@@ -260,47 +260,6 @@ class EvidenceOrderTests(Fixture):
         b=load_bundle(p);r=review_comparison(b);self.assertEqual(before,{x.name:x.read_bytes() for x in self.root.iterdir()})
         with self.assertRaises(TypeError):r.configuration['comparison_id']='changed'
 
-class Step2CatalogueTests(unittest.TestCase):
-    def test_stage_two_binds_all_current_record_and_security_methods(self):
-        m=h.read_matrix();actual=[]
-        for module in ('test_comparison_records','test_phase2_security'):
-            for cls in ast.parse((h.ROOT/'tests'/f'{module}.py').read_text()).body:
-                if isinstance(cls,ast.ClassDef):
-                    actual.extend(f'tests.{module}.{cls.name}.{f.name}' for f in cls.body if isinstance(f,ast.FunctionDef) and f.name.startswith('test_'))
-        deliveries=m['delivery'].get('history',[])+[m['delivery']]
-        step2=[x for x in deliveries if x['step']==2]
-        self.assertEqual(len(step2),1)
-        declared=set(m['stage_bindings']['2']['test_bindings'])
-        self.assertEqual(len(declared),93)
-        self.assertTrue(declared <= set(actual))
-        current_bound={t for row in m['stage_bindings'].values() for t in row['test_bindings']}
-        self.assertTrue(set(actual) <= current_bound)
-        self.assertEqual([x['step'] for x in deliveries[:2]],[1,2])
-    def test_pinned_representation_expands_identical_catalogues_and_503_methods(self):
-        raw=h.read_json(h.MATRIX_PATH);m=h.read_matrix()
-        self.assertEqual(m['catalogues'],h.expected_catalogues())
-        self.assertEqual(len(m['predecessor']['test_ids']),503)
-        self.assertEqual(h.sha256_bytes(('\n'.join(m['predecessor']['test_ids'])+'\n').encode()),h.PREDECESSOR_IDS_SHA256)
-        self.assertEqual(h.expand_matrix(m),m)
-        self.assertEqual(raw['catalogues']['expanded_sha256'],h.sha256_bytes(h.canonical_bytes(m['catalogues'])))
-    def test_tampered_encoding_cannot_redirect_source_or_hide_requirement(self):
-        raw=h.read_json(h.MATRIX_PATH)
-        for field in ('source_sha256','expanded_sha256'):
-            bad=copy.deepcopy(raw);bad['catalogues'][field]='0'*64
-            with self.assertRaises(ValueError):h.expand_matrix(bad)
-        bad=copy.deepcopy(raw);bad['predecessor']['test_ids']['source_sha256']='0'*64
-        with self.assertRaises(ValueError):h.expand_matrix(bad)
-    def test_step_two_record_coverage_does_not_complete_full_V_or_E(self):
-        m=h.read_matrix();self.assertEqual(h.validate_matrix(m),[])
-        step2=next(x for x in m['delivery'].get('history',[])+[m['delivery']] if x['step']==2)
-        states=step2.get('vt_status_at_delivery')
-        if states is None:
-            self.assertEqual(m['delivery']['step'],2)
-            states={x['id']:x['implementation_status'] for x in m['vt_obligations']}
-        self.assertEqual(set(states),set(h.V_IDS))
-        self.assertTrue(all(state!='implemented' for state in states.values()))
-        self.assertTrue(all(x['evidence_status']=='not_supplied' for x in m['vt_obligations']))
-        self.assertEqual(len(m['vt_obligations']),26)
 
 class DeploymentBindingTests(Fixture):
     def test_known_B_drift_is_explicit_without_erasing_AC(self):

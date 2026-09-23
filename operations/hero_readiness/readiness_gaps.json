@@ -1,0 +1,358 @@
+{
+  "activities": [
+    {
+      "action": "Construct the 32 specified core artifacts with rights and constructor lineage, preserving two positive variants and one identifiable-defect proposal per family plus eight boundary roles; send exact bytes into separately qualified validation and independent human review.",
+      "activation": "blocked_pending_resources_and_scope",
+      "activity": "core_construction",
+      "affected_claims": [
+        "No empirical conclusion or independent validation from this activity."
+      ],
+      "dependencies": [],
+      "execution_status": "not_performed",
+      "outstanding_requirements": [
+        {
+          "reason": "No named external operator has been supplied or appointed.",
+          "requirement_id": "responsible_operator"
+        },
+        {
+          "reason": "The user authorized local Step 10 preparation only. The concrete external action still needs a scoped authorization record.",
+          "requirement_id": "authorization_ref"
+        },
+        {
+          "reason": "No operational start/end window has been supplied; ordering requirements are documented separately.",
+          "requirement_id": "time_window"
+        },
+        {
+          "reason": "No operational controlled storage location, access roster, retention owner, or original-export custody process has been supplied.",
+          "requirement_id": "storage_access"
+        },
+        {
+          "reason": "No responsible external operator or evidence custodian has accepted provenance duties; Codex prepared files only.",
+          "requirement_id": "provenance_responsibility"
+        },
+        {
+          "reason": "No actual constructor, artifact rights, source lineage, AI-assistance history or artifact bytes have been supplied.",
+          "requirement_id": "constructor_lineage"
+        }
+      ],
+      "preparation_status": "packet_prepared_with_explicit_gaps"
+    },
+    {
+      "action": "Validate individually identified source bytes against the ordered 8995-test suite and mechanism witnesses in an independently reviewed isolated environment with a trusted oracle; retain complete original receipts, including failures and resource exhaustion.",
+      "activation": "blocked_pending_resources_and_scope",
+      "activity": "external_validation",
+      "affected_claims": [
+        "No empirical conclusion or independent validation from this activity."
+      ],
+      "dependencies": [
+        "core_construction"
+      ],
+      "execution_status": "not_performed",
+      "outstanding_requirements": [
+        {
+          "reason": "No named external operator has been supplied or appointed.",
+          "requirement_id": "responsible_operator"
+        },
+        {
+          "reason": "The user authorized local Step 10 preparation only. The concrete external action still needs a scoped authorization record.",
+          "requirement_id": "authorization_ref"
+        },
+        {
+          "reason": "No operational start/end window has been supplied; ordering requirements are documented separately.",
+          "requirement_id": "time_window"
+        },
+        {
+          "reason": "No operational controlled storage location, access roster, retention owner, or original-export custody process has been supplied.",
+          "requirement_id": "storage_access"
+        },
+        {
+          "reason": "No responsible external operator or evidence custodian has accepted provenance duties; Codex prepared files only.",
+          "requirement_id": "provenance_responsibility"
+        },
+        {
+          "reason": "The full ordered 8995-test suite is supplied and pinned; actual candidate source hashes, interfaces and accepted source-to-suite associations remain missing.",
+          "requirement_id": "candidate_suite_identity"
+        },
+        {
+          "reason": "No reviewed hostile-code execution environment, immutable image/dependencies, isolation assessment, or authorized environment operator is supplied.",
+          "requirement_id": "environment_containment"
+        },
+        {
+          "reason": "No independently reviewed oracle implementation or oracle environment has been supplied. The adopted checks alone do not establish a trusted execution.",
+          "requirement_id": "trusted_oracle"
+        },
+        {
+          "reason": "Proposed limits are documented but no measured, reviewed and enforced environment exists; feasibility for all eight correct families is untested.",
+          "requirement_id": "resource_limits"
+        },
+        {
+          "reason": "The passive validation-receipt specification is supplied, but no original external execution log, resource observations or termination receipt exists.",
+          "requirement_id": "original_receipts"
+        }
+      ],
+      "preparation_status": "packet_prepared_with_explicit_gaps"
+    },
+    {
+      "action": "Obtain two distinct qualified human first passes per actual core artifact before discussion, preserve disagreement and revisions, and obtain independent expert adjudication where needed; later audit available systematic and targeted main artifacts.",
+      "activation": "blocked_pending_resources_and_scope",
+      "activity": "human_review",
+      "affected_claims": [
+        "No empirical conclusion or independent validation from this activity."
+      ],
+      "dependencies": [
+        "core_construction"
+      ],
+      "execution_status": "not_performed",
+      "outstanding_requirements": [
+        {
+          "reason": "No named external operator has been supplied or appointed.",
+          "requirement_id": "responsible_operator"
+        },
+        {
+          "reason": "The user authorized local Step 10 preparation only. The concrete external action still needs a scoped authorization record.",
+          "requirement_id": "authorization_ref"
+        },
+        {
+          "reason": "No operational start/end window has been supplied; ordering requirements are documented separately.",
+          "requirement_id": "time_window"
+        },
+        {
+          "reason": "No operational controlled storage location, access roster, retention owner, or original-export custody process has been supplied.",
+          "requirement_id": "storage_access"
+        },
+        {
+          "reason": "No responsible external operator or evidence custodian has accepted provenance duties; Codex prepared files only.",
+          "requirement_id": "provenance_responsibility"
+        },
+        {
+          "reason": "No real reviewers with relevant qualifications have been identified. Codex and other model agents do not satisfy human review.",
+          "requirement_id": "human_qualifications"
+        },
+        {
+          "reason": "No qualified human identities, actual relationships, institutional/source connections or independence evidence have been supplied.",
+          "requirement_id": "identity_relationships"
+        },
+        {
+          "reason": "No original human first passes exist. All 32 core artifacts require two distinct humans, at least 64 item-level initial records; blank forms are preparatory only.",
+          "requirement_id": "original_first_passes"
+        },
+        {
+          "reason": "Actual human exposure, prior model/source familiarity and feasible blinding cannot be assessed before real people and artifacts are supplied.",
+          "requirement_id": "exposure"
+        },
+        {
+          "reason": "No recipients, contact channel, consent/scope or authorization to contact anyone has been provided. Local export does not send material.",
+          "requirement_id": "communication_route"
+        }
+      ],
+      "preparation_status": "packet_prepared_with_explicit_gaps"
+    },
+    {
+      "action": "If explicitly activated, run the six P00 planned calls for 30 intended positions with the exact messages and registered controls, raw exports, fixed attempts and approved finite expenditure; optional pilot observations stay outside main data.",
+      "activation": "blocked_pending_resources_and_scope",
+      "activity": "pilot_collection",
+      "affected_claims": [
+        "No empirical conclusion or independent validation from this activity."
+      ],
+      "dependencies": [
+        "core_construction",
+        "external_validation",
+        "human_review"
+      ],
+      "execution_status": "not_performed",
+      "outstanding_requirements": [
+        {
+          "reason": "No named external operator has been supplied or appointed.",
+          "requirement_id": "responsible_operator"
+        },
+        {
+          "reason": "The user authorized local Step 10 preparation only. The concrete external action still needs a scoped authorization record.",
+          "requirement_id": "authorization_ref"
+        },
+        {
+          "reason": "No operational start/end window has been supplied; ordering requirements are documented separately.",
+          "requirement_id": "time_window"
+        },
+        {
+          "reason": "No operational controlled storage location, access roster, retention owner, or original-export custody process has been supplied.",
+          "requirement_id": "storage_access"
+        },
+        {
+          "reason": "No responsible external operator or evidence custodian has accepted provenance duties; Codex prepared files only.",
+          "requirement_id": "provenance_responsibility"
+        },
+        {
+          "reason": "No provider, model/deployment version, access account or actual service environment has been selected or supplied.",
+          "requirement_id": "deployment_identity"
+        },
+        {
+          "reason": "Requested A/B/C controls are specified, but provider support, effective temperature, cap units/reasoning treatment, wrapper knowledge and hidden controls remain unknown.",
+          "requirement_id": "control_cap_semantics"
+        },
+        {
+          "reason": "No actual deployment has demonstrated exact sent-message and raw-response export with request/time/usage/control/failure identities. Original exports do not yet exist.",
+          "requirement_id": "original_exports"
+        },
+        {
+          "reason": "Provider, prices, currency and maximum expenditure are not supplied. Known design caps are recorded separately; unknown spending is not zero.",
+          "requirement_id": "collection_limits"
+        }
+      ],
+      "preparation_status": "packet_prepared_with_explicit_gaps"
+    },
+    {
+      "action": "After core qualification, feasible validation, human-review arrangements and prospective freeze, execute the 72 registered P01-P06 calls for 360 intended positions in fixed order; preserve raw messages, responses, failures, control deviations and missing positions.",
+      "activation": "blocked_pending_resources_and_scope",
+      "activity": "main_collection",
+      "affected_claims": [
+        "No empirical conclusion or independent validation from this activity."
+      ],
+      "dependencies": [
+        "core_construction",
+        "external_validation",
+        "human_review"
+      ],
+      "execution_status": "not_performed",
+      "outstanding_requirements": [
+        {
+          "reason": "No named external operator has been supplied or appointed.",
+          "requirement_id": "responsible_operator"
+        },
+        {
+          "reason": "The user authorized local Step 10 preparation only. The concrete external action still needs a scoped authorization record.",
+          "requirement_id": "authorization_ref"
+        },
+        {
+          "reason": "No operational start/end window has been supplied; ordering requirements are documented separately.",
+          "requirement_id": "time_window"
+        },
+        {
+          "reason": "No operational controlled storage location, access roster, retention owner, or original-export custody process has been supplied.",
+          "requirement_id": "storage_access"
+        },
+        {
+          "reason": "No responsible external operator or evidence custodian has accepted provenance duties; Codex prepared files only.",
+          "requirement_id": "provenance_responsibility"
+        },
+        {
+          "reason": "No provider, model/deployment version, access account or actual service environment has been selected or supplied.",
+          "requirement_id": "deployment_identity"
+        },
+        {
+          "reason": "Requested A/B/C controls are specified, but provider support, effective temperature, cap units/reasoning treatment, wrapper knowledge and hidden controls remain unknown.",
+          "requirement_id": "control_cap_semantics"
+        },
+        {
+          "reason": "No actual deployment has demonstrated exact sent-message and raw-response export with request/time/usage/control/failure identities. Original exports do not yet exist.",
+          "requirement_id": "original_exports"
+        },
+        {
+          "reason": "No external prospective freeze or registration evidence exists. The preparation date and local hashes do not prove preregistration.",
+          "requirement_id": "registration_freeze"
+        },
+        {
+          "reason": "No actual core artifact, independent first pass, functional execution, mechanism evidence, descriptor-pair finding or accepted qualification is supplied.",
+          "requirement_id": "core_qualification"
+        },
+        {
+          "reason": "Provider, prices, currency and maximum expenditure are not supplied. Known design caps are recorded separately; unknown spending is not zero.",
+          "requirement_id": "collection_limits"
+        }
+      ],
+      "preparation_status": "packet_prepared_with_explicit_gaps"
+    },
+    {
+      "action": "For the proposed main P1/P5 claim, review qualified main evidence, validity and membership accounting, sampled audit, sensitivity/replay and five-condition EC disclosures, then publish only the supported scoped conclusions through a separately authorized destination.",
+      "activation": "blocked_pending_resources_and_scope",
+      "activity": "scientific_release",
+      "affected_claims": [
+        "No empirical conclusion or independent validation from this activity."
+      ],
+      "dependencies": [
+        "core_construction",
+        "external_validation",
+        "human_review",
+        "main_collection"
+      ],
+      "execution_status": "not_performed",
+      "outstanding_requirements": [
+        {
+          "reason": "No named external operator has been supplied or appointed.",
+          "requirement_id": "responsible_operator"
+        },
+        {
+          "reason": "The user authorized local Step 10 preparation only. The concrete external action still needs a scoped authorization record.",
+          "requirement_id": "authorization_ref"
+        },
+        {
+          "reason": "No operational start/end window has been supplied; ordering requirements are documented separately.",
+          "requirement_id": "time_window"
+        },
+        {
+          "reason": "No operational controlled storage location, access roster, retention owner, or original-export custody process has been supplied.",
+          "requirement_id": "storage_access"
+        },
+        {
+          "reason": "No responsible external operator or evidence custodian has accepted provenance duties; Codex prepared files only.",
+          "requirement_id": "provenance_responsibility"
+        },
+        {
+          "reason": "No qualified empirical main data or actual independent observations support P1/P5; software fixture correctness cannot supply these claims.",
+          "requirement_id": "claim_evidence"
+        },
+        {
+          "reason": "All five EC conditions and ten reporting disclosures need scope-specific actual evidence; operational currentness, incidents and correction effectiveness remain unresolved.",
+          "requirement_id": "ec_disclosures_currentness"
+        },
+        {
+          "reason": "No qualified real claim reviewer or relationship/independence record is supplied.",
+          "requirement_id": "claim_reviewer"
+        },
+        {
+          "reason": "No scientific publication destination, publishing account, time window or external publication authorization is supplied.",
+          "requirement_id": "destination_scope"
+        }
+      ],
+      "preparation_status": "packet_prepared_with_explicit_gaps"
+    }
+  ],
+  "design_caps": {
+    "main": {
+      "calls": 72,
+      "output_allowance": 589824,
+      "positions": 360
+    },
+    "monetary_ceiling": {
+      "reason": "No currency, actual provider prices or approved maximum spend supplied.",
+      "state": "unknown"
+    },
+    "per_call_output_allowance": 8192,
+    "pilot": {
+      "calls": 6,
+      "output_allowance": 49152,
+      "positions": 30
+    },
+    "spending_authorized": false,
+    "usage_observed": false
+  },
+  "empirical_evidence_status": "pending",
+  "kind": "operational_readiness_gap_register",
+  "optional_pilot": {
+    "disposition": "optional_unactivated",
+    "observations_in_main": false,
+    "omission_allowed": true,
+    "performed": false,
+    "required_for_main": false
+  },
+  "reconstruction_status": "reconstructed_preparation",
+  "scope_limits": [
+    "Specification bytes and passing software checks do not establish empirical results.",
+    "Main collection being blocked does not block core-only preparation.",
+    "A narrower core-only release requires its own claim scope, version and evidence; it does not inherit main conclusions.",
+    "Any Step 11 nonperformance disposition is retained separately from these prospective activity packets."
+  ],
+  "study_id": "hero-operational-preparation",
+  "study_version": "prep-v1",
+  "user_authorization_scope": "Local preparation, recovery and bounded software verification; external activities require concrete resources and action scope.",
+  "version": "0.1"
+}

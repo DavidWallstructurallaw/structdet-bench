@@ -1,0 +1,20 @@
+{
+  "additions": [
+    "PHASE_4_PLAN.md",
+    "artifacts/phase4/baseline_reconciliation.json",
+    "artifacts/phase4/phase3_final_file_inventory.json",
+    "artifacts/phase4/plan_adoption.json",
+    "artifacts/phase4/predecessor_test_ids.json",
+    "artifacts/phase4/step1_write_ledger.json",
+    "tests/phase4_helpers.py",
+    "tests/phase4_matrix.json",
+    "tests/test_phase4_gate.py",
+    "tools/run_phase4_checks.py"
+  ],
+  "authorization": "Phase 4 Step 1 \u5f00\u59cb",
+  "generated_before_other_phase4_artifacts": true,
+  "modified_predecessor_paths": [],
+  "phase": 4,
+  "schema_version": "0.1",
+  "step": 1
+}

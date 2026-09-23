@@ -1,0 +1,1398 @@
+{
+  "activities": [
+    {
+      "action": {
+        "state": "known",
+        "value": "Construct the 32 specified core artifacts with rights and constructor lineage, preserving two positive variants and one identifiable-defect proposal per family plus eight boundary roles; send exact bytes into separately qualified validation and independent human review."
+      },
+      "activity": "core_construction",
+      "authorization_ref": {
+        "reason": "The user authorized local Step 10 preparation only. The concrete external action still needs a scoped authorization record.",
+        "state": "unknown"
+      },
+      "collection_limits": {
+        "reason": "This activity sends no model collection requests.",
+        "state": "not_applicable"
+      },
+      "dependencies": [],
+      "disposition": "planned",
+      "input_pins": [
+        {
+          "packet_id": "input-01",
+          "sha256": "d1a0849d888a35ae3c9bd552bb920ee46417b7eeb4f8b687f8b5825e6fb851b2"
+        },
+        {
+          "packet_id": "input-02",
+          "sha256": "161a6ce2b99ae3f26caab26bb03f77434b45f9df69845827c09c23c1e5dc2faf"
+        },
+        {
+          "packet_id": "input-03",
+          "sha256": "31d2387ff2867e67e07adf60bca723b6783d0c3155b905d5477d2f844e1d9ce8"
+        },
+        {
+          "packet_id": "input-04",
+          "sha256": "3090b505a93b6bdf97a0b0c302bceff7791aaf7601be288e39e9ccc1d7ca69a8"
+        },
+        {
+          "packet_id": "input-05",
+          "sha256": "dec9912f3e1f33dfc8b8347a188baf176b5811751d244ab07d7010108ff9d39e"
+        },
+        {
+          "packet_id": "input-06",
+          "sha256": "9066cfcf0829ec9e128c6bcf94fe5240c13beb430d7cc95bf0db45d2b6c736e6"
+        },
+        {
+          "packet_id": "input-07",
+          "sha256": "d45583739513c1803819028b656e2d920d0c50a8860ad78830b0aa4abe34137a"
+        },
+        {
+          "packet_id": "input-08",
+          "sha256": "a87a7ade8e5930ece5cf583e67224d9b646a4d4ca5f178a5a1193433c2b7d9bb"
+        },
+        {
+          "packet_id": "input-09",
+          "sha256": "4b8dce8c2523bc953286bf853a0e17764e8fbaa6c71cc024b4e60d39feb17c11"
+        },
+        {
+          "packet_id": "input-10",
+          "sha256": "88c4bf2e590772b37962f2ba583e5d75ceafdcfd06cd79b0f9dbfc91240fa4e8"
+        },
+        {
+          "packet_id": "input-11",
+          "sha256": "96e9a42d01eca87edb6d5daee8051c97d385c791fb29a064055ad9cf83310571"
+        },
+        {
+          "packet_id": "input-12",
+          "sha256": "959a956370425052ce467eaed6d305945306ccb6bb8a743f8a808f8cf79cd17b"
+        },
+        {
+          "packet_id": "input-13",
+          "sha256": "7a16d739b7fb130079da14a5629209665d0ec60bed9052ddb866bd6fe90f2228"
+        },
+        {
+          "packet_id": "input-14",
+          "sha256": "e5ea222ac65a042fcf2eca575f0ce2bcd397969187b71538acc7464074ed84cf"
+        },
+        {
+          "packet_id": "input-15",
+          "sha256": "4469e2400f4f2cf940072bc4c6627ee74c7538b7b89eb0c85241bcd34206bc85"
+        },
+        {
+          "packet_id": "input-16",
+          "sha256": "0104de55e96a9f977975a3e50e81ec07aa1d3add41b35a647f872c5c07ccf4cf"
+        },
+        {
+          "packet_id": "input-17",
+          "sha256": "c5a6a21af2b9aba30c7c9ff66b35a4b13a7e65b75f0c8ac361186482604e315e"
+        }
+      ],
+      "omission_reason": {
+        "reason": "This preparation keeps the activity available for later separate activation; no execution is performed.",
+        "state": "not_applicable"
+      },
+      "requirements": [
+        {
+          "basis": {
+            "state": "known",
+            "value": "The 17 acquired preparatory inputs are pinned in input_manifest.json; theory source pins and five scientific identifiers are preserved by registration-preparation."
+          },
+          "evidence_refs": [
+            {
+              "record_id": "source-01",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            },
+            {
+              "record_id": "source-02",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            }
+          ],
+          "requirement_id": "source_versions"
+        },
+        {
+          "basis": {
+            "state": "known",
+            "value": "All external activities are not_performed. Preparation grants no external execution, contact, spend, publication or empirical claim. Missing resources remain explicit."
+          },
+          "evidence_refs": [
+            {
+              "record_id": "source-02",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            },
+            {
+              "record_id": "source-04",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            }
+          ],
+          "requirement_id": "scope_restrictions"
+        },
+        {
+          "basis": {
+            "reason": "No operational controlled storage location, access roster, retention owner, or original-export custody process has been supplied.",
+            "state": "unknown"
+          },
+          "evidence_refs": [],
+          "requirement_id": "storage_access"
+        },
+        {
+          "basis": {
+            "reason": "No responsible external operator or evidence custodian has accepted provenance duties; Codex prepared files only.",
+            "state": "unknown"
+          },
+          "evidence_refs": [],
+          "requirement_id": "provenance_responsibility"
+        },
+        {
+          "basis": {
+            "state": "known",
+            "value": "The complete 32 role specifications, eight descriptors, 28 descriptor pairs, witnesses, and preservation quotas are supplied as plans. Actual core artifacts remain missing."
+          },
+          "evidence_refs": [
+            {
+              "record_id": "source-05",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            },
+            {
+              "record_id": "source-06",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            },
+            {
+              "record_id": "source-07",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            },
+            {
+              "record_id": "source-08",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            }
+          ],
+          "requirement_id": "core_role_specifications"
+        },
+        {
+          "basis": {
+            "reason": "No actual constructor, artifact rights, source lineage, AI-assistance history or artifact bytes have been supplied.",
+            "state": "unknown"
+          },
+          "evidence_refs": [],
+          "requirement_id": "constructor_lineage"
+        },
+        {
+          "basis": {
+            "state": "known",
+            "value": "Use two distinct qualified humans for every actual core artifact with original first passes and separately retained adjudication; the supplied blank forms do not fill reviewer positions."
+          },
+          "evidence_refs": [
+            {
+              "record_id": "source-12",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            },
+            {
+              "record_id": "source-14",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            },
+            {
+              "record_id": "source-15",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            }
+          ],
+          "requirement_id": "review_route"
+        }
+      ],
+      "responsible_operator": {
+        "reason": "No named external operator has been supplied or appointed.",
+        "state": "unknown"
+      },
+      "time_window": {
+        "reason": "No operational start/end window has been supplied; ordering requirements are documented separately.",
+        "state": "unknown"
+      }
+    },
+    {
+      "action": {
+        "state": "known",
+        "value": "Validate individually identified source bytes against the ordered 8995-test suite and mechanism witnesses in an independently reviewed isolated environment with a trusted oracle; retain complete original receipts, including failures and resource exhaustion."
+      },
+      "activity": "external_validation",
+      "authorization_ref": {
+        "reason": "The user authorized local Step 10 preparation only. The concrete external action still needs a scoped authorization record.",
+        "state": "unknown"
+      },
+      "collection_limits": {
+        "reason": "This activity sends no model collection requests.",
+        "state": "not_applicable"
+      },
+      "dependencies": [
+        "core_construction"
+      ],
+      "disposition": "planned",
+      "input_pins": [
+        {
+          "packet_id": "input-01",
+          "sha256": "d1a0849d888a35ae3c9bd552bb920ee46417b7eeb4f8b687f8b5825e6fb851b2"
+        },
+        {
+          "packet_id": "input-02",
+          "sha256": "161a6ce2b99ae3f26caab26bb03f77434b45f9df69845827c09c23c1e5dc2faf"
+        },
+        {
+          "packet_id": "input-03",
+          "sha256": "31d2387ff2867e67e07adf60bca723b6783d0c3155b905d5477d2f844e1d9ce8"
+        },
+        {
+          "packet_id": "input-04",
+          "sha256": "3090b505a93b6bdf97a0b0c302bceff7791aaf7601be288e39e9ccc1d7ca69a8"
+        },
+        {
+          "packet_id": "input-05",
+          "sha256": "dec9912f3e1f33dfc8b8347a188baf176b5811751d244ab07d7010108ff9d39e"
+        },
+        {
+          "packet_id": "input-06",
+          "sha256": "9066cfcf0829ec9e128c6bcf94fe5240c13beb430d7cc95bf0db45d2b6c736e6"
+        },
+        {
+          "packet_id": "input-07",
+          "sha256": "d45583739513c1803819028b656e2d920d0c50a8860ad78830b0aa4abe34137a"
+        },
+        {
+          "packet_id": "input-08",
+          "sha256": "a87a7ade8e5930ece5cf583e67224d9b646a4d4ca5f178a5a1193433c2b7d9bb"
+        },
+        {
+          "packet_id": "input-09",
+          "sha256": "4b8dce8c2523bc953286bf853a0e17764e8fbaa6c71cc024b4e60d39feb17c11"
+        },
+        {
+          "packet_id": "input-10",
+          "sha256": "88c4bf2e590772b37962f2ba583e5d75ceafdcfd06cd79b0f9dbfc91240fa4e8"
+        },
+        {
+          "packet_id": "input-11",
+          "sha256": "96e9a42d01eca87edb6d5daee8051c97d385c791fb29a064055ad9cf83310571"
+        },
+        {
+          "packet_id": "input-12",
+          "sha256": "959a956370425052ce467eaed6d305945306ccb6bb8a743f8a808f8cf79cd17b"
+        },
+        {
+          "packet_id": "input-13",
+          "sha256": "7a16d739b7fb130079da14a5629209665d0ec60bed9052ddb866bd6fe90f2228"
+        },
+        {
+          "packet_id": "input-14",
+          "sha256": "e5ea222ac65a042fcf2eca575f0ce2bcd397969187b71538acc7464074ed84cf"
+        },
+        {
+          "packet_id": "input-15",
+          "sha256": "4469e2400f4f2cf940072bc4c6627ee74c7538b7b89eb0c85241bcd34206bc85"
+        },
+        {
+          "packet_id": "input-16",
+          "sha256": "0104de55e96a9f977975a3e50e81ec07aa1d3add41b35a647f872c5c07ccf4cf"
+        },
+        {
+          "packet_id": "input-17",
+          "sha256": "c5a6a21af2b9aba30c7c9ff66b35a4b13a7e65b75f0c8ac361186482604e315e"
+        }
+      ],
+      "omission_reason": {
+        "reason": "This preparation keeps the activity available for later separate activation; no execution is performed.",
+        "state": "not_applicable"
+      },
+      "requirements": [
+        {
+          "basis": {
+            "state": "known",
+            "value": "The 17 acquired preparatory inputs are pinned in input_manifest.json; theory source pins and five scientific identifiers are preserved by registration-preparation."
+          },
+          "evidence_refs": [
+            {
+              "record_id": "source-01",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            },
+            {
+              "record_id": "source-02",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            }
+          ],
+          "requirement_id": "source_versions"
+        },
+        {
+          "basis": {
+            "state": "known",
+            "value": "All external activities are not_performed. Preparation grants no external execution, contact, spend, publication or empirical claim. Missing resources remain explicit."
+          },
+          "evidence_refs": [
+            {
+              "record_id": "source-02",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            },
+            {
+              "record_id": "source-04",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            }
+          ],
+          "requirement_id": "scope_restrictions"
+        },
+        {
+          "basis": {
+            "reason": "No operational controlled storage location, access roster, retention owner, or original-export custody process has been supplied.",
+            "state": "unknown"
+          },
+          "evidence_refs": [],
+          "requirement_id": "storage_access"
+        },
+        {
+          "basis": {
+            "reason": "No responsible external operator or evidence custodian has accepted provenance duties; Codex prepared files only.",
+            "state": "unknown"
+          },
+          "evidence_refs": [],
+          "requirement_id": "provenance_responsibility"
+        },
+        {
+          "basis": {
+            "reason": "The full ordered 8995-test suite is supplied and pinned; actual candidate source hashes, interfaces and accepted source-to-suite associations remain missing.",
+            "state": "unknown"
+          },
+          "evidence_refs": [
+            {
+              "record_id": "source-10",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            },
+            {
+              "record_id": "source-09",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            },
+            {
+              "record_id": "source-07",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            }
+          ],
+          "requirement_id": "candidate_suite_identity"
+        },
+        {
+          "basis": {
+            "reason": "No reviewed hostile-code execution environment, immutable image/dependencies, isolation assessment, or authorized environment operator is supplied.",
+            "state": "unknown"
+          },
+          "evidence_refs": [
+            {
+              "record_id": "source-02",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            }
+          ],
+          "requirement_id": "environment_containment"
+        },
+        {
+          "basis": {
+            "reason": "No independently reviewed oracle implementation or oracle environment has been supplied. The adopted checks alone do not establish a trusted execution.",
+            "state": "unknown"
+          },
+          "evidence_refs": [
+            {
+              "record_id": "source-01",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            }
+          ],
+          "requirement_id": "trusted_oracle"
+        },
+        {
+          "basis": {
+            "reason": "Proposed limits are documented but no measured, reviewed and enforced environment exists; feasibility for all eight correct families is untested.",
+            "state": "unknown"
+          },
+          "evidence_refs": [
+            {
+              "record_id": "source-02",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            }
+          ],
+          "requirement_id": "resource_limits"
+        },
+        {
+          "basis": {
+            "state": "known",
+            "value": "Before accepting the validation envelope, establish actual full-suite feasibility for all eight correct families and separately scope trace resources; retain harness failures separately from decisive violations."
+          },
+          "evidence_refs": [
+            {
+              "record_id": "source-02",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            },
+            {
+              "record_id": "source-11",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            }
+          ],
+          "requirement_id": "calibration_route"
+        },
+        {
+          "basis": {
+            "reason": "The passive validation-receipt specification is supplied, but no original external execution log, resource observations or termination receipt exists.",
+            "state": "unknown"
+          },
+          "evidence_refs": [
+            {
+              "record_id": "source-11",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            }
+          ],
+          "requirement_id": "original_receipts"
+        }
+      ],
+      "responsible_operator": {
+        "reason": "No named external operator has been supplied or appointed.",
+        "state": "unknown"
+      },
+      "time_window": {
+        "reason": "No operational start/end window has been supplied; ordering requirements are documented separately.",
+        "state": "unknown"
+      }
+    },
+    {
+      "action": {
+        "state": "known",
+        "value": "Obtain two distinct qualified human first passes per actual core artifact before discussion, preserve disagreement and revisions, and obtain independent expert adjudication where needed; later audit available systematic and targeted main artifacts."
+      },
+      "activity": "human_review",
+      "authorization_ref": {
+        "reason": "The user authorized local Step 10 preparation only. The concrete external action still needs a scoped authorization record.",
+        "state": "unknown"
+      },
+      "collection_limits": {
+        "reason": "This activity sends no model collection requests.",
+        "state": "not_applicable"
+      },
+      "dependencies": [
+        "core_construction"
+      ],
+      "disposition": "planned",
+      "input_pins": [
+        {
+          "packet_id": "input-01",
+          "sha256": "d1a0849d888a35ae3c9bd552bb920ee46417b7eeb4f8b687f8b5825e6fb851b2"
+        },
+        {
+          "packet_id": "input-02",
+          "sha256": "161a6ce2b99ae3f26caab26bb03f77434b45f9df69845827c09c23c1e5dc2faf"
+        },
+        {
+          "packet_id": "input-03",
+          "sha256": "31d2387ff2867e67e07adf60bca723b6783d0c3155b905d5477d2f844e1d9ce8"
+        },
+        {
+          "packet_id": "input-04",
+          "sha256": "3090b505a93b6bdf97a0b0c302bceff7791aaf7601be288e39e9ccc1d7ca69a8"
+        },
+        {
+          "packet_id": "input-05",
+          "sha256": "dec9912f3e1f33dfc8b8347a188baf176b5811751d244ab07d7010108ff9d39e"
+        },
+        {
+          "packet_id": "input-06",
+          "sha256": "9066cfcf0829ec9e128c6bcf94fe5240c13beb430d7cc95bf0db45d2b6c736e6"
+        },
+        {
+          "packet_id": "input-07",
+          "sha256": "d45583739513c1803819028b656e2d920d0c50a8860ad78830b0aa4abe34137a"
+        },
+        {
+          "packet_id": "input-08",
+          "sha256": "a87a7ade8e5930ece5cf583e67224d9b646a4d4ca5f178a5a1193433c2b7d9bb"
+        },
+        {
+          "packet_id": "input-09",
+          "sha256": "4b8dce8c2523bc953286bf853a0e17764e8fbaa6c71cc024b4e60d39feb17c11"
+        },
+        {
+          "packet_id": "input-10",
+          "sha256": "88c4bf2e590772b37962f2ba583e5d75ceafdcfd06cd79b0f9dbfc91240fa4e8"
+        },
+        {
+          "packet_id": "input-11",
+          "sha256": "96e9a42d01eca87edb6d5daee8051c97d385c791fb29a064055ad9cf83310571"
+        },
+        {
+          "packet_id": "input-12",
+          "sha256": "959a956370425052ce467eaed6d305945306ccb6bb8a743f8a808f8cf79cd17b"
+        },
+        {
+          "packet_id": "input-13",
+          "sha256": "7a16d739b7fb130079da14a5629209665d0ec60bed9052ddb866bd6fe90f2228"
+        },
+        {
+          "packet_id": "input-14",
+          "sha256": "e5ea222ac65a042fcf2eca575f0ce2bcd397969187b71538acc7464074ed84cf"
+        },
+        {
+          "packet_id": "input-15",
+          "sha256": "4469e2400f4f2cf940072bc4c6627ee74c7538b7b89eb0c85241bcd34206bc85"
+        },
+        {
+          "packet_id": "input-16",
+          "sha256": "0104de55e96a9f977975a3e50e81ec07aa1d3add41b35a647f872c5c07ccf4cf"
+        },
+        {
+          "packet_id": "input-17",
+          "sha256": "c5a6a21af2b9aba30c7c9ff66b35a4b13a7e65b75f0c8ac361186482604e315e"
+        }
+      ],
+      "omission_reason": {
+        "reason": "This preparation keeps the activity available for later separate activation; no execution is performed.",
+        "state": "not_applicable"
+      },
+      "requirements": [
+        {
+          "basis": {
+            "state": "known",
+            "value": "The 17 acquired preparatory inputs are pinned in input_manifest.json; theory source pins and five scientific identifiers are preserved by registration-preparation."
+          },
+          "evidence_refs": [
+            {
+              "record_id": "source-01",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            },
+            {
+              "record_id": "source-02",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            }
+          ],
+          "requirement_id": "source_versions"
+        },
+        {
+          "basis": {
+            "state": "known",
+            "value": "All external activities are not_performed. Preparation grants no external execution, contact, spend, publication or empirical claim. Missing resources remain explicit."
+          },
+          "evidence_refs": [
+            {
+              "record_id": "source-02",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            },
+            {
+              "record_id": "source-04",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            }
+          ],
+          "requirement_id": "scope_restrictions"
+        },
+        {
+          "basis": {
+            "reason": "No operational controlled storage location, access roster, retention owner, or original-export custody process has been supplied.",
+            "state": "unknown"
+          },
+          "evidence_refs": [],
+          "requirement_id": "storage_access"
+        },
+        {
+          "basis": {
+            "reason": "No responsible external operator or evidence custodian has accepted provenance duties; Codex prepared files only.",
+            "state": "unknown"
+          },
+          "evidence_refs": [],
+          "requirement_id": "provenance_responsibility"
+        },
+        {
+          "basis": {
+            "reason": "No real reviewers with relevant qualifications have been identified. Codex and other model agents do not satisfy human review.",
+            "state": "unknown"
+          },
+          "evidence_refs": [
+            {
+              "record_id": "source-15",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            }
+          ],
+          "requirement_id": "human_qualifications"
+        },
+        {
+          "basis": {
+            "reason": "No qualified human identities, actual relationships, institutional/source connections or independence evidence have been supplied.",
+            "state": "unknown"
+          },
+          "evidence_refs": [],
+          "requirement_id": "identity_relationships"
+        },
+        {
+          "basis": {
+            "reason": "No original human first passes exist. All 32 core artifacts require two distinct humans, at least 64 item-level initial records; blank forms are preparatory only.",
+            "state": "unknown"
+          },
+          "evidence_refs": [
+            {
+              "record_id": "source-12",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            },
+            {
+              "record_id": "source-14",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            }
+          ],
+          "requirement_id": "original_first_passes"
+        },
+        {
+          "basis": {
+            "reason": "Actual human exposure, prior model/source familiarity and feasible blinding cannot be assessed before real people and artifacts are supplied.",
+            "state": "unknown"
+          },
+          "evidence_refs": [
+            {
+              "record_id": "source-15",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            }
+          ],
+          "requirement_id": "exposure"
+        },
+        {
+          "basis": {
+            "reason": "No recipients, contact channel, consent/scope or authorization to contact anyone has been provided. Local export does not send material.",
+            "state": "unknown"
+          },
+          "evidence_refs": [],
+          "requirement_id": "communication_route"
+        }
+      ],
+      "responsible_operator": {
+        "reason": "No named external operator has been supplied or appointed.",
+        "state": "unknown"
+      },
+      "time_window": {
+        "reason": "No operational start/end window has been supplied; ordering requirements are documented separately.",
+        "state": "unknown"
+      }
+    },
+    {
+      "action": {
+        "state": "known",
+        "value": "If explicitly activated, run the six P00 planned calls for 30 intended positions with the exact messages and registered controls, raw exports, fixed attempts and approved finite expenditure; optional pilot observations stay outside main data."
+      },
+      "activity": "pilot_collection",
+      "authorization_ref": {
+        "reason": "The user authorized local Step 10 preparation only. The concrete external action still needs a scoped authorization record.",
+        "state": "unknown"
+      },
+      "collection_limits": {
+        "reason": "Provider, prices, currency and maximum expenditure are not supplied. Known design caps are recorded separately; unknown spending is not zero.",
+        "state": "unknown"
+      },
+      "dependencies": [
+        "core_construction",
+        "external_validation",
+        "human_review"
+      ],
+      "disposition": "planned",
+      "input_pins": [
+        {
+          "packet_id": "input-01",
+          "sha256": "d1a0849d888a35ae3c9bd552bb920ee46417b7eeb4f8b687f8b5825e6fb851b2"
+        },
+        {
+          "packet_id": "input-02",
+          "sha256": "161a6ce2b99ae3f26caab26bb03f77434b45f9df69845827c09c23c1e5dc2faf"
+        },
+        {
+          "packet_id": "input-03",
+          "sha256": "31d2387ff2867e67e07adf60bca723b6783d0c3155b905d5477d2f844e1d9ce8"
+        },
+        {
+          "packet_id": "input-04",
+          "sha256": "3090b505a93b6bdf97a0b0c302bceff7791aaf7601be288e39e9ccc1d7ca69a8"
+        },
+        {
+          "packet_id": "input-05",
+          "sha256": "dec9912f3e1f33dfc8b8347a188baf176b5811751d244ab07d7010108ff9d39e"
+        },
+        {
+          "packet_id": "input-06",
+          "sha256": "9066cfcf0829ec9e128c6bcf94fe5240c13beb430d7cc95bf0db45d2b6c736e6"
+        },
+        {
+          "packet_id": "input-07",
+          "sha256": "d45583739513c1803819028b656e2d920d0c50a8860ad78830b0aa4abe34137a"
+        },
+        {
+          "packet_id": "input-08",
+          "sha256": "a87a7ade8e5930ece5cf583e67224d9b646a4d4ca5f178a5a1193433c2b7d9bb"
+        },
+        {
+          "packet_id": "input-09",
+          "sha256": "4b8dce8c2523bc953286bf853a0e17764e8fbaa6c71cc024b4e60d39feb17c11"
+        },
+        {
+          "packet_id": "input-10",
+          "sha256": "88c4bf2e590772b37962f2ba583e5d75ceafdcfd06cd79b0f9dbfc91240fa4e8"
+        },
+        {
+          "packet_id": "input-11",
+          "sha256": "96e9a42d01eca87edb6d5daee8051c97d385c791fb29a064055ad9cf83310571"
+        },
+        {
+          "packet_id": "input-12",
+          "sha256": "959a956370425052ce467eaed6d305945306ccb6bb8a743f8a808f8cf79cd17b"
+        },
+        {
+          "packet_id": "input-13",
+          "sha256": "7a16d739b7fb130079da14a5629209665d0ec60bed9052ddb866bd6fe90f2228"
+        },
+        {
+          "packet_id": "input-14",
+          "sha256": "e5ea222ac65a042fcf2eca575f0ce2bcd397969187b71538acc7464074ed84cf"
+        },
+        {
+          "packet_id": "input-15",
+          "sha256": "4469e2400f4f2cf940072bc4c6627ee74c7538b7b89eb0c85241bcd34206bc85"
+        },
+        {
+          "packet_id": "input-16",
+          "sha256": "0104de55e96a9f977975a3e50e81ec07aa1d3add41b35a647f872c5c07ccf4cf"
+        },
+        {
+          "packet_id": "input-17",
+          "sha256": "c5a6a21af2b9aba30c7c9ff66b35a4b13a7e65b75f0c8ac361186482604e315e"
+        }
+      ],
+      "omission_reason": {
+        "reason": "This preparation keeps the activity available for later separate activation; no execution is performed.",
+        "state": "not_applicable"
+      },
+      "requirements": [
+        {
+          "basis": {
+            "state": "known",
+            "value": "The 17 acquired preparatory inputs are pinned in input_manifest.json; theory source pins and five scientific identifiers are preserved by registration-preparation."
+          },
+          "evidence_refs": [
+            {
+              "record_id": "source-01",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            },
+            {
+              "record_id": "source-02",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            }
+          ],
+          "requirement_id": "source_versions"
+        },
+        {
+          "basis": {
+            "state": "known",
+            "value": "All external activities are not_performed. Preparation grants no external execution, contact, spend, publication or empirical claim. Missing resources remain explicit."
+          },
+          "evidence_refs": [
+            {
+              "record_id": "source-02",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            },
+            {
+              "record_id": "source-04",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            }
+          ],
+          "requirement_id": "scope_restrictions"
+        },
+        {
+          "basis": {
+            "reason": "No operational controlled storage location, access roster, retention owner, or original-export custody process has been supplied.",
+            "state": "unknown"
+          },
+          "evidence_refs": [],
+          "requirement_id": "storage_access"
+        },
+        {
+          "basis": {
+            "reason": "No responsible external operator or evidence custodian has accepted provenance duties; Codex prepared files only.",
+            "state": "unknown"
+          },
+          "evidence_refs": [],
+          "requirement_id": "provenance_responsibility"
+        },
+        {
+          "basis": {
+            "reason": "No provider, model/deployment version, access account or actual service environment has been selected or supplied.",
+            "state": "unknown"
+          },
+          "evidence_refs": [],
+          "requirement_id": "deployment_identity"
+        },
+        {
+          "basis": {
+            "reason": "Requested A/B/C controls are specified, but provider support, effective temperature, cap units/reasoning treatment, wrapper knowledge and hidden controls remain unknown.",
+            "state": "unknown"
+          },
+          "evidence_refs": [
+            {
+              "record_id": "source-01",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            }
+          ],
+          "requirement_id": "control_cap_semantics"
+        },
+        {
+          "basis": {
+            "state": "known",
+            "value": "Both materialized plans pin exact message files, request order and intended slots. A/B visible messages match within a block; C adds the approved variation clause. No messages were sent."
+          },
+          "evidence_refs": [
+            {
+              "record_id": "source-16",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            },
+            {
+              "record_id": "source-17",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            }
+          ],
+          "requirement_id": "exact_messages_slots"
+        },
+        {
+          "basis": {
+            "state": "known",
+            "value": "One registered attempt per slot; disable automatic retries where possible, disclose hidden retry uncertainty, preserve every attempt and stop on unapproved costs, control drift or containment/export failures. Refusals, poor outputs and failures never authorize replacement samples."
+          },
+          "evidence_refs": [
+            {
+              "record_id": "source-01",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            },
+            {
+              "record_id": "source-02",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            }
+          ],
+          "requirement_id": "retry_failure_stop_policy"
+        },
+        {
+          "basis": {
+            "reason": "No actual deployment has demonstrated exact sent-message and raw-response export with request/time/usage/control/failure identities. Original exports do not yet exist.",
+            "state": "unknown"
+          },
+          "evidence_refs": [],
+          "requirement_id": "original_exports"
+        }
+      ],
+      "responsible_operator": {
+        "reason": "No named external operator has been supplied or appointed.",
+        "state": "unknown"
+      },
+      "time_window": {
+        "reason": "No operational start/end window has been supplied; ordering requirements are documented separately.",
+        "state": "unknown"
+      }
+    },
+    {
+      "action": {
+        "state": "known",
+        "value": "After core qualification, feasible validation, human-review arrangements and prospective freeze, execute the 72 registered P01-P06 calls for 360 intended positions in fixed order; preserve raw messages, responses, failures, control deviations and missing positions."
+      },
+      "activity": "main_collection",
+      "authorization_ref": {
+        "reason": "The user authorized local Step 10 preparation only. The concrete external action still needs a scoped authorization record.",
+        "state": "unknown"
+      },
+      "collection_limits": {
+        "reason": "Provider, prices, currency and maximum expenditure are not supplied. Known design caps are recorded separately; unknown spending is not zero.",
+        "state": "unknown"
+      },
+      "dependencies": [
+        "core_construction",
+        "external_validation",
+        "human_review"
+      ],
+      "disposition": "planned",
+      "input_pins": [
+        {
+          "packet_id": "input-01",
+          "sha256": "d1a0849d888a35ae3c9bd552bb920ee46417b7eeb4f8b687f8b5825e6fb851b2"
+        },
+        {
+          "packet_id": "input-02",
+          "sha256": "161a6ce2b99ae3f26caab26bb03f77434b45f9df69845827c09c23c1e5dc2faf"
+        },
+        {
+          "packet_id": "input-03",
+          "sha256": "31d2387ff2867e67e07adf60bca723b6783d0c3155b905d5477d2f844e1d9ce8"
+        },
+        {
+          "packet_id": "input-04",
+          "sha256": "3090b505a93b6bdf97a0b0c302bceff7791aaf7601be288e39e9ccc1d7ca69a8"
+        },
+        {
+          "packet_id": "input-05",
+          "sha256": "dec9912f3e1f33dfc8b8347a188baf176b5811751d244ab07d7010108ff9d39e"
+        },
+        {
+          "packet_id": "input-06",
+          "sha256": "9066cfcf0829ec9e128c6bcf94fe5240c13beb430d7cc95bf0db45d2b6c736e6"
+        },
+        {
+          "packet_id": "input-07",
+          "sha256": "d45583739513c1803819028b656e2d920d0c50a8860ad78830b0aa4abe34137a"
+        },
+        {
+          "packet_id": "input-08",
+          "sha256": "a87a7ade8e5930ece5cf583e67224d9b646a4d4ca5f178a5a1193433c2b7d9bb"
+        },
+        {
+          "packet_id": "input-09",
+          "sha256": "4b8dce8c2523bc953286bf853a0e17764e8fbaa6c71cc024b4e60d39feb17c11"
+        },
+        {
+          "packet_id": "input-10",
+          "sha256": "88c4bf2e590772b37962f2ba583e5d75ceafdcfd06cd79b0f9dbfc91240fa4e8"
+        },
+        {
+          "packet_id": "input-11",
+          "sha256": "96e9a42d01eca87edb6d5daee8051c97d385c791fb29a064055ad9cf83310571"
+        },
+        {
+          "packet_id": "input-12",
+          "sha256": "959a956370425052ce467eaed6d305945306ccb6bb8a743f8a808f8cf79cd17b"
+        },
+        {
+          "packet_id": "input-13",
+          "sha256": "7a16d739b7fb130079da14a5629209665d0ec60bed9052ddb866bd6fe90f2228"
+        },
+        {
+          "packet_id": "input-14",
+          "sha256": "e5ea222ac65a042fcf2eca575f0ce2bcd397969187b71538acc7464074ed84cf"
+        },
+        {
+          "packet_id": "input-15",
+          "sha256": "4469e2400f4f2cf940072bc4c6627ee74c7538b7b89eb0c85241bcd34206bc85"
+        },
+        {
+          "packet_id": "input-16",
+          "sha256": "0104de55e96a9f977975a3e50e81ec07aa1d3add41b35a647f872c5c07ccf4cf"
+        },
+        {
+          "packet_id": "input-17",
+          "sha256": "c5a6a21af2b9aba30c7c9ff66b35a4b13a7e65b75f0c8ac361186482604e315e"
+        }
+      ],
+      "omission_reason": {
+        "reason": "This preparation keeps the activity available for later separate activation; no execution is performed.",
+        "state": "not_applicable"
+      },
+      "requirements": [
+        {
+          "basis": {
+            "state": "known",
+            "value": "The 17 acquired preparatory inputs are pinned in input_manifest.json; theory source pins and five scientific identifiers are preserved by registration-preparation."
+          },
+          "evidence_refs": [
+            {
+              "record_id": "source-01",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            },
+            {
+              "record_id": "source-02",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            }
+          ],
+          "requirement_id": "source_versions"
+        },
+        {
+          "basis": {
+            "state": "known",
+            "value": "All external activities are not_performed. Preparation grants no external execution, contact, spend, publication or empirical claim. Missing resources remain explicit."
+          },
+          "evidence_refs": [
+            {
+              "record_id": "source-02",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            },
+            {
+              "record_id": "source-04",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            }
+          ],
+          "requirement_id": "scope_restrictions"
+        },
+        {
+          "basis": {
+            "reason": "No operational controlled storage location, access roster, retention owner, or original-export custody process has been supplied.",
+            "state": "unknown"
+          },
+          "evidence_refs": [],
+          "requirement_id": "storage_access"
+        },
+        {
+          "basis": {
+            "reason": "No responsible external operator or evidence custodian has accepted provenance duties; Codex prepared files only.",
+            "state": "unknown"
+          },
+          "evidence_refs": [],
+          "requirement_id": "provenance_responsibility"
+        },
+        {
+          "basis": {
+            "reason": "No provider, model/deployment version, access account or actual service environment has been selected or supplied.",
+            "state": "unknown"
+          },
+          "evidence_refs": [],
+          "requirement_id": "deployment_identity"
+        },
+        {
+          "basis": {
+            "reason": "Requested A/B/C controls are specified, but provider support, effective temperature, cap units/reasoning treatment, wrapper knowledge and hidden controls remain unknown.",
+            "state": "unknown"
+          },
+          "evidence_refs": [
+            {
+              "record_id": "source-01",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            }
+          ],
+          "requirement_id": "control_cap_semantics"
+        },
+        {
+          "basis": {
+            "state": "known",
+            "value": "Both materialized plans pin exact message files, request order and intended slots. A/B visible messages match within a block; C adds the approved variation clause. No messages were sent."
+          },
+          "evidence_refs": [
+            {
+              "record_id": "source-16",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            },
+            {
+              "record_id": "source-17",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            }
+          ],
+          "requirement_id": "exact_messages_slots"
+        },
+        {
+          "basis": {
+            "state": "known",
+            "value": "One registered attempt per slot; disable automatic retries where possible, disclose hidden retry uncertainty, preserve every attempt and stop on unapproved costs, control drift or containment/export failures. Refusals, poor outputs and failures never authorize replacement samples."
+          },
+          "evidence_refs": [
+            {
+              "record_id": "source-01",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            },
+            {
+              "record_id": "source-02",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            }
+          ],
+          "requirement_id": "retry_failure_stop_policy"
+        },
+        {
+          "basis": {
+            "reason": "No actual deployment has demonstrated exact sent-message and raw-response export with request/time/usage/control/failure identities. Original exports do not yet exist.",
+            "state": "unknown"
+          },
+          "evidence_refs": [],
+          "requirement_id": "original_exports"
+        },
+        {
+          "basis": {
+            "reason": "No external prospective freeze or registration evidence exists. The preparation date and local hashes do not prove preregistration.",
+            "state": "unknown"
+          },
+          "evidence_refs": [],
+          "requirement_id": "registration_freeze"
+        },
+        {
+          "basis": {
+            "reason": "No actual core artifact, independent first pass, functional execution, mechanism evidence, descriptor-pair finding or accepted qualification is supplied.",
+            "state": "unknown"
+          },
+          "evidence_refs": [
+            {
+              "record_id": "source-05",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            },
+            {
+              "record_id": "source-06",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            }
+          ],
+          "requirement_id": "core_qualification"
+        }
+      ],
+      "responsible_operator": {
+        "reason": "No named external operator has been supplied or appointed.",
+        "state": "unknown"
+      },
+      "time_window": {
+        "reason": "No operational start/end window has been supplied; ordering requirements are documented separately.",
+        "state": "unknown"
+      }
+    },
+    {
+      "action": {
+        "state": "known",
+        "value": "For the proposed main P1/P5 claim, review qualified main evidence, validity and membership accounting, sampled audit, sensitivity/replay and five-condition EC disclosures, then publish only the supported scoped conclusions through a separately authorized destination."
+      },
+      "activity": "scientific_release",
+      "authorization_ref": {
+        "reason": "The user authorized local Step 10 preparation only. The concrete external action still needs a scoped authorization record.",
+        "state": "unknown"
+      },
+      "collection_limits": {
+        "reason": "This activity sends no model collection requests.",
+        "state": "not_applicable"
+      },
+      "dependencies": [
+        "core_construction",
+        "external_validation",
+        "human_review",
+        "main_collection"
+      ],
+      "disposition": "planned",
+      "input_pins": [
+        {
+          "packet_id": "input-01",
+          "sha256": "d1a0849d888a35ae3c9bd552bb920ee46417b7eeb4f8b687f8b5825e6fb851b2"
+        },
+        {
+          "packet_id": "input-02",
+          "sha256": "161a6ce2b99ae3f26caab26bb03f77434b45f9df69845827c09c23c1e5dc2faf"
+        },
+        {
+          "packet_id": "input-03",
+          "sha256": "31d2387ff2867e67e07adf60bca723b6783d0c3155b905d5477d2f844e1d9ce8"
+        },
+        {
+          "packet_id": "input-04",
+          "sha256": "3090b505a93b6bdf97a0b0c302bceff7791aaf7601be288e39e9ccc1d7ca69a8"
+        },
+        {
+          "packet_id": "input-05",
+          "sha256": "dec9912f3e1f33dfc8b8347a188baf176b5811751d244ab07d7010108ff9d39e"
+        },
+        {
+          "packet_id": "input-06",
+          "sha256": "9066cfcf0829ec9e128c6bcf94fe5240c13beb430d7cc95bf0db45d2b6c736e6"
+        },
+        {
+          "packet_id": "input-07",
+          "sha256": "d45583739513c1803819028b656e2d920d0c50a8860ad78830b0aa4abe34137a"
+        },
+        {
+          "packet_id": "input-08",
+          "sha256": "a87a7ade8e5930ece5cf583e67224d9b646a4d4ca5f178a5a1193433c2b7d9bb"
+        },
+        {
+          "packet_id": "input-09",
+          "sha256": "4b8dce8c2523bc953286bf853a0e17764e8fbaa6c71cc024b4e60d39feb17c11"
+        },
+        {
+          "packet_id": "input-10",
+          "sha256": "88c4bf2e590772b37962f2ba583e5d75ceafdcfd06cd79b0f9dbfc91240fa4e8"
+        },
+        {
+          "packet_id": "input-11",
+          "sha256": "96e9a42d01eca87edb6d5daee8051c97d385c791fb29a064055ad9cf83310571"
+        },
+        {
+          "packet_id": "input-12",
+          "sha256": "959a956370425052ce467eaed6d305945306ccb6bb8a743f8a808f8cf79cd17b"
+        },
+        {
+          "packet_id": "input-13",
+          "sha256": "7a16d739b7fb130079da14a5629209665d0ec60bed9052ddb866bd6fe90f2228"
+        },
+        {
+          "packet_id": "input-14",
+          "sha256": "e5ea222ac65a042fcf2eca575f0ce2bcd397969187b71538acc7464074ed84cf"
+        },
+        {
+          "packet_id": "input-15",
+          "sha256": "4469e2400f4f2cf940072bc4c6627ee74c7538b7b89eb0c85241bcd34206bc85"
+        },
+        {
+          "packet_id": "input-16",
+          "sha256": "0104de55e96a9f977975a3e50e81ec07aa1d3add41b35a647f872c5c07ccf4cf"
+        },
+        {
+          "packet_id": "input-17",
+          "sha256": "c5a6a21af2b9aba30c7c9ff66b35a4b13a7e65b75f0c8ac361186482604e315e"
+        }
+      ],
+      "omission_reason": {
+        "reason": "This preparation keeps the activity available for later separate activation; no execution is performed.",
+        "state": "not_applicable"
+      },
+      "requirements": [
+        {
+          "basis": {
+            "state": "known",
+            "value": "The 17 acquired preparatory inputs are pinned in input_manifest.json; theory source pins and five scientific identifiers are preserved by registration-preparation."
+          },
+          "evidence_refs": [
+            {
+              "record_id": "source-01",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            },
+            {
+              "record_id": "source-02",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            }
+          ],
+          "requirement_id": "source_versions"
+        },
+        {
+          "basis": {
+            "state": "known",
+            "value": "All external activities are not_performed. Preparation grants no external execution, contact, spend, publication or empirical claim. Missing resources remain explicit."
+          },
+          "evidence_refs": [
+            {
+              "record_id": "source-02",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            },
+            {
+              "record_id": "source-04",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            }
+          ],
+          "requirement_id": "scope_restrictions"
+        },
+        {
+          "basis": {
+            "reason": "No operational controlled storage location, access roster, retention owner, or original-export custody process has been supplied.",
+            "state": "unknown"
+          },
+          "evidence_refs": [],
+          "requirement_id": "storage_access"
+        },
+        {
+          "basis": {
+            "reason": "No responsible external operator or evidence custodian has accepted provenance duties; Codex prepared files only.",
+            "state": "unknown"
+          },
+          "evidence_refs": [],
+          "requirement_id": "provenance_responsibility"
+        },
+        {
+          "basis": {
+            "reason": "No qualified empirical main data or actual independent observations support P1/P5; software fixture correctness cannot supply these claims.",
+            "state": "unknown"
+          },
+          "evidence_refs": [],
+          "requirement_id": "claim_evidence"
+        },
+        {
+          "basis": {
+            "reason": "All five EC conditions and ten reporting disclosures need scope-specific actual evidence; operational currentness, incidents and correction effectiveness remain unresolved.",
+            "state": "unknown"
+          },
+          "evidence_refs": [
+            {
+              "record_id": "source-03",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            }
+          ],
+          "requirement_id": "ec_disclosures_currentness"
+        },
+        {
+          "basis": {
+            "state": "known",
+            "value": "Retain original inputs and review records; record corrections as new versions, invalidate affected dependent outputs, rerun affected qualification and review before any corrected claim."
+          },
+          "evidence_refs": [
+            {
+              "record_id": "source-02",
+              "record_type": "artifact",
+              "record_version": "0.1"
+            }
+          ],
+          "requirement_id": "correction_route"
+        },
+        {
+          "basis": {
+            "reason": "No qualified real claim reviewer or relationship/independence record is supplied.",
+            "state": "unknown"
+          },
+          "evidence_refs": [],
+          "requirement_id": "claim_reviewer"
+        },
+        {
+          "basis": {
+            "reason": "No scientific publication destination, publishing account, time window or external publication authorization is supplied.",
+            "state": "unknown"
+          },
+          "evidence_refs": [],
+          "requirement_id": "destination_scope"
+        }
+      ],
+      "responsible_operator": {
+        "reason": "No named external operator has been supplied or appointed.",
+        "state": "unknown"
+      },
+      "time_window": {
+        "reason": "No operational start/end window has been supplied; ordering requirements are documented separately.",
+        "state": "unknown"
+      }
+    }
+  ],
+  "kind": "activity_readiness_packet",
+  "scope": {
+    "claim_id": "hero-fixed-suite",
+    "task_id": "bounded_integer_sort",
+    "task_version": "0.1"
+  },
+  "study_id": "hero-operational-preparation",
+  "study_version": "prep-v1",
+  "version": "0.1"
+}
